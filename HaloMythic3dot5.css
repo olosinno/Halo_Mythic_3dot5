@@ -1,4 +1,5 @@
 /* grid structure for the character info table__________________________________*/
+<<<<<<< HEAD
 .sheet-hgs1 { grid-area: ah1; }
 .sheet-hgs2 { grid-area: ah2; }
 .sheet-hgs3 { grid-area: ah3; }
@@ -12,6 +13,21 @@
 .sheet-hgs11 { grid-area: ah11; }
 .sheet-hgs12 { grid-area: ah12; }
 .sheet-hgs13 { grid-area: ah13; }
+=======
+.sheet-gs1 { grid-area: a1; }
+.sheet-gs2 { grid-area: a2; }
+.sheet-gs3 { grid-area: a3; }
+.sheet-gs4 { grid-area: a4; }
+.sheet-gs5 { grid-area: a5; }
+.sheet-gs6 { grid-area: a6; }
+.sheet-gs7 { grid-area: a7; }
+.sheet-gs8 { grid-area: a8; }
+.sheet-gs9 { grid-area: a9; }
+.sheet-gs10 { grid-area: a10; }
+.sheet-gs11 { grid-area: a11; }
+.sheet-gs12 { grid-area: a12; }
+.sheet-gs13 { grid-area: a13; }
+>>>>>>> ae9ee750595ca10d699149fcd4303779dabb2334
 .sheet-header_logo {
   display: grid;
   grid-template-areas:
