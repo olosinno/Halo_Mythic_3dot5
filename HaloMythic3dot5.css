@@ -1,3 +1,4 @@
+/* grid structure for the character info table__________________________________*/
 .sheet-g1 { grid-area: a1; }
 .sheet-g2 { grid-area: a2; }
 .sheet-g3 { grid-area: a3; }
@@ -11,6 +12,7 @@
 .sheet-g11 { grid-area: a11; }
 .sheet-g12 { grid-area: a12; }
 .sheet-g13 { grid-area: a13; }
+
 .sheet-chr_grid {
   display: grid;
   grid-template-areas:
@@ -20,7 +22,7 @@
 }
 
 
-
+/* grid structure for the characteristics_______________________________________*/
 .sheet-characteristics_row{
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
