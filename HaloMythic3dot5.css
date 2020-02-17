@@ -26,3 +26,16 @@
   float: left;
   width: 15%;
 }
+
+
+
+
+.sheet-characteristics_row{
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+.sheet-characteristics_section{
+  float: left;
+  width: 10%;
+}
