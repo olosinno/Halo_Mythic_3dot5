@@ -26,3 +26,17 @@
   float: left;
   width: 15%;
 }
+
+
+
+
+.sheet-characteristics_row{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sheet-characteristics_section{
+  float: left;
+  width: 10%;
+}
