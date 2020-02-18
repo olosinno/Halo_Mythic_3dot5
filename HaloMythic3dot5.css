@@ -1,34 +1,96 @@
 /* start of grid structure for character information ______________________________ */
 
-.sheet-gs1 { grid-area: a1; }
-.sheet-gs2 { grid-area: a2; }
-.sheet-gs3 { grid-area: a3; }
-.sheet-gs4 { grid-area: a4; }
-.sheet-gs5 { grid-area: a5; }
-.sheet-gs6 { grid-area: a6; }
-.sheet-gs7 { grid-area: a7; }
-.sheet-gs8 { grid-area: a8; }
-.sheet-gs9 { grid-area: a9; }
-.sheet-gs10 { grid-area: a10; }
-.sheet-gs11 { grid-area: a11; }
-.sheet-gs12 { grid-area: a12; }
-.sheet-gs13 { grid-area: a13; }
+.sheet-gs1 { grid-area: ah1; }
+.sheet-gs2 { grid-area: ah2; }
+.sheet-gs3 { grid-area: ah3; }
+.sheet-gs4 { grid-area: ah4; }
+.sheet-gs5 { grid-area: ah5; }
+.sheet-gs6 { grid-area: ah6; }
+.sheet-gs7 { grid-area: ah7; }
+.sheet-gs8 { grid-area: ah8; }
+.sheet-gs9 { grid-area: ah9; }
+.sheet-gs10 { grid-area: ah10; }
+.sheet-gs11 { grid-area: ah11; }
+.sheet-gs12 { grid-area: ah12; }
+.sheet-gs13 { grid-area: ah13; }
+
 .sheet-header_logo {
   display: grid;
   grid-template-areas:
-  'a1 a4 a7 a8  a11'
-  'a2 a5 a7 a9  a12'
-  'a3 a6 a7 a10 a13';
+  'ah1 ah4 ah7 ah8  ah11'
+  'ah2 ah5 ah7 ah9  ah12'
+  'ah3 ah6 ah7 ah10 ah13';
 }
 
 /* end of grid structure for character information ______________________________
 ______________________________ start of grid structure for characteristics */
 
-.sheet-characteristics{
+.sheet-characteristics {
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
 /* end of grid structure for characteristics ______________________________
+______________________________ start of grid structure for the mythic characteristics, movement and pushing */
+
+.sheet-characteristics_mythic {
+    display: grid;
+grid-template-columns: 15% 30% 15%
+}
+
+.sheet-mythicgs1 { grid-area: amy1; }
+.sheet-mythicgs2 { grid-area: amy2; }
+.sheet-mythicgs3 { grid-area: amy3; }
+.sheet-mythicgs4 { grid-area: amy4; }
+.sheet-mythicgs5 { grid-area: amy5; }
+.sheet-mythicgs6 { grid-area: amy6; }
+.sheet-mythicgs7 { grid-area: amy7; }
+.sheet-characteristics2_mythic {
+  display: grid;
+  grid-template-areas:
+  'amy1 amy1 amy1'
+  'amy2 amy3 amy4'
+  'amy5 amy6 amy7';
+}
+
+.sheet-movementgs1 { grid-area: amm1; }
+.sheet-movementgs2 { grid-area: amm2; }
+.sheet-movementgs3 { grid-area: amm3; }
+.sheet-movementgs4 { grid-area: amm4; }
+.sheet-movementgs5 { grid-area: amm5; }
+.sheet-movementgs6 { grid-area: amm6; }
+.sheet-movementgs7 { grid-area: amm7; }
+.sheet-movementgs8 { grid-area: amm8; }
+.sheet-movementgs9 { grid-area: amm9; }
+.sheet-movementgs10 { grid-area: amm10; }
+.sheet-movementgs11 { grid-area: amm11; }
+.sheet-movementgs12 { grid-area: amm12; }
+.sheet-movementgs13 { grid-area: amm13; }
+.sheet-movementgs14 { grid-area: amm14; }
+.sheet-movementgs15 { grid-area: amm15; }
+.sheet-characteristics2_movement {
+  display: grid;
+  grid-template-areas:
+  'amm1 amm1 amm1  amm1  amm1  amm1 amm1'
+  'amm2 amm3 amm4  amm5  amm6  amm7 amm8'
+  'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
+}
+
+.sheet-carrygs1 { grid-area: ac1; }
+.sheet-carrygs2 { grid-area: ac2; }
+.sheet-carrygs3 { grid-area: ac3; }
+.sheet-carrygs4 { grid-area: ac4; }
+.sheet-carrygs5 { grid-area: ac5; }
+.sheet-carrygs6 { grid-area: ac6; }
+.sheet-carrygs7 { grid-area: ac7; }
+.sheet-characteristics2_carry {
+  display: grid;
+  grid-template-areas:
+  'ac1 ac1 ac1'
+  'ac2 ac3 ac4'
+  'ac5 ac6 ac7';
+}
+
+/* end of grid structure for the mythic characteristics, movement and pushing ______________________________
 ______________________________ start of grid structure for initiative/sheet tabs */
 
