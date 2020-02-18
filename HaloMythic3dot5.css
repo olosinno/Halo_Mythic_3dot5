@@ -104,3 +104,21 @@ grid-template-columns: 20% 40% 20%;
 
 /* end of grid structure for the mythic characteristics, movement and pushing ______________________________
 ______________________________ start of grid structure for initiative/sheet tabs */
+.sheet-initiative_tabs_main {
+    display: grid;
+grid-template-columns: 20% 40% 20%;
+}
+
+.sheet-initiative_tabs_controls {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+.sheet-initiative_tabs_initiative {
+float: left;
+}
+
+.sheet-initiative_tabs_tabs {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
