@@ -20,7 +20,7 @@
   'ah1 ah4 ah7 ah8  ah11'
   'ah2 ah5 ah7 ah9  ah12'
   'ah3 ah6 ah7 ah10 ah13';
-  grid-template-columns: 15% 28% 100px 28% 10%
+  grid-template-columns: 15% 30% 10% 30% 15%;
 }
 
 /* end of grid structure for character information ______________________________
@@ -30,13 +30,17 @@ ______________________________ start of grid structure for characteristics */
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
+.sheet-characteristics_box{
+overflow: hidden;
+  margin: 2px;
+}
 
 /* end of grid structure for characteristics ______________________________
 ______________________________ start of grid structure for the mythic characteristics, movement and pushing */
 
 .sheet-characteristics_mythic_movement_carry {
     display: grid;
-grid-template-columns: auto auto auto
+grid-template-columns: 20% 40% 20%;
 }
 
 .sheet-mythicgs1 { grid-area: amy1; }
