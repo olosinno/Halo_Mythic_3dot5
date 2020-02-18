@@ -1,4 +1,4 @@
-<!-- character information grid ______________________________ -->
+<!-- character information grid ________________________________________________ -->
 <div class="sheet-header_logo">
   <div class="sheet-gs1">Character Name</div>
   <div class="sheet-gs2">Faction</div>
@@ -20,13 +20,13 @@
 
 
 
-<!-- characteristics grid ______________________________ -->
+<!-- characteristics grid ______________________________________________________ -->
 <div class="sheet-characteristics">
   <div>
     <div class="sheet-characteristics_box"><button name="STR" type="roll" value="/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>STR</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_strength" /></div>
-    <div class="sheet-characteristics_box"><select name="attr_strength_advancement">
-      <option value="1"selected="selected">None +0</option>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_STR" /></div>
+    <div class="sheet-characteristics_box"><select name="attr_STR_advancement">
+      <option value="0"selected="selected">None +0</option>
       <option value="5">Simple +5</option>
       <option value="10">Rookie +10</option>
       <option value="15">Inter. +15</option>
@@ -37,9 +37,9 @@
 
   <div>
     <div class="sheet-characteristics_box"><button name="TOU" type="roll" value="/me rolls toughness with [[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>TOU</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_toughness" /></div>
-    <div class="sheet-characteristics_box"><select name="attr_toughness_advancement">
-      <option value="1"selected="selected">None +0</option>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_TOU" /></div>
+    <div class="sheet-characteristics_box"><select name="attr_TOU_advancement">
+      <option value="0"selected="selected">None +0</option>
       <option value="5">Simple +5</option>
       <option value="10">Rookie +10</option>
       <option value="15">Interm. +15</option>
@@ -50,9 +50,9 @@
 
   <div>
     <div class="sheet-characteristics_box"><button name="AGI" type="roll" value="/me rolls agility with [[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>AGI</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_agility" /></div>
-    <div class="sheet-characteristics_box"><select name="attr_agility_advancement">
-      <option value="1"selected="selected">None +0</option>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_AGI" /></div>
+    <div class="sheet-characteristics_box"><select name="attr_AGI_advancement">
+      <option value="0"selected="selected">None +0</option>
       <option value="5">Simple +5</option>
       <option value="10">Rookie +10</option>
       <option value="15">Inter. +15</option>
@@ -63,9 +63,9 @@
 
   <div>
     <div class="sheet-characteristics_box"><button name="WFR" type="roll" value="/me rolls warfare ranged with [[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>WFR</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_warfare-ranged" /></div>
-    <div class="sheet-characteristics_box"><select name="attr_warfare-ranged_advancement">
-      <option value="1"selected="selected">None +0</option>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_WFR" /></div>
+    <div class="sheet-characteristics_box"><select name="attr_WFR_advancement">
+      <option value="0"selected="selected">None +0</option>
       <option value="5">Simple +5</option>
       <option value="10">Rookie +10</option>
       <option value="15">Inter. +15</option>
@@ -76,9 +76,9 @@
 
   <div>
     <div class="sheet-characteristics_box"><button name="WFM" type="roll" value="/me rolls warfare melee with [[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>WFM</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_warfare-melee" /></div>
-    <div class="sheet-characteristics_box"><select name="attr_warfare-melee_advancement">
-      <option value="1"selected="selected">None +0</option>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_WFM" /></div>
+    <div class="sheet-characteristics_box"><select name="attr_WFM_advancement">
+      <option value="0"selected="selected">None +0</option>
       <option value="5">Simple +5</option>
       <option value="10">Rookie +10</option>
       <option value="15">Inter. +15</option>
@@ -89,9 +89,9 @@
 
   <div>
     <div class="sheet-characteristics_box"><button name="INT" type="roll" value="/me rolls intellect [[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>INT</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_intellect" /></div>
-    <div class="sheet-characteristics_box"><select name="attr_intellect_advancement">
-      <option value="1"selected="selected">None +0</option>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_INT" /></div>
+    <div class="sheet-characteristics_box"><select name="attr_INT_advancement">
+      <option value="0"selected="selected">None +0</option>
       <option value="5">Simple +5</option>
       <option value="10">Rookie +10</option>
       <option value="15">Inter. +15</option>
@@ -102,9 +102,9 @@
 
   <div>
     <div class="sheet-characteristics_box"><button name="PER" type="roll" value="/me rolls perception with [[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>PER</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_perception" /></div>
-    <div class="sheet-characteristics_box"><select name="attr_perception_advancement">
-      <option value="1"selected="selected">None +0</option>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_PER" /></div>
+    <div class="sheet-characteristics_box"><select name="attr_PER_advancement">
+      <option value="0"selected="selected">None +0</option>
       <option value="5">Simple +5</option>
       <option value="10">Rookie +10</option>
       <option value="15">Inter. +15</option>
@@ -115,9 +115,9 @@
 
   <div>
     <div class="sheet-characteristics_box"><button name="CR" type="roll" value="/me rolls courage with [[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>CR</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_courage" /></div>
-    <div class="sheet-characteristics_box"><select name="attr_courage_advancement">
-      <option value="1"selected="selected">None +0</option>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_CR" /></div>
+    <div class="sheet-characteristics_box"><select name="attr_CR_advancement">
+      <option value="0"selected="selected">None +0</option>
       <option value="5">Simple +5</option>
       <option value="10">Rookie +10</option>
       <option value="15">Inter. +15</option>
@@ -128,9 +128,9 @@
 
   <div>
     <div class="sheet-characteristics_box"><button name="CH" type="roll" value="/me rolls charisma with [[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>CH</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_charisma" /></div>
-    <div class="sheet-characteristics_box"><select name="attr_charisma_advancement">
-      <option value="1"selected="selected">None +0</option>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_CH" /></div>
+    <div class="sheet-characteristics_box"><select name="attr_CH_advancement">
+      <option value="0"selected="selected">None +0</option>
       <option value="5">Simple +5</option>
       <option value="10">Rookie +10</option>
       <option value="15">Inter. +15</option>
@@ -141,9 +141,9 @@
 
   <div>
     <div class="sheet-characteristics_box"><button name="LD" type="roll" value="/me rolls leadership with [[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>LD</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_leadership" /></div>
-    <div class="sheet-characteristics_box"><select name="attr_leadership_advancement">
-      <option value="1"selected="selected">None +0</option>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_LD" /></div>
+    <div class="sheet-characteristics_box"><select name="attr_LD_advancement">
+      <option value="0"selected="selected">None +0</option>
       <option value="5">Simple +5</option>
       <option value="10">Rookie +10</option>
       <option value="15">Inter. +15</option>
@@ -156,13 +156,13 @@
 
 
 
-<!-- mythic characteristics, movement and pushing grid ______________________________ -->
+<!-- mythic characteristics, movement and pushing grid _________________________ -->
 <div class="sheet-characteristics_mythic_movement_carry">
   <div class="sheet-characteristics2_mythic">
     <div class="sheet-mythicgs1 ">Mythic characteristics</div>
-    <div class="sheet-mythicgs2 "><input type="number" name="attr_strength_mythic" /></div>
-    <div class="sheet-mythicgs3 "><input type="number" name="attr_toughness_mythic" /></div>
-    <div class="sheet-mythicgs4 "><input type="number" name="attr_agility_mythic" /></div>
+    <div class="sheet-mythicgs2 "><input type="number" value="0" name="attr_STR_mythic" /></div>
+    <div class="sheet-mythicgs3 "><input type="number" value="0" name="attr_AGI_mythic" /></div>
+    <div class="sheet-mythicgs4 "><input type="number" value="0" name="attr_TOU_mythic" /></div>
     <div class="sheet-mythicgs5 ">Strength</div>
     <div class="sheet-mythicgs6 ">Agility</div>
     <div class="sheet-mythicgs7 ">Toughness</div>
@@ -199,4 +199,28 @@
 
 
 
-<!-- initiative/sheet tabs grid -->
+<!-- initiative/sheet tabs grid ________________________________________________-->
+<div class="sheet-initiative_tabs_main">
+  <div class="sheet-initiative_tabs_controls">
+  </div>
+
+  <div class="sheet-initiative_tabs_initiative">
+    <div><button name="initiative" type="roll" value="/me rolls initiative with [[@{initmod1}+@{initmod2}+@{initmod3}]] degrees of sucess"<span>STR</span></button></div>
+    <div><select name="attr_initmod1">
+      <option value="1d10"selected="selected">standard</option>
+      <option value="2d10K1">fastfoot</option>
+      <option value="?{dice|0}">custom</option>
+    </select></div>
+    +
+    <div><input type="number" name="attr_initmod2" value="0"/></div>
+    +
+    <div><select name="attr_initmod3">
+      <option value="((@{AGI}) + (@{AGI_advancement}) /10+ (@{AGI_mythic}) "selected="selected">Agility</option>
+      <option value="@{INT}+@{INT_advancement}">Intelect</option>
+      <option value="0">none</option>
+    </select></div>
+  </div>
+
+<div class="sheet-initiative_tabs_tabs">
+</div>
+</div>
