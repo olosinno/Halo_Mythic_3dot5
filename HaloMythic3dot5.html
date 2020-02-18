@@ -1,5 +1,7 @@
 <!-- character information grid ________________________________________________ -->
+
 <div class="sheet-header_logo">
+
   <div class="sheet-gs1">Character Name</div>
   <div class="sheet-gs2">Faction</div>
   <div class="sheet-gs3">Soldier Type</div>
@@ -20,8 +22,10 @@
 
 
 
-<!-- characteristics grid ______________________________________________________ -->
+<!-- ______________________________ characteristics grid ______________________________ -->
+
 <div class="sheet-characteristics">
+
   <div>
     <div class="sheet-characteristics_box"><button name="STR" type="roll" value="/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of sucess"<span>STR</span></button></div>
     <div class="sheet-characteristics_box"><input type="text" name="attr_STR" /></div>
@@ -151,25 +155,28 @@
       <option value="25">Mastery +25</option>
     </select></div>
   </div>
+
 </div>
 <br>
 
 
 
-<!-- mythic characteristics, movement and pushing grid _________________________ -->
+<!-- ______________________________ mythic characteristics, movement and pushing grid ______________________________ -->
+
 <div class="sheet-characteristics_mythic_movement_carry">
+
   <div class="sheet-characteristics2_mythic">
-    <div class="sheet-mythicgs1 ">Mythic characteristics</div>
+    <div class="sheet-mythicgs1 ">Mythic Characteristics</div>
     <div class="sheet-mythicgs2 "><input type="number" value="0" name="attr_STR_mythic" /></div>
-    <div class="sheet-mythicgs3 "><input type="number" value="0" name="attr_AGI_mythic" /></div>
-    <div class="sheet-mythicgs4 "><input type="number" value="0" name="attr_TOU_mythic" /></div>
+    <div class="sheet-mythicgs3 "><input type="number" value="0" name="attr_TOU_mythic" /></div>
+    <div class="sheet-mythicgs4 "><input type="number" value="0" name="attr_AGI_mythic" /></div>
     <div class="sheet-mythicgs5 ">Strength</div>
-    <div class="sheet-mythicgs6 ">Agility</div>
-    <div class="sheet-mythicgs7 ">Toughness</div>
+    <div class="sheet-mythicgs6 ">Toughness</div>
+    <div class="sheet-mythicgs7 ">Agility</div>
   </div>
 
   <div class="sheet-characteristics2_movement">
-    <div class="sheet-movementgs1 ">Character movement</div>
+    <div class="sheet-movementgs1 ">Character Movement</div>
     <div class="sheet-movementgs2 "><input type="number" name="attr_half_move" /></div>
     <div class="sheet-movementgs3 "><input type="number" name="attr_full_move" /></div>
     <div class="sheet-movementgs4 "><input type="number" name="attr_charge_move" /></div>
@@ -177,8 +184,8 @@
     <div class="sheet-movementgs6 "><input type="number" name="attr_sprint_move" /></div>
     <div class="sheet-movementgs7 "><input type="number" name="attr_jump_move" /></div>
     <div class="sheet-movementgs8 "><input type="number" name="attr_leap_move" /></div>
-    <div class="sheet-movementgs9 ">Half move</div>
-    <div class="sheet-movementgs10 ">Full move</div>
+    <div class="sheet-movementgs9 ">Half Move</div>
+    <div class="sheet-movementgs10 ">Full Move</div>
     <div class="sheet-movementgs11 ">Charge</div>
     <div class="sheet-movementgs12 ">Run</div>
     <div class="sheet-movementgs13 ">Sprint</div>
@@ -187,39 +194,42 @@
   </div>
 
   <div class="sheet-characteristics2_carry">
-    <div class="sheet-carrygs1 ">Carrying capacity</div>
+    <div class="sheet-carrygs1 ">Carrying Capacity</div>
     <div class="sheet-carrygs2 "><input type="number" name="attr_carry" /></div>
     <div class="sheet-carrygs3 "><input type="number" name="attr_lift" /></div>
     <div class="sheet-carrygs4 "><input type="number" name="attr_push" /></div>
-    <div class="sheet-carrygs5 ">carry</div>
-    <div class="sheet-carrygs6 ">lift</div>
-    <div class="sheet-carrygs7 ">push</div>
+    <div class="sheet-carrygs5 ">Carry</div>
+    <div class="sheet-carrygs6 ">Lift</div>
+    <div class="sheet-carrygs7 ">Push</div>
   </div>
+
 </div>
 
 
 
-<!-- initiative/sheet tabs grid ________________________________________________-->
+<!-- ______________________________ initiative/sheet tabs grid ______________________________ -->
+
 <div class="sheet-initiative_tabs_main">
-  <div class="sheet-initiative_tabs_controls">
-  </div>
+
+  <div class="sheet-initiative_tabs_controls"></div>
   <div class="sheet-initiative_tabs_initiative">
     <div class="sheet-initiative_tabs_boxes"><button name="initiative" type="roll" value="/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})]]"<span>STR</span></button></div>
     <div style="display:none;"><input name="attr_initmod0" value="floor"/></div>
     <div class="sheet-initiative_tabs_boxes"><select name="attr_initmod1">
-      <option value="1d10"selected="selected">standard</option>
-      <option value="2d10K1">fastfoot</option>
-      <option value="?{dice|1d10}">custom</option>
+      <option value="1d10"selected="selected">Standard</option>
+      <option value="2d10K1">Fast Foot</option>
+      <option value="?{dice|1d10}">Custom</option>
     </select></div>
     <div class="sheet-initiative_tabs_boxes">+</div>
     <div class="sheet-initiative_tabs_boxes"><input type="number" name="attr_initmod2" value="0"/></div>
     <div class="sheet-initiative_tabs_boxes">+</div>
     <div class="sheet-initiative_tabs_boxes"><select name="attr_initmod3">
       <option value="(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}"selected="selected">Agility</option>
-      <option value="(@{INT} + @{INT_advancement})/10">Intelect</option>
-      <option value="0">none</option>
+      <option value="(@{INT} + @{INT_advancement})/10">Intellect</option>
+      <option value="0">N/A</option>
     </select></div>
   </div>
   <div class="sheet-initiative_tabs_tabs">
   </div>
+
 </div>
