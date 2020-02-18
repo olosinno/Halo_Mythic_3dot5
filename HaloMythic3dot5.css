@@ -33,9 +33,9 @@ ______________________________ start of grid structure for characteristics */
 /* end of grid structure for characteristics ______________________________
 ______________________________ start of grid structure for the mythic characteristics, movement and pushing */
 
-.sheet-characteristics_mythic {
+.sheet-characteristics_mythic_movement_carry {
     display: grid;
-grid-template-columns: 15% 30% 15%
+grid-template-columns: auto auto auto
 }
 
 .sheet-mythicgs1 { grid-area: amy1; }
@@ -93,4 +93,3 @@ grid-template-columns: 15% 30% 15%
 
 /* end of grid structure for the mythic characteristics, movement and pushing ______________________________
 ______________________________ start of grid structure for initiative/sheet tabs */
-
