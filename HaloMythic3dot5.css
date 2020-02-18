@@ -1,17 +1,19 @@
-/* grid structure for the character info table__________________________________*/
-.sheet-hgs1 { grid-area: ah1; }
-.sheet-hgs2 { grid-area: ah2; }
-.sheet-hgs3 { grid-area: ah3; }
-.sheet-hgs4 { grid-area: ah4; }
-.sheet-hgs5 { grid-area: ah5; }
-.sheet-hgs6 { grid-area: ah6; }
-.sheet-hgs7 { grid-area: ah7; }
-.sheet-hgs8 { grid-area: ah8; }
-.sheet-hgs9 { grid-area: ah9; }
-.sheet-hgs10 { grid-area: ah10; }
-.sheet-hgs11 { grid-area: ah11; }
-.sheet-hgs12 { grid-area: ah12; }
-.sheet-hgs13 { grid-area: ah13; }
+/* start of grid structure for character information ______________________________ */
+
+.sheet-gs1 { grid-area: ah1; }
+.sheet-gs2 { grid-area: ah2; }
+.sheet-gs3 { grid-area: ah3; }
+.sheet-gs4 { grid-area: ah4; }
+.sheet-gs5 { grid-area: ah5; }
+.sheet-gs6 { grid-area: ah6; }
+.sheet-gs7 { grid-area: ah7; }
+.sheet-gs8 { grid-area: ah8; }
+.sheet-gs9 { grid-area: ah9; }
+.sheet-gs10 { grid-area: ah10; }
+.sheet-gs11 { grid-area: ah11; }
+.sheet-gs12 { grid-area: ah12; }
+.sheet-gs13 { grid-area: ah13; }
+
 .sheet-header_logo {
   display: grid;
   grid-template-areas:
@@ -20,20 +22,18 @@
   'ah3 ah6 ah7 ah10 ah13';
 }
 
+/* end of grid structure for character information ______________________________
+______________________________ start of grid structure for characteristics */
 
-/* grid structure for the characteristics_______________________________________*/
-.sheet-characteristics_row{
+.sheet-characteristics {
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
-.sheet-characteristics_section{
-}
+/* end of grid structure for characteristics ______________________________
+______________________________ start of grid structure for the mythic characteristics, movement and pushing */
 
-
-
-/* grid structure for the mythic characteristics, movement and pushing__________*/
-.sheet-characteristics_mythic{
+.sheet-characteristics_mythic {
     display: grid;
 grid-template-columns: 15% 30% 15%
 }
@@ -45,7 +45,7 @@ grid-template-columns: 15% 30% 15%
 .sheet-mythicgs5 { grid-area: amy5; }
 .sheet-mythicgs6 { grid-area: amy6; }
 .sheet-mythicgs7 { grid-area: amy7; }
-.sheet-characteristics2_mythic{
+.sheet-characteristics2_mythic {
   display: grid;
   grid-template-areas:
   'amy1 amy1 amy1'
@@ -68,7 +68,7 @@ grid-template-columns: 15% 30% 15%
 .sheet-movementgs13 { grid-area: amm13; }
 .sheet-movementgs14 { grid-area: amm14; }
 .sheet-movementgs15 { grid-area: amm15; }
-.sheet-characteristics2_movement{
+.sheet-characteristics2_movement {
   display: grid;
   grid-template-areas:
   'amm1 amm1 amm1  amm1  amm1  amm1 amm1'
@@ -83,10 +83,14 @@ grid-template-columns: 15% 30% 15%
 .sheet-carrygs5 { grid-area: ac5; }
 .sheet-carrygs6 { grid-area: ac6; }
 .sheet-carrygs7 { grid-area: ac7; }
-.sheet-characteristics2_carry{
+.sheet-characteristics2_carry {
   display: grid;
   grid-template-areas:
   'ac1 ac1 ac1'
   'ac2 ac3 ac4'
   'ac5 ac6 ac7';
 }
+
+/* end of grid structure for the mythic characteristics, movement and pushing ______________________________
+______________________________ start of grid structure for initiative/sheet tabs */
+
