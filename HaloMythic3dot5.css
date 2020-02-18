@@ -1,4 +1,5 @@
-/* grid structure for the character info table__________________________________*/
+/* start of grid structure for character information ______________________________ */
+
 .sheet-gs1 { grid-area: a1; }
 .sheet-gs2 { grid-area: a2; }
 .sheet-gs3 { grid-area: a3; }
@@ -20,12 +21,14 @@
   'a3 a6 a7 a10 a13';
 }
 
+/* end of grid structure for character information ______________________________
+______________________________ start of grid structure for characteristics */
 
-/* grid structure for the characteristics_______________________________________*/
-.sheet-characteristics_row{
+.sheet-characteristics{
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
-.sheet-characteristics_section{
-}
+/* end of grid structure for characteristics ______________________________
+______________________________ start of grid structure for initiative/sheet tabs */
+
