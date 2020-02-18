@@ -1,8 +1,8 @@
 /* start of grid structure for character information ______________________________ */
 
-.sheet-gs1 { grid-area: ah1; font-size: 14px;}
-.sheet-gs2 { grid-area: ah2; font-size: 14px;}
-.sheet-gs3 { grid-area: ah3; font-size: 14px;}
+.sheet-gs1 { grid-area: ah1; font-size: 14px; }
+.sheet-gs2 { grid-area: ah2; font-size: 14px; }
+.sheet-gs3 { grid-area: ah3; font-size: 14px; }
 .sheet-gs4 { grid-area: ah4; }
 .sheet-gs5 { grid-area: ah5; }
 .sheet-gs6 { grid-area: ah6; }
@@ -10,15 +10,15 @@
 .sheet-gs8 { grid-area: ah8; }
 .sheet-gs9 { grid-area: ah9; }
 .sheet-gs10 { grid-area: ah10; }
-.sheet-gs11 { grid-area: ah11; font-size: 14px; text-align: right}
-.sheet-gs12 { grid-area: ah12; font-size: 14px; text-align: right}
-.sheet-gs13 { grid-area: ah13; font-size: 14px; text-align: right}
+.sheet-gs11 { grid-area: ah11; font-size: 14px; text-align: right }
+.sheet-gs12 { grid-area: ah12; font-size: 14px; text-align: right }
+.sheet-gs13 { grid-area: ah13; font-size: 14px; text-align: right }
 
 .sheet-header_logo {
   display: grid;
   grid-template-areas:
-  'ah1 ah4 ah7 ah8  ah11'
-  'ah2 ah5 ah7 ah9  ah12'
+  'ah1 ah4 ah7 ah8 ah11'
+  'ah2 ah5 ah7 ah9 ah12'
   'ah3 ah6 ah7 ah10 ah13';
   grid-template-columns: 15% 30% 10% 30% 15%;
 }
@@ -30,7 +30,7 @@ ______________________________ start of grid structure for characteristics */
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
-.sheet-characteristics_box{
+.sheet-characteristics_box {
   overflow: hidden;
   margin: 2px;
 }
@@ -47,9 +47,9 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-mythicgs2 { grid-area: amy2; }
 .sheet-mythicgs3 { grid-area: amy3; }
 .sheet-mythicgs4 { grid-area: amy4; }
-.sheet-mythicgs5 { grid-area: amy5; font-size: 10px;}
-.sheet-mythicgs6 { grid-area: amy6; font-size: 10px;}
-.sheet-mythicgs7 { grid-area: amy7; font-size: 10px;}
+.sheet-mythicgs5 { grid-area: amy5; font-size: 10px; }
+.sheet-mythicgs6 { grid-area: amy6; font-size: 10px; }
+.sheet-mythicgs7 { grid-area: amy7; font-size: 10px; }
 .sheet-characteristics2_mythic {
   display: grid;
   grid-template-columns: 60px 60px 60px;
@@ -68,13 +68,13 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-movementgs6 { grid-area: amm6; }
 .sheet-movementgs7 { grid-area: amm7; }
 .sheet-movementgs8 { grid-area: amm8; }
-.sheet-movementgs9 { grid-area: amm9;   font-size: 10px;}
-.sheet-movementgs10 { grid-area: amm10; font-size: 10px;}
-.sheet-movementgs11 { grid-area: amm11; font-size: 10px;}
-.sheet-movementgs12 { grid-area: amm12; font-size: 10px;}
-.sheet-movementgs13 { grid-area: amm13; font-size: 10px;}
-.sheet-movementgs14 { grid-area: amm14; font-size: 10px;}
-.sheet-movementgs15 { grid-area: amm15; font-size: 10px;}
+.sheet-movementgs9 { grid-area: amm9;   font-size: 10px; }
+.sheet-movementgs10 { grid-area: amm10; font-size: 10px; }
+.sheet-movementgs11 { grid-area: amm11; font-size: 10px; }
+.sheet-movementgs12 { grid-area: amm12; font-size: 10px; }
+.sheet-movementgs13 { grid-area: amm13; font-size: 10px; }
+.sheet-movementgs14 { grid-area: amm14; font-size: 10px; }
+.sheet-movementgs15 { grid-area: amm15; font-size: 10px; }
 .sheet-characteristics2_movement {
   justify-content: center;
   display: grid;
@@ -90,9 +90,9 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-carrygs2 { grid-area: ac2; }
 .sheet-carrygs3 { grid-area: ac3; }
 .sheet-carrygs4 { grid-area: ac4; }
-.sheet-carrygs5 { grid-area: ac5; font-size: 10px;}
-.sheet-carrygs6 { grid-area: ac6; font-size: 10px;}
-.sheet-carrygs7 { grid-area: ac7; font-size: 10px;}
+.sheet-carrygs5 { grid-area: ac5; font-size: 10px; }
+.sheet-carrygs6 { grid-area: ac6; font-size: 10px; }
+.sheet-carrygs7 { grid-area: ac7; font-size: 10px; }
 .sheet-characteristics2_carry {
   display: grid;
   grid-template-columns: 60px 60px 60px;
@@ -105,6 +105,7 @@ ______________________________ start of grid structure for the mythic characteri
 
 /* end of grid structure for the mythic characteristics, movement and pushing ______________________________
 ______________________________ start of grid structure for initiative/sheet tabs */
+
 .sheet-initiative_tabs_main {
   display: grid;
   grid-template-columns: 20% 60% 20%;
@@ -118,8 +119,7 @@ ______________________________ start of grid structure for initiative/sheet tabs
 .sheet-initiative_tabs_initiative {
   display: grid;
   justify-content: center;
-  grid-template-columns: 80px 70px 8px 60px 8px 80px;
-  /*______________________________ edit this pixelcount*/
+  grid-template-columns: 64px 76px 12px 50px 12px 80px;
 }
 
 .sheet-initiative_tabs_tabs {
