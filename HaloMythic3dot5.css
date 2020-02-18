@@ -31,7 +31,7 @@ ______________________________ start of grid structure for characteristics */
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 .sheet-characteristics_box{
-overflow: hidden;
+  overflow: hidden;
   margin: 2px;
 }
 
@@ -39,8 +39,8 @@ overflow: hidden;
 ______________________________ start of grid structure for the mythic characteristics, movement and pushing */
 
 .sheet-characteristics_mythic_movement_carry {
-    display: grid;
-grid-template-columns: 20% 40% 20%;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
 }
 
 .sheet-mythicgs1 { grid-area: amy1; }
@@ -52,12 +52,12 @@ grid-template-columns: 20% 40% 20%;
 .sheet-mythicgs7 { grid-area: amy7; font-size: 10px;}
 .sheet-characteristics2_mythic {
   display: grid;
-    grid-template-columns: 60px 60px 60px;
+  grid-template-columns: 60px 60px 60px;
   grid-template-areas:
   'amy1 amy1 amy1'
   'amy2 amy3 amy4'
   'amy5 amy6 amy7';
-    text-align: center
+  text-align: center
 }
 
 .sheet-movementgs1 { grid-area: amm1; }
@@ -76,13 +76,14 @@ grid-template-columns: 20% 40% 20%;
 .sheet-movementgs14 { grid-area: amm14; font-size: 10px;}
 .sheet-movementgs15 { grid-area: amm15; font-size: 10px;}
 .sheet-characteristics2_movement {
+  justify-content: center;
   display: grid;
-   grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
   grid-template-areas:
   'amm1 amm1 amm1  amm1  amm1  amm1 amm1'
   'amm2 amm3 amm4  amm5  amm6  amm7 amm8'
   'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
-    text-align: center
+  text-align: center
 }
 
 .sheet-carrygs1 { grid-area: ac1; }
@@ -94,7 +95,7 @@ grid-template-columns: 20% 40% 20%;
 .sheet-carrygs7 { grid-area: ac7; font-size: 10px;}
 .sheet-characteristics2_carry {
   display: grid;
-    grid-template-columns: 60px 60px 60px;
+  grid-template-columns: 60px 60px 60px;
   grid-template-areas:
   'ac1 ac1 ac1'
   'ac2 ac3 ac4'
@@ -105,8 +106,8 @@ grid-template-columns: 20% 40% 20%;
 /* end of grid structure for the mythic characteristics, movement and pushing ______________________________
 ______________________________ start of grid structure for initiative/sheet tabs */
 .sheet-initiative_tabs_main {
-    display: grid;
-grid-template-columns: 20% 40% 20%;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
 }
 
 .sheet-initiative_tabs_controls {
@@ -115,10 +116,18 @@ grid-template-columns: 20% 40% 20%;
 }
 
 .sheet-initiative_tabs_initiative {
-float: left;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 80px 70px 8px 60px 8px 80px;
+  /*______________________________ edit this pixelcount*/
 }
 
 .sheet-initiative_tabs_tabs {
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+.sheet-initiative_tabs_boxes{
+  overflow: hidden;
+  margin: 2px;
 }
