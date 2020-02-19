@@ -1,18 +1,21 @@
+/* change the [overflow: hidden;] atribute for a better sollution to resizing containers*/
+
+
 /* start of grid structure for character information ______________________________ */
 
-.sheet-gs1 { grid-area: ah1; font-size: 14px; }
-.sheet-gs2 { grid-area: ah2; font-size: 14px; }
-.sheet-gs3 { grid-area: ah3; font-size: 14px; }
-.sheet-gs4 { grid-area: ah4; }
-.sheet-gs5 { grid-area: ah5; }
-.sheet-gs6 { grid-area: ah6; }
-.sheet-gs7 { grid-area: ah7; }
-.sheet-gs8 { grid-area: ah8; }
-.sheet-gs9 { grid-area: ah9; }
-.sheet-gs10 { grid-area: ah10; }
-.sheet-gs11 { grid-area: ah11; font-size: 14px; text-align: right }
-.sheet-gs12 { grid-area: ah12; font-size: 14px; text-align: right }
-.sheet-gs13 { grid-area: ah13; font-size: 14px; text-align: right }
+.sheet-gs1 { grid-area: ah1;   height:30px; font-size: 14px; }
+.sheet-gs2 { grid-area: ah2;   height:30px; font-size: 14px; }
+.sheet-gs3 { grid-area: ah3;   height:30px; font-size: 14px; }
+.sheet-gs4 { grid-area: ah4;   height:30px; }
+.sheet-gs5 { grid-area: ah5;   height:30px; }
+.sheet-gs6 { grid-area: ah6;   height:30px; }
+.sheet-gs7 { grid-area: ah7;   }
+.sheet-gs8 { grid-area: ah8;   height:30px; }
+.sheet-gs9 { grid-area: ah9;   height:30px; }
+.sheet-gs10 { grid-area: ah10;   height:30px; }
+.sheet-gs11 { grid-area: ah11;   height:30px; font-size: 14px; text-align: right }
+.sheet-gs12 { grid-area: ah12;   height:30px; font-size: 14px; text-align: right }
+.sheet-gs13 { grid-area: ah13;   height:30px; font-size: 14px; text-align: right }
 
 .sheet-header_logo {
   display: grid;
@@ -20,7 +23,7 @@
   'ah1 ah4 ah7 ah8 ah11'
   'ah2 ah5 ah7 ah9 ah12'
   'ah3 ah6 ah7 ah10 ah13';
-  grid-template-columns: 15% 30% 10% 30% 15%;
+  grid-template-columns: 15% 20% 10 20% 15%;
 }
 
 /* end of grid structure for character information ______________________________
@@ -40,7 +43,8 @@ ______________________________ start of grid structure for the mythic characteri
 
 .sheet-characteristics_mythic_movement_carry {
   display: grid;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-columns: 10% 80% 10%;
+
 }
 
 .sheet-mythicgs1 { grid-area: amy1; }
@@ -94,6 +98,7 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-carrygs6 { grid-area: ac6; font-size: 10px; }
 .sheet-carrygs7 { grid-area: ac7; font-size: 10px; }
 .sheet-characteristics2_carry {
+      justify-content: right;
   display: grid;
   grid-template-columns: 60px 60px 60px;
   grid-template-areas:
@@ -101,6 +106,7 @@ ______________________________ start of grid structure for the mythic characteri
   'ac2 ac3 ac4'
   'ac5 ac6 ac7';
   text-align: center
+
 }
 
 /* end of grid structure for the mythic characteristics, movement and pushing ______________________________
@@ -115,15 +121,15 @@ ______________________________ start of grid structure for initiative/sheet tabs
 .sheet-initiative_tabs_initiative {
   display: grid;
   justify-content: left;
-  grid-template-columns: 95px 76px 12px 40px 12px 80px;
-  height: 25px;
+  grid-template-columns: 95px 76px 12px 40px 12px 70px;
+  height:30px;
 }
 
 .sheet-initiative_tabs_tabs {
   display: grid;
   justify-content: right;
   grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
-  height: 25px;
+  height:30px;
 }
 
 .sheet-initiative_tabs_boxes{
