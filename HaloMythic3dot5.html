@@ -6,9 +6,15 @@
   <div class="sheet-gs2">Faction</div>
   <div class="sheet-gs3">Soldier Type</div>
   <div class="sheet-gs4"><input type="text" name="attr_character_name" /></div>
-  <div class="sheet-gs5"><input type="text" name="attr_faction" /></div>
+  <div class="sheet-gs5"><select name="attr_faction">
+    <option selected="selected" />
+	<option>United Nations Space Command</option>
+	<option>Covenant</option>
+	<option>Forerunner</option>
+	<option>Specific</option>
+  </select></div>
   <div class="sheet-gs6"><input type="text" name="attr_soldier_type" /></div>
-  <div class="sheet-gs7" style="margin-bottom:-50px;"> <img src="http://i.imgur.com/xdlJmth.png" style="height: 80px;" /></div>
+  <div class="sheet-gs7" style="margin-bottom:-50px;"> <img name="logo" src="https://i.postimg.cc/xjBZN4Hy/mythic-logo.png" style="width:100px;" /></div>
   <!-- REPLACE LOGO SOURCE ONCE COMPLETE: src="images/mythic_logo.png" -->
   <div class="sheet-gs8"><input type="text" name="attr_rank" /></div>
   <div class="sheet-gs9"><input type="text" name="attr_specialisation" /></div>
@@ -19,6 +25,14 @@
 
 </div>
 <br>
+
+<!-- SHEET WORKER FOR FACTION DROPDOWN -->
+<script type="text/worker">
+  on("change:attr_faction change:logo", function() {
+    let getAttrs(["attr_faction","logo"], function(obj) { let faction = obj.attr_faction; });
+	let logo_human = "https://i.postimg.cc/3JNpqVCM/faction-logo-UNSC.png"
+	if (faction.option == "United Nations Space Command") setAttrs({ logo.src: logo_human });
+</script>
 
 
 
