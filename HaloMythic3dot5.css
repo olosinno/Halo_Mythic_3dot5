@@ -109,21 +109,21 @@ ______________________________ start of grid structure for initiative/sheet tabs
 .sheet-initiative_tabs_main {
   display: grid;
   grid-template-columns: 50% 50%;
-  height:auto;
+  height: auto;
 }
 
 .sheet-initiative_tabs_initiative {
   display: grid;
   justify-content: left;
   grid-template-columns: 95px 76px 12px 40px 12px 80px;
-  height:25px;
+  height: 25px;
 }
 
 .sheet-initiative_tabs_tabs {
   display: grid;
   justify-content: right;
   grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
-  height:25px;
+  height: 25px;
 }
 
 .sheet-initiative_tabs_boxes{
@@ -171,6 +171,18 @@ _______________________start of minimisable infographic */
 
 /* end of minimisable infographic ______________________________
 ______________________________ start of journal */
+
+.sheet-core_lists1 { grid-area: cl1; }
+.sheet-core_lists2 { grid-area: cl2; }
+.sheet-core_lists3 { grid-area: cl3; }
+.sheet-core_lists {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+  'cl1 cl2'
+  'cl1 cl3';
+  height:auto;
+}
 
 .sheet-journal_heading {
 	text-align: center;
