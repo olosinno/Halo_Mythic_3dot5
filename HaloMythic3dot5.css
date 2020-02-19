@@ -108,23 +108,26 @@ ______________________________ start of grid structure for initiative/sheet tabs
 
 .sheet-initiative_tabs_main {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 50% 50%;
+    height:auto;
 }
 
 .sheet-initiative_tabs_initiative {
   display: grid;
-  justify-content: center;
-  grid-template-columns: 64px 76px 12px 50px 12px 80px;
+  justify-content: left;
+  grid-template-columns: 95px 76px 12px 40px 12px 80px;
+      height:25px;
 }
 
 .sheet-initiative_tabs_tabs {
   display: grid;
-  grid-template-columns: 10% 10% 10% 10% 10% 10%
+  justify-content: right;
+  grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
+      height:25px;
 }
 
 .sheet-initiative_tabs_boxes{
   overflow: hidden;
-  margin: 2px;
 }
 /* end of grid structure for grid structure for initiative/sheet tabs _______________________
 _______________________start of tab buttons toggles*/
