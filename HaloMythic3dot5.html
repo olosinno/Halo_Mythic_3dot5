@@ -8,10 +8,10 @@
   <div class="sheet-gs4"><input type="text" name="attr_character_name" /></div>
   <div class="sheet-gs5"><select name="attr_faction">
     <option selected="selected" />
-	<option>United Nations Space Command</option>
-	<option>Covenant</option>
-	<option>Forerunner</option>
-	<option>Specific</option>
+    <option>United Nations Space Command</option>
+    <option>Covenant</option>
+    <option>Forerunner</option>
+    <option>Specific</option>
   </select></div>
   <div class="sheet-gs6"><input type="text" name="attr_soldier_type" /></div>
   <div class="sheet-gs7" style="margin-bottom:-50px;"> <img name="logo" src="https://i.postimg.cc/xjBZN4Hy/mythic-logo.png" style="width:100px;" /></div>
@@ -25,16 +25,6 @@
 
 </div>
 <br>
-
-<!-- SHEET WORKER FOR FACTION DROPDOWN -->
-<script type="text/worker">
-  on("change:attr_faction change:logo", function() {
-    let getAttrs(["attr_faction","logo"], function(obj) { let faction = obj.attr_faction; });
-	let logo_human = "https://i.postimg.cc/3JNpqVCM/faction-logo-UNSC.png"
-	if (faction.option == "United Nations Space Command") setAttrs({ logo.src: logo_human });
-</script>
-
-
 
 <!-- ______________________________ characteristics grid ______________________________ -->
 
@@ -224,10 +214,8 @@
 <!-- ______________________________ initiative/sheet tabs grid ______________________________ -->
 
 <div class="sheet-initiative_tabs_main">
-
-  <div class="sheet-initiative_tabs_controls"></div>
   <div class="sheet-initiative_tabs_initiative">
-    <div class="sheet-initiative_tabs_boxes"><button name="initiative" type="roll" value="/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})]]"<span>STR</span></button></div>
+    <div class="sheet-initiative_tabs_boxes"><button name="initiative" type="roll" value="/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})]]"<span>Initiative</span></button></div>
     <div style="display:none;"><input name="attr_initmod0" value="floor"/></div>
     <div class="sheet-initiative_tabs_boxes"><select name="attr_initmod1">
       <option value="1d10"selected="selected">Standard</option>
@@ -244,6 +232,83 @@
     </select></div>
   </div>
   <div class="sheet-initiative_tabs_tabs">
+    <button type="action" name="act_core" >Core</button>
+    <button type="action" name="act_equipment" >Equipment</button>
+    <button type="action" name="act_medical" >Medical</button>
+    <button type="action" name="act_advancements" >Advancements</button>
+    <button type="action" name="act_journal" >Journal</button>
+    <button type="action" name="act_vehicles" >Vehicles</button>
+    <button type="action" name="act_settings" >Settings</button>
   </div>
+</div>
 
+<!-- ______________________________ logic for the sheet tabs ___________________ -->
+
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='core'  />
+<script type="text/worker">
+  const buttonlist = ["core","equipment","medical","advancements","journal","vehicles","settings"];
+  buttonlist.forEach(button => {
+    on(`clicked:${button}`, function() {
+      setAttrs({
+        sheetTab: button
+      });
+    });
+  });
+</script>
+
+
+
+<!-- ______________________________ start of minimisable infographic____________ -->
+
+<div class="sheet-minimisable_infographic_main">
+  <input type="checkbox" class="sheet-minimisable_switch">
+  <div class="sheet-minimisable_infographic_a">
+    a short single line containing all the important info you might need
+  </div>
+  <div class="sheet-minimisable_infographic_b">
+    a long
+    <div>list</div>
+    of text<br>
+    with
+    a bunch<br>
+    of information
+  </div>
+</div>
+
+
+
+<!-- ______________________________ sheet tabs _________________________________ -->
+<!-- ______________________________ start of core ______________________________ -->
+
+<div class='sheet-core'>
+  <h2>Core</h2>
+  <span>core Stuff Goes here </span>
+</div>
+<div class='sheet-equipment'>
+  <h2>Equipment/gear</h2>
+  <span>Equipment Goes here</span>
+</div>
+<div class='sheet-medical'>
+  <h2>Medical</h2>
+  <span>Sheet Medical goes here</span>
+</div>
+
+<div class='sheet-advancements'>
+  <h2>Advancements</h2>
+  <span>Advancements go here</span>
+</div>
+
+<div class='sheet-journal'>
+  <h2>Journal</h2>
+  <span>Journal goes here</span>
+</div>
+
+<div class='sheet-vehicles'>
+  <h2>Vehicles</h2>
+  <span>Vehicles goes here</span>
+</div>
+
+<div class='sheet-settings'>
+  <h2>Settings</h2>
+  <span>Settings goes here</span>
 </div>
