@@ -108,12 +108,7 @@ ______________________________ start of grid structure for initiative/sheet tabs
 
 .sheet-initiative_tabs_main {
   display: grid;
-  grid-template-columns: 20% 60% 20%;
-}
-
-.sheet-initiative_tabs_controls {
-  display: grid;
-  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-columns: 20% 80%;
 }
 
 .sheet-initiative_tabs_initiative {
@@ -124,10 +119,32 @@ ______________________________ start of grid structure for initiative/sheet tabs
 
 .sheet-initiative_tabs_tabs {
   display: grid;
-  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-columns: 10% 10% 10% 10% 10% 10%
 }
 
 .sheet-initiative_tabs_boxes{
   overflow: hidden;
   margin: 2px;
+}
+
+/*Configure the tab buttons*/
+.sheet-core,
+.sheet-medical,
+.sheet-equipment,
+.sheet-advancements,
+.sheet-journal,
+.sheet-vehicles,
+.sheet-settings{
+  display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="core"] ~ div.sheet-core,
+.sheet-tabstoggle[value="equipment"] ~ div.sheet-equipment,
+.sheet-tabstoggle[value="medical"] ~ div.sheet-medical,
+.sheet-tabstoggle[value="advancements"] ~ div.sheet-advancements,
+.sheet-tabstoggle[value="journal"] ~ div.sheet-journal,
+.sheet-tabstoggle[value="vehicles"] ~ div.sheet-vehicles,
+.sheet-tabstoggle[value="settings"] ~ div.sheet-settings{
+  display: block;
 }
