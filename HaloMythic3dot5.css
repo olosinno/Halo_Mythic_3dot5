@@ -130,7 +130,7 @@ ______________________________ start of grid structure for initiative/sheet tabs
   overflow: hidden;
 }
 /* end of grid structure for grid structure for initiative/sheet tabs _______________________
-_______________________start of tab buttons toggles*/
+_______________________start of tab buttons toggles */
 .sheet-core,
 .sheet-medical,
 .sheet-equipment,
@@ -151,8 +151,8 @@ _______________________start of tab buttons toggles*/
 .sheet-tabstoggle[value="settings"] ~ div.sheet-settings{
   display: block;
 }
-/*end of tab buttons toggles __________________________________________________________________
-_______________________start of minimisable infographic*/
+/* end of tab buttons toggles __________________________________________________________________
+_______________________start of minimisable infographic */
 
 .sheet-minimisable_infographic_main {
   display: grid;
@@ -167,4 +167,17 @@ _______________________start of minimisable infographic*/
 .sheet-minimisable_infographic_b,
 .sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_a {
   display: none;
+}
+
+/* end of minimisable infographic ______________________________
+______________________________ start of journal */
+
+.sheet-journal_heading {
+	text-align: center;
+}
+.sheet-objectives {
+	width: 96%;
+}
+.sheet-journal_notes {
+	resize: vertical;
 }
