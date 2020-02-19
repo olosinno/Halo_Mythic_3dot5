@@ -232,16 +232,18 @@
     </select></div>
   </div>
   <div class="sheet-initiative_tabs_tabs">
-      <button type="action" name="act_core" >Core</button>
-      <button type="action" name="act_equipment" >Equipment</button>
-      <button type="action" name="act_medical" >Medical</button>
-      <button type="action" name="act_advancements" >Advancements</button>
-      <button type="action" name="act_journal" >Journal</button>
-      <button type="action" name="act_vehicles" >Vehicles</button>
-      <button type="action" name="act_settings" >Settings</button>
+    <button type="action" name="act_core" >Core</button>
+    <button type="action" name="act_equipment" >Equipment</button>
+    <button type="action" name="act_medical" >Medical</button>
+    <button type="action" name="act_advancements" >Advancements</button>
+    <button type="action" name="act_journal" >Journal</button>
+    <button type="action" name="act_vehicles" >Vehicles</button>
+    <button type="action" name="act_settings" >Settings</button>
   </div>
 </div>
-<!-- ______________________________ logic for the sheet tabs ______________________________ -->
+
+<!-- ______________________________ logic for the sheet tabs ___________________ -->
+
 <input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='core'  />
 <script type="text/worker">
   const buttonlist = ["core","equipment","medical","advancements","journal","vehicles","settings"];
@@ -254,8 +256,30 @@
   });
 </script>
 
+
+
+<!-- ______________________________ start of minimisable infographic____________ -->
+
+<div class="sheet-minimisable_infographic_main">
+  <input type="checkbox" class="sheet-minimisable_switch">
+  <div class="sheet-minimisable_infographic_a">
+    a short single line containing all the important info you might need
+  </div>
+  <div class="sheet-minimisable_infographic_b">
+    a long
+    <div>list</div>
+    of text<br>
+    with
+    a bunch<br>
+    of information
+  </div>
+</div>
+
+
+
 <!-- ______________________________ sheet tabs _________________________________ -->
 <!-- ______________________________ start of core ______________________________ -->
+
 <div class='sheet-core'>
   <h2>Core</h2>
   <span>core Stuff Goes here </span>

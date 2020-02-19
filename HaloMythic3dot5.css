@@ -109,21 +109,21 @@ ______________________________ start of grid structure for initiative/sheet tabs
 .sheet-initiative_tabs_main {
   display: grid;
   grid-template-columns: 50% 50%;
-    height:auto;
+  height:auto;
 }
 
 .sheet-initiative_tabs_initiative {
   display: grid;
   justify-content: left;
   grid-template-columns: 95px 76px 12px 40px 12px 80px;
-      height:25px;
+  height:25px;
 }
 
 .sheet-initiative_tabs_tabs {
   display: grid;
   justify-content: right;
   grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
-      height:25px;
+  height:25px;
 }
 
 .sheet-initiative_tabs_boxes{
@@ -152,3 +152,19 @@ _______________________start of tab buttons toggles*/
   display: block;
 }
 /*end of tab buttons toggles __________________________________________________________________
+_______________________start of minimisable infographic*/
+
+.sheet-minimisable_infographic_main {
+  display: grid;
+  grid-template-columns: 10px auto;
+}
+
+.sheet-minimisable_infographic_a,
+.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_b {
+  display: block;
+}
+
+.sheet-minimisable_infographic_b,
+.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_a {
+  display: none;
+}
