@@ -126,8 +126,8 @@ ______________________________ start of grid structure for initiative/sheet tabs
   overflow: hidden;
   margin: 2px;
 }
-
-/*Configure the tab buttons*/
+/* end of grid structure for grid structure for initiative/sheet tabs _______________________
+_______________________start of tab buttons toggles*/
 .sheet-core,
 .sheet-medical,
 .sheet-equipment,
@@ -148,3 +148,4 @@ ______________________________ start of grid structure for initiative/sheet tabs
 .sheet-tabstoggle[value="settings"] ~ div.sheet-settings{
   display: block;
 }
+/*end of tab buttons toggles __________________________________________________________________

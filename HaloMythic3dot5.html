@@ -241,9 +241,21 @@
       <button type="action" name="act_settings" >Settings</button>
   </div>
 </div>
+<!-- ______________________________ logic for the sheet tabs ______________________________ -->
 <input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='core'  />
+<script type="text/worker">
+  const buttonlist = ["core","equipment","medical","advancements","journal","vehicles","settings"];
+  buttonlist.forEach(button => {
+    on(`clicked:${button}`, function() {
+      setAttrs({
+        sheetTab: button
+      });
+    });
+  });
+</script>
 
-
+<!-- ______________________________ sheet tabs _________________________________ -->
+<!-- ______________________________ start of core ______________________________ -->
 <div class='sheet-core'>
   <h2>Core</h2>
   <span>core Stuff Goes here </span>
@@ -276,14 +288,3 @@
   <h2>Settings</h2>
   <span>Settings goes here</span>
 </div>
-
-<script type="text/worker">
-  const buttonlist = ["core","equipment","medical","advancements","journal","vehicles","settings"];
-  buttonlist.forEach(button => {
-    on(`clicked:${button}`, function() {
-      setAttrs({
-        sheetTab: button
-      });
-    });
-  });
-</script>
