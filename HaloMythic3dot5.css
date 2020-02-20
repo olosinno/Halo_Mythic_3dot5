@@ -30,6 +30,7 @@
 .sheet-gs25 { grid-area: ah25;   height:30px; font-size: 14px; text-align: right }
 
 .sheet-header_logo {
+	font-family: Serif;
   display: grid;
   grid-template-areas:
   'ah1 ah7 ah13 ah14 ah20'
@@ -197,9 +198,15 @@ _______________________start of minimisable infographic */
   display: none;
 }
 
-.
-
 /* end of minimisable infographic ______________________________
+______________________________ start of advancement/experience tab */
+
+.sheet-collapsible_experience_description_window_a,
+.sheet-collapsible_experience_block_switch:checked, ~ .sheet-collapsible_experience_description_window_b { display: block }
+.sheet-collapsible_experience_description_window_b,
+.sheet-collapsible_experience_block_switch:checked, ~ .sheet-collapsible_experience_description_window_a { display: none }
+
+/* end of advancement/experience tab ______________________________
 ______________________________ start of journal */
 
 .sheet-core_lists1 { grid-area: cl1; }
