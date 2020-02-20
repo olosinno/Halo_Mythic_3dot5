@@ -370,19 +370,27 @@
   </div>
 
   <div class="sheet-advancement_list">
-    <div>
-      Unspent XP: <input type="text" name="attr_XP_current"> Spent XP: <input type="text" name="attr_XP_spent"> XP Total: <input type="text" name="attr_XP_Total">
+    <div style="text-align:center;">
+      Unspent XP: <input type="number" name="attr_XP_current" style="width:20%; margin-right:20px;">
+	  Spent XP: <input type="number" name="attr_XP_spent" style="width:20%; margin-right:20px;">
+	  XP Total: <input type="number" name="attr_XP_Total" style="width:20%;">
     </div>
     <br>
+
+
     <div>
-      <input type="text" name="advancementL" placeholder="Add experience-costing item here">
-	  <input type="number" name="advancement_costL" placeholder="$">
-	  <input type="number" name="advancement_pg#L" placeholder="pg#">
-      <textarea name="attr_experience" class="sheet-experience_item_desc"></textarea>
+      <input type="text" name="advancementL" placeholder="Write XP-costing item name here">
+	  <input type="number" name="advancement_costL" placeholder="XP Cost" style="width:10%;">
+	  <input type="number" name="advancement_pg#L" placeholder="Page #" style="width:10%; margin-right:5px;">
+      <input type="checkbox" name="exp_desc" class="collapsible_experience_block_switch">
+	  <div="collapsible_experience_description_window_b">Expand or collapse experience item description</div>
+      <textarea name="attr_experience" class="collapsible_experience_description_window_a"></textarea>
     </div>
+
+
     <fieldset name="advancements" class="repeating_advancements">
       <input type="text" name="advancementL" placeholder="advancement">
-	  <input type="number" name="advancement_costL" placeholder="$">
+	  <input type="number" name="advancement_costL" placeholder="cost">
 	  <input type="number" name="advancement_pg#L" placeholder="pg#">
       <input type="text" name="advancementR" placeholder="advancement">
 	  <input type="number" name="advancement_costR" placeholder="$">
