@@ -2,11 +2,16 @@
 
 <div class="sheet-header_logo">
 
+  <!-- first column of grid: left-side fields' labels/names -->
   <div class="sheet-gs1">Character Name</div>
   <div class="sheet-gs2">Faction</div>
   <div class="sheet-gs3">Soldier Type</div>
-  <div class="sheet-gs4"><input type="text" name="attr_character_name" /></div>
-  <div class="sheet-gs5">
+  <div class="sheet-gs4">Rank</div>
+  <div class="sheet-gs5">Build / Size</div>
+  <div class="sheet-gs6">Specialisation</div>
+  <!-- second column of grid: left-side fields -->
+  <div class="sheet-gs7"><input type="text" name="attr_character_name" /></div>
+  <div class="sheet-gs8">
     <select name="attr_faction">
       <option value="1">United Nations Space Command</option>
       <option value="2">Covenant</option>
@@ -14,8 +19,12 @@
       <option value="4">Other</option>
     </select>
   </div>
-  <div class="sheet-gs6"><input type="text" name="attr_soldier_type" /></div>
-  <div class="sheet-gs7">
+  <div class="sheet-gs9"><input type="text" name="attr_soldier_type" /></div>
+  <div class="sheet-gs10"><input type="text" name="attr_rank" /></div>
+  <div class="sheet-gs11"><input type="text" name="attr_size" placeholder="Average" /></div>
+  <div class="sheet-gs12"><input type="text" name="attr_specialisation" /></div>
+  <!-- third column of grid: header logo -->
+  <div class="sheet-gs13">
     <input type="checkbox" name="attr_faction" value="1" class="sheet-imghidden sheet-imghider" checked>
     <div class="UNSC"><img name="logo" src="https://cdn.discordapp.com/attachments/676016722939084800/679967143206453373/faction_logo_UNSC.png" height="130" width="130"/></div>
     <input type="checkbox" name="attr_faction" value="2" class="sheet-imghidden sheet-imghider">
@@ -26,12 +35,20 @@
     <div class="OTHER"><img name="logo" src="https://cdn.discordapp.com/attachments/676016722939084800/679967139285041172/mythic_logo.png" height="130" width="130"/></div>
   </div>
   <!-- REPLACE LOGO SOURCE ONCE COMPLETE: src="images/mythic_logo.png" -->
-  <div class="sheet-gs8"><input type="text" name="attr_rank" /></div>
-  <div class="sheet-gs9"><input type="text" name="attr_specialisation" /></div>
-  <div class="sheet-gs10"><input type="text" name="attr_race" /></div>
-  <div class="sheet-gs11">Rank</div>
-  <div class="sheet-gs12">Specialisation</div>
-  <div class="sheet-gs13">Race</div>
+  <!-- fourth column of grid: right-side fields -->
+  <div class="sheet-gs14"><input type="text" name="attr_player_name" /></div>
+  <div class="sheet-gs15"><input type="text" name="attr_sex" /></div>
+  <div class="sheet-gs16"><input type="text" name="attr_race" /></div>
+  <div class="sheet-gs17"><input type="text" name="attr_upbringing" /></div>
+  <div class="sheet-gs18"><input type="text" name="attr_environment" /></div>
+  <div class="sheet-gs19"><input type="text" name="attr_lifestyle" /></div>
+  <!-- fifth column of grid: right-side fields' labels/names -->
+  <div class="sheet-gs20">Player Name</div>
+  <div class="sheet-gs21">Gender</div>
+  <div class="sheet-gs22">Race</div>
+  <div class="sheet-gs23">Upbringing</div>
+  <div class="sheet-gs24">Environment</div>
+  <div class="sheet-gs25">Lifestyle</div>
 
 </div>
 <br>
@@ -354,16 +371,22 @@
 
   <div class="sheet-advancement_list">
     <div>
-      XP to spend <input type="text" name="attr_XP_current"> XP spent<input type="text" name="attr_XP_spent">   XP total<input type="text" name="attr_XP_Total">
+      Unspent XP: <input type="text" name="attr_XP_current"> Spent XP: <input type="text" name="attr_XP_spent"> XP Total: <input type="text" name="attr_XP_Total">
     </div>
     <br>
     <div>
-      <input type="text" name="advancementL" placeholder="advancement"><input type="number" name="advancement_costL" placeholder="cost"><input type="number" name="advancement_pg#L" placeholder="pg#">
-      <input type="text" name="advancementR" placeholder="advancement"><input type="number" name="advancement_costR" placeholder="cost"><input type="number" name="advancement_pg#R" placeholder="pg#">
+      <input type="text" name="advancementL" placeholder="Add experience-costing item here">
+	  <input type="number" name="advancement_costL" placeholder="$">
+	  <input type="number" name="advancement_pg#L" placeholder="pg#">
+      <textarea name="attr_experience" class="sheet-experience_item_desc"></textarea>
     </div>
     <fieldset name="advancements" class="repeating_advancements">
-      <input type="text" name="advancementL" placeholder="advancement"><input type="number" name="advancement_costL" placeholder="cost"><input type="number" name="advancement_pg#L" placeholder="pg#">
-      <input type="text" name="advancementR" placeholder="advancement"><input type="number" name="advancement_costR" placeholder="cost"><input type="number" name="advancement_pg#R" placeholder="pg#">
+      <input type="text" name="advancementL" placeholder="advancement">
+	  <input type="number" name="advancement_costL" placeholder="$">
+	  <input type="number" name="advancement_pg#L" placeholder="pg#">
+      <input type="text" name="advancementR" placeholder="advancement">
+	  <input type="number" name="advancement_costR" placeholder="$">
+	  <input type="number" name="advancement_pg#R" placeholder="pg#">
     </fieldset>
   </div>
 </div>
@@ -376,7 +399,10 @@
   </fieldset>
   <h2 class='sheet-journal_heading'>Journal: Notes</h2>
   <fieldset name="notes" class="repeating_notes">
-    <textarea name="attr_notes" class="sheet-journal_notes" placeholder="Enter information such as plot details, unresolved mission details such as escaped targets, character relationships, et cetera here."></textarea>
+    <!-- insert new line html entity [&#10;] inside of placeholder attribute -->
+    <textarea name="attr_notes" class="sheet-journal_notes" placeholder="&#10;Enter information such as plot details, unresolved mission details such as escaped targets, character relationships, et cetera here.&#10;
+	&#10;Also feel free to write appearance details here or in Bio & Info for public viewing: age, height, weight, colors of eyes, hair, skin, and more that comes to mind.&#10;
+	&#10;See Medical tab to include any medical information such as character injuries."></textarea>
   </fieldset>
 </div>
 
