@@ -315,8 +315,23 @@
 </div>
 
 <div class='sheet-advancements'>
-  <h2>Advancements</h2>
-  <span>Advancements go here</span>
+  <div class='sheet-advancements_experience'>
+  </div>
+
+  <div class="sheet-advancement_list">
+    <div>
+      XP to spend <input type="text" name="attr_XP_current"> XP spent<input type="text" name="attr_XP_spent">   XP total<input type="text" name="attr_XP_Total">
+    </div>
+    <br>
+    <div>
+      <input type="text" name="advancementL" placeholder="advancement"><input type="number" name="advancement_costL" placeholder="cost"><input type="number" name="advancement_pg#L" placeholder="pg#">
+      <input type="text" name="advancementR" placeholder="advancement"><input type="number" name="advancement_costR" placeholder="cost"><input type="number" name="advancement_pg#R" placeholder="pg#">
+    </div>
+    <fieldset name="advancements" class="repeating_advancements">
+      <input type="text" name="advancementL" placeholder="advancement"><input type="number" name="advancement_costL" placeholder="cost"><input type="number" name="advancement_pg#L" placeholder="pg#">
+      <input type="text" name="advancementR" placeholder="advancement"><input type="number" name="advancement_costR" placeholder="cost"><input type="number" name="advancement_pg#R" placeholder="pg#">
+    </fieldset>
+  </div>
 </div>
 
 <div class='sheet-journal'>
