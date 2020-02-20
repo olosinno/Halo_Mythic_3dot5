@@ -36,6 +36,40 @@
 </div>
 <br>
 
+<script type="text/javascript">
+    // TODO: SET THE PROPER URLS TO THE IMAGES HERE
+    const factions = {
+        "": "https://i.postimg.cc/xjBZN4Hy/mythic-logo.png",
+        "United Nations Space Command": "https://i.postimg.cc/3JNpqVCM/faction-logo-UNSC.png",
+        "Covenant": "",
+        "Forerunner": "",
+        "Specific": ""
+    }
+    const selects = document.getElementsByName("attr_faction");
+    for (let select of selects) {
+        select.addEventListener("change", function (e) {
+            if (factions[e.target.value]) {
+                const logoEl = e.target.parentNode.parentNode.getElementsByTagName("img").logo;
+                if (logoEl) logoEl.src = factions[e.target.value];
+            }
+        });
+    }
+</script>
+
+<!-- SHEET WORKER FOR FACTION DROPDOWN -->
+<script type="text/worker">
+  console.log("Sheet worker initiated");
+  on("change:faction", function() {
+    console.log("Change event triggered");
+    getAttrs(["faction"], function(obj) {
+	  let Beter = obj.faction;
+// Make a map for your different hyperlinks dummy!
+	  let logo_human = "https://i.postimg.cc/3JNpqVCM/faction-logo-UNSC.png"
+      if (Beter == "United Nations Space Command") setAttrs({ logo.src: logo_human });
+	});
+  });
+</script>
+
 <!-- ______________________________ characteristics grid ______________________________ -->
 
 <div class="sheet-characteristics">
@@ -251,7 +285,7 @@
     <button type="action" name="act_settings" >Settings</button>
   </div>
 </div>
-<br>
+<hr>
 
 <!-- ______________________________ logic for the sheet tabs ___________________ -->
 
