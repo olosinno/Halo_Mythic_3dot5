@@ -6,24 +6,39 @@
 .sheet-gs1 { grid-area: ah1;   height:30px; font-size: 14px; }
 .sheet-gs2 { grid-area: ah2;   height:30px; font-size: 14px; }
 .sheet-gs3 { grid-area: ah3;   height:30px; font-size: 14px; }
-.sheet-gs4 { grid-area: ah4;   height:30px; }
-.sheet-gs5 { grid-area: ah5;   height:30px; }
-.sheet-gs6 { grid-area: ah6;   height:30px; }
-.sheet-gs7 { grid-area: ah7;   }
+.sheet-gs4 { grid-area: ah4;   height:30px; font-size: 14px; }
+.sheet-gs5 { grid-area: ah5;   height:30px; font-size: 14px; }
+.sheet-gs6 { grid-area: ah6;   height:30px; font-size: 14px; }
+.sheet-gs7 { grid-area: ah7;   height:30px; }
 .sheet-gs8 { grid-area: ah8;   height:30px; }
 .sheet-gs9 { grid-area: ah9;   height:30px; }
 .sheet-gs10 { grid-area: ah10;   height:30px; }
-.sheet-gs11 { grid-area: ah11;   height:30px; font-size: 14px; text-align: right }
-.sheet-gs12 { grid-area: ah12;   height:30px; font-size: 14px; text-align: right }
-.sheet-gs13 { grid-area: ah13;   height:30px; font-size: 14px; text-align: right }
+.sheet-gs11 { grid-area: ah11;   height:30px; }
+.sheet-gs12 { grid-area: ah12;   height:30px; }
+.sheet-gs13 { grid-area: ah13; }
+.sheet-gs14 { grid-area: ah14;   height:30px; }
+.sheet-gs15 { grid-area: ah15;   height:30px; }
+.sheet-gs16 { grid-area: ah16;   height:30px; }
+.sheet-gs17 { grid-area: ah17;   height:30px; }
+.sheet-gs18 { grid-area: ah18;   height:30px; }
+.sheet-gs19 { grid-area: ah19;   height:30px; }
+.sheet-gs20 { grid-area: ah20;   height:30px; font-size: 14px; text-align: right }
+.sheet-gs21 { grid-area: ah21;   height:30px; font-size: 14px; text-align: right }
+.sheet-gs22 { grid-area: ah22;   height:30px; font-size: 14px; text-align: right }
+.sheet-gs23 { grid-area: ah23;   height:30px; font-size: 14px; text-align: right }
+.sheet-gs24 { grid-area: ah24;   height:30px; font-size: 14px; text-align: right }
+.sheet-gs25 { grid-area: ah25;   height:30px; font-size: 14px; text-align: right }
 
 .sheet-header_logo {
   display: grid;
   grid-template-areas:
-  'ah1 ah4 ah7 ah8 ah11'
-  'ah2 ah5 ah7 ah9 ah12'
-  'ah3 ah6 ah7 ah10 ah13';
-  grid-template-columns: 15% 20% 10 20% 15%;
+  'ah1 ah7 ah13 ah14 ah20'
+  'ah2 ah8 ah13 ah15 ah21'
+  'ah3 ah9 ah13 ah16 ah22'
+  'ah4 ah10 ah13 ah17 ah23'
+  'ah5 ah11 ah13 ah18 ah24'
+  'ah6 ah12 ah13 ah19 ah25';
+  grid-template-columns: 15 20 10 20 15;
 }
 
 .sheet-imghidden {
@@ -181,6 +196,8 @@ _______________________start of minimisable infographic */
 .sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_a {
   display: none;
 }
+
+.
 
 /* end of minimisable infographic ______________________________
 ______________________________ start of journal */
