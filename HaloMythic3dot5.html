@@ -26,7 +26,7 @@
   <!-- third column of grid: header logo -->
   <div class="sheet-gs13">
     <input type="checkbox" name="attr_faction" value="1" class="sheet-imghidden sheet-imghider" checked>
-    <div class="UNSC"><img name="logo" src="https://cdn.discordapp.com/attachments/676016722939084800/679967143206453373/faction_logo_UNSC.png" height="130" width="130"/></div>
+    <div class="UNSC"><img name="logo" src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_UNSC.png" height="130" width="130"/></div>
     <input type="checkbox" name="attr_faction" value="2" class="sheet-imghidden sheet-imghider">
     <div class="COVENANT"><img name="logo" src="https://cdn.discordapp.com/attachments/676016722939084800/679967137908916284/faction_logo_Covenant.png" height="130" width="130"/></div>
     <input type="checkbox" name="attr_faction" value="3" class="sheet-imghidden sheet-imghider">
@@ -373,7 +373,7 @@
     <div style="text-align:center;">
       Unspent XP: <input type="number" name="attr_XP_current" style="width:20%; margin-right:20px;">
 	  Spent XP: <input type="number" name="attr_XP_spent" style="width:20%; margin-right:20px;">
-	  XP Total: <input type="number" name="attr_XP_Total" style="width:20%;">
+	  XP Total: <input type="number" name="attr_XP_Total" style="width:20%;" disabled="true" value="@{XP_current}+@{XP_spent}">
     </div>
     <br>
 

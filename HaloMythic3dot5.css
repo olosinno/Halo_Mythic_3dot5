@@ -42,32 +42,31 @@
   grid-template-columns: 15 20 10 20 15;
 }
 
-.sheet-imghidden {
-  display: none;
-}
-.sheet-imghider:not(:checked) + div {
-  display: none;
-}
-
 /* end of grid structure for character information ______________________________
-______________________________ start of grid structure for characteristics */
+______________________________ start of sheet logo swapper */
+
+.sheet-imghidden { display: none; }
+.sheet-imghider:not(:checked) + div { display: none; }
+
+/* end of sheet logo swapper ______________________________
+______________________________ start of structure for characteristics */
 
 .sheet-characteristics {
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
+
 .sheet-characteristics_box {
   overflow: hidden;
   margin: 2px;
 }
 
-/* end of grid structure for characteristics ______________________________
+/* end of structure for characteristics ______________________________
 ______________________________ start of grid structure for the mythic characteristics, movement and pushing */
 
 .sheet-characteristics_mythic_movement_carry {
   display: grid;
   grid-template-columns: 10% 80% 10%;
-
 }
 
 .sheet-mythicgs1 { grid-area: amy1; }
@@ -129,7 +128,6 @@ ______________________________ start of grid structure for the mythic characteri
   'ac2 ac3 ac4'
   'ac5 ac6 ac7';
   text-align: center
-
 }
 
 /* end of grid structure for the mythic characteristics, movement and pushing ______________________________
@@ -155,11 +153,12 @@ ______________________________ start of grid structure for initiative/sheet tabs
   height:30px;
 }
 
-.sheet-initiative_tabs_boxes{
+.sheet-initiative_tabs_boxes {
   overflow: hidden;
 }
-/* end of grid structure for grid structure for initiative/sheet tabs _______________________
-_______________________start of tab buttons toggles */
+
+/* end of grid structure for initiative/sheet tabs ______________________________
+______________________________ start of tab buttons toggles */
 .sheet-core,
 .sheet-medical,
 .sheet-equipment,
@@ -171,6 +170,7 @@ _______________________start of tab buttons toggles */
 }
 
 /* show the selected tab */
+
 .sheet-tabstoggle[value="core"] ~ div.sheet-core,
 .sheet-tabstoggle[value="equipment"] ~ div.sheet-equipment,
 .sheet-tabstoggle[value="medical"] ~ div.sheet-medical,
@@ -180,8 +180,8 @@ _______________________start of tab buttons toggles */
 .sheet-tabstoggle[value="settings"] ~ div.sheet-settings{
   display: block;
 }
-/* end of tab buttons toggles __________________________________________________________________
-_______________________start of minimisable infographic */
+/* end of tab buttons toggles ______________________________
+______________________________ start of minimisable infographic */
 
 .sheet-minimisable_infographic_main {
   display: grid;
@@ -202,9 +202,9 @@ _______________________start of minimisable infographic */
 ______________________________ start of advancement/experience tab */
 
 .sheet-collapsible_experience_description_window_a,
-.sheet-collapsible_experience_block_switch:checked, ~ .sheet-collapsible_experience_description_window_b { display: block }
+.sheet-collapsible_experience_block_switch:checked ~ .sheet-collapsible_experience_description_window_b { display: block; }
 .sheet-collapsible_experience_description_window_b,
-.sheet-collapsible_experience_block_switch:checked, ~ .sheet-collapsible_experience_description_window_a { display: none }
+.sheet-collapsible_experience_block_switch:checked ~ .sheet-collapsible_experience_description_window_a { display: none; }
 
 /* end of advancement/experience tab ______________________________
 ______________________________ start of journal */
