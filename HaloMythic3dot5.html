@@ -13,7 +13,7 @@
   <div class="sheet-gs7"><input type="text" name="attr_character_name" /></div>
   <div class="sheet-gs8">
     <select name="attr_faction">
-	  <option value="1" selected="selected" />
+      <option value="1" selected="selected" />
       <option value="2">United Nations Space Command</option>
       <option value="3">Covenant</option>
       <option value="4">Forerunner</option>
@@ -26,26 +26,16 @@
   <div class="sheet-gs12"><input type="text" name="attr_specialisation" /></div>
   <!-- third column of grid: header logo -->
   <div class="sheet-gs13">
-	<input type="checkbox" name="attr_faction" value="1" class="sheet-imghidden sheet-imghider" checked>
-    <div><img name="logo"
-        src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png"
-        height="130" width="130" /></div>
-    <input type="checkbox" name="attr_faction" value="2" class="sheet-imghidden sheet-imghider" checked>
-    <div><img name="logo"
-        src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_UNSC.png"
-        height="130" width="130" /></div>
+    <input type="checkbox" name="attr_faction" value="1" class="sheet-imghidden sheet-imghider" checked>
+    <div><img name="logo" src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png" height="130" width="130" /></div>
+    <input type="checkbox" name="attr_faction" value="2" class="sheet-imghidden sheet-imghider">
+    <div><img name="logo" src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_UNSC.png" height="130" width="130" /></div>
     <input type="checkbox" name="attr_faction" value="3" class="sheet-imghidden sheet-imghider">
-    <div><img name="logo"
-        src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Covenant.png"
-        height="130" width="130" /></div>
+    <div><img name="logo"src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Covenant.png" height="130" width="130" /></div>
     <input type="checkbox" name="attr_faction" value="4" class="sheet-imghidden sheet-imghider">
-    <div><img name="logo"
-        src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Forerunner.png"
-        height="130" width="130" /></div>
+    <div><img name="logo" src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Forerunner.png" height="130" width="130" /></div>
     <input type="checkbox" name="attr_faction" value="5" class="sheet-imghidden sheet-imghider">
-    <div><img name="logo"
-        src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png" height="130"
-        width="130" /></div>
+    <div><img name="logo"  src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png" height="130"  width="130" /></div>
   </div>
   <!-- REPLACE LOGO SOURCE ONCE COMPLETE: src="images/mythic_logo.png" -->
   <!-- fourth column of grid: right-side fields -->
@@ -73,153 +63,133 @@
 <div class="sheet-characteristics">
 
   <div>
-    <div class="sheet-characteristics_box"><button name="STR" type="roll"
-        value="/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success"
-        <span>STR</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_STR" /></div>
+    <div class="sheet-characteristics_box"><button name="STR" type="roll" value="/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success" <span>STR</span></button></div>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_STR" value="0"/></div>
     <div class="sheet-characteristics_box"><select name="attr_STR_advancement">
-        <option value="0" selected="selected">None +0</option>
-        <option value="5">Simple +5</option>
-        <option value="10">Rookie +10</option>
-        <option value="15">Interm. +15</option>
-        <option value="20">Trained +20</option>
-        <option value="25">Mastery +25</option>
-      </select></div>
+      <option value="0" selected="selected">None +0</option>
+      <option value="5">Simple +5</option>
+      <option value="10">Rookie +10</option>
+      <option value="15">Interm. +15</option>
+      <option value="20">Trained +20</option>
+      <option value="25">Mastery +25</option>
+    </select></div>
   </div>
 
   <div>
-    <div class="sheet-characteristics_box"><button name="TOU" type="roll"
-        value="/me rolls toughness with [[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success"
-        <span>TOU</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_TOU" /></div>
+    <div class="sheet-characteristics_box"><button name="TOU" type="roll" value="/me rolls toughness with [[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success" <span>TOU</span></button></div>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_TOU" value="0"/></div>
     <div class="sheet-characteristics_box"><select name="attr_TOU_advancement">
-        <option value="0" selected="selected">None +0</option>
-        <option value="5">Simple +5</option>
-        <option value="10">Rookie +10</option>
-        <option value="15">Interm. +15</option>
-        <option value="20">Trained +20</option>
-        <option value="25">Mastery +25</option>
-      </select></div>
+      <option value="0" selected="selected">None +0</option>
+      <option value="5">Simple +5</option>
+      <option value="10">Rookie +10</option>
+      <option value="15">Interm. +15</option>
+      <option value="20">Trained +20</option>
+      <option value="25">Mastery +25</option>
+    </select></div>
   </div>
 
   <div>
-    <div class="sheet-characteristics_box"><button name="AGI" type="roll"
-        value="/me rolls agility with [[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success"
-        <span>AGI</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_AGI" /></div>
+    <div class="sheet-characteristics_box"><button name="AGI" type="roll" value="/me rolls agility with [[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success" <span>AGI</span></button></div>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_AGI" value="0"></div>
     <div class="sheet-characteristics_box"><select name="attr_AGI_advancement">
-        <option value="0" selected="selected">None +0</option>
-        <option value="5">Simple +5</option>
-        <option value="10">Rookie +10</option>
-        <option value="15">Interm. +15</option>
-        <option value="20">Trained +20</option>
-        <option value="25">Mastery +25</option>
-      </select></div>
+      <option value="0" selected="selected">None +0</option>
+      <option value="5">Simple +5</option>
+      <option value="10">Rookie +10</option>
+      <option value="15">Interm. +15</option>
+      <option value="20">Trained +20</option>
+      <option value="25">Mastery +25</option>
+    </select></div>
   </div>
 
   <div>
-    <div class="sheet-characteristics_box"><button name="WFR" type="roll"
-        value="/me rolls warfare ranged with [[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success"
-        <span>WFR</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_WFR" /></div>
+    <div class="sheet-characteristics_box"><button name="WFR" type="roll" value="/me rolls warfare ranged with [[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success" <span>WFR</span></button></div>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_WFR" value="0"></div>
     <div class="sheet-characteristics_box"><select name="attr_WFR_advancement">
-        <option value="0" selected="selected">None +0</option>
-        <option value="5">Simple +5</option>
-        <option value="10">Rookie +10</option>
-        <option value="15">Interm. +15</option>
-        <option value="20">Trained +20</option>
-        <option value="25">Mastery +25</option>
-      </select></div>
+      <option value="0" selected="selected">None +0</option>
+      <option value="5">Simple +5</option>
+      <option value="10">Rookie +10</option>
+      <option value="15">Interm. +15</option>
+      <option value="20">Trained +20</option>
+      <option value="25">Mastery +25</option>
+    </select></div>
   </div>
 
   <div>
-    <div class="sheet-characteristics_box"><button name="WFM" type="roll"
-        value="/me rolls warfare melee with [[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success"
-        <span>WFM</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_WFM" /></div>
+    <div class="sheet-characteristics_box"><button name="WFM" type="roll" value="/me rolls warfare melee with [[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success" <span>WFM</span></button></div>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_WFM" value="0"></div>
     <div class="sheet-characteristics_box"><select name="attr_WFM_advancement">
-        <option value="0" selected="selected">None +0</option>
-        <option value="5">Simple +5</option>
-        <option value="10">Rookie +10</option>
-        <option value="15">Interm. +15</option>
-        <option value="20">Trained +20</option>
-        <option value="25">Mastery +25</option>
-      </select></div>
+      <option value="0" selected="selected">None +0</option>
+      <option value="5">Simple +5</option>
+      <option value="10">Rookie +10</option>
+      <option value="15">Interm. +15</option>
+      <option value="20">Trained +20</option>
+      <option value="25">Mastery +25</option>
+    </select></div>
   </div>
 
   <div>
-    <div class="sheet-characteristics_box"><button name="INT" type="roll"
-        value="/me rolls intellect [[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success"
-        <span>INT</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_INT" /></div>
+    <div class="sheet-characteristics_box"><button name="INT" type="roll" value="/me rolls intellect [[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success" <span>INT</span></button></div>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_INT" value="0"></div>
     <div class="sheet-characteristics_box"><select name="attr_INT_advancement">
-        <option value="0" selected="selected">None +0</option>
-        <option value="5">Simple +5</option>
-        <option value="10">Rookie +10</option>
-        <option value="15">Interm. +15</option>
-        <option value="20">Trained +20</option>
-        <option value="25">Mastery +25</option>
-      </select></div>
+      <option value="0" selected="selected">None +0</option>
+      <option value="5">Simple +5</option>
+      <option value="10">Rookie +10</option>
+      <option value="15">Interm. +15</option>
+      <option value="20">Trained +20</option>
+      <option value="25">Mastery +25</option>
+    </select></div>
   </div>
 
   <div>
-    <div class="sheet-characteristics_box"><button name="PER" type="roll"
-        value="/me rolls perception with [[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success"
-        <span>PER</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_PER" /></div>
+    <div class="sheet-characteristics_box"><button name="PER" type="roll" value="/me rolls perception with [[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success" <span>PER</span></button></div>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_PER" value="0"></div>
     <div class="sheet-characteristics_box"><select name="attr_PER_advancement">
-        <option value="0" selected="selected">None +0</option>
-        <option value="5">Simple +5</option>
-        <option value="10">Rookie +10</option>
-        <option value="15">Interm. +15</option>
-        <option value="20">Trained +20</option>
-        <option value="25">Mastery +25</option>
-      </select></div>
+      <option value="0" selected="selected">None +0</option>
+      <option value="5">Simple +5</option>
+      <option value="10">Rookie +10</option>
+      <option value="15">Interm. +15</option>
+      <option value="20">Trained +20</option>
+      <option value="25">Mastery +25</option>
+    </select></div>
   </div>
 
   <div>
-    <div class="sheet-characteristics_box"><button name="CR" type="roll"
-        value="/me rolls courage with [[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success"
-        <span>CR</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_CR" /></div>
+    <div class="sheet-characteristics_box"><button name="CR" type="roll" value="/me rolls courage with [[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success" <span>CR</span></button></div>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_CR" value="0"></div>
     <div class="sheet-characteristics_box"><select name="attr_CR_advancement">
-        <option value="0" selected="selected">None +0</option>
-        <option value="5">Simple +5</option>
-        <option value="10">Rookie +10</option>
-        <option value="15">Interm. +15</option>
-        <option value="20">Trained +20</option>
-        <option value="25">Mastery +25</option>
-      </select></div>
+      <option value="0" selected="selected">None +0</option>
+      <option value="5">Simple +5</option>
+      <option value="10">Rookie +10</option>
+      <option value="15">Interm. +15</option>
+      <option value="20">Trained +20</option>
+      <option value="25">Mastery +25</option>
+    </select></div>
   </div>
 
   <div>
-    <div class="sheet-characteristics_box"><button name="CH" type="roll"
-        value="/me rolls charisma with [[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success"
-        <span>CH</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_CH" /></div>
+    <div class="sheet-characteristics_box"><button name="CH" type="roll" value="/me rolls charisma with [[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success" <span>CH</span></button></div>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_CH" value="0"></div>
     <div class="sheet-characteristics_box"><select name="attr_CH_advancement">
-        <option value="0" selected="selected">None +0</option>
-        <option value="5">Simple +5</option>
-        <option value="10">Rookie +10</option>
-        <option value="15">Interm. +15</option>
-        <option value="20">Trained +20</option>
-        <option value="25">Mastery +25</option>
-      </select></div>
+      <option value="0" selected="selected">None +0</option>
+      <option value="5">Simple +5</option>
+      <option value="10">Rookie +10</option>
+      <option value="15">Interm. +15</option>
+      <option value="20">Trained +20</option>
+      <option value="25">Mastery +25</option>
+    </select></div>
   </div>
 
   <div>
-    <div class="sheet-characteristics_box"><button name="LD" type="roll"
-        value="/me rolls leadership with [[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success"
-        <span>LD</span></button></div>
-    <div class="sheet-characteristics_box"><input type="text" name="attr_LD" /></div>
+    <div class="sheet-characteristics_box"><button name="LD" type="roll" value="/me rolls leadership with [[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success" <span>LD</span></button></div>
+    <div class="sheet-characteristics_box"><input type="text" name="attr_LD" value="0"></div>
     <div class="sheet-characteristics_box"><select name="attr_LD_advancement">
-        <option value="0" selected="selected">None +0</option>
-        <option value="5">Simple +5</option>
-        <option value="10">Rookie +10</option>
-        <option value="15">Interm. +15</option>
-        <option value="20">Trained +20</option>
-        <option value="25">Mastery +25</option>
-      </select></div>
+      <option value="0" selected="selected">None +0</option>
+      <option value="5">Simple +5</option>
+      <option value="10">Rookie +10</option>
+      <option value="15">Interm. +15</option>
+      <option value="20">Trained +20</option>
+      <option value="25">Mastery +25</option>
+    </select></div>
   </div>
 
 </div>
@@ -257,6 +227,37 @@
     <div class="sheet-movementgs13 ">Sprint</div>
     <div class="sheet-movementgs14 ">Jump</div>
     <div class="sheet-movementgs15 ">Leap</div>
+
+    <script type="text/worker">
+      on("change:agi change:agi_mythic change:agi_advancement", function() {
+        getAttrs([
+        "agi",
+        "agi_mythic",
+        "agi_advancement"
+        ], function(values) {
+          var agi = parseInt(values["agi"],10)||0;
+          var agi_mythic = parseInt(values["agi_mythic"],10)||0;
+          var agi_advancement = parseInt(values["agi_advancement"],10)||0;
+          var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic)
+          setAttrs({
+            half_move: (move_mod),
+            full_move: (move_mod *2),
+            charge_move: (move_mod *3),
+            run_move: (move_mod *6),
+            sprint_move: (move_mod *8)
+          });
+          if (move_mod <= 0) {
+            setAttrs({
+              half_move: (0.5),
+              full_move: (1),
+              charge_move: (2),
+              run_move: (3),
+              sprint_move: (4)
+            });
+          }
+        });
+      });
+    </script>
   </div>
 
   <div class="sheet-characteristics2_carry">
@@ -267,6 +268,32 @@
     <div class="sheet-carrygs5 ">Carry</div>
     <div class="sheet-carrygs6 ">Lift</div>
     <div class="sheet-carrygs7 ">Push</div>
+
+    <script type="text/worker">
+      on("change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement", function() {
+        getAttrs([
+        "str",
+        "str_mythic",
+        "str_advancement",
+        "tou",
+        "tou_mythic",
+        "tou_advancement"
+        ], function(values) {
+          var str = parseInt(values["str"],10)||0;
+          var str_mythic = parseInt(values["str_mythic"],10)||0;
+          var str_advancement = parseInt(values["str_advancement"],10)||0;
+          var tou = parseInt(values["tou"],10)||0;
+          var tou_mythic = parseInt(values["tou_mythic"],10)||0;
+          var tou_advancement = parseInt(values["tou_advancement"],10)||0;
+          var weight_mod = str+str_advancement+tou+tou_advancement+(str_mythic+tou_mythic)*10;
+          setAttrs({
+            carry: (weight_mod),
+            lift: (weight_mod*2),
+            push: (weight_mod*4)
+          });
+        });
+      });
+    </script>
   </div>
 
 </div>
@@ -279,23 +306,25 @@
 <div class="sheet-initiative_tabs_main">
   <div class="sheet-initiative_tabs_initiative">
     <div class="sheet-initiative_tabs_boxes"><button name="initiative" type="roll"
-        value="/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]"
-        <span>Initiative</span></button></div>
-    <div style="display:none;"><input name="attr_initmod0" value="floor" /></div>
-    <div class="sheet-initiative_tabs_boxes"><select name="attr_initmod1">
+      value="/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]"
+      <span>Initiative</span></button></div>
+      <div style="display:none;"><input name="attr_initmod0" value="floor" /></div>
+      <div class="sheet-initiative_tabs_boxes"><select name="attr_initmod1">
         <option value="1d10" selected="selected">Standard</option>
         <option value="2d10k1">Fast Foot</option>
         <option value="?{dice|1d10}">Custom</option>
       </select></div>
-    <div class="sheet-initiative_tabs_boxes">+</div>
-    <div class="sheet-initiative_tabs_boxes"><input type="number" name="attr_initmod2" value="0" /></div>
-    <div class="sheet-initiative_tabs_boxes">+</div>
-    <div class="sheet-initiative_tabs_boxes"><select name="attr_initmod3">
+      <div class="sheet-initiative_tabs_boxes">+</div>
+      <div class="sheet-initiative_tabs_boxes"><input type="number" name="attr_initmod2" value="0" /></div>
+      <div class="sheet-initiative_tabs_boxes">+</div>
+      <div class="sheet-initiative_tabs_boxes"><select name="attr_initmod3">
         <option value="(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}" selected="selected">Agility</option>
-        <option value="(@{INT} + @{INT_advancement})/10">Intellect</option>
+        <option value="(@{INT}+@{INT_advancement})/10">Intellect</option>
         <option value="0">N/A</option>
-      </select></div>
+      </select>
+    </div>
   </div>
+
   <div class="sheet-initiative_sheet_tabs">
     <button type="action" name="act_core">Core</button>
     <button type="action" name="act_equipment">Equipment</button>
@@ -306,6 +335,7 @@
     <button type="action" name="act_settings">Settings</button>
   </div>
 </div>
+
 <hr style="border-top: 1px dotted;">
 
 <!-- ______________________________ SHEET TABS LOGIC ______________________________ -->
@@ -350,7 +380,6 @@
 <!-- ______________________________ start of core ______________________________ -->
 
 <div class='sheet-core'>
-
   <h2 style="text-align: center; font-family: Saira Semi Condensed">Core Data</h2>
   <div class="sheet-core_lists">
     <div class="sheet-core_lists1">
@@ -381,21 +410,192 @@
   <span>Gear and Weapons go here</span>
 
 </div>
-
 <div class='sheet-medical'>
+  <div class='sheet-medical-grid'>
+    <div class="medicalg1">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
 
-  <h2>Medical</h2>
-  <span>Medical roll tables go here</span>
+    <div class="medicalg2">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg3">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg4">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg5">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg6">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg7">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg8">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg9">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg10">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg11">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg12">
+      <h2>hit location</h2>
+      <div> 01-10 HEAD</div>
+      <div>01 Neck</div>
+      <div>02 Chin</div>
+      <div>03 Mouth</div>
+      <div>04-05 Nose</div>
+      <div>06-07 Cheeks</div>
+      <div>08 Eyes</div>
+      <div>09 Forehead</div>
+      <div>10 Ear</div>
+      <div>11-20 LEFT ARM</div>
+      <div>11 Fingers</div>
+      <div>12 Hands</div>
+      <div>13-15 Forearm</div>
+      <div>16 Elbow</div>
+      <div>17-19 Bicep</div>
+      <div>20 Shoulder</div>
+      <div>21-30 RIGHT ARM</div>
+      <div>21 Fingers</div>
+      <div>22 Hands</div>
+      <div>23-25 Forearm</div>
+      <div>26 Elbow</div>
+      <div>27-29 Bicep</div>
+      <div>30 Shoulder</div>
+      <div>31-45 LEFT LEG</div>
+      <div>31 Toes</div>
+      <div>32 Foot</div>
+      <div>33 Ankle</div>
+      <div>34-37 Shin</div>
+      <div>38 Knee</div>
+      <div>39-43 Thigh</div>
+      <div>44-45 Pelvis</div>
+      <div>46-61 RIGHT LEG</div>
+      <div>46 Toes</div>
+      <div>47 Foot</div>
+      <div>48 Ankle</div>
+      <div>49-53 Shin</div>
+      <div>54 Knee</div>
+      <div>55-58 Thigh</div>
+      <div>59-60 Pelvis</div>
+      <div>62-100 CHEST</div>
+      <div>61-66 Small Intestines</div>
+      <div>67-72 Large Intestines</div>
+      <div>73-78 Kidney</div>
+      <div>79-84 Stomach/Liver</div>
+      <div>85-89 Heart</div>
+      <div>90-96 Lungs</div>
+      <div>97-100 No Organ Hit</div>
+      <br>
+      <div>ROLL LOCATION</div>
+      <div>1-3 Leg</div>
+      <div>  4-7 Center</div>
+      <div>8-10 Right</div>
+      <br>
+      <div>IF Fingers/Toes(1D10): Fingers and Toes</div>
+      <div>1-2 Pinky Finger/Toe</div>
+      <div>3-4 Ring Finger/Toe</div>
+      <div>5-6 Middle Finger/Toe</div>
+      <div>7-8 Index Finger/Toe</div>
+      <div>  9-10 Thumb Finger/Toe</div>
+    </div>
+
+    <div class="medicalg13">
+      <h2>medical info</h2>
+      <div class="collapsible_ability_description_window_a" ></div>
+      <textarea class="collapsible_ability_description_window_b"></textarea>
+      <fieldset class='repeating_abilities'>
+        <input type="text" placeholder="Write ability / trait name here">
+        <input type="checkbox" class="collapsible_ability_block_switch">
+        <div class="collapsible_ability_description_window_a" ></div>
+        <textarea class="collapsible_ability_description_window_b"></textarea>
+      </fieldset>
+    </div>
+  </div>
 
 </div>
-
+</div>
 <div class='sheet-advancements'>
 
   <h2>Experience Summary</h2>
   <div style="text-align:center;">
-    Unspent XP: <input type="number" name="attr_XP_current" style="width:10%; margin-right:20px;">
+    Unspent XP: <input type="number" name="attr_XP_current" style="width:10%; margin-right:20px;" disabled="true" value="@{XP_Total}-@{XP_spent}">
     Spent XP: <input type="number" name="attr_XP_spent" style="width:10%; margin-right:20px;">
-    XP Total: <input type="number" name="attr_XP_Total" style="width:10%;" disabled="true" value="@{XP_current}+@{XP_spent}">
+    XP Total: <input type="number" name="attr_XP_Total" style="width:10%;">
   </div>
   <br>
 
@@ -420,9 +620,9 @@
   <fieldset name="notes" class="repeating_notes">
     <!-- insert new line html entity [&#10;] inside of placeholder attribute -->
     <textarea name="attr_notes"
-	placeholder="&#10;Enter information such as plot details, unresolved mission details such as escaped targets, character relationships, et cetera here.&#10;
-	&#10;Also feel free to write appearance details here or in Bio & Info for public viewing: age, height, weight, colors of eyes, hair, skin, and more that comes to mind.&#10;
-	&#10;See Medical tab to include any medical information such as character injuries."></textarea>
+    placeholder="&#10;Enter information such as plot details, unresolved mission details such as escaped targets, character relationships, et cetera here.&#10;
+    &#10;Also feel free to write appearance details here or in Bio & Info for public viewing: age, height, weight, colors of eyes, hair, skin, and more that comes to mind.&#10;
+    &#10;See Medical tab to include any medical information such as character injuries."></textarea>
   </fieldset>
 </div>
 
