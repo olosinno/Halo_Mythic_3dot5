@@ -28,7 +28,7 @@
   <div class="sheet-gs13">
     <input type="checkbox" name="attr_faction" value="1" class="sheet-imghidden sheet-imghider" checked>
     <div><img name="logo" src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png" height="130" width="130" /></div>
-    <input type="checkbox" name="attr_faction" value="2" class="sheet-imghidden sheet-imghider" checked>
+    <input type="checkbox" name="attr_faction" value="2" class="sheet-imghidden sheet-imghider">
     <div><img name="logo" src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_UNSC.png" height="130" width="130" /></div>
     <input type="checkbox" name="attr_faction" value="3" class="sheet-imghidden sheet-imghider">
     <div><img name="logo"src="https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Covenant.png" height="130" width="130" /></div>
@@ -239,7 +239,6 @@
           var agi_mythic = parseInt(values["agi_mythic"],10)||0;
           var agi_advancement = parseInt(values["agi_advancement"],10)||0;
           var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic)
-
           setAttrs({
             half_move: (move_mod),
             full_move: (move_mod *2),
@@ -258,9 +257,6 @@
           }
         });
       });
-
-
-
     </script>
   </div>
 
@@ -272,6 +268,32 @@
     <div class="sheet-carrygs5 ">Carry</div>
     <div class="sheet-carrygs6 ">Lift</div>
     <div class="sheet-carrygs7 ">Push</div>
+
+    <script type="text/worker">
+      on("change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement", function() {
+        getAttrs([
+        "str",
+        "str_mythic",
+        "str_advancement",
+        "tou",
+        "tou_mythic",
+        "tou_advancement"
+        ], function(values) {
+          var str = parseInt(values["str"],10)||0;
+          var str_mythic = parseInt(values["str_mythic"],10)||0;
+          var str_advancement = parseInt(values["str_advancement"],10)||0;
+          var tou = parseInt(values["tou"],10)||0;
+          var tou_mythic = parseInt(values["tou_mythic"],10)||0;
+          var tou_advancement = parseInt(values["tou_advancement"],10)||0;
+          var weight_mod = str+str_advancement+tou+tou_advancement+(str_mythic+tou_mythic)*10;
+          setAttrs({
+            carry: (weight_mod),
+            lift: (weight_mod*2),
+            push: (weight_mod*4)
+          });
+        });
+      });
+    </script>
   </div>
 
 </div>
