@@ -1,5 +1,71 @@
-/* change the [overflow: hidden;] atribute for a better sollution to resizing containers*/
+/* asterisk applies to all elements */
+/*
+.sheet-*.ff {
+  font-family: Serif
+}
 
+.sheet-textarea.vert {
+  resize: vertical;
+}
+*/
+button[type=action] {
+  color:white;
+  background:#24395A;
+  font-family: Saira Semi Condensed;
+  margin:0px;
+  padding:0px;
+}
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+
+select,
+input[type="text"],
+input[type="number"] {
+  width: calc(100% - 20px);
+	color:white;
+	font-family: Saira Semi Condensed;
+	text-align:center;
+	background:#24395A;
+}
+button[type="roll"]::before {
+	content: "";
+}
+button[type="roll"] {
+  color:white;
+  background:black;
+  font-family: Saira Semi Condensed;
+  margin:0px;
+  padding:0px;
+  width: calc(100% - 5px);
+}
+.sheet-characteristics_box button[type="roll"] {
+  color:white;
+  background:black;
+  font-family: Saira Semi Condensed;
+  margin:0px;
+  padding:0px;
+  width:75px;
+}
+.sheet-characteristics_box {
+  overflow: hidden;
+  margin-left: 0px;
+  text-align: center;
+  width: 115%;
+}
+
+h2 {
+	text-align: center;
+	font-family: Saira Semi Condensed;
+	text-decoration: underline;
+}
+
+textarea {
+  width: calc(100% - 10px);
+	color:white;
+	font-family: Saira Semi Condensed;
+	text-align:left;
+	background:#24395A;
+	resize: vertical;
+}
 
 /* start of grid structure for character information ______________________________ */
 
@@ -30,7 +96,7 @@
 .sheet-gs25 { grid-area: ah25;   height:30px; font-size: 14px; text-align: right }
 
 .sheet-header_logo {
-	font-family: Serif;
+  font-family: Serif;
   display: grid;
   grid-template-areas:
   'ah1 ah7 ah13 ah14 ah20'
@@ -54,11 +120,7 @@ ______________________________ start of structure for characteristics */
 .sheet-characteristics {
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-}
-
-.sheet-characteristics_box {
-  overflow: hidden;
-  margin: 2px;
+  background: black;
 }
 
 /* end of structure for characteristics ______________________________
@@ -73,9 +135,9 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-mythicgs2 { grid-area: amy2; }
 .sheet-mythicgs3 { grid-area: amy3; }
 .sheet-mythicgs4 { grid-area: amy4; }
-.sheet-mythicgs5 { grid-area: amy5; font-size: 10px; }
-.sheet-mythicgs6 { grid-area: amy6; font-size: 10px; }
-.sheet-mythicgs7 { grid-area: amy7; font-size: 10px; }
+.sheet-mythicgs5 { grid-area: amy5; font-size: 12px; font-family: Serif;}
+.sheet-mythicgs6 { grid-area: amy6; font-size: 12px; font-family: Serif;}
+.sheet-mythicgs7 { grid-area: amy7; font-size: 12px; font-family: Serif;}
 .sheet-characteristics2_mythic {
   display: grid;
   grid-template-columns: 60px 60px 60px;
@@ -94,13 +156,13 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-movementgs6 { grid-area: amm6; }
 .sheet-movementgs7 { grid-area: amm7; }
 .sheet-movementgs8 { grid-area: amm8; }
-.sheet-movementgs9 { grid-area: amm9;   font-size: 10px; }
-.sheet-movementgs10 { grid-area: amm10; font-size: 10px; }
-.sheet-movementgs11 { grid-area: amm11; font-size: 10px; }
-.sheet-movementgs12 { grid-area: amm12; font-size: 10px; }
-.sheet-movementgs13 { grid-area: amm13; font-size: 10px; }
-.sheet-movementgs14 { grid-area: amm14; font-size: 10px; }
-.sheet-movementgs15 { grid-area: amm15; font-size: 10px; }
+.sheet-movementgs9 { grid-area: amm9;   font-size: 11px; font-family: Serif;}
+.sheet-movementgs10 { grid-area: amm10; font-size: 11px; font-family: Serif;}
+.sheet-movementgs11 { grid-area: amm11; font-size: 11px; font-family: Serif;}
+.sheet-movementgs12 { grid-area: amm12; font-size: 11px; font-family: Serif;}
+.sheet-movementgs13 { grid-area: amm13; font-size: 11px; font-family: Serif;}
+.sheet-movementgs14 { grid-area: amm14; font-size: 11px; font-family: Serif;}
+.sheet-movementgs15 { grid-area: amm15; font-size: 11px; font-family: Serif;}
 .sheet-characteristics2_movement {
   justify-content: center;
   display: grid;
@@ -116,9 +178,9 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-carrygs2 { grid-area: ac2; }
 .sheet-carrygs3 { grid-area: ac3; }
 .sheet-carrygs4 { grid-area: ac4; }
-.sheet-carrygs5 { grid-area: ac5; font-size: 10px; }
-.sheet-carrygs6 { grid-area: ac6; font-size: 10px; }
-.sheet-carrygs7 { grid-area: ac7; font-size: 10px; }
+.sheet-carrygs5 { grid-area: ac5; font-size: 13px; font-family: Serif;}
+.sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Serif;}
+.sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Serif;}
 .sheet-characteristics2_carry {
       justify-content: right;
   display: grid;
@@ -142,11 +204,11 @@ ______________________________ start of grid structure for initiative/sheet tabs
 .sheet-initiative_tabs_initiative {
   display: grid;
   justify-content: left;
-  grid-template-columns: 95px 76px 12px 40px 12px 70px;
+  grid-template-columns: 100px 102px 10px 40px 17px 93px;
   height:30px;
 }
 
-.sheet-initiative_tabs_tabs {
+.sheet-initiative_sheet_tabs {
   display: grid;
   justify-content: right;
   grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
@@ -199,15 +261,7 @@ ______________________________ start of minimisable infographic */
 }
 
 /* end of minimisable infographic ______________________________
-______________________________ start of advancement/experience tab */
-
-.sheet-collapsible_experience_description_window_a,
-.sheet-collapsible_experience_block_switch:checked ~ .sheet-collapsible_experience_description_window_b { display: block; }
-.sheet-collapsible_experience_description_window_b,
-.sheet-collapsible_experience_block_switch:checked ~ .sheet-collapsible_experience_description_window_a { display: none; }
-
-/* end of advancement/experience tab ______________________________
-______________________________ start of journal */
+______________________________ start of core tab */
 
 .sheet-core_lists1 { grid-area: cl1; }
 .sheet-core_lists2 { grid-area: cl2; }
@@ -221,12 +275,14 @@ ______________________________ start of journal */
   height:auto;
 }
 
-.sheet-journal_heading {
-	text-align: center;
-}
-.sheet-objectives {
-	width: 96%;
-}
-.sheet-journal_notes {
-	resize: vertical;
-}
+.sheet-collapsible_ability_description_window_a,
+.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block; }
+.sheet-collapsible_ability_description_window_b,
+.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none; }
+
+/* end of core tab ______________________________
+start of advancement/experience tab ______________________________ */
+
+/* end of advancement/experience tab ______________________________
+______________________________ start of journal */
+
