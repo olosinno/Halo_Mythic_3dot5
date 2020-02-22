@@ -1,11 +1,11 @@
 /* asterisk applies to all elements */
 /*
 .sheet-*.ff {
-  font-family: Serif
+font-family: Serif
 }
 
 .sheet-textarea.vert {
-  resize: vertical;
+resize: vertical;
 }
 */
 button[type=action] {
@@ -21,13 +21,13 @@ select,
 input[type="text"],
 input[type="number"] {
   width: calc(100% - 20px);
-	color:white;
-	font-family: Saira Semi Condensed;
-	text-align:center;
-	background:#24395A;
+  color:white;
+  font-family: Saira Semi Condensed;
+  text-align:center;
+  background:#24395A;
 }
 button[type="roll"]::before {
-	content: "";
+  content: "";
 }
 button[type="roll"] {
   color:white;
@@ -53,18 +53,18 @@ button[type="roll"] {
 }
 
 h2 {
-	text-align: center;
-	font-family: Saira Semi Condensed;
-	text-decoration: underline;
+  text-align: center;
+  font-family: Saira Semi Condensed;
+  text-decoration: underline;
 }
 
 textarea {
   width: calc(100% - 10px);
-	color:white;
-	font-family: Saira Semi Condensed;
-	text-align:left;
-	background:#24395A;
-	resize: vertical;
+  color:white;
+  font-family: Saira Semi Condensed;
+  text-align:left;
+  background:#24395A;
+  resize: vertical;
 }
 
 /* start of grid structure for character information ______________________________ */
@@ -182,7 +182,7 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Serif;}
 .sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Serif;}
 .sheet-characteristics2_carry {
-      justify-content: right;
+  justify-content: right;
   display: grid;
   grid-template-columns: 60px 60px 60px;
   grid-template-areas:
@@ -280,8 +280,38 @@ ______________________________ start of core tab */
 .sheet-collapsible_ability_description_window_b,
 .sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none; }
 
-/* end of core tab ______________________________
-start of advancement/experience tab ______________________________ */
+/* end of core tab _____________________________________________________________
+start of medical tab ___________________________________________________________*/
+.sheet-medical{}
 
-/* end of advancement/experience tab ______________________________
-______________________________ start of journal */
+.sheet-medicalg1 { grid-area: m1; }
+.sheet-medicalg2 { grid-area: m2; }
+.sheet-medicalg3 { grid-area: m3; }
+.sheet-medicalg4 { grid-area: m4; }
+.sheet-medicalg5 { grid-area: m5; }
+.sheet-medicalg6 { grid-area: m6; }
+.sheet-medicalg7 { grid-area: m7; }
+.sheet-medicalg8 { grid-area: m8; }
+.sheet-medicalg9 { grid-area: m9; }
+.sheet-medicalg10 { grid-area: m10; }
+.sheet-medicalg11 { grid-area: m11; }
+.sheet-medicalg12 { grid-area: m12; }
+.sheet-medicalg13 { grid-area: m13; }
+.sheet-medical-grid {
+    height:50px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50px 50px 50px 50px auto;
+  grid-template-areas:
+  'm1  m2  m3 m12'
+  'm4  m5  m6 m12'
+  'm7  m8  m9 m12'
+  'm10 m0 m11 m12'
+  'm13 m13 m13 m12';
+
+}
+/* end of medical tab __________________________________________________________
+start of advancement/experience tab ____________________________________________ */
+
+/* end of advancement/experience tab ___________________________________________
+start of journal________________________________________________________________*/

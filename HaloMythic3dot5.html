@@ -321,147 +321,317 @@
         <option value="(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}" selected="selected">Agility</option>
         <option value="(@{INT}+@{INT_advancement})/10">Intellect</option>
         <option value="0">N/A</option>
-      </select></div>
-    </div>
-    <div class="sheet-initiative_sheet_tabs">
-      <button type="action" name="act_core">Core</button>
-      <button type="action" name="act_equipment">Equipment</button>
-      <button type="action" name="act_medical">Medical</button>
-      <button type="action" name="act_advancements">Advancements</button>
-      <button type="action" name="act_journal">Journal</button>
-      <button type="action" name="act_vehicles">Vehicles</button>
-      <button type="action" name="act_settings">Settings</button>
+      </select>
     </div>
   </div>
-  <hr style="border-top: 1px dotted;">
 
-  <!-- ______________________________ SHEET TABS LOGIC ______________________________ -->
-  <input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='core' />
-  <script type="text/worker">
-    const buttonlist = ["core","equipment","medical","advancements","journal","vehicles","settings"];
-    buttonlist.forEach(button => {
-      on(`clicked:${button}`, function() {
-        setAttrs({
-          sheetTab: button
-        });
+  <div class="sheet-initiative_sheet_tabs">
+    <button type="action" name="act_core">Core</button>
+    <button type="action" name="act_equipment">Equipment</button>
+    <button type="action" name="act_medical">Medical</button>
+    <button type="action" name="act_advancements">Advancements</button>
+    <button type="action" name="act_journal">Journal</button>
+    <button type="action" name="act_vehicles">Vehicles</button>
+    <button type="action" name="act_settings">Settings</button>
+  </div>
+</div>
+
+<hr style="border-top: 1px dotted;">
+
+<!-- ______________________________ SHEET TABS LOGIC ______________________________ -->
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='core' />
+<script type="text/worker">
+  const buttonlist = ["core","equipment","medical","advancements","journal","vehicles","settings"];
+  buttonlist.forEach(button => {
+    on(`clicked:${button}`, function() {
+      setAttrs({
+        sheetTab: button
       });
     });
-  </script>
+  });
+</script>
 
 
 
-  <!-- ______________________________ start of minimisable infographic ______________________________ -->
+<!-- ______________________________ start of minimisable infographic ______________________________ -->
 
-  <div class="sheet-minimisable_infographic_main">
-    <input type="checkbox" class="sheet-minimisable_switch">
-    <div class="sheet-minimisable_infographic_a">
-      a short single line containing all the important info you might need
-    </div>
-    <div class="sheet-minimisable_infographic_b">
-      a long
-      <div>list</div>
-      of text<br>
-      with
-      a bunch<br>
-      of information
+<div class="sheet-minimisable_infographic_main">
+  <input type="checkbox" class="sheet-minimisable_switch">
+  <div class="sheet-minimisable_infographic_a">
+    a short single line containing all the important info you might need
+  </div>
+  <div class="sheet-minimisable_infographic_b">
+    a long
+    <div>list</div>
+    of text<br>
+    with
+    a bunch<br>
+    of information
+  </div>
+</div>
+
+
+
+<!-- ______________________________ sheet tabs _________________________________ -->
+
+
+
+
+<!-- ______________________________ start of core ______________________________ -->
+
+<div class='sheet-core'>
+  <h2 style="text-align: center; font-family: Saira Semi Condensed">Core Data</h2>
+  <div class="sheet-core_lists">
+    <div class="sheet-core_lists1">
+      <fieldset name="skills" class="repeating_skills">
+        <input type="text" name="skill" />
+      </fieldset>
     </div>
   </div>
-
-
-
-  <!-- ______________________________ sheet tabs _________________________________ -->
-
-
-
-
-  <!-- ______________________________ start of core ______________________________ -->
-
-  <div class='sheet-core'>
-
-    <h2 style="text-align: center; font-family: Saira Semi Condensed">Core Data</h2>
-    <div class="sheet-core_lists">
-      <div class="sheet-core_lists1">
-        <fieldset name="skills" class="repeating_skills">
-          <input type="text" name="skill" />
-        </fieldset>
-      </div>
-    </div>
-    <hr>
-    <h2>Abilities</h2>
-    <input type="text" name="ability" style="width: 100%" placeholder="SQUAD UP">
-    <input type="checkbox" name="ability_desc" class="collapsible_ability_block_switch">
-    Expand or collapse ability's descriptor block
+  <hr>
+  <h2>Abilities</h2>
+  <input type="text" name="ability" style="width: 100%" placeholder="SQUAD UP">
+  <input type="checkbox" name="ability_desc" class="collapsible_ability_block_switch">
+  Expand or collapse ability's descriptor block
+  <div class="collapsible_ability_description_window_a" ></div>
+  <textarea name="attr_ability" class="collapsible_ability_description_window_b"></textarea>
+  <fieldset name="abilities" class='repeating_abilities'>
+    <input type="text" name="attr_ability_r" placeholder="Write ability / trait name here">
+    <input type="checkbox" class="collapsible_ability_block_switch">
     <div class="collapsible_ability_description_window_a" ></div>
-    <textarea name="attr_ability" class="collapsible_ability_description_window_b"></textarea>
-    <fieldset name="abilities" class='repeating_abilities'>
-      <input type="text" name="attr_ability_r" placeholder="Write ability / trait name here">
-      <input type="checkbox" class="collapsible_ability_block_switch">
+    <textarea name="attr_ability_desc_r" class="collapsible_ability_description_window_b"></textarea>
+  </fieldset>
+
+</div>
+
+<div class='sheet-equipment'>
+
+  <h2>Equipment</h2>
+  <span>Gear and Weapons go here</span>
+
+</div>
+<div class='sheet-medical'>
+  <div class='sheet-medical-grid'>
+    <div class="medicalg1">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg2">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg3">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg4">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg5">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg6">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg7">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg8">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg9">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg10">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg11">
+      finger/toe
+      <select name="finger/toe">
+        <option selected="selected">nominal</option>
+        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
+        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      </select>
+    </div>
+
+    <div class="medicalg12">
+      <h2>hit location</h2>
+      <div> 01-10 HEAD</div>
+      <div>01 Neck</div>
+      <div>02 Chin</div>
+      <div>03 Mouth</div>
+      <div>04-05 Nose</div>
+      <div>06-07 Cheeks</div>
+      <div>08 Eyes</div>
+      <div>09 Forehead</div>
+      <div>10 Ear</div>
+      <div>11-20 LEFT ARM</div>
+      <div>11 Fingers</div>
+      <div>12 Hands</div>
+      <div>13-15 Forearm</div>
+      <div>16 Elbow</div>
+      <div>17-19 Bicep</div>
+      <div>20 Shoulder</div>
+      <div>21-30 RIGHT ARM</div>
+      <div>21 Fingers</div>
+      <div>22 Hands</div>
+      <div>23-25 Forearm</div>
+      <div>26 Elbow</div>
+      <div>27-29 Bicep</div>
+      <div>30 Shoulder</div>
+      <div>31-45 LEFT LEG</div>
+      <div>31 Toes</div>
+      <div>32 Foot</div>
+      <div>33 Ankle</div>
+      <div>34-37 Shin</div>
+      <div>38 Knee</div>
+      <div>39-43 Thigh</div>
+      <div>44-45 Pelvis</div>
+      <div>46-61 RIGHT LEG</div>
+      <div>46 Toes</div>
+      <div>47 Foot</div>
+      <div>48 Ankle</div>
+      <div>49-53 Shin</div>
+      <div>54 Knee</div>
+      <div>55-58 Thigh</div>
+      <div>59-60 Pelvis</div>
+      <div>62-100 CHEST</div>
+      <div>61-66 Small Intestines</div>
+      <div>67-72 Large Intestines</div>
+      <div>73-78 Kidney</div>
+      <div>79-84 Stomach/Liver</div>
+      <div>85-89 Heart</div>
+      <div>90-96 Lungs</div>
+      <div>97-100 No Organ Hit</div>
+      <br>
+      <div>ROLL LOCATION</div>
+      <div>1-3 Leg</div>
+      <div>  4-7 Center</div>
+      <div>8-10 Right</div>
+      <br>
+      <div>IF Fingers/Toes(1D10): Fingers and Toes</div>
+      <div>1-2 Pinky Finger/Toe</div>
+      <div>3-4 Ring Finger/Toe</div>
+      <div>5-6 Middle Finger/Toe</div>
+      <div>7-8 Index Finger/Toe</div>
+      <div>  9-10 Thumb Finger/Toe</div>
+    </div>
+
+    <div class="medicalg13">
+      <h2>medical info</h2>
       <div class="collapsible_ability_description_window_a" ></div>
-      <textarea name="attr_ability_desc_r" class="collapsible_ability_description_window_b"></textarea>
-    </fieldset>
-
-  </div>
-
-  <div class='sheet-equipment'>
-
-    <h2>Equipment</h2>
-    <span>Gear and Weapons go here</span>
-
-  </div>
-
-  <div class='sheet-medical'>
-    <div class="medical grid">
-
-    </div>
-
-    <div>
-
+      <textarea class="collapsible_ability_description_window_b"></textarea>
+      <fieldset class='repeating_abilities'>
+        <input type="text" placeholder="Write ability / trait name here">
+        <input type="checkbox" class="collapsible_ability_block_switch">
+        <div class="collapsible_ability_description_window_a" ></div>
+        <textarea class="collapsible_ability_description_window_b"></textarea>
+      </fieldset>
     </div>
   </div>
 
-  <div class='sheet-advancements'>
+</div>
+</div>
+<div class='sheet-advancements'>
 
-    <h2>Experience Summary</h2>
-    <div style="text-align:center;">
-      Unspent XP: <input type="number" name="attr_XP_current" style="width:10%; margin-right:20px;" disabled="true" value="@{XP_Total}-@{XP_spent}">
-      Spent XP: <input type="number" name="attr_XP_spent" style="width:10%; margin-right:20px;">
-      XP Total: <input type="number" name="attr_XP_Total" style="width:10%;">
-    </div>
-    <br>
-
-    <fieldset name="advancements" class="repeating_advancements">
-      <input type="text" name="advancementL" placeholder="Write XP-costing item name here" style="width:25%;">
-      <input type="number" name="advancement_costL" placeholder="XP Cost" style="width:10%;">
-      <input type="number" name="advancement_pg#L" placeholder="Page #" style="width:10%; margin-right:10px;">
-      <input type="text" name="advancementR" placeholder="Write XP-costing item name here" style="width:25%;">
-      <input type="number" name="advancement_costR" placeholder="XP Cost" style="width:10%;">
-      <input type="number" name="advancement_pg#R" placeholder="Page #" style="width:10%;">
-    </fieldset>
-
+  <h2>Experience Summary</h2>
+  <div style="text-align:center;">
+    Unspent XP: <input type="number" name="attr_XP_current" style="width:10%; margin-right:20px;" disabled="true" value="@{XP_Total}-@{XP_spent}">
+    Spent XP: <input type="number" name="attr_XP_spent" style="width:10%; margin-right:20px;">
+    XP Total: <input type="number" name="attr_XP_Total" style="width:10%;">
   </div>
+  <br>
 
-  <div class='sheet-journal'>
-    <h2>Journal: Objectives</h2>
-    <fieldset name="objectives" class="repeating_objectives">
-      <input type="text" name="attr_objective" style="width: 96%;" />
-      <input type="checkbox" name="attr_objective_completed" />
-    </fieldset>
-    <h2>Journal: Notes</h2>
-    <fieldset name="notes" class="repeating_notes">
-      <!-- insert new line html entity [&#10;] inside of placeholder attribute -->
-      <textarea name="attr_notes"
-      placeholder="&#10;Enter information such as plot details, unresolved mission details such as escaped targets, character relationships, et cetera here.&#10;
-      &#10;Also feel free to write appearance details here or in Bio & Info for public viewing: age, height, weight, colors of eyes, hair, skin, and more that comes to mind.&#10;
-      &#10;See Medical tab to include any medical information such as character injuries."></textarea>
-    </fieldset>
-  </div>
+  <fieldset name="advancements" class="repeating_advancements">
+    <input type="text" name="advancementL" placeholder="Write XP-costing item name here" style="width:25%;">
+    <input type="number" name="advancement_costL" placeholder="XP Cost" style="width:10%;">
+    <input type="number" name="advancement_pg#L" placeholder="Page #" style="width:10%; margin-right:10px;">
+    <input type="text" name="advancementR" placeholder="Write XP-costing item name here" style="width:25%;">
+    <input type="number" name="advancement_costR" placeholder="XP Cost" style="width:10%;">
+    <input type="number" name="advancement_pg#R" placeholder="Page #" style="width:10%;">
+  </fieldset>
 
-  <div class='sheet-vehicles'>
-    <h2>Vehicles</h2>
-    <span>Vehicles go here</span>
-  </div>
+</div>
 
-  <div class='sheet-settings'>
-    <h2>Settings</h2>
-    <span>Settings go here</span>
-  </div>
+<div class='sheet-journal'>
+  <h2>Journal: Objectives</h2>
+  <fieldset name="objectives" class="repeating_objectives">
+    <input type="text" name="attr_objective" style="width: 96%;" />
+    <input type="checkbox" name="attr_objective_completed" />
+  </fieldset>
+  <h2>Journal: Notes</h2>
+  <fieldset name="notes" class="repeating_notes">
+    <!-- insert new line html entity [&#10;] inside of placeholder attribute -->
+    <textarea name="attr_notes"
+    placeholder="&#10;Enter information such as plot details, unresolved mission details such as escaped targets, character relationships, et cetera here.&#10;
+    &#10;Also feel free to write appearance details here or in Bio & Info for public viewing: age, height, weight, colors of eyes, hair, skin, and more that comes to mind.&#10;
+    &#10;See Medical tab to include any medical information such as character injuries."></textarea>
+  </fieldset>
+</div>
+
+<div class='sheet-vehicles'>
+  <h2>Vehicles</h2>
+  <span>Vehicles go here</span>
+</div>
+
+<div class='sheet-settings'>
+  <h2>Settings</h2>
+  <span>Settings go here</span>
+</div>
