@@ -319,7 +319,7 @@
       <div class="sheet-initiative_tabs_boxes">+</div>
       <div class="sheet-initiative_tabs_boxes"><select name="attr_initmod3">
         <option value="(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}" selected="selected">Agility</option>
-        <option value="(@{INT} + @{INT_advancement})/10">Intellect</option>
+        <option value="(@{INT}+@{INT_advancement})/10">Intellect</option>
         <option value="0">N/A</option>
       </select></div>
     </div>
@@ -423,9 +423,9 @@
 
     <h2>Experience Summary</h2>
     <div style="text-align:center;">
-      Unspent XP: <input type="number" name="attr_XP_current" style="width:10%; margin-right:20px;">
+      Unspent XP: <input type="number" name="attr_XP_current" style="width:10%; margin-right:20px;" disabled="true" value="@{XP_Total}-@{XP_spent}">
       Spent XP: <input type="number" name="attr_XP_spent" style="width:10%; margin-right:20px;">
-      XP Total: <input type="number" name="attr_XP_Total" style="width:10%;" disabled="true" value="@{XP_current}+@{XP_spent}">
+      XP Total: <input type="number" name="attr_XP_Total" style="width:10%;">
     </div>
     <br>
 
