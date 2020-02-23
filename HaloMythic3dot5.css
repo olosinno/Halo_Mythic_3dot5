@@ -138,12 +138,12 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-mythicgs2 { grid-area: amy2; }
 .sheet-mythicgs3 { grid-area: amy3; }
 .sheet-mythicgs4 { grid-area: amy4; }
-.sheet-mythicgs5 { grid-area: amy5; font-size: 12px; font-family: Serif;}
-.sheet-mythicgs6 { grid-area: amy6; font-size: 12px; font-family: Serif;}
-.sheet-mythicgs7 { grid-area: amy7; font-size: 12px; font-family: Serif;}
+.sheet-mythicgs5 { grid-area: amy5; font-size: 13px; font-family: Serif;}
+.sheet-mythicgs6 { grid-area: amy6; font-size: 13px; font-family: Serif;}
+.sheet-mythicgs7 { grid-area: amy7; font-size: 13px; font-family: Serif;}
 .sheet-characteristics2_mythic {
   display: grid;
-  grid-template-columns: 60px 60px 60px;
+  grid-template-columns: 50px 50px 50px;
   grid-template-areas:
   'amy1 amy1 amy1'
   'amy2 amy3 amy4'
@@ -159,13 +159,13 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-movementgs6 { grid-area: amm6; }
 .sheet-movementgs7 { grid-area: amm7; }
 .sheet-movementgs8 { grid-area: amm8; }
-.sheet-movementgs9 { grid-area: amm9;   font-size: 11px; font-family: Serif;}
-.sheet-movementgs10 { grid-area: amm10; font-size: 11px; font-family: Serif;}
-.sheet-movementgs11 { grid-area: amm11; font-size: 11px; font-family: Serif;}
-.sheet-movementgs12 { grid-area: amm12; font-size: 11px; font-family: Serif;}
-.sheet-movementgs13 { grid-area: amm13; font-size: 11px; font-family: Serif;}
-.sheet-movementgs14 { grid-area: amm14; font-size: 11px; font-family: Serif;}
-.sheet-movementgs15 { grid-area: amm15; font-size: 11px; font-family: Serif;}
+.sheet-movementgs9 { grid-area: amm9;   font-size: 13px; font-family: Serif;}
+.sheet-movementgs10 { grid-area: amm10; font-size: 13px; font-family: Serif;}
+.sheet-movementgs11 { grid-area: amm11; font-size: 13px; font-family: Serif;}
+.sheet-movementgs12 { grid-area: amm12; font-size: 13px; font-family: Serif;}
+.sheet-movementgs13 { grid-area: amm13; font-size: 13px; font-family: Serif;}
+.sheet-movementgs14 { grid-area: amm14; font-size: 13px; font-family: Serif;}
+.sheet-movementgs15 { grid-area: amm15; font-size: 13px; font-family: Serif;}
 .sheet-characteristics2_movement {
   justify-content: center;
   display: grid;
@@ -187,7 +187,7 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-characteristics2_carry {
   justify-content: right;
   display: grid;
-  grid-template-columns: 60px 60px 60px;
+  grid-template-columns: 50px 50px 50px;
   grid-template-areas:
   'ac1 ac1 ac1'
   'ac2 ac3 ac4'
