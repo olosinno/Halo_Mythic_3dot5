@@ -201,7 +201,6 @@ ______________________________ start of grid structure for initiative/sheet tabs
 .sheet-initiative_tabs_main {
   display: grid;
   grid-template-columns: 50% 50%;
-  height: auto;
 }
 
 .sheet-initiative_tabs_initiative {
@@ -300,7 +299,7 @@ start of medical tab ___________________________________________________________
     height:50px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 80px 50px 50px 50px auto;
+  grid-template-rows: 80px 80px 80px 80px auto;
   grid-template-areas:
   'm1  m2  m3 m12'
   'm4  m5  m6 m12'
