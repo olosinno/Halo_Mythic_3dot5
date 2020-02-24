@@ -1,16 +1,6 @@
 /* asterisk applies to all elements */
-/*
 .sheet-*.ff {
 font-family: Serif
-}
-
-.sheet-textarea.vert {
-resize: vertical;
-}
-*/
-::placeholder {
-	color: white;
-	opacity: 0.5;
 }
 
 button[type=action] {
@@ -73,6 +63,11 @@ textarea {
   text-align:left;
   background:#394C6A;
   resize: vertical;
+}
+
+::placeholder {
+	color: white;
+	opacity: 0.6;
 }
 
 /* start of grid structure for character information ______________________________ */
