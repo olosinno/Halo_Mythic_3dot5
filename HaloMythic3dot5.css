@@ -10,7 +10,7 @@ resize: vertical;
 */
 button[type=action] {
   color:white;
-  background:#24395A;
+  background:#394C6A;
   font-family: Saira Semi Condensed;
   margin:0px;
   padding:0px;
@@ -24,7 +24,7 @@ input[type="number"] {
   color:white;
   font-family: Saira Semi Condensed;
   text-align:center;
-  background:#24395A;
+  background:#394C6A;
 }
 button[type="roll"]::before {
   content: "";
@@ -66,7 +66,7 @@ textarea {
   color:white;
   font-family: Saira Semi Condensed;
   text-align:left;
-  background:#24395A;
+  background:#394C6A;
   resize: vertical;
 }
 
