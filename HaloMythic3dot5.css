@@ -41,8 +41,12 @@ button[type='roll'] {
   padding: 0px;
   width: 75%
 }
-.sheet-characteristics_box button[type='roll'] {background:black;}
-.sheet-characteristics_box input[type='text'] {height:40px;font-size: 30px;}
+.sheet-characteristics_box button[type='roll'] { background: black }
+.sheet-characteristics_box input[type='text'] {
+	height: 40px;
+	font-size: 30px
+}
+
 .sheet-characteristics_box {
   overflow: hidden;
   margin-left: -10%;

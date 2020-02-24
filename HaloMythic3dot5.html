@@ -992,18 +992,18 @@
   <h2>Experience Summary</h2>
   <div style='text-align: center'>
     Unspent XP: <input type='number' name='attr_XP_current' style='width: 10%; margin-right: 20px' disabled='true' value='@{XP_Total}-@{XP_spent}'>
-    Spent XP: <input type='number' name='attr_XP_spent' style='width: 10%; margin-right: 20px'>
+    Spent XP: <input type='number' name='attr_XP_spent' style='width: 10%; margin-right: 20px' value='@{XP_spent}+@{advancement_costL}+@{advancement_costR}'>
     XP Total: <input type='number' name='attr_XP_Total' style='width: 10%'>
   </div>
   <br>
 
   <fieldset name='advancements' class='repeating_advancements'>
-    <input type='text' name='advancementL' placeholder='Write XP-costing item name here' style='width: 25%'>
-    <input type='number' name='advancement_costL' placeholder='XP Cost' style='width: 10%'>
-    <input type='number' name='advancement_pg#L' placeholder='Page #' style='width: 10%; margin-right: 10px'>
-    <input type='text' name='advancementR' placeholder='Write XP-costing item name here' style='width: 25%'>
-    <input type='number' name='advancement_costR' placeholder='XP Cost' style='width: 10%'>
-    <input type='number' name='advancement_pg#R' placeholder='Page #' style='width: 10%'>
+    <input type='text' name='attr_advancementL' placeholder='Write XP-costing item name here' style='width: 25%'>
+    <input type='number' name='attr_advancement_costL' placeholder='XP Cost' style='width: 10%'>
+    <input type='number' name='attr_advancement_pg#L' placeholder='Page #' style='width: 10%; margin-right: 10px'>
+    <input type='text' name='attr_advancementR' placeholder='Write XP-costing item name here' style='width: 25%'>
+    <input type='number' name='attr_advancement_costR' placeholder='XP Cost' style='width: 10%'>
+    <input type='number' name='attr_advancement_pg#R' placeholder='Page #' style='width: 10%'>
   </fieldset>
 
 </div>
