@@ -285,23 +285,23 @@ ______________________________ start of core tab */
 start of medical tab ___________________________________________________________*/
 
 
-.sheet-medicalg1 { grid-area: m1; }
-.sheet-medicalg2 { grid-area: m2; }
-.sheet-medicalg3 { grid-area: m3; }
-.sheet-medicalg4 { grid-area: m4; }
-.sheet-medicalg5 { grid-area: m5; }
-.sheet-medicalg6 { grid-area: m6; }
-.sheet-medicalg7 { grid-area: m7; }
-.sheet-medicalg8 { grid-area: m8; }
-.sheet-medicalg9 { grid-area: m9; }
-.sheet-medicalg10 { grid-area: m10; }
-.sheet-medicalg11 { grid-area: m11; }
-.sheet-medicalg12 { grid-area: m12; }
-.sheet-medicalg13 { grid-area: m13; }
-.sheet-medicalg14 { grid-area: m14; }
-.sheet-medicalg15 { grid-area: m15; }
-.sheet-medicalg16 { grid-area: m16; }
-.sheet-medicalg17 { grid-area: m17; }
+.sheet-medicalg1 { grid-area: m1; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg2 { grid-area: m2; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg3 { grid-area: m3; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg4 { grid-area: m4; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg5 { grid-area: m5; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg6 { grid-area: m6; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg7 { grid-area: m7; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg8 { grid-area: m8; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg9 { grid-area: m9; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg10 { grid-area: m10; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg11 { grid-area: m11; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg12 { grid-area: m12; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg13 { grid-area: m13; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg14 { grid-area: m14; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg15 { grid-area: m15; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg17 { grid-area: m17; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
+.sheet-medicalg16 { grid-area: m16; font-family: Saira Semi Condensed; color:white; background:#475f85; border-left: 5px solid #475f85;}
 .sheet-medicalgT { grid-area: mT; }
 .sheet-medicalgR { grid-area: mR; }
 .sheet-medical-grid {
@@ -313,10 +313,12 @@ start of medical tab ___________________________________________________________
   'm1  m2  m3  mT'
   'm4  m5  m6  mT'
   'm7  m8  m9  mT'
-  'm10 m0  m11 mT'
+  'm10 m8  m11 mT'
   'm12 m13 m14 mT'
   'm15 m16 m17 mT'
   'mR  mR  mR  mT';
+
+
 }
 
 .sheet-medical_table{
@@ -325,6 +327,7 @@ start of medical tab ___________________________________________________________
   background:#475f85;
   text-indent: 5px;
   border-bottom: 1px dotted grey;
+    border-left: 3px solid #394C6A;
 }
 
 /* end of medical tab __________________________________________________________
