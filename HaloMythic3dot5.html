@@ -203,9 +203,9 @@
 
   <div class='sheet-characteristics2_mythic'>
     <div class='sheet-mythicgs1 '><b>Mythic Characteristics</b></div>
-    <div class='sheet-mythicgs2 '><input type='text' value='0' style='width:45px;' name='attr_STR_mythic' /></div>
-    <div class='sheet-mythicgs3 '><input type='text' value='0' style='width:45px;' name='attr_TOU_mythic' /></div>
-    <div class='sheet-mythicgs4 '><input type='text' value='0' style='width:45px;' name='attr_AGI_mythic' /></div>
+    <div class='sheet-mythicgs2 '><input type='text' value='0' style='width: 45px' name='attr_STR_mythic' /></div>
+    <div class='sheet-mythicgs3 '><input type='text' value='0' style='width: 45px' name='attr_TOU_mythic' /></div>
+    <div class='sheet-mythicgs4 '><input type='text' value='0' style='width: 45px' name='attr_AGI_mythic' /></div>
     <div class='sheet-mythicgs5 '>Strength</div>
     <div class='sheet-mythicgs6 '>Toughness</div>
     <div class='sheet-mythicgs7 '>Agility</div>
@@ -213,13 +213,13 @@
 
   <div class='sheet-characteristics2_movement'>
     <div class='sheet-movementgs1 '><b>Character Movement</b></div>
-    <div class='sheet-movementgs2 '><input type='text' style='width:45px;' name='attr_half_move' /></div>
-    <div class='sheet-movementgs3 '><input type='text' style='width:45px;' name='attr_full_move' /></div>
-    <div class='sheet-movementgs4 '><input type='text' style='width:45px;' name='attr_charge_move' /></div>
-    <div class='sheet-movementgs5 '><input type='text' style='width:45px;' name='attr_run_move' /></div>
-    <div class='sheet-movementgs6 '><input type='text' style='width:45px;' name='attr_sprint_move' /></div>
-    <div class='sheet-movementgs7 '><input type='text' style='width:45px;' name='attr_jump_move' /></div>
-    <div class='sheet-movementgs8 '><input type='text' style='width:45px;' name='attr_leap_move' /></div>
+    <div class='sheet-movementgs2 '><input type='text' style='width: 45px' name='attr_half_move' /></div>
+    <div class='sheet-movementgs3 '><input type='text' style='width: 45px' name='attr_full_move' /></div>
+    <div class='sheet-movementgs4 '><input type='text' style='width: 45px' name='attr_charge_move' /></div>
+    <div class='sheet-movementgs5 '><input type='text' style='width: 45px' name='attr_run_move' /></div>
+    <div class='sheet-movementgs6 '><input type='text' style='width: 45px' name='attr_sprint_move' /></div>
+    <div class='sheet-movementgs7 '><input type='text' style='width: 45px' name='attr_jump_move' /></div>
+    <div class='sheet-movementgs8 '><input type='text' style='width: 45px' name='attr_leap_move' /></div>
     <div class='sheet-movementgs9 '>Half</div>
     <div class='sheet-movementgs10 '>Full</div>
     <div class='sheet-movementgs11 '>Charge</div>
@@ -262,9 +262,9 @@
 
   <div class='sheet-characteristics2_carry'>
     <div class='sheet-carrygs1 '><b>Carrying Capacity</b></div>
-    <div class='sheet-carrygs2 '><input type='text' style='width:45px;' name='attr_carry' /></div>
-    <div class='sheet-carrygs3 '><input type='text' style='width:45px;' name='attr_lift' /></div>
-    <div class='sheet-carrygs4 '><input type='text' style='width:45px;' name='attr_push' /></div>
+    <div class='sheet-carrygs2 '><input type='text' style='width: 45px' name='attr_carry' /></div>
+    <div class='sheet-carrygs3 '><input type='text' style='width: 45px' name='attr_lift' /></div>
+    <div class='sheet-carrygs4 '><input type='text' style='width: 45px' name='attr_push' /></div>
     <div class='sheet-carrygs5 '>Carry</div>
     <div class='sheet-carrygs6 '>Lift</div>
     <div class='sheet-carrygs7 '>Push</div>
@@ -297,7 +297,7 @@
   </div>
 
 </div>
-<hr style='border-top: 1px dotted;'>
+<hr style='border-top: 1px dotted'>
 
 
 
@@ -308,7 +308,7 @@
     <div class='sheet-initiative_tabs_boxes'><button name='initiative' type='roll'
       value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'
       <span>Initiative</span></button></div>
-      <div style='display:none;'><input name='attr_initmod0' value='floor' /></div>
+      <div style='display: none'><input name='attr_initmod0' value='floor' /></div>
       <div class='sheet-initiative_tabs_boxes'><select name='attr_initmod1'>
         <option value='1d10' selected='selected'>Standard</option>
         <option value='2d10k1'>Fast Foot</option>
@@ -336,7 +336,7 @@
   </div>
 </div>
 
-<hr style='border-top: 1px dotted;'>
+<hr style='border-top: 1px dotted'>
 
 <!-- ______________________________ SHEET TABS LOGIC ______________________________ -->
 <input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='core' />
@@ -380,19 +380,33 @@
 <!-- ______________________________ start of core ______________________________ -->
 
 <div class='sheet-core'>
+
   <h2 style='text-align: center; font-family: Saira Semi Condensed'>Core Data</h2>
-  <div class='sheet-core_lists'>
-    <div class='sheet-core_lists1'>
-      <fieldset name='skills' class='repeating_skills'>
-        <input type='text' name='skill' />
+  <div class='sheet-core_lists' style='border-style: solid; border-width: 1px'>
+    <div class='sheet-core_lists1' style='padding: 1px; margin-right: 10px'>
+      <h3><b>Skillset</h3></b>
+	  <fieldset name='skills' class='repeating_skills'>
+        <input type='text' name='attr_skill' />
       </fieldset>
     </div>
+	<div class='sheet-core_lists2' style='padding: 1px'>
+	  <h3><b>Education</h3></b>
+	  <fieldset name='skills' class='repeating_education'>
+        <input type='text' name='attr_education' />
+      </fieldset>
+	</div>
+	<div class='sheet-core_lists3' style='padding: 1px'>
+	  <h3><b>Languages</h3></b>
+	  <fieldset name='skills' class='repeating_languages'>
+        <input type='text' name='attr_language' />
+      </fieldset>
+	</div>
   </div>
-  <hr>
+  <br>
   <h2>Abilities</h2>
   <input type='text' name='ability' placeholder='SQUAD UP'>
   <input type='checkbox' name='ability_desc' class='collapsible_ability_block_switch'>
-  <div style='text-align: right; margin-right: 5px'><b>Expand or collapse ability's descriptor block ^</b></div>
+  <div style='text-align: right; margin-right: 6px'><b>Expand or collapse ability's descriptor block ^</b></div>
   <div class='collapsible_ability_description_window_a' ></div>
   <textarea name='attr_ability' class='collapsible_ability_description_window_b'
   placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
@@ -976,20 +990,20 @@
 <div class='sheet-advancements'>
 
   <h2>Experience Summary</h2>
-  <div style='text-align:center;'>
-    Unspent XP: <input type='number' name='attr_XP_current' style='width:10%; margin-right:20px;' disabled='true' value='@{XP_Total}-@{XP_spent}'>
-    Spent XP: <input type='number' name='attr_XP_spent' style='width:10%; margin-right:20px;'>
-    XP Total: <input type='number' name='attr_XP_Total' style='width:10%;'>
+  <div style='text-align: center'>
+    Unspent XP: <input type='number' name='attr_XP_current' style='width: 10%; margin-right: 20px' disabled='true' value='@{XP_Total}-@{XP_spent}'>
+    Spent XP: <input type='number' name='attr_XP_spent' style='width: 10%; margin-right: 20px'>
+    XP Total: <input type='number' name='attr_XP_Total' style='width: 10%'>
   </div>
   <br>
 
   <fieldset name='advancements' class='repeating_advancements'>
-    <input type='text' name='advancementL' placeholder='Write XP-costing item name here' style='width:25%;'>
-    <input type='number' name='advancement_costL' placeholder='XP Cost' style='width:10%;'>
-    <input type='number' name='advancement_pg#L' placeholder='Page #' style='width:10%; margin-right:10px;'>
-    <input type='text' name='advancementR' placeholder='Write XP-costing item name here' style='width:25%;'>
-    <input type='number' name='advancement_costR' placeholder='XP Cost' style='width:10%;'>
-    <input type='number' name='advancement_pg#R' placeholder='Page #' style='width:10%;'>
+    <input type='text' name='advancementL' placeholder='Write XP-costing item name here' style='width: 25%'>
+    <input type='number' name='advancement_costL' placeholder='XP Cost' style='width: 10%'>
+    <input type='number' name='advancement_pg#L' placeholder='Page #' style='width: 10%; margin-right: 10px'>
+    <input type='text' name='advancementR' placeholder='Write XP-costing item name here' style='width: 25%'>
+    <input type='number' name='advancement_costR' placeholder='XP Cost' style='width: 10%'>
+    <input type='number' name='advancement_pg#R' placeholder='Page #' style='width: 10%'>
   </fieldset>
 
 </div>
@@ -997,7 +1011,7 @@
 <div class='sheet-journal'>
   <h2>Journal: Objectives</h2>
   <fieldset name='objectives' class='repeating_objectives'>
-    <input type='text' name='attr_objective' style='width: 96%;' />
+    <input type='text' name='attr_objective' style='width: 96%' />
     <input type='checkbox' name='attr_objective_completed' />
   </fieldset>
   <h2>Journal: Notes</h2>

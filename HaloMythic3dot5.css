@@ -4,11 +4,11 @@ font-family: Serif
 }*/
 
 button[type=action] {
-  color:white;
-  background:#394C6A;
+  color: white;
+  background: #394C6A;
   font-family: Saira Semi Condensed;
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px
 }
 @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
 
@@ -16,30 +16,30 @@ select,
 input[type='text'],
 input[type='number'] {
   width: calc(100% - 20px);
-  color:white;
+  color: white;
   font-family: Saira Semi Condensed;
-  text-align:center;
-  background:#394C6A;
+  text-align: center;
+  background: #394C6A
 }
 button[type='roll']::before {
-  content: '';
+  content: ''
 }
 button[type='roll'] {
-  color:white;
-  background:black;
+  color: white;
+  background: black;
   font-family: Saira Semi Condensed;
-  margin:0px;
-  padding:0px;
-  width: calc(100% - 5px);
+  margin: 0px;
+  padding: 0px;
+  width: calc(100% - 5px)
 }
 .sheet-characteristics_box select,
 .sheet-characteristics_box input[type='text'],
 .sheet-characteristics_box button[type='roll'] {
-  color:white;
+  color: white;
   font-family: Saira Semi Condensed;
-  margin:0px;
-  padding:0px;
-  width:75%;
+  margin: 0px;
+  padding: 0px;
+  width: 75%
 }
 .sheet-characteristics_box button[type='roll'] {background:black;}
 .sheet-characteristics_box input[type='text'] {height:40px;font-size: 30px;}
@@ -47,53 +47,59 @@ button[type='roll'] {
   overflow: hidden;
   margin-left: -10%;
   text-align: center;
-  width: 120%;
+  width: 120%
 }
 
 h2 {
   text-align: center;
   font-family: Saira Semi Condensed;
-  text-decoration: underline;
+  text-decoration: underline
+}
+
+h3 {
+  text-align: center;
+  font-family: Saira Semi Condensed;
+  text-decoration: underline
 }
 
 textarea {
   width: calc(100% - 10px);
-  color:white;
+  color: white;
   font-family: Saira Semi Condensed;
-  text-align:left;
-  background:#394C6A;
-  resize: vertical;
+  text-align: left;
+  background: #394C6A;
+  resize: vertical
 }
 
 ::placeholder {
   color: white;
-  opacity: 0.6;
+  opacity: 0.6
 }
 
-.sheet-hidden { display: none; }
-.sheet-hider:not(:checked) + div { display: none; }
+.sheet-hidden { display: none }
+.sheet-hider:not(:checked) + div { display: none }
 
 /* start of grid structure for character information ______________________________ */
 
-.sheet-gs1 { grid-area: ah1;    height:30px; font-size: 14px; }
-.sheet-gs2 { grid-area: ah2;    height:30px; font-size: 14px; }
-.sheet-gs3 { grid-area: ah3;    height:30px; font-size: 14px; }
-.sheet-gs4 { grid-area: ah4;    height:30px; font-size: 14px; }
-.sheet-gs5 { grid-area: ah5;    height:30px; font-size: 14px; }
-.sheet-gs6 { grid-area: ah6;    height:30px; font-size: 14px; }
-.sheet-gs7 { grid-area: ah7;    margin-right:-5%; height:30px; }
-.sheet-gs8 { grid-area: ah8;    margin-right:-5%; height:30px; }
-.sheet-gs9 { grid-area: ah9;    margin-right:-5%; height:30px; }
-.sheet-gs10 { grid-area: ah10;  margin-right:-5%; height:30px; }
-.sheet-gs11 { grid-area: ah11;  margin-right:-5%; height:30px; }
-.sheet-gs12 { grid-area: ah12;  margin-right:-5%; height:30px; }
-.sheet-gs13 { grid-area: ah13;}
-.sheet-gs14 { grid-area: ah14;  margin-left:1%; height:30px; }
-.sheet-gs15 { grid-area: ah15;  margin-left:1%; height:30px; }
-.sheet-gs16 { grid-area: ah16;  margin-left:1%; height:30px; }
-.sheet-gs17 { grid-area: ah17;  margin-left:1%; height:30px; }
-.sheet-gs18 { grid-area: ah18;  margin-left:1%; height:30px; }
-.sheet-gs19 { grid-area: ah19;  margin-left:1%; height:30px; }
+.sheet-gs1 { grid-area: ah1;    height:30px; font-size: 14px }
+.sheet-gs2 { grid-area: ah2;    height:30px; font-size: 14px }
+.sheet-gs3 { grid-area: ah3;    height:30px; font-size: 14px }
+.sheet-gs4 { grid-area: ah4;    height:30px; font-size: 14px }
+.sheet-gs5 { grid-area: ah5;    height:30px; font-size: 14px }
+.sheet-gs6 { grid-area: ah6;    height:30px; font-size: 14px }
+.sheet-gs7 { grid-area: ah7;    margin-right:-5%; height:30px }
+.sheet-gs8 { grid-area: ah8;    margin-right:-5%; height:30px }
+.sheet-gs9 { grid-area: ah9;    margin-right:-5%; height:30px }
+.sheet-gs10 { grid-area: ah10;  margin-right:-5%; height:30px }
+.sheet-gs11 { grid-area: ah11;  margin-right:-5%; height:30px }
+.sheet-gs12 { grid-area: ah12;  margin-right:-5%; height:30px }
+.sheet-gs13 { grid-area: ah13 }
+.sheet-gs14 { grid-area: ah14;  margin-left:1%; height:30px }
+.sheet-gs15 { grid-area: ah15;  margin-left:1%; height:30px }
+.sheet-gs16 { grid-area: ah16;  margin-left:1%; height:30px }
+.sheet-gs17 { grid-area: ah17;  margin-left:1%; height:30px }
+.sheet-gs18 { grid-area: ah18;  margin-left:1%; height:30px }
+.sheet-gs19 { grid-area: ah19;  margin-left:1%; height:30px }
 .sheet-gs20 { grid-area: ah20;  height:30px; font-size: 14px; text-align: right }
 .sheet-gs21 { grid-area: ah21;  height:30px; font-size: 14px; text-align: right }
 .sheet-gs22 { grid-area: ah22;  height:30px; font-size: 14px; text-align: right }
@@ -111,7 +117,7 @@ textarea {
   'ah4 ah10 ah13 ah17 ah23'
   'ah5 ah11 ah13 ah18 ah24'
   'ah6 ah12 ah13 ah19 ah25';
-  grid-template-columns: 11% 33% 12% 36% 8%;
+  grid-template-columns: 11% 33% 12% 36% 8%
 }
 
 /* end of grid structure for character information ______________________________
@@ -120,7 +126,7 @@ ______________________________ start of structure for characteristics */
 .sheet-characteristics {
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-  background: black;
+  background: black
 }
 
 /* end of structure for characteristics ______________________________
@@ -128,16 +134,16 @@ ______________________________ start of grid structure for the mythic characteri
 
 .sheet-characteristics_mythic_movement_carry {
   display: grid;
-  grid-template-columns: 10% 80% 10%;
+  grid-template-columns: 10% 80% 10%
 }
 
 .sheet-mythicgs1 { grid-area: amy1; }
 .sheet-mythicgs2 { grid-area: amy2; }
 .sheet-mythicgs3 { grid-area: amy3; }
 .sheet-mythicgs4 { grid-area: amy4; }
-.sheet-mythicgs5 { grid-area: amy5; font-size: 13px; font-family: Serif;}
-.sheet-mythicgs6 { grid-area: amy6; font-size: 13px; font-family: Serif;}
-.sheet-mythicgs7 { grid-area: amy7; font-size: 13px; font-family: Serif;}
+.sheet-mythicgs5 { grid-area: amy5; font-size: 13px; font-family: Serif }
+.sheet-mythicgs6 { grid-area: amy6; font-size: 13px; font-family: Serif }
+.sheet-mythicgs7 { grid-area: amy7; font-size: 13px; font-family: Serif }
 .sheet-characteristics2_mythic {
   display: grid;
   grid-template-columns: 50px 50px 50px;
@@ -148,21 +154,21 @@ ______________________________ start of grid structure for the mythic characteri
   text-align: center
 }
 
-.sheet-movementgs1 { grid-area: amm1; }
-.sheet-movementgs2 { grid-area: amm2; }
-.sheet-movementgs3 { grid-area: amm3; }
-.sheet-movementgs4 { grid-area: amm4; }
-.sheet-movementgs5 { grid-area: amm5; }
-.sheet-movementgs6 { grid-area: amm6; }
-.sheet-movementgs7 { grid-area: amm7; }
-.sheet-movementgs8 { grid-area: amm8; }
-.sheet-movementgs9 { grid-area: amm9;   font-size: 13px; font-family: Serif;}
-.sheet-movementgs10 { grid-area: amm10; font-size: 13px; font-family: Serif;}
-.sheet-movementgs11 { grid-area: amm11; font-size: 13px; font-family: Serif;}
-.sheet-movementgs12 { grid-area: amm12; font-size: 13px; font-family: Serif;}
-.sheet-movementgs13 { grid-area: amm13; font-size: 13px; font-family: Serif;}
-.sheet-movementgs14 { grid-area: amm14; font-size: 13px; font-family: Serif;}
-.sheet-movementgs15 { grid-area: amm15; font-size: 13px; font-family: Serif;}
+.sheet-movementgs1 { grid-area: amm1 }
+.sheet-movementgs2 { grid-area: amm2 }
+.sheet-movementgs3 { grid-area: amm3 }
+.sheet-movementgs4 { grid-area: amm4 }
+.sheet-movementgs5 { grid-area: amm5 }
+.sheet-movementgs6 { grid-area: amm6 }
+.sheet-movementgs7 { grid-area: amm7 }
+.sheet-movementgs8 { grid-area: amm8 }
+.sheet-movementgs9 { grid-area: amm9;   font-size: 13px; font-family: Serif }
+.sheet-movementgs10 { grid-area: amm10; font-size: 13px; font-family: Serif }
+.sheet-movementgs11 { grid-area: amm11; font-size: 13px; font-family: Serif }
+.sheet-movementgs12 { grid-area: amm12; font-size: 13px; font-family: Serif }
+.sheet-movementgs13 { grid-area: amm13; font-size: 13px; font-family: Serif }
+.sheet-movementgs14 { grid-area: amm14; font-size: 13px; font-family: Serif }
+.sheet-movementgs15 { grid-area: amm15; font-size: 13px; font-family: Serif }
 .sheet-characteristics2_movement {
   justify-content: center;
   display: grid;
@@ -174,13 +180,13 @@ ______________________________ start of grid structure for the mythic characteri
   text-align: center
 }
 
-.sheet-carrygs1 { grid-area: ac1; }
-.sheet-carrygs2 { grid-area: ac2; }
-.sheet-carrygs3 { grid-area: ac3; }
-.sheet-carrygs4 { grid-area: ac4; }
-.sheet-carrygs5 { grid-area: ac5; font-size: 13px; font-family: Serif;}
-.sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Serif;}
-.sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Serif;}
+.sheet-carrygs1 { grid-area: ac1 }
+.sheet-carrygs2 { grid-area: ac2 }
+.sheet-carrygs3 { grid-area: ac3 }
+.sheet-carrygs4 { grid-area: ac4 }
+.sheet-carrygs5 { grid-area: ac5; font-size: 13px; font-family: Serif }
+.sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Serif }
+.sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Serif }
 .sheet-characteristics2_carry {
   justify-content: right;
   display: grid;
@@ -197,21 +203,21 @@ ______________________________ start of grid structure for initiative/sheet tabs
 
 .sheet-initiative_tabs_main {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%
 }
 
 .sheet-initiative_tabs_initiative {
   display: grid;
   justify-content: left;
   grid-template-columns: 100px 102px 10px 40px 17px 93px;
-  height:30px;
+  height: 30px
 }
 
 .sheet-initiative_sheet_tabs {
   display: grid;
   justify-content: right;
   grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
-  height:30px;
+  height: 30px
 }
 
 /* end of grid structure for initiative/sheet tabs ______________________________
@@ -222,9 +228,7 @@ ______________________________ start of tab buttons toggles */
 .sheet-advancements,
 .sheet-journal,
 .sheet-vehicles,
-.sheet-settings{
-  display: none;
-}
+.sheet-settings { display: none }
 /* show the selected tab */
 
 .sheet-tabstoggle[value='core'] ~ div.sheet-core,
@@ -233,72 +237,67 @@ ______________________________ start of tab buttons toggles */
 .sheet-tabstoggle[value='advancements'] ~ div.sheet-advancements,
 .sheet-tabstoggle[value='journal'] ~ div.sheet-journal,
 .sheet-tabstoggle[value='vehicles'] ~ div.sheet-vehicles,
-.sheet-tabstoggle[value='settings'] ~ div.sheet-settings{
-  display: block;
-}
+.sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block }
+
 /* end of tab buttons toggles ______________________________
 ______________________________ start of minimisable infographic */
 
 .sheet-minimisable_infographic_main {
   display: grid;
-  grid-template-columns: 18px auto;
+  grid-template-columns: 18px auto
 }
 
 .sheet-minimisable_infographic_a,
-.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_b {
-  display: block;
-}
+.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_b { display: block }
 
 .sheet-minimisable_infographic_b,
-.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_a {
-  display: none;
-}
+.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_a { display: none }
 
 /* end of minimisable infographic ______________________________
 ______________________________ start of core tab */
 
-.sheet-core_lists1 { grid-area: cl1; }
-.sheet-core_lists2 { grid-area: cl2; }
-.sheet-core_lists3 { grid-area: cl3; }
+.sheet-core_lists1 { grid-area: cl1 }
+.sheet-core_lists2 { grid-area: cl2 }
+.sheet-core_lists3 { grid-area: cl3 }
 .sheet-core_lists {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas:
   'cl1 cl2'
   'cl1 cl3';
-  height:auto;
+  height: auto
 }
 
 .sheet-collapsible_ability_description_window_a,
-.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block; }
+.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }
 .sheet-collapsible_ability_description_window_b,
-.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none; }
+.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none }
 
 /* end of core tab _____________________________________________________________
 start of medical tab ___________________________________________________________*/
 
 
-.sheet-medicalg1 { grid-area: m1; }
-.sheet-medicalg2 { grid-area: m2; }
-.sheet-medicalg3 { grid-area: m3; }
-.sheet-medicalg4 { grid-area: m4; }
-.sheet-medicalg5 { grid-area: m5; }
-.sheet-medicalg6 { grid-area: m6; }
-.sheet-medicalg7 { grid-area: m7; }
-.sheet-medicalg8 { grid-area: m8; }
-.sheet-medicalg9 { grid-area: m9; }
-.sheet-medicalg10 { grid-area: m10; }
-.sheet-medicalg11 { grid-area: m11; }
-.sheet-medicalg12 { grid-area: m12; }
-.sheet-medicalg13 { grid-area: m13; }
-.sheet-medicalg14 { grid-area: m14; }
-.sheet-medicalg15 { grid-area: m15; }
-.sheet-medicalg16 { grid-area: m16; }
-.sheet-medicalg17 { grid-area: m17; }
-.sheet-medicalgT { grid-area: mT; }
-.sheet-medicalgR { grid-area: mR; }
+.sheet-medicalg1 { grid-area: m1 }
+.sheet-medicalg2 { grid-area: m2 }
+.sheet-medicalg3 { grid-area: m3 }
+.sheet-medicalg4 { grid-area: m4 }
+.sheet-medicalg5 { grid-area: m5 }
+.sheet-medicalg6 { grid-area: m6 }
+.sheet-medicalg7 { grid-area: m7 }
+.sheet-medicalg8 { grid-area: m8 }
+.sheet-medicalg9 { grid-area: m9 }
+.sheet-medicalg10 { grid-area: m10 }
+.sheet-medicalg11 { grid-area: m11 }
+.sheet-medicalg12 { grid-area: m12 }
+.sheet-medicalg13 { grid-area: m13 }
+.sheet-medicalg14 { grid-area: m14 }
+.sheet-medicalg15 { grid-area: m15 }
+.sheet-medicalg16 { grid-area: m16 }
+.sheet-medicalg17 { grid-area: m17 }
+.sheet-medicalgT { grid-area: mT }
+.sheet-medicalgR { grid-area: mR }
 .sheet-medical-grid {
-  height:50px;
+  height: 50px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 120px 120px 120px 120px 120px 150px auto;
