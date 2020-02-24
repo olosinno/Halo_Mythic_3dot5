@@ -13,18 +13,18 @@ button[type=action] {
 @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
 
 select,
-input[type="text"],
-input[type="number"] {
+input[type='text'],
+input[type='number'] {
   width: calc(100% - 20px);
   color:white;
   font-family: Saira Semi Condensed;
   text-align:center;
   background:#394C6A;
 }
-button[type="roll"]::before {
-  content: "";
+button[type='roll']::before {
+  content: '';
 }
-button[type="roll"] {
+button[type='roll'] {
   color:white;
   background:black;
   font-family: Saira Semi Condensed;
@@ -33,16 +33,16 @@ button[type="roll"] {
   width: calc(100% - 5px);
 }
 .sheet-characteristics_box select,
-.sheet-characteristics_box input[type="text"],
-.sheet-characteristics_box button[type="roll"] {
+.sheet-characteristics_box input[type='text'],
+.sheet-characteristics_box button[type='roll'] {
   color:white;
   font-family: Saira Semi Condensed;
   margin:0px;
   padding:0px;
   width:75%;
 }
-.sheet-characteristics_box button[type="roll"] {background:black;}
-.sheet-characteristics_box input[type="text"] {height:40px;font-size: 30px;}
+.sheet-characteristics_box button[type='roll'] {background:black;}
+.sheet-characteristics_box input[type='text'] {height:40px;font-size: 30px;}
 .sheet-characteristics_box {
   overflow: hidden;
   margin-left: -10%;
@@ -231,13 +231,13 @@ ______________________________ start of tab buttons toggles */
 
 /* show the selected tab */
 
-.sheet-tabstoggle[value="core"] ~ div.sheet-core,
-.sheet-tabstoggle[value="equipment"] ~ div.sheet-equipment,
-.sheet-tabstoggle[value="medical"] ~ div.sheet-medical,
-.sheet-tabstoggle[value="advancements"] ~ div.sheet-advancements,
-.sheet-tabstoggle[value="journal"] ~ div.sheet-journal,
-.sheet-tabstoggle[value="vehicles"] ~ div.sheet-vehicles,
-.sheet-tabstoggle[value="settings"] ~ div.sheet-settings{
+.sheet-tabstoggle[value='core'] ~ div.sheet-core,
+.sheet-tabstoggle[value='equipment'] ~ div.sheet-equipment,
+.sheet-tabstoggle[value='medical'] ~ div.sheet-medical,
+.sheet-tabstoggle[value='advancements'] ~ div.sheet-advancements,
+.sheet-tabstoggle[value='journal'] ~ div.sheet-journal,
+.sheet-tabstoggle[value='vehicles'] ~ div.sheet-vehicles,
+.sheet-tabstoggle[value='settings'] ~ div.sheet-settings{
   display: block;
 }
 /* end of tab buttons toggles ______________________________
