@@ -991,9 +991,9 @@
 
   <h2>Experience Summary</h2>
   <div style='text-align: center'>
-    Unspent XP: <input type='number' name='attr_XP_current' style='width: 10%; margin-right: 20px' disabled='true' value='@{XP_Total}-@{XP_spent}'>
-    Spent XP: <input type='number' name='attr_XP_spent' style='width: 10%; margin-right: 20px' value='@{XP_spent}+@{advancement_costL}+@{advancement_costR}'>
-    XP Total: <input type='number' name='attr_XP_Total' style='width: 10%'>
+    Spent XP: <input type='number' name='attr_XP_spent' style='width: 10%; margin-right: 20px' value='@{XP_total}-(@{advancement_costL}+@{advancement_costR})' disabled='true'>
+    Unspent XP: <input type='number' name='attr_XP_current' style='width: 10%; margin-right: 20px' value='@{XP_total}-@{XP_spent}' disabled='true'>
+    XP Total: <input type='number' name='attr_XP_total' style='width: 10%'>
   </div>
   <br>
 
