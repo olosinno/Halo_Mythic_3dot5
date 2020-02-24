@@ -1,7 +1,7 @@
 /* asterisk applies to all elements */
-.sheet-*.ff {
+/*.sheet-*.ff {
 font-family: Serif
-}
+}*/
 
 button[type=action] {
   color:white;
@@ -228,7 +228,6 @@ ______________________________ start of tab buttons toggles */
 .sheet-settings{
   display: none;
 }
-
 /* show the selected tab */
 
 .sheet-tabstoggle[value='core'] ~ div.sheet-core,
@@ -299,7 +298,7 @@ start of medical tab ___________________________________________________________
     height:50px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 80px 80px 80px 80px auto;
+  grid-template-rows: 120px 120px 120px 120px auto;
   grid-template-areas:
   'm1  m2  m3 m12'
   'm4  m5  m6 m12'
@@ -308,6 +307,9 @@ start of medical tab ___________________________________________________________
   'm13 m13 m13 m12';
 
 }
+
+.sheet-medicalhidden { display: none; }
+.sheet-medicalhider:not(:checked) + div { display: none; }
 /* end of medical tab __________________________________________________________
 start of advancement/experience tab ____________________________________________ */
 

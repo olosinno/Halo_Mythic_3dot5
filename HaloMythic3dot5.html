@@ -396,7 +396,7 @@
   <div class='collapsible_ability_description_window_a' ></div>
   <textarea name='attr_ability' class='collapsible_ability_description_window_b'
   placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
-Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
+  Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
   <fieldset name='abilities' class='repeating_abilities'>
     <input type='text' name='attr_ability_r' placeholder='Write ability / trait name here'>
     <input type='checkbox' class='collapsible_ability_block_switch'>
@@ -416,20 +416,51 @@ Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, M
   <div class='sheet-medical-grid'>
     <div class='medicalg1'>
       finger/toe
-      <select name='finger/toe''>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      <select name='attr_medical_finger/toe'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-15</option>
+        <option value='2'>16-30</option>
+        <option value='3'>31-45</option>
+        <option value='4'>46+</option>
       </select>
+      <div class='sheet-gs13'>
+        <input type='checkbox' name='attr_medical_finger/toe' value='0' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_medical_finger/toe' value='1' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>-1 WFM and WFR to Finger, -2 Agility to Toe</div>
+        <input type='checkbox' name='attr_medical_finger/toe' value='2' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>-2 WFM and WFR to Finger, -4 Agility to Toe</div>
+        <input type='checkbox' name='attr_medical_finger/toe' value='3' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>Body Location broken, damaged. No longer usable. -3 Strength to Finger, -3 Agility to Toe</div>
+        <input type='checkbox' name='attr_medical_finger/toe' value='4' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>Body Locaton Destroyed. -4 Strength to Finger, -4Agility to Toe</div>
+      </div>
     </div>
 
     <div class='medicalg2'>
       finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      <select name='attr_medical_heart'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-30</option>
+        <option value='3'>31-40</option>
+        <option value='4'>41-59</option>
+                <option value='5'>60+</option>
       </select>
+      <div class='sheet-gs13'>
+        <input type='checkbox' name='attr_medical_heart' value='0' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_medical_heart' value='1' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>-2 Strength, Toughness, Agility</div>
+        <input type='checkbox' name='attr_medical_heart' value='2' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>-5 Strength, Toughness, Agility</div>
+        <input type='checkbox' name='attr_medical_heart' value='3' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>-10 Strength, Toughness, Agility</div>
+        <input type='checkbox' name='attr_medical_heart' value='4' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>Body Location broken, damaged. +10 Fatigue, -15 Strength, Toughness, Agility</div>
+        <input type='checkbox' name='attr_medical_heart' value='5' class='sheet-medicalhidden sheet-medicalhider' checked>
+        <div>Body Locaton Destroyed, instant death</div>
+      </div>
     </div>
 
     <div class='medicalg3'>
