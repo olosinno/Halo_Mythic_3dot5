@@ -55,6 +55,11 @@ h2 {
   font-family: Saira Semi Condensed;
   text-decoration: underline;
 }
+h3 {
+  text-align: center;
+  font-family: Saira Semi Condensed;
+  text-decoration: underline;
+}
 
 textarea {
   width: calc(100% - 10px);
