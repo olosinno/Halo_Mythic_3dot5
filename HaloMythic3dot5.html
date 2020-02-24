@@ -1,4 +1,4 @@
-<!-- character information grid ________________________________________________ -->
+eye<!-- character information grid ________________________________________________ -->
 
 <div class='sheet-header_logo'>
 
@@ -26,15 +26,15 @@
   <div class='sheet-gs12'><input type='text' name='attr_specialisation' /></div>
   <!-- third column of grid: header logo -->
   <div class='sheet-gs13'>
-    <input type='checkbox' name='attr_faction' value='1' class='sheet-imghidden sheet-imghider' checked>
+    <input type='checkbox' name='attr_faction' value='1' class='sheet-hidden sheet-hider' checked>
     <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130' width='130' /></div>
-    <input type='checkbox' name='attr_faction' value='2' class='sheet-imghidden sheet-imghider'>
+    <input type='checkbox' name='attr_faction' value='2' class='sheet-hidden sheet-hider'>
     <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_UNSC.png' height='130' width='130' /></div>
-    <input type='checkbox' name='attr_faction' value='3' class='sheet-imghidden sheet-imghider'>
+    <input type='checkbox' name='attr_faction' value='3' class='sheet-hidden sheet-hider'>
     <div><img name='logo'src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Covenant.png' height='130' width='130' /></div>
-    <input type='checkbox' name='attr_faction' value='4' class='sheet-imghidden sheet-imghider'>
+    <input type='checkbox' name='attr_faction' value='4' class='sheet-hidden sheet-hider'>
     <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Forerunner.png' height='130' width='130' /></div>
-    <input type='checkbox' name='attr_faction' value='5' class='sheet-imghidden sheet-imghider'>
+    <input type='checkbox' name='attr_faction' value='5' class='sheet-hidden sheet-hider'>
     <div><img name='logo'  src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130'  width='130' /></div>
   </div>
   <!-- REPLACE LOGO SOURCE ONCE COMPLETE: src='images/mythic_logo.png' -->
@@ -396,7 +396,7 @@
   <div class='collapsible_ability_description_window_a' ></div>
   <textarea name='attr_ability' class='collapsible_ability_description_window_b'
   placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
-Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
+  Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
   <fieldset name='abilities' class='repeating_abilities'>
     <input type='text' name='attr_ability_r' placeholder='Write ability / trait name here'>
     <input type='checkbox' class='collapsible_ability_block_switch'>
@@ -416,104 +416,488 @@ Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, M
   <div class='sheet-medical-grid'>
     <div class='medicalg1'>
       finger/toe
-      <select name='finger/toe''>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      <select name='attr_medical_finger/toe'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-15</option>
+        <option value='2'>16-30</option>
+        <option value='3'>31-45</option>
+        <option value='4'>46+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_medical_finger/toe' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_medical_finger/toe' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-1 WFM and WFR to Finger, -2 Agility to Toe</div>
+        <input type='checkbox' name='attr_medical_finger/toe' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-2 WFM and WFR to Finger, -4 Agility to Toe</div>
+        <input type='checkbox' name='attr_medical_finger/toe' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged. No longer usable. -3 Strength to Finger, -3 Agility to Toe</div>
+        <input type='checkbox' name='attr_medical_finger/toe' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>Body Locaton Destroyed. -4 Strength to Finger, -4Agility to Toe</div>
+      </div>
     </div>
 
     <div class='medicalg2'>
-      finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      Heart
+      <select name='attr_medical_heart'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-30</option>
+        <option value='3'>31-40</option>
+        <option value='4'>41-59</option>
+        <option value='5'>60+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_medical_heart' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_medical_heart' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Strength, Toughness, Agility</div>
+        <input type='checkbox' name='attr_medical_heart' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-5 Strength, Toughness, Agility</div>
+        <input type='checkbox' name='attr_medical_heart' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Strength, Toughness, Agility</div>
+        <input type='checkbox' name='attr_medical_heart' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged. +10 Fatigue, -15 Strength, Toughness, Agility</div>
+        <input type='checkbox' name='attr_medical_heart' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Locaton Destroyed, instant death</div>
+      </div>
     </div>
 
     <div class='medicalg3'>
-      finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      neck
+      <select name='attr_neck'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59</option>
+        <option value='6'>60+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_neck' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_neck' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Toughness</div>
+        <input type='checkbox' name='attr_neck' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-5 Toughness</div>
+        <input type='checkbox' name='attr_neck' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Toughness</div>
+        <input type='checkbox' name='attr_neck' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Toughness, +1 Fatigue</div>
+        <input type='checkbox' name='attr_neck' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged. -20 Toughness, Paralyzed and Helpless</div>
+        <input type='checkbox' name='attr_neck' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, instant deaths</div>
+      </div>
     </div>
 
     <div class='medicalg4'>
-      finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      skull/brain
+      <select name='attr_skull/brain'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-30</option>
+        <option value='3'>31-40</option>
+        <option value='4'>41-59</option>
+        <option value='5'>60+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_skull/brain' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_skull/brain' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Perception, Intellect, Warfare Range, Warfare Melee</div>
+        <input type='checkbox' name='attr_skull/brain' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-5 Perception, Intellect, Warfare Range, Warfare Melee</div>
+        <input type='checkbox' name='attr_skull/brain' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Perception, Intellect, Warfare Range, Warfare Melee</div>
+        <input type='checkbox' name='attr_skull/brain' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged. +10 Fatigue, -15 Perception, Intellect, Warfare Range, Warfare Melee</div>
+        <input type='checkbox' name='attr_skull/brain' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, instant death</div>
+      </div>
     </div>
 
     <div class='medicalg5'>
-      finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      nose/ear
+      <select name='attr_nose/ear'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59</option>
+        <option value='6'>60+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_nose/ear' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_nose/ear' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Perception to Smelling or Hearing Perception Tests</div>
+        <input type='checkbox' name='attr_nose/ear' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-5 Perception to Smelling or Hearing Perception Tests</div>
+        <input type='checkbox' name='attr_nose/ear' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Perception to Smelling or Hearing Perception Tests</div>
+        <input type='checkbox' name='attr_nose/ear' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-15 Perception to Smelling or Hearing Perception Tests</div>
+        <input type='checkbox' name='attr_nose/ear' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location broken, -20 Perception to Smelling or Hearing Perception Tests</div>
+        <input type='checkbox' name='attr_nose/ear' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, cannot make Smelling Tests, or halves Perception for Hearing Tests</div>
+      </div>
     </div>
 
     <div class='medicalg6'>
-      finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      arm/leg
+      <select name='attr_arm/leg'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59</option>
+        <option value='6'>60+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_arm/leg' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_arm/leg' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Strength to Arm, or -2 Agility to Leg</div>
+        <input type='checkbox' name='attr_arm/leg' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-5 Strength to Arm, or -5 Agility to Leg</div>
+        <input type='checkbox' name='attr_arm/leg' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Strength to Arm, or -10 Agility to Leg</div>
+        <input type='checkbox' name='attr_arm/leg' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-15 Strength to Arm, or -15 Agility to Leg</div>
+        <input type='checkbox' name='attr_arm/leg' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged, -15 Strength to Arm, or-15 Agility to Leg. -5 to any Action with thislimb.</div>
+        <input type='checkbox' name='attr_arm/leg' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, limb cannot be used. +3 Fatigue.</div>
+      </div>
     </div>
 
     <div class='medicalg7'>
-      finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      small/large intestines
+      <select name='attr_small/large intestines'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59</option>
+        <option value='6'>60+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_small/large intestines' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_small/large intestines' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Toughness, -2 Agility</div>
+        <input type='checkbox' name='attr_small/large intestines' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-4 Toughness, -4 Agility</div>
+        <input type='checkbox' name='attr_small/large intestines' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-6 Toughness, -6 Agility</div>
+        <input type='checkbox' name='attr_small/large intestines' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Toughness, -10 Agility</div>
+        <input type='checkbox' name='attr_small/large intestines' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged, -15 Toughness, -15 Agility. +2 Fatigue</div>
+        <input type='checkbox' name='attr_small/large intestines' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, -20 Toughness, -20 Agility. +5 Fatigue.</div>
+      </div>
     </div>
 
     <div class='medicalg8'>
-      finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      lung
+      <select name='attr_lung'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59</option>
+        <option value='6'>60+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_lung' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_lung' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Toughness, Stunned for 1D5-Toughness Modifier in Rounds.</div>
+        <input type='checkbox' name='attr_lung' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-5 Toughness, Stunned for 2D5-Toughness Modifier in Rounds.</div>
+        <input type='checkbox' name='attr_lung' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Toughness, Stunned for 3D5-Toughness Modifier in Rounds.</div>
+        <input type='checkbox' name='attr_lung' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-15 Toughness, Stunned for 4D5-Toughness Modifier in Rounds.</div>
+        <input type='checkbox' name='attr_lung' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged, -20 Toughness, Stunned for 5D5-Toughness Modifier in Rounds.</div>
+        <input type='checkbox' name='attr_lung' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, -25 Toughness, Stunned for 6D5-Toughness Modifier in Rounds. Character will take 2 Wounds whenever they take a Movement Action quicker than 2 Meters per Turn.</div>
+      </div>
     </div>
 
     <div class='medicalg9'>
-      finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      kidney/stomach/liver/spleen
+      <select name='attr_kidney/stomach/liver/spleen'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59</option>
+        <option value='6'>60+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Toughness, -2 Agility</div>
+        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-4 Toughness, -4 Agility</div>
+        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-6 Toughness, -6 Agility</div>
+        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Toughness, -10 Agility</div>
+        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged, -15 Toughness, -15 Agility. +1 Fatigue</div>
+        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, -20 Toughness, -20 Agility. +5 Fatigue.</div>
+      </div>
     </div>
 
     <div class='medicalg10'>
-      finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      knee/ankle/shoulder/elbow
+      <select name='attr_knee/ankle/shoulder/elbow'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59</option>
+        <option value='6'>60+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Strength, -2 Agility</div>
+        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-4 Strength, -4 Agility</div>
+        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-6 Strength, -6 Agility</div>
+        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Strength, -10 Agility</div>
+        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged, -15 Strength, -15 Agility. +1 Fatigue</div>
+        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, -20 Strength, -20 Agility. +5 Fatigue.</div>
+      </div>
     </div>
 
     <div class='medicalg11'>
-      finger/toe
-      <select name='finger/toe'>
-        <option selected='selected'>nominal</option>
-        <option >01-15 -1 WFM and WFR to Finger, -2 Agility to Toe</option>
-        <option >16-30 -2 WFM and WFR to Finger, -4 Agility to Toe</option>
+      eye
+      <select name='attr_eye'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59+</option>
+        <option value='6'>60+</option>
       </select>
+      <div >
+        <input type='checkbox' name='attr_eye' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_eye' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 eyesight-based Perception Tests</div>
+        <input type='checkbox' name='attr_eye' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-5 eyesight-based Perception Tests</div>
+        <input type='checkbox' name='attr_eye' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-10 eyesight-based Perception Tests</div>
+        <input type='checkbox' name='attr_eye' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-12 eyesight-based Perception Tests</div>
+        <input type='checkbox' name='attr_eye' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location broken, -15 eyesight-based Perception Tests</div>
+        <input type='checkbox' name='attr_eye' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, Character is blinded for 1D5 Rounds. -20 eye-based Perception Tests.</div>
+      </div>
     </div>
 
     <div class='medicalg12'>
+      mouth
+      <select name='attr_mouth'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59+</option>
+        <option value='6'>60+</option>
+      </select>
+      <div >
+        <input type='checkbox' name='attr_mouth' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_mouth' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-1 Toughness, -5 to Speech-based Tests.</div>
+        <input type='checkbox' name='attr_mouth' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-3 Toughness, -5 to Speech-based Tests.</div>
+        <input type='checkbox' name='attr_mouth' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-5 Toughness, -10 to Speech-based Tests.</div>
+        <input type='checkbox' name='attr_mouth' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-8 Toughness, -10 to Speech-based Tests.</div>
+        <input type='checkbox' name='attr_mouth' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location broken, damaged. -12 Toughness,+1 Fatigue, -15 to Speech-based Tests.</div>
+        <input type='checkbox' name='attr_mouth' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, -15 Toughness, +2 Fatigue, -15 to Speech-based Tests.</div>
+      </div>
+    </div>
+
+    <div class='medicalg13'>
+      hand
+      <select name='attr_hand'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59+</option>
+        <option value='6'>60+</option>
+      </select>
+      <div >
+        <input type='checkbox' name='attr_hand' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_hand' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-3 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+        <input type='checkbox' name='attr_hand' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-5 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+        <input type='checkbox' name='attr_hand' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-10 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+        <input type='checkbox' name='attr_hand' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-13 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+        <input type='checkbox' name='attr_hand' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location broken, -15 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+        <input type='checkbox' name='attr_hand' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, Character cannot use the hand for any Actions.</div>
+      </div>
+    </div>
+
+    <div class='medicalg14'>
+      chin/jaw/cheek
+      <select name='attr_chin/jaw/cheek'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59+</option>
+        <option value='6'>60+</option>
+      </select>
+      <div >
+        <input type='checkbox' name='attr_chin/jaw/cheek' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_chin/jaw/cheek' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Toughness</div>
+        <input type='checkbox' name='attr_chin/jaw/cheek' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-4 Toughness, -5 to Speech-based Tests.</div>
+        <input type='checkbox' name='attr_chin/jaw/cheek' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-6 Toughness, -10 to Speech-based Tests.</div>
+        <input type='checkbox' name='attr_chin/jaw/cheek' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Toughness, +1 Fatigue, -10 to Speech-based Tests.</div>
+        <input type='checkbox' name='attr_chin/jaw/cheek' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged. -15 Toughness,+2 Fatigue, -15 to Speech-based Tests.</div>
+        <input type='checkbox' name='attr_chin/jaw/cheek' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, -20 Toughness, +3 Fatigue, -20 to Speech-based Tests.</div>
+      </div>
+    </div>
+
+    <div class='medicalg15'>
+      foot
+      <select name='attr_foot'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59+</option>
+        <option value='6'>60+</option>
+      </select>
+      <div >
+        <input type='checkbox' name='attr_foot' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_foot' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-5 to Agility when figuring Movement Speed.</div>
+        <input type='checkbox' name='attr_foot' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-10 to Agility when figuring Movement Speed.</div>
+        <input type='checkbox' name='attr_foot' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-15 to Agility when figuring Movement Speed.</div>
+        <input type='checkbox' name='attr_foot' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-20 to Agility when figuring Movement Speed.</div>
+        <input type='checkbox' name='attr_foot' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location broken, -25 to Agility when figuring Movement Speed.</div>
+        <input type='checkbox' name='attr_foot' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, Character cannot use the Foot for any Actions. Half Move reduced to 1 Meter, Full Move reduced to 2 Meters, Charge and Run are impossible.</div>
+      </div>
+    </div>
+
+    <div class='medicalg16'>
+      pelvis
+      <select name='attr_pelvis'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59+</option>
+        <option value='6'>60+</option>
+      </select>
+      <div >
+        <input type='checkbox' name='attr_pelvis' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_pelvis' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-1 Toughness, -4 Agility</div>
+        <input type='checkbox' name='attr_pelvis' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-3 Toughness, -6 Agility</div>
+        <input type='checkbox' name='attr_pelvis' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-6 Toughness, -8 Agility</div>
+        <input type='checkbox' name='attr_pelvis' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-8 Toughness, -12 Agility</div>
+        <input type='checkbox' name='attr_pelvis' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location damaged, -20 Toughness, -20 Agility.</div>
+        <input type='checkbox' name='attr_pelvis' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, -30 Toughness, -30 Agility.</div>
+      </div>
+    </div>
+
+    <div class='medicalg17'>
+      chest
+      <select name='attr_chest'>
+        <option selected='selected' value='0'>nominal</option>
+        <option value='1'>01-20</option>
+        <option value='2'>21-25</option>
+        <option value='3'>26-30</option>
+        <option value='4'>31-40</option>
+        <option value='5'>41-59+</option>
+        <option value='6'>60+</option>
+      </select>
+      <div >
+        <input type='checkbox' name='attr_chest' value='0' class='sheet-hidden sheet-hider' checked>
+        <div>No effect/healthy</div>
+        <input type='checkbox' name='attr_chest' value='1' class='sheet-hidden sheet-hider' checked>
+        <div>-2 Toughness</div>
+        <input type='checkbox' name='attr_chest' value='2' class='sheet-hidden sheet-hider' checked>
+        <div>-4 Toughness</div>
+        <input type='checkbox' name='attr_chest' value='3' class='sheet-hidden sheet-hider' checked>
+        <div>-8 Toughness, Stunned for 1D5 Rounds.</div>
+        <input type='checkbox' name='attr_chest' value='4' class='sheet-hidden sheet-hider' checked>
+        <div>-10 Toughness, Stunned for 2D5 Rounds.</div>
+        <input type='checkbox' name='attr_chest' value='5' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location broken, damaged. -15 Toughness, Stunned for 3D5 Rounds.</div>
+        <input type='checkbox' name='attr_chest' value='6' class='sheet-hidden sheet-hider' checked>
+        <div>Body Location Destroyed, instant death.</div>
+      </div>
+    </div>
+
+
+
+    <div class='medicalgT'>
       <h2>hit location</h2>
       <div> 01-10 HEAD</div>
       <div>01 Neck</div>
@@ -576,7 +960,7 @@ Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, M
       <div>  9-10 Thumb Finger/Toe</div>
     </div>
 
-    <div class='medicalg13'>
+    <div class='medicalgR'>
       <h2>medical info</h2>
       <div class='collapsible_ability_description_window_a' ></div>
       <textarea class='collapsible_ability_description_window_b'></textarea>

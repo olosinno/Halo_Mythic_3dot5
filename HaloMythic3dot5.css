@@ -1,7 +1,7 @@
 /* asterisk applies to all elements */
-.sheet-*.ff {
+/*.sheet-*.ff {
 font-family: Serif
-}
+}*/
 
 button[type=action] {
   color:white;
@@ -66,9 +66,12 @@ textarea {
 }
 
 ::placeholder {
-	color: white;
-	opacity: 0.6;
+  color: white;
+  opacity: 0.6;
 }
+
+.sheet-hidden { display: none; }
+.sheet-hider:not(:checked) + div { display: none; }
 
 /* start of grid structure for character information ______________________________ */
 
@@ -112,12 +115,6 @@ textarea {
 }
 
 /* end of grid structure for character information ______________________________
-______________________________ start of sheet logo swapper */
-
-.sheet-imghidden { display: none; }
-.sheet-imghider:not(:checked) + div { display: none; }
-
-/* end of sheet logo swapper ______________________________
 ______________________________ start of structure for characteristics */
 
 .sheet-characteristics {
@@ -228,7 +225,6 @@ ______________________________ start of tab buttons toggles */
 .sheet-settings{
   display: none;
 }
-
 /* show the selected tab */
 
 .sheet-tabstoggle[value='core'] ~ div.sheet-core,
@@ -280,7 +276,7 @@ ______________________________ start of core tab */
 
 /* end of core tab _____________________________________________________________
 start of medical tab ___________________________________________________________*/
-.sheet-medical{}
+
 
 .sheet-medicalg1 { grid-area: m1; }
 .sheet-medicalg2 { grid-area: m2; }
@@ -295,19 +291,28 @@ start of medical tab ___________________________________________________________
 .sheet-medicalg11 { grid-area: m11; }
 .sheet-medicalg12 { grid-area: m12; }
 .sheet-medicalg13 { grid-area: m13; }
+.sheet-medicalg14 { grid-area: m14; }
+.sheet-medicalg15 { grid-area: m15; }
+.sheet-medicalg16 { grid-area: m16; }
+.sheet-medicalg17 { grid-area: m17; }
+.sheet-medicalgT { grid-area: mT; }
+.sheet-medicalgR { grid-area: mR; }
 .sheet-medical-grid {
-    height:50px;
+  height:50px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 80px 80px 80px 80px auto;
+  grid-template-rows: 120px 120px 120px 120px 120px 150px auto;
   grid-template-areas:
-  'm1  m2  m3 m12'
-  'm4  m5  m6 m12'
-  'm7  m8  m9 m12'
-  'm10 m0 m11 m12'
-  'm13 m13 m13 m12';
+  'm1  m2  m3  mT'
+  'm4  m5  m6  mT'
+  'm7  m8  m9  mT'
+  'm10 m0  m11 mT'
+  'm12 m13 m14 mT'
+  'm15 m16 m17 mT'
+  'mR  mR  mR  mT';
 
 }
+
 /* end of medical tab __________________________________________________________
 start of advancement/experience tab ____________________________________________ */
 
