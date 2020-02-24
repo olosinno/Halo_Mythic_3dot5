@@ -8,6 +8,11 @@ font-family: Serif
 resize: vertical;
 }
 */
+::placeholder {
+	color: white;
+	opacity: 0.5;
+}
+
 button[type=action] {
   color:white;
   background:#394C6A;
