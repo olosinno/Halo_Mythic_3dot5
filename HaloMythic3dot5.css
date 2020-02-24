@@ -37,19 +37,22 @@ button[type="roll"] {
   padding:0px;
   width: calc(100% - 5px);
 }
+.sheet-characteristics_box select,
+.sheet-characteristics_box input[type="text"],
 .sheet-characteristics_box button[type="roll"] {
   color:white;
-  background:black;
   font-family: Saira Semi Condensed;
   margin:0px;
   padding:0px;
-  width:75px;
+  width:75%;
 }
+.sheet-characteristics_box button[type="roll"] {background:black;}
+.sheet-characteristics_box input[type="text"] {height:40px;font-size: 30px;}
 .sheet-characteristics_box {
   overflow: hidden;
-  margin-left: 0px;
+  margin-left: -10%;
   text-align: center;
-  width: 110%;
+  width: 120%;
 }
 
 h2 {
@@ -69,31 +72,31 @@ textarea {
 
 /* start of grid structure for character information ______________________________ */
 
-.sheet-gs1 { grid-area: ah1;   height:30px; font-size: 14px; }
-.sheet-gs2 { grid-area: ah2;   height:30px; font-size: 14px; }
-.sheet-gs3 { grid-area: ah3;   height:30px; font-size: 14px; }
-.sheet-gs4 { grid-area: ah4;   height:30px; font-size: 14px; }
-.sheet-gs5 { grid-area: ah5;   height:30px; font-size: 14px; }
-.sheet-gs6 { grid-area: ah6;   height:30px; font-size: 14px; }
-.sheet-gs7 { grid-area: ah7;   height:30px; }
-.sheet-gs8 { grid-area: ah8;   height:30px; }
-.sheet-gs9 { grid-area: ah9;   height:30px; }
-.sheet-gs10 { grid-area: ah10;   height:30px; }
-.sheet-gs11 { grid-area: ah11;   height:30px; }
-.sheet-gs12 { grid-area: ah12;   height:30px; }
-.sheet-gs13 { grid-area: ah13; }
-.sheet-gs14 { grid-area: ah14;   height:30px; }
-.sheet-gs15 { grid-area: ah15;   height:30px; }
-.sheet-gs16 { grid-area: ah16;   height:30px; }
-.sheet-gs17 { grid-area: ah17;   height:30px; }
-.sheet-gs18 { grid-area: ah18;   height:30px; }
-.sheet-gs19 { grid-area: ah19;   height:30px; }
-.sheet-gs20 { grid-area: ah20;   height:30px; font-size: 14px; text-align: right }
-.sheet-gs21 { grid-area: ah21;   height:30px; font-size: 14px; text-align: right }
-.sheet-gs22 { grid-area: ah22;   height:30px; font-size: 14px; text-align: right }
-.sheet-gs23 { grid-area: ah23;   height:30px; font-size: 14px; text-align: right }
-.sheet-gs24 { grid-area: ah24;   height:30px; font-size: 14px; text-align: right }
-.sheet-gs25 { grid-area: ah25;   height:30px; font-size: 14px; text-align: right }
+.sheet-gs1 { grid-area: ah1;    height:30px; font-size: 14px; }
+.sheet-gs2 { grid-area: ah2;    height:30px; font-size: 14px; }
+.sheet-gs3 { grid-area: ah3;    height:30px; font-size: 14px; }
+.sheet-gs4 { grid-area: ah4;    height:30px; font-size: 14px; }
+.sheet-gs5 { grid-area: ah5;    height:30px; font-size: 14px; }
+.sheet-gs6 { grid-area: ah6;    height:30px; font-size: 14px; }
+.sheet-gs7 { grid-area: ah7;    margin-right:-5%; height:30px; }
+.sheet-gs8 { grid-area: ah8;    margin-right:-5%; height:30px; }
+.sheet-gs9 { grid-area: ah9;    margin-right:-5%; height:30px; }
+.sheet-gs10 { grid-area: ah10;  margin-right:-5%; height:30px; }
+.sheet-gs11 { grid-area: ah11;  margin-right:-5%; height:30px; }
+.sheet-gs12 { grid-area: ah12;  margin-right:-5%; height:30px; }
+.sheet-gs13 { grid-area: ah13;}
+.sheet-gs14 { grid-area: ah14;  margin-left:1%; height:30px; }
+.sheet-gs15 { grid-area: ah15;  margin-left:1%; height:30px; }
+.sheet-gs16 { grid-area: ah16;  margin-left:1%; height:30px; }
+.sheet-gs17 { grid-area: ah17;  margin-left:1%; height:30px; }
+.sheet-gs18 { grid-area: ah18;  margin-left:1%; height:30px; }
+.sheet-gs19 { grid-area: ah19;  margin-left:1%; height:30px; }
+.sheet-gs20 { grid-area: ah20;  height:30px; font-size: 14px; text-align: right }
+.sheet-gs21 { grid-area: ah21;  height:30px; font-size: 14px; text-align: right }
+.sheet-gs22 { grid-area: ah22;  height:30px; font-size: 14px; text-align: right }
+.sheet-gs23 { grid-area: ah23;  height:30px; font-size: 14px; text-align: right }
+.sheet-gs24 { grid-area: ah24;  height:30px; font-size: 14px; text-align: right }
+.sheet-gs25 { grid-area: ah25;  height:30px; font-size: 14px; text-align: right }
 
 .sheet-header_logo {
   font-family: Serif;
@@ -105,7 +108,7 @@ textarea {
   'ah4 ah10 ah13 ah17 ah23'
   'ah5 ah11 ah13 ah18 ah24'
   'ah6 ah12 ah13 ah19 ah25';
-  grid-template-columns: 15 20 10 20 15;
+  grid-template-columns: 11% 33% 12% 36% 8%;
 }
 
 /* end of grid structure for character information ______________________________
@@ -135,12 +138,12 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-mythicgs2 { grid-area: amy2; }
 .sheet-mythicgs3 { grid-area: amy3; }
 .sheet-mythicgs4 { grid-area: amy4; }
-.sheet-mythicgs5 { grid-area: amy5; font-size: 12px; font-family: Serif;}
-.sheet-mythicgs6 { grid-area: amy6; font-size: 12px; font-family: Serif;}
-.sheet-mythicgs7 { grid-area: amy7; font-size: 12px; font-family: Serif;}
+.sheet-mythicgs5 { grid-area: amy5; font-size: 13px; font-family: Serif;}
+.sheet-mythicgs6 { grid-area: amy6; font-size: 13px; font-family: Serif;}
+.sheet-mythicgs7 { grid-area: amy7; font-size: 13px; font-family: Serif;}
 .sheet-characteristics2_mythic {
   display: grid;
-  grid-template-columns: 60px 60px 60px;
+  grid-template-columns: 50px 50px 50px;
   grid-template-areas:
   'amy1 amy1 amy1'
   'amy2 amy3 amy4'
@@ -156,13 +159,13 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-movementgs6 { grid-area: amm6; }
 .sheet-movementgs7 { grid-area: amm7; }
 .sheet-movementgs8 { grid-area: amm8; }
-.sheet-movementgs9 { grid-area: amm9;   font-size: 11px; font-family: Serif;}
-.sheet-movementgs10 { grid-area: amm10; font-size: 11px; font-family: Serif;}
-.sheet-movementgs11 { grid-area: amm11; font-size: 11px; font-family: Serif;}
-.sheet-movementgs12 { grid-area: amm12; font-size: 11px; font-family: Serif;}
-.sheet-movementgs13 { grid-area: amm13; font-size: 11px; font-family: Serif;}
-.sheet-movementgs14 { grid-area: amm14; font-size: 11px; font-family: Serif;}
-.sheet-movementgs15 { grid-area: amm15; font-size: 11px; font-family: Serif;}
+.sheet-movementgs9 { grid-area: amm9;   font-size: 13px; font-family: Serif;}
+.sheet-movementgs10 { grid-area: amm10; font-size: 13px; font-family: Serif;}
+.sheet-movementgs11 { grid-area: amm11; font-size: 13px; font-family: Serif;}
+.sheet-movementgs12 { grid-area: amm12; font-size: 13px; font-family: Serif;}
+.sheet-movementgs13 { grid-area: amm13; font-size: 13px; font-family: Serif;}
+.sheet-movementgs14 { grid-area: amm14; font-size: 13px; font-family: Serif;}
+.sheet-movementgs15 { grid-area: amm15; font-size: 13px; font-family: Serif;}
 .sheet-characteristics2_movement {
   justify-content: center;
   display: grid;
@@ -184,7 +187,7 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-characteristics2_carry {
   justify-content: right;
   display: grid;
-  grid-template-columns: 60px 60px 60px;
+  grid-template-columns: 50px 50px 50px;
   grid-template-areas:
   'ac1 ac1 ac1'
   'ac2 ac3 ac4'
@@ -198,7 +201,6 @@ ______________________________ start of grid structure for initiative/sheet tabs
 .sheet-initiative_tabs_main {
   display: grid;
   grid-template-columns: 50% 50%;
-  height: auto;
 }
 
 .sheet-initiative_tabs_initiative {
@@ -213,10 +215,6 @@ ______________________________ start of grid structure for initiative/sheet tabs
   justify-content: right;
   grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
   height:30px;
-}
-
-.sheet-initiative_tabs_boxes {
-  overflow: hidden;
 }
 
 /* end of grid structure for initiative/sheet tabs ______________________________
@@ -247,7 +245,7 @@ ______________________________ start of minimisable infographic */
 
 .sheet-minimisable_infographic_main {
   display: grid;
-  grid-template-columns: 10px auto;
+  grid-template-columns: 18px auto;
 }
 
 .sheet-minimisable_infographic_a,
@@ -301,7 +299,7 @@ start of medical tab ___________________________________________________________
     height:50px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50px 50px 50px 50px auto;
+  grid-template-rows: 80px 80px 80px 80px auto;
   grid-template-areas:
   'm1  m2  m3 m12'
   'm4  m5  m6 m12'
