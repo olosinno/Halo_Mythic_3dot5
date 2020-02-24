@@ -70,6 +70,9 @@ textarea {
 	opacity: 0.6;
 }
 
+.sheet-hidden { display: none; }
+.sheet-hider:not(:checked) + div { display: none; }
+
 /* start of grid structure for character information ______________________________ */
 
 .sheet-gs1 { grid-area: ah1;    height:30px; font-size: 14px; }
@@ -112,12 +115,6 @@ textarea {
 }
 
 /* end of grid structure for character information ______________________________
-______________________________ start of sheet logo swapper */
-
-.sheet-imghidden { display: none; }
-.sheet-imghider:not(:checked) + div { display: none; }
-
-/* end of sheet logo swapper ______________________________
 ______________________________ start of structure for characteristics */
 
 .sheet-characteristics {
@@ -308,8 +305,6 @@ start of medical tab ___________________________________________________________
 
 }
 
-.sheet-medicalhidden { display: none; }
-.sheet-medicalhider:not(:checked) + div { display: none; }
 /* end of medical tab __________________________________________________________
 start of advancement/experience tab ____________________________________________ */
 
