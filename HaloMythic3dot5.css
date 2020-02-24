@@ -66,8 +66,8 @@ textarea {
 }
 
 ::placeholder {
-	color: white;
-	opacity: 0.6;
+  color: white;
+  opacity: 0.6;
 }
 
 .sheet-hidden { display: none; }
@@ -276,7 +276,7 @@ ______________________________ start of core tab */
 
 /* end of core tab _____________________________________________________________
 start of medical tab ___________________________________________________________*/
-.sheet-medical{}
+
 
 .sheet-medicalg1 { grid-area: m1; }
 .sheet-medicalg2 { grid-area: m2; }
@@ -291,17 +291,25 @@ start of medical tab ___________________________________________________________
 .sheet-medicalg11 { grid-area: m11; }
 .sheet-medicalg12 { grid-area: m12; }
 .sheet-medicalg13 { grid-area: m13; }
+.sheet-medicalg14 { grid-area: m14; }
+.sheet-medicalg15 { grid-area: m15; }
+.sheet-medicalg16 { grid-area: m16; }
+.sheet-medicalg17 { grid-area: m17; }
+.sheet-medicalgT { grid-area: mT; }
+.sheet-medicalgR { grid-area: mR; }
 .sheet-medical-grid {
-    height:50px;
+  height:50px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 120px 120px 120px 120px auto;
+  grid-template-rows: 120px 120px 120px 120px 120px 150px auto;
   grid-template-areas:
-  'm1  m2  m3 m12'
-  'm4  m5  m6 m12'
-  'm7  m8  m9 m12'
-  'm10 m0 m11 m12'
-  'm13 m13 m13 m12';
+  'm1  m2  m3  mT'
+  'm4  m5  m6  mT'
+  'm7  m8  m9  mT'
+  'm10 m0  m11 mT'
+  'm12 m13 m14 mT'
+  'm15 m16 m17 mT'
+  'mR  mR  mR  mT';
 
 }
 
