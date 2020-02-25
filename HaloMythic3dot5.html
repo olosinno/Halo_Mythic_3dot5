@@ -1,8 +1,8 @@
-<input type='radio' class='background_switch_1' name='attr_background_color_default' value='1' display=none />
-<input type='radio' class='background_switch_2' name='attr_background_color_unsc' value='2' display=none />
-<input type='radio' class='background_switch_3' name='attr_background_color_covenant' value='3' display=none />
-<input type='radio' class='background_switch_4' name='attr_background_color_forerunner' value='4' display=none />
-<input type='radio' class='background_switch_5' name='attr_background_color_other' value='5' display=none />
+<input type='radio' class='background_switch_1' name='attr_faction' value='1' display=none hidden checked/>
+<input type='radio' class='background_switch_2' name='attr_faction' value='2' display=none hidden/>
+<input type='radio' class='background_switch_3' name='attr_faction' value='3' display=none hidden/>
+<input type='radio' class='background_switch_4' name='attr_faction' value='4' display=none hidden/>
+<input type='radio' class='background_switch_5' name='attr_faction' value='5' display=none hidden/>
 
 <div class='background'>
 
@@ -1076,6 +1076,7 @@
         <option selected='selected' value='0'>Ground</option>
         <option value='1'>Air</option>
         <option value='2'>Walker</option>
+        <option value='3'>Stationary</option>
       </select>
       <div class='sheet-vehicles_G1'><h3>DIMENSIONS</h3></div>
       <div class='sheet-vehicles_G2'>length</div>
@@ -1089,18 +1090,26 @@
 
       <input type='checkbox' name='attr_vehicle-type' value='0' class='sheet-hidden sheet-hider' checked>
       <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
-      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' checked>
+      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
       <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
-      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' checked>
+      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
       <div class='sheet-vehicles_G10'><h3>CHARATERISTICS</h3></div>
 
+      <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <div class='sheet-vehicles_G11'>Accelerate</div>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <div class='sheet-vehicles_G12'>Brake</div>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <div class='sheet-vehicles_G13'>Top speed</div>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <div class='sheet-vehicles_G14'>Maneuver</div>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <input class='sheet-vehicles_G15' type='text' name='attr_vehicle-accelerate'></input>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <input class='sheet-vehicles_G16' type='text' name='attr_vehicle-brake'></input>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <input class='sheet-vehicles_G17' type='text' name='attr_vehicle-top_speed'></input>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <input class='sheet-vehicles_G18' type='text' name='attr_vehicle-maneuver'></input>
 
       <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
@@ -1134,10 +1143,15 @@
       <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
       <div class='sheet-vehicles_G32'>Mythic</div>
 
+      <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <div class='sheet-vehicles_G33'><h3>CREW AND COMPLIMENT</h3></div>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <div class='sheet-vehicles_G34'>Crew</div>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <div class='sheet-vehicles_G35'>Compliment</div>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <input class='sheet-vehicles_G36' type='text' name='attr_vehicle-crew'></input>
+            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
       <input class='sheet-vehicles_G37' type='text' name='attr_vehicle-compliment'></input>
       <div class='sheet-vehicles_G38'><h3>HULL</h3></div>
       <div class='sheet-vehicles_G39'>Hull material</div>
