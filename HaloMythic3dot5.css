@@ -250,6 +250,7 @@ ______________________________ start of tab buttons toggles */
 .sheet-tabstoggle[value='journal'] ~ div.sheet-journal,
 .sheet-tabstoggle[value='vehicles'] ~ div.sheet-vehicles,
 .sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block}
+.sheet-core_bttn:checked + button {background: red;}
 
 /* end of tab buttons toggles ______________________________
 ______________________________ start of minimisable infographic */
@@ -355,18 +356,18 @@ start of vehicles tab___________________________________________________________
   'vg2 vgw'
   'vg3 vgw'
 }
-.sheet-vehicles_Gn{ grid-area: vn; width:100%;color: white; font-family: Saira Semi Condensed; text-align: center; background: #394C6A}
-.sheet-vehicles_Gs { grid-area: vs; margin-top:-1px; width:100%; height:28.5px; margin-bottom: -8px;}
-.sheet-vehicles_Gt { grid-area: vt; margin-top:-1px; width:100%; height:28.5px; margin-bottom: -8px;}
-.sheet-vehicles_G1 { grid-area: v1;}
-.sheet-vehicles_G2 { grid-area: v2; text-align: center}
-.sheet-vehicles_G3 { grid-area: v3; text-align: center}
-.sheet-vehicles_G4 { grid-area: v4; text-align: center}
-.sheet-vehicles_G5 { grid-area: v5; text-align: center}
-.sheet-vehicles_G6 { grid-area: v6;}
-.sheet-vehicles_G7 { grid-area: v7;}
-.sheet-vehicles_G8 { grid-area: v8;}
-.sheet-vehicles_G9 { grid-area: v9;}
+.sheet-vehicles_Gn  { grid-area: vn; width:100%;color: white; font-family: Saira Semi Condensed; text-align: center; background: #394C6A}
+.sheet-vehicles_Gs  { grid-area: vs; margin-top:-1px; width:100%; height:28.5px; margin-bottom: -8px;}
+.sheet-vehicles_Gt  { grid-area: vt; margin-top:-1px; width:100%; height:28.5px; margin-bottom: -8px;}
+.sheet-vehicles_G1  { grid-area: v1;}
+.sheet-vehicles_G2  { grid-area: v2; text-align: center}
+.sheet-vehicles_G3  { grid-area: v3; text-align: center}
+.sheet-vehicles_G4  { grid-area: v4; text-align: center}
+.sheet-vehicles_G5  { grid-area: v5; text-align: center}
+.sheet-vehicles_G6  { grid-area: v6;}
+.sheet-vehicles_G7  { grid-area: v7;}
+.sheet-vehicles_G8  { grid-area: v8;}
+.sheet-vehicles_G9  { grid-area: v9;}
 .sheet-vehicles_G10 { grid-area: v10;}
 .sheet-vehicles_G11 { grid-area: v11; text-align: center}
 .sheet-vehicles_G12 { grid-area: v12; text-align: center}
@@ -460,10 +461,10 @@ start of vehicles tab___________________________________________________________
 .sheet-vehicles_G65 { grid-area: v65; text-align: center}
 .sheet-vehicles_G66 { grid-area: v66;}
 .sheet-vehicles_G67 { grid-area: v67;}
-.sheet-vehicles_G68 { grid-area: v68;text-align: center}
-.sheet-vehicles_G69 { grid-area: v69;text-align: center}
-.sheet-vehicles_G70 { grid-area: v70;text-align: center}
-.sheet-vehicles_G71 { grid-area: v71;text-align: center}
+.sheet-vehicles_G68 { grid-area: v68; text-align: center}
+.sheet-vehicles_G69 { grid-area: v69; text-align: center}
+.sheet-vehicles_G70 { grid-area: v70; text-align: center}
+.sheet-vehicles_G71 { grid-area: v71; text-align: center}
 .sheet-vehicles_G72 { grid-area: v72;}
 .sheet-vehicles_G73 { grid-area: v73;}
 .sheet-vehicles_G74 { grid-area: v74;}
@@ -480,3 +481,4 @@ start of vehicles tab___________________________________________________________
   'v68 v69 v70 v71'
   'v72 v73 v74 v75'
   'v76 v76 v76 v76'
+}
