@@ -102,12 +102,12 @@ textarea {
 
 /* start of grid structure for character information ______________________________ */
 
-.sheet-gs1 { grid-area: ah1;    height:30px; font-size: 14px }
-.sheet-gs2 { grid-area: ah2;    height:30px; font-size: 14px }
-.sheet-gs3 { grid-area: ah3;    height:30px; font-size: 14px }
-.sheet-gs4 { grid-area: ah4;    height:30px; font-size: 14px }
-.sheet-gs5 { grid-area: ah5;    height:30px; font-size: 14px }
-.sheet-gs6 { grid-area: ah6;    height:30px; font-size: 14px }
+.sheet-gs1 { grid-area: ah1;    height:30px; font-size: 16px; padding-left: 5px }
+.sheet-gs2 { grid-area: ah2;    height:30px; font-size: 16px; padding-left: 5px }
+.sheet-gs3 { grid-area: ah3;    height:30px; font-size: 16px; padding-left: 5px }
+.sheet-gs4 { grid-area: ah4;    height:30px; font-size: 16px; padding-left: 5px }
+.sheet-gs5 { grid-area: ah5;    height:30px; font-size: 16px; padding-left: 5px }
+.sheet-gs6 { grid-area: ah6;    height:30px; font-size: 16px; padding-left: 5px }
 .sheet-gs7 { grid-area: ah7;    margin-right:-5%; height:30px }
 .sheet-gs8 { grid-area: ah8;    margin-right:-5%; height:30px }
 .sheet-gs9 { grid-area: ah9;    margin-right:-5%; height:30px }
@@ -121,12 +121,12 @@ textarea {
 .sheet-gs17 { grid-area: ah17;  margin-left:1%; height:30px }
 .sheet-gs18 { grid-area: ah18;  margin-left:1%; height:30px }
 .sheet-gs19 { grid-area: ah19;  margin-left:1%; height:30px }
-.sheet-gs20 { grid-area: ah20;  height:30px; font-size: 14px; text-align: right }
-.sheet-gs21 { grid-area: ah21;  height:30px; font-size: 14px; text-align: right }
-.sheet-gs22 { grid-area: ah22;  height:30px; font-size: 14px; text-align: right }
-.sheet-gs23 { grid-area: ah23;  height:30px; font-size: 14px; text-align: right }
-.sheet-gs24 { grid-area: ah24;  height:30px; font-size: 14px; text-align: right }
-.sheet-gs25 { grid-area: ah25;  height:30px; font-size: 14px; text-align: right }
+.sheet-gs20 { grid-area: ah20;  height:30px; font-size: 16px; text-align: right; padding-right: 5px }
+.sheet-gs21 { grid-area: ah21;  height:30px; font-size: 16px; text-align: right; padding-right: 5px }
+.sheet-gs22 { grid-area: ah22;  height:30px; font-size: 16px; text-align: right; padding-right: 5px }
+.sheet-gs23 { grid-area: ah23;  height:30px; font-size: 16px; text-align: right; padding-right: 5px }
+.sheet-gs24 { grid-area: ah24;  height:30px; font-size: 16px; text-align: right; padding-right: 5px }
+.sheet-gs25 { grid-area: ah25;  height:30px; font-size: 16px; text-align: right; padding-right: 5px }
 
 .sheet-header_logo {
   font-family: Serif;
@@ -138,7 +138,7 @@ textarea {
   'ah4 ah10 ah13 ah17 ah23'
   'ah5 ah11 ah13 ah18 ah24'
   'ah6 ah12 ah13 ah19 ah25';
-  grid-template-columns: 11% 33% 12% 36% 8%
+  grid-template-columns: 15% 27% 16% 27% 15%
 }
 
 /* end of grid structure for character information ______________________________
@@ -276,6 +276,20 @@ ______________________________ start of minimisable infographic */
 .sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_a { display: none }
 
 /* end of minimisable infographic ______________________________
+______________________________ start of racial multipliers */
+
+.sheet-racial_multipliers {
+  display: grid;
+  grid-template-columns: 18px auto
+}
+
+.sheet-racial_expand,
+.sheet-racial_switch:checked ~ .sheet-racial_collapse { display: block }
+
+.sheet-racial_collapse,
+.sheet-racial_switch:checked ~ .sheet-racial_expand { display: none }
+
+/* end of racial multipliers ______________________________
 ______________________________ start of core tab */
 
 .sheet-core_lists1 { grid-area: cl1 }
