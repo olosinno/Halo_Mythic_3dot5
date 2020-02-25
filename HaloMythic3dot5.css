@@ -343,9 +343,9 @@ start of journal tab____________________________________________________________
 /* end of journal tab ___________________________________________
 start of vehicles tab___________________________________________________________*/
 
-.sheet-vehicles_grid1{ grid-area: vg1;}
-.sheet-vehicles_grid2{ grid-area: vg2;}
-.sheet-vehicles_grid3{ grid-area: vg3;}
+.sheet-vehicles_grid1{ grid-area: vg1;   font-family: Saira Semi Condensed; color:white; background:#506b95;}
+.sheet-vehicles_grid2{ grid-area: vg2;  font-family: Saira Semi Condensed; color:white; background:#506b95;}
+.sheet-vehicles_grid3{ grid-area: vg3;  font-family: Saira Semi Condensed; color:white; background:#506b95;}
 .sheet-vehicle_weapons{ grid-area: vgw;}
 .sheet-vehicles_divider{
   display: grid;
@@ -355,8 +355,9 @@ start of vehicles tab___________________________________________________________
   'vg2 vgw'
   'vg3 vgw'
 }
-.sheet-vehicles_Gn{ grid-area: gn; width:100%;color: white; font-family: Saira Semi Condensed; text-align: center; background: #394C6A}
+.sheet-vehicles_Gn{ grid-area: vn; width:100%;color: white; font-family: Saira Semi Condensed; text-align: center; background: #394C6A}
 .sheet-vehicles_Gs { grid-area: vs; margin-top:-1px; width:100%; height:28.5px; margin-bottom: -8px;}
+.sheet-vehicles_Gt { grid-area: vt; margin-top:-1px; width:100%; height:28.5px; margin-bottom: -8px;}
 .sheet-vehicles_G1 { grid-area: v1;}
 .sheet-vehicles_G2 { grid-area: v2; text-align: center}
 .sheet-vehicles_G3 { grid-area: v3; text-align: center}
@@ -388,19 +389,21 @@ start of vehicles tab___________________________________________________________
 .sheet-vehicles_G29 { grid-area: v29;}
 .sheet-vehicles_G30 { grid-area: v30;}
 .sheet-vehicles_G31 { grid-area: v31;}
-.sheet-vehicles_G32 { grid-area: v32; text-align: center}
-.sheet-vehicles_G33 { grid-area: v33; text-align: center}
-.sheet-vehicles_G34 { grid-area: v34;}
-.sheet-vehicles_G35 { grid-area: v35;}
+.sheet-vehicles_G32 { grid-area: v32;}
+.sheet-vehicles_G33 { grid-area: v33;}
+.sheet-vehicles_G34 { grid-area: v34; text-align: center}
+.sheet-vehicles_G35 { grid-area: v35; text-align: center}
 .sheet-vehicles_G36 { grid-area: v36;}
-.sheet-vehicles_G37 { grid-area: v37; text-align: center}
+.sheet-vehicles_G37 { grid-area: v37;}
 .sheet-vehicles_G38 { grid-area: v38;}
+.sheet-vehicles_G39 { grid-area: v39; text-align: center}
+.sheet-vehicles_G40 { grid-area: v40;}
 .sheet-vehicles_grid1{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
-  'gn  gn  gn  gn'
-  'v1  v1  v1  vs'
+  'vn  vn  vn  vn'
+  'vs  v1  v1  vt'
   'v2  v3  v4  v5'
   'v6  v7  v8  v9'
   'v10 v10 v10 v10'
@@ -410,60 +413,70 @@ start of vehicles tab___________________________________________________________
   'v23 v24 v25 v26'
   'v27 v28 v28 v28'
   'v29 v30 v30 v30'
-  'v31 v31 v31 v31'
-  'v32 v32 v33 v33'
+  'v31 v32 v32 v32'
+  'v33 v33 v33 v33'
   'v34 v34 v35 v35'
-  'v36 v36 v36 v36'
-  'v37 v37 v37 v37'
+  'v36 v36 v37 v37'
   'v38 v38 v38 v38'
+  'v39 v39 v39 v39'
+  'v40 v40 v40 v40'
 }
-.sheet-vehicles_G39 { grid-area: v39;}
-.sheet-vehicles_G40 { grid-area: v40; text-align: center}
-.sheet-vehicles_G41 { grid-area: v41; text-align: center}
+.sheet-vehicles_G41 { grid-area: v41;}
 .sheet-vehicles_G42 { grid-area: v42; text-align: center}
 .sheet-vehicles_G43 { grid-area: v43; text-align: center}
 .sheet-vehicles_G44 { grid-area: v44; text-align: center}
-.sheet-vehicles_G45 { grid-area: v45;}
-.sheet-vehicles_G46 { grid-area: v46;}
+.sheet-vehicles_G45 { grid-area: v45; text-align: center}
+.sheet-vehicles_G46 { grid-area: v46; text-align: center}
 .sheet-vehicles_G47 { grid-area: v47;}
 .sheet-vehicles_G48 { grid-area: v48;}
 .sheet-vehicles_G49 { grid-area: v49;}
-.sheet-vehicles_G50 { grid-area: v50; text-align: center}
-.sheet-vehicles_G51 { grid-area: v51; text-align: center}
+.sheet-vehicles_G50 { grid-area: v50;}
+.sheet-vehicles_G51 { grid-area: v51;}
 .sheet-vehicles_G52 { grid-area: v52; text-align: center}
 .sheet-vehicles_G53 { grid-area: v53; text-align: center}
 .sheet-vehicles_G54 { grid-area: v54; text-align: center}
 .sheet-vehicles_G55 { grid-area: v55; text-align: center}
-.sheet-vehicles_G56 { grid-area: v56;}
-.sheet-vehicles_G57 { grid-area: v57;}
+.sheet-vehicles_G56 { grid-area: v56; text-align: center}
+.sheet-vehicles_G57 { grid-area: v57; text-align: center}
 .sheet-vehicles_G58 { grid-area: v58;}
 .sheet-vehicles_G59 { grid-area: v59;}
 .sheet-vehicles_G60 { grid-area: v60;}
+.sheet-vehicles_G61 { grid-area: v61;}
+.sheet-vehicles_G62 { grid-area: v62;}
 .sheet-vehicles_grid2{
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-areas:
-  'v39 v39 v39 v39 v39'
-  'v40 v41 v42 v43 v44'
-  'v45 v46 v47 v48 v49'
-  'v50 v50 v50 v50 v50'
-  'v51 v52 v53 v54 v55'
-  'v56 v57 v58 v59 v60'
+  'v41 v41 v41 v41 v41'
+  'v42 v43 v44 v45 v46'
+  'v47 v48 v49 v50 v51'
+  'v52 v52 v52 v52 v52'
+  'v53 v54 v55 v56 v57'
+  'v58 v59 v60 v61 v62'
 }
 
-.sheet-vehicles_G61 { grid-area: v61;}
-.sheet-vehicles_G62 { grid-area: v62; text-align: center}
-.sheet-vehicles_G63 { grid-area: v63; text-align: center}
-.sheet-vehicles_G64 { grid-area: v64;}
-.sheet-vehicles_G65 { grid-area: v65;}
+.sheet-vehicles_G63 { grid-area: v63;}
+.sheet-vehicles_G64 { grid-area: v64; text-align: center}
+.sheet-vehicles_G65 { grid-area: v65; text-align: center}
 .sheet-vehicles_G66 { grid-area: v66;}
-.sheet-vehicles_G67 { grid-area: v68;}
-.sheet-vehicles_G67 { grid-area: v68;}
+.sheet-vehicles_G67 { grid-area: v67;}
+.sheet-vehicles_G68 { grid-area: v68;text-align: center}
+.sheet-vehicles_G69 { grid-area: v69;text-align: center}
+.sheet-vehicles_G70 { grid-area: v70;text-align: center}
+.sheet-vehicles_G71 { grid-area: v71;text-align: center}
+.sheet-vehicles_G72 { grid-area: v72;}
+.sheet-vehicles_G73 { grid-area: v73;}
+.sheet-vehicles_G74 { grid-area: v74;}
+.sheet-vehicles_G75 { grid-area: v75;}
+.sheet-vehicles_G76 { grid-area: v76;}
+
 .sheet-vehicles_grid3{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
-  'v61 v61 v61 v61'
-  'v62 v62 v63 v63'
+  'v63 v63 v63 v63'
   'v64 v64 v65 v65'
-  'v66 v66 v66 v66'
+  'v66 v66 v67 v67'
+  'v68 v69 v70 v71'
+  'v72 v73 v74 v75'
+  'v76 v76 v76 v76'
