@@ -1,6 +1,0 @@
-.sheet-imghidden {
-  display: none;
-}
-.sheet-imghider:not(:checked) + div {
-  display: none;
-}
