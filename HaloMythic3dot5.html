@@ -326,13 +326,20 @@
   </div>
 
   <div class='sheet-initiative_sheet_tabs'>
-    <button type='action' name='act_core'>Core</button>
-    <button type='action' name='act_equipment'>Equipment</button>
-    <button type='action' name='act_medical'>Medical</button>
-    <button type='action' name='act_advancements'>Advancements</button>
-    <button type='action' name='act_journal'>Journal</button>
-    <button type='action' name='act_vehicles'>Vehicles</button>
-    <button type='action' name='act_settings'>Settings</button>
+    <input type='checkbox' name='attr_sheetTab' value='core' class='sheet-hidden sheet-core_bttn' checked>
+    <button class='sheet-core_bttn' type='action' name='act_core'>Core</button>
+    <input type='checkbox' name='attr_sheetTab' value='equipment' class='sheet-hidden sheet-core_bttn'>
+    <button class='sheet-equipment_bttn' type='action' name='act_equipment'>Equipment</button>
+    <input type='checkbox' name='attr_sheetTab' value='medical' class='sheet-hidden sheet-core_bttn'>
+    <button class='sheet-medical_bttn' type='action' name='act_medical'>Medical</button>
+    <input type='checkbox' name='attr_sheetTab' value='advancements' class='sheet-hidden sheet-core_bttn'>
+    <button class='sheet-advancements_bttn' type='action' name='act_advancements'>Advancements</button>
+    <input type='checkbox' name='attr_sheetTab' value='journal' class='sheet-hidden sheet-core_bttn'>
+    <button class='sheet-journal_bttn' type='action' name='act_journal'>Journal</button>
+    <input type='checkbox' name='attr_sheetTab' value='vehicles' class='sheet-hidden sheet-core_bttn'>
+    <button class='sheet-vehicles_bttn' type='action' name='act_vehicles'>Vehicles</button>
+    <input type='checkbox' name='attr_sheetTab' value='settings' class='sheet-hidden sheet-core_bttn'>
+    <button class='sheet-settings_bttn' type='action' name='act_settings'>Settings</button>
   </div>
 </div>
 
@@ -1014,8 +1021,8 @@
 
   <h2>Experience Summary</h2>
   <div style='text-align: center'>
-    Spent XP: <input type='number' name='attr_XP_spent' style='width: 10%; margin-right: 20px' value='@{XP_total}-(@{advancement_costL}+@{advancement_costR})' readonly>
     Unspent XP: <input type='number' name='attr_XP_current' style='width: 10%; margin-right: 20px' value='@{XP_total}-@{XP_spent}' readonly>
+    Spent XP: <input type='number' name='attr_XP_spent' style='width: 10%; margin-right: 20px' value='@{XP_total}-(@{advancement_costL}+@{advancement_costR})' readonly>
     XP Total: <input type='number' name='attr_XP_total' style='width: 10%'>
   </div>
   <br>
@@ -1161,19 +1168,19 @@
 
       <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
       <div class='sheet-vehicles_G68'>Shield rating</div>
-            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
       <div class='sheet-vehicles_G69'>Shield current</div>
-            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
       <div class='sheet-vehicles_G70'>Recharge delay</div>
-            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
       <div class='sheet-vehicles_G71'>Recharge rate</div>
-            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
       <input class='sheet-vehicles_G72' type='text' name='attr_vehicle-shield-rating'></input>
-            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
       <input class='sheet-vehicles_G73' type='text' name='attr_vehicle-shield-current'></input>
-            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
       <input class='sheet-vehicles_G74' type='text' name='attr_vehicle-recharge-delay'></input>
-            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
       <input class='sheet-vehicles_G75' type='text' name='attr_vehicle-recharge-rate'></input>
 
       <div class='sheet-vehicles_G76'>
