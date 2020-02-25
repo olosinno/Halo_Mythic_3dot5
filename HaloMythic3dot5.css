@@ -2,7 +2,6 @@
 /*.sheet-*.ff {
 font-family: Serif
 }*/
-.sheet-background { background: white }
 input.sheet-background_switch_1:checked ~ div.sheet-background { background: white }
 input.sheet-background_switch_2:checked ~ div.sheet-background { background-image: linear-gradient(#7e8c36, #4b5320) }
 input.sheet-background_switch_3:checked ~ div.sheet-background { background: purple }
@@ -98,6 +97,8 @@ textarea {
 .sheet-hidden { display: none }
 .sheet-hider:not(:checked) + div { display: none }
 .sheet-hider:not(:checked) + input { display: none }
+.sheet-hidernot:checked + div { display: none }
+.sheet-hidernot:checked + input { display: none }
 
 /* start of grid structure for character information ______________________________ */
 
@@ -258,7 +259,7 @@ ______________________________ start of tab buttons toggles */
 .sheet-tabstoggle[value='journal'] ~ div.sheet-journal,
 .sheet-tabstoggle[value='vehicles'] ~ div.sheet-vehicles,
 .sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block}
-.sheet-core_bttn:checked + button {background: red;}
+.sheet-core_bttn:checked + button {background: rgb(200,0,0);}
 
 /* end of tab buttons toggles ______________________________
 ______________________________ start of minimisable infographic */
