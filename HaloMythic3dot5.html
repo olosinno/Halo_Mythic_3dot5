@@ -1049,12 +1049,12 @@
 
 <div class='sheet-vehicles'>
   <div class='sheet-vehicles_divider'>
-    <div class='sheet-vehicles_grid'>
+    <div class='sheet-vehicles_grid1'>
       <div class='sheet-vehicles_G1'><h3>DIMENSIONS</h3></div>
       <select class='sheet-vehicles_Gs' name='attr_vehicles-type'>
         <option selected='selected' value='0'>Ground</option>
         <option value='1'>Air</option>
-        <option value='2'>Mech</option>
+        <option value='2'>Walker</option>
       </select>
       <div class='sheet-vehicles_G2'>length</div>
       <div class='sheet-vehicles_G3'>Width</div>
@@ -1115,13 +1115,60 @@
       <div class='sheet-vehicles_G36'><h3>HULL</h3></div>
       <div class='sheet-vehicles_G37'>Hull material</div>
       <input class='sheet-vehicles_G38' type='text' name='attr_hull'></input>
-  </div>
+    </div>
+    <div class="sheet-vehicles_grid2">
+      <div class='sheet-vehicles_G39'><h3>BREAKPOINTS</h3></div>
+      <div class='sheet-vehicles_G40'>Wep</div>
+      <div class='sheet-vehicles_G41'>Mod</div>
+      <div class='sheet-vehicles_G42'>Eng</div>
+      <div class='sheet-vehicles_G43'>Op</div>
+      <div class='sheet-vehicles_G44'>Crew</div>
+      <input class='sheet-vehicles_G45' type='text' name='attr_vehicle_bp-wep'></input>
+      <input class='sheet-vehicles_G46' type='text' name='attr_vehicle_bp-mod'></input>
+      <input class='sheet-vehicles_G47' type='text' name='attr_vehicle_bp-eng'></input>
+      <input class='sheet-vehicles_G48' type='text' name='attr_vehicle_bp-op'></input>
+      <input class='sheet-vehicles_G49' type='text' name='attr_vehicle_bp-crew'></input>
+      <div class='sheet-vehicles_G50'><h3>Armor</h3></div>
+      <div class='sheet-vehicles_G51'>Front</div>
+      <div class='sheet-vehicles_G52'>Back</div>
+      <div class='sheet-vehicles_G53'>Side</div>
+      <div class='sheet-vehicles_G54'>Top</div>
+      <div class='sheet-vehicles_G55'>Bottom</div>
+      <input class='sheet-vehicles_G56' type='text' name='attr_vehicle_armor-front'></input>
+      <input class='sheet-vehicles_G57' type='text' name='attr_vehicle_armor-back'></input>
+      <input class='sheet-vehicles_G58' type='text' name='attr_vehicle_armor-side'></input>
+      <input class='sheet-vehicles_G59' type='text' name='attr_vehicle_armor-top'></input>
+      <input class='sheet-vehicles_G60' type='text' name='attr_vehicle_armor-bottom'></input>
+    </div>
+    <div class="vehicles_grid3">
+      <div class='sheet-vehicles_G61'><h3>Miscellaneous</h3></div>
+      <div class='sheet-vehicles_G62'>Size points</div>
+      <input class='sheet-vehicles_G63' type='text' name='attr_vehicle_armor-front'></input>
+      <div class='sheet-vehicles_G64'>Weapon points</div>
+      <input class='sheet-vehicles_G65' type='text' name='attr_vehicle_armor-front'></input>
+      <div class='sheet-vehicles_G66'>
+        <div class='collapsible_ability_description_window_a' ></div>
+        <fieldset>
+          <input type='text' placeholder='Additional info'>
+          <input type='checkbox' class='collapsible_ability_block_switch'>
+          <div class='collapsible_ability_description_window_a' ></div>
+          <textarea class='collapsible_ability_description_window_b'></textarea>
+        </fieldset>
+        <fieldset>
+          <input type='text' placeholder='Modifications'>
+          <input type='checkbox' class='collapsible_ability_block_switch'>
+          <div class='collapsible_ability_description_window_a' ></div>
+          <textarea class='collapsible_ability_description_window_b'></textarea>
+        </fieldset>
+      </div>
+    </div>
 
 
-  <div class='vehicle weapons'>
-    placeholder
+
+    <div class='sheet-vehicle_weapons'>
+      [placeholder] this will be a duplicate of the weapons section in the equipment tab
+    </div>
   </div>
-</div>
 </div>
 
 <div class='sheet-settings'>

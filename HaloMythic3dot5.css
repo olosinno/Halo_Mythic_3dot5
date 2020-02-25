@@ -342,9 +342,18 @@ start of journal tab____________________________________________________________
 
 /* end of journal tab ___________________________________________
 start of vehicles tab___________________________________________________________*/
+
+.sheet-vehicles_grid1{ grid-area: vg1;}
+.sheet-vehicles_grid2{ grid-area: vg2;}
+.sheet-vehicles_grid3{ grid-area: vg3;}
+.sheet-vehicle_weapons{ grid-area: vgw;}
 .sheet-vehicles_divider{
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-template-areas:
+  'vg1 vgw'
+  'vg2 vgw'
+  'vg3 vgw'
 }
 
 .sheet-vehicles_Gs { grid-area: vs; margin-top:-1px; width:100%; height:29px}
@@ -366,30 +375,27 @@ start of vehicles tab___________________________________________________________
 .sheet-vehicles_G16 { grid-area: v16;}
 .sheet-vehicles_G17 { grid-area: v17;}
 .sheet-vehicles_G18 { grid-area: v18;}
-.sheet-vehicles_G19 { grid-area: v19;}
-.sheet-vehicles_G20 { grid-area: v20;}
-.sheet-vehicles_G21 { grid-area: v21;}
-.sheet-vehicles_G22 { grid-area: v22;}
+.sheet-vehicles_G19 { grid-area: v19; text-align: center}
+.sheet-vehicles_G20 { grid-area: v20; text-align: center}
+.sheet-vehicles_G21 { grid-area: v21; text-align: center}
+.sheet-vehicles_G22 { grid-area: v22; text-align: center}
 .sheet-vehicles_G23 { grid-area: v23;}
 .sheet-vehicles_G24 { grid-area: v24;}
 .sheet-vehicles_G25 { grid-area: v25;}
 .sheet-vehicles_G26 { grid-area: v26;}
-.sheet-vehicles_G27 { grid-area: v27;}
-.sheet-vehicles_G28 { grid-area: v28;}
+.sheet-vehicles_G27 { grid-area: v27; text-align: center}
+.sheet-vehicles_G28 { grid-area: v28; text-align: center}
 .sheet-vehicles_G29 { grid-area: v29;}
 .sheet-vehicles_G30 { grid-area: v30;}
 .sheet-vehicles_G31 { grid-area: v31;}
-.sheet-vehicles_G32 { grid-area: v32;}
-.sheet-vehicles_G33 { grid-area: v33;}
+.sheet-vehicles_G32 { grid-area: v32; text-align: center}
+.sheet-vehicles_G33 { grid-area: v33; text-align: center}
 .sheet-vehicles_G34 { grid-area: v34;}
 .sheet-vehicles_G35 { grid-area: v35;}
 .sheet-vehicles_G36 { grid-area: v36;}
-.sheet-vehicles_G37 { grid-area: v37;}
+.sheet-vehicles_G37 { grid-area: v37; text-align: center}
 .sheet-vehicles_G38 { grid-area: v38;}
-
-
-
-.sheet-vehicles_grid{
+.sheet-vehicles_grid1{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
@@ -407,6 +413,55 @@ start of vehicles tab___________________________________________________________
   'v32 v32 v33 v33'
   'v34 v34 v35 v35'
   'v36 v36 v36 v36'
-'v37 v37 v37 v37'
-'v38 v38 v38 v38'
+  'v37 v37 v37 v37'
+  'v38 v38 v38 v38'
 }
+.sheet-vehicles_G39 { grid-area: v39;}
+.sheet-vehicles_G40 { grid-area: v40; text-align: center}
+.sheet-vehicles_G41 { grid-area: v41; text-align: center}
+.sheet-vehicles_G42 { grid-area: v42; text-align: center}
+.sheet-vehicles_G43 { grid-area: v43; text-align: center}
+.sheet-vehicles_G44 { grid-area: v44; text-align: center}
+.sheet-vehicles_G45 { grid-area: v45;}
+.sheet-vehicles_G46 { grid-area: v46;}
+.sheet-vehicles_G47 { grid-area: v47;}
+.sheet-vehicles_G48 { grid-area: v48;}
+.sheet-vehicles_G49 { grid-area: v49;}
+.sheet-vehicles_G50 { grid-area: v50; text-align: center}
+.sheet-vehicles_G51 { grid-area: v51; text-align: center}
+.sheet-vehicles_G52 { grid-area: v52; text-align: center}
+.sheet-vehicles_G53 { grid-area: v53; text-align: center}
+.sheet-vehicles_G54 { grid-area: v54; text-align: center}
+.sheet-vehicles_G55 { grid-area: v55; text-align: center}
+.sheet-vehicles_G56 { grid-area: v56;}
+.sheet-vehicles_G57 { grid-area: v57;}
+.sheet-vehicles_G58 { grid-area: v58;}
+.sheet-vehicles_G59 { grid-area: v59;}
+.sheet-vehicles_G60 { grid-area: v60;}
+.sheet-vehicles_grid2{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-areas:
+  'v39 v39 v39 v39 v39'
+  'v40 v41 v42 v43 v44'
+  'v45 v46 v47 v48 v49'
+  'v50 v50 v50 v50 v50'
+  'v51 v52 v53 v54 v55'
+  'v56 v57 v58 v59 v60'
+}
+
+.sheet-vehicles_G61 { grid-area: v61;}
+.sheet-vehicles_G62 { grid-area: v62; text-align: center}
+.sheet-vehicles_G63 { grid-area: v63;}
+.sheet-vehicles_G64 { grid-area: v64; text-align: center}
+.sheet-vehicles_G65 { grid-area: v65;}
+.sheet-vehicles_G66 { grid-area: v66;}
+.sheet-vehicles_G67 { grid-area: v68;}
+.sheet-vehicles_G67 { grid-area: v68;}
+.sheet-vehicles_grid3{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas:
+  'v61 v61 v61 v61'
+  'v62 v63 v64 v65'
+  'v66 v66 v66 v66'
