@@ -61,17 +61,17 @@ button[type='roll'] {
   width: 120%
 }
 
+.sheet-header_in-box {
+  background: #394C6A;
+  color: white
+}
+
 h2 {
   text-align: center;
   font-family: Saira Semi Condensed;
   text-decoration: underline
 }
 
-h3 {
-  text-align: center;
-  font-family: Saira Semi Condensed;
-  text-decoration: underline
-}
 h3 {
   text-align: center;
   font-family: Saira Semi Condensed;
