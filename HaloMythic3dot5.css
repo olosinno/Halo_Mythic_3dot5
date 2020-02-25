@@ -89,6 +89,7 @@ textarea {
 
 .sheet-hidden { display: none }
 .sheet-hider:not(:checked) + div { display: none }
+.sheet-hider:not(:checked) + input { display: none }
 
 /* start of grid structure for character information ______________________________ */
 
@@ -239,7 +240,7 @@ ______________________________ start of tab buttons toggles */
 .sheet-advancements,
 .sheet-journal,
 .sheet-vehicles,
-.sheet-settings { display: none }
+.sheet-settings { display: none}
 /* show the selected tab */
 
 .sheet-tabstoggle[value='core'] ~ div.sheet-core,
@@ -248,7 +249,7 @@ ______________________________ start of tab buttons toggles */
 .sheet-tabstoggle[value='advancements'] ~ div.sheet-advancements,
 .sheet-tabstoggle[value='journal'] ~ div.sheet-journal,
 .sheet-tabstoggle[value='vehicles'] ~ div.sheet-vehicles,
-.sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block }
+.sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block}
 
 /* end of tab buttons toggles ______________________________
 ______________________________ start of minimisable infographic */
@@ -341,11 +342,12 @@ start of journal tab____________________________________________________________
 
 /* end of journal tab ___________________________________________
 start of vehicles tab___________________________________________________________*/
-.sheet-vehicles_main{
+.sheet-vehicles_divider{
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
+.sheet-vehicles_Gs { grid-area: vs; margin-top:-1px; width:100%; height:29px}
 .sheet-vehicles_G1 { grid-area: v1;}
 .sheet-vehicles_G2 { grid-area: v2; text-align: center}
 .sheet-vehicles_G3 { grid-area: v3; text-align: center}
@@ -364,14 +366,47 @@ start of vehicles tab___________________________________________________________
 .sheet-vehicles_G16 { grid-area: v16;}
 .sheet-vehicles_G17 { grid-area: v17;}
 .sheet-vehicles_G18 { grid-area: v18;}
+.sheet-vehicles_G19 { grid-area: v19;}
+.sheet-vehicles_G20 { grid-area: v20;}
+.sheet-vehicles_G21 { grid-area: v21;}
+.sheet-vehicles_G22 { grid-area: v22;}
+.sheet-vehicles_G23 { grid-area: v23;}
+.sheet-vehicles_G24 { grid-area: v24;}
+.sheet-vehicles_G25 { grid-area: v25;}
+.sheet-vehicles_G26 { grid-area: v26;}
+.sheet-vehicles_G27 { grid-area: v27;}
+.sheet-vehicles_G28 { grid-area: v28;}
+.sheet-vehicles_G29 { grid-area: v29;}
+.sheet-vehicles_G30 { grid-area: v30;}
+.sheet-vehicles_G31 { grid-area: v31;}
+.sheet-vehicles_G32 { grid-area: v32;}
+.sheet-vehicles_G33 { grid-area: v33;}
+.sheet-vehicles_G34 { grid-area: v34;}
+.sheet-vehicles_G35 { grid-area: v35;}
+.sheet-vehicles_G36 { grid-area: v36;}
+.sheet-vehicles_G37 { grid-area: v37;}
+.sheet-vehicles_G38 { grid-area: v38;}
+
+
 
 .sheet-vehicles_grid{
   display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
-  'v1  v1  v1  v1'
+  'v1  v1  v1  vs'
   'v2  v3  v4  v5'
   'v6  v7  v8  v9'
   'v10 v10 v10 v10'
   'v11 v12 v13 v14'
   'v15 v16 v17 v18'
+  'v19 v20 v21 v22'
+  'v23 v24 v25 v26'
+  'v27 v28 v28 v28'
+  'v29 v30 v30 v30'
+  'v31 v31 v31 v31'
+  'v32 v32 v33 v33'
+  'v34 v34 v35 v35'
+  'v36 v36 v36 v36'
+'v37 v37 v37 v37'
+'v38 v38 v38 v38'
 }

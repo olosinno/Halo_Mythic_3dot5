@@ -1047,31 +1047,81 @@
   </fieldset>
 </div>
 
-<div class='sheet-vehicles_main'>
-  <div class='sheet-vehicles_grid'>
-    <div class='sheet-vehicles_G1'><h3>DIMENSIONS</h3></div>
-    <div class='sheet-vehicles_G2'>length</div>
-    <div class='sheet-vehicles_G3'>Width</div>
-    <div class='sheet-vehicles_G4'>Height</div>
-    <div class='sheet-vehicles_G5'>Weight</div>
-    <input class='sheet-vehicles_G6' type='text' name='attr_vehicle_length'></input>
-    <input class='sheet-vehicles_G7' type='text' name='attr_vehicle_width'></input>
-    <input class='sheet-vehicles_G8' type='text' name='attr_vehicle_height'></input>
-    <input class='sheet-vehicles_G9' type='text' name='attr_vehicle_weight'></input>
-    <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
-    <div class='sheet-vehicles_G11'>Accelerate</div>
-    <div class='sheet-vehicles_G12'>Brake</div>
-    <div class='sheet-vehicles_G13'>Top speed</div>
-    <div class='sheet-vehicles_G14'>Maneuver</div>
-    <input class='sheet-vehicles_G15' type='text' name='attr_vehicle_accelerate'></input>
-    <input class='sheet-vehicles_G16' type='text' name='attr_vehicle_brake'></input>
-    <input class='sheet-vehicles_G17' type='text' name='attr_vehicle_top_speed'></input>
-    <input class='sheet-vehicles_G18' type='text' name='attr_vehicle_maneuver'></input>
+<div class='sheet-vehicles'>
+  <div class='sheet-vehicles_divider'>
+    <div class='sheet-vehicles_grid'>
+      <div class='sheet-vehicles_G1'><h3>DIMENSIONS</h3></div>
+      <select class='sheet-vehicles_Gs' name='attr_vehicles-type'>
+        <option selected='selected' value='0'>Ground</option>
+        <option value='1'>Air</option>
+        <option value='2'>Mech</option>
+      </select>
+      <div class='sheet-vehicles_G2'>length</div>
+      <div class='sheet-vehicles_G3'>Width</div>
+      <div class='sheet-vehicles_G4'>Height</div>
+      <div class='sheet-vehicles_G5'>Weight</div>
+      <input class='sheet-vehicles_G6' type='text' name='attr_vehicle_length'></input>
+      <input class='sheet-vehicles_G7' type='text' name='attr_vehicle_width'></input>
+      <input class='sheet-vehicles_G8' type='text' name='attr_vehicle_height'></input>
+      <input class='sheet-vehicles_G9' type='text' name='attr_vehicle_weight'></input>
+
+      <input type='checkbox' name='attr_vehicles-type' value='0' class='sheet-hidden sheet-hider' checked>
+      <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+      <input type='checkbox' name='attr_vehicles-type' value='1' class='sheet-hidden sheet-hider' checked>
+      <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+      <input type='checkbox' name='attr_vehicles-type' value='2' class='sheet-hidden sheet-hider' checked>
+      <div class='sheet-vehicles_G10'><h3>CHARATERISTICS</h3></div>
+
+      <div class='sheet-vehicles_G11'>Accelerate</div>
+      <div class='sheet-vehicles_G12'>Brake</div>
+      <div class='sheet-vehicles_G13'>Top speed</div>
+      <div class='sheet-vehicles_G14'>Maneuver</div>
+      <input class='sheet-vehicles_G15' type='text' name='attr_vehicle_accelerate'></input>
+      <input class='sheet-vehicles_G16' type='text' name='attr_vehicle_brake'></input>
+      <input class='sheet-vehicles_G17' type='text' name='attr_vehicle_top_speed'></input>
+      <input class='sheet-vehicles_G18' type='text' name='attr_vehicle_maneuver'></input>
+
+      <input type='checkbox' name='attr_vehicles-type' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G19'>Vertical</div>
+      <input type='checkbox' name='attr_vehicles-type' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G20'>Takeoff</div>
+      <input type='checkbox' name='attr_vehicles-type' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G21'>Target range</div>
+      <input type='checkbox' name='attr_vehicles-type' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G22'>Targeting</div>
+      <input type='checkbox' name='attr_vehicles-type' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G23' type='text' name='attr_vehicle_vertical'></input>
+      <input type='checkbox' name='attr_vehicles-type' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G24' type='text' name='attr_vehicle_takeoff'></input>
+      <input type='checkbox' name='attr_vehicles-type' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G25' type='text' name='attr_vehicle_target_range'></input>
+      <input type='checkbox' name='attr_vehicles-type' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G26' type='text' name='attr_vehicle_targeting'></input>
+
+      <input type='checkbox' name='attr_vehicles-type' value='2' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G27'>Strength</div>
+      <input type='checkbox' name='attr_vehicles-type' value='2' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G28'>Melee</div>
+      <input type='checkbox' name='attr_vehicles-type' value='2' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G29' type='text' name='attr_vehicle_target_range'></input>
+      <input type='checkbox' name='attr_vehicles-type' value='2' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G30' type='text' name='attr_vehicle_targeting'></input>
+
+      <div class='sheet-vehicles_G31'><h3>CREW AND COMPLIMENT</h3></div>
+      <div class='sheet-vehicles_G32'>Crew</div>
+      <div class='sheet-vehicles_G33'>Compliment</div>
+      <input class='sheet-vehicles_G34' type='text' name='attr_vehicle_crew'></input>
+      <input class='sheet-vehicles_G35' type='text' name='attr_vehicle_compliment'></input>
+      <div class='sheet-vehicles_G36'><h3>HULL</h3></div>
+      <div class='sheet-vehicles_G37'>Hull material</div>
+      <input class='sheet-vehicles_G38' type='text' name='attr_hull'></input>
   </div>
+
 
   <div class='vehicle weapons'>
     placeholder
   </div>
+</div>
 </div>
 
 <div class='sheet-settings'>
