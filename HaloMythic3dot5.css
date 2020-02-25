@@ -2,6 +2,14 @@
 /*.sheet-*.ff {
 font-family: Serif
 }*/
+.sheet-background { background: white }
+input.sheet-background_switch_1:checked ~ div.sheet-background { background: white }
+input.sheet-background_switch_2:checked ~ div.sheet-background { background-image: linear-gradient(#7e8c36, #4b5320) }
+input.sheet-background_switch_3:checked ~ div.sheet-background { background: purple }
+input.sheet-background_switch_4:checked ~ div.sheet-background { background: orange }
+input.sheet-background_switch_5:checked ~ div.sheet-background { background: white }
+
+
 
 button[type=action] {
   color: white;
