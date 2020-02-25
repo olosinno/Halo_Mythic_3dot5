@@ -19,7 +19,7 @@ input[type='number'] {
   color: white;
   font-family: Saira Semi Condensed;
   text-align: center;
-  background: #394C6A
+  background: #394C6A;
 }
 button[type='roll']::before {
   content: ''
@@ -343,9 +343,9 @@ start of journal tab____________________________________________________________
 /* end of journal tab ___________________________________________
 start of vehicles tab___________________________________________________________*/
 
-.sheet-vehicles_grid1{ grid-area: vg1;   font-family: Saira Semi Condensed; color:white; background:#506b95;}
-.sheet-vehicles_grid2{ grid-area: vg2;  font-family: Saira Semi Condensed; color:white; background:#506b95;}
-.sheet-vehicles_grid3{ grid-area: vg3;  font-family: Saira Semi Condensed; color:white; background:#506b95;}
+.sheet-vehicles_grid1{ grid-area: vg1;  border-left: 2px solid #506b95; border-right: 2px solid #506b95; font-family: Saira Semi Condensed; color:white; background:#506b95;}
+.sheet-vehicles_grid2{ grid-area: vg2;  border-left: 2px solid #506b95; border-right: 2px solid #506b95; font-family: Saira Semi Condensed; color:white; background:#506b95;}
+.sheet-vehicles_grid3{ grid-area: vg3;  border-left: 2px solid #506b95; border-right: 2px solid #506b95; font-family: Saira Semi Condensed; color:white; background:#506b95;}
 .sheet-vehicle_weapons{ grid-area: vgw;}
 .sheet-vehicles_divider{
   display: grid;
