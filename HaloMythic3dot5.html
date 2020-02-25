@@ -385,22 +385,22 @@
   <div class='sheet-core_lists' style='border-style: solid; border-width: 1px'>
     <div class='sheet-core_lists1' style='padding: 1px; margin-right: 10px'>
       <h3><b>Skillset</h3></b>
-	  <fieldset name='skills' class='repeating_skills'>
+      <fieldset name='skills' class='repeating_skills'>
         <input type='text' name='attr_skill' />
       </fieldset>
     </div>
-	<div class='sheet-core_lists2' style='padding: 1px'>
-	  <h3><b>Education</h3></b>
-	  <fieldset name='skills' class='repeating_education'>
+    <div class='sheet-core_lists2' style='padding: 1px'>
+      <h3><b>Education</h3></b>
+      <fieldset name='skills' class='repeating_education'>
         <input type='text' name='attr_education' />
       </fieldset>
-	</div>
-	<div class='sheet-core_lists3' style='padding: 1px'>
-	  <h3><b>Languages</h3></b>
-	  <fieldset name='skills' class='repeating_languages'>
+    </div>
+    <div class='sheet-core_lists3' style='padding: 1px'>
+      <h3><b>Languages</h3></b>
+      <fieldset name='skills' class='repeating_languages'>
         <input type='text' name='attr_language' />
       </fieldset>
-	</div>
+    </div>
   </div>
   <br>
   <h2>Abilities</h2>
@@ -427,7 +427,7 @@
 
 </div>
 <div class='sheet-medical'>
-    <h2>medical</h2>
+  <h2>medical</h2>
   <div class='sheet-medical-grid'>
     <div class='medicalg1'>
       Finger/toe
@@ -988,28 +988,28 @@
 </div>
 <div class='sheet-advancements'>
   <script type='text/worker'>
-	on('change:xp_total change:repeating_advancements:advancement_costL change:repeating_advancements:advancement_costR remove:repeating_advancements', () => {
-		// get section IDs because of operation both inside and outside of fieldset
-        getSectionIDs(`repeating_advancements`, idArray => {
-            const fieldnames = [];
-            idArray.forEach(id => fieldnames.push (
-                `repeating_advancements_${id}_advancement_costL`,
-                `repeating_advancements_${id}_advancement_costR`
-            ));
-			// spread operator to get every array value
-            getAttrs(['XP_total',...fieldnames], v => {
-                const getValue = (id,field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
-                const left = idArray.reduce((total, id) => total + getValue(id,'advancement_costL'),0)
-                const right = idArray.reduce((total, id) => total + getValue(id,'advancement_costR'),0)
-                const spent = left + right
-                const total = parseFloat(v.XP_total) || 0
-                setAttrs({
-                    XP_spent: spent,
-                    XP_current: total - spent
-                });
-            });
+    on('change:xp_total change:repeating_advancements:advancement_costL change:repeating_advancements:advancement_costR remove:repeating_advancements', () => {
+      // get section IDs because of operation both inside and outside of fieldset
+      getSectionIDs(`repeating_advancements`, idArray => {
+        const fieldnames = [];
+        idArray.forEach(id => fieldnames.push (
+        `repeating_advancements_${id}_advancement_costL`,
+        `repeating_advancements_${id}_advancement_costR`
+        ));
+        // spread operator to get every array value
+        getAttrs(['XP_total',...fieldnames], v => {
+          const getValue = (id,field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
+          const left = idArray.reduce((total, id) => total + getValue(id,'advancement_costL'),0)
+          const right = idArray.reduce((total, id) => total + getValue(id,'advancement_costR'),0)
+          const spent = left + right
+          const total = parseFloat(v.XP_total) || 0
+          setAttrs({
+            XP_spent: spent,
+            XP_current: total - spent
+          });
         });
-    });  
+      });
+    });
   </script>
 
   <h2>Experience Summary</h2>
@@ -1047,9 +1047,31 @@
   </fieldset>
 </div>
 
-<div class='sheet-vehicles'>
-  <h2>Vehicles</h2>
-  <span>Vehicles go here</span>
+<div class='sheet-vehicles_main'>
+  <div class='sheet-vehicles_grid'>
+    <div class='sheet-vehicles_G1'><h3>DIMENSIONS</h3></div>
+    <div class='sheet-vehicles_G2'>length</div>
+    <div class='sheet-vehicles_G3'>Width</div>
+    <div class='sheet-vehicles_G4'>Height</div>
+    <div class='sheet-vehicles_G5'>Weight</div>
+    <input class='sheet-vehicles_G6' type='text' name='attr_vehicle_length'></input>
+    <input class='sheet-vehicles_G7' type='text' name='attr_vehicle_width'></input>
+    <input class='sheet-vehicles_G8' type='text' name='attr_vehicle_height'></input>
+    <input class='sheet-vehicles_G9' type='text' name='attr_vehicle_weight'></input>
+    <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+    <div class='sheet-vehicles_G11'>Accelerate</div>
+    <div class='sheet-vehicles_G12'>Brake</div>
+    <div class='sheet-vehicles_G13'>Top speed</div>
+    <div class='sheet-vehicles_G14'>Maneuver</div>
+    <input class='sheet-vehicles_G15' type='text' name='attr_vehicle_accelerate'></input>
+    <input class='sheet-vehicles_G16' type='text' name='attr_vehicle_brake'></input>
+    <input class='sheet-vehicles_G17' type='text' name='attr_vehicle_top_speed'></input>
+    <input class='sheet-vehicles_G18' type='text' name='attr_vehicle_maneuver'></input>
+  </div>
+
+  <div class='vehicle weapons'>
+    placeholder
+  </div>
 </div>
 
 <div class='sheet-settings'>

@@ -43,8 +43,8 @@ button[type='roll'] {
 }
 .sheet-characteristics_box button[type='roll'] { background: black }
 .sheet-characteristics_box input[type='text'] {
-	height: 40px;
-	font-size: 30px
+  height: 40px;
+  font-size: 30px
 }
 
 .sheet-characteristics_box {
@@ -330,11 +330,48 @@ start of medical tab ___________________________________________________________
   background:#475f85;
   text-indent: 5px;
   border-bottom: 1px dotted grey;
-    border-left: 3px solid #394C6A;
+  border-left: 3px solid #394C6A;
 }
 
 /* end of medical tab __________________________________________________________
-start of advancement/experience tab ____________________________________________ */
+start of advancement/experience tab ____________________________________________*/
 
 /* end of advancement/experience tab ___________________________________________
-start of journal________________________________________________________________*/
+start of journal tab____________________________________________________________*/
+
+/* end of journal tab ___________________________________________
+start of vehicles tab___________________________________________________________*/
+.sheet-vehicles_main{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.sheet-vehicles_G1 { grid-area: v1;}
+.sheet-vehicles_G2 { grid-area: v2; text-align: center}
+.sheet-vehicles_G3 { grid-area: v3; text-align: center}
+.sheet-vehicles_G4 { grid-area: v4; text-align: center}
+.sheet-vehicles_G5 { grid-area: v5; text-align: center}
+.sheet-vehicles_G6 { grid-area: v6;}
+.sheet-vehicles_G7 { grid-area: v7;}
+.sheet-vehicles_G8 { grid-area: v8;}
+.sheet-vehicles_G9 { grid-area: v9;}
+.sheet-vehicles_G10 { grid-area: v10;}
+.sheet-vehicles_G11 { grid-area: v11; text-align: center}
+.sheet-vehicles_G12 { grid-area: v12; text-align: center}
+.sheet-vehicles_G13 { grid-area: v13; text-align: center}
+.sheet-vehicles_G14 { grid-area: v14; text-align: center}
+.sheet-vehicles_G15 { grid-area: v15;}
+.sheet-vehicles_G16 { grid-area: v16;}
+.sheet-vehicles_G17 { grid-area: v17;}
+.sheet-vehicles_G18 { grid-area: v18;}
+
+.sheet-vehicles_grid{
+  display: grid;
+  grid-template-areas:
+  'v1  v1  v1  v1'
+  'v2  v3  v4  v5'
+  'v6  v7  v8  v9'
+  'v10 v10 v10 v10'
+  'v11 v12 v13 v14'
+  'v15 v16 v17 v18'
+}
