@@ -355,8 +355,8 @@ start of vehicles tab___________________________________________________________
   'vg2 vgw'
   'vg3 vgw'
 }
-
-.sheet-vehicles_Gs { grid-area: vs; margin-top:-1px; width:100%; height:29px}
+.sheet-vehicles_Gn{ grid-area: gn; width:100%;color: white; font-family: Saira Semi Condensed; text-align: center; background: #394C6A}
+.sheet-vehicles_Gs { grid-area: vs; margin-top:-1px; width:100%; height:28.5px; margin-bottom: -8px;}
 .sheet-vehicles_G1 { grid-area: v1;}
 .sheet-vehicles_G2 { grid-area: v2; text-align: center}
 .sheet-vehicles_G3 { grid-area: v3; text-align: center}
@@ -399,6 +399,7 @@ start of vehicles tab___________________________________________________________
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
+  'gn  gn  gn  gn'
   'v1  v1  v1  vs'
   'v2  v3  v4  v5'
   'v6  v7  v8  v9'
@@ -452,8 +453,8 @@ start of vehicles tab___________________________________________________________
 
 .sheet-vehicles_G61 { grid-area: v61;}
 .sheet-vehicles_G62 { grid-area: v62; text-align: center}
-.sheet-vehicles_G63 { grid-area: v63;}
-.sheet-vehicles_G64 { grid-area: v64; text-align: center}
+.sheet-vehicles_G63 { grid-area: v63; text-align: center}
+.sheet-vehicles_G64 { grid-area: v64;}
 .sheet-vehicles_G65 { grid-area: v65;}
 .sheet-vehicles_G66 { grid-area: v66;}
 .sheet-vehicles_G67 { grid-area: v68;}
@@ -463,5 +464,6 @@ start of vehicles tab___________________________________________________________
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas:
   'v61 v61 v61 v61'
-  'v62 v63 v64 v65'
+  'v62 v62 v63 v63'
+  'v64 v64 v65 v65'
   'v66 v66 v66 v66'

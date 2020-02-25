@@ -384,19 +384,19 @@
   <h2 style='text-align: center; font-family: Saira Semi Condensed'>Core Data</h2>
   <div class='sheet-core_lists' style='border-style: solid; border-width: 1px'>
     <div class='sheet-core_lists1' style='padding: 1px; margin-right: 10px'>
-      <h3><b>Skillset</h3></b>
+      <h3><b>Skillset</b></h3>
       <fieldset name='skills' class='repeating_skills'>
         <input type='text' name='attr_skill' />
       </fieldset>
     </div>
     <div class='sheet-core_lists2' style='padding: 1px'>
-      <h3><b>Education</h3></b>
+      <h3><b>Education</b></h3>
       <fieldset name='skills' class='repeating_education'>
         <input type='text' name='attr_education' />
       </fieldset>
     </div>
     <div class='sheet-core_lists3' style='padding: 1px'>
-      <h3><b>Languages</h3></b>
+      <h3><b>Languages</b></h3>
       <fieldset name='skills' class='repeating_languages'>
         <input type='text' name='attr_language' />
       </fieldset>
@@ -1050,12 +1050,14 @@
 <div class='sheet-vehicles'>
   <div class='sheet-vehicles_divider'>
     <div class='sheet-vehicles_grid1'>
-      <div class='sheet-vehicles_G1'><h3>DIMENSIONS</h3></div>
+      <input class='sheet-vehicles_Gn type='text' placeholder='Name'>
+
       <select class='sheet-vehicles_Gs' name='attr_vehicles-type'>
         <option selected='selected' value='0'>Ground</option>
         <option value='1'>Air</option>
         <option value='2'>Walker</option>
       </select>
+      <div class='sheet-vehicles_G1'><h3>DIMENSIONS</h3></div>
       <div class='sheet-vehicles_G2'>length</div>
       <div class='sheet-vehicles_G3'>Width</div>
       <div class='sheet-vehicles_G4'>Height</div>
@@ -1143,8 +1145,8 @@
     <div class="vehicles_grid3">
       <div class='sheet-vehicles_G61'><h3>Miscellaneous</h3></div>
       <div class='sheet-vehicles_G62'>Size points</div>
-      <input class='sheet-vehicles_G63' type='text' name='attr_vehicle_armor-front'></input>
-      <div class='sheet-vehicles_G64'>Weapon points</div>
+      <div class='sheet-vehicles_G63'>Weapon points</div>
+      <input class='sheet-vehicles_G64' type='text' name='attr_vehicle_armor-front'></input>
       <input class='sheet-vehicles_G65' type='text' name='attr_vehicle_armor-front'></input>
       <div class='sheet-vehicles_G66'>
         <div class='collapsible_ability_description_window_a' ></div>
