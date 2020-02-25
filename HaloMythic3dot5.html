@@ -384,23 +384,23 @@
   <h2 style='text-align: center; font-family: Saira Semi Condensed'>Core Data</h2>
   <div class='sheet-core_lists' style='border-style: solid; border-width: 1px'>
     <div class='sheet-core_lists1' style='padding: 1px; margin-right: 10px'>
-      <h3><b>Skillset</h3></b>
-	  <fieldset name='skills' class='repeating_skills'>
+      <h3><b>Skillset</b></h3>
+      <fieldset name='skills' class='repeating_skills'>
         <input type='text' name='attr_skill' />
       </fieldset>
     </div>
-	<div class='sheet-core_lists2' style='padding: 1px'>
-	  <h3><b>Education</h3></b>
-	  <fieldset name='skills' class='repeating_education'>
+    <div class='sheet-core_lists2' style='padding: 1px'>
+      <h3><b>Education</b></h3>
+      <fieldset name='skills' class='repeating_education'>
         <input type='text' name='attr_education' />
       </fieldset>
-	</div>
-	<div class='sheet-core_lists3' style='padding: 1px'>
-	  <h3><b>Languages</h3></b>
-	  <fieldset name='skills' class='repeating_languages'>
+    </div>
+    <div class='sheet-core_lists3' style='padding: 1px'>
+      <h3><b>Languages</b></h3>
+      <fieldset name='skills' class='repeating_languages'>
         <input type='text' name='attr_language' />
       </fieldset>
-	</div>
+    </div>
   </div>
   <br>
   <h2>Abilities</h2>
@@ -427,7 +427,7 @@
 
 </div>
 <div class='sheet-medical'>
-    <h2>medical</h2>
+  <h2>medical</h2>
   <div class='sheet-medical-grid'>
     <div class='medicalg1'>
       Finger/toe
@@ -988,28 +988,28 @@
 </div>
 <div class='sheet-advancements'>
   <script type='text/worker'>
-	on('change:xp_total change:repeating_advancements:advancement_costL change:repeating_advancements:advancement_costR remove:repeating_advancements', () => {
-		// get section IDs because of operation both inside and outside of fieldset
-        getSectionIDs(`repeating_advancements`, idArray => {
-            const fieldnames = [];
-            idArray.forEach(id => fieldnames.push (
-                `repeating_advancements_${id}_advancement_costL`,
-                `repeating_advancements_${id}_advancement_costR`
-            ));
-			// spread operator to get every array value
-            getAttrs(['XP_total',...fieldnames], v => {
-                const getValue = (id,field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
-                const left = idArray.reduce((total, id) => total + getValue(id,'advancement_costL'),0)
-                const right = idArray.reduce((total, id) => total + getValue(id,'advancement_costR'),0)
-                const spent = left + right
-                const total = parseFloat(v.XP_total) || 0
-                setAttrs({
-                    XP_spent: spent,
-                    XP_current: total - spent
-                });
-            });
+    on('change:xp_total change:repeating_advancements:advancement_costL change:repeating_advancements:advancement_costR remove:repeating_advancements', () => {
+      // get section IDs because of operation both inside and outside of fieldset
+      getSectionIDs(`repeating_advancements`, idArray => {
+        const fieldnames = [];
+        idArray.forEach(id => fieldnames.push (
+        `repeating_advancements_${id}_advancement_costL`,
+        `repeating_advancements_${id}_advancement_costR`
+        ));
+        // spread operator to get every array value
+        getAttrs(['XP_total',...fieldnames], v => {
+          const getValue = (id,field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
+          const left = idArray.reduce((total, id) => total + getValue(id,'advancement_costL'),0)
+          const right = idArray.reduce((total, id) => total + getValue(id,'advancement_costR'),0)
+          const spent = left + right
+          const total = parseFloat(v.XP_total) || 0
+          setAttrs({
+            XP_spent: spent,
+            XP_current: total - spent
+          });
         });
-    });  
+      });
+    });
   </script>
 
   <h2>Experience Summary</h2>
@@ -1048,8 +1048,157 @@
 </div>
 
 <div class='sheet-vehicles'>
-  <h2>Vehicles</h2>
-  <span>Vehicles go here</span>
+  <div class='sheet-vehicles_divider'>
+    <div class='sheet-vehicles_grid1'>
+      <input class='sheet-vehicles_Gn type='text' placeholder='Name'>
+
+      <select class='sheet-vehicles_Gs' name='attr_vehicle-shield'>
+        <option selected='selected' value='0'>Unshielded</option>
+        <option value='1'>Shielded</option>
+      </select>
+
+      <select class='sheet-vehicles_Gt' name='attr_vehicle-type'>
+        <option selected='selected' value='0'>Ground</option>
+        <option value='1'>Air</option>
+        <option value='2'>Walker</option>
+      </select>
+      <div class='sheet-vehicles_G1'><h3>DIMENSIONS</h3></div>
+      <div class='sheet-vehicles_G2'>length</div>
+      <div class='sheet-vehicles_G3'>Width</div>
+      <div class='sheet-vehicles_G4'>Height</div>
+      <div class='sheet-vehicles_G5'>Weight</div>
+      <input class='sheet-vehicles_G6' type='text' name='attr_vehicle-length'></input>
+      <input class='sheet-vehicles_G7' type='text' name='attr_vehicle-width'></input>
+      <input class='sheet-vehicles_G8' type='text' name='attr_vehicle-height'></input>
+      <input class='sheet-vehicles_G9' type='text' name='attr_vehicle-weight'></input>
+
+      <input type='checkbox' name='attr_vehicle-type' value='0' class='sheet-hidden sheet-hider' checked>
+      <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' checked>
+      <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' checked>
+      <div class='sheet-vehicles_G10'><h3>CHARATERISTICS</h3></div>
+
+      <div class='sheet-vehicles_G11'>Accelerate</div>
+      <div class='sheet-vehicles_G12'>Brake</div>
+      <div class='sheet-vehicles_G13'>Top speed</div>
+      <div class='sheet-vehicles_G14'>Maneuver</div>
+      <input class='sheet-vehicles_G15' type='text' name='attr_vehicle-accelerate'></input>
+      <input class='sheet-vehicles_G16' type='text' name='attr_vehicle-brake'></input>
+      <input class='sheet-vehicles_G17' type='text' name='attr_vehicle-top_speed'></input>
+      <input class='sheet-vehicles_G18' type='text' name='attr_vehicle-maneuver'></input>
+
+      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G19'>Vertical</div>
+      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G20'>Takeoff</div>
+      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G21'>Target range</div>
+      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G22'>Targeting</div>
+      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G23' type='text' name='attr_vehicle-vertical'></input>
+      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G24' type='text' name='attr_vehicle-takeoff'></input>
+      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G25' type='text' name='attr_vehicle-target_range'></input>
+      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G26' type='text' name='attr_vehicle-targeting'></input>
+
+      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G27'>Strength</div>
+      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G28'>Melee</div>
+      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G29' type='text' name='attr_vehicle-strength'></input>
+      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G30' type='text' name='attr_vehicle-melee'></input>
+
+      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G31' type='text' name='attr_vehicle-strength-mythic'></input>
+      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G32'>Mythic</div>
+
+      <div class='sheet-vehicles_G33'><h3>CREW AND COMPLIMENT</h3></div>
+      <div class='sheet-vehicles_G34'>Crew</div>
+      <div class='sheet-vehicles_G35'>Compliment</div>
+      <input class='sheet-vehicles_G36' type='text' name='attr_vehicle-crew'></input>
+      <input class='sheet-vehicles_G37' type='text' name='attr_vehicle-compliment'></input>
+      <div class='sheet-vehicles_G38'><h3>HULL</h3></div>
+      <div class='sheet-vehicles_G39'>Hull material</div>
+      <input class='sheet-vehicles_G40' type='text' name='attr_vehicle-hull'></input>
+    </div>
+    <div class="sheet-vehicles_grid2">
+      <div class='sheet-vehicles_G41'><h3>BREAKPOINTS</h3></div>
+      <div class='sheet-vehicles_G42'>Wep</div>
+      <div class='sheet-vehicles_G43'>Mod</div>
+      <div class='sheet-vehicles_G44'>Eng</div>
+      <div class='sheet-vehicles_G45'>Op</div>
+      <div class='sheet-vehicles_G46'>Crew</div>
+      <input class='sheet-vehicles_G47' type='text' name='attr_vehicle-bp-wep'></input>
+      <input class='sheet-vehicles_G48' type='text' name='attr_vehicle-bp-mod'></input>
+      <input class='sheet-vehicles_G49' type='text' name='attr_vehicle-bp-eng'></input>
+      <input class='sheet-vehicles_G50' type='text' name='attr_vehicle-bp-op'></input>
+      <input class='sheet-vehicles_G51' type='text' name='attr_vehicle-bp-crew'></input>
+      <div class='sheet-vehicles_G52'><h3>Armor</h3></div>
+      <div class='sheet-vehicles_G53'>Front</div>
+      <div class='sheet-vehicles_G54'>Back</div>
+      <div class='sheet-vehicles_G55'>Side</div>
+      <div class='sheet-vehicles_G56'>Top</div>
+      <div class='sheet-vehicles_G57'>Bottom</div>
+      <input class='sheet-vehicles_G58' type='text' name='attr_vehicle-armor-front'></input>
+      <input class='sheet-vehicles_G59' type='text' name='attr_vehicle-armor-back'></input>
+      <input class='sheet-vehicles_G60' type='text' name='attr_vehicle-armor-side'></input>
+      <input class='sheet-vehicles_G61' type='text' name='attr_vehicle-armor-top'></input>
+      <input class='sheet-vehicles_G62' type='text' name='attr_vehicle-armor-bottom'></input>
+    </div>
+    <div class="vehicles_grid3">
+      <div class='sheet-vehicles_G63'><h3>Miscellaneous</h3></div>
+      <div class='sheet-vehicles_G64'>Size points</div>
+      <div class='sheet-vehicles_G65'>Weapon points</div>
+      <input class='sheet-vehicles_G66' type='text' name='attr_vehicle-size-points'></input>
+      <input class='sheet-vehicles_G67' type='text' name='attr_vehicle-weapon-points'></input>
+
+      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G68'>Shield rating</div>
+            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G69'>Shield current</div>
+            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G70'>Recharge delay</div>
+            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <div class='sheet-vehicles_G71'>Recharge rate</div>
+            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G72' type='text' name='attr_vehicle-shield-rating'></input>
+            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G73' type='text' name='attr_vehicle-shield-current'></input>
+            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G74' type='text' name='attr_vehicle-recharge-delay'></input>
+            <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+      <input class='sheet-vehicles_G75' type='text' name='attr_vehicle-recharge-rate'></input>
+
+      <div class='sheet-vehicles_G76'>
+        <div class='collapsible_ability_description_window_a' ></div>
+        <fieldset>
+          <input type='text' placeholder='Additional info'>
+          <input type='checkbox' class='collapsible_ability_block_switch'>
+          <div class='collapsible_ability_description_window_a' ></div>
+          <textarea class='collapsible_ability_description_window_b'></textarea>
+        </fieldset>
+        <fieldset>
+          <input type='text' placeholder='Modifications'>
+          <input type='checkbox' class='collapsible_ability_block_switch'>
+          <div class='collapsible_ability_description_window_a' ></div>
+          <textarea class='collapsible_ability_description_window_b'></textarea>
+        </fieldset>
+      </div>
+    </div>
+
+
+
+    <div class='sheet-vehicle_weapons'>
+      [placeholder] this will be a duplicate of the weapons section in the equipment tab
+    </div>
+  </div>
 </div>
 
 <div class='sheet-settings'>

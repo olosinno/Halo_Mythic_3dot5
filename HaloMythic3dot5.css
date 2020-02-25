@@ -19,7 +19,7 @@ input[type='number'] {
   color: white;
   font-family: Saira Semi Condensed;
   text-align: center;
-  background: #394C6A
+  background: #394C6A;
 }
 button[type='roll']::before {
   content: ''
@@ -43,8 +43,8 @@ button[type='roll'] {
 }
 .sheet-characteristics_box button[type='roll'] { background: black }
 .sheet-characteristics_box input[type='text'] {
-	height: 40px;
-	font-size: 30px
+  height: 40px;
+  font-size: 30px
 }
 
 .sheet-characteristics_box {
@@ -89,6 +89,7 @@ textarea {
 
 .sheet-hidden { display: none }
 .sheet-hider:not(:checked) + div { display: none }
+.sheet-hider:not(:checked) + input { display: none }
 
 /* start of grid structure for character information ______________________________ */
 
@@ -239,7 +240,7 @@ ______________________________ start of tab buttons toggles */
 .sheet-advancements,
 .sheet-journal,
 .sheet-vehicles,
-.sheet-settings { display: none }
+.sheet-settings { display: none}
 /* show the selected tab */
 
 .sheet-tabstoggle[value='core'] ~ div.sheet-core,
@@ -248,7 +249,7 @@ ______________________________ start of tab buttons toggles */
 .sheet-tabstoggle[value='advancements'] ~ div.sheet-advancements,
 .sheet-tabstoggle[value='journal'] ~ div.sheet-journal,
 .sheet-tabstoggle[value='vehicles'] ~ div.sheet-vehicles,
-.sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block }
+.sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block}
 
 /* end of tab buttons toggles ______________________________
 ______________________________ start of minimisable infographic */
@@ -330,11 +331,152 @@ start of medical tab ___________________________________________________________
   background:#475f85;
   text-indent: 5px;
   border-bottom: 1px dotted grey;
-    border-left: 3px solid #394C6A;
+  border-left: 3px solid #394C6A;
 }
 
 /* end of medical tab __________________________________________________________
-start of advancement/experience tab ____________________________________________ */
+start of advancement/experience tab ____________________________________________*/
 
 /* end of advancement/experience tab ___________________________________________
-start of journal________________________________________________________________*/
+start of journal tab____________________________________________________________*/
+
+/* end of journal tab ___________________________________________
+start of vehicles tab___________________________________________________________*/
+
+.sheet-vehicles_grid1{ grid-area: vg1;  border-left: 2px solid #506b95; border-right: 2px solid #506b95; font-family: Saira Semi Condensed; color:white; background:#506b95;}
+.sheet-vehicles_grid2{ grid-area: vg2;  border-left: 2px solid #506b95; border-right: 2px solid #506b95; font-family: Saira Semi Condensed; color:white; background:#506b95;}
+.sheet-vehicles_grid3{ grid-area: vg3;  border-left: 2px solid #506b95; border-right: 2px solid #506b95; font-family: Saira Semi Condensed; color:white; background:#506b95;}
+.sheet-vehicle_weapons{ grid-area: vgw;}
+.sheet-vehicles_divider{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+  'vg1 vgw'
+  'vg2 vgw'
+  'vg3 vgw'
+}
+.sheet-vehicles_Gn{ grid-area: vn; width:100%;color: white; font-family: Saira Semi Condensed; text-align: center; background: #394C6A}
+.sheet-vehicles_Gs { grid-area: vs; margin-top:-1px; width:100%; height:28.5px; margin-bottom: -8px;}
+.sheet-vehicles_Gt { grid-area: vt; margin-top:-1px; width:100%; height:28.5px; margin-bottom: -8px;}
+.sheet-vehicles_G1 { grid-area: v1;}
+.sheet-vehicles_G2 { grid-area: v2; text-align: center}
+.sheet-vehicles_G3 { grid-area: v3; text-align: center}
+.sheet-vehicles_G4 { grid-area: v4; text-align: center}
+.sheet-vehicles_G5 { grid-area: v5; text-align: center}
+.sheet-vehicles_G6 { grid-area: v6;}
+.sheet-vehicles_G7 { grid-area: v7;}
+.sheet-vehicles_G8 { grid-area: v8;}
+.sheet-vehicles_G9 { grid-area: v9;}
+.sheet-vehicles_G10 { grid-area: v10;}
+.sheet-vehicles_G11 { grid-area: v11; text-align: center}
+.sheet-vehicles_G12 { grid-area: v12; text-align: center}
+.sheet-vehicles_G13 { grid-area: v13; text-align: center}
+.sheet-vehicles_G14 { grid-area: v14; text-align: center}
+.sheet-vehicles_G15 { grid-area: v15;}
+.sheet-vehicles_G16 { grid-area: v16;}
+.sheet-vehicles_G17 { grid-area: v17;}
+.sheet-vehicles_G18 { grid-area: v18;}
+.sheet-vehicles_G19 { grid-area: v19; text-align: center}
+.sheet-vehicles_G20 { grid-area: v20; text-align: center}
+.sheet-vehicles_G21 { grid-area: v21; text-align: center}
+.sheet-vehicles_G22 { grid-area: v22; text-align: center}
+.sheet-vehicles_G23 { grid-area: v23;}
+.sheet-vehicles_G24 { grid-area: v24;}
+.sheet-vehicles_G25 { grid-area: v25;}
+.sheet-vehicles_G26 { grid-area: v26;}
+.sheet-vehicles_G27 { grid-area: v27; text-align: center}
+.sheet-vehicles_G28 { grid-area: v28; text-align: center}
+.sheet-vehicles_G29 { grid-area: v29;}
+.sheet-vehicles_G30 { grid-area: v30;}
+.sheet-vehicles_G31 { grid-area: v31;}
+.sheet-vehicles_G32 { grid-area: v32;}
+.sheet-vehicles_G33 { grid-area: v33;}
+.sheet-vehicles_G34 { grid-area: v34; text-align: center}
+.sheet-vehicles_G35 { grid-area: v35; text-align: center}
+.sheet-vehicles_G36 { grid-area: v36;}
+.sheet-vehicles_G37 { grid-area: v37;}
+.sheet-vehicles_G38 { grid-area: v38;}
+.sheet-vehicles_G39 { grid-area: v39; text-align: center}
+.sheet-vehicles_G40 { grid-area: v40;}
+.sheet-vehicles_grid1{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas:
+  'vn  vn  vn  vn'
+  'vs  v1  v1  vt'
+  'v2  v3  v4  v5'
+  'v6  v7  v8  v9'
+  'v10 v10 v10 v10'
+  'v11 v12 v13 v14'
+  'v15 v16 v17 v18'
+  'v19 v20 v21 v22'
+  'v23 v24 v25 v26'
+  'v27 v28 v28 v28'
+  'v29 v30 v30 v30'
+  'v31 v32 v32 v32'
+  'v33 v33 v33 v33'
+  'v34 v34 v35 v35'
+  'v36 v36 v37 v37'
+  'v38 v38 v38 v38'
+  'v39 v39 v39 v39'
+  'v40 v40 v40 v40'
+}
+.sheet-vehicles_G41 { grid-area: v41;}
+.sheet-vehicles_G42 { grid-area: v42; text-align: center}
+.sheet-vehicles_G43 { grid-area: v43; text-align: center}
+.sheet-vehicles_G44 { grid-area: v44; text-align: center}
+.sheet-vehicles_G45 { grid-area: v45; text-align: center}
+.sheet-vehicles_G46 { grid-area: v46; text-align: center}
+.sheet-vehicles_G47 { grid-area: v47;}
+.sheet-vehicles_G48 { grid-area: v48;}
+.sheet-vehicles_G49 { grid-area: v49;}
+.sheet-vehicles_G50 { grid-area: v50;}
+.sheet-vehicles_G51 { grid-area: v51;}
+.sheet-vehicles_G52 { grid-area: v52; text-align: center}
+.sheet-vehicles_G53 { grid-area: v53; text-align: center}
+.sheet-vehicles_G54 { grid-area: v54; text-align: center}
+.sheet-vehicles_G55 { grid-area: v55; text-align: center}
+.sheet-vehicles_G56 { grid-area: v56; text-align: center}
+.sheet-vehicles_G57 { grid-area: v57; text-align: center}
+.sheet-vehicles_G58 { grid-area: v58;}
+.sheet-vehicles_G59 { grid-area: v59;}
+.sheet-vehicles_G60 { grid-area: v60;}
+.sheet-vehicles_G61 { grid-area: v61;}
+.sheet-vehicles_G62 { grid-area: v62;}
+.sheet-vehicles_grid2{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-areas:
+  'v41 v41 v41 v41 v41'
+  'v42 v43 v44 v45 v46'
+  'v47 v48 v49 v50 v51'
+  'v52 v52 v52 v52 v52'
+  'v53 v54 v55 v56 v57'
+  'v58 v59 v60 v61 v62'
+}
+
+.sheet-vehicles_G63 { grid-area: v63;}
+.sheet-vehicles_G64 { grid-area: v64; text-align: center}
+.sheet-vehicles_G65 { grid-area: v65; text-align: center}
+.sheet-vehicles_G66 { grid-area: v66;}
+.sheet-vehicles_G67 { grid-area: v67;}
+.sheet-vehicles_G68 { grid-area: v68;text-align: center}
+.sheet-vehicles_G69 { grid-area: v69;text-align: center}
+.sheet-vehicles_G70 { grid-area: v70;text-align: center}
+.sheet-vehicles_G71 { grid-area: v71;text-align: center}
+.sheet-vehicles_G72 { grid-area: v72;}
+.sheet-vehicles_G73 { grid-area: v73;}
+.sheet-vehicles_G74 { grid-area: v74;}
+.sheet-vehicles_G75 { grid-area: v75;}
+.sheet-vehicles_G76 { grid-area: v76;}
+
+.sheet-vehicles_grid3{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas:
+  'v63 v63 v63 v63'
+  'v64 v64 v65 v65'
+  'v66 v66 v67 v67'
+  'v68 v69 v70 v71'
+  'v72 v73 v74 v75'
+  'v76 v76 v76 v76'
