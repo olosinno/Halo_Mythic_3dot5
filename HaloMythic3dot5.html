@@ -237,32 +237,49 @@
       <div class='sheet-movementgs15 '>Leap</div>
 
       <script type='text/worker'>
-        on('change:agi change:agi_mythic change:agi_advancement change:str change:str_advancement', function() {
+        on('change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
           getAttrs([
           'agi',
+          'settings_race',
           'agi_mythic',
           'agi_advancement',
           'str',
-          'str_advancement'
+          'str_mythic',
+          'str_advancement',
+          'tou',
+          'tou_mythic',
+          'tou_advancement'
           ], function(values) {
             var agi = parseInt(values['agi'],10)||0;
             var agi_mythic = parseInt(values['agi_mythic'],10)||0;
             var agi_advancement = parseInt(values['agi_advancement'],10)||0;
-            var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
-
             var str = parseInt(values['str'],10)||0;
+            var str_mythic = parseInt(values['str_mythic'],10)||0;
             var str_advancement = parseInt(values['str_advancement'],10)||0;
+            var tou = parseInt(values['tou'],10)||0;
+            var tou_mythic = parseInt(values['tou_mythic'],10)||0;
+            var tou_advancement = parseInt(values['tou_advancement'],10)||0;
+            var weight_mod = str+str_advancement+tou+tou_advancement+(str_mythic+tou_mythic)*10;
+            var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
             var str_mod = str+str_advancement;
             var agi_mod = agi+agi_advancement;
+
+            // normal no modifiers _____________________________________________
+
             setAttrs({
               half_move: (move_mod),
               full_move: (move_mod *2),
               charge_move: (move_mod *3),
               run_move: (move_mod *6),
               sprint_move: (move_mod *8),
-              jump_move:(str_mod /4)
+              jump_move:(str_mod /4),
+              leap_move:(agi_mod /2),
+
+              carry: (weight_mod),
+              lift: (weight_mod*2),
+              push: (weight_mod*4)
             });
-            if (move_mod <= 0) {
+            if (move_mod <= 0){
               setAttrs({
                 half_move: (0.5),
                 full_move: (1),
@@ -271,10 +288,17 @@
                 sprint_move: (4)
               });
             }
-            if (str_mod >= agi_mod) {
-              setAttrs({leap_move:(str_mod /2)});
-            } else {
-              setAttrs({leap_move:(agi_mod /2)});
+            if (str_mod >= agi_mod){
+              setAttrs({
+                leap_move:(str_mod /2)
+              });
+            }
+            if(settings_race == 2){
+              setAttrs({
+                carry: ('4000'),
+                lift: (agi_advancement),
+                push: (4000*4)
+              });
             }
           });
         });
@@ -290,32 +314,6 @@
       <div class='sheet-carrygs5 '>Carry</div>
       <div class='sheet-carrygs6 '>Lift</div>
       <div class='sheet-carrygs7 '>Push</div>
-
-      <script type='text/worker'>
-        on('change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
-          getAttrs([
-          'str',
-          'str_mythic',
-          'str_advancement',
-          'tou',
-          'tou_mythic',
-          'tou_advancement'
-          ], function(values) {
-            var str = parseInt(values['str'],10)||0;
-            var str_mythic = parseInt(values['str_mythic'],10)||0;
-            var str_advancement = parseInt(values['str_advancement'],10)||0;
-            var tou = parseInt(values['tou'],10)||0;
-            var tou_mythic = parseInt(values['tou_mythic'],10)||0;
-            var tou_advancement = parseInt(values['tou_advancement'],10)||0;
-            var weight_mod = str+str_advancement+tou+tou_advancement+(str_mythic+tou_mythic)*10;
-            setAttrs({
-              carry: (weight_mod),
-              lift: (weight_mod*2),
-              push: (weight_mod*4),
-            });
-          });
-        });
-      </script>
     </div>
 
   </div>
@@ -1251,12 +1249,14 @@
       <input type='checkbox' class='racial_switch'>
       <div class='racial_expand'>Expand racial list</div>
       <div class='racial_collapse'>Collapse racial list
-        <br><input type='checkbox'>Kig-yar (Jackal) ×2 Jump</input>
-        <br><input type='checkbox'>Kig-Yar (Jackal) T'Vaoan ×4 Jump</input>
-        <br><input type='checkbox'>Mgalekgolo (Hunter) ×2 Charge</input>
       </div>
     </div>
-
+    <select name='attr_settings_race'>
+      <option selected='selected' value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+      <option value='4'>4</option>
+    </select>
   </div>
 
 </div>
