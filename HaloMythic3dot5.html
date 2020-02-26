@@ -237,10 +237,10 @@
       <div class='sheet-movementgs15 '>Leap</div>
 
       <script type='text/worker'>
-        on('change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
+        on('change:settings_race change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
           getAttrs([
-          'agi',
           'settings_race',
+          'agi',
           'agi_mythic',
           'agi_advancement',
           'str',
@@ -250,6 +250,7 @@
           'tou_mythic',
           'tou_advancement'
           ], function(values) {
+            var settings_race = parseInt(values['settings_race'],10)||0;
             var agi = parseInt(values['agi'],10)||0;
             var agi_mythic = parseInt(values['agi_mythic'],10)||0;
             var agi_advancement = parseInt(values['agi_advancement'],10)||0;
@@ -274,11 +275,73 @@
               sprint_move: (move_mod *8),
               jump_move:(str_mod /4),
               leap_move:(agi_mod /2),
-
               carry: (weight_mod),
               lift: (weight_mod*2),
               push: (weight_mod*4)
             });
+            if (str_mod >= agi_mod){
+              setAttrs({
+                leap_move:(str_mod /2)
+              });
+            }
+
+            // spartan+jiralhanea (carry weight *2) ____________________________
+            if(settings_race == 1){
+              setAttrs({
+                carry: (weight_mod *2),
+                lift: (weight_mod*2 *2),
+                push: (weight_mod*4 *2)
+              });
+            }
+            // end of spartan+jiralhanea _______________________________________
+
+            // Sangehili (+2 agi leap ,carry weight *2) ________________________
+            if(settings_race == 2){
+              setAttrs({
+                carry: (weight_mod *2),
+                lift: (weight_mod*2 *2),
+                push: (weight_mod*4 *2),
+                leap_move:(agi_mod /2 *2)
+              });
+              if(str_mod >= agi_mod){
+                setAttrs({
+                  leap_move:(str_mod /2 *2)
+                });
+              }
+            }
+            // end of sangehili_________________________________________________
+
+            // Ruutian+Ibie shan (*2 agi to jump)_______________________________
+            if(settings_race == 4){
+              setAttrs({
+              jump_move:(str_mod /4 *2)
+              });
+            }
+            // end of Ruutian_________________________________________________
+
+            // T'vaoan (*4 agi to jump)_________________________________________
+            if(settings_race == 5){
+              setAttrs({
+              jump_move:(str_mod /4 *4)
+              });
+            }
+            // end of sangehili_________________________________________________
+
+            // Mgalekgolo (weight = 4000, double agi to charge/run) ____________
+            if(settings_race == 7){
+              setAttrs({
+                carry: (4000),
+                lift: (4000*2),
+                push: (4000*4),
+                charge_move: (move_mod *3 *2),
+                run_move: (move_mod *6 *2)
+              });
+            }
+            // end of hunter____________________________________________________
+
+
+
+
             if (move_mod <= 0){
               setAttrs({
                 half_move: (0.5),
@@ -286,18 +349,6 @@
                 charge_move: (2),
                 run_move: (3),
                 sprint_move: (4)
-              });
-            }
-            if (str_mod >= agi_mod){
-              setAttrs({
-                leap_move:(str_mod /2)
-              });
-            }
-            if(settings_race == 2){
-              setAttrs({
-                carry: ('4000'),
-                lift: (agi_advancement),
-                push: (4000*4)
               });
             }
           });
@@ -1252,10 +1303,15 @@
       </div>
     </div>
     <select name='attr_settings_race'>
-      <option selected='selected' value='1'>1</option>
-      <option value='2'>2</option>
-      <option value='3'>3</option>
-      <option value='4'>4</option>
+      <option selected='selected' value='0'>Normal</option>
+      <option value='1'>Spartan 2/3/4</option>
+      <option value='2'>Sangheili / Elite </option>
+      <option value='1'>Jiralhanea / Brutes </option>
+      <option value='4'>Kig-yar Ruutian / H1/2/3 Jackal  </option>
+      <option value='5'>Kig-yar T'vaoan / Skirmisher </option>
+      <option value='4'>Kig-yar Ibie'shan / H4/5 Jackal  </option>
+      <option value='7'>Mgalekgolo / Hunter</option>
+      <option value='1'>Promethian knight / Hunter</option>
     </select>
   </div>
 
