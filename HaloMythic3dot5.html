@@ -6,1243 +6,1314 @@
 
 <div class='background'>
 
-<!-- character information grid ________________________________________________ -->
+  <!-- character information grid ________________________________________________ -->
 
-<div class='sheet-header_logo'>
+  <div class='sheet-header_logo'>
 
-  <!-- first column of grid: left-side fields' labels/names -->
-  <div class='sheet-gs1'><b>Character Name</b></div>
-  <div class='sheet-gs2'><b>Faction</b></div>
-  <div class='sheet-gs3'><b>Soldier Type</b></div>
-  <div class='sheet-gs4'><b>Rank</b></div>
-  <div class='sheet-gs5'><b>Build / Size</b></div>
-  <div class='sheet-gs6'><b>Specialisation</b></div>
-  <!-- second column of grid: left-side fields -->
-  <div class='sheet-gs7'><input type='text' name='attr_character_name' /></div>
-  <div class='sheet-gs8'>
-    <select name='attr_faction'>
-      <option value='1' selected='selected' />
-      <option value='2'>United Nations Space Command</option>
-      <option value='3'>Covenant</option>
-      <option value='4'>Forerunner</option>
-      <option value='5'>Other</option>
-    </select>
-  </div>
-  <div class='sheet-gs9'><input type='text' name='attr_soldier_type' /></div>
-  <div class='sheet-gs10'><input type='text' name='attr_rank' /></div>
-  <div class='sheet-gs11'><input type='text' name='attr_size' placeholder='Average' /></div>
-  <div class='sheet-gs12'><input type='text' name='attr_specialisation' /></div>
-  <!-- third column of grid: header logo -->
-  <div class='sheet-gs13'>
-    <input type='checkbox' name='attr_faction' value='1' class='sheet-hidden sheet-hider' checked>
-    <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130' width='130' /></div>
-    <input type='checkbox' name='attr_faction' value='2' class='sheet-hidden sheet-hider'>
-    <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_UNSC.png' height='130' width='130' /></div>
-    <input type='checkbox' name='attr_faction' value='3' class='sheet-hidden sheet-hider'>
-    <div><img name='logo'src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Covenant.png' height='130' width='130' /></div>
-    <input type='checkbox' name='attr_faction' value='4' class='sheet-hidden sheet-hider'>
-    <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Forerunner.png' height='130' width='130' /></div>
-    <input type='checkbox' name='attr_faction' value='5' class='sheet-hidden sheet-hider'>
-    <div><img name='logo'  src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130'  width='130' /></div>
-  </div>
-  <!-- REPLACE LOGO SOURCE ONCE COMPLETE: src='images/mythic_logo.png' -->
-  <!-- fourth column of grid: right-side fields -->
-  <div class='sheet-gs14'><input type='text' name='attr_player_name' /></div>
-  <div class='sheet-gs15'><input type='text' name='attr_sex' /></div>
-  <div class='sheet-gs16'><input type='text' name='attr_race' /></div>
-  <div class='sheet-gs17'><input type='text' name='attr_upbringing' /></div>
-  <div class='sheet-gs18'><input type='text' name='attr_environment' /></div>
-  <div class='sheet-gs19'><input type='text' name='attr_lifestyle' /></div>
-  <!-- fifth column of grid: right-side fields' labels/names -->
-  <div class='sheet-gs20'><b>Player Name</b></div>
-  <div class='sheet-gs21'><b>Gender</b></div>
-  <div class='sheet-gs22'><b>Race</b></div>
-  <div class='sheet-gs23'><b>Upbringing</b></div>
-  <div class='sheet-gs24'><b>Environment</b></div>
-  <div class='sheet-gs25'><b>Lifestyle</b></div>
-
-</div>
-<br>
-
-
-
-<!-- ______________________________ characteristics grid ______________________________ -->
-
-<div class='sheet-characteristics'>
-
-  <div>
-    <div class='sheet-characteristics_box'><button type='roll' name='STR' value='/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>STR</span></button></div>
-    <div class='sheet-characteristics_box'><input  type='text' name='attr_STR'value='0'/></div>
-    <div class='sheet-characteristics_box'><select name='attr_STR_advancement'>
-      <option value='0' selected='selected'>None +0</option>
-      <option value='5'>Simple +5</option>
-      <option value='10'>Rookie +10</option>
-      <option value='15'>Interm. +15</option>
-      <option value='20'>Trained +20</option>
-      <option value='25'>Mastery +25</option>
-    </select></div>
-  </div>
-
-  <div>
-    <div class='sheet-characteristics_box'><button type='roll' name='TOU'value='/me rolls toughness with [[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>TOU</span></button></div>
-    <div class='sheet-characteristics_box'><input  type='text' name='attr_TOU' value='0'/></div>
-    <div class='sheet-characteristics_box'><select name='attr_TOU_advancement'>
-      <option value='0' selected='selected'>None +0</option>
-      <option value='5'>Simple +5</option>
-      <option value='10'>Rookie +10</option>
-      <option value='15'>Interm. +15</option>
-      <option value='20'>Trained +20</option>
-      <option value='25'>Mastery +25</option>
-    </select></div>
-  </div>
-
-  <div>
-    <div class='sheet-characteristics_box'><button type='roll' name='AGI'  value='/me rolls agility with [[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>AGI</span></button></div>
-    <div class='sheet-characteristics_box'><input  type='text' name='attr_AGI' value='0'></div>
-    <div class='sheet-characteristics_box'><select name='attr_AGI_advancement'>
-      <option value='0' selected='selected'>None +0</option>
-      <option value='5'>Simple +5</option>
-      <option value='10'>Rookie +10</option>
-      <option value='15'>Interm. +15</option>
-      <option value='20'>Trained +20</option>
-      <option value='25'>Mastery +25</option>
-    </select></div>
-  </div>
-
-  <div>
-    <div class='sheet-characteristics_box'><button type='roll' name='WFR' value='/me rolls warfare ranged with [[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>WFR</span></button></div>
-    <div class='sheet-characteristics_box'><input  type='text' name='attr_WFR' value='0'></div>
-    <div class='sheet-characteristics_box'><select name='attr_WFR_advancement'>
-      <option value='0' selected='selected'>None +0</option>
-      <option value='5'>Simple +5</option>
-      <option value='10'>Rookie +10</option>
-      <option value='15'>Interm. +15</option>
-      <option value='20'>Trained +20</option>
-      <option value='25'>Mastery +25</option>
-    </select></div>
-  </div>
-
-  <div>
-    <div class='sheet-characteristics_box'><button type='roll' name='WFM' value='/me rolls warfare melee with [[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>WFM</span></button></div>
-    <div class='sheet-characteristics_box'><input  type='text' name='attr_WFM' value='0'></div>
-    <div class='sheet-characteristics_box'><select name='attr_WFM_advancement'>
-      <option value='0' selected='selected'>None +0</option>
-      <option value='5'>Simple +5</option>
-      <option value='10'>Rookie +10</option>
-      <option value='15'>Interm. +15</option>
-      <option value='20'>Trained +20</option>
-      <option value='25'>Mastery +25</option>
-    </select></div>
-  </div>
-
-  <div>
-    <div class='sheet-characteristics_box'><button type='roll' name='INT' value='/me rolls intellect [[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>INT</span></button></div>
-    <div class='sheet-characteristics_box'><input  type='text' name='attr_INT' value='0'></div>
-    <div class='sheet-characteristics_box'><select name='attr_INT_advancement'>
-      <option value='0' selected='selected'>None +0</option>
-      <option value='5'>Simple +5</option>
-      <option value='10'>Rookie +10</option>
-      <option value='15'>Interm. +15</option>
-      <option value='20'>Trained +20</option>
-      <option value='25'>Mastery +25</option>
-    </select></div>
-  </div>
-
-  <div>
-    <div class='sheet-characteristics_box'><button type='roll' name='PER' value='/me rolls perception with [[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>PER</span></button></div>
-    <div class='sheet-characteristics_box'><input  type='text' name='attr_PER' value='0'></div>
-    <div class='sheet-characteristics_box'><select name='attr_PER_advancement'>
-      <option value='0' selected='selected'>None +0</option>
-      <option value='5'>Simple +5</option>
-      <option value='10'>Rookie +10</option>
-      <option value='15'>Interm. +15</option>
-      <option value='20'>Trained +20</option>
-      <option value='25'>Mastery +25</option>
-    </select></div>
-  </div>
-
-  <div>
-    <div class='sheet-characteristics_box'><button type='roll' name='CR' value='/me rolls courage with [[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>CR</span></button></div>
-    <div class='sheet-characteristics_box'><input  type='text' name='attr_CR' value='0'></div>
-    <div class='sheet-characteristics_box'><select name='attr_CR_advancement'>
-      <option value='0' selected='selected'>None +0</option>
-      <option value='5'>Simple +5</option>
-      <option value='10'>Rookie +10</option>
-      <option value='15'>Interm. +15</option>
-      <option value='20'>Trained +20</option>
-      <option value='25'>Mastery +25</option>
-    </select></div>
-  </div>
-
-  <div>
-    <div class='sheet-characteristics_box'><button type='roll' name='CH' value='/me rolls charisma with [[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>CH</span></button></div>
-    <div class='sheet-characteristics_box'><input  type='text' name='attr_CH' value='0'></div>
-    <div class='sheet-characteristics_box'><select name='attr_CH_advancement'>
-      <option value='0' selected='selected'>None +0</option>
-      <option value='5'>Simple +5</option>
-      <option value='10'>Rookie +10</option>
-      <option value='15'>Interm. +15</option>
-      <option value='20'>Trained +20</option>
-      <option value='25'>Mastery +25</option>
-    </select></div>
-  </div>
-
-  <div>
-    <div class='sheet-characteristics_box'><button type='roll' name='LD'value='/me rolls leadership with [[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>LD</span></button></div>
-    <div class='sheet-characteristics_box'><input  type='text' name='attr_LD' value='0'></div>
-    <div class='sheet-characteristics_box'><select name='attr_LD_advancement'>
-      <option value='0' selected='selected'>None +0</option>
-      <option value='5'>Simple +5</option>
-      <option value='10'>Rookie +10</option>
-      <option value='15'>Interm. +15</option>
-      <option value='20'>Trained +20</option>
-      <option value='25'>Mastery +25</option>
-    </select></div>
-  </div>
-
-</div>
-<br>
-
-
-
-<!-- ______________________________ mythic characteristics, movement and pushing grid ______________________________ -->
-
-<div class='sheet-characteristics_mythic_movement_carry'>
-
-  <div class='sheet-characteristics2_mythic'>
-    <div class='sheet-mythicgs1 '><b>Mythic Characteristics</b></div>
-    <div class='sheet-mythicgs2 '><input type='text' value='0' style='width: 45px' name='attr_STR_mythic' /></div>
-    <div class='sheet-mythicgs3 '><input type='text' value='0' style='width: 45px' name='attr_TOU_mythic' /></div>
-    <div class='sheet-mythicgs4 '><input type='text' value='0' style='width: 45px' name='attr_AGI_mythic' /></div>
-    <div class='sheet-mythicgs5 '>Strength</div>
-    <div class='sheet-mythicgs6 '>Toughness</div>
-    <div class='sheet-mythicgs7 '>Agility</div>
-  </div>
-
-  <div class='sheet-characteristics2_movement'>
-    <div class='sheet-movementgs1 '><b>Character Movement</b></div>
-    <div class='sheet-movementgs2 '><input type='text' style='width: 45px' name='attr_half_move' /></div>
-    <div class='sheet-movementgs3 '><input type='text' style='width: 45px' name='attr_full_move' /></div>
-    <div class='sheet-movementgs4 '><input type='text' style='width: 45px' name='attr_charge_move' /></div>
-    <div class='sheet-movementgs5 '><input type='text' style='width: 45px' name='attr_run_move' /></div>
-    <div class='sheet-movementgs6 '><input type='text' style='width: 45px' name='attr_sprint_move' /></div>
-    <div class='sheet-movementgs7 '><input type='text' style='width: 45px' name='attr_jump_move' /></div>
-    <div class='sheet-movementgs8 '><input type='text' style='width: 45px' name='attr_leap_move' /></div>
-    <div class='sheet-movementgs9 '>Half</div>
-    <div class='sheet-movementgs10 '>Full</div>
-    <div class='sheet-movementgs11 '>Charge</div>
-    <div class='sheet-movementgs12 '>Run</div>
-    <div class='sheet-movementgs13 '>Sprint</div>
-    <div class='sheet-movementgs14 '>Jump</div>
-    <div class='sheet-movementgs15 '>Leap</div>
-
-    <script type='text/worker'>
-      on('change:agi change:agi_mythic change:agi_advancement', function() {
-        getAttrs([
-        'agi',
-        'agi_mythic',
-        'agi_advancement'
-        ], function(values) {
-          var agi = parseInt(values['agi'],10)||0;
-          var agi_mythic = parseInt(values['agi_mythic'],10)||0;
-          var agi_advancement = parseInt(values['agi_advancement'],10)||0;
-          var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic)
-          setAttrs({
-            half_move: (move_mod),
-            full_move: (move_mod *2),
-            charge_move: (move_mod *3),
-            run_move: (move_mod *6),
-            sprint_move: (move_mod *8)
-          });
-          if (move_mod <= 0) {
-            setAttrs({
-              half_move: (0.5),
-              full_move: (1),
-              charge_move: (2),
-              run_move: (3),
-              sprint_move: (4)
-            });
-          }
-        });
-      });
-    </script>
-  </div>
-
-  <div class='sheet-characteristics2_carry'>
-    <div class='sheet-carrygs1 '><b>Carrying Capacity</b></div>
-    <div class='sheet-carrygs2 '><input type='text' style='width: 45px' name='attr_carry' /></div>
-    <div class='sheet-carrygs3 '><input type='text' style='width: 45px' name='attr_lift' /></div>
-    <div class='sheet-carrygs4 '><input type='text' style='width: 45px' name='attr_push' /></div>
-    <div class='sheet-carrygs5 '>Carry</div>
-    <div class='sheet-carrygs6 '>Lift</div>
-    <div class='sheet-carrygs7 '>Push</div>
-
-    <script type='text/worker'>
-      on('change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
-        getAttrs([
-        'str',
-        'str_mythic',
-        'str_advancement',
-        'tou',
-        'tou_mythic',
-        'tou_advancement'
-        ], function(values) {
-          var str = parseInt(values['str'],10)||0;
-          var str_mythic = parseInt(values['str_mythic'],10)||0;
-          var str_advancement = parseInt(values['str_advancement'],10)||0;
-          var tou = parseInt(values['tou'],10)||0;
-          var tou_mythic = parseInt(values['tou_mythic'],10)||0;
-          var tou_advancement = parseInt(values['tou_advancement'],10)||0;
-          var weight_mod = str+str_advancement+tou+tou_advancement+(str_mythic+tou_mythic)*10;
-          setAttrs({
-            carry: (weight_mod),
-            lift: (weight_mod*2),
-            push: (weight_mod*4)
-          });
-        });
-      });
-    </script>
-  </div>
-
-</div>
-<hr style='border-top: 1px dotted'>
-
-
-
-<!-- ______________________________ initiative/sheet tabs grid ______________________________ -->
-
-<div class='sheet-initiative_tabs_main'>
-  <div class='sheet-initiative_tabs_initiative'>
-    <div class='sheet-initiative_tabs_boxes'><button name='initiative' type='roll'
-      value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'
-      <span>Initiative</span></button></div>
-      <div style='display: none'><input name='attr_initmod0' value='floor' /></div>
-      <div class='sheet-initiative_tabs_boxes'><select name='attr_initmod1'>
-        <option value='1d10' selected='selected'>Standard</option>
-        <option value='2d10k1'>Fast Foot</option>
-        <option value='?{dice|1d10}'>Custom</option>
-      </select></div>
-      <div class='sheet-initiative_tabs_boxes'>+</div>
-      <div class='sheet-initiative_tabs_boxes'><input type='number' name='attr_initmod2' value='0' /></div>
-      <div class='sheet-initiative_tabs_boxes'>+</div>
-      <div class='sheet-initiative_tabs_boxes'><select name='attr_initmod3'>
-        <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
-        <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
-        <option value='0'>N/A</option>
+    <!-- first column of grid: left-side fields' labels/names -->
+    <div class='sheet-gs1'><b>Character Name</b></div>
+    <div class='sheet-gs2'><b>Faction</b></div>
+    <div class='sheet-gs3'><b>Soldier Type</b></div>
+    <div class='sheet-gs4'><b>Rank</b></div>
+    <div class='sheet-gs5'><b>Build / Size</b></div>
+    <div class='sheet-gs6'><b>Specialisation</b></div>
+    <!-- second column of grid: left-side fields -->
+    <div class='sheet-gs7'><input type='text' name='attr_character_name' /></div>
+    <div class='sheet-gs8'>
+      <select name='attr_faction'>
+        <option value='1' selected='selected' />
+        <option value='2'>United Nations Space Command</option>
+        <option value='3'>Covenant</option>
+        <option value='4'>Forerunner</option>
+        <option value='5'>Other</option>
       </select>
     </div>
-  </div>
-
-  <div class='sheet-initiative_sheet_tabs'>
-    <input type='checkbox' name='attr_sheetTab' value='core' class='sheet-hidden sheet-core_bttn' checked>
-    <button class='sheet-core_bttn' type='action' name='act_core'>Core</button>
-    <input type='checkbox' name='attr_sheetTab' value='equipment' class='sheet-hidden sheet-core_bttn'>
-    <button class='sheet-equipment_bttn' type='action' name='act_equipment'>Equipment</button>
-    <input type='checkbox' name='attr_sheetTab' value='medical' class='sheet-hidden sheet-core_bttn'>
-    <button class='sheet-medical_bttn' type='action' name='act_medical'>Medical</button>
-    <input type='checkbox' name='attr_sheetTab' value='advancements' class='sheet-hidden sheet-core_bttn'>
-    <button class='sheet-advancements_bttn' type='action' name='act_advancements'>Advancements</button>
-    <input type='checkbox' name='attr_sheetTab' value='journal' class='sheet-hidden sheet-core_bttn'>
-    <button class='sheet-journal_bttn' type='action' name='act_journal'>Journal</button>
-    <input type='checkbox' name='attr_sheetTab' value='vehicles' class='sheet-hidden sheet-core_bttn'>
-    <button class='sheet-vehicles_bttn' type='action' name='act_vehicles'>Vehicles</button>
-    <input type='checkbox' name='attr_sheetTab' value='settings' class='sheet-hidden sheet-core_bttn'>
-    <button class='sheet-settings_bttn' type='action' name='act_settings'>Settings</button>
-  </div>
-</div>
-
-<hr style='border-top: 1px dotted'>
-
-<!-- ______________________________ SHEET TABS LOGIC ______________________________ -->
-<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='core' />
-<script type='text/worker'>
-  const buttonlist = ['core','equipment','medical','advancements','journal','vehicles','settings'];
-  buttonlist.forEach(button => {
-    on(`clicked:${button}`, function() {
-      setAttrs({
-        sheetTab: button
-      });
-    });
-  });
-</script>
-
-
-
-<!-- ______________________________ start of minimisable infographic ______________________________ -->
-
-<div class='sheet-minimisable_infographic_main box'>
-  <input type='checkbox' class='sheet-minimisable_switch'>
-  <div class='sheet-minimisable_infographic_a'>
-    a short single line containing all the important info you might need
-  </div>
-  <div class='sheet-minimisable_infographic_b'>
-    a long
-    <div>list</div>
-    of text<br>
-    with
-    a bunch<br>
-    of information
-  </div>
-</div>
-
-
-
-<!-- ______________________________ sheet tabs _________________________________ -->
-
-
-
-
-<!-- ______________________________ start of core ______________________________ -->
-
-<div class='sheet-core'>
-
-  <!-- Core Data -->
-  <div class='sheet-core_lists box'>
-    <div class='sheet-core_lists1' style='padding: 1px; margin-right: 10px'>
-      <h3><b>Skillset</b></h3>
-      <fieldset name='skills' class='repeating_skills'>
-        <input type='text' name='attr_skill' />
-      </fieldset>
+    <div class='sheet-gs9'><input type='text' name='attr_soldier_type' /></div>
+    <div class='sheet-gs10'><input type='text' name='attr_rank' /></div>
+    <div class='sheet-gs11'><input type='text' name='attr_size' placeholder='Average' /></div>
+    <div class='sheet-gs12'><input type='text' name='attr_specialisation' /></div>
+    <!-- third column of grid: header logo -->
+    <div class='sheet-gs13'>
+      <input type='checkbox' name='attr_faction' value='1' class='sheet-hidden sheet-hider' checked>
+      <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130' width='130' /></div>
+      <input type='checkbox' name='attr_faction' value='2' class='sheet-hidden sheet-hider'>
+      <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_UNSC.png' height='130' width='130' /></div>
+      <input type='checkbox' name='attr_faction' value='3' class='sheet-hidden sheet-hider'>
+      <div><img name='logo'src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Covenant.png' height='130' width='130' /></div>
+      <input type='checkbox' name='attr_faction' value='4' class='sheet-hidden sheet-hider'>
+      <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Forerunner.png' height='130' width='130' /></div>
+      <input type='checkbox' name='attr_faction' value='5' class='sheet-hidden sheet-hider'>
+      <div><img name='logo'  src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130'  width='130' /></div>
     </div>
-    <div class='sheet-core_lists2' style='padding: 1px'>
-      <h3><b>Education</b></h3>
-      <fieldset name='skills' class='repeating_education'>
-        <input type='text' name='attr_education' />
-      </fieldset>
-    </div>
-    <div class='sheet-core_lists3' style='padding: 1px'>
-      <h3><b>Languages</b></h3>
-      <fieldset name='skills' class='repeating_languages'>
-        <input type='text' name='attr_language' />
-      </fieldset>
-    </div>
+    <!-- REPLACE LOGO SOURCE ONCE COMPLETE: src='images/mythic_logo.png' -->
+    <!-- fourth column of grid: right-side fields -->
+    <div class='sheet-gs14'><input type='text' name='attr_player_name' /></div>
+    <div class='sheet-gs15'><input type='text' name='attr_sex' /></div>
+    <div class='sheet-gs16'><input type='text' name='attr_race' /></div>
+    <div class='sheet-gs17'><input type='text' name='attr_upbringing' /></div>
+    <div class='sheet-gs18'><input type='text' name='attr_environment' /></div>
+    <div class='sheet-gs19'><input type='text' name='attr_lifestyle' /></div>
+    <!-- fifth column of grid: right-side fields' labels/names -->
+    <div class='sheet-gs20'><b>Player Name</b></div>
+    <div class='sheet-gs21'><b>Gender</b></div>
+    <div class='sheet-gs22'><b>Race</b></div>
+    <div class='sheet-gs23'><b>Upbringing</b></div>
+    <div class='sheet-gs24'><b>Environment</b></div>
+    <div class='sheet-gs25'><b>Lifestyle</b></div>
+
   </div>
   <br>
-  <h2>Abilities</h2>
-  <input type='text' name='ability' placeholder='SQUAD UP'>
-  <input type='checkbox' name='ability_desc' class='collapsible_ability_block_switch'>
-  <div style='text-align: right; margin-right: 6px'><b>Expand or collapse ability's descriptor block ^</b></div>
-  <div class='collapsible_ability_description_window_a' ></div>
-  <textarea name='attr_ability' class='collapsible_ability_description_window_b'
-  placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
-  Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
-  <fieldset name='abilities' class='repeating_abilities'>
-    <input type='text' name='attr_ability_r' placeholder='Write ability / trait name here'>
-    <input type='checkbox' class='collapsible_ability_block_switch'>
-    <div class='collapsible_ability_description_window_a' ></div>
-    <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b'></textarea>
-  </fieldset>
 
-</div>
 
-<div class='sheet-equipment'>
 
-  <!-- Equipment -->
-  <span>Gear and Weapons go here</span>
+  <!-- ______________________________ characteristics grid ______________________________ -->
 
-</div>
-<div class='sheet-medical'>
-  <!-- Medical -->
-  <div class='sheet-medical-grid'>
-    <div class='medicalg1'>
-      Finger/toe
-      <select name='attr_medical_finger/toe'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-15</option>
-        <option value='2'>16-30</option>
-        <option value='3'>31-45</option>
-        <option value='4'>46+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_medical_finger/toe' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_medical_finger/toe' value='1' class='sheet-hidden sheet-hider' >
-        <div>-1 WFM and WFR to Finger, -2 Agility to Toe</div>
-        <input type='checkbox' name='attr_medical_finger/toe' value='2' class='sheet-hidden sheet-hider' >
-        <div>-2 WFM and WFR to Finger, -4 Agility to Toe</div>
-        <input type='checkbox' name='attr_medical_finger/toe' value='3' class='sheet-hidden sheet-hider' >
-        <div>Body Location damaged. No longer usable. -3 Strength to Finger, -3 Agility to Toe</div>
-        <input type='checkbox' name='attr_medical_finger/toe' value='4' class='sheet-hidden sheet-hider' >
-        <div>Body Locaton Destroyed. -4 Strength to Finger, -4Agility to Toe</div>
+  <div class='sheet-characteristics'>
+
+    <div>
+      <div class='sheet-characteristics_box'><button type='roll' name='STR' value='/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>STR</span></button></div>
+      <div class='sheet-characteristics_box'><input  type='text' name='attr_STR'value='0'/></div>
+      <div class='sheet-characteristics_box'><select name='attr_STR_advancement'>
+        <option value='0' selected='selected'>None +0</option>
+        <option value='5'>Simple +5</option>
+        <option value='10'>Rookie +10</option>
+        <option value='15'>Interm. +15</option>
+        <option value='20'>Trained +20</option>
+        <option value='25'>Mastery +25</option>
+      </select></div>
+    </div>
+
+    <div>
+      <div class='sheet-characteristics_box'><button type='roll' name='TOU'value='/me rolls toughness with [[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>TOU</span></button></div>
+      <div class='sheet-characteristics_box'><input  type='text' name='attr_TOU' value='0'/></div>
+      <div class='sheet-characteristics_box'><select name='attr_TOU_advancement'>
+        <option value='0' selected='selected'>None +0</option>
+        <option value='5'>Simple +5</option>
+        <option value='10'>Rookie +10</option>
+        <option value='15'>Interm. +15</option>
+        <option value='20'>Trained +20</option>
+        <option value='25'>Mastery +25</option>
+      </select></div>
+    </div>
+
+    <div>
+      <div class='sheet-characteristics_box'><button type='roll' name='AGI'  value='/me rolls agility with [[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>AGI</span></button></div>
+      <div class='sheet-characteristics_box'><input  type='text' name='attr_AGI' value='0'></div>
+      <div class='sheet-characteristics_box'><select name='attr_AGI_advancement'>
+        <option value='0' selected='selected'>None +0</option>
+        <option value='5'>Simple +5</option>
+        <option value='10'>Rookie +10</option>
+        <option value='15'>Interm. +15</option>
+        <option value='20'>Trained +20</option>
+        <option value='25'>Mastery +25</option>
+      </select></div>
+    </div>
+
+    <div>
+      <div class='sheet-characteristics_box'><button type='roll' name='WFR' value='/me rolls warfare ranged with [[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>WFR</span></button></div>
+      <div class='sheet-characteristics_box'><input  type='text' name='attr_WFR' value='0'></div>
+      <div class='sheet-characteristics_box'><select name='attr_WFR_advancement'>
+        <option value='0' selected='selected'>None +0</option>
+        <option value='5'>Simple +5</option>
+        <option value='10'>Rookie +10</option>
+        <option value='15'>Interm. +15</option>
+        <option value='20'>Trained +20</option>
+        <option value='25'>Mastery +25</option>
+      </select></div>
+    </div>
+
+    <div>
+      <div class='sheet-characteristics_box'><button type='roll' name='WFM' value='/me rolls warfare melee with [[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>WFM</span></button></div>
+      <div class='sheet-characteristics_box'><input  type='text' name='attr_WFM' value='0'></div>
+      <div class='sheet-characteristics_box'><select name='attr_WFM_advancement'>
+        <option value='0' selected='selected'>None +0</option>
+        <option value='5'>Simple +5</option>
+        <option value='10'>Rookie +10</option>
+        <option value='15'>Interm. +15</option>
+        <option value='20'>Trained +20</option>
+        <option value='25'>Mastery +25</option>
+      </select></div>
+    </div>
+
+    <div>
+      <div class='sheet-characteristics_box'><button type='roll' name='INT' value='/me rolls intellect [[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>INT</span></button></div>
+      <div class='sheet-characteristics_box'><input  type='text' name='attr_INT' value='0'></div>
+      <div class='sheet-characteristics_box'><select name='attr_INT_advancement'>
+        <option value='0' selected='selected'>None +0</option>
+        <option value='5'>Simple +5</option>
+        <option value='10'>Rookie +10</option>
+        <option value='15'>Interm. +15</option>
+        <option value='20'>Trained +20</option>
+        <option value='25'>Mastery +25</option>
+      </select></div>
+    </div>
+
+    <div>
+      <div class='sheet-characteristics_box'><button type='roll' name='PER' value='/me rolls perception with [[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>PER</span></button></div>
+      <div class='sheet-characteristics_box'><input  type='text' name='attr_PER' value='0'></div>
+      <div class='sheet-characteristics_box'><select name='attr_PER_advancement'>
+        <option value='0' selected='selected'>None +0</option>
+        <option value='5'>Simple +5</option>
+        <option value='10'>Rookie +10</option>
+        <option value='15'>Interm. +15</option>
+        <option value='20'>Trained +20</option>
+        <option value='25'>Mastery +25</option>
+      </select></div>
+    </div>
+
+    <div>
+      <div class='sheet-characteristics_box'><button type='roll' name='CR' value='/me rolls courage with [[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>CR</span></button></div>
+      <div class='sheet-characteristics_box'><input  type='text' name='attr_CR' value='0'></div>
+      <div class='sheet-characteristics_box'><select name='attr_CR_advancement'>
+        <option value='0' selected='selected'>None +0</option>
+        <option value='5'>Simple +5</option>
+        <option value='10'>Rookie +10</option>
+        <option value='15'>Interm. +15</option>
+        <option value='20'>Trained +20</option>
+        <option value='25'>Mastery +25</option>
+      </select></div>
+    </div>
+
+    <div>
+      <div class='sheet-characteristics_box'><button type='roll' name='CH' value='/me rolls charisma with [[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>CH</span></button></div>
+      <div class='sheet-characteristics_box'><input  type='text' name='attr_CH' value='0'></div>
+      <div class='sheet-characteristics_box'><select name='attr_CH_advancement'>
+        <option value='0' selected='selected'>None +0</option>
+        <option value='5'>Simple +5</option>
+        <option value='10'>Rookie +10</option>
+        <option value='15'>Interm. +15</option>
+        <option value='20'>Trained +20</option>
+        <option value='25'>Mastery +25</option>
+      </select></div>
+    </div>
+
+    <div>
+      <div class='sheet-characteristics_box'><button type='roll' name='LD'value='/me rolls leadership with [[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span>LD</span></button></div>
+      <div class='sheet-characteristics_box'><input  type='text' name='attr_LD' value='0'></div>
+      <div class='sheet-characteristics_box'><select name='attr_LD_advancement'>
+        <option value='0' selected='selected'>None +0</option>
+        <option value='5'>Simple +5</option>
+        <option value='10'>Rookie +10</option>
+        <option value='15'>Interm. +15</option>
+        <option value='20'>Trained +20</option>
+        <option value='25'>Mastery +25</option>
+      </select></div>
+    </div>
+
+  </div>
+  <br>
+
+
+
+  <!-- ______________________________ mythic characteristics, movement and pushing grid ______________________________ -->
+
+  <div class='sheet-characteristics_mythic_movement_carry'>
+
+    <div class='sheet-characteristics2_mythic'>
+      <div class='sheet-mythicgs1 '><b>Mythic Characteristics</b></div>
+      <div class='sheet-mythicgs2 '><input type='text' value='0' style='width: 45px' name='attr_STR_mythic' /></div>
+      <div class='sheet-mythicgs3 '><input type='text' value='0' style='width: 45px' name='attr_TOU_mythic' /></div>
+      <div class='sheet-mythicgs4 '><input type='text' value='0' style='width: 45px' name='attr_AGI_mythic' /></div>
+      <div class='sheet-mythicgs5 '>Strength</div>
+      <div class='sheet-mythicgs6 '>Toughness</div>
+      <div class='sheet-mythicgs7 '>Agility</div>
+    </div>
+
+    <div class='sheet-characteristics2_movement'>
+      <div class='sheet-movementgs1 '><b>Character Movement</b></div>
+      <div class='sheet-movementgs2 '><input type='text' style='width: 45px' name='attr_half_move' /></div>
+      <div class='sheet-movementgs3 '><input type='text' style='width: 45px' name='attr_full_move' /></div>
+      <div class='sheet-movementgs4 '><input type='text' style='width: 45px' name='attr_charge_move' /></div>
+      <div class='sheet-movementgs5 '><input type='text' style='width: 45px' name='attr_run_move' /></div>
+      <div class='sheet-movementgs6 '><input type='text' style='width: 45px' name='attr_sprint_move' /></div>
+      <div class='sheet-movementgs7 '><input type='text' style='width: 45px' name='attr_jump_move' /></div>
+      <div class='sheet-movementgs8 '><input type='text' style='width: 45px' name='attr_leap_move' /></div>
+      <div class='sheet-movementgs9 '>Half</div>
+      <div class='sheet-movementgs10 '>Full</div>
+      <div class='sheet-movementgs11 '>Charge</div>
+      <div class='sheet-movementgs12 '>Run</div>
+      <div class='sheet-movementgs13 '>Sprint</div>
+      <div class='sheet-movementgs14 '>Jump</div>
+      <div class='sheet-movementgs15 '>Leap</div>
+
+      <script type='text/worker'>
+        on('change:settings_race change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
+          getAttrs([
+          'settings_race',
+          'agi',
+          'agi_mythic',
+          'agi_advancement',
+          'str',
+          'str_mythic',
+          'str_advancement',
+          'tou',
+          'tou_mythic',
+          'tou_advancement'
+          ], function(values) {
+            var settings_race = parseInt(values['settings_race'],10)||0;
+            var agi = parseInt(values['agi'],10)||0;
+            var agi_mythic = parseInt(values['agi_mythic'],10)||0;
+            var agi_advancement = parseInt(values['agi_advancement'],10)||0;
+            var str = parseInt(values['str'],10)||0;
+            var str_mythic = parseInt(values['str_mythic'],10)||0;
+            var str_advancement = parseInt(values['str_advancement'],10)||0;
+            var tou = parseInt(values['tou'],10)||0;
+            var tou_mythic = parseInt(values['tou_mythic'],10)||0;
+            var tou_advancement = parseInt(values['tou_advancement'],10)||0;
+            var weight_mod = str+str_advancement+tou+tou_advancement+(str_mythic+tou_mythic)*10;
+            var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
+            var str_mod = str+str_advancement;
+            var agi_mod = agi+agi_advancement;
+
+            // normal no modifiers _____________________________________________
+
+            setAttrs({
+              half_move: (move_mod),
+              full_move: (move_mod *2),
+              charge_move: (move_mod *3),
+              run_move: (move_mod *6),
+              sprint_move: (move_mod *8),
+              jump_move:(str_mod /4),
+              leap_move:(agi_mod /2),
+              carry: (weight_mod),
+              lift: (weight_mod*2),
+              push: (weight_mod*4)
+            });
+            if (str_mod >= agi_mod){
+              setAttrs({
+                leap_move:(str_mod /2)
+              });
+            }
+
+            // spartan+jiralhanea (carry weight *2) ____________________________
+            if(settings_race == 1){
+              setAttrs({
+                carry: (weight_mod *2),
+                lift: (weight_mod*2 *2),
+                push: (weight_mod*4 *2)
+              });
+            }
+            // end of spartan+jiralhanea _______________________________________
+
+            // Sangehili (+2 agi leap ,carry weight *2) ________________________
+            if(settings_race == 2){
+              setAttrs({
+                carry: (weight_mod *2),
+                lift: (weight_mod*2 *2),
+                push: (weight_mod*4 *2),
+                leap_move:(agi_mod /2 *2)
+              });
+              if(str_mod >= agi_mod){
+                setAttrs({
+                  leap_move:(str_mod /2 *2)
+                });
+              }
+            }
+            // end of sangehili_________________________________________________
+
+            // Ruutian+Ibie shan (*2 agi to jump)_______________________________
+            if(settings_race == 4){
+              setAttrs({
+              jump_move:(str_mod /4 *2)
+              });
+            }
+            // end of Ruutian_________________________________________________
+
+            // T'vaoan (*4 agi to jump)_________________________________________
+            if(settings_race == 5){
+              setAttrs({
+              jump_move:(str_mod /4 *4)
+              });
+            }
+            // end of sangehili_________________________________________________
+
+            // Mgalekgolo (weight = 4000, double agi to charge/run) ____________
+            if(settings_race == 7){
+              setAttrs({
+                carry: (4000),
+                lift: (4000*2),
+                push: (4000*4),
+                charge_move: (move_mod *3 *2),
+                run_move: (move_mod *6 *2)
+              });
+            }
+            // end of hunter____________________________________________________
+
+
+
+
+            if (move_mod <= 0){
+              setAttrs({
+                half_move: (0.5),
+                full_move: (1),
+                charge_move: (2),
+                run_move: (3),
+                sprint_move: (4)
+              });
+            }
+          });
+        });
+      </script>
+    </div>
+
+
+    <div class='sheet-characteristics2_carry'>
+      <div class='sheet-carrygs1 '><b>Carrying Capacity</b></div>
+      <div class='sheet-carrygs2 '><input type='text' style='width: 45px' name='attr_carry' /></div>
+      <div class='sheet-carrygs3 '><input type='text' style='width: 45px' name='attr_lift' /></div>
+      <div class='sheet-carrygs4 '><input type='text' style='width: 45px' name='attr_push' /></div>
+      <div class='sheet-carrygs5 '>Carry</div>
+      <div class='sheet-carrygs6 '>Lift</div>
+      <div class='sheet-carrygs7 '>Push</div>
+    </div>
+
+  </div>
+  <hr style='border-top: 1px dotted'>
+
+
+
+  <!-- ______________________________ initiative/sheet tabs grid ______________________________ -->
+
+  <div class='sheet-initiative_tabs_main'>
+    <div class='sheet-initiative_tabs_initiative'>
+      <div class='sheet-initiative_tabs_boxes'><button name='initiative' type='roll'
+        value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'
+        <span>Initiative</span></button></div>
+        <div style='display: none'><input name='attr_initmod0' value='floor' /></div>
+        <div class='sheet-initiative_tabs_boxes'><select name='attr_initmod1'>
+          <option value='1d10' selected='selected'>Standard</option>
+          <option value='2d10k1'>Fast Foot</option>
+          <option value='?{dice|1d10}'>Custom</option>
+        </select></div>
+        <div class='sheet-initiative_tabs_boxes'>+</div>
+        <div class='sheet-initiative_tabs_boxes'><input type='number' name='attr_initmod2' value='0' /></div>
+        <div class='sheet-initiative_tabs_boxes'>+</div>
+        <div class='sheet-initiative_tabs_boxes'><select name='attr_initmod3'>
+          <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
+          <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
+          <option value='0'>N/A</option>
+        </select>
       </div>
     </div>
 
-    <div class='medicalg2'>
-      Heart
-      <select name='attr_medical_heart'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-30</option>
-        <option value='3'>31-40</option>
-        <option value='4'>41-59</option>
-        <option value='5'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_medical_heart' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_medical_heart' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 Strength, Toughness, Agility</div>
-        <input type='checkbox' name='attr_medical_heart' value='2' class='sheet-hidden sheet-hider'>
-        <div>-5 Strength, Toughness, Agility</div>
-        <input type='checkbox' name='attr_medical_heart' value='3' class='sheet-hidden sheet-hider'>
-        <div>-10 Strength, Toughness, Agility</div>
-        <input type='checkbox' name='attr_medical_heart' value='4' class='sheet-hidden sheet-hider'>
-        <div>Body Location damaged. +10 Fatigue, -15 Strength, Toughness, Agility</div>
-        <input type='checkbox' name='attr_medical_heart' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Locaton Destroyed, instant death</div>
-      </div>
-    </div>
-
-    <div class='medicalg3'>
-      Neck
-      <select name='attr_neck'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_neck' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_neck' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 Toughness</div>
-        <input type='checkbox' name='attr_neck' value='2' class='sheet-hidden sheet-hider'>
-        <div>-5 Toughness</div>
-        <input type='checkbox' name='attr_neck' value='3' class='sheet-hidden sheet-hider'>
-        <div>-10 Toughness</div>
-        <input type='checkbox' name='attr_neck' value='4' class='sheet-hidden sheet-hider'>
-        <div>-10 Toughness, +1 Fatigue</div>
-        <input type='checkbox' name='attr_neck' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location damaged. -20 Toughness, Paralyzed and Helpless</div>
-        <input type='checkbox' name='attr_neck' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, instant deaths</div>
-      </div>
-    </div>
-
-    <div class='medicalg4'>
-      Skull/brain
-      <select name='attr_skull/brain'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-30</option>
-        <option value='3'>31-40</option>
-        <option value='4'>41-59</option>
-        <option value='5'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_skull/brain' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_skull/brain' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 Perception, Intellect, Warfare Range, Warfare Melee</div>
-        <input type='checkbox' name='attr_skull/brain' value='2' class='sheet-hidden sheet-hider'>
-        <div>-5 Perception, Intellect, Warfare Range, Warfare Melee</div>
-        <input type='checkbox' name='attr_skull/brain' value='3' class='sheet-hidden sheet-hider'>
-        <div>-10 Perception, Intellect, Warfare Range, Warfare Melee</div>
-        <input type='checkbox' name='attr_skull/brain' value='4' class='sheet-hidden sheet-hider'>
-        <div>Body Location damaged. +10 Fatigue, -15 Perception, Intellect, Warfare Range, Warfare Melee</div>
-        <input type='checkbox' name='attr_skull/brain' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, instant death</div>
-      </div>
-    </div>
-
-    <div class='medicalg5'>
-      Nose/ear
-      <select name='attr_nose/ear'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_nose/ear' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_nose/ear' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 Perception to Smelling or Hearing Perception Tests</div>
-        <input type='checkbox' name='attr_nose/ear' value='2' class='sheet-hidden sheet-hider'>
-        <div>-5 Perception to Smelling or Hearing Perception Tests</div>
-        <input type='checkbox' name='attr_nose/ear' value='3' class='sheet-hidden sheet-hider'>
-        <div>-10 Perception to Smelling or Hearing Perception Tests</div>
-        <input type='checkbox' name='attr_nose/ear' value='4' class='sheet-hidden sheet-hider'>
-        <div>-15 Perception to Smelling or Hearing Perception Tests</div>
-        <input type='checkbox' name='attr_nose/ear' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location broken, -20 Perception to Smelling or Hearing Perception Tests</div>
-        <input type='checkbox' name='attr_nose/ear' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, cannot make Smelling Tests, or halves Perception for Hearing Tests</div>
-      </div>
-    </div>
-
-    <div class='medicalg6'>
-      Arm/leg
-      <select name='attr_arm/leg'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_arm/leg' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_arm/leg' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 Strength to Arm, or -2 Agility to Leg</div>
-        <input type='checkbox' name='attr_arm/leg' value='2' class='sheet-hidden sheet-hider'>
-        <div>-5 Strength to Arm, or -5 Agility to Leg</div>
-        <input type='checkbox' name='attr_arm/leg' value='3' class='sheet-hidden sheet-hider'>
-        <div>-10 Strength to Arm, or -10 Agility to Leg</div>
-        <input type='checkbox' name='attr_arm/leg' value='4' class='sheet-hidden sheet-hider'>
-        <div>-15 Strength to Arm, or -15 Agility to Leg</div>
-        <input type='checkbox' name='attr_arm/leg' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location damaged, -15 Strength to Arm, or-15 Agility to Leg. -5 to any Action with thislimb.</div>
-        <input type='checkbox' name='attr_arm/leg' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, limb cannot be used. +3 Fatigue.</div>
-      </div>
-    </div>
-
-    <div class='medicalg7'>
-      Small/large intestines
-      <select name='attr_small/large intestines'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_small/large intestines' value='0' class='sheet-hidden sheet-hider' checked >
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_small/large intestines' value='1' class='sheet-hidden sheet-hider' >
-        <div>-2 Toughness, -2 Agility</div>
-        <input type='checkbox' name='attr_small/large intestines' value='2' class='sheet-hidden sheet-hider'>
-        <div>-4 Toughness, -4 Agility</div>
-        <input type='checkbox' name='attr_small/large intestines' value='3' class='sheet-hidden sheet-hider'>
-        <div>-6 Toughness, -6 Agility</div>
-        <input type='checkbox' name='attr_small/large intestines' value='4' class='sheet-hidden sheet-hider'>
-        <div>-10 Toughness, -10 Agility</div>
-        <input type='checkbox' name='attr_small/large intestines' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location damaged, -15 Toughness, -15 Agility. +2 Fatigue</div>
-        <input type='checkbox' name='attr_small/large intestines' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, -20 Toughness, -20 Agility. +5 Fatigue.</div>
-      </div>
-    </div>
-
-    <div class='medicalg8'>
-      Lung
-      <select name='attr_lung'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_lung' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_lung' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 Toughness, Stunned for 1D5-Toughness Modifier in Rounds.</div>
-        <input type='checkbox' name='attr_lung' value='2' class='sheet-hidden sheet-hider'>
-        <div>-5 Toughness, Stunned for 2D5-Toughness Modifier in Rounds.</div>
-        <input type='checkbox' name='attr_lung' value='3' class='sheet-hidden sheet-hider'>
-        <div>-10 Toughness, Stunned for 3D5-Toughness Modifier in Rounds.</div>
-        <input type='checkbox' name='attr_lung' value='4' class='sheet-hidden sheet-hider'>
-        <div>-15 Toughness, Stunned for 4D5-Toughness Modifier in Rounds.</div>
-        <input type='checkbox' name='attr_lung' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location damaged, -20 Toughness, Stunned for 5D5-Toughness Modifier in Rounds.</div>
-        <input type='checkbox' name='attr_lung' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, -25 Toughness, Stunned for 6D5-Toughness Modifier in Rounds. Character will take 2 Wounds whenever they take a Movement Action quicker than 2 Meters per Turn.</div>
-      </div>
-    </div>
-
-    <div class='medicalg9'>
-      Kidney/stomach/liver/spleen
-      <select name='attr_kidney/stomach/liver/spleen'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 Toughness, -2 Agility</div>
-        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='2' class='sheet-hidden sheet-hider'>
-        <div>-4 Toughness, -4 Agility</div>
-        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='3' class='sheet-hidden sheet-hider'>
-        <div>-6 Toughness, -6 Agility</div>
-        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='4' class='sheet-hidden sheet-hider'>
-        <div>-10 Toughness, -10 Agility</div>
-        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location damaged, -15 Toughness, -15 Agility. +1 Fatigue</div>
-        <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, -20 Toughness, -20 Agility. +5 Fatigue.</div>
-      </div>
-    </div>
-
-    <div class='medicalg10'>
-      Knee/ankle/shoulder/elbow
-      <select name='attr_knee/ankle/shoulder/elbow'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 Strength, -2 Agility</div>
-        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='2' class='sheet-hidden sheet-hider'>
-        <div>-4 Strength, -4 Agility</div>
-        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='3' class='sheet-hidden sheet-hider'>
-        <div>-6 Strength, -6 Agility</div>
-        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='4' class='sheet-hidden sheet-hider'>
-        <div>-10 Strength, -10 Agility</div>
-        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location damaged, -15 Strength, -15 Agility. +1 Fatigue</div>
-        <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, -20 Strength, -20 Agility. +5 Fatigue.</div>
-      </div>
-    </div>
-
-    <div class='medicalg11'>
-      Eye
-      <select name='attr_eye'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59+</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_eye' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_eye' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 eyesight-based Perception Tests</div>
-        <input type='checkbox' name='attr_eye' value='2' class='sheet-hidden sheet-hider'>
-        <div>-5 eyesight-based Perception Tests</div>
-        <input type='checkbox' name='attr_eye' value='3' class='sheet-hidden sheet-hider'>
-        <div>-10 eyesight-based Perception Tests</div>
-        <input type='checkbox' name='attr_eye' value='4' class='sheet-hidden sheet-hider'>
-        <div>-12 eyesight-based Perception Tests</div>
-        <input type='checkbox' name='attr_eye' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location broken, -15 eyesight-based Perception Tests</div>
-        <input type='checkbox' name='attr_eye' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, Character is blinded for 1D5 Rounds. -20 eye-based Perception Tests.</div>
-      </div>
-    </div>
-
-    <div class='medicalg12'>
-      Mouth
-      <select name='attr_mouth'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59+</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_mouth' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_mouth' value='1' class='sheet-hidden sheet-hider'>
-        <div>-1 Toughness, -5 to Speech-based Tests.</div>
-        <input type='checkbox' name='attr_mouth' value='2' class='sheet-hidden sheet-hider'>
-        <div>-3 Toughness, -5 to Speech-based Tests.</div>
-        <input type='checkbox' name='attr_mouth' value='3' class='sheet-hidden sheet-hider'>
-        <div>-5 Toughness, -10 to Speech-based Tests.</div>
-        <input type='checkbox' name='attr_mouth' value='4' class='sheet-hidden sheet-hider'>
-        <div>-8 Toughness, -10 to Speech-based Tests.</div>
-        <input type='checkbox' name='attr_mouth' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location broken, damaged. -12 Toughness,+1 Fatigue, -15 to Speech-based Tests.</div>
-        <input type='checkbox' name='attr_mouth' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, -15 Toughness, +2 Fatigue, -15 to Speech-based Tests.</div>
-      </div>
-    </div>
-
-    <div class='medicalg13'>
-      Hand
-      <select name='attr_hand'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59+</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_hand' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_hand' value='1' class='sheet-hidden sheet-hider'>
-        <div>-3 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
-        <input type='checkbox' name='attr_hand' value='2' class='sheet-hidden sheet-hider'>
-        <div>-5 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
-        <input type='checkbox' name='attr_hand' value='3' class='sheet-hidden sheet-hider'>
-        <div>-10 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
-        <input type='checkbox' name='attr_hand' value='4' class='sheet-hidden sheet-hider'>
-        <div>-13 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
-        <input type='checkbox' name='attr_hand' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location broken, -15 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
-        <input type='checkbox' name='attr_hand' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, Character cannot use the hand for any Actions.</div>
-      </div>
-    </div>
-
-    <div class='medicalg14'>
-      Chin/jaw/cheek
-      <select name='attr_chin/jaw/cheek'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59+</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_chin/jaw/cheek' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_chin/jaw/cheek' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 Toughness</div>
-        <input type='checkbox' name='attr_chin/jaw/cheek' value='2' class='sheet-hidden sheet-hider'>
-        <div>-4 Toughness, -5 to Speech-based Tests.</div>
-        <input type='checkbox' name='attr_chin/jaw/cheek' value='3' class='sheet-hidden sheet-hider'>
-        <div>-6 Toughness, -10 to Speech-based Tests.</div>
-        <input type='checkbox' name='attr_chin/jaw/cheek' value='4' class='sheet-hidden sheet-hider'>
-        <div>-10 Toughness, +1 Fatigue, -10 to Speech-based Tests.</div>
-        <input type='checkbox' name='attr_chin/jaw/cheek' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location damaged. -15 Toughness,+2 Fatigue, -15 to Speech-based Tests.</div>
-        <input type='checkbox' name='attr_chin/jaw/cheek' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, -20 Toughness, +3 Fatigue, -20 to Speech-based Tests.</div>
-      </div>
-    </div>
-
-    <div class='medicalg15'>
-      Foot
-      <select name='attr_foot'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59+</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_foot' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_foot' value='1' class='sheet-hidden sheet-hider'>
-        <div>-5 to Agility when figuring Movement Speed.</div>
-        <input type='checkbox' name='attr_foot' value='2' class='sheet-hidden sheet-hider'>
-        <div>-10 to Agility when figuring Movement Speed.</div>
-        <input type='checkbox' name='attr_foot' value='3' class='sheet-hidden sheet-hider'>
-        <div>-15 to Agility when figuring Movement Speed.</div>
-        <input type='checkbox' name='attr_foot' value='4' class='sheet-hidden sheet-hider'>
-        <div>-20 to Agility when figuring Movement Speed.</div>
-        <input type='checkbox' name='attr_foot' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location broken, -25 to Agility when figuring Movement Speed.</div>
-        <input type='checkbox' name='attr_foot' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, Character cannot use the Foot for any Actions. Half Move reduced to 1 Meter, Full Move reduced to 2 Meters, Charge and Run are impossible.</div>
-      </div>
-    </div>
-
-    <div class='medicalg16'>
-      Pelvis
-      <select name='attr_pelvis'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59+</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_pelvis' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_pelvis' value='1' class='sheet-hidden sheet-hider'>
-        <div>-1 Toughness, -4 Agility</div>
-        <input type='checkbox' name='attr_pelvis' value='2' class='sheet-hidden sheet-hider'>
-        <div>-3 Toughness, -6 Agility</div>
-        <input type='checkbox' name='attr_pelvis' value='3' class='sheet-hidden sheet-hider'>
-        <div>-6 Toughness, -8 Agility</div>
-        <input type='checkbox' name='attr_pelvis' value='4' class='sheet-hidden sheet-hider'>
-        <div>-8 Toughness, -12 Agility</div>
-        <input type='checkbox' name='attr_pelvis' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location damaged, -20 Toughness, -20 Agility.</div>
-        <input type='checkbox' name='attr_pelvis' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, -30 Toughness, -30 Agility.</div>
-      </div>
-    </div>
-
-    <div class='medicalg17'>
-      Chest
-      <select name='attr_chest'>
-        <option selected='selected' value='0'>nominal</option>
-        <option value='1'>01-20</option>
-        <option value='2'>21-25</option>
-        <option value='3'>26-30</option>
-        <option value='4'>31-40</option>
-        <option value='5'>41-59+</option>
-        <option value='6'>60+</option>
-      </select>
-      <div>
-        <input type='checkbox' name='attr_chest' value='0' class='sheet-hidden sheet-hider' checked>
-        <div>No effect/healthy</div>
-        <input type='checkbox' name='attr_chest' value='1' class='sheet-hidden sheet-hider'>
-        <div>-2 Toughness</div>
-        <input type='checkbox' name='attr_chest' value='2' class='sheet-hidden sheet-hider'>
-        <div>-4 Toughness</div>
-        <input type='checkbox' name='attr_chest' value='3' class='sheet-hidden sheet-hider'>
-        <div>-8 Toughness, Stunned for 1D5 Rounds.</div>
-        <input type='checkbox' name='attr_chest' value='4' class='sheet-hidden sheet-hider'>
-        <div>-10 Toughness, Stunned for 2D5 Rounds.</div>
-        <input type='checkbox' name='attr_chest' value='5' class='sheet-hidden sheet-hider'>
-        <div>Body Location broken, damaged. -15 Toughness, Stunned for 3D5 Rounds.</div>
-        <input type='checkbox' name='attr_chest' value='6' class='sheet-hidden sheet-hider'>
-        <div>Body Location Destroyed, instant death.</div>
-      </div>
-    </div>
-
-    <div class='medicalgT'>
-      <h2 class='header_in-box'>Hit Location</h2>
-      <h3> 01-10 HEAD</h3>
-      <div class='sheet-medical_table'> 01 Neck</div>
-      <div class='sheet-medical_table'> 02 Chin</div>
-      <div class='sheet-medical_table'> 03 Mouth</div>
-      <div class='sheet-medical_table'> 04-05 Nose</div>
-      <div class='sheet-medical_table'> 06-07 Cheeks</div>
-      <div class='sheet-medical_table'> 08 Eyes</div>
-      <div class='sheet-medical_table'> 09 Forehead</div>
-      <div class='sheet-medical_table'> 10 Ear</div>
-      <h3>11-20 LEFT ARM</h3>
-      <div class='sheet-medical_table'>11 Fingers</div>
-      <div class='sheet-medical_table'>12 Hands</div>
-      <div class='sheet-medical_table'>13-15 Forearm</div>
-      <div class='sheet-medical_table'>16 Elbow</div>
-      <div class='sheet-medical_table'>17-19 Bicep</div>
-      <div class='sheet-medical_table'>20 Shoulder</div>
-      <h3>21-30 RIGHT ARM</h3>
-      <div class='sheet-medical_table'>21 Fingers</div>
-      <div class='sheet-medical_table'>22 Hands</div>
-      <div class='sheet-medical_table'>23-25 Forearm</div>
-      <div class='sheet-medical_table'>26 Elbow</div>
-      <div class='sheet-medical_table'>27-29 Bicep</div>
-      <div class='sheet-medical_table'>30 Shoulder</div>
-      <h3>31-45 LEFT LEG</h3>
-      <div class='sheet-medical_table'>31 Toes</div>
-      <div class='sheet-medical_table'>32 Foot</div>
-      <div class='sheet-medical_table'>33 Ankle</div>
-      <div class='sheet-medical_table'>34-37 Shin</div>
-      <div class='sheet-medical_table'>38 Knee</div>
-      <div class='sheet-medical_table'>39-43 Thigh</div>
-      <div class='sheet-medical_table'>44-45 Pelvis</div>
-      <h3>46-61 RIGHT LEG</h3>
-      <div class='sheet-medical_table'>46 Toes</div>
-      <div class='sheet-medical_table'>47 Foot</div>
-      <div class='sheet-medical_table'>48 Ankle</div>
-      <div class='sheet-medical_table'>49-53 Shin</div>
-      <div class='sheet-medical_table'>54 Knee</div>
-      <div class='sheet-medical_table'>55-58 Thigh</div>
-      <div class='sheet-medical_table'>59-60 Pelvis</div>
-      <h3>62-100 CHEST</h3>
-      <div class='sheet-medical_table'>61-66 Small Intestines</div>
-      <div class='sheet-medical_table'>67-72 Large Intestines</div>
-      <div class='sheet-medical_table'>73-78 Kidney</div>
-      <div class='sheet-medical_table'>79-84 Stomach/Liver</div>
-      <div class='sheet-medical_table'>85-89 Heart</div>
-      <div class='sheet-medical_table'>90-96 Lungs</div>
-      <div class='sheet-medical_table'>97-100 No Organ Hit</div>
-      <br>
-      <h3>ROLL LOCATION (optional)</h3>
-      <div class='sheet-medical_table'>1-3 Left</div>
-      <div class='sheet-medical_table'>  4-7 Center</div>
-      <div class='sheet-medical_table'>8-10 Right</div>
-      <br>
-      <h3>IF Fingers/Toes(1D10)</h3>
-      <div class='sheet-medical_table'>1-2 Pinky Finger/Toe</div>
-      <div class='sheet-medical_table'>3-4 Ring Finger/Toe</div>
-      <div class='sheet-medical_table'>5-6 Middle Finger/Toe</div>
-      <div class='sheet-medical_table'>7-8 Index Finger/Toe</div>
-      <div class='sheet-medical_table'>  9-10 Thumb Finger/Toe</div>
-    </div>
-
-    <div class='medicalgR'>
-      <h2>Medical Information</h2>
-      <div class='collapsible_ability_description_window_a' ></div>
-      <textarea class='collapsible_ability_description_window_b'></textarea>
-      <fieldset class='repeating_abilities'>
-        <input type='text' placeholder='Write ability / trait name here'>
-        <input type='checkbox' class='collapsible_ability_block_switch'>
-        <div class='collapsible_ability_description_window_a' ></div>
-        <textarea class='collapsible_ability_description_window_b'></textarea>
-      </fieldset>
+    <div class='sheet-initiative_sheet_tabs'>
+      <input type='checkbox' name='attr_sheetTab' value='core' class='sheet-hidden sheet-core_bttn' checked>
+      <button class='sheet-core_bttn' type='action' name='act_core'>Core</button>
+      <input type='checkbox' name='attr_sheetTab' value='equipment' class='sheet-hidden sheet-core_bttn'>
+      <button class='sheet-equipment_bttn' type='action' name='act_equipment'>Equipment</button>
+      <input type='checkbox' name='attr_sheetTab' value='medical' class='sheet-hidden sheet-core_bttn'>
+      <button class='sheet-medical_bttn' type='action' name='act_medical'>Medical</button>
+      <input type='checkbox' name='attr_sheetTab' value='advancements' class='sheet-hidden sheet-core_bttn'>
+      <button class='sheet-advancements_bttn' type='action' name='act_advancements'>Advancements</button>
+      <input type='checkbox' name='attr_sheetTab' value='journal' class='sheet-hidden sheet-core_bttn'>
+      <button class='sheet-journal_bttn' type='action' name='act_journal'>Journal</button>
+      <input type='checkbox' name='attr_sheetTab' value='vehicles' class='sheet-hidden sheet-core_bttn'>
+      <button class='sheet-vehicles_bttn' type='action' name='act_vehicles'>Vehicles</button>
+      <input type='checkbox' name='attr_sheetTab' value='settings' class='sheet-hidden sheet-core_bttn'>
+      <button class='sheet-settings_bttn' type='action' name='act_settings'>Settings</button>
     </div>
   </div>
-</div>
-<div class='sheet-advancements'>
+
+  <hr style='border-top: 1px dotted'>
+
+  <!-- ______________________________ SHEET TABS LOGIC ______________________________ -->
+  <input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='core' />
   <script type='text/worker'>
-    on('change:xp_total change:repeating_advancements:advancement_costL change:repeating_advancements:advancement_costR remove:repeating_advancements', () => {
-      // get section IDs because of operation both inside and outside of fieldset
-      getSectionIDs(`repeating_advancements`, idArray => {
-        const fieldnames = [];
-        idArray.forEach(id => fieldnames.push (
-        `repeating_advancements_${id}_advancement_costL`,
-        `repeating_advancements_${id}_advancement_costR`
-        ));
-        // spread operator to get every array value
-        getAttrs(['XP_total',...fieldnames], v => {
-          const getValue = (id,field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
-          const left = idArray.reduce((total, id) => total + getValue(id,'advancement_costL'),0)
-          const right = idArray.reduce((total, id) => total + getValue(id,'advancement_costR'),0)
-          const spent = left + right
-          const total = parseFloat(v.XP_total) || 0
-          setAttrs({
-            XP_spent: spent,
-            XP_current: total - spent
-          });
+    const buttonlist = ['core','equipment','medical','advancements','journal','vehicles','settings'];
+    buttonlist.forEach(button => {
+      on(`clicked:${button}`, function() {
+        setAttrs({
+          sheetTab: button
         });
       });
     });
   </script>
 
-  <h2>Experience Summary</h2>
-  <div style='text-align: center'>
-    Unspent XP: <input type='number' name='attr_XP_current' style='width: 10%; margin-right: 20px' value='@{XP_total}-@{XP_spent}' readonly>
-    Spent XP: <input type='number' name='attr_XP_spent' style='width: 10%; margin-right: 20px' value='@{XP_total}-(@{advancement_costL}+@{advancement_costR})' readonly>
-    XP Total: <input type='number' name='attr_XP_total' style='width: 10%'>
+
+
+  <!-- ______________________________ start of minimisable infographic ______________________________ -->
+
+  <div class='sheet-minimisable_infographic_main box'>
+    <input type='checkbox' class='sheet-minimisable_switch'>
+    <div class='sheet-minimisable_infographic_a'>
+      a short single line containing all the important info you might need
+    </div>
+    <div class='sheet-minimisable_infographic_b'>
+      a long
+      <div>list</div>
+      of text<br>
+      with
+      a bunch<br>
+      of information
+    </div>
   </div>
-  <br>
 
-  <fieldset name='advancements' class='repeating_advancements'>
-    <input type='text' name='attr_advancementL' placeholder='Write XP-costing item name here' style='width: 25%'>
-    <input type='number' name='attr_advancement_costL' placeholder='XP Cost' style='width: 10%'>
-    <input type='number' name='attr_advancement_pg#L' placeholder='Page #' style='width: 10%; margin-right: 10px'>
-    <input type='text' name='attr_advancementR' placeholder='Write XP-costing item name here' style='width: 25%'>
-    <input type='number' name='attr_advancement_costR' placeholder='XP Cost' style='width: 10%'>
-    <input type='number' name='attr_advancement_pg#R' placeholder='Page #' style='width: 10%'>
-  </fieldset>
 
-</div>
 
-<div class='sheet-journal'>
-  <h2>Journal: Objectives</h2>
-  <fieldset name='objectives' class='repeating_objectives'>
-    <input type='text' name='attr_objective' style='width: 96%' />
-    <input type='checkbox' name='attr_objective_completed' />
-  </fieldset>
-  <h2>Journal: Notes</h2>
-  <fieldset name='notes' class='repeating_notes'>
-    <!-- insert new line html entity [&#10;] inside of placeholder attribute -->
-    <textarea name='attr_notes'
-    placeholder='&#10;Enter information such as plot details, unresolved mission details such as escaped targets, character relationships, et cetera here.&#10;
-    &#10;Also feel free to write appearance details here or in Bio & Info for public viewing: age, height, weight, colors of eyes, hair, skin, and more that comes to mind.&#10;
-    &#10;See Medical tab to include any medical information such as character injuries.'></textarea>
-  </fieldset>
-</div>
+  <!-- ______________________________ sheet tabs _________________________________ -->
 
-<div class='sheet-vehicles'>
-  <div class='sheet-vehicles_divider'>
-    <div class='sheet-vehicles_grid1'>
-      <input class='sheet-vehicles_Gn type='text' placeholder='Name'>
 
-      <select class='sheet-vehicles_Gs' name='attr_vehicle-shield'>
-        <option selected='selected' value='0'>Unshielded</option>
-        <option value='1'>Shielded</option>
-      </select>
 
-      <select class='sheet-vehicles_Gt' name='attr_vehicle-type'>
-        <option selected='selected' value='0'>Ground</option>
-        <option value='1'>Air</option>
-        <option value='2'>Walker</option>
-        <option value='3'>Stationary</option>
-      </select>
-      <div class='sheet-vehicles_G1'><h3>DIMENSIONS</h3></div>
-      <div class='sheet-vehicles_G2'>length</div>
-      <div class='sheet-vehicles_G3'>Width</div>
-      <div class='sheet-vehicles_G4'>Height</div>
-      <div class='sheet-vehicles_G5'>Weight</div>
-      <input class='sheet-vehicles_G6' type='text' name='attr_vehicle-length'></input>
-      <input class='sheet-vehicles_G7' type='text' name='attr_vehicle-width'></input>
-      <input class='sheet-vehicles_G8' type='text' name='attr_vehicle-height'></input>
-      <input class='sheet-vehicles_G9' type='text' name='attr_vehicle-weight'></input>
 
-      <input type='checkbox' name='attr_vehicle-type' value='0' class='sheet-hidden sheet-hider' checked>
-      <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
-      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
-      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G10'><h3>CHARATERISTICS</h3></div>
+  <!-- ______________________________ start of core ______________________________ -->
 
-      <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <div class='sheet-vehicles_G11'>Accelerate</div>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <div class='sheet-vehicles_G12'>Brake</div>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <div class='sheet-vehicles_G13'>Top speed</div>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <div class='sheet-vehicles_G14'>Maneuver</div>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <input class='sheet-vehicles_G15' type='text' name='attr_vehicle-accelerate'></input>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <input class='sheet-vehicles_G16' type='text' name='attr_vehicle-brake'></input>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <input class='sheet-vehicles_G17' type='text' name='attr_vehicle-top_speed'></input>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <input class='sheet-vehicles_G18' type='text' name='attr_vehicle-maneuver'></input>
+  <div class='sheet-core'>
 
-      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G19'>Vertical</div>
-      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G20'>Takeoff</div>
-      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G21'>Target range</div>
-      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G22'>Targeting</div>
-      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G23' type='text' name='attr_vehicle-vertical'></input>
-      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G24' type='text' name='attr_vehicle-takeoff'></input>
-      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G25' type='text' name='attr_vehicle-target_range'></input>
-      <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G26' type='text' name='attr_vehicle-targeting'></input>
-
-      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G27'>Strength</div>
-      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G28'>Melee</div>
-      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G29' type='text' name='attr_vehicle-strength'></input>
-      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G30' type='text' name='attr_vehicle-melee'></input>
-
-      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G31' type='text' name='attr_vehicle-strength-mythic'></input>
-      <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G32'>Mythic</div>
-
-      <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <div class='sheet-vehicles_G33'><h3>CREW AND COMPLIMENT</h3></div>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <div class='sheet-vehicles_G34'>Crew</div>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <div class='sheet-vehicles_G35'>Compliment</div>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <input class='sheet-vehicles_G36' type='text' name='attr_vehicle-crew'></input>
-            <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
-      <input class='sheet-vehicles_G37' type='text' name='attr_vehicle-compliment'></input>
-      <div class='sheet-vehicles_G38'><h3>HULL</h3></div>
-      <div class='sheet-vehicles_G39'>Hull material</div>
-      <input class='sheet-vehicles_G40' type='text' name='attr_vehicle-hull'></input>
-    </div>
-    <div class='sheet-vehicles_grid2'>
-      <div class='sheet-vehicles_G41'><h3>BREAKPOINTS</h3></div>
-      <div class='sheet-vehicles_G42'>Wep</div>
-      <div class='sheet-vehicles_G43'>Mod</div>
-      <div class='sheet-vehicles_G44'>Eng</div>
-      <div class='sheet-vehicles_G45'>Op</div>
-      <div class='sheet-vehicles_G46'>Crew</div>
-      <input class='sheet-vehicles_G47' type='text' name='attr_vehicle-bp-wep'></input>
-      <input class='sheet-vehicles_G48' type='text' name='attr_vehicle-bp-mod'></input>
-      <input class='sheet-vehicles_G49' type='text' name='attr_vehicle-bp-eng'></input>
-      <input class='sheet-vehicles_G50' type='text' name='attr_vehicle-bp-op'></input>
-      <input class='sheet-vehicles_G51' type='text' name='attr_vehicle-bp-crew'></input>
-      <div class='sheet-vehicles_G52'><h3>Armor</h3></div>
-      <div class='sheet-vehicles_G53'>Front</div>
-      <div class='sheet-vehicles_G54'>Back</div>
-      <div class='sheet-vehicles_G55'>Side</div>
-      <div class='sheet-vehicles_G56'>Top</div>
-      <div class='sheet-vehicles_G57'>Bottom</div>
-      <input class='sheet-vehicles_G58' type='text' name='attr_vehicle-armor-front'></input>
-      <input class='sheet-vehicles_G59' type='text' name='attr_vehicle-armor-back'></input>
-      <input class='sheet-vehicles_G60' type='text' name='attr_vehicle-armor-side'></input>
-      <input class='sheet-vehicles_G61' type='text' name='attr_vehicle-armor-top'></input>
-      <input class='sheet-vehicles_G62' type='text' name='attr_vehicle-armor-bottom'></input>
-    </div>
-    <div class='vehicles_grid3'>
-      <div class='sheet-vehicles_G63'><h3>Miscellaneous</h3></div>
-      <div class='sheet-vehicles_G64'>Size points</div>
-      <div class='sheet-vehicles_G65'>Weapon points</div>
-      <input class='sheet-vehicles_G66' type='text' name='attr_vehicle-size-points'></input>
-      <input class='sheet-vehicles_G67' type='text' name='attr_vehicle-weapon-points'></input>
-
-      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G68'>Shield rating</div>
-      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G69'>Shield current</div>
-      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G70'>Recharge delay</div>
-      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
-      <div class='sheet-vehicles_G71'>Recharge rate</div>
-      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G72' type='text' name='attr_vehicle-shield-rating'></input>
-      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G73' type='text' name='attr_vehicle-shield-current'></input>
-      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G74' type='text' name='attr_vehicle-recharge-delay'></input>
-      <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
-      <input class='sheet-vehicles_G75' type='text' name='attr_vehicle-recharge-rate'></input>
-
-      <div class='sheet-vehicles_G76'>
-        <div class='collapsible_ability_description_window_a' ></div>
-        <fieldset>
-          <input type='text' placeholder='Additional info'>
-          <input type='checkbox' class='collapsible_ability_block_switch'>
-          <div class='collapsible_ability_description_window_a' ></div>
-          <textarea class='collapsible_ability_description_window_b'></textarea>
+    <!-- Core Data -->
+    <div class='sheet-core_lists box'>
+      <div class='sheet-core_lists1' style='padding: 1px; margin-right: 10px'>
+        <h3><b>Skillset</b></h3>
+        <fieldset name='skills' class='repeating_skills'>
+          <input type='text' name='attr_skill' />
         </fieldset>
-        <fieldset>
-          <input type='text' placeholder='Modifications'>
+      </div>
+      <div class='sheet-core_lists2' style='padding: 1px'>
+        <h3><b>Education</b></h3>
+        <fieldset name='skills' class='repeating_education'>
+          <input type='text' name='attr_education' />
+        </fieldset>
+      </div>
+      <div class='sheet-core_lists3' style='padding: 1px'>
+        <h3><b>Languages</b></h3>
+        <fieldset name='skills' class='repeating_languages'>
+          <input type='text' name='attr_language' />
+        </fieldset>
+      </div>
+    </div>
+    <br>
+    <h2>Abilities</h2>
+    <div style='text-align: right; margin-top:-22px; margin-right: 5px'><b>Expand or collapse ability's descriptor block ⯆</b></div>
+    <input type='text' name='ability' placeholder='SQUAD UP'>
+    <input type='checkbox' name='ability_desc' class='collapsible_ability_block_switch'>
+    <div class='collapsible_ability_description_window_a' ></div>
+    <textarea name='attr_ability' class='collapsible_ability_description_window_b'
+    placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
+    Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
+    <fieldset name='abilities' class='repeating_abilities'>
+      <input type='text' name='attr_ability_r' placeholder='Write ability / trait name here'>
+      <input type='checkbox' class='collapsible_ability_block_switch'>
+      <div class='collapsible_ability_description_window_a' ></div>
+      <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b'></textarea>
+    </fieldset>
+
+  </div>
+
+  <div class='sheet-equipment'>
+
+    <!-- Equipment -->
+    <span>Gear and Weapons go here</span>
+
+  </div>
+  <div class='sheet-medical'>
+    <!-- Medical -->
+    <div class='sheet-medical-grid'>
+      <div class='medicalg1'>
+        Finger/toe
+        <select name='attr_medical_finger/toe'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-15</option>
+          <option value='2'>16-30</option>
+          <option value='3'>31-45</option>
+          <option value='4'>46+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_medical_finger/toe' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_medical_finger/toe' value='1' class='sheet-hidden sheet-hider' >
+          <div>-1 WFM and WFR to Finger, -2 Agility to Toe</div>
+          <input type='checkbox' name='attr_medical_finger/toe' value='2' class='sheet-hidden sheet-hider' >
+          <div>-2 WFM and WFR to Finger, -4 Agility to Toe</div>
+          <input type='checkbox' name='attr_medical_finger/toe' value='3' class='sheet-hidden sheet-hider' >
+          <div>Body Location damaged. No longer usable. -3 Strength to Finger, -3 Agility to Toe</div>
+          <input type='checkbox' name='attr_medical_finger/toe' value='4' class='sheet-hidden sheet-hider' >
+          <div>Body Locaton Destroyed. -4 Strength to Finger, -4Agility to Toe</div>
+        </div>
+      </div>
+
+      <div class='medicalg2'>
+        Heart
+        <select name='attr_medical_heart'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-30</option>
+          <option value='3'>31-40</option>
+          <option value='4'>41-59</option>
+          <option value='5'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_medical_heart' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_medical_heart' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 Strength, Toughness, Agility</div>
+          <input type='checkbox' name='attr_medical_heart' value='2' class='sheet-hidden sheet-hider'>
+          <div>-5 Strength, Toughness, Agility</div>
+          <input type='checkbox' name='attr_medical_heart' value='3' class='sheet-hidden sheet-hider'>
+          <div>-10 Strength, Toughness, Agility</div>
+          <input type='checkbox' name='attr_medical_heart' value='4' class='sheet-hidden sheet-hider'>
+          <div>Body Location damaged. +10 Fatigue, -15 Strength, Toughness, Agility</div>
+          <input type='checkbox' name='attr_medical_heart' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Locaton Destroyed, instant death</div>
+        </div>
+      </div>
+
+      <div class='medicalg3'>
+        Neck
+        <select name='attr_neck'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_neck' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_neck' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 Toughness</div>
+          <input type='checkbox' name='attr_neck' value='2' class='sheet-hidden sheet-hider'>
+          <div>-5 Toughness</div>
+          <input type='checkbox' name='attr_neck' value='3' class='sheet-hidden sheet-hider'>
+          <div>-10 Toughness</div>
+          <input type='checkbox' name='attr_neck' value='4' class='sheet-hidden sheet-hider'>
+          <div>-10 Toughness, +1 Fatigue</div>
+          <input type='checkbox' name='attr_neck' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location damaged. -20 Toughness, Paralyzed and Helpless</div>
+          <input type='checkbox' name='attr_neck' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, instant deaths</div>
+        </div>
+      </div>
+
+      <div class='medicalg4'>
+        Skull/brain
+        <select name='attr_skull/brain'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-30</option>
+          <option value='3'>31-40</option>
+          <option value='4'>41-59</option>
+          <option value='5'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_skull/brain' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_skull/brain' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 Perception, Intellect, Warfare Range, Warfare Melee</div>
+          <input type='checkbox' name='attr_skull/brain' value='2' class='sheet-hidden sheet-hider'>
+          <div>-5 Perception, Intellect, Warfare Range, Warfare Melee</div>
+          <input type='checkbox' name='attr_skull/brain' value='3' class='sheet-hidden sheet-hider'>
+          <div>-10 Perception, Intellect, Warfare Range, Warfare Melee</div>
+          <input type='checkbox' name='attr_skull/brain' value='4' class='sheet-hidden sheet-hider'>
+          <div>Body Location damaged. +10 Fatigue, -15 Perception, Intellect, Warfare Range, Warfare Melee</div>
+          <input type='checkbox' name='attr_skull/brain' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, instant death</div>
+        </div>
+      </div>
+
+      <div class='medicalg5'>
+        Nose/ear
+        <select name='attr_nose/ear'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_nose/ear' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_nose/ear' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 Perception to Smelling or Hearing Perception Tests</div>
+          <input type='checkbox' name='attr_nose/ear' value='2' class='sheet-hidden sheet-hider'>
+          <div>-5 Perception to Smelling or Hearing Perception Tests</div>
+          <input type='checkbox' name='attr_nose/ear' value='3' class='sheet-hidden sheet-hider'>
+          <div>-10 Perception to Smelling or Hearing Perception Tests</div>
+          <input type='checkbox' name='attr_nose/ear' value='4' class='sheet-hidden sheet-hider'>
+          <div>-15 Perception to Smelling or Hearing Perception Tests</div>
+          <input type='checkbox' name='attr_nose/ear' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location broken, -20 Perception to Smelling or Hearing Perception Tests</div>
+          <input type='checkbox' name='attr_nose/ear' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, cannot make Smelling Tests, or halves Perception for Hearing Tests</div>
+        </div>
+      </div>
+
+      <div class='medicalg6'>
+        Arm/leg
+        <select name='attr_arm/leg'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_arm/leg' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_arm/leg' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 Strength to Arm, or -2 Agility to Leg</div>
+          <input type='checkbox' name='attr_arm/leg' value='2' class='sheet-hidden sheet-hider'>
+          <div>-5 Strength to Arm, or -5 Agility to Leg</div>
+          <input type='checkbox' name='attr_arm/leg' value='3' class='sheet-hidden sheet-hider'>
+          <div>-10 Strength to Arm, or -10 Agility to Leg</div>
+          <input type='checkbox' name='attr_arm/leg' value='4' class='sheet-hidden sheet-hider'>
+          <div>-15 Strength to Arm, or -15 Agility to Leg</div>
+          <input type='checkbox' name='attr_arm/leg' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location damaged, -15 Strength to Arm, or-15 Agility to Leg. -5 to any Action with thislimb.</div>
+          <input type='checkbox' name='attr_arm/leg' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, limb cannot be used. +3 Fatigue.</div>
+        </div>
+      </div>
+
+      <div class='medicalg7'>
+        Small/large intestines
+        <select name='attr_small/large intestines'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_small/large intestines' value='0' class='sheet-hidden sheet-hider' checked >
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_small/large intestines' value='1' class='sheet-hidden sheet-hider' >
+          <div>-2 Toughness, -2 Agility</div>
+          <input type='checkbox' name='attr_small/large intestines' value='2' class='sheet-hidden sheet-hider'>
+          <div>-4 Toughness, -4 Agility</div>
+          <input type='checkbox' name='attr_small/large intestines' value='3' class='sheet-hidden sheet-hider'>
+          <div>-6 Toughness, -6 Agility</div>
+          <input type='checkbox' name='attr_small/large intestines' value='4' class='sheet-hidden sheet-hider'>
+          <div>-10 Toughness, -10 Agility</div>
+          <input type='checkbox' name='attr_small/large intestines' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location damaged, -15 Toughness, -15 Agility. +2 Fatigue</div>
+          <input type='checkbox' name='attr_small/large intestines' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, -20 Toughness, -20 Agility. +5 Fatigue.</div>
+        </div>
+      </div>
+
+      <div class='medicalg8'>
+        Lung
+        <select name='attr_lung'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_lung' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_lung' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 Toughness, Stunned for 1D5-Toughness Modifier in Rounds.</div>
+          <input type='checkbox' name='attr_lung' value='2' class='sheet-hidden sheet-hider'>
+          <div>-5 Toughness, Stunned for 2D5-Toughness Modifier in Rounds.</div>
+          <input type='checkbox' name='attr_lung' value='3' class='sheet-hidden sheet-hider'>
+          <div>-10 Toughness, Stunned for 3D5-Toughness Modifier in Rounds.</div>
+          <input type='checkbox' name='attr_lung' value='4' class='sheet-hidden sheet-hider'>
+          <div>-15 Toughness, Stunned for 4D5-Toughness Modifier in Rounds.</div>
+          <input type='checkbox' name='attr_lung' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location damaged, -20 Toughness, Stunned for 5D5-Toughness Modifier in Rounds.</div>
+          <input type='checkbox' name='attr_lung' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, -25 Toughness, Stunned for 6D5-Toughness Modifier in Rounds. Character will take 2 Wounds whenever they take a Movement Action quicker than 2 Meters per Turn.</div>
+        </div>
+      </div>
+
+      <div class='medicalg9'>
+        Kidney/stomach/liver/spleen
+        <select name='attr_kidney/stomach/liver/spleen'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 Toughness, -2 Agility</div>
+          <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='2' class='sheet-hidden sheet-hider'>
+          <div>-4 Toughness, -4 Agility</div>
+          <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='3' class='sheet-hidden sheet-hider'>
+          <div>-6 Toughness, -6 Agility</div>
+          <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='4' class='sheet-hidden sheet-hider'>
+          <div>-10 Toughness, -10 Agility</div>
+          <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location damaged, -15 Toughness, -15 Agility. +1 Fatigue</div>
+          <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, -20 Toughness, -20 Agility. +5 Fatigue.</div>
+        </div>
+      </div>
+
+      <div class='medicalg10'>
+        Knee/ankle/shoulder/elbow
+        <select name='attr_knee/ankle/shoulder/elbow'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 Strength, -2 Agility</div>
+          <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='2' class='sheet-hidden sheet-hider'>
+          <div>-4 Strength, -4 Agility</div>
+          <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='3' class='sheet-hidden sheet-hider'>
+          <div>-6 Strength, -6 Agility</div>
+          <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='4' class='sheet-hidden sheet-hider'>
+          <div>-10 Strength, -10 Agility</div>
+          <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location damaged, -15 Strength, -15 Agility. +1 Fatigue</div>
+          <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, -20 Strength, -20 Agility. +5 Fatigue.</div>
+        </div>
+      </div>
+
+      <div class='medicalg11'>
+        Eye
+        <select name='attr_eye'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59+</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_eye' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_eye' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 eyesight-based Perception Tests</div>
+          <input type='checkbox' name='attr_eye' value='2' class='sheet-hidden sheet-hider'>
+          <div>-5 eyesight-based Perception Tests</div>
+          <input type='checkbox' name='attr_eye' value='3' class='sheet-hidden sheet-hider'>
+          <div>-10 eyesight-based Perception Tests</div>
+          <input type='checkbox' name='attr_eye' value='4' class='sheet-hidden sheet-hider'>
+          <div>-12 eyesight-based Perception Tests</div>
+          <input type='checkbox' name='attr_eye' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location broken, -15 eyesight-based Perception Tests</div>
+          <input type='checkbox' name='attr_eye' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, Character is blinded for 1D5 Rounds. -20 eye-based Perception Tests.</div>
+        </div>
+      </div>
+
+      <div class='medicalg12'>
+        Mouth
+        <select name='attr_mouth'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59+</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_mouth' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_mouth' value='1' class='sheet-hidden sheet-hider'>
+          <div>-1 Toughness, -5 to Speech-based Tests.</div>
+          <input type='checkbox' name='attr_mouth' value='2' class='sheet-hidden sheet-hider'>
+          <div>-3 Toughness, -5 to Speech-based Tests.</div>
+          <input type='checkbox' name='attr_mouth' value='3' class='sheet-hidden sheet-hider'>
+          <div>-5 Toughness, -10 to Speech-based Tests.</div>
+          <input type='checkbox' name='attr_mouth' value='4' class='sheet-hidden sheet-hider'>
+          <div>-8 Toughness, -10 to Speech-based Tests.</div>
+          <input type='checkbox' name='attr_mouth' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location broken, damaged. -12 Toughness,+1 Fatigue, -15 to Speech-based Tests.</div>
+          <input type='checkbox' name='attr_mouth' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, -15 Toughness, +2 Fatigue, -15 to Speech-based Tests.</div>
+        </div>
+      </div>
+
+      <div class='medicalg13'>
+        Hand
+        <select name='attr_hand'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59+</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_hand' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_hand' value='1' class='sheet-hidden sheet-hider'>
+          <div>-3 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+          <input type='checkbox' name='attr_hand' value='2' class='sheet-hidden sheet-hider'>
+          <div>-5 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+          <input type='checkbox' name='attr_hand' value='3' class='sheet-hidden sheet-hider'>
+          <div>-10 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+          <input type='checkbox' name='attr_hand' value='4' class='sheet-hidden sheet-hider'>
+          <div>-13 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+          <input type='checkbox' name='attr_hand' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location broken, -15 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+          <input type='checkbox' name='attr_hand' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, Character cannot use the hand for any Actions.</div>
+        </div>
+      </div>
+
+      <div class='medicalg14'>
+        Chin/jaw/cheek
+        <select name='attr_chin/jaw/cheek'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59+</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_chin/jaw/cheek' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_chin/jaw/cheek' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 Toughness</div>
+          <input type='checkbox' name='attr_chin/jaw/cheek' value='2' class='sheet-hidden sheet-hider'>
+          <div>-4 Toughness, -5 to Speech-based Tests.</div>
+          <input type='checkbox' name='attr_chin/jaw/cheek' value='3' class='sheet-hidden sheet-hider'>
+          <div>-6 Toughness, -10 to Speech-based Tests.</div>
+          <input type='checkbox' name='attr_chin/jaw/cheek' value='4' class='sheet-hidden sheet-hider'>
+          <div>-10 Toughness, +1 Fatigue, -10 to Speech-based Tests.</div>
+          <input type='checkbox' name='attr_chin/jaw/cheek' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location damaged. -15 Toughness,+2 Fatigue, -15 to Speech-based Tests.</div>
+          <input type='checkbox' name='attr_chin/jaw/cheek' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, -20 Toughness, +3 Fatigue, -20 to Speech-based Tests.</div>
+        </div>
+      </div>
+
+      <div class='medicalg15'>
+        Foot
+        <select name='attr_foot'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59+</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_foot' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_foot' value='1' class='sheet-hidden sheet-hider'>
+          <div>-5 to Agility when figuring Movement Speed.</div>
+          <input type='checkbox' name='attr_foot' value='2' class='sheet-hidden sheet-hider'>
+          <div>-10 to Agility when figuring Movement Speed.</div>
+          <input type='checkbox' name='attr_foot' value='3' class='sheet-hidden sheet-hider'>
+          <div>-15 to Agility when figuring Movement Speed.</div>
+          <input type='checkbox' name='attr_foot' value='4' class='sheet-hidden sheet-hider'>
+          <div>-20 to Agility when figuring Movement Speed.</div>
+          <input type='checkbox' name='attr_foot' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location broken, -25 to Agility when figuring Movement Speed.</div>
+          <input type='checkbox' name='attr_foot' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, Character cannot use the Foot for any Actions. Half Move reduced to 1 Meter, Full Move reduced to 2 Meters, Charge and Run are impossible.</div>
+        </div>
+      </div>
+
+      <div class='medicalg16'>
+        Pelvis
+        <select name='attr_pelvis'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59+</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_pelvis' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_pelvis' value='1' class='sheet-hidden sheet-hider'>
+          <div>-1 Toughness, -4 Agility</div>
+          <input type='checkbox' name='attr_pelvis' value='2' class='sheet-hidden sheet-hider'>
+          <div>-3 Toughness, -6 Agility</div>
+          <input type='checkbox' name='attr_pelvis' value='3' class='sheet-hidden sheet-hider'>
+          <div>-6 Toughness, -8 Agility</div>
+          <input type='checkbox' name='attr_pelvis' value='4' class='sheet-hidden sheet-hider'>
+          <div>-8 Toughness, -12 Agility</div>
+          <input type='checkbox' name='attr_pelvis' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location damaged, -20 Toughness, -20 Agility.</div>
+          <input type='checkbox' name='attr_pelvis' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, -30 Toughness, -30 Agility.</div>
+        </div>
+      </div>
+
+      <div class='medicalg17'>
+        Chest
+        <select name='attr_chest'>
+          <option selected='selected' value='0'>nominal</option>
+          <option value='1'>01-20</option>
+          <option value='2'>21-25</option>
+          <option value='3'>26-30</option>
+          <option value='4'>31-40</option>
+          <option value='5'>41-59+</option>
+          <option value='6'>60+</option>
+        </select>
+        <div>
+          <input type='checkbox' name='attr_chest' value='0' class='sheet-hidden sheet-hider' checked>
+          <div>No effect/healthy</div>
+          <input type='checkbox' name='attr_chest' value='1' class='sheet-hidden sheet-hider'>
+          <div>-2 Toughness</div>
+          <input type='checkbox' name='attr_chest' value='2' class='sheet-hidden sheet-hider'>
+          <div>-4 Toughness</div>
+          <input type='checkbox' name='attr_chest' value='3' class='sheet-hidden sheet-hider'>
+          <div>-8 Toughness, Stunned for 1D5 Rounds.</div>
+          <input type='checkbox' name='attr_chest' value='4' class='sheet-hidden sheet-hider'>
+          <div>-10 Toughness, Stunned for 2D5 Rounds.</div>
+          <input type='checkbox' name='attr_chest' value='5' class='sheet-hidden sheet-hider'>
+          <div>Body Location broken, damaged. -15 Toughness, Stunned for 3D5 Rounds.</div>
+          <input type='checkbox' name='attr_chest' value='6' class='sheet-hidden sheet-hider'>
+          <div>Body Location Destroyed, instant death.</div>
+        </div>
+      </div>
+
+      <div class='medicalgT'>
+        <h2 class='header_in-box'>Hit Location</h2>
+        <h3> 01-10 HEAD</h3>
+        <div class='sheet-medical_table'> 01 Neck</div>
+        <div class='sheet-medical_table'> 02 Chin</div>
+        <div class='sheet-medical_table'> 03 Mouth</div>
+        <div class='sheet-medical_table'> 04-05 Nose</div>
+        <div class='sheet-medical_table'> 06-07 Cheeks</div>
+        <div class='sheet-medical_table'> 08 Eyes</div>
+        <div class='sheet-medical_table'> 09 Forehead</div>
+        <div class='sheet-medical_table'> 10 Ear</div>
+        <h3>11-20 LEFT ARM</h3>
+        <div class='sheet-medical_table'>11 Fingers</div>
+        <div class='sheet-medical_table'>12 Hands</div>
+        <div class='sheet-medical_table'>13-15 Forearm</div>
+        <div class='sheet-medical_table'>16 Elbow</div>
+        <div class='sheet-medical_table'>17-19 Bicep</div>
+        <div class='sheet-medical_table'>20 Shoulder</div>
+        <h3>21-30 RIGHT ARM</h3>
+        <div class='sheet-medical_table'>21 Fingers</div>
+        <div class='sheet-medical_table'>22 Hands</div>
+        <div class='sheet-medical_table'>23-25 Forearm</div>
+        <div class='sheet-medical_table'>26 Elbow</div>
+        <div class='sheet-medical_table'>27-29 Bicep</div>
+        <div class='sheet-medical_table'>30 Shoulder</div>
+        <h3>31-45 LEFT LEG</h3>
+        <div class='sheet-medical_table'>31 Toes</div>
+        <div class='sheet-medical_table'>32 Foot</div>
+        <div class='sheet-medical_table'>33 Ankle</div>
+        <div class='sheet-medical_table'>34-37 Shin</div>
+        <div class='sheet-medical_table'>38 Knee</div>
+        <div class='sheet-medical_table'>39-43 Thigh</div>
+        <div class='sheet-medical_table'>44-45 Pelvis</div>
+        <h3>46-61 RIGHT LEG</h3>
+        <div class='sheet-medical_table'>46 Toes</div>
+        <div class='sheet-medical_table'>47 Foot</div>
+        <div class='sheet-medical_table'>48 Ankle</div>
+        <div class='sheet-medical_table'>49-53 Shin</div>
+        <div class='sheet-medical_table'>54 Knee</div>
+        <div class='sheet-medical_table'>55-58 Thigh</div>
+        <div class='sheet-medical_table'>59-60 Pelvis</div>
+        <h3>62-100 CHEST</h3>
+        <div class='sheet-medical_table'>61-66 Small Intestines</div>
+        <div class='sheet-medical_table'>67-72 Large Intestines</div>
+        <div class='sheet-medical_table'>73-78 Kidney</div>
+        <div class='sheet-medical_table'>79-84 Stomach/Liver</div>
+        <div class='sheet-medical_table'>85-89 Heart</div>
+        <div class='sheet-medical_table'>90-96 Lungs</div>
+        <div class='sheet-medical_table'>97-100 No Organ Hit</div>
+        <br>
+        <h3>ROLL LOCATION (optional)</h3>
+        <div class='sheet-medical_table'>1-3 Left</div>
+        <div class='sheet-medical_table'>  4-7 Center</div>
+        <div class='sheet-medical_table'>8-10 Right</div>
+        <br>
+        <h3>IF Fingers/Toes(1D10)</h3>
+        <div class='sheet-medical_table'>1-2 Pinky Finger/Toe</div>
+        <div class='sheet-medical_table'>3-4 Ring Finger/Toe</div>
+        <div class='sheet-medical_table'>5-6 Middle Finger/Toe</div>
+        <div class='sheet-medical_table'>7-8 Index Finger/Toe</div>
+        <div class='sheet-medical_table'>  9-10 Thumb Finger/Toe</div>
+      </div>
+
+      <div class='medicalgR'>
+        <h2>Medical Information</h2>
+        <div class='collapsible_ability_description_window_a' ></div>
+        <textarea class='collapsible_ability_description_window_b'></textarea>
+        <fieldset class='repeating_abilities'>
+          <input type='text' placeholder='Write ability / trait name here'>
           <input type='checkbox' class='collapsible_ability_block_switch'>
           <div class='collapsible_ability_description_window_a' ></div>
           <textarea class='collapsible_ability_description_window_b'></textarea>
         </fieldset>
       </div>
     </div>
+  </div>
+  <div class='sheet-advancements'>
+    <script type='text/worker'>
+      on('change:xp_total change:repeating_advancements:advancement_costL change:repeating_advancements:advancement_costR remove:repeating_advancements', () => {
+        // get section IDs because of operation both inside and outside of fieldset
+        getSectionIDs(`repeating_advancements`, idArray => {
+          const fieldnames = [];
+          idArray.forEach(id => fieldnames.push (
+          `repeating_advancements_${id}_advancement_costL`,
+          `repeating_advancements_${id}_advancement_costR`
+          ));
+          // spread operator to get every array value
+          getAttrs(['XP_total',...fieldnames], v => {
+            const getValue = (id,field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
+            const left = idArray.reduce((total, id) => total + getValue(id,'advancement_costL'),0)
+            const right = idArray.reduce((total, id) => total + getValue(id,'advancement_costR'),0)
+            const spent = left + right
+            const total = parseFloat(v.XP_total) || 0
+            setAttrs({
+              XP_spent: spent,
+              XP_current: total - spent
+            });
+          });
+        });
+      });
+    </script>
+
+    <h2>Experience Summary</h2>
+    <div style='text-align: center'>
+      Unspent XP: <input type='number' name='attr_XP_current' style='width: 10%; margin-right: 20px' value='@{XP_total}-@{XP_spent}' readonly>
+      Spent XP: <input type='number' name='attr_XP_spent' style='width: 10%; margin-right: 20px' value='@{XP_total}-(@{advancement_costL}+@{advancement_costR})' readonly>
+      XP Total: <input type='number' name='attr_XP_total' style='width: 10%'>
+    </div>
+    <br>
+
+    <fieldset name='advancements' class='repeating_advancements'>
+      <input type='text' name='attr_advancementL' placeholder='Write XP-costing item name here' style='width: 25%'>
+      <input type='number' name='attr_advancement_costL' placeholder='XP Cost' style='width: 10%'>
+      <input type='number' name='attr_advancement_pg#L' placeholder='Page #' style='width: 10%; margin-right: 10px'>
+      <input type='text' name='attr_advancementR' placeholder='Write XP-costing item name here' style='width: 25%'>
+      <input type='number' name='attr_advancement_costR' placeholder='XP Cost' style='width: 10%'>
+      <input type='number' name='attr_advancement_pg#R' placeholder='Page #' style='width: 10%'>
+    </fieldset>
+
+  </div>
+
+  <div class='sheet-journal'>
+    <h2>Journal: Objectives</h2>
+    <fieldset name='objectives' class='repeating_objectives'>
+      <input type='text' name='attr_objective' style='width: 96%' />
+      <input type='checkbox' name='attr_objective_completed' />
+    </fieldset>
+    <h2>Journal: Notes</h2>
+    <fieldset name='notes' class='repeating_notes'>
+      <!-- insert new line html entity [&#10;] inside of placeholder attribute -->
+      <textarea name='attr_notes'
+      placeholder='&#10;Enter information such as plot details, unresolved mission details such as escaped targets, character relationships, et cetera here.&#10;
+      &#10;Also feel free to write appearance details here or in Bio & Info for public viewing: age, height, weight, colors of eyes, hair, skin, and more that comes to mind.&#10;
+      &#10;See Medical tab to include any medical information such as character injuries.'></textarea>
+    </fieldset>
+  </div>
+
+  <div class='sheet-vehicles'>
+    <div class='sheet-vehicles_divider'>
+      <div class='sheet-vehicles_grid1'>
+        <input class='sheet-vehicles_Gn type='text' placeholder='Name'>
+
+        <select class='sheet-vehicles_Gs' name='attr_vehicle-shield'>
+          <option selected='selected' value='0'>Unshielded</option>
+          <option value='1'>Shielded</option>
+        </select>
+
+        <select class='sheet-vehicles_Gt' name='attr_vehicle-type'>
+          <option selected='selected' value='0'>Ground</option>
+          <option value='1'>Air</option>
+          <option value='2'>Walker</option>
+          <option value='3'>Stationary</option>
+        </select>
+        <div class='sheet-vehicles_G1'><h3>DIMENSIONS</h3></div>
+        <div class='sheet-vehicles_G2'>length</div>
+        <div class='sheet-vehicles_G3'>Width</div>
+        <div class='sheet-vehicles_G4'>Height</div>
+        <div class='sheet-vehicles_G5'>Weight</div>
+        <input class='sheet-vehicles_G6' type='text' name='attr_vehicle-length'></input>
+        <input class='sheet-vehicles_G7' type='text' name='attr_vehicle-width'></input>
+        <input class='sheet-vehicles_G8' type='text' name='attr_vehicle-height'></input>
+        <input class='sheet-vehicles_G9' type='text' name='attr_vehicle-weight'></input>
+
+        <input type='checkbox' name='attr_vehicle-type' value='0' class='sheet-hidden sheet-hider' checked>
+        <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+        <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+        <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G10'><h3>CHARATERISTICS</h3></div>
+
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <div class='sheet-vehicles_G11'>Accelerate</div>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <div class='sheet-vehicles_G12'>Brake</div>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <div class='sheet-vehicles_G13'>Top speed</div>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <div class='sheet-vehicles_G14'>Maneuver</div>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <input class='sheet-vehicles_G15' type='text' name='attr_vehicle-accelerate'></input>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <input class='sheet-vehicles_G16' type='text' name='attr_vehicle-brake'></input>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <input class='sheet-vehicles_G17' type='text' name='attr_vehicle-top_speed'></input>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <input class='sheet-vehicles_G18' type='text' name='attr_vehicle-maneuver'></input>
+
+        <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G19'>Vertical</div>
+        <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G20'>Takeoff</div>
+        <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G21'>Target range</div>
+        <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G22'>Targeting</div>
+        <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G23' type='text' name='attr_vehicle-vertical'></input>
+        <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G24' type='text' name='attr_vehicle-takeoff'></input>
+        <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G25' type='text' name='attr_vehicle-target_range'></input>
+        <input type='checkbox' name='attr_vehicle-type' value='1' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G26' type='text' name='attr_vehicle-targeting'></input>
+
+        <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G27'>Strength</div>
+        <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G28'>Melee</div>
+        <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G29' type='text' name='attr_vehicle-strength'></input>
+        <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G30' type='text' name='attr_vehicle-melee'></input>
+
+        <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G31' type='text' name='attr_vehicle-strength-mythic'></input>
+        <input type='checkbox' name='attr_vehicle-type' value='2' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G32'>Mythic</div>
+
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <div class='sheet-vehicles_G33'><h3>CREW AND COMPLIMENT</h3></div>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <div class='sheet-vehicles_G34'>Crew</div>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <div class='sheet-vehicles_G35'>Compliment</div>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <input class='sheet-vehicles_G36' type='text' name='attr_vehicle-crew'></input>
+        <input type='checkbox' name='attr_vehicle-type' value='3' class='sheet-hidden sheet-hidernot' >
+        <input class='sheet-vehicles_G37' type='text' name='attr_vehicle-compliment'></input>
+        <div class='sheet-vehicles_G38'><h3>HULL</h3></div>
+        <div class='sheet-vehicles_G39'>Hull material</div>
+        <input class='sheet-vehicles_G40' type='text' name='attr_vehicle-hull'></input>
+      </div>
+      <div class='sheet-vehicles_grid2'>
+        <div class='sheet-vehicles_G41'><h3>BREAKPOINTS</h3></div>
+        <div class='sheet-vehicles_G42'>Wep</div>
+        <div class='sheet-vehicles_G43'>Mod</div>
+        <div class='sheet-vehicles_G44'>Eng</div>
+        <div class='sheet-vehicles_G45'>Op</div>
+        <div class='sheet-vehicles_G46'>Crew</div>
+        <input class='sheet-vehicles_G47' type='text' name='attr_vehicle-bp-wep'></input>
+        <input class='sheet-vehicles_G48' type='text' name='attr_vehicle-bp-mod'></input>
+        <input class='sheet-vehicles_G49' type='text' name='attr_vehicle-bp-eng'></input>
+        <input class='sheet-vehicles_G50' type='text' name='attr_vehicle-bp-op'></input>
+        <input class='sheet-vehicles_G51' type='text' name='attr_vehicle-bp-crew'></input>
+        <div class='sheet-vehicles_G52'><h3>Armor</h3></div>
+        <div class='sheet-vehicles_G53'>Front</div>
+        <div class='sheet-vehicles_G54'>Back</div>
+        <div class='sheet-vehicles_G55'>Side</div>
+        <div class='sheet-vehicles_G56'>Top</div>
+        <div class='sheet-vehicles_G57'>Bottom</div>
+        <input class='sheet-vehicles_G58' type='text' name='attr_vehicle-armor-front'></input>
+        <input class='sheet-vehicles_G59' type='text' name='attr_vehicle-armor-back'></input>
+        <input class='sheet-vehicles_G60' type='text' name='attr_vehicle-armor-side'></input>
+        <input class='sheet-vehicles_G61' type='text' name='attr_vehicle-armor-top'></input>
+        <input class='sheet-vehicles_G62' type='text' name='attr_vehicle-armor-bottom'></input>
+      </div>
+      <div class='vehicles_grid3'>
+        <div class='sheet-vehicles_G63'><h3>Miscellaneous</h3></div>
+        <div class='sheet-vehicles_G64'>Size points</div>
+        <div class='sheet-vehicles_G65'>Weapon points</div>
+        <input class='sheet-vehicles_G66' type='text' name='attr_vehicle-size-points'></input>
+        <input class='sheet-vehicles_G67' type='text' name='attr_vehicle-weapon-points'></input>
+
+        <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G68'>Shield rating</div>
+        <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G69'>Shield current</div>
+        <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G70'>Recharge delay</div>
+        <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+        <div class='sheet-vehicles_G71'>Recharge rate</div>
+        <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G72' type='text' name='attr_vehicle-shield-rating'></input>
+        <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G73' type='text' name='attr_vehicle-shield-current'></input>
+        <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G74' type='text' name='attr_vehicle-recharge-delay'></input>
+        <input type='checkbox' name='attr_vehicle-shield' value='1' class='sheet-hidden sheet-hider' >
+        <input class='sheet-vehicles_G75' type='text' name='attr_vehicle-recharge-rate'></input>
+
+        <div class='sheet-vehicles_G76'>
+          <div class='collapsible_ability_description_window_a' ></div>
+          <fieldset>
+            <input type='text' placeholder='Additional info'>
+            <input type='checkbox' class='collapsible_ability_block_switch'>
+            <div class='collapsible_ability_description_window_a' ></div>
+            <textarea class='collapsible_ability_description_window_b'></textarea>
+          </fieldset>
+          <fieldset>
+            <input type='text' placeholder='Modifications'>
+            <input type='checkbox' class='collapsible_ability_block_switch'>
+            <div class='collapsible_ability_description_window_a' ></div>
+            <textarea class='collapsible_ability_description_window_b'></textarea>
+          </fieldset>
+        </div>
+      </div>
 
 
 
-    <div class='sheet-vehicle_weapons'>
-      [placeholder] this will be a duplicate of the weapons section in the equipment tab
+      <div class='sheet-vehicle_weapons'>
+        [placeholder] this will be a duplicate of the weapons section in the equipment tab
+      </div>
     </div>
   </div>
-</div>
 
-<div class='sheet-settings'>
-  <h2>Settings</h2>
-  <span>Settings go here</span>
-  <div class='sheet-racial_multipliers'>
-  <input type='checkbox' class='racial_switch'>
-  <div class='racial_expand'>Expand racial list</div>
-  <div class='racial_collapse'>Collapse racial list
-  <br><input type='checkbox'>Kig-yar (Jackal) ×2 Jump</input>
-  <br><input type='checkbox'>Kig-Yar (Jackal) T'Vaoan ×4 Jump</input>
-  <br><input type='checkbox'>Mgalekgolo (Hunter) ×2 Charge</input>
+  <div class='sheet-settings'>
+    <h2>Settings</h2>
+    <span>Settings go here</span>
+    <div class='sheet-racial_multipliers'>
+      <input type='checkbox' class='racial_switch'>
+      <div class='racial_expand'>Expand racial list</div>
+      <div class='racial_collapse'>Collapse racial list
+      </div>
+    </div>
+    Racial exceptions:
+    <select name='attr_settings_race'>
+      <option selected='selected' value='0'>None</option>
+      <option value='1'>Spartan 2/3/4</option>
+      <option value='2'>Sangheili / Elite </option>
+      <option value='1'>Jiralhanea / Brutes </option>
+      <option value='4'>Kig-yar Ruutian / H1/2/3 Jackal  </option>
+      <option value='5'>Kig-yar T'vaoan / Skirmisher </option>
+      <option value='4'>Kig-yar Ibie'shan / H4/5 Jackal  </option>
+      <option value='7'>Mgalekgolo / Hunter</option>
+      <option value='1'>Promethian knight / Hunter</option>
+    </select>
   </div>
-</div>
-
-</div>
 
 </div>
