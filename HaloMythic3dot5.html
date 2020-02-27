@@ -301,11 +301,11 @@
                 carry: (weight_mod *2),
                 lift: (weight_mod*2 *2),
                 push: (weight_mod*4 *2),
-                leap_move:(agi_mod /2 *2)
+                leap_move:((agi_mod+2) /2)
               });
               if(str_mod >= agi_mod){
                 setAttrs({
-                  leap_move:(str_mod /2 *2)
+                  leap_move:((str_mod+2) /2)
                 });
               }
             }
