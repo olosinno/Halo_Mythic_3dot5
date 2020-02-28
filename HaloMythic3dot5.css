@@ -100,6 +100,8 @@ ______________________________ start of multipurpose or special-use classes such
     border-width: 1px
 }
 
+.sheet-edge_padding { padding: 2px }
+
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
 
@@ -110,7 +112,7 @@ ______________________________ start of grid structure for character information
 .sheet-gs5 { grid-area: ah5;    height:30px; font-size: 16px; padding-left: 5px }
 .sheet-gs6 { grid-area: ah6;    height:30px; font-size: 16px; padding-left: 5px }
 .sheet-gs7 { grid-area: ah7;    margin-right: -5%; height: 30px }
-.sheet-gs8 { grid-area: ah8;    margin-right: -5%; height: 30px; width:128% }
+.sheet-gs8 { grid-area: ah8;    margin-right: -5%; height: 30px; width: 275px }
 .sheet-gs9 { grid-area: ah9;    margin-right: -5%; height: 30px }
 .sheet-gs10 { grid-area: ah10;  margin-right: -5%; height: 30px }
 .sheet-gs11 { grid-area: ah11;  margin-right: -5%; height: 30px }
@@ -169,6 +171,8 @@ select,
     font-size: 30px;
     height: 40px
 }
+
+.sheet-characteristics_dropdown { width: 100% }
 
 /* ______________________________ end of structure for characteristics ______________________________
 ______________________________ start of grid structure for the mythic characteristics, movement and pushing ______________________________ */
@@ -231,7 +235,7 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-carrygs1 { grid-area: ac1 }
 .sheet-carrygs2 { grid-area: ac2 }
 .sheet-carrygs3 { grid-area: ac3 }
-.sheet-carrygs4 { grid-area: ac4 }
+.sheet-carrygs4 { grid-area: ac4; width: 120% }
 .sheet-carrygs5 { grid-area: ac5; font-size: 13px; font-family: Serif }
 .sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Serif }
 .sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Serif }
@@ -293,12 +297,12 @@ ______________________________ start of tab buttons toggles ____________________
     font-weight: bold
 }
 
-/* end of tab buttons toggles ______________________________
-______________________________ start of minimisable infographic */
+/* ______________________________ end of tab buttons toggles ______________________________
+______________________________ start of minimisable infographic ______________________________ */
 
 .sheet-minimisable_infographic_main {
-  display: grid;
-  grid-template-columns: 18px auto
+	display: grid;
+	grid-template-columns: 18px auto
 }
 
 .sheet-minimisable_infographic_expand,
@@ -307,12 +311,12 @@ ______________________________ start of minimisable infographic */
 .sheet-minimisable_infographic_collapse,
 .sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_expand { display: none }
 
-/* end of minimisable infographic ______________________________
-______________________________ start of racial multipliers */
+/* ______________________________ end of minimisable infographic ______________________________
+______________________________ start of racial multipliers ______________________________ */
 
 .sheet-racial_multipliers {
-  display: grid;
-  grid-template-columns: 18px auto
+	display: grid;
+	grid-template-columns: 18px auto
 }
 
 .sheet-racial_expand,
@@ -324,16 +328,16 @@ ______________________________ start of racial multipliers */
 /* end of racial multipliers ______________________________
 ______________________________ start of core tab */
 
-.sheet-core_lists1 { grid-area: cl1 }
+.sheet-core_lists1 { grid-area: cl1; margin-right: 10px }
 .sheet-core_lists2 { grid-area: cl2 }
 .sheet-core_lists3 { grid-area: cl3 }
 .sheet-core_lists {
   display: grid;
-  grid-template-columns: 50% 50%;
+  height: auto;
   grid-template-areas:
   'cl1 cl2'
   'cl1 cl3';
-  height: auto
+  grid-template-columns: 50% 50%
 }
 
 .sheet-collapsible_ability_description_window_a,
