@@ -45,6 +45,7 @@ input[type='text'] {
 	text-align: center;
 	width: 100%;
 	Height:100%;
+
 }
 
 /* All horizontal rule elements receive the following CSS property. */
@@ -56,6 +57,7 @@ button[type='roll'] {
 	color: white;
 	font-family: Saira Semi Condensed;
 	width: 100%;
+
 }
 
 /* Both header elements 2 and 3 receive the following CSS properties. */
@@ -258,7 +260,8 @@ ______________________________ start of grid structure for initiative and sheet 
 
 .sheet-tabs_main {
 	display: grid;
-	grid-template-columns: 50% 50%
+	grid-template-columns: 50% 50%;
+		grid-template-rows: 30px;
 }
 .sheet-initiative_G1{grid-area: i1;width: 100px;}
 .sheet-initiative_G2{grid-area: i2;height: 28px;}
@@ -269,7 +272,7 @@ ______________________________ start of grid structure for initiative and sheet 
 .sheet-initiative_grid{
 	display: grid;
 	grid-template-columns: 100px 107px 11px 45px 10px 100px;
-	grid-template-rows: 28px;
+	grid-template-rows: 30px;
 	grid-template-areas:
 	'i1 i2 i3 i4 i5 i6'
 }
@@ -279,7 +282,7 @@ select,
 
 .sheet-sheet_tabs {
 	grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
-	justify-content: right
+	justify-content: right;
 
 }
 /* ______________________________ end of grid structure for initiative and sheet tabs ______________________________
@@ -304,7 +307,6 @@ ______________________________ start of tab buttons toggles ____________________
 .sheet-core_bttn:checked + button {
 	background: rgb(200, 0, 0);
 	color: white;
-	font-weight: bold
 }
 
 /* ______________________________ end of tab buttons toggles ______________________________
