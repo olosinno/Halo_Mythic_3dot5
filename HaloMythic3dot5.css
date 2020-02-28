@@ -312,20 +312,6 @@ ______________________________ start of minimisable infographic ________________
 .sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_expand { display: none }
 
 /* ______________________________ end of minimisable infographic ______________________________
-______________________________ start of racial multipliers ______________________________ */
-
-.sheet-racial_multipliers {
-	display: grid;
-	grid-template-columns: 18px auto
-}
-
-.sheet-racial_expand,
-.sheet-racial_switch:checked ~ .sheet-racial_collapse { display: block }
-
-.sheet-racial_collapse,
-.sheet-racial_switch:checked ~ .sheet-racial_expand { display: none }
-
-/* end of racial multipliers ______________________________
 ______________________________ start of core tab */
 
 .sheet-core_lists1 { grid-area: cl1; margin-right: 10px }
