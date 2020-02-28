@@ -314,7 +314,7 @@
             // Ruutian+Ibie shan (*2 agi to jump)_______________________________
             if(settings_race == 4){
               setAttrs({
-                jump_move:(str_mod /4 *2)
+              jump_move:(str_mod /4 *2)
               });
             }
             // end of Ruutian_________________________________________________
@@ -322,7 +322,7 @@
             // T'vaoan (*4 agi to jump)_________________________________________
             if(settings_race == 5){
               setAttrs({
-                jump_move:(str_mod /4 *4)
+              jump_move:(str_mod /4 *4)
               });
             }
             // end of sangehili_________________________________________________
@@ -376,40 +376,46 @@
   <!-- ______________________________ initiative plus sheet tabs grid ______________________________ -->
 
   <div class='tabs_main'>
-    <div class='initiative_grid'>
-      <button class='initiative_G1' name='initiative' type='roll'value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'<span>Initiative</span></button>
-      <div class='hidden'><input name='attr_initmod0' value='floor' /></div>
-      <select class='initiative_G2'name='attr_initmod1'>
-        <option value='1d10' selected='selected'>Standard</option>
-        <option value='2d10k1'>Fast Foot</option>
-        <option value='?{dice|1d10}'>Custom</option>
-      </select>
-      <div class='initiative_G3'>+</div>
-      <input class='initiative_G4' type='number' name='attr_initmod2' value='0' />
-      <div class='initiative_G5'>+</div>
-      <select class='initiative_G6' name='attr_initmod3'>
-        <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
-        <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
-        <option value='0'>N/A</option>
-      </select>
+
+    <div class='initiative'>
+      <div class='initiative'><button name='initiative' type='roll'
+        value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'
+        <span> Initiative</span></button>
+	  </div>
+        <div class='hidden'><input name='attr_initmod0' value='floor' /></div>
+        <div class='initiative'><select name='attr_initmod1'>
+          <option value='1d10' selected='selected'>Standard</option>
+          <option value='2d10k1'>Fast Foot</option>
+          <option value='?{dice|1d10}'>Custom</option>
+        </select></div>
+        <div class='initiative'>+</div>
+        <div class='initiative'><input type='number' name='attr_initmod2' value='0' /></div>
+        <div class='initiative'>+</div>
+        <div class='initiative'><select name='attr_initmod3'>
+          <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
+          <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
+          <option value='0'>N/A</option>
+        </select>
+      </div>
     </div>
 
     <div class='sheet_tabs'>
       <input type='checkbox' name='attr_sheetTab' value='core' class='hidden core_bttn' checked>
-      <button class='core_tabs_text' type='action' name='act_core'>Core</button>
+      <button class='core_bttn' type='action' name='act_core'>Core</button>
       <input type='checkbox' name='attr_sheetTab' value='equipment' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_equipment'>Equipment</button>
+      <button class='equipment_bttn' type='action' name='act_equipment'>Equipment</button>
       <input type='checkbox' name='attr_sheetTab' value='medical' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_medical'>Medical</button>
+      <button class='medical_bttn' type='action' name='act_medical'>Medical</button>
       <input type='checkbox' name='attr_sheetTab' value='advancements' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_advancements'>Advancements</button>
+      <button class='advancements_bttn' type='action' name='act_advancements'>Advancements</button>
       <input type='checkbox' name='attr_sheetTab' value='journal' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_journal'>Journal</button>
+      <button class='journal_bttn' type='action' name='act_journal'>Journal</button>
       <input type='checkbox' name='attr_sheetTab' value='vehicles' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_vehicles'>Vehicles</button>
+      <button class='vehicles_bttn' type='action' name='act_vehicles'>Vehicles</button>
       <input type='checkbox' name='attr_sheetTab' value='settings' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_settings'>Settings</button>
+      <button class='settings_bttn' type='action' name='act_settings'>Settings</button>
     </div>
+
   </div>
 
   <!-- ______________________________ sheet tabs _________________________________ -->
@@ -438,19 +444,16 @@
       Click on this box to EXPAND your minimizable infographic!
     </div>
     <div class='minimisable_infographic_collapse'>
-      <div class="minimisable_infographic_G1">Experience</div>
-      <input class='minimisable_infographic_G2' type="text">
-      <input class='minimisable_infographic_G3' type="text">
-      <input class='minimisable_infographic_G4' type="text">
-      <div class="minimisable_infographic_G5">Head</div>
-      <input class='minimisable_infographic_G6' type="text">
-      <input class='minimisable_infographic_G7' type="text">
-      <input class='minimisable_infographic_G8' type="text">
-      <input class='minimisable_infographic_G9' type="text">
-      <input class='minimisable_infographic_G10' type="text">
-      <div class="minimisable_infographic_G11">Shields</div>
+		<div class="row">
+			<div class="item 5"></div>
+			<div class="item 90">Courage</div>
+			<div class="item 70"><input type="text" class="data_2" name="attr_courage" value="0"/></div>
+			<div class="item 5"></div>
+			<div class="item 90">Resistance</div>
+			<div class="item 70"><input type="text" class="data_2" name="attr_resistance" value="0"/></div>
+		</div>
     </div>
-    <br>
+	<br>
   </div>
 
 
@@ -484,19 +487,19 @@
     <h2>Abilities</h2>
     <p style='text-align: right; margin-top:-19px; margin-right: 7px'><b>Expand or collapse ability's descriptor block ⯆</b></p>
     <div class='edge_padding'>
-      <input type='text' name='ability' placeholder='SQUAD UP'>
-      <input type='checkbox' name='ability_desc' class='collapsible_ability_block_switch'>
+	<input type='text' name='ability' placeholder='SQUAD UP'>
+    <input type='checkbox' name='ability_desc' class='collapsible_ability_block_switch'>
+    <div class='collapsible_ability_description_window_a' ></div>
+    <textarea name='attr_ability' class='collapsible_ability_description_window_b'
+    placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
+    Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
+    <fieldset name='abilities' class='repeating_abilities'>
+      <input type='text' name='attr_ability_r' placeholder='Write ability / trait name here'>
+      <input type='checkbox' class='collapsible_ability_block_switch'>
       <div class='collapsible_ability_description_window_a' ></div>
-      <textarea name='attr_ability' class='collapsible_ability_description_window_b'
-      placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
-      Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
-      <fieldset name='abilities' class='repeating_abilities'>
-        <input type='text' name='attr_ability_r' placeholder='Write ability / trait name here'>
-        <input type='checkbox' class='collapsible_ability_block_switch'>
-        <div class='collapsible_ability_description_window_a' ></div>
-        <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b'></textarea>
-      </fieldset>
-    </div>
+      <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b'></textarea>
+    </fieldset>
+	</div>
 
   </div>
 
@@ -509,7 +512,7 @@
   <div class='medical'>
     <!-- Medical -->
     <div class='medical-grid'>
-      <div class='medicalg1'>
+      <div class='medicalg1 medicalG'>
         Finger/toe
         <select name='attr_medical_finger/toe'>
           <option selected='selected' value='0'>nominal</option>
@@ -532,7 +535,7 @@
         </div>
       </div>
 
-      <div class='medicalg2'>
+      <div class='medicalg2 medicalG'>
         Heart
         <select name='attr_medical_heart'>
           <option selected='selected' value='0'>nominal</option>
@@ -558,7 +561,7 @@
         </div>
       </div>
 
-      <div class='medicalg3'>
+      <div class='medicalg3 medicalG'>
         Neck
         <select name='attr_neck'>
           <option selected='selected' value='0'>nominal</option>
@@ -587,7 +590,7 @@
         </div>
       </div>
 
-      <div class='medicalg4'>
+      <div class='medicalg4 medicalG'>
         Skull/brain
         <select name='attr_skull/brain'>
           <option selected='selected' value='0'>nominal</option>
@@ -613,7 +616,7 @@
         </div>
       </div>
 
-      <div class='medicalg5'>
+      <div class='medicalg5 medicalG'>
         Nose/ear
         <select name='attr_nose/ear'>
           <option selected='selected' value='0'>nominal</option>
@@ -642,7 +645,7 @@
         </div>
       </div>
 
-      <div class='medicalg6'>
+      <div class='medicalg6 medicalG'>
         Arm/leg
         <select name='attr_arm/leg'>
           <option selected='selected' value='0'>nominal</option>
@@ -671,7 +674,7 @@
         </div>
       </div>
 
-      <div class='medicalg7'>
+      <div class='medicalg7 medicalG'>
         Small/large intestines
         <select name='attr_small/large intestines'>
           <option selected='selected' value='0'>nominal</option>
@@ -700,7 +703,7 @@
         </div>
       </div>
 
-      <div class='medicalg8'>
+      <div class='medicalg8 medicalG'>
         Lung
         <select name='attr_lung'>
           <option selected='selected' value='0'>nominal</option>
@@ -729,7 +732,7 @@
         </div>
       </div>
 
-      <div class='medicalg9'>
+      <div class='medicalg9 medicalG'>
         Kidney/stomach/liver/spleen
         <select name='attr_kidney/stomach/liver/spleen'>
           <option selected='selected' value='0'>nominal</option>
@@ -758,7 +761,7 @@
         </div>
       </div>
 
-      <div class='medicalg10'>
+      <div class='medicalg10 medicalG'>
         Knee/ankle/shoulder/elbow
         <select name='attr_knee/ankle/shoulder/elbow'>
           <option selected='selected' value='0'>nominal</option>
@@ -787,7 +790,7 @@
         </div>
       </div>
 
-      <div class='medicalg11'>
+      <div class='medicalg11 medicalG'>
         Eye
         <select name='attr_eye'>
           <option selected='selected' value='0'>nominal</option>
@@ -816,7 +819,7 @@
         </div>
       </div>
 
-      <div class='medicalg12'>
+      <div class='medicalg12 medicalG'>
         Mouth
         <select name='attr_mouth'>
           <option selected='selected' value='0'>nominal</option>
@@ -845,7 +848,7 @@
         </div>
       </div>
 
-      <div class='medicalg13'>
+      <div class='medicalg13 medicalG'>
         Hand
         <select name='attr_hand'>
           <option selected='selected' value='0'>nominal</option>
@@ -874,7 +877,7 @@
         </div>
       </div>
 
-      <div class='medicalg14'>
+      <div class='medicalg14 medicalG'>
         Chin/jaw/cheek
         <select name='attr_chin/jaw/cheek'>
           <option selected='selected' value='0'>nominal</option>
@@ -903,7 +906,7 @@
         </div>
       </div>
 
-      <div class='medicalg15'>
+      <div class='medicalg15 medicalG'>
         Foot
         <select name='attr_foot'>
           <option selected='selected' value='0'>nominal</option>
@@ -932,7 +935,7 @@
         </div>
       </div>
 
-      <div class='medicalg16'>
+      <div class='medicalg16 medicalG'>
         Pelvis
         <select name='attr_pelvis'>
           <option selected='selected' value='0'>nominal</option>
@@ -961,7 +964,7 @@
         </div>
       </div>
 
-      <div class='medicalg17'>
+      <div class='medicalg17 medicalG'>
         Chest
         <select name='attr_chest'>
           <option selected='selected' value='0'>nominal</option>
@@ -1099,7 +1102,7 @@
       XP Total: <input type='number' name='attr_XP_total' style='width: 10%'>
     </div>
     <br>
-    <div class='edge_padding'>
+	<div class='edge_padding'>
       <fieldset name='advancements' class='repeating_advancements'>
         <input type='text' name='attr_advancementL' placeholder='Write XP-costing item name here' style='width: 25%'>
         <input type='number' name='attr_advancement_costL' placeholder='XP Cost' style='width: 10%'>
@@ -1108,19 +1111,19 @@
         <input type='number' name='attr_advancement_costR' placeholder='XP Cost' style='width: 10%'>
         <input type='number' name='attr_advancement_pg#R' placeholder='Page #' style='width: 10%'>
       </fieldset>
-    </div>
+	</div>
 
   </div>
 
   <div class='journal'>
     <h2>Journal: Objectives</h2>
-    <div class='edge_padding'>
+	<div class='edge_padding'>
       <fieldset name='objectives' class='repeating_objectives'>
         <input type='text' name='attr_objective' style='width: 96%' />
         <input type='checkbox' name='attr_objective_completed' />
       </fieldset>
-    </div>
-    <h2>Journal: Notes</h2>
+	</div>
+	<h2>Journal: Notes</h2>
     <div class='edge_padding'>
       <fieldset name='notes' class='repeating_notes'>
         <!-- insert new line html entity [&#10;] inside of placeholder attribute -->
@@ -1129,7 +1132,7 @@
         &#10;Also feel free to write appearance details here or in Bio & Info for public viewing: age, height, weight, colors of eyes, hair, skin, and more that comes to mind.&#10;
         &#10;See Medical tab to include any medical information such as character injuries.'></textarea>
       </fieldset>
-    </div>
+	</div>
   </div>
 
   <div class='vehicles'>
