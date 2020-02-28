@@ -8,8 +8,8 @@ input.sheet-background_switch_5:checked ~ div.sheet-background { background: whi
 METHOD OF MY MADNESS
 Keep select parameters on separate lines to better track what is being selected
 Enter in CSS properties as following Format: {
-    text-align: center;
-    text-decoration: underline
+text-align: center;
+text-decoration: underline
 }
 no ending semicolons needed, properly space out properties line-by-line.  Alphabetized each properties list for easier reading.
 */
@@ -39,11 +39,12 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 select,
 input[type='number'],
 input[type='text'] {
-    background: #394C6A;
-    color: white;
-    font-family: Saira Semi Condensed;
-    text-align: center;
-    width: calc(100% - 20px)
+	background: #394C6A;
+	color: white;
+	font-family: Saira Semi Condensed;
+	text-align: center;
+	width: 100%;
+	Height:100%;
 }
 
 /* All horizontal rule elements receive the following CSS property. */
@@ -51,38 +52,39 @@ hr { border-top: 1px dotted white }
 
 /* All button elements of type roll */
 button[type='roll'] {
-    background: black;
-    color: white;
-    font-family: Saira Semi Condensed;
-    width: calc(100% - 5px)
+	background: black;
+	color: white;
+	font-family: Saira Semi Condensed;
+	width: 100%;
 }
 
 /* Both header elements 2 and 3 receive the following CSS properties. */
 h2, h3 {
-    font-family: Saira Semi Condensed;
-    text-align: center;
-    text-decoration: underline
+	font-family: Saira Semi Condensed;
+	text-align: center;
+	text-decoration: underline
 }
 
 /* Only type-3 headers receive the following CSS properties. */
 h3 {
-    background: #394C6A;
-    color:white
+	background: #394C6A;
+	color:white
 }
 
 /* All instances of the placeholder attribute across all elements */
 ::placeholder {
-    color: white;
-    opacity: 0.6
+	color: white;
+	opacity: 0.6
 }
 
 /* All textarea elements */
 textarea {
-    background: #394C6A;
-    color: white;
-    font-family: Saira Semi Condensed;
-    resize: vertical;
-    width: calc(100% - 10px)
+	background: #394C6A;
+	color: white;
+	font-family: Saira Semi Condensed;
+	resize: vertical;
+	width: 100%;
+	Height:100%;
 }
 
 /* ______________________________ end of CSS selectors ______________________________
@@ -95,9 +97,9 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-hidernot:checked + input { display: none }
 
 .sheet-box {
-    background: #353535;
-    border-style: solid;
-    border-width: 1px
+	background: #353535;
+	border-style: solid;
+	border-width: 1px
 }
 
 .sheet-edge_padding { padding: 2px }
@@ -112,7 +114,7 @@ ______________________________ start of grid structure for character information
 .sheet-gs5 { grid-area: ah5;    height:30px; font-size: 16px; padding-left: 5px }
 .sheet-gs6 { grid-area: ah6;    height:30px; font-size: 16px; padding-left: 5px }
 .sheet-gs7 { grid-area: ah7;    margin-right: -5%; height: 30px }
-.sheet-gs8 { grid-area: ah8;    margin-right: -5%; height: 30px; width: 275px }
+.sheet-gs8 { grid-area: ah8;    margin-right: -5%; height: 30px; width:128% }
 .sheet-gs9 { grid-area: ah9;    margin-right: -5%; height: 30px }
 .sheet-gs10 { grid-area: ah10;  margin-right: -5%; height: 30px }
 .sheet-gs11 { grid-area: ah11;  margin-right: -5%; height: 30px }
@@ -132,35 +134,36 @@ ______________________________ start of grid structure for character information
 .sheet-gs25 { grid-area: ah25;  height:30px; font-size: 16px; text-align: right; padding-right: 5px }
 
 .sheet-header_logo {
-    display: grid;
-    font-family: Serif;
-    grid-template-areas:
-    'ah1 ah7 ah13 ah14 ah20'
-    'ah2 ah8 ah13 ah15 ah21'
-    'ah3 ah9 ah13 ah16 ah22'
-    'ah4 ah10 ah13 ah17 ah23'
-    'ah5 ah11 ah13 ah18 ah24'
-    'ah6 ah12 ah13 ah19 ah25';
-    grid-template-columns: 15% 27% 16% 27% 15%
+	display: grid;
+	font-family: Serif;
+	grid-template-areas:
+	'ah1 ah7 ah13 ah14 ah20'
+	'ah2 ah8 ah13 ah15 ah21'
+	'ah3 ah9 ah13 ah16 ah22'
+	'ah4 ah10 ah13 ah17 ah23'
+	'ah5 ah11 ah13 ah18 ah24'
+	'ah6 ah12 ah13 ah19 ah25';
+	grid-template-columns: 15% 27% 16% 27% 15%
 }
 
 /* ______________________________ end of grid structure for character information ______________________________
 ______________________________ start of structure for characteristics ______________________________ */
 
 .sheet-characteristics_background {
-    background: black;
-    display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%
+	background: black;
+	display: grid;
+	grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%
 }
 
 .sheet-characteristics {
-    margin-left: -10%;
-    overflow: hidden;
-    text-align: center;
-    width: 120%
+	margin-left: -10%;
+	overflow: hidden;
+	text-align: center;
+	width: 120%
 }
 
 /* Select those buttons of class and type roll, those buttons of class and type text */
+button{font-family: Saira Semi Condensed; color:white; background:#475f85; text-align: center;}
 select,
 .sheet-characteristics button[type='roll'],
 .sheet-characteristics input[type='text'] { width: 75% }
@@ -168,8 +171,8 @@ select,
 .sheet-characteristics button[type='roll'] { background: black }
 
 .sheet-characteristics input[type='text'] {
-    font-size: 30px;
-    height: 40px
+	font-size: 30px;
+	height: 40px
 }
 
 .sheet-characteristics_dropdown { width: 100% }
@@ -178,32 +181,32 @@ select,
 ______________________________ start of grid structure for the mythic characteristics, movement and pushing ______________________________ */
 
 .sheet-characteristics_mythic_movement_carry {
-    display: grid;
-    grid-template-columns: 10% 80% 10%
+	display: grid;
+	grid-template-columns: 10% 80% 10%
 }
 
 .sheet-mythicgs_width { width: 60px }
 .sheet-mythicgs_padding { padding: 0px 5px }
 .sheet-mythicgs_heading { font-family: Serif;
-    font-size: 15px;
+	font-size: 15px;
 }
 
-.sheet-mythicgs1 { grid-area: amy1 }
-.sheet-mythicgs2 { grid-area: amy2 }
-.sheet-mythicgs3 { grid-area: amy3 }
-.sheet-mythicgs4 { grid-area: amy4 }
+.sheet-mythicgs1 { grid-area: amy1}
+.sheet-mythicgs2 { grid-area: amy2; width: 50px }
+.sheet-mythicgs3 { grid-area: amy3;  width: 50px }
+.sheet-mythicgs4 { grid-area: amy4 ; width: 50px }
 .sheet-mythicgs5 { grid-area: amy5; font-size: 13px; font-family: Serif }
 .sheet-mythicgs6 { grid-area: amy6; font-size: 13px; font-family: Serif }
 .sheet-mythicgs7 { grid-area: amy7; font-size: 13px; font-family: Serif; margin-left: 12px }
 .sheet-characteristics2_mythic {
-    display: grid;
-    justify-content: left;
-    text-align: center;
-    grid-template-areas:
-    'amy1 amy1 amy1'
-    'amy2 amy3 amy4'
-    'amy5 amy6 amy7';
-    grid-template-columns: 50px 50px 50px
+	display: grid;
+	justify-content: left;
+	text-align: center;
+	grid-template-areas:
+	'amy1 amy1 amy1'
+	'amy2 amy3 amy4'
+	'amy5 amy6 amy7';
+	grid-template-columns: 50px 50px 50px
 }
 
 .sheet-movementgs1 { grid-area: amm1 }
@@ -222,14 +225,14 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-movementgs14 { grid-area: amm14; font-size: 13px; font-family: Serif }
 .sheet-movementgs15 { grid-area: amm15; font-size: 13px; font-family: Serif }
 .sheet-characteristics2_movement {
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    grid-template-areas:
-    'amm1 amm1 amm1  amm1  amm1  amm1 amm1'
-    'amm2 amm3 amm4  amm5  amm6  amm7 amm8'
-    'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
-    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px
+	display: grid;
+	justify-content: center;
+	text-align: center;
+	grid-template-areas:
+	'amm1 amm1 amm1  amm1  amm1  amm1 amm1'
+	'amm2 amm3 amm4  amm5  amm6  amm7 amm8'
+	'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
+	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px
 }
 
 .sheet-carrygs1 { grid-area: ac1 }
@@ -240,38 +243,45 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Serif }
 .sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Serif }
 .sheet-characteristics2_carry {
-    display: grid;
-    justify-content: right;
-    text-align: center;
-    grid-template-areas:
-    'ac1 ac1 ac1'
-    'ac2 ac3 ac4'
-    'ac5 ac6 ac7';
-    grid-template-columns: 50px 50px 50px
+	display: grid;
+	justify-content: right;
+	text-align: center;
+	grid-template-columns: 50px 50px 50px;
+	grid-template-areas:
+	'ac1 ac1 ac1'
+	'ac2 ac3 ac4'
+	'ac5 ac6 ac7'
 }
 
 /* ______________________________ end of grid structure for the mythic characteristics, movement and pushing ______________________________
 ______________________________ start of grid structure for initiative and sheet tabs ______________________________ */
 
 .sheet-tabs_main {
-    display: grid;
-    grid-template-columns: 50% 50%
+	display: grid;
+	grid-template-columns: 50% 50%
+}
+.sheet-initiative_G1{grid-area: i1;width: 100px;}
+.sheet-initiative_G2{grid-area: i2;height: 28px;}
+.sheet-initiative_G3{grid-area: i3;height: 28px;font-family: Saira Semi Condensed; font-size: 20px; color:white; background:#475f85;}
+.sheet-initiative_G4{grid-area: i4;height: 28px;}
+.sheet-initiative_G5{grid-area: i5;height: 28px;font-family: Saira Semi Condensed; font-size: 20px; color:white; background:#475f85;}
+.sheet-initiative_G6{grid-area: i6;height: 28px;}
+.sheet-initiative_grid{
+	display: grid;
+	grid-template-columns: 100px 107px 11px 45px 10px 100px;
+	grid-template-rows: 28px;
+	grid-template-areas:
+	'i1 i2 i3 i4 i5 i6'
 }
 
 select,
-.sheet-sheet_tabs,
-.sheet-initiative { display: grid; height: 30px }
-
-.sheet-initiative {
-    grid-template-columns: 100px 102px 10px 40px 17px 93px;
-    justify-content: left
-}
+.sheet-sheet_tabs{display: grid; height: 30px }
 
 .sheet-sheet_tabs {
-    grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
-    justify-content: right
-}
+	grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
+	justify-content: right
 
+}
 /* ______________________________ end of grid structure for initiative and sheet tabs ______________________________
 ______________________________ start of tab buttons toggles ______________________________ */
 
@@ -292,17 +302,29 @@ ______________________________ start of tab buttons toggles ____________________
 .sheet-tabstoggle[value='vehicles'] ~ div.sheet-vehicles,
 .sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block }
 .sheet-core_bttn:checked + button {
-    background: rgb(200, 0, 0);
-    color: white;
-    font-weight: bold
+	background: rgb(200, 0, 0);
+	color: white;
+	font-weight: bold
 }
 
 /* ______________________________ end of tab buttons toggles ______________________________
 ______________________________ start of minimisable infographic ______________________________ */
-
-.sheet-minimisable_infographic_main {
+.sheet-minimisable_infographic_G1{grid-area: i1;}
+.sheet-minimisable_infographic_G2{grid-area: i2;}
+.sheet-minimisable_infographic_G3{grid-area: i3;}
+.sheet-minimisable_infographic_G4{grid-area: i4;}
+.sheet-minimisable_infographic_G5{grid-area: i5;}
+.sheet-minimisable_infographic_G6{grid-area: i6;}
+.sheet-minimisable_infographic_G7{grid-area: i7;}
+.sheet-minimisable_infographic_G8{grid-area: i8;}
+.sheet-minimisable_infographic_G9{grid-area: i9;}
+.sheet-minimisable_infographic_G10{grid-area: i10;}
+.sheet-minimisable_infographic_G11{grid-area: i11;}
+.sheet-minimisable_infographic_collapse {
 	display: grid;
-	grid-template-columns: 18px auto
+	grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+	grid-template-areas:
+	'i1  i2  i3  i4  i5  i6  i7  i8 i9 i10 i11';
 }
 
 .sheet-minimisable_infographic_expand,
@@ -318,12 +340,12 @@ ______________________________ start of core tab */
 .sheet-core_lists2 { grid-area: cl2 }
 .sheet-core_lists3 { grid-area: cl3 }
 .sheet-core_lists {
-  display: grid;
-  height: auto;
-  grid-template-areas:
-  'cl1 cl2'
-  'cl1 cl3';
-  grid-template-columns: 50% 50%
+	display: grid;
+	height: auto;
+	grid-template-areas:
+	'cl1 cl2'
+	'cl1 cl3';
+	grid-template-columns: 50% 50%
 }
 
 .sheet-collapsible_ability_description_window_a,
@@ -355,33 +377,33 @@ start of medical tab ___________________________________________________________
 .sheet-medicalgT { grid-area: mT }
 .sheet-medicalgR { grid-area: mR }
 .sheet-medical-grid {
-  height: 50px;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 120px 120px 120px 120px 120px 150px auto;
-  grid-template-areas:
-  'm1  m2  m3  mT'
-  'm4  m5  m6  mT'
-  'm7  m8  m9  mT'
-  'm10 m8  m11 mT'
-  'm12 m13 m14 mT'
-  'm15 m16 m17 mT'
-  'mR  mR  mR  mT';
+	height: 50px;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 120px 120px 120px 120px 120px 150px auto;
+	grid-template-areas:
+	'm1  m2  m3  mT'
+	'm4  m5  m6  mT'
+	'm7  m8  m9  mT'
+	'm10 m8  m11 mT'
+	'm12 m13 m14 mT'
+	'm15 m16 m17 mT'
+	'mR  mR  mR  mT';
 }
 
 .sheet-medical_h2 {
-    background: #394C6A;
-    color: white
+	background: #394C6A;
+	color: white
 }
 
 .sheet-medical_table {
-  font-family: Saira Semi Condensed;
-  color:white;
-  background:#475f85;
-  text-align: center;
-  text-indent: 5px;
-  border-bottom: 1px dotted grey;
-  border-left: 3px solid #394C6A;
+	font-family: Saira Semi Condensed;
+	color:white;
+	background:#475f85;
+	text-align: center;
+	text-indent: 5px;
+	border-bottom: 1px dotted grey;
+	border-left: 3px solid #394C6A;
 }
 
 /* end of medical tab __________________________________________________________
@@ -398,12 +420,12 @@ start of vehicles tab___________________________________________________________
 .sheet-vehicles_grid3{ grid-area: vg3;  border-left: 2px solid #506b95; border-right: 2px solid #506b95; font-family: Saira Semi Condensed; color:white; background:#506b95;}
 .sheet-vehicle_weapons{ grid-area: vgw;}
 .sheet-vehicles_divider{
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas:
-  'vg1 vgw'
-  'vg2 vgw'
-  'vg3 vgw'
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-areas:
+	'vg1 vgw'
+	'vg2 vgw'
+	'vg3 vgw'
 }
 .sheet-vehicles_Gn  { grid-area: vn; width:100%;color: white; font-family: Saira Semi Condensed; text-align: center; background: #394C6A}
 .sheet-vehicles_Gs  { grid-area: vs; margin-top:-1px; width:100%; height:28.5px; margin-bottom: -8px;}
@@ -449,27 +471,27 @@ start of vehicles tab___________________________________________________________
 .sheet-vehicles_G39 { grid-area: v39; text-align: center}
 .sheet-vehicles_G40 { grid-area: v40;}
 .sheet-vehicles_grid1{
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-areas:
-  'vn  vn  vn  vn'
-  'vs  v1  v1  vt'
-  'v2  v3  v4  v5'
-  'v6  v7  v8  v9'
-  'v10 v10 v10 v10'
-  'v11 v12 v13 v14'
-  'v15 v16 v17 v18'
-  'v19 v20 v21 v22'
-  'v23 v24 v25 v26'
-  'v27 v28 v28 v28'
-  'v29 v30 v30 v30'
-  'v31 v32 v32 v32'
-  'v33 v33 v33 v33'
-  'v34 v34 v35 v35'
-  'v36 v36 v37 v37'
-  'v38 v38 v38 v38'
-  'v39 v39 v39 v39'
-  'v40 v40 v40 v40'
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas:
+	'vn  vn  vn  vn'
+	'vs  v1  v1  vt'
+	'v2  v3  v4  v5'
+	'v6  v7  v8  v9'
+	'v10 v10 v10 v10'
+	'v11 v12 v13 v14'
+	'v15 v16 v17 v18'
+	'v19 v20 v21 v22'
+	'v23 v24 v25 v26'
+	'v27 v28 v28 v28'
+	'v29 v30 v30 v30'
+	'v31 v32 v32 v32'
+	'v33 v33 v33 v33'
+	'v34 v34 v35 v35'
+	'v36 v36 v37 v37'
+	'v38 v38 v38 v38'
+	'v39 v39 v39 v39'
+	'v40 v40 v40 v40'
 }
 .sheet-vehicles_G41 { grid-area: v41;}
 .sheet-vehicles_G42 { grid-area: v42; text-align: center}
@@ -494,15 +516,15 @@ start of vehicles tab___________________________________________________________
 .sheet-vehicles_G61 { grid-area: v61;}
 .sheet-vehicles_G62 { grid-area: v62;}
 .sheet-vehicles_grid2{
-  display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-areas:
-  'v41 v41 v41 v41 v41'
-  'v42 v43 v44 v45 v46'
-  'v47 v48 v49 v50 v51'
-  'v52 v52 v52 v52 v52'
-  'v53 v54 v55 v56 v57'
-  'v58 v59 v60 v61 v62'
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-areas:
+	'v41 v41 v41 v41 v41'
+	'v42 v43 v44 v45 v46'
+	'v47 v48 v49 v50 v51'
+	'v52 v52 v52 v52 v52'
+	'v53 v54 v55 v56 v57'
+	'v58 v59 v60 v61 v62'
 }
 
 .sheet-vehicles_G63 { grid-area: v63;}
@@ -521,13 +543,13 @@ start of vehicles tab___________________________________________________________
 .sheet-vehicles_G76 { grid-area: v76;}
 
 .sheet-vehicles_grid3{
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-areas:
-  'v63 v63 v63 v63'
-  'v64 v64 v65 v65'
-  'v66 v66 v67 v67'
-  'v68 v69 v70 v71'
-  'v72 v73 v74 v75'
-  'v76 v76 v76 v76'
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-areas:
+	'v63 v63 v63 v63'
+	'v64 v64 v65 v65'
+	'v66 v66 v67 v67'
+	'v68 v69 v70 v71'
+	'v72 v73 v74 v75'
+	'v76 v76 v76 v76'
 }
