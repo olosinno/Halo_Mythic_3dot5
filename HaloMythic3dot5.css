@@ -42,8 +42,7 @@ input[type='text'] {
 	background: #394C6A;
 	color: white;
 	font-family: Saira Semi Condensed;
-	text-align: center;
-	width: calc(100% - 20px)
+	text-align: center
 }
 
 /* All horizontal rule elements receive the following CSS property. */
@@ -53,8 +52,7 @@ hr { border-top: 1px dotted white }
 button[type='roll'] {
 	background: black;
 	color: white;
-	font-family: Saira Semi Condensed;
-	width: calc(100% - 5px)
+	font-family: Saira Semi Condensed
 }
 
 /* Both header elements 2 and 3 receive the following CSS properties. */
@@ -76,7 +74,7 @@ h3 {
 	opacity: 0.6
 }
 
-/* All textarea elements */
+/* All textarea elements (keep width for textarea to prevent stretching off of sheet) */
 textarea {
 	background: #394C6A;
 	color: white;
@@ -101,6 +99,8 @@ ______________________________ start of multipurpose or special-use classes such
 }
 
 .sheet-edge_padding { padding: 2px }
+/* full width of containing block */
+.sheet-full_width { width: 100% }
 
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
@@ -113,7 +113,7 @@ ______________________________ start of grid structure for character information
 .sheet-gs5 { grid-area: ah5;	font-size: 16px; height: 30px; padding-left: 5px }
 .sheet-gs6 { grid-area: ah6;	font-size: 16px; height: 30px; padding-left: 5px }
 .sheet-gs7 { grid-area: ah7;	height: 30px; margin-right: -5% }
-.sheet-gs8 { grid-area: ah8;	height: 30px; margin-right: -5%; width: 275px }
+.sheet-gs8 { grid-area: ah8;	height: 30px; margin-right: -5%; width: 280px }
 .sheet-gs9 { grid-area: ah9;	height: 30px; margin-right: -5% }
 .sheet-gs10 { grid-area: ah10;  height: 30px; margin-right: -5% }
 .sheet-gs11 { grid-area: ah11;  height: 30px; margin-right: -5% }
@@ -173,8 +173,6 @@ select,
 	height: 40px
 }
 
-.sheet-characteristics_dropdown { width: 100% }
-
 /* ______________________________ end of structure for characteristics ______________________________
 ______________________________ start of grid structure for the mythic characteristics, movement and pushing ______________________________ */
 
@@ -183,8 +181,7 @@ ______________________________ start of grid structure for the mythic characteri
 	grid-template-columns: 10% 80% 10%
 }
 
-.sheet-mythicgs_width { width: 60px }
-.sheet-mythicgs_padding { padding: 0px 5px }
+.sheet-mythicgs_width { width: 40px }
 .sheet-mythicgs_heading {
 	font-family: Serif;
 	font-size: 15px
@@ -237,7 +234,7 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-carrygs1 { grid-area: ac1 }
 .sheet-carrygs2 { grid-area: ac2 }
 .sheet-carrygs3 { grid-area: ac3 }
-.sheet-carrygs4 { grid-area: ac4; width: 120% }
+.sheet-carrygs4 { grid-area: ac4; width: 90% }
 .sheet-carrygs5 { grid-area: ac5; font-size: 13px; font-family: Serif }
 .sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Serif }
 .sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Serif }
@@ -268,9 +265,8 @@ select,
 }
 
 .sheet-initiative {
-	grid-template-columns: 100px 102px 10px 40px 17px 93px;
-	justify-content: left;
-	width: 200%;
+	display: grid;
+	grid-template-columns: 100px 100px 10px 40px 17px 93px 10px
 }
 
 .sheet-sheet_tabs {
@@ -343,7 +339,7 @@ ______________________________ start of medical tab ____________________________
 	background: #475f85;
 	border-left: 5px solid #475f85;
 	color: white;
-	font-family: Saira Semi Condensed;
+	font-family: Saira Semi Condensed
 }
 
 .sheet-medicalg1 { grid-area: m1 }
@@ -386,13 +382,13 @@ ______________________________ start of medical tab ____________________________
 }
 
 .sheet-medical_table {
-	background:#475f85;
+	background: #475f85;
+	border-bottom: 1px dotted grey;
+	border-left: 3px solid #394C6A;
 	color: white;
 	font-family: Saira Semi Condensed;
 	text-align: center;
-	text-indent: 5px;
-	border-bottom: 1px dotted grey;
-	border-left: 3px solid #394C6A;
+	text-indent: 5px
 }
 
 /* ______________________________ end of medical tab __________________________________________________________
@@ -410,9 +406,9 @@ ______________________________ start of vehicles tab ___________________________
 	'vg3 vgw';
 	grid-template-columns: 50% 50%
 }
-.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; color: white; font-family: Saira Semi Condensed; text-align: center; width: 100% }
-.sheet-vehicles_Gs  { grid-area: vs; margin-top: -1px; width: 100%; height: 28.5px; margin-bottom: -8px; }
-.sheet-vehicles_Gt  { grid-area: vt; margin-top: -1px; width: 100%; height: 28.5px; margin-bottom: -8px; }
+.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; color: white; font-family: Saira Semi Condensed; text-align: center }
+.sheet-vehicles_Gs  { grid-area: vs; height: 28.5px; margin-bottom: -8px; margin-top: -1px }
+.sheet-vehicles_Gt  { grid-area: vt; height: 28.5px; margin-bottom: -8px; margin-top: -1px }
 .sheet-vehicles_G1  { grid-area: v1 }
 .sheet-vehicles_G2  { grid-area: v2; text-align: center}
 .sheet-vehicles_G3  { grid-area: v3; text-align: center}
