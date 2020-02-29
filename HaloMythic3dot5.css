@@ -65,7 +65,7 @@ h2, h3 {
 /* Only type-3 headers receive the following CSS properties. */
 h3 {
 	background: #394C6A;
-	color:white
+	color: white
 }
 
 /* All instances of the placeholder attribute across all elements */
@@ -99,8 +99,11 @@ ______________________________ start of multipurpose or special-use classes such
 }
 
 .sheet-edge_padding { padding: 2px }
+/* half width of containing block */
+.sheet-half_width { width: 50%; text-align: center }
 /* full width of containing block */
 .sheet-full_width { width: 100% }
+.sheet-white_text { color: white }
 
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
