@@ -21,7 +21,7 @@
     <div class='gs7'><input type='text' name='attr_character_name' /></div>
     <div class='gs8'>
       <select name='attr_faction'>
-        <option value='1' selected='selected' />
+        <option value='1' selected='selected' disabled />
         <option value='2'>United Nations Space Command</option>
         <option value='3'>Covenant</option>
         <option value='4'>Forerunner</option>
@@ -73,7 +73,7 @@
     <div>
       <div class='characteristics'><button type='roll' name='STR' value='/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> STR</span></button></div>
       <div class='characteristics'><input  type='text' name='attr_STR'value='0'/></div>
-      <select name='attr_STR_advancement' class='characteristics_dropdown'>
+      <select name='attr_STR_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
         <option value='5'>Simple +5</option>
         <option value='10'>Rookie +10</option>
@@ -86,7 +86,7 @@
     <div>
       <div class='characteristics'><button type='roll' name='TOU'value='/me rolls toughness with [[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> TOU</span></button></div>
       <div class='characteristics'><input  type='text' name='attr_TOU' value='0'/></div>
-      <select name='attr_TOU_advancement' class='characteristics_dropdown'>
+      <select name='attr_TOU_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
         <option value='5'>Simple +5</option>
         <option value='10'>Rookie +10</option>
@@ -99,7 +99,7 @@
     <div>
       <div class='characteristics'><button type='roll' name='AGI'  value='/me rolls agility with [[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> AGI</span></button></div>
       <div class='characteristics'><input  type='text' name='attr_AGI' value='0'></div>
-      <select name='attr_AGI_advancement' class='characteristics_dropdown'>
+      <select name='attr_AGI_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
         <option value='5'>Simple +5</option>
         <option value='10'>Rookie +10</option>
@@ -112,7 +112,7 @@
     <div>
       <div class='characteristics'><button type='roll' name='WFR' value='/me rolls warfare ranged with [[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> WFR</span></button></div>
       <div class='characteristics'><input  type='text' name='attr_WFR' value='0'></div>
-      <select name='attr_WFR_advancement' class='characteristics_dropdown'>
+      <select name='attr_WFR_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
         <option value='5'>Simple +5</option>
         <option value='10'>Rookie +10</option>
@@ -125,7 +125,7 @@
     <div>
       <div class='characteristics'><button type='roll' name='WFM' value='/me rolls warfare melee with [[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> WFM</span></button></div>
       <div class='characteristics'><input  type='text' name='attr_WFM' value='0'></div>
-      <select name='attr_WFM_advancement' class='characteristics_dropdown'>
+      <select name='attr_WFM_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
         <option value='5'>Simple +5</option>
         <option value='10'>Rookie +10</option>
@@ -138,7 +138,7 @@
     <div>
       <div class='characteristics'><button type='roll' name='INT' value='/me rolls intellect [[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> INT</span></button></div>
       <div class='characteristics'><input  type='text' name='attr_INT' value='0'></div>
-      <select name='attr_INT_advancement' class='characteristics_dropdown'>
+      <select name='attr_INT_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
         <option value='5'>Simple +5</option>
         <option value='10'>Rookie +10</option>
@@ -151,7 +151,7 @@
     <div>
       <div class='characteristics'><button type='roll' name='PER' value='/me rolls perception with [[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> PER</span></button></div>
       <div class='characteristics'><input  type='text' name='attr_PER' value='0'></div>
-      <select name='attr_PER_advancement' class='characteristics_dropdown'>
+      <select name='attr_PER_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
         <option value='5'>Simple +5</option>
         <option value='10'>Rookie +10</option>
@@ -164,7 +164,7 @@
     <div>
       <div class='characteristics'><button type='roll' name='CR' value='/me rolls courage with [[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> CR</span></button></div>
       <div class='characteristics'><input  type='text' name='attr_CR' value='0'></div>
-      <select name='attr_CR_advancement' class='characteristics_dropdown'>
+      <select name='attr_CR_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
         <option value='5'>Simple +5</option>
         <option value='10'>Rookie +10</option>
@@ -177,7 +177,7 @@
     <div>
       <div class='characteristics'><button type='roll' name='CH' value='/me rolls charisma with [[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> CH</span></button></div>
       <div class='characteristics'><input  type='text' name='attr_CH' value='0'></div>
-      <select name='attr_CH_advancement' class='characteristics_dropdown'>
+      <select name='attr_CH_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
         <option value='5'>Simple +5</option>
         <option value='10'>Rookie +10</option>
@@ -190,7 +190,7 @@
     <div>
       <div class='characteristics'><button type='roll' name='LD'value='/me rolls leadership with [[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> LD</span></button></div>
       <div class='characteristics'><input  type='text' name='attr_LD' value='0'></div>
-      <select name='attr_LD_advancement' class='characteristics_dropdown'>
+      <select name='attr_LD_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
         <option value='5'>Simple +5</option>
         <option value='10'>Rookie +10</option>
@@ -209,32 +209,32 @@
 
   <div class='characteristics_mythic_movement_carry'>
 
-    <div class='characteristics2_mythic'>
-      <div class='mythicgs1 mythicgs_heading'><b>Mythic Characteristics</b></div>
-      <div class='mythicgs2 mythicgs_width'><input type='text' value='0' name='attr_STR_mythic' /></div>
-      <div class='mythicgs3 mythicgs_width'><input type='text' value='0' name='attr_TOU_mythic' /></div>
-      <div class='mythicgs4 mythicgs_width'><input type='text' value='0' name='attr_AGI_mythic' /></div>
-      <div class='mythicgs5 mythicgs_padding'>Strength</div>
-      <div class='mythicgs6 mythicgs_padding'>Toughness</div>
-      <div class='mythicgs7 mythicgs_padding'>Agility</div>
+    <div class='characteristics2_mythic edge_padding'>
+      <p class='mythicgs1 mythicgs_heading'><b>Mythic Characteristics</b></p>
+      <input class='mythicgs2 mythicgs_width' type='text' value='0' name='attr_STR_mythic' />
+      <input class='mythicgs3 mythicgs_width' type='text' value='0' name='attr_TOU_mythic' />
+      <input class='mythicgs4 mythicgs_width' type='text' value='0' name='attr_AGI_mythic' />
+      <p class='mythicgs5'>Strength</p>
+      <p class='mythicgs6'>Toughness</p>
+      <p class='mythicgs7'>Agility</p>
     </div>
 
     <div class='characteristics2_movement'>
-      <div class='movementgs1 mythicgs_heading'><b>Character Movement</b></div>
-      <div class='movementgs2 mythicgs_width'><input type='text' name='attr_half_move' /></div>
-      <div class='movementgs3 mythicgs_width'><input type='text' name='attr_full_move' /></div>
-      <div class='movementgs4 mythicgs_width'><input type='text' name='attr_charge_move' /></div>
-      <div class='movementgs5 mythicgs_width'><input type='text' name='attr_run_move' /></div>
-      <div class='movementgs6 mythicgs_width'><input type='text' name='attr_sprint_move' /></div>
-      <div class='movementgs7 mythicgs_width'><input type='text' name='attr_jump_move' /></div>
-      <div class='movementgs8 mythicgs_width'><input type='text' name='attr_leap_move' /></div>
-      <div class='movementgs9 '>Half</div>
-      <div class='movementgs10 '>Full</div>
-      <div class='movementgs11 '>Charge</div>
-      <div class='movementgs12 '>Run</div>
-      <div class='movementgs13 '>Sprint</div>
-      <div class='movementgs14 '>Jump</div>
-      <div class='movementgs15 '>Leap</div>
+      <p class='movementgs1 mythicgs_heading'><b>Character Movement</b></p>
+      <input class='movementgs2 mythicgs_width' type='text' name='attr_half_move' />
+      <input class='movementgs3 mythicgs_width' type='text' name='attr_full_move' />
+      <input class='movementgs4 mythicgs_width' type='text' name='attr_charge_move' />
+      <input class='movementgs5 mythicgs_width' type='text' name='attr_run_move' />
+      <input class='movementgs6 mythicgs_width' type='text' name='attr_sprint_move' />
+      <input class='movementgs7 mythicgs_width' type='text' name='attr_jump_move' />
+      <input class='movementgs8 mythicgs_width' type='text' name='attr_leap_move' />
+      <p class='movementgs9 '>Half</p>
+      <p class='movementgs10 '>Full</p>
+      <p class='movementgs11 '>Charge</p>
+      <p class='movementgs12 '>Run</p>
+      <p class='movementgs13 '>Sprint</p>
+      <p class='movementgs14 '>Jump</p>
+      <p class='movementgs15 '>Leap</p>
 
       <script type='text/worker'>
         on('change:settings_race change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
@@ -314,7 +314,7 @@
             // Ruutian+Ibie shan (*2 agi to jump)_______________________________
             if(settings_race == 4){
               setAttrs({
-                jump_move:(str_mod /4 *2)
+              jump_move:(str_mod /4 *2)
               });
             }
             // end of Ruutian_________________________________________________
@@ -322,7 +322,7 @@
             // T'vaoan (*4 agi to jump)_________________________________________
             if(settings_race == 5){
               setAttrs({
-                jump_move:(str_mod /4 *4)
+              jump_move:(str_mod /4 *4)
               });
             }
             // end of sangehili_________________________________________________
@@ -359,13 +359,13 @@
 
 
     <div class='characteristics2_carry'>
-      <div class='carrygs1 mythicgs_heading'><b>Carrying Capacity</b></div>
-      <div class='carrygs2 mythicgs_width'><input type='text' name='attr_carry' /></div>
-      <div class='carrygs3 mythicgs_width'><input type='text' name='attr_lift' /></div>
-      <div class='carrygs4 mythicgs_width'><input type='text' name='attr_push' /></div>
-      <div class='carrygs5 '>Carry</div>
-      <div class='carrygs6 '>Lift</div>
-      <div class='carrygs7 '>Push</div>
+      <p class='carrygs1 mythicgs_heading'><b>Carrying Capacity</b></p>
+      <input class='carrygs2 mythicgs_width' type='text' name='attr_carry' />
+      <input class='carrygs3 mythicgs_width' type='text' name='attr_lift' />
+      <input class='carrygs4' type='text' name='attr_push' />
+      <p class='carrygs5'>Carry</p>
+      <p class='carrygs6'>Lift</p>
+      <p class='carrygs7'>Push</p>
     </div>
 
   </div>
@@ -376,40 +376,43 @@
   <!-- ______________________________ initiative plus sheet tabs grid ______________________________ -->
 
   <div class='tabs_main'>
-    <div class='initiative_grid'>
-      <button class='initiative_G1' name='initiative' type='roll'value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'<span>Initiative</span></button>
-      <div class='hidden'><input name='attr_initmod0' value='floor' /></div>
-      <select class='initiative_G2'name='attr_initmod1'>
+
+    <div class='initiative'>
+      <input class='hidden' name='attr_initmod0' value='floor' />
+      <button name='initiative' type='roll' value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'><span> Initiative</span></button>
+      <select name='attr_initmod1' style='width: 80%'>
         <option value='1d10' selected='selected'>Standard</option>
         <option value='2d10k1'>Fast Foot</option>
         <option value='?{dice|1d10}'>Custom</option>
       </select>
-      <div class='initiative_G3'>+</div>
-      <input class='initiative_G4' type='number' name='attr_initmod2' value='0' />
-      <div class='initiative_G5'>+</div>
-      <select class='initiative_G6' name='attr_initmod3'>
+      <p class='initiative' style='font-weight: bold'>+</p>
+      <div class='initiative'><input type='number' name='attr_initmod2' value='0' /></div>
+      <div class='initiative'>+</div>
+      <div class='initiative'><select name='attr_initmod3'>
         <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
         <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
         <option value='0'>N/A</option>
       </select>
+      </div>
     </div>
 
     <div class='sheet_tabs'>
       <input type='checkbox' name='attr_sheetTab' value='core' class='hidden core_bttn' checked>
-      <button class='core_tabs_text' type='action' name='act_core'>Core</button>
+      <button class='core_bttn' type='action' name='act_core'>Core</button>
       <input type='checkbox' name='attr_sheetTab' value='equipment' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_equipment'>Equipment</button>
+      <button class='equipment_bttn' type='action' name='act_equipment'>Equipment</button>
       <input type='checkbox' name='attr_sheetTab' value='medical' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_medical'>Medical</button>
+      <button class='medical_bttn' type='action' name='act_medical'>Medical</button>
       <input type='checkbox' name='attr_sheetTab' value='advancements' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_advancements'>Advancements</button>
+      <button class='advancements_bttn' type='action' name='act_advancements'>Advancements</button>
       <input type='checkbox' name='attr_sheetTab' value='journal' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_journal'>Journal</button>
+      <button class='journal_bttn' type='action' name='act_journal'>Journal</button>
       <input type='checkbox' name='attr_sheetTab' value='vehicles' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_vehicles'>Vehicles</button>
+      <button class='vehicles_bttn' type='action' name='act_vehicles'>Vehicles</button>
       <input type='checkbox' name='attr_sheetTab' value='settings' class='hidden core_bttn'>
-      <button class='core_tabs_text' type='action' name='act_settings'>Settings</button>
+      <button class='settings_bttn' type='action' name='act_settings'>Settings</button>
     </div>
+
   </div>
 
   <!-- ______________________________ sheet tabs _________________________________ -->
@@ -438,19 +441,16 @@
       Click on this box to EXPAND your minimizable infographic!
     </div>
     <div class='minimisable_infographic_collapse'>
-      <div class="minimisable_infographic_G1">Experience</div>
-      <input class='minimisable_infographic_G2' type="text">
-      <input class='minimisable_infographic_G3' type="text">
-      <input class='minimisable_infographic_G4' type="text">
-      <div class="minimisable_infographic_G5">Head</div>
-      <input class='minimisable_infographic_G6' type="text">
-      <input class='minimisable_infographic_G7' type="text">
-      <input class='minimisable_infographic_G8' type="text">
-      <input class='minimisable_infographic_G9' type="text">
-      <input class='minimisable_infographic_G10' type="text">
-      <div class="minimisable_infographic_G11">Shields</div>
+		<div class="row">
+			<div class="item 5"></div>
+			<div class="item 90">Courage</div>
+			<div class="item 70"><input type="text" class="data_2" name="attr_courage" value="0"/></div>
+			<div class="item 5"></div>
+			<div class="item 90">Resistance</div>
+			<div class="item 70"><input type="text" class="data_2" name="attr_resistance" value="0"/></div>
+		</div>
     </div>
-    <br>
+	<br>
   </div>
 
 
@@ -484,19 +484,19 @@
     <h2>Abilities</h2>
     <p style='text-align: right; margin-top:-19px; margin-right: 7px'><b>Expand or collapse ability's descriptor block ⯆</b></p>
     <div class='edge_padding'>
-      <input type='text' name='ability' placeholder='SQUAD UP'>
-      <input type='checkbox' name='ability_desc' class='collapsible_ability_block_switch'>
+	<input type='text' name='ability' placeholder='SQUAD UP'>
+    <input type='checkbox' name='ability_desc' class='collapsible_ability_block_switch'>
+    <div class='collapsible_ability_description_window_a' ></div>
+    <textarea name='attr_ability' class='collapsible_ability_description_window_b'
+    placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
+    Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
+    <fieldset name='abilities' class='repeating_abilities'>
+      <input type='text' name='attr_ability_r' placeholder='Write ability / trait name here'>
+      <input type='checkbox' class='collapsible_ability_block_switch'>
       <div class='collapsible_ability_description_window_a' ></div>
-      <textarea name='attr_ability' class='collapsible_ability_description_window_b'
-      placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
-      Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
-      <fieldset name='abilities' class='repeating_abilities'>
-        <input type='text' name='attr_ability_r' placeholder='Write ability / trait name here'>
-        <input type='checkbox' class='collapsible_ability_block_switch'>
-        <div class='collapsible_ability_description_window_a' ></div>
-        <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b'></textarea>
-      </fieldset>
-    </div>
+      <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b'></textarea>
+    </fieldset>
+	</div>
 
   </div>
 
@@ -509,7 +509,7 @@
   <div class='medical'>
     <!-- Medical -->
     <div class='medical-grid'>
-      <div class='medicalg1'>
+      <div class='medicalg1 medicalG'>
         Finger/toe
         <select name='attr_medical_finger/toe'>
           <option selected='selected' value='0'>nominal</option>
@@ -532,7 +532,7 @@
         </div>
       </div>
 
-      <div class='medicalg2'>
+      <div class='medicalg2 medicalG'>
         Heart
         <select name='attr_medical_heart'>
           <option selected='selected' value='0'>nominal</option>
@@ -558,7 +558,7 @@
         </div>
       </div>
 
-      <div class='medicalg3'>
+      <div class='medicalg3 medicalG'>
         Neck
         <select name='attr_neck'>
           <option selected='selected' value='0'>nominal</option>
@@ -587,7 +587,7 @@
         </div>
       </div>
 
-      <div class='medicalg4'>
+      <div class='medicalg4 medicalG'>
         Skull/brain
         <select name='attr_skull/brain'>
           <option selected='selected' value='0'>nominal</option>
@@ -613,7 +613,7 @@
         </div>
       </div>
 
-      <div class='medicalg5'>
+      <div class='medicalg5 medicalG'>
         Nose/ear
         <select name='attr_nose/ear'>
           <option selected='selected' value='0'>nominal</option>
@@ -642,7 +642,7 @@
         </div>
       </div>
 
-      <div class='medicalg6'>
+      <div class='medicalg6 medicalG'>
         Arm/leg
         <select name='attr_arm/leg'>
           <option selected='selected' value='0'>nominal</option>
@@ -671,7 +671,7 @@
         </div>
       </div>
 
-      <div class='medicalg7'>
+      <div class='medicalg7 medicalG'>
         Small/large intestines
         <select name='attr_small/large intestines'>
           <option selected='selected' value='0'>nominal</option>
@@ -700,7 +700,7 @@
         </div>
       </div>
 
-      <div class='medicalg8'>
+      <div class='medicalg8 medicalG'>
         Lung
         <select name='attr_lung'>
           <option selected='selected' value='0'>nominal</option>
@@ -729,7 +729,7 @@
         </div>
       </div>
 
-      <div class='medicalg9'>
+      <div class='medicalg9 medicalG'>
         Kidney/stomach/liver/spleen
         <select name='attr_kidney/stomach/liver/spleen'>
           <option selected='selected' value='0'>nominal</option>
@@ -758,7 +758,7 @@
         </div>
       </div>
 
-      <div class='medicalg10'>
+      <div class='medicalg10 medicalG'>
         Knee/ankle/shoulder/elbow
         <select name='attr_knee/ankle/shoulder/elbow'>
           <option selected='selected' value='0'>nominal</option>
@@ -787,7 +787,7 @@
         </div>
       </div>
 
-      <div class='medicalg11'>
+      <div class='medicalg11 medicalG'>
         Eye
         <select name='attr_eye'>
           <option selected='selected' value='0'>nominal</option>
@@ -816,7 +816,7 @@
         </div>
       </div>
 
-      <div class='medicalg12'>
+      <div class='medicalg12 medicalG'>
         Mouth
         <select name='attr_mouth'>
           <option selected='selected' value='0'>nominal</option>
@@ -845,7 +845,7 @@
         </div>
       </div>
 
-      <div class='medicalg13'>
+      <div class='medicalg13 medicalG'>
         Hand
         <select name='attr_hand'>
           <option selected='selected' value='0'>nominal</option>
@@ -874,7 +874,7 @@
         </div>
       </div>
 
-      <div class='medicalg14'>
+      <div class='medicalg14 medicalG'>
         Chin/jaw/cheek
         <select name='attr_chin/jaw/cheek'>
           <option selected='selected' value='0'>nominal</option>
@@ -903,7 +903,7 @@
         </div>
       </div>
 
-      <div class='medicalg15'>
+      <div class='medicalg15 medicalG'>
         Foot
         <select name='attr_foot'>
           <option selected='selected' value='0'>nominal</option>
@@ -932,7 +932,7 @@
         </div>
       </div>
 
-      <div class='medicalg16'>
+      <div class='medicalg16 medicalG'>
         Pelvis
         <select name='attr_pelvis'>
           <option selected='selected' value='0'>nominal</option>
@@ -961,7 +961,7 @@
         </div>
       </div>
 
-      <div class='medicalg17'>
+      <div class='medicalg17 medicalG'>
         Chest
         <select name='attr_chest'>
           <option selected='selected' value='0'>nominal</option>
@@ -1099,7 +1099,7 @@
       XP Total: <input type='number' name='attr_XP_total' style='width: 10%'>
     </div>
     <br>
-    <div class='edge_padding'>
+	<div class='edge_padding'>
       <fieldset name='advancements' class='repeating_advancements'>
         <input type='text' name='attr_advancementL' placeholder='Write XP-costing item name here' style='width: 25%'>
         <input type='number' name='attr_advancement_costL' placeholder='XP Cost' style='width: 10%'>
@@ -1108,19 +1108,19 @@
         <input type='number' name='attr_advancement_costR' placeholder='XP Cost' style='width: 10%'>
         <input type='number' name='attr_advancement_pg#R' placeholder='Page #' style='width: 10%'>
       </fieldset>
-    </div>
+	</div>
 
   </div>
 
   <div class='journal'>
     <h2>Journal: Objectives</h2>
-    <div class='edge_padding'>
+	<div class='edge_padding'>
       <fieldset name='objectives' class='repeating_objectives'>
         <input type='text' name='attr_objective' style='width: 96%' />
         <input type='checkbox' name='attr_objective_completed' />
       </fieldset>
-    </div>
-    <h2>Journal: Notes</h2>
+	</div>
+	<h2>Journal: Notes</h2>
     <div class='edge_padding'>
       <fieldset name='notes' class='repeating_notes'>
         <!-- insert new line html entity [&#10;] inside of placeholder attribute -->
@@ -1129,84 +1129,84 @@
         &#10;Also feel free to write appearance details here or in Bio & Info for public viewing: age, height, weight, colors of eyes, hair, skin, and more that comes to mind.&#10;
         &#10;See Medical tab to include any medical information such as character injuries.'></textarea>
       </fieldset>
-    </div>
+	</div>
   </div>
 
   <div class='vehicles'>
     <div class='vehicles_divider'>
       <div class='vehicles_grid1'>
-        <input class='vehicles_Gn type='text' placeholder='Name'>
+        <input class='vehicles_Gn full_width' type='text' placeholder='Name'>
 
-        <select class='vehicles_Gs' name='attr_vehicle-shield'>
+        <select class='vehicles_Gs full_width' name='attr_vehicle-shield'>
           <option selected='selected' value='0'>Unshielded</option>
           <option value='1'>Shielded</option>
         </select>
 
-        <select class='vehicles_Gt' name='attr_vehicle-type'>
+        <select class='vehicles_Gt full_width' name='attr_vehicle-type'>
           <option selected='selected' value='0'>Ground</option>
           <option value='1'>Air</option>
           <option value='2'>Walker</option>
           <option value='3'>Stationary</option>
         </select>
         <div class='vehicles_G1'><h3>DIMENSIONS</h3></div>
-        <div class='vehicles_G2'>length</div>
+        <div class='vehicles_G2'>Length</div>
         <div class='vehicles_G3'>Width</div>
         <div class='vehicles_G4'>Height</div>
         <div class='vehicles_G5'>Weight</div>
-        <input class='vehicles_G6' type='text' name='attr_vehicle-length'></input>
-        <input class='vehicles_G7' type='text' name='attr_vehicle-width'></input>
-        <input class='vehicles_G8' type='text' name='attr_vehicle-height'></input>
-        <input class='vehicles_G9' type='text' name='attr_vehicle-weight'></input>
+        <input class='vehicles_G6 full_width' type='text' name='attr_vehicle-length'></input>
+        <input class='vehicles_G7 full_width' type='text' name='attr_vehicle-width'></input>
+        <input class='vehicles_G8 full_width' type='text' name='attr_vehicle-height'></input>
+        <input class='vehicles_G9 full_width' type='text' name='attr_vehicle-weight'></input>
 
         <input type='checkbox' name='attr_vehicle-type' value='0' class='hidden hider' checked>
         <div class='vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
         <input type='checkbox' name='attr_vehicle-type' value='1' class='hidden hider' >
         <div class='vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
         <input type='checkbox' name='attr_vehicle-type' value='2' class='hidden hider' >
-        <div class='vehicles_G10'><h3>CHARATERISTICS</h3></div>
+        <div class='vehicles_G10'><h3>CHARACTERISTICS</h3></div>
 
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
         <div class='vehicles_G11'>Accelerate</div>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
         <div class='vehicles_G12'>Brake</div>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
-        <div class='vehicles_G13'>Top speed</div>
+        <div class='vehicles_G13'>Top Speed</div>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
         <div class='vehicles_G14'>Maneuver</div>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
-        <input class='vehicles_G15' type='text' name='attr_vehicle-accelerate'></input>
+        <input class='vehicles_G15 full_width' type='text' name='attr_vehicle-accelerate'></input>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
-        <input class='vehicles_G16' type='text' name='attr_vehicle-brake'></input>
+        <input class='vehicles_G16 full_width' type='text' name='attr_vehicle-brake'></input>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
-        <input class='vehicles_G17' type='text' name='attr_vehicle-top_speed'></input>
+        <input class='vehicles_G17 full_width' type='text' name='attr_vehicle-top_speed'></input>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
-        <input class='vehicles_G18' type='text' name='attr_vehicle-maneuver'></input>
+        <input class='vehicles_G18 full_width' type='text' name='attr_vehicle-maneuver'></input>
 
         <input type='checkbox' name='attr_vehicle-type' value='1' class='hidden hider' >
         <div class='vehicles_G19'>Vertical</div>
         <input type='checkbox' name='attr_vehicle-type' value='1' class='hidden hider' >
         <div class='vehicles_G20'>Takeoff</div>
         <input type='checkbox' name='attr_vehicle-type' value='1' class='hidden hider' >
-        <div class='vehicles_G21'>Target range</div>
+        <div class='vehicles_G21'>Target Range</div>
         <input type='checkbox' name='attr_vehicle-type' value='1' class='hidden hider' >
         <div class='vehicles_G22'>Targeting</div>
         <input type='checkbox' name='attr_vehicle-type' value='1' class='hidden hider' >
-        <input class='vehicles_G23' type='text' name='attr_vehicle-vertical'></input>
+        <input class='vehicles_G23 full_width' type='text' name='attr_vehicle-vertical'></input>
         <input type='checkbox' name='attr_vehicle-type' value='1' class='hidden hider' >
-        <input class='vehicles_G24' type='text' name='attr_vehicle-takeoff'></input>
+        <input class='vehicles_G24 full_width' type='text' name='attr_vehicle-takeoff'></input>
         <input type='checkbox' name='attr_vehicle-type' value='1' class='hidden hider' >
-        <input class='vehicles_G25' type='text' name='attr_vehicle-target_range'></input>
+        <input class='vehicles_G25 full_width' type='text' name='attr_vehicle-target_range'></input>
         <input type='checkbox' name='attr_vehicle-type' value='1' class='hidden hider' >
-        <input class='vehicles_G26' type='text' name='attr_vehicle-targeting'></input>
+        <input class='vehicles_G26 full_width' type='text' name='attr_vehicle-targeting'></input>
 
         <input type='checkbox' name='attr_vehicle-type' value='2' class='hidden hider' >
         <div class='vehicles_G27'>Strength</div>
         <input type='checkbox' name='attr_vehicle-type' value='2' class='hidden hider' >
         <div class='vehicles_G28'>Melee</div>
         <input type='checkbox' name='attr_vehicle-type' value='2' class='hidden hider' >
-        <input class='vehicles_G29' type='text' name='attr_vehicle-strength'></input>
+        <input class='vehicles_G29 full_width' type='text' name='attr_vehicle-strength'></input>
         <input type='checkbox' name='attr_vehicle-type' value='2' class='hidden hider' >
-        <input class='vehicles_G30' type='text' name='attr_vehicle-melee'></input>
+        <input class='vehicles_G30 full_width' type='text' name='attr_vehicle-melee'></input>
 
         <input type='checkbox' name='attr_vehicle-type' value='2' class='hidden hider' >
         <input class='vehicles_G31' type='text' name='attr_vehicle-strength-mythic'></input>
@@ -1214,18 +1214,18 @@
         <div class='vehicles_G32'>Mythic</div>
 
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
-        <div class='vehicles_G33'><h3>CREW AND COMPLIMENT</h3></div>
+        <div class='vehicles_G33'><h3>CREW AND COMPLEMENT</h3></div>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
         <div class='vehicles_G34'>Crew</div>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
-        <div class='vehicles_G35'>Compliment</div>
+        <div class='vehicles_G35'>Complement</div>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
-        <input class='vehicles_G36' type='text' name='attr_vehicle-crew'></input>
+        <input class='vehicles_G36 full_width' type='text' name='attr_vehicle-crew'></input>
         <input type='checkbox' name='attr_vehicle-type' value='3' class='hidden hidernot' >
-        <input class='vehicles_G37' type='text' name='attr_vehicle-compliment'></input>
+        <input class='vehicles_G37 full_width' type='text' name='attr_vehicle-compliment'></input>
         <div class='vehicles_G38'><h3>HULL</h3></div>
-        <div class='vehicles_G39'>Hull material</div>
-        <input class='vehicles_G40' type='text' name='attr_vehicle-hull'></input>
+        <div class='vehicles_G39'>Hull Material</div>
+        <input class='vehicles_G40 full_width' type='text' name='attr_vehicle-hull'></input>
       </div>
       <div class='vehicles_grid2'>
         <div class='vehicles_G41'><h3>BREAKPOINTS</h3></div>
@@ -1234,46 +1234,46 @@
         <div class='vehicles_G44'>Eng</div>
         <div class='vehicles_G45'>Op</div>
         <div class='vehicles_G46'>Crew</div>
-        <input class='vehicles_G47' type='text' name='attr_vehicle-bp-wep'></input>
-        <input class='vehicles_G48' type='text' name='attr_vehicle-bp-mod'></input>
-        <input class='vehicles_G49' type='text' name='attr_vehicle-bp-eng'></input>
-        <input class='vehicles_G50' type='text' name='attr_vehicle-bp-op'></input>
-        <input class='vehicles_G51' type='text' name='attr_vehicle-bp-crew'></input>
+        <input class='vehicles_G47 full_width' type='text' name='attr_vehicle-bp-wep'></input>
+        <input class='vehicles_G48 full_width' type='text' name='attr_vehicle-bp-mod'></input>
+        <input class='vehicles_G49 full_width' type='text' name='attr_vehicle-bp-eng'></input>
+        <input class='vehicles_G50 full_width' type='text' name='attr_vehicle-bp-op'></input>
+        <input class='vehicles_G51 full_width' type='text' name='attr_vehicle-bp-crew'></input>
         <div class='vehicles_G52'><h3>Armor</h3></div>
         <div class='vehicles_G53'>Front</div>
         <div class='vehicles_G54'>Back</div>
         <div class='vehicles_G55'>Side</div>
         <div class='vehicles_G56'>Top</div>
         <div class='vehicles_G57'>Bottom</div>
-        <input class='vehicles_G58' type='text' name='attr_vehicle-armor-front'></input>
-        <input class='vehicles_G59' type='text' name='attr_vehicle-armor-back'></input>
-        <input class='vehicles_G60' type='text' name='attr_vehicle-armor-side'></input>
-        <input class='vehicles_G61' type='text' name='attr_vehicle-armor-top'></input>
-        <input class='vehicles_G62' type='text' name='attr_vehicle-armor-bottom'></input>
+        <input class='vehicles_G58 full_width' type='text' name='attr_vehicle-armor-front'></input>
+        <input class='vehicles_G59 full_width' type='text' name='attr_vehicle-armor-back'></input>
+        <input class='vehicles_G60 full_width' type='text' name='attr_vehicle-armor-side'></input>
+        <input class='vehicles_G61 full_width' type='text' name='attr_vehicle-armor-top'></input>
+        <input class='vehicles_G62 full_width' type='text' name='attr_vehicle-armor-bottom'></input>
       </div>
       <div class='vehicles_grid3'>
         <div class='vehicles_G63'><h3>Miscellaneous</h3></div>
-        <div class='vehicles_G64'>Size points</div>
-        <div class='vehicles_G65'>Weapon points</div>
-        <input class='vehicles_G66' type='text' name='attr_vehicle-size-points'></input>
-        <input class='vehicles_G67' type='text' name='attr_vehicle-weapon-points'></input>
+        <div class='vehicles_G64'>Size Points</div>
+        <div class='vehicles_G65'>Weapon Points</div>
+        <input class='vehicles_G66 full_width' type='text' name='attr_vehicle-size-points'></input>
+        <input class='vehicles_G67 full_width' type='text' name='attr_vehicle-weapon-points'></input>
 
         <input type='checkbox' name='attr_vehicle-shield' value='1' class='hidden hider' >
-        <div class='vehicles_G68'>Shield rating</div>
+        <div class='vehicles_G68'>Shield Rating</div>
         <input type='checkbox' name='attr_vehicle-shield' value='1' class='hidden hider' >
-        <div class='vehicles_G69'>Shield current</div>
+        <div class='vehicles_G69'>Shield Current</div>
         <input type='checkbox' name='attr_vehicle-shield' value='1' class='hidden hider' >
-        <div class='vehicles_G70'>Recharge delay</div>
+        <div class='vehicles_G70'>Recharge Delay</div>
         <input type='checkbox' name='attr_vehicle-shield' value='1' class='hidden hider' >
-        <div class='vehicles_G71'>Recharge rate</div>
+        <div class='vehicles_G71'>Recharge Rate</div>
         <input type='checkbox' name='attr_vehicle-shield' value='1' class='hidden hider' >
-        <input class='vehicles_G72' type='text' name='attr_vehicle-shield-rating'></input>
+        <input class='vehicles_G72 full_width' type='text' name='attr_vehicle-shield-rating'></input>
         <input type='checkbox' name='attr_vehicle-shield' value='1' class='hidden hider' >
-        <input class='vehicles_G73' type='text' name='attr_vehicle-shield-current'></input>
+        <input class='vehicles_G73 full_width' type='text' name='attr_vehicle-shield-current'></input>
         <input type='checkbox' name='attr_vehicle-shield' value='1' class='hidden hider' >
-        <input class='vehicles_G74' type='text' name='attr_vehicle-recharge-delay'></input>
+        <input class='vehicles_G74 full_width' type='text' name='attr_vehicle-recharge-delay'></input>
         <input type='checkbox' name='attr_vehicle-shield' value='1' class='hidden hider' >
-        <input class='vehicles_G75' type='text' name='attr_vehicle-recharge-rate'></input>
+        <input class='vehicles_G75 full_width' type='text' name='attr_vehicle-recharge-rate'></input>
 
         <div class='vehicles_G76'>
           <div class='collapsible_ability_description_window_a' ></div>
@@ -1303,15 +1303,15 @@
   <div class='settings'>
     <h2>Settings</h2>
     <select name='attr_settings_race'>
-      <option selected='selected' value='0'>Racial Features: N/A</option>
-      <option value='1'>Spartan 2/3/4</option>
+      <option selected='selected' value='0'>Racial Features: N/A </option>
+      <option value='1'>Spartan 2 / Spartan 3 / Spartan 4 </option>
       <option value='2'>Sangheili / Elite </option>
-      <option value='1'>Jiralhanea / Brutes </option>
-      <option value='4'>Kig-yar Ruutian / H1/2/3 Jackal  </option>
-      <option value='5'>Kig-yar T'vaoan / Skirmisher </option>
-      <option value='4'>Kig-yar Ibie'shan / H4/5 Jackal  </option>
-      <option value='7'>Mgalekgolo / Hunter</option>
-      <option value='1'>Promethian knight / Hunter</option>
+      <option value='1'>Jiralhanae / Brutes </option>
+      <option value='4'>Kig-yar Ruutian / Halo Trilogy Jackals </option>
+      <option value='5'>Kig-yar T'vaoan / Halo Reach Jackals / Skirmishers </option>
+      <option value='4'>Kig-yar Ibie'shan / Halo 4/5 Jackals </option>
+      <option value='7'>Mgalekgolo / Hunters </option>
+      <option value='1'>Promethian Knight / Hunter </option>
     </select>
   </div>
 
