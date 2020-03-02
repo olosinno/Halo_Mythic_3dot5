@@ -39,7 +39,8 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 /* All input elements that are of type number or type text */
 select,
 input[type='number'],
-input[type='text'] {
+input[type='text'],
+button[type='action'] {
 	background: #394C6A;
 	color: white;
 	font-family: Saira Semi Condensed;
@@ -111,6 +112,7 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-white_text { color: white }
 .sheet-huge_text { font-size: 36px }
 .sheet-bold_text { font-weight: bold }
+.sheet-centered { margin: auto }
 
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
@@ -313,7 +315,9 @@ ______________________________ start of tab buttons toggles ____________________
 .sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block }
 .sheet-core_bttn:checked + button {
 	background: rgb(200, 0, 0);
-	color: white
+	color: white;
+	height: 90%;
+	vertical-align: center
 }
 
 /* ______________________________ end of tab buttons toggles ______________________________
