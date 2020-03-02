@@ -5,13 +5,14 @@ input.sheet-background_switch_4:checked ~ div.sheet-background { background-imag
 input.sheet-background_switch_5:checked ~ div.sheet-background { background: white }
 
 /*
-METHOD OF MY MADNESS
+METHODS OF MY MADNESS
 Keep select parameters on separate lines to better track what is being selected
 Enter in CSS properties as following Format: {
 	text-align: center;
 	text-decoration: underline
 }
 no ending semicolons needed, properly space out properties line-by-line.  Alphabetized each properties list for easier reading.
+2. Keep order in HTML elements' attributes by the way they're listed.  name type value class
 */
 
 .charsheet .sheet-row {
@@ -55,6 +56,9 @@ button[type='roll'] {
 	font-family: Saira Semi Condensed
 }
 
+/* All button elements of type roll when hovered over: */
+button[type='roll']:hover { background-color: red }
+
 /* Both header elements 2 and 3 receive the following CSS properties. */
 h2, h3 {
 	font-family: Saira Semi Condensed;
@@ -81,11 +85,6 @@ textarea {
 	font-family: Saira Semi Condensed;
 	resize: vertical;
 	width: calc(100% - 10px)
-}
-
-button[type='roll']:hover,
-button:hover {
-  background-color: red;
 }
 
 /* ______________________________ end of CSS selectors ______________________________
