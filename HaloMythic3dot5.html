@@ -377,23 +377,23 @@
 
   <div class='tabs_main'>
 
-    <div class='initiative'>
-      <input class='hidden' name='attr_initmod0' value='floor' />
-      <button name='initiative' type='roll' value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'><span> Initiative</span></button>
-      <select name='attr_initmod1' style='width: 80%'>
+    <div class='initiative-container'>
+      <input name='attr_initmod0' value='floor' class='hidden' />
+      <button name='initiative' type='roll' value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'>
+	  <span> Initiative</span></button>
+      <select name='attr_initmod1' class='init_field'>
         <option value='1d10' selected='selected'>Standard</option>
         <option value='2d10k1'>Fast Foot</option>
         <option value='?{dice|1d10}'>Custom</option>
       </select>
-      <p class='initiative' style='font-weight: bold'>+</p>
-      <div class='initiative'><input type='number' name='attr_initmod2' value='0' /></div>
-      <div class='initiative'>+</div>
-      <div class='initiative'><select name='attr_initmod3'>
+      <p class='init_plus1'>+</p>
+      <input name='attr_initmod2' type='number' value='0' />
+      <p class='init_plus2'>plus</p>
+      <select name='attr_initmod3' class='init_field'>
         <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
         <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
         <option value='0'>N/A</option>
       </select>
-      </div>
     </div>
 
     <div class='sheet_tabs'>
