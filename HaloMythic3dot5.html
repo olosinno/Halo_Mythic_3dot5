@@ -441,13 +441,13 @@
       Click on this box to EXPAND your minimizable infographic!
     </div>
     <div class='minimisable_infographic_collapse'>
-		<div class="row">
-			<div class="item 5"></div>
-			<div class="item 90">Courage</div>
-			<div class="item 70"><input name="attr_courage" type="text" value="0" class="data_2" /></div>
-			<div class="item 5"></div>
-			<div class="item 90">Resistance</div>
-			<div class="item 70"><input name="attr_resistance" type="text" value="0" class="data_2" /></div>
+		<div class='row'>
+			<div class='item 5'></div>
+			<div class='item 90'>Courage</div>
+			<div class='item 70'><input name='attr_courage' type='text' value='0' class='data_2' /></div>
+			<div class='item 5'></div>
+			<div class='item 90'>Resistance</div>
+			<div class='item 70'><input name='attr_resistance' type='text' value='0' class='data_2' /></div>
 		</div>
     </div>
 	<br>
@@ -463,24 +463,24 @@
     <div class='core_lists box'>
       <div class='core_lists1 edge_padding'>
         <h3><b>Skills</b></h3>
-        <div class="skills">
+        <div class='skills'>
           <div>skillname</div>
           <select name='attr_skillname_mod1' class='full_width'>
             <option value='@{STR} + @{STR_advancement}' selected='selected'>str</option>
           </select>
-          <div><input class="full_width" type="text" name="attr_skillname_mod2" value="0"></div>
+          <div><input name='attr_skillname_mod2' type='text' value='0' class='full_width'></div>
           <div>
-            <input type="radio" name="attr_skillname_mod3" value="+20" checked="checked"><span></span>
-            <input type="radio" name="attr_skillname_mod3" value="+30"><span></span>
-            <input type="radio" name="attr_skillname_mod3" value="+40"><span></span>
+            <input name='attr_skillname_mod3' type='radio' value='+20' checked='checked'><span></span>
+            <input name='attr_skillname_mod3' type='radio' value='+30'><span></span>
+            <input name='attr_skillname_mod3' type='radio' value='+40'><span></span>
           </div>
-          <div><button type="roll" name="skillname_roll" value='/me rolls skillname with [[floor(([[@{skillname_mod1} + @{skillname_mod2} + @{skillname_mod3} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' ></button></div>
+          <div><button name='skillname_roll' type='roll' value='/me rolls skillname with [[floor(([[@{skillname_mod1} + @{skillname_mod2} + @{skillname_mod3} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' ></button></div>
         </div>
-
         <fieldset name='skills' class='repeating_skills'>
           <input name='attr_skill' type='text' class='' />
         </fieldset>
       </div>
+
       <div class='core_lists2 edge_padding'>
         <h3><b>Education</b></h3>
         <fieldset name='skills' class='repeating_education'>
