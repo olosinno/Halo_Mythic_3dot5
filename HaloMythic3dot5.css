@@ -39,7 +39,8 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 /* All input elements that are of type number or type text */
 select,
 input[type='number'],
-input[type='text'] {
+input[type='text'],
+button[type='action'] {
 	background: #394C6A;
 	color: white;
 	font-family: Saira Semi Condensed;
@@ -313,7 +314,9 @@ ______________________________ start of tab buttons toggles ____________________
 .sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block }
 .sheet-core_bttn:checked + button {
 	background: rgb(200, 0, 0);
-	color: white
+	color: white;
+	height: 90%;
+	vertical-align: center
 }
 
 /* ______________________________ end of tab buttons toggles ______________________________
