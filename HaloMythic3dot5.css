@@ -112,6 +112,7 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-white_text { color: white }
 .sheet-huge_text { font-size: 36px }
 .sheet-bold_text { font-weight: bold }
+.sheet-centered { margin: auto }
 
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
