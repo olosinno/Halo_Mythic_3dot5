@@ -100,10 +100,13 @@ ______________________________ start of multipurpose or special-use classes such
 
 .sheet-edge_padding { padding: 2px }
 /* half width of containing block */
-.sheet-half_width { width: 50%; text-align: center }
+.sheet-half_width { width: 50% }
 /* full width of containing block */
 .sheet-full_width { width: 100% }
+
 .sheet-white_text { color: white }
+.sheet-huge_text { font-size: 36px }
+.sheet-bold_text { font-weight: bold }
 
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
@@ -262,18 +265,28 @@ ______________________________ start of grid structure for initiative and sheet 
 
 select,
 .sheet-sheet_tabs,
-.sheet-initiative {
-	display: grid;
-	height: 30px
+.sheet-initiative-container { display: grid }
+
+.sheet-initiative-container {
+	grid-template-columns: 100px 110px 20px 50px 37px 93px
 }
 
-.sheet-initiative {
-	display: grid;
-	grid-template-columns: 100px 100px 10px 40px 17px 93px 10px
+.sheet-init_field { height: 100% }
+
+.sheet-init_plus1 {
+	font-size: 24px;
+	font-weight: bold;
+	padding-top: 12px
+}
+
+.sheet-init_plus2 {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 12px 30px 0px 0px
 }
 
 .sheet-sheet_tabs {
-	grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
+	grid-template-columns: 45px 80px 60px 105px 60px 65px 45px;
 	justify-content: right
 }
 

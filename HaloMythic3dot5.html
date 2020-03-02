@@ -377,40 +377,40 @@
 
   <div class='tabs_main'>
 
-    <div class='initiative'>
-      <input class='hidden' name='attr_initmod0' value='floor' />
-      <button name='initiative' type='roll' value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'><span> Initiative</span></button>
-      <select name='attr_initmod1' style='width: 80%'>
+    <div class='initiative-container'>
+      <input name='attr_initmod0' value='floor' class='hidden' />
+      <button name='initiative' type='roll' value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'>
+	  <span> Initiative</span></button>
+      <select name='attr_initmod1' class='init_field'>
         <option value='1d10' selected='selected'>Standard</option>
         <option value='2d10k1'>Fast Foot</option>
         <option value='?{dice|1d10}'>Custom</option>
       </select>
-      <p class='initiative' style='font-weight: bold'>+</p>
-      <div class='initiative'><input type='number' name='attr_initmod2' value='0' /></div>
-      <div class='initiative'>+</div>
-      <div class='initiative'><select name='attr_initmod3'>
+      <p class='init_plus1'>+</p>
+      <input name='attr_initmod2' type='number' value='0' />
+      <p class='init_plus2'>plus</p>
+      <select name='attr_initmod3' class='init_field'>
         <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
         <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
         <option value='0'>N/A</option>
       </select>
-      </div>
     </div>
 
     <div class='sheet_tabs'>
       <input name='attr_sheetTab' type='checkbox' value='core' class='hidden core_bttn' checked />
-      <button name='act_core' type='action' class='core_bttn'>Core</button>
+      <button name='act_core' type='action' class='core_bttn bold_text'>Core</button>
       <input name='attr_sheetTab' type='checkbox' value='equipment' class='hidden core_bttn' />
-      <button name='act_equipment' type='action' class='equipment_bttn'>Equipment</button>
+      <button name='act_equipment' type='action' class='equipment_bttn bold_text'>Equipment</button>
       <input name='attr_sheetTab' type='checkbox' value='medical' class='hidden core_bttn' />
-      <button name='act_medical' type='action' class='medical_bttn'>Medical</button>
+      <button name='act_medical' type='action' class='medical_bttn bold_text'>Medical</button>
       <input name='attr_sheetTab' type='checkbox' value='advancements' class='hidden core_bttn' />
-      <button name='act_advancements' type='action' class='advancements_bttn'>Advancements</button>
+      <button name='act_advancements' type='action' class='advancements_bttn bold_text'>Advancements</button>
       <input name='attr_sheetTab' type='checkbox' value='journal' class='hidden core_bttn' />
-      <button name='act_journal' type='action' class='journal_bttn'>Journal</button>
+      <button name='act_journal' type='action' class='journal_bttn bold_text'>Journal</button>
       <input name='attr_sheetTab' type='checkbox' value='vehicles' class='hidden core_bttn' />
-      <button name='act_vehicles' type='action' class='vehicles_bttn'>Vehicles</button>
+      <button name='act_vehicles' type='action' class='vehicles_bttn bold_text'>Vehicles</button>
       <input name='attr_sheetTab' type='checkbox' value='settings' class='hidden core_bttn' />
-      <button name='act_settings' type='action' class='settings_bttn'>Settings</button>
+      <button name='act_settings' type='action' class='settings_bttn huge_text'>☢</button>
     </div>
 
   </div>
@@ -464,7 +464,7 @@
       <div class='core_lists1 edge_padding'>
         <h3><b>Skillset</b></h3>
         <fieldset name='skills' class='repeating_skills'>
-          <input name='attr_skill' type='text' class='half_width' />
+          <input name='attr_skill' type='text' class='' />
         </fieldset>
       </div>
       <div class='core_lists2 edge_padding'>
@@ -1055,13 +1055,11 @@
 
       <div class='medicalgR'>
         <h2>Medical Information</h2>
-        <div class='collapsible_ability_description_window_a' ></div>
-        <textarea class='collapsible_ability_description_window_b'></textarea>
-        <fieldset class='repeating_abilities'>
-          <input type='text' placeholder='Write ability / trait name here'>
-          <input type='checkbox' class='collapsible_ability_block_switch'>
-          <div class='collapsible_ability_description_window_a' ></div>
-          <textarea class='collapsible_ability_description_window_b'></textarea>
+		<!-- Every fieldset requires to be of class repeating_word1word2. -->
+		<!-- Every fieldset requires its named element to be of attr_ prefix. -->
+		<!-- Every textarea element requires a closing tag; cannot be a void element. -->
+        <fieldset class='repeating_medical'>
+          <textarea name='attr_medical'></textarea>
         </fieldset>
       </div>
     </div>
