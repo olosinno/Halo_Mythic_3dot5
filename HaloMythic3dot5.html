@@ -462,7 +462,21 @@
     <!-- Core Data -->
     <div class='core_lists box'>
       <div class='core_lists1 edge_padding'>
-        <h3><b>Skillset</b></h3>
+        <h3><b>Skills</b></h3>
+        <div class="skills">
+          <div>skillname</div>
+          <select name='attr_skillname_mod1' class='full_width'>
+            <option value='@{STR} + @{STR_advancement}' selected='selected'>str</option>
+          </select>
+          <div><input class="full_width" type="text" name="attr_skillname_mod2" value="0"></div>
+          <div>
+            <input type="radio" name="attr_skillname_mod3" value="+20" checked="checked"><span></span>
+            <input type="radio" name="attr_skillname_mod3" value="+30"><span></span>
+            <input type="radio" name="attr_skillname_mod3" value="+40"><span></span>
+          </div>
+          <div><button type="roll" name="skillname_roll" value='/me rolls skillname with [[floor(([[@{skillname_mod1} + @{skillname_mod2} + @{skillname_mod3} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' ></button></div>
+        </div>
+
         <fieldset name='skills' class='repeating_skills'>
           <input name='attr_skill' type='text' class='' />
         </fieldset>
