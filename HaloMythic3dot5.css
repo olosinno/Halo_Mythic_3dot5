@@ -100,10 +100,13 @@ ______________________________ start of multipurpose or special-use classes such
 
 .sheet-edge_padding { padding: 2px }
 /* half width of containing block */
-.sheet-half_width { width: 50%; text-align: center }
+.sheet-half_width { width: 50% }
 /* full width of containing block */
 .sheet-full_width { width: 100% }
+
 .sheet-white_text { color: white }
+.sheet-huge_text { font-size: 36px }
+.sheet-bold_text { font-weight: bold }
 
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
@@ -283,7 +286,7 @@ select,
 }
 
 .sheet-sheet_tabs {
-	grid-template-columns: 60px 80px 70px 100px 60px 60px 60px;
+	grid-template-columns: 45px 80px 60px 105px 60px 65px 45px;
 	justify-content: right
 }
 
