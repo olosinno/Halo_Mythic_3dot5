@@ -362,7 +362,7 @@ input[type="radio"] {
     height: 16px;
     position: relative;
     top: 5px;
-    left: 6px;
+    left: 15px;
     margin: -10px;
     cursor: pointer;
     z-index: 1;
@@ -370,8 +370,8 @@ input[type="radio"] {
 
 /* Fake radio */
 input[type="radio"] + span::before {
-	    margin-left: 15px;
-				    margin-top: 2px;
+	  margin-left: 15px;
+		margin-top: 2px;
     border: solid 1px #a8a8a8;
     line-height: 14px;
     text-align: center;
@@ -385,6 +385,7 @@ input[type="radio"] + span::before {
     height: 12px;
     font-size: 24px;
     border-radius: 10%;
+		color: black
 }
 
 /* Remove dot from all radios _after_ selected one */
@@ -392,11 +393,6 @@ input[type="radio"]:checked ~ input[type="radio"] + span::before {
     content: "";
 }
 
-/* Remove dot from all radios _after_ selected one */
-input[type="radio"]:checked ~ input[type="radio"] + span::before
-{
-    content: "";
-}
 
 .sheet-collapsible_ability_description_window_a,
 .sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }

@@ -458,7 +458,6 @@
   <!-- ______________________________ start of core ______________________________ -->
 
   <div class='core'>
-
     <!-- Core Data -->
     <div class='core_lists box'>
       <div class='core_lists1 edge_padding'>
@@ -474,7 +473,7 @@
             <input type="radio" name="attr_skillname_mod3" value="+30"><span></span>
             <input type="radio" name="attr_skillname_mod3" value="+40"><span></span>
           </div>
-          <div><button type="roll" name="skillname_roll" value='/me rolls skillname with [[floor(([[@{skillname_mod1} + @{skillname_mod2} + @{skillname_mod3} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' ></button></div>
+          <div><button type="roll" name="skillname_roll" value='/me rolls skillname with [[floor(([[ @{skillname_mod3} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' ></button></div>
         </div>
 
         <fieldset name='skills' class='repeating_skills'>
