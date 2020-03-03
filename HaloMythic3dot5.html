@@ -461,9 +461,10 @@
       <div class='core_lists1 edge_padding'>
         <h3><b>Skills</b></h3>
         <div class='skills'>
-          <div>skillname</div>
+          <p>Athletics</p>
           <select name='attr_skillname_mod1' class='full_width'>
             <option value='@{STR} + @{STR_advancement}' selected='selected'>STR</option>
+            <option value='@{AGI} + @{AGI_advancement}' selected='selected'>AGI</option>
           </select>
           <div><input name='attr_skillname_mod2' type='text' value='0' class='full_width'></div>
           <div>
@@ -473,6 +474,17 @@
           </div>
           <div><button name='skillname_roll' type='roll' value='/me rolls skillname with [[floor(([[@{skillname_mod1} + @{skillname_mod2} + @{skillname_mod3} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' ></button></div>
         </div>
+		<div class='skills_jebversion'>
+		  <p class='skills_item'>Appeal</p>
+		  <select name='attr_appeal_mod1' class='skills_item full_width'>
+		    <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
+		  </select>
+		  <input name='attr_skillname_mod2' type='text' value='0' class='full_width'>
+		  <input name='attr_appeal_mod3' type='radio' value='+20'  class='skills_item' checked='checked'><span></span>
+          <input name='attr_appeal_mod3' type='radio' value='+30' class='skills_item' ><span></span>
+          <input name='attr_appeal_mod3' type='radio' value='+40' class='skills_item' ><span></span>
+		  <button name='appeal_roll' type='roll' value='/me rolls appeal with [[floor(([[@{appeal_mod1} + @{appeal_mod2} + @{appeal_mod3} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'  class='skills_item'></button>
+		</div>
         <fieldset name='skills' class='repeating_skills'>
           <input name='attr_skill' type='text' class='' />
         </fieldset>
