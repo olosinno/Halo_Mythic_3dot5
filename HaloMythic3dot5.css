@@ -346,8 +346,9 @@ ______________________________ start of core tab ______________________________ 
 	grid-template-areas:
 	'cl1 cl2'
 	'cl1 cl3';
-	grid-template-columns: 443px 443px
+	grid-template-columns: 50% 50%
 }
+
 .sheet-skills{
 	justify-content: center;
 	background: #506b95;
@@ -356,6 +357,20 @@ ______________________________ start of core tab ______________________________ 
  font-size: 16px;
 		display: grid;
 	grid-template-columns: 47% 12% 8% 21% 4%
+}
+
+.sheet-skills_jebversion {
+	background: #506b95;
+	color: white;
+	display: grid;
+	font-family: Saira Semi Condensed;
+	font-size: 16px;
+	font-weight: bold;
+	grid-template-columns: 50px 50px 30px 10px 10px 10px 60px
+}
+.sheet-skills_item {
+	align-self: center;
+	margin: auto
 }
 
 /* Hide actual radio */
