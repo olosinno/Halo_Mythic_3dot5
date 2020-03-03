@@ -48,7 +48,7 @@ button[type='action'] {
 }
 
 /* All horizontal rule elements receive the following CSS property. */
-hr { border-top: 1px dotted white }
+hr { border-top: 1px dotted black }
 
 /* All button elements of type roll */
 button[type='roll'] {
@@ -290,7 +290,7 @@ select,
 }
 
 .sheet-sheet_tabs {
-	grid-template-columns: 45px 80px 60px 105px 60px 65px 45px;
+	grid-template-columns: 45px 75px 60px 95px 60px 60px 45px;
 	justify-content: right
 }
 
@@ -329,7 +329,7 @@ ______________________________ start of minimisable infographic ________________
 }
 
 .sheet-minimisable_infographic_expand,
-.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_collapse { color: white; display: block; font-weight: bold }
+.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_collapse { color: black; display: block; font-weight: bold }
 
 .sheet-minimisable_infographic_collapse,
 .sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_expand { display: none }
@@ -391,15 +391,10 @@ input[type="radio"] + span::before {
 }
 
 /* Remove dot from all radios _after_ selected one */
-input[type="radio"]:checked ~ input[type="radio"] + span::before {
-    content: "";
-}
+input[type="radio"]:checked ~ input[type="radio"] + span::before { content: "" }
 
 /* Remove dot from all radios _after_ selected one */
-input[type="radio"]:checked ~ input[type="radio"] + span::before
-{
-    content: "";
-}
+input[type="radio"]:checked ~ input[type="radio"] + span::before { content: "" }
 
 .sheet-collapsible_ability_description_window_a,
 .sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }
