@@ -250,99 +250,98 @@
           'tou_mythic',
           'tou_advancement'
           ], function(values) {
-            var settings_race = parseInt(values['settings_race'],10)||0;
-            var agi = parseInt(values['agi'],10)||0;
-            var agi_mythic = parseInt(values['agi_mythic'],10)||0;
-            var agi_advancement = parseInt(values['agi_advancement'],10)||0;
-            var str = parseInt(values['str'],10)||0;
-            var str_mythic = parseInt(values['str_mythic'],10)||0;
-            var str_advancement = parseInt(values['str_advancement'],10)||0;
-            var tou = parseInt(values['tou'],10)||0;
-            var tou_mythic = parseInt(values['tou_mythic'],10)||0;
-            var tou_advancement = parseInt(values['tou_advancement'],10)||0;
-            var weight_mod = str+str_advancement+tou+tou_advancement+(str_mythic+tou_mythic)*10;
+            var settings_race = parseInt(values['settings_race'], 10) || 0;
+            var agi = parseInt(values['agi'], 10) || 0;
+            var agi_mythic = parseInt(values['agi_mythic'], 10) || 0;
+            var agi_advancement = parseInt(values['agi_advancement'], 10) || 0;
+            var str = parseInt(values['str'], 10) || 0;
+            var str_mythic = parseInt(values['str_mythic'], 10) || 0;
+            var str_advancement = parseInt(values['str_advancement'], 10) || 0;
+            var tou = parseInt(values['tou'], 10) || 0;
+            var tou_mythic = parseInt(values['tou_mythic'], 10) || 0;
+            var tou_advancement = parseInt(values['tou_advancement'], 10) || 0;
+            var weight_mod = str + str_advancement + tou + tou_advancement + (str_mythic + tou_mythic) * 10;
             var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
-            var str_mod = str+str_advancement;
-            var agi_mod = agi+agi_advancement;
+            var str_mod = str + str_advancement;
+            var agi_mod = agi + agi_advancement;
 
-            // normal no modifiers _____________________________________________
+            // normal no modifiers ____________________________________________________________
 
             setAttrs({
               half_move: (move_mod),
-              full_move: (move_mod *2),
-              charge_move: (move_mod *3),
-              run_move: (move_mod *6),
-              sprint_move: (move_mod *8),
-              jump_move:(str_mod /4),
-              leap_move:(agi_mod /2),
+              full_move: (move_mod * 2),
+              charge_move: (move_mod * 3),
+              run_move: (move_mod * 6),
+              sprint_move: (move_mod * 8),
+              jump_move:(str_mod / 4),
+              leap_move:(agi_mod / 2),
               carry: (weight_mod),
-              lift: (weight_mod*2),
-              push: (weight_mod*4)
+              lift: (weight_mod * 2),
+              push: (weight_mod * 4)
             });
-            if (str_mod >= agi_mod){
+            if (str_mod >= agi_mod) {
               setAttrs({
-                leap_move:(str_mod /2)
+                leap_move:(str_mod / 2)
               });
             }
 
-            // spartan+jiralhanea (carry weight *2) ____________________________
-            if(settings_race == 1){
+            // Spartan + Jiralhanae + Promethean Knight (carry weight * 2) ______________________________
+            if(settings_race == 1) {
               setAttrs({
-                carry: (weight_mod *2),
-                lift: (weight_mod*2 *2),
-                push: (weight_mod*4 *2)
+                carry: (weight_mod * 2),
+                lift: (weight_mod * 2 * 2),
+                push: (weight_mod * 4 * 2)
               });
             }
-            // end of spartan+jiralhanea _______________________________________
+            // end of Spartan + Jiralhanae ______________________________
 
-            // Sangehili (+2 agi leap ,carry weight *2) ________________________
-            if(settings_race == 2){
+            // Sangheili (+2 agi leap, carry weight * 2) ______________________________
+            if(settings_race == 2) {
               setAttrs({
-                carry: (weight_mod *2),
-                lift: (weight_mod*2 *2),
-                push: (weight_mod*4 *2),
-                leap_move:((agi_mod+2) /2)
+                carry: (weight_mod * 2),
+                lift: (weight_mod * 2 * 2),
+                push: (weight_mod * 4 * 2),
+                leap_move: ((agi_mod + 4) / 2) // modifier plus 4, sum halved
               });
-              if(str_mod >= agi_mod){
+              if(str_mod >= agi_mod) {
                 setAttrs({
-                  leap_move:((str_mod+2) /2)
+                  leap_move: ((str_mod + 4) / 2)
                 });
               }
             }
-            // end of sangehili_________________________________________________
+            // end of Sangheili ______________________________
 
-            // Ruutian+Ibie shan (*2 agi to jump)_______________________________
-            if(settings_race == 4){
+            // Ruutian & Ibie'shan (double agi to jump) ______________________________
+            if(settings_race == 3) {
               setAttrs({
-              jump_move:(str_mod /4 *2)
+              jump_move:(str_mod / 4 * 2)
               });
             }
-            // end of Ruutian_________________________________________________
+            // end of Ruutian & Ibie'shan ______________________________
 
-            // T'vaoan (*4 agi to jump)_________________________________________
-            if(settings_race == 5){
+            // Jackal T'vaoan (agi to jump * 4) ______________________________
+            if(settings_race == 4) {
               setAttrs({
-              jump_move:(str_mod /4 *4)
+              jump_move:(str_mod / 4 * 4)
               });
             }
-            // end of sangehili_________________________________________________
+            // end of T'vaoan ______________________________
 
-            // Mgalekgolo (weight = 4000, double agi to charge/run) ____________
-            if(settings_race == 7){
+            // Mgalekgolo (Hunter) (weight = 4000, double agi to charge/run) ______________________________
+            if(settings_race == 5) {
               setAttrs({
                 carry: (4000),
-                lift: (4000*2),
-                push: (4000*4),
-                charge_move: (move_mod *3 *2),
-                run_move: (move_mod *6 *2)
+                lift: (4000 * 2),
+                push: (4000 * 4),
+                charge_move: (move_mod * 3 * 2),
+                run_move: (move_mod * 6 * 2)
               });
             }
-            // end of hunter____________________________________________________
+            // end of Mgalekgolo (Hunter) ______________________________
 
 
 
-
-            if (move_mod <= 0){
+            if (move_mod <= 0) {
               setAttrs({
                 half_move: (0.5),
                 full_move: (1),
@@ -1316,16 +1315,16 @@
 
   <div class='settings'>
     <h2>Settings</h2>
-    <select name='attr_settings_race' class='centered'>
+    <select name='attr_settings_race' class='centered edge_padding'>
       <option selected='selected' value='0'>Racial Features: N/A </option>
       <option value='1'>Spartan 2 / Spartan 3 / Spartan 4 </option>
       <option value='2'>Sangheili / Elite </option>
       <option value='1'>Jiralhanae / Brutes </option>
-      <option value='4'>Kig-yar Ruutian / Halo Trilogy Jackals </option>
-      <option value='5'>Kig-yar T'vaoan / Halo Reach Jackals / Skirmishers </option>
-      <option value='4'>Kig-yar Ibie'shan / Halo 4/5 Jackals </option>
-      <option value='7'>Mgalekgolo / Hunters </option>
-      <option value='1'>Promethian Knight / Hunter </option>
+      <option value='3'>Kig-yar Ruutian / Halo Trilogy Jackals </option>
+      <option value='4'>Kig-yar T'vaoan / Halo Reach Jackals / Skirmishers </option>
+      <option value='3'>Kig-yar Ibie'shan / Halo 4/5 Jackals </option>
+      <option value='5'>Mgalekgolo / Hunters </option>
+      <option value='1'>Promethean Knight </option>
     </select>
   </div>
 
