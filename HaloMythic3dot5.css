@@ -348,15 +348,19 @@ ______________________________ start of core tab ______________________________ 
 	'cl1 cl3';
 	grid-template-columns: 50% 50%
 }
-
-.sheet-skills{
+.sheet-core_lists1_skills{
 	justify-content: center;
 	background: #506b95;
 	color: white;
 	font-family: Saira Semi Condensed;
- font-size: 16px;
+ font-size: 18px;
 		display: grid;
-	grid-template-columns: 47% 12% 8% 21% 4%
+	grid-template-columns: 44% 15% 8% 21% 4%;
+	grid-template-rows: 30px;
+}
+
+.sheet-core_lists1_skills_checkbox{
+	margin-left: 12px;
 }
 
 .sheet-skills_jebversion {
@@ -372,44 +376,6 @@ ______________________________ start of core tab ______________________________ 
 	align-self: center;
 	margin: auto
 }
-
-/* Hide actual radio */
-input[type="radio"] {
-    opacity: 0;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    top: 5px;
-    left: 6px;
-    margin: -10px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-/* Fake radio */
-input[type="radio"] + span::before {
-	    margin-left: 15px;
-				    margin-top: 2px;
-    border: solid 1px #a8a8a8;
-    line-height: 14px;
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    box-shadow: 0 0 2px #ccc;
-    background: #f6f6f6;
-    background: radial-gradient(#f6f6f6, #dfdfdf);
-    content: "•";
-    width: 12px;
-    height: 12px;
-    font-size: 24px;
-    border-radius: 10%;
-}
-
-/* Remove dot from all radios _after_ selected one */
-input[type="radio"]:checked ~ input[type="radio"] + span::before { content: "" }
-
-/* Remove dot from all radios _after_ selected one */
-input[type="radio"]:checked ~ input[type="radio"] + span::before { content: "" }
 
 .sheet-collapsible_ability_description_window_a,
 .sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }
