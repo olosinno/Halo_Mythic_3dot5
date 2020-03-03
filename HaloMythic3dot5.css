@@ -5,13 +5,14 @@ input.sheet-background_switch_4:checked ~ div.sheet-background { background-imag
 input.sheet-background_switch_5:checked ~ div.sheet-background { background: white }
 
 /*
-METHOD OF MY MADNESS
+METHODS OF MY MADNESS
 Keep select parameters on separate lines to better track what is being selected
 Enter in CSS properties as following Format: {
 	text-align: center;
 	text-decoration: underline
 }
 no ending semicolons needed, properly space out properties line-by-line.  Alphabetized each properties list for easier reading.
+2. Keep order in HTML elements' attributes by the way they're listed.  name type value class
 */
 
 .charsheet .sheet-row {
@@ -38,7 +39,8 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 /* All input elements that are of type number or type text */
 select,
 input[type='number'],
-input[type='text'] {
+input[type='text'],
+button[type='action'] {
 	background: #394C6A;
 	color: white;
 	font-family: Saira Semi Condensed;
@@ -46,7 +48,7 @@ input[type='text'] {
 }
 
 /* All horizontal rule elements receive the following CSS property. */
-hr { border-top: 1px dotted white }
+hr { border-top: 1px dotted black }
 
 /* All button elements of type roll */
 button[type='roll'] {
@@ -54,6 +56,9 @@ button[type='roll'] {
 	color: white;
 	font-family: Saira Semi Condensed
 }
+
+/* All button elements of type roll when hovered over: */
+button[type='roll']:hover { background-color: red }
 
 /* Both header elements 2 and 3 receive the following CSS properties. */
 h2, h3 {
@@ -83,11 +88,6 @@ textarea {
 	width: calc(100% - 10px)
 }
 
-button[type='roll']:hover,
-button:hover {
-  background-color: red;
-}
-
 /* ______________________________ end of CSS selectors ______________________________
 ______________________________ start of multipurpose or special-use classes such as grey border box on Core and Settings tabs ______________________________ */
 
@@ -112,6 +112,7 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-white_text { color: white }
 .sheet-huge_text { font-size: 36px }
 .sheet-bold_text { font-weight: bold }
+.sheet-centered { margin: auto }
 
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
@@ -289,7 +290,7 @@ select,
 }
 
 .sheet-sheet_tabs {
-	grid-template-columns: 45px 80px 60px 105px 60px 65px 45px;
+	grid-template-columns: 45px 75px 60px 95px 60px 60px 45px;
 	justify-content: right
 }
 
@@ -314,7 +315,9 @@ ______________________________ start of tab buttons toggles ____________________
 .sheet-tabstoggle[value='settings'] ~ div.sheet-settings { display: block }
 .sheet-core_bttn:checked + button {
 	background: rgb(200, 0, 0);
-	color: white
+	color: white;
+	height: 90%;
+	vertical-align: center
 }
 
 /* ______________________________ end of tab buttons toggles ______________________________
@@ -326,7 +329,7 @@ ______________________________ start of minimisable infographic ________________
 }
 
 .sheet-minimisable_infographic_expand,
-.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_collapse { color: white; display: block; font-weight: bold }
+.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_collapse { color: black; display: block; font-weight: bold }
 
 .sheet-minimisable_infographic_collapse,
 .sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_expand { display: none }
@@ -343,7 +346,7 @@ ______________________________ start of core tab ______________________________ 
 	grid-template-areas:
 	'cl1 cl2'
 	'cl1 cl3';
-	grid-template-columns: 443px 443px
+	grid-template-columns: 50% 50%
 }
 .sheet-core_lists1_skills{
 	justify-content: center;
@@ -358,6 +361,20 @@ ______________________________ start of core tab ______________________________ 
 
 .sheet-core_lists1_skills_checkbox{
 	margin-left: 12px;
+}
+
+.sheet-skills_jebversion {
+	background: #506b95;
+	color: white;
+	display: grid;
+	font-family: Saira Semi Condensed;
+	font-size: 16px;
+	font-weight: bold;
+	grid-template-columns: 50px 50px 30px 10px 10px 10px 60px
+}
+.sheet-skills_item {
+	align-self: center;
+	margin: auto
 }
 
 .sheet-collapsible_ability_description_window_a,
