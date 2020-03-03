@@ -391,15 +391,10 @@ input[type="radio"] + span::before {
 }
 
 /* Remove dot from all radios _after_ selected one */
-input[type="radio"]:checked ~ input[type="radio"] + span::before {
-    content: "";
-}
+input[type="radio"]:checked ~ input[type="radio"] + span::before { content: "" }
 
 /* Remove dot from all radios _after_ selected one */
-input[type="radio"]:checked ~ input[type="radio"] + span::before
-{
-    content: "";
-}
+input[type="radio"]:checked ~ input[type="radio"] + span::before { content: "" }
 
 .sheet-collapsible_ability_description_window_a,
 .sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }
