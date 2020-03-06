@@ -345,36 +345,43 @@ ______________________________ start of core tab ______________________________ 
 	grid-template-areas:
 	'cl1 cl2'
 	'cl1 cl3';
-	grid-template-columns: 443px auto
+	grid-template-columns: 450px auto
 }
-.sheet-core_lists1_skills{
-	justify-content: center;
+.sheet-skills_table {
 	background: #506b95;
 	color: white;
 	font-family: Saira Semi Condensed;
- font-size: 18px;
-		display: grid;
-	grid-template-columns: 44% 15% 8% 21% 4%;
-	grid-template-rows: 30px;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
 }
 
-.sheet-core_lists1_skills_checkbox{
-	margin-left: 12px;
-}
-
-.sheet-skills_jebversion {
-	background: #506b95;
-	color: white;
-	display: grid;
-	font-family: Saira Semi Condensed;
-	font-size: 16px;
-	font-weight: bold;
-	grid-template-columns: 50px 50px 30px 10px 10px 10px 60px
+.sheet-skills_row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	height: 30px;
+	align-items: center;
+	border-bottom: 1px dotted grey;
 }
 .sheet-skills_item {
-	align-self: center;
-	margin: auto
+	margin: 10px 5px
 }
+.sheet-skill_name_heading_width { width: 80px }
+.sheet-skill_diff_heading_width { width: 60px; margin-left: 10px }
+.sheet-skill_stat_heading_width { width: 120px }
+.sheet-skill_num_heading_width { width: 50px; margin-left: -25px }
+.sheet-skill_name_width { width: 100px }
+.sheet-skill_stat_width { width: 70px }
+.sheet-skill_num_width { width: 30px; margin-left: -30px; margin-right: 10px }
+.sheet-skill_right-hand { text-align: right; width: 50% }
+.sheet-custom_skill { width: 200px; margin-right: 45px }
+
+.sheet-education { width: 75%; margin-right: 10px }
+.sheet-education_margin { margin: 0px 5px }
+.sheet-education_marginL { margin-right: 5px }
+
+
 
 .sheet-collapsible_ability_description_window_a,
 .sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }

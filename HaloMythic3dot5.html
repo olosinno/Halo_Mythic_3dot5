@@ -459,48 +459,499 @@
     <div class='core_lists box'>
       <div class='core_lists1 edge_padding'>
         <h3><b>Skills</b></h3>
-        <div class="core_lists1_skills">
-          <p>skillname</p>
-          <select name='attr_skillname_mod1' class='full_width'>
-            <option value='@{STR} + @{STR_advancement}' selected='selected'>STR</option>
-            <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
-            <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
-            <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
-            <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
-            <option value='@{INT} + @{INT_advancement}' >INT</option>
-            <option value='@{PER} + @{PER_advancement}' >PER</option>
-            <option value='@{CR} + @{CR_advancement}' >CR</option>
-            <option value='@{CH} + @{CH_advancement}' >CH</option>
-            <option value='@{LD} + @{LD_advancement}' >LD</option>
-          </select>
-          <div><input name='attr_skillname_mod2' type='text' value='0' class='full_width'></div>
-          <div>
-            <input name="attr_skillname_mod3" type="checkbox" value="20" class="core_lists1_skills_checkbox"><span></span>
-            <input name="attr_skillname_mod3" type="checkbox" value="30" class="core_lists1_skills_checkbox"><span></span>
-            <input name="attr_skillname_mod3" type="checkbox" value="40" class="core_lists1_skills_checkbox"><span></span>
-          </div>
-          <div><button type="roll" name="skillname_roll" value='/me rolls skillname with [[floor(([[@{skillname_mod1}]]+@{skillname_mod2}+[[@{skillname_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success' ></button></div>
-        </div>
-		<div class='skills_jebversion'>
-		  <p class='skills_item'>Appeal</p>
-		  <select name='attr_appeal_mod1' class='skills_item full_width'>
-		    <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
-		  </select>
-		  <input name='attr_skillname_mod2' type='text' value='0' class='full_width'>
-		  <input name='attr_appeal_mod3' type='radio' value='+20'  class='skills_item' checked='checked'><span></span>
-          <input name='attr_appeal_mod3' type='radio' value='+30' class='skills_item' ><span></span>
-          <input name='attr_appeal_mod3' type='radio' value='+40' class='skills_item' ><span></span>
-		  <button name='appeal_roll' type='roll' value='/me rolls appeal with [[floor(([[@{appeal_mod1} + @{appeal_mod2} + @{appeal_mod3} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'  class='skills_item'></button>
-		</div>
-        <fieldset name='skills' class='repeating_skills'>
-          <input name='attr_skill' type='text' class='' />
-        </fieldset>
+        <div class="skills_table">
+
+
+
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_heading_width'>Name</p>
+				<p class='skills_item bold_text skill_diff_heading_width'>Difficulty</p>
+				<p class='skills_item bold_text skill_stat_heading_width'>Characteristic</p>
+				<p class='skills_item bold_text skill_num_heading_width'>Modifier</p>
+				<p class='skills_item bold_text'>T</p>
+				<p class='skills_item bold_text'>+10</p>
+				<p class='skills_item bold_text'>+20</p>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Appeal</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_appeal_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}'>STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_appeal_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_appeal_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_appeal_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_appeal_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="appeal_roll" value='/me rolls Appeal with [[floor(([[@{appeal_mod1}]]+@{appeal_mod2}+[[@{appeal_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Athletics</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_athletics_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' selected='selected'>STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_athletics_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_athletics_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_athletics_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_athletics_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="athletics_roll" value='/me rolls Athletics with [[floor(([[@{athletics_mod1}]]+@{athletics_mod2}+[[@{athletics_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Camoflage</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_camoflage_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' selected='selected'>PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_camoflage_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_camoflage_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_camoflage_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_camoflage_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="camoflage_roll" value='/me rolls Camoflage with [[floor(([[@{camoflage_mod1}]]+@{camoflage_mod2}+[[@{camoflage_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Command</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_command_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' selected='selected'>LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_command_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_command_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_command_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_command_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="command_roll" value='/me rolls Command with [[floor(([[@{command_mod1}]]+@{command_mod2}+[[@{command_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Cryptography</p>
+				<p class='skills_item bold_text skill_stat_width'>Advanced</p>
+				<select name='attr_cryptography_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' selected='selected'>INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_cryptography_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_cryptography_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_cryptography_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_cryptography_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="cryptography_roll" value='/me rolls Cryptography with [[floor(([[@{cryptography_mod1}]]+@{cryptography_mod2}+[[@{cryptography_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Deception</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_deception_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_deception_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_deception_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_deception_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_deception_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="deception_roll" value='/me rolls Deception with [[floor(([[@{deception_mod1}]]+@{deception_mod2}+[[@{deception_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Demolition</p>
+				<p class='skills_item bold_text skill_stat_width'>Advanced</p>
+				<select name='attr_demolition_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' selected='selected'>INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_demolition_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_demolition_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_demolition_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_demolition_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="demolition_roll" value='/me rolls Demolition with [[floor(([[@{demolition_mod1}]]+@{demolition_mod2}+[[@{demolition_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Evasion</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_evasion_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' selected='selected'>AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_evasion_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_evasion_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_evasion_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_evasion_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="evasion_roll" value='/me rolls Evasion with [[floor(([[@{evasion_mod1}]]+@{evasion_mod2}+[[@{evasion_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Gambling</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_gambling_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_gambling_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_gambling_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_gambling_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_gambling_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="gambling_roll" value='/me rolls Gambling with [[floor(([[@{gambling_mod1}]]+@{gambling_mod2}+[[@{gambling_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Interrogation</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_interrogation_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' selected='selected'>LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_interrogation_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_interrogation_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_interrogation_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_interrogation_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="interrogation_roll" value='/me rolls Interrogation with [[floor(([[@{interrogation_mod1}]]+@{interrogation_mod2}+[[@{interrogation_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Intimidation</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_intimidation_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' selected='selected'>LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_intimidation_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_intimidation_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_intimidation_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_intimidation_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="intimidation_roll" value='/me rolls Intimidation with [[floor(([[@{intimidation_mod1}]]+@{intimidation_mod2}+[[@{intimidation_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Investigation</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_investigation_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' selected='selected'>LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_investigation_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_investigation_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_investigation_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_investigation_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="investigation_roll" value='/me rolls Investigation with [[floor(([[@{investigation_mod1}]]+@{investigation_mod2}+[[@{investigation_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Medication</p>
+				<p class='skills_item bold_text skill_stat_width'>Advanced</p>
+				<select name='attr_medication_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' selected='selected'>INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_medication_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_medication_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_medication_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_medication_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="medication_roll" value='/me rolls Medication with [[floor(([[@{medication_mod1}]]+@{medication_mod2}+[[@{medication_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Navigation</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_navigation_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' selected='selected'>PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_navigation_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_navigation_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_navigation_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_navigation_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="navigation_roll" value='/me rolls Navigation with [[floor(([[@{navigation_mod1}]]+@{navigation_mod2}+[[@{navigation_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Negotiation</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_negotiation_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' selected='selected'>LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_negotiation_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_negotiation_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_negotiation_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_negotiation_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="negotiation_roll" value='/me rolls Negotiation with [[floor(([[@{negotiation_mod1}]]+@{negotiation_mod2}+[[@{negotiation_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Pilot</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_pilot_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' selected='selected'>INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_pilot_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_pilot_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_pilot_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_pilot_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="pilot_roll" value='/me rolls Pilot with [[floor(([[@{pilot_mod1}]]+@{pilot_mod2}+[[@{pilot_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Security</p>
+				<p class='skills_item bold_text skill_stat_width'>Advanced</p>
+				<select name='attr_security_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' selected='selected'>INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_security_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_security_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_security_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_security_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="security_roll" value='/me rolls Security with [[floor(([[@{security_mod1}]]+@{security_mod2}+[[@{security_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Stunting</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_stunting_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' selected='selected'>AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_stunting_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_stunting_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_stunting_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_stunting_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="stunting_roll" value='/me rolls Stunting with [[floor(([[@{stunting_mod1}]]+@{stunting_mod2}+[[@{stunting_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Survival</p>
+				<p class='skills_item bold_text skill_stat_width'>Basic</p>
+				<select name='attr_survival_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' >INT</option>
+				  <option value='@{PER} + @{PER_advancement}' selected='selected'>PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_survival_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_survival_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_survival_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_survival_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="survival_roll" value='/me rolls Survival with [[floor(([[@{survival_mod1}]]+@{survival_mod2}+[[@{survival_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<div class='skills_row'>
+				<p class='skills_item bold_text skill_name_width'>Technology</p>
+				<p class='skills_item bold_text skill_stat_width'>Advanced</p>
+				<select name='attr_technology_mod1' class='skills_item skill_stat_width'>
+				  <option value='@{STR} + @{STR_advancement}' >STR</option>
+				  <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+				  <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+				  <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+				  <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+				  <option value='@{INT} + @{INT_advancement}' selected='selected'>INT</option>
+				  <option value='@{PER} + @{PER_advancement}' >PER</option>
+				  <option value='@{CR} + @{CR_advancement}' >CR</option>
+				  <option value='@{CH} + @{CH_advancement}' >CH</option>
+				  <option value='@{LD} + @{LD_advancement}' >LD</option>
+				</select>
+				<div class='skill_right-hand'>
+				  <input name='attr_technology_mod2' type='text' value='0' class='skills_item skill_num_width' />
+				  <input name="attr_technology_mod3" type="checkbox" value="20" class='skills_item' />
+				  <input name="attr_technology_mod3" type="checkbox" value="30" class='skills_item' />
+				  <input name="attr_technology_mod3" type="checkbox" value="40" class='skills_item' />
+				  <button type="roll" name="technology_roll" value='/me rolls Technology with [[floor(([[@{technology_mod1}]]+@{technology_mod2}+[[@{technology_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+				</div>
+			</div>
+			<fieldset name='skills' class='repeating_skills'>
+				<div class='skills_row'>
+					<input name='attr_custom_skill' type='text' class='skills_item custom_skill' />
+					<input name='attr_custom_skill_mod' type='text' value='0' class='skills_item skill_num_width'>
+					<button type="roll" name="technology_roll" value='/me rolls custom skill with [[floor(([[@{attr_custom_skill_mod}]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class='centered' />
+				</div>
+			</fieldset>
+
       </div>
+
+
+        </div>
 
       <div class='core_lists2 edge_padding'>
         <h3><b>Education</b></h3>
         <fieldset name='skills' class='repeating_education'>
-          <input name='attr_education' type='text' class='full_width' />
+          <input name='attr_education' type='text' class='education education_marginL'>+10
+			<input name="attr_education10" type="checkbox" value="5" class='education_margin' />
+		  </input>
+		  <button type="roll" name="technology_roll" value='/me Shoot, I dunno.  [[floor(([[@{education10}]] + 5]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
         </fieldset>
       </div>
       <div class='core_lists3 edge_padding'>
