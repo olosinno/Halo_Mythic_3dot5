@@ -241,13 +241,14 @@ ______________________________ start of grid structure for the mythic characteri
 }
 
 .sheet-carrygs1 { grid-area: ac1; margin-left:10px;}
-.sheet-carrygs2 { grid-area: ac2; margin-left:10px; width: 80%;}
+.sheet-carrygs2 { grid-area: ac2; margin-left:10px; width: 80%; }
 .sheet-carrygs3 { grid-area: ac3; margin-left:10px; width: 80%;}
 .sheet-carrygs4 { grid-area: ac4; margin-left:10px; width: 80%;}
 .sheet-carrygs5 { grid-area: ac5; margin-left:10px; font-size: 13px; font-family: Serif; }
 .sheet-carrygs6 { grid-area: ac6; margin-left:11px; font-size: 13px; font-family: Serif; }
 .sheet-carrygs7 { grid-area: ac7; margin-left:12px; font-size: 13px; font-family: Serif; }
 .sheet-characteristics2_carry {
+	margin-right: 5px;
 	display: grid;
 	justify-content: right;
 	text-align: center;
@@ -271,6 +272,7 @@ select,
 .sheet-initiative-container { display: grid }
 
 .sheet-initiative-container {
+
 	grid-template-columns: 100px 90px 18px 50px 18px 90px
 }
 
@@ -284,6 +286,7 @@ select,
 
 
 .sheet-sheet_tabs {
+	margin-right: 3px;
 	grid-template-columns: 45px 75px 60px 95px 60px 60px 45px;
 	justify-content: right
 }
