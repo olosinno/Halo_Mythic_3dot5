@@ -239,13 +239,13 @@ ______________________________ start of grid structure for the mythic characteri
 	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px
 }
 
-.sheet-carrygs1 { grid-area: ac1 }
-.sheet-carrygs2 { grid-area: ac2 }
-.sheet-carrygs3 { grid-area: ac3 }
-.sheet-carrygs4 { grid-area: ac4; width: 90% }
-.sheet-carrygs5 { grid-area: ac5; font-size: 13px; font-family: Serif }
-.sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Serif }
-.sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Serif }
+.sheet-carrygs1 { grid-area: ac1; margin-left:10px;}
+.sheet-carrygs2 { grid-area: ac2; margin-left:10px; width: 80%;}
+.sheet-carrygs3 { grid-area: ac3; margin-left:10px; width: 80%;}
+.sheet-carrygs4 { grid-area: ac4; margin-left:10px; width: 80%;}
+.sheet-carrygs5 { grid-area: ac5; margin-left:10px; font-size: 13px; font-family: Serif; }
+.sheet-carrygs6 { grid-area: ac6; margin-left:11px; font-size: 13px; font-family: Serif; }
+.sheet-carrygs7 { grid-area: ac7; margin-left:12px; font-size: 13px; font-family: Serif; }
 .sheet-characteristics2_carry {
 	display: grid;
 	justify-content: right;
@@ -254,7 +254,7 @@ ______________________________ start of grid structure for the mythic characteri
 	'ac1 ac1 ac1'
 	'ac2 ac3 ac4'
 	'ac5 ac6 ac7';
-	grid-template-columns: 50px 50px 50px
+	grid-template-columns: 55px 55px 55px
 }
 
 /* ______________________________ end of grid structure for the mythic characteristics, movement and pushing ______________________________
