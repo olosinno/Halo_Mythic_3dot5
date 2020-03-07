@@ -31,6 +31,7 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 .charsheet .sheet-item.sheet-5 { width: 5px }
 .charsheet .sheet-item.sheet-70 { width: 70px }
 .charsheet .sheet-item.sheet-920 { width: 90px }
+.sheet-full_width_17px{width: calc(100% - 17px);}
 
 /* ______________________________ start of CSS selectors, patterns used to select element(s) for styling ______________________________ */
 
@@ -88,6 +89,8 @@ textarea {
 	width: calc(100% - 10px)
 }
 
+
+
 /* ______________________________ end of CSS selectors ______________________________
 ______________________________ start of multipurpose or special-use classes such as grey border box on Core and Settings tabs ______________________________ */
 
@@ -130,7 +133,7 @@ ______________________________ start of grid structure for character information
 .sheet-gs10 { grid-area: ah10;  width: calc(100% + 78px); margin-left: -78px ;}
 .sheet-gs11 { grid-area: ah11;  width: calc(100% + 37px); margin-left: -37px ;}
 .sheet-gs12 { grid-area: ah12;  width: calc(100% + 20px); margin-left: -20px ;}
-.sheet-gs13 { grid-area: ah13; 	}
+.sheet-gs13 { grid-area: ah13; 	margin: 0px 5px}
 .sheet-gs14 { grid-area: ah14;  width: calc(100% + 25px);}
 .sheet-gs15 { grid-area: ah15;  width: calc(100% + 65px);}
 .sheet-gs16 { grid-area: ah16;  width: calc(100% + 85px);}
@@ -364,7 +367,7 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skills_item {
 	margin: 10px 5px
 }
-.sheet-skill_name_heading_width { width: 106px }
+.sheet-skill_name_heading_width { width: 106px;}
 .sheet-skill_diff_heading_width { width: 70px;}
 .sheet-skill_stat_heading_width { width: 67px;}
 .sheet-skill_num_heading_width { 	width: 40px;}
@@ -375,6 +378,7 @@ ______________________________ start of core tab ______________________________ 
 
 .sheet-skill_name_width { width: 150px }
 .sheet-skill_stat_width { width: 100px }
+
 .sheet-skill_num_width { width: 30px; margin-left: -30px; margin-right: 10px }
 .sheet-skill_right-hand { text-align: right; width: 50% }
 .sheet-custom_skill { width: 200px; margin-right: 45px }
@@ -395,7 +399,8 @@ ______________________________ start of medical tab ____________________________
 
 .sheet-medicalG {
 	background: #475f85;
-	border-left: 5px solid #475f85;
+	border-left: 15px solid #475f85;
+		border-right: 15px solid #475f85;
 	color: white;
 	font-family: Saira Semi Condensed
 }
