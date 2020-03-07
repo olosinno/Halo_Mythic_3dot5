@@ -364,7 +364,7 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skills_item {
 	margin: 10px 5px
 }
-.sheet-skill_name_heading_width { width: 106px }
+.sheet-skill_name_heading_width { width: 106px;}
 .sheet-skill_diff_heading_width { width: 70px;}
 .sheet-skill_stat_heading_width { width: 67px;}
 .sheet-skill_num_heading_width { 	width: 40px;}
@@ -375,6 +375,7 @@ ______________________________ start of core tab ______________________________ 
 
 .sheet-skill_name_width { width: 150px }
 .sheet-skill_stat_width { width: 100px }
+
 .sheet-skill_num_width { width: 30px; margin-left: -30px; margin-right: 10px }
 .sheet-skill_right-hand { text-align: right; width: 50% }
 .sheet-custom_skill { width: 200px; margin-right: 45px }
