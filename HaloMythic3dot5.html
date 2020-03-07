@@ -377,7 +377,7 @@
     <div class='initiative-container'>
       <input name='attr_initmod0' value='floor' class='hidden' />
       <button name='initiative' type='roll' value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'>
-	  <span> Initiative</span></button>
+	  <span>Initiative</span></button>
       <select name='attr_initmod1' class='init_field'>
         <option value='1d10' selected='selected'>Standard</option>
         <option value='2d10k1'>Fast Foot</option>
@@ -385,7 +385,7 @@
       </select>
       <p class='init_plus1'>+</p>
       <input name='attr_initmod2' type='number' value='0' />
-      <p class='init_plus2'>plus</p>
+      <p class='init_plus1'>+</p>
       <select name='attr_initmod3' class='init_field'>
         <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
         <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
@@ -950,8 +950,7 @@
         <h3><b>Education</b></h3>
         <fieldset name='skills' class='repeating_education'>
           <input name='attr_education' type='text' class='education education_marginL'>+10
-			<input name="attr_education10" type="checkbox" value="5" class='education_margin' />
-		  </input>
+			<input name="attr_education10" type="checkbox" value="5" class='education_margin'</input>
 		  <button type="roll" name="technology_roll" value='/me Shoot, I dunno.  [[floor(([[@{education10}]] + 5]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
         </fieldset>
       </div>
