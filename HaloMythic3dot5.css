@@ -197,17 +197,16 @@ ______________________________ start of grid structure for the mythic characteri
 	font-size: 15px
 }
 
-.sheet-mythicgs1 { grid-area: amy1 }
-.sheet-mythicgs2 { grid-area: amy2 }
-.sheet-mythicgs3 { grid-area: amy3 }
-.sheet-mythicgs4 { grid-area: amy4 }
-.sheet-mythicgs5 { grid-area: amy5; font-size: 13px; font-family: Serif }
-.sheet-mythicgs6 { grid-area: amy6; font-size: 13px; font-family: Serif }
-.sheet-mythicgs7 { grid-area: amy7; font-size: 13px; font-family: Serif; margin-left: 12px }
+.sheet-mythicgs1 { grid-area: amy1; }
+.sheet-mythicgs2 { grid-area: amy2; margin-left:3px;}
+.sheet-mythicgs3 { grid-area: amy3; margin-left:3px;}
+.sheet-mythicgs4 { grid-area: amy4; margin-left:3px;}
+.sheet-mythicgs5 { grid-area: amy5; margin-left:12px; font-size: 13px; font-family: Serif }
+.sheet-mythicgs6 { grid-area: amy6; margin-left:9px; font-size: 13px; font-family: Serif }
+.sheet-mythicgs7 { grid-area: amy7; margin-left:12px; font-size: 13px; font-family: Serif;}
 .sheet-characteristics2_mythic {
 	display: grid;
 	justify-content: left;
-	text-align: center;
 	grid-template-areas:
 	'amy1 amy1 amy1'
 	'amy2 amy3 amy4'
