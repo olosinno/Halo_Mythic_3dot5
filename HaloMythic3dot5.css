@@ -367,12 +367,17 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skills_item {
 	margin: 10px 5px
 }
-.sheet-skill_name_heading_width { width: 80px }
-.sheet-skill_diff_heading_width { width: 60px; margin-left: 10px }
-.sheet-skill_stat_heading_width { width: 120px }
-.sheet-skill_num_heading_width { width: 50px; margin-left: -25px }
-.sheet-skill_name_width { width: 100px }
-.sheet-skill_stat_width { width: 70px }
+.sheet-skill_name_heading_width { width: 106px }
+.sheet-skill_diff_heading_width { width: 70px;}
+.sheet-skill_stat_heading_width { width: 67px;}
+.sheet-skill_num_heading_width { 	width: 40px;}
+.sheet-skill_t_heading_width { 		width: 6px;}
+.sheet-skill_10_heading_width { 	width: 18px;}
+.sheet-skill_20_heading_width { 	width: 26px;}
+.sheet-skill_roll_heading_width { width: 0px;}
+
+.sheet-skill_name_width { width: 150px }
+.sheet-skill_stat_width { width: 100px }
 .sheet-skill_num_width { width: 30px; margin-left: -30px; margin-right: 10px }
 .sheet-skill_right-hand { text-align: right; width: 50% }
 .sheet-custom_skill { width: 200px; margin-right: 45px }
