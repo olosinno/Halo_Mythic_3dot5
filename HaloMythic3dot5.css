@@ -130,7 +130,7 @@ ______________________________ start of grid structure for character information
 .sheet-gs10 { grid-area: ah10;  width: calc(100% + 78px); margin-left: -78px ;}
 .sheet-gs11 { grid-area: ah11;  width: calc(100% + 37px); margin-left: -37px ;}
 .sheet-gs12 { grid-area: ah12;  width: calc(100% + 20px); margin-left: -20px ;}
-.sheet-gs13 { grid-area: ah13; 	}
+.sheet-gs13 { grid-area: ah13; 	margin: 0px 5px}
 .sheet-gs14 { grid-area: ah14;  width: calc(100% + 25px);}
 .sheet-gs15 { grid-area: ah15;  width: calc(100% + 65px);}
 .sheet-gs16 { grid-area: ah16;  width: calc(100% + 85px);}
