@@ -118,19 +118,19 @@ ______________________________ start of multipurpose or special-use classes such
 ______________________________ start of grid structure for character information ______________________________ */
 
 
-.sheet-gs1 { grid-area: ah1;	font-size: 16px; height: 30px; padding-left: 5px }
-.sheet-gs2 { grid-area: ah2;	font-size: 16px; height: 30px; padding-left: 5px }
-.sheet-gs3 { grid-area: ah3;	font-size: 16px; height: 30px; padding-left: 5px }
-.sheet-gs4 { grid-area: ah4;	font-size: 16px; height: 30px; padding-left: 5px }
-.sheet-gs5 { grid-area: ah5;	font-size: 16px; height: 30px; padding-left: 5px }
-.sheet-gs6 { grid-area: ah6;	font-size: 16px; height: 30px; padding-left: 5px }
-.sheet-gs7 { grid-area: ah7;	height: 30px; margin-right: -5% }
-.sheet-gs8 { grid-area: ah8;	height: 30px; margin-right: -5%; width: 280px }
-.sheet-gs9 { grid-area: ah9;	height: 30px; margin-right: -5% }
+.sheet-gs1 { grid-area: ah1;		font-size: 16px; height: 30px; padding-left: 5px }
+.sheet-gs2 { grid-area: ah2;		font-size: 16px; height: 30px; padding-left: 5px }
+.sheet-gs3 { grid-area: ah3;		font-size: 16px; height: 30px; padding-left: 5px }
+.sheet-gs4 { grid-area: ah4;		font-size: 16px; height: 30px; padding-left: 5px }
+.sheet-gs5 { grid-area: ah5;		font-size: 16px; height: 30px; padding-left: 5px }
+.sheet-gs6 { grid-area: ah6;		font-size: 16px; height: 30px; padding-left: 5px }
+.sheet-gs7 { grid-area: ah7;		height: 30px; margin-right: -5% }
+.sheet-gs8 { grid-area: ah8;		height: 30px; margin-right: -5%; width: 280px }
+.sheet-gs9 { grid-area: ah9;		height: 30px; margin-right: -5% }
 .sheet-gs10 { grid-area: ah10;  height: 30px; margin-right: -5% }
 .sheet-gs11 { grid-area: ah11;  height: 30px; margin-right: -5% }
 .sheet-gs12 { grid-area: ah12;  height: 30px; margin-right: -5% }
-.sheet-gs13 { grid-area: ah13 }
+.sheet-gs13 { grid-area: ah13; 	margin-left: -5% }
 .sheet-gs14 { grid-area: ah14;  height: 30px; margin-left: 1% }
 .sheet-gs15 { grid-area: ah15;  height: 30px; margin-left: 1% }
 .sheet-gs16 { grid-area: ah16;  height: 30px; margin-left: 1% }
