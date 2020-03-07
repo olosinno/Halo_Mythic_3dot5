@@ -8,8 +8,8 @@ input.sheet-background_switch_5:checked ~ div.sheet-background { background: whi
 METHODS OF MY MADNESS
 Keep select parameters on separate lines to better track what is being selected
 Enter in CSS properties as following Format: {
-	text-align: center;
-	text-decoration: underline
+text-align: center;
+text-decoration: underline
 }
 no ending semicolons needed, properly space out properties line-by-line.  Alphabetized each properties list for easier reading.
 2. Keep order in HTML elements' attributes by the way they're listed.  name type value class
