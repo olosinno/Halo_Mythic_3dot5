@@ -124,19 +124,19 @@ ______________________________ start of grid structure for character information
 .sheet-gs4 { grid-area: ah4;		font-size: 16px;  padding-left: 5px }
 .sheet-gs5 { grid-area: ah5;		font-size: 16px;  padding-left: 5px }
 .sheet-gs6 { grid-area: ah6;		font-size: 16px;  padding-left: 5px }
-.sheet-gs7 { grid-area: ah7;		 margin-right: -4% }
-.sheet-gs8 { grid-area: ah8;		 margin-right: -4%; width: 280px }
-.sheet-gs9 { grid-area: ah9;		 margin-right: -4% }
-.sheet-gs10 { grid-area: ah10;   margin-right: -4% }
-.sheet-gs11 { grid-area: ah11;   margin-right: -4% }
-.sheet-gs12 { grid-area: ah12;   margin-right: -5% }
+.sheet-gs7 { grid-area: ah7;	  margin-right: -4%;}
+.sheet-gs8 { grid-area: ah8;	  margin-right: -4%; width: 210px; height: 100%}
+.sheet-gs9 { grid-area: ah9;	  margin-right: -4% }
+.sheet-gs10 { grid-area: ah10;  margin-right: -4% }
+.sheet-gs11 { grid-area: ah11;  margin-right: -4% }
+.sheet-gs12 { grid-area: ah12;  margin-right: -5% }
 .sheet-gs13 { grid-area: ah13; 	margin-left: -5% }
-.sheet-gs14 { grid-area: ah14;   margin-left: 1% }
-.sheet-gs15 { grid-area: ah15;   margin-left: 1% }
-.sheet-gs16 { grid-area: ah16;   margin-left: 1% }
-.sheet-gs17 { grid-area: ah17;   margin-left: 1% }
-.sheet-gs18 { grid-area: ah18;   margin-left: 1% }
-.sheet-gs19 { grid-area: ah19;   margin-left: 1% }
+.sheet-gs14 { grid-area: ah14;  margin-left: 1% }
+.sheet-gs15 { grid-area: ah15;  margin-left: 1% }
+.sheet-gs16 { grid-area: ah16;  margin-left: 1% }
+.sheet-gs17 { grid-area: ah17;  margin-left: 1% }
+.sheet-gs18 { grid-area: ah18;  margin-left: 1% }
+.sheet-gs19 { grid-area: ah19;  margin-left: 1% }
 .sheet-gs20 { grid-area: ah20;  font-size: 16px;  padding-right: 5px; text-align: right }
 .sheet-gs21 { grid-area: ah21;  font-size: 16px;  padding-right: 5px; text-align: right }
 .sheet-gs22 { grid-area: ah22;  font-size: 16px;  padding-right: 5px; text-align: right }
@@ -155,7 +155,7 @@ ______________________________ start of grid structure for character information
 	'ah5 ah11 ah13 ah18 ah24'
 	'ah6 ah12 ah13 ah19 ah25';
 	grid-template-columns: 15% 27% 16% 27% 15%;
-	grid-template-rows: 30px 30px 30px 30px 30px
+	grid-template-rows: 30px 30px 30px 30px 30px 30px
 }
 
 /* ______________________________ end of grid structure for character information ______________________________
