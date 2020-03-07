@@ -31,6 +31,7 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 .charsheet .sheet-item.sheet-5 { width: 5px }
 .charsheet .sheet-item.sheet-70 { width: 70px }
 .charsheet .sheet-item.sheet-920 { width: 90px }
+.sheet-full_width_17px{width: calc(100% - 17px);}
 
 /* ______________________________ start of CSS selectors, patterns used to select element(s) for styling ______________________________ */
 
@@ -87,6 +88,8 @@ textarea {
 	resize: vertical;
 	width: calc(100% - 10px)
 }
+
+
 
 /* ______________________________ end of CSS selectors ______________________________
 ______________________________ start of multipurpose or special-use classes such as grey border box on Core and Settings tabs ______________________________ */
