@@ -201,7 +201,7 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-mythicgs3 { grid-area: amy3; margin-left:3px;}
 .sheet-mythicgs4 { grid-area: amy4; margin-left:3px;}
 .sheet-mythicgs5 { grid-area: amy5; margin-left:12px; font-size: 13px; font-family: Serif }
-.sheet-mythicgs6 { grid-area: amy6; margin-left:9px; font-size: 13px; font-family: Serif }
+.sheet-mythicgs6 { grid-area: amy6; margin-left:9px; 	font-size: 13px; font-family: Serif }
 .sheet-mythicgs7 { grid-area: amy7; margin-left:12px; font-size: 13px; font-family: Serif;}
 .sheet-characteristics2_mythic {
 	display: grid;
@@ -213,21 +213,21 @@ ______________________________ start of grid structure for the mythic characteri
 	grid-template-columns: 50px 50px 50px
 }
 
-.sheet-movementgs1 { grid-area: amm1 }
-.sheet-movementgs2 { grid-area: amm2 }
-.sheet-movementgs3 { grid-area: amm3 }
-.sheet-movementgs4 { grid-area: amm4 }
-.sheet-movementgs5 { grid-area: amm5 }
-.sheet-movementgs6 { grid-area: amm6 }
-.sheet-movementgs7 { grid-area: amm7 }
-.sheet-movementgs8 { grid-area: amm8 }
-.sheet-movementgs9 { grid-area: amm9;   font-size: 13px; font-family: Serif }
-.sheet-movementgs10 { grid-area: amm10; font-size: 13px; font-family: Serif }
-.sheet-movementgs11 { grid-area: amm11; font-size: 13px; font-family: Serif }
-.sheet-movementgs12 { grid-area: amm12; font-size: 13px; font-family: Serif }
-.sheet-movementgs13 { grid-area: amm13; font-size: 13px; font-family: Serif }
-.sheet-movementgs14 { grid-area: amm14; font-size: 13px; font-family: Serif }
-.sheet-movementgs15 { grid-area: amm15; font-size: 13px; font-family: Serif }
+.sheet-movementgs1 { grid-area: amm1; }
+.sheet-movementgs2 { grid-area: amm2; 	margin-left:6px;}
+.sheet-movementgs3 { grid-area: amm3; 	margin-left:6px;}
+.sheet-movementgs4 { grid-area: amm4; 	margin-left:6px;}
+.sheet-movementgs5 { grid-area: amm5; 	margin-left:6px;}
+.sheet-movementgs6 { grid-area: amm6; 	margin-left:6px;}
+.sheet-movementgs7 { grid-area: amm7; 	margin-left:6px;}
+.sheet-movementgs8 { grid-area: amm8; 	margin-left:6px;}
+.sheet-movementgs9 { grid-area: amm9;   margin-left:3px; font-size: 13px; font-family: Serif }
+.sheet-movementgs10 { grid-area: amm10; margin-left:5px; font-size: 13px; font-family: Serif }
+.sheet-movementgs11 { grid-area: amm11; margin-left:5px; font-size: 13px; font-family: Serif }
+.sheet-movementgs12 { grid-area: amm12; margin-left:5px; font-size: 13px; font-family: Serif }
+.sheet-movementgs13 { grid-area: amm13; margin-left:4px; font-size: 13px; font-family: Serif }
+.sheet-movementgs14 { grid-area: amm14; margin-left:4px; font-size: 13px; font-family: Serif }
+.sheet-movementgs15 { grid-area: amm15; margin-left:4px; font-size: 13px; font-family: Serif }
 .sheet-characteristics2_movement {
 	display: grid;
 	justify-content: center;
