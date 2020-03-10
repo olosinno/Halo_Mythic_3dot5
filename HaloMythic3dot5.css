@@ -14,6 +14,9 @@ text-decoration: underline
 no ending semicolons needed, properly space out properties line-by-line.  Alphabetized each properties list for easier reading.
 2. Keep order in HTML elements' attributes by the way they're listed.  name type value class
 */
+.sheet-background{
+	border: 1px solid black;
+  border-radius: 5px;}
 
 .charsheet .sheet-row {
 	height: 24px;
