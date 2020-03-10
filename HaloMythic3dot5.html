@@ -336,13 +336,21 @@
               });
             }
             // end of Mgalekgolo (Hunter) ______________________________
-
             if (move_mod <= 0) {
               setAttrs({
                 half_move: (0.5),
                 full_move: (1),
                 charge_move: (2),
                 run_move: (3),
+                sprint_move: (4)
+              });
+            }
+            if ((move_mod <= 0) && (settings_race == 5)) {
+              setAttrs({
+                half_move: (0.5),
+                full_move: (1),
+                charge_move: (4),
+                run_move: (6),
                 sprint_move: (4)
               });
             }
