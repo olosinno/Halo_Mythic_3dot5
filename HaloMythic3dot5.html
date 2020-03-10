@@ -992,13 +992,13 @@
           <input type="number" name="attr_education_mod2" value="0"/>
           <div class="education4"><input type="checkbox" name="attr_education_mod3" value="5"class='skills_item '/></div>
           <div class="education5"><input type="checkbox" name="attr_education_mod3" value="10"class='skills_item'/></div>
-          <button type="roll" name="education_roll" value='/me rolls @{education_name} achieving: [[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]] degrees of success.'class="clear"</button>
+          <button class="clear" type="roll" name="education_roll" value='/me rolls @{education_name} achieving: [[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]] degrees of success.'><input class="input_background"name="attr_education_total" value="@{education_mod1}+@{education_mod2}+@{education_mod3}" disabled="true"/></button>
         </div>
 
         <fieldset name='skills' class='repeating_education'>
           <div class="education_grid">
             <input type="text" name="attr_education_name" class="full_width education1"/>
-            <select name='attr_education_mod1' class=' full_width full_height education2'>
+            <select name='attr_education_r_mod1' class=' full_width full_height education2'>
               <option value='@{STR} + @{STR_advancement}' >STR</option>
               <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
               <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
@@ -1010,10 +1010,10 @@
               <option value='@{CH} + @{CH_advancement}' >CH</option>
               <option value='@{LD} + @{LD_advancement}' >LD</option>
             </select>
-            <input type="number" name="attr_education_mod2" value="0" class="education3"/>
-            <div class="education4"><input type="checkbox" name="attr_education_mod3" value="5"class='skills_item '/></div>
-            <div class="education5"><input type="checkbox" name="attr_education_mod3" value="10"class='skills_item'/></div>
-            <button type="roll" name="education_roll" value='/me rolls @{education_name} achieving: [[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]] degrees of success.'/>
+            <input type="number" name="attr_education_r_mod2" value="0"/>
+            <div class="education4"><input type="checkbox" name="attr_education_r_mod3" value="5"class='skills_item '/></div>
+            <div class="education5"><input type="checkbox" name="attr_education_r_mod3" value="10"class='skills_item'/></div>
+            <button class="clear" type="roll" name="education_roll" value='/me rolls @{education_name} achieving: [[floor(([[@{education_r_mod1}]]+@{education_r_mod2}+@{education_r_mod3}+?{Modifier|0}-1d100)/10)]] degrees of success.'><input class="input_background"name="attr_education_total" value="@{education_r_mod1}+@{education_r_mod2}+@{education_r_mod3}" disabled="true"/></button>
           </div>
         </fieldset>
       </div>
