@@ -89,8 +89,6 @@ textarea {
 	width: calc(100% - 10px)
 }
 
-
-
 /* ______________________________ end of CSS selectors ______________________________
 ______________________________ start of multipurpose or special-use classes such as grey border box on Core and Settings tabs ______________________________ */
 
@@ -395,6 +393,22 @@ ______________________________ start of core tab ______________________________ 
 .sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none }
 
 /* ______________________________ end of core tab ______________________________
+______________________________ start of equipment tab ______________________________ */
+.sheet-equipment_ranged_weapons{grid-area: e1}
+.sheet-equipment_melee_weapons{ grid-area: e2}
+.sheet-equipment_items_list{		grid-area: e3}
+
+.sheet-equipment_divider {
+	display: grid;
+		grid-template-columns: auto 10px auto;
+	grid-template-areas:
+	'e1 e0 e2'
+	'e3 e3 e3';
+
+}
+
+
+/* ______________________________ end of equipment tab ______________________________
 ______________________________ start of medical tab ______________________________ */
 
 .sheet-medicalG {
