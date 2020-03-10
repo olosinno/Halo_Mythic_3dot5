@@ -492,12 +492,12 @@
 
           <fieldset name='skills' class='repeating_skills'>
             <div class='skill_grid'>
-              <input name='attr_appeal_R_name' type='text' value='' class='full_width text_left' />
-              <select name='attr_appeal_R_mod4' class='full_width full_height'>
+              <input name='attr_skill_R_name' type='text' value='' class='full_width text_left' />
+              <select name='attr_skill_R_mod4' class='full_width full_height'>
                 <option value='0' ></option>
                 <option value='10' >(A)</option>
               </select>
-              <select name='attr_appeal_R_mod1' class="full_width full_height">
+              <select name='attr_skill_R_mod1' class="full_width full_height">
                 <option value='@{STR} + @{STR_advancement}'>STR</option>
                 <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
                 <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
@@ -509,11 +509,11 @@
                 <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
                 <option value='@{LD} + @{LD_advancement}' >LD</option>
               </select>
-              <input name='attr_appeal_R_mod2' type='number' value='0'/>
-              <input name="attr_appeal_R_mod3" type="checkbox" value="20+@{appeal_R_mod4}" class='skills_item'/>
-              <input name="attr_appeal_R_mod3" type="checkbox" value="30+@{appeal_R_mod4}" class='skills_item'/>
-              <input name="attr_appeal_R_mod3" type="checkbox" value="40+@{appeal_R_mod4}" class='skills_item'/>
-              <button type="roll" name="appeal_roll" value='/me rolls Appeal with [[floor(([[@{appeal_R_mod1}]]+@{appeal_R_mod2}+[[@{appeal_R_mod3}-(20+@{appeal_R_mod4})]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{appeal_R_mod1}]]+@{appeal_R_mod2}+[[@{appeal_R_mod3}-(20+@{appeal_R_mod4})" disabled="true"/></button>
+              <input name='attr_skill_R_mod2' type='number' value='0'/>
+              <input name="attr_skill_R_mod3" type="checkbox" value="20+@{skill_R_mod4}" class='skills_item'/>
+              <input name="attr_skill_R_mod3" type="checkbox" value="30+@{skill_R_mod4}" class='skills_item'/>
+              <input name="attr_skill_R_mod3" type="checkbox" value="40+@{skill_R_mod4}" class='skills_item'/>
+              <button type="roll" name="skill_Roll" value='/me rolls @{skill_R_name} with [[floor(([[@{skill_R_mod1}]]+@{skill_R_mod2}+[[@{skill_R_mod3}-(20+@{skill_R_mod4})]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{skill_R_mod1}]]+@{skill_R_mod2}+[[@{skill_R_mod3}-(20+@{skill_R_mod4})" disabled="true"/></button>
             </div>
           </fieldset>
 
@@ -529,6 +529,7 @@
             <p class='skills_item bold_text skill_20_heading_width'>+20</p>
             <p class='skills_item bold_text skill_roll_heading_width'>roll</p>
           </div>
+
           <div class='skills_row'>
             <p class='skills_item bold_text skill_name_width'>Appeal</p>
             <p class='skills_item bold_text skill_stat_width'> </p>
@@ -552,6 +553,7 @@
               <button type="roll" name="appeal_roll" value='/me rolls Appeal with [[floor(([[@{appeal_mod1}]]+@{appeal_mod2}+[[@{appeal_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
             </div>
           </div>
+
           <div class='skills_row'>
             <p class='skills_item bold_text skill_name_width'>Athletics</p>
             <p class='skills_item bold_text skill_stat_width'> </p>
