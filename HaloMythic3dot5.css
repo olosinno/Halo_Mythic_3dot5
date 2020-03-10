@@ -391,6 +391,9 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skill_right-hand { text-align: right; width: 50% }
 .sheet-custom_skill { width: 200px; margin-right: 45px }
 
+.sheet_education_header{
+	margin-top: 7px;
+}
 
 .sheet-education1{text-align: left!important;}
 .sheet-education2{margin: 3 0}
