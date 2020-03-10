@@ -389,9 +389,6 @@ ______________________________ start of core tab ______________________________ 
 	align-items: center;
 	border-bottom: 1px dotted grey;
 }
-.sheet-skills_item {
-	margin: 7px 5px
-}
 
 .sheet-skill_name_heading_width { width: 106px;}
 .sheet-skill_diff_heading_width { width: 70px;}
@@ -410,16 +407,45 @@ ______________________________ start of core tab ______________________________ 
 .sheet-custom_skill { width: 200px; margin-right: 45px }
 
 
-.sheet-education_header{
+
+.sheet-skills_item {margin: 7px 5px}
+.sheet-skills_text {margin: 4px 0px}
+.sheet-text_left{text-align: left!important;}
+
+.sheet-skill_header{
 	display: grid;
 	margin-top: 7px;
-	grid-template-columns: auto 63px 55px 30px 30px 35px;
+	grid-template-columns: auto 25px 63px 59px 21px 30px 38px 30px;
 	grid-template-rows: 23px;
 	border-bottom: 1px dotted darkgrey;
 }
 
-.sheet-education1{text-align: left!important;}
-.sheet-education2{margin: 3 0}
+.sheet-skill_grid{
+	display: grid;
+	grid-template-columns: auto 48px 63px 55px 30px 30px 30px 35px;
+	grid-template-rows: 27px;
+	border-bottom: 1px dotted darkgrey;
+	padding-bottom: 1.5px;
+		padding-top: 1.5px;
+
+}
+.sheet-education_grid{
+	display: grid;
+	grid-template-columns: auto 63px 55px 30px 30px 35px;
+	grid-template-rows: 27px;
+	border-bottom: 1px dotted darkgrey;
+	padding-bottom: 1.5px;
+		padding-top: 1.5px;
+}
+
+.sheet-education_header{
+	display: grid;
+	margin-top: 7px;
+	grid-template-columns: auto 63px 55px 25px 38px 30px;
+	grid-template-rows: 23px;
+	border-bottom: 1px dotted darkgrey;
+}
+
 .sheet-education_grid{
 	display: grid;
 	grid-template-columns: auto 63px 55px 30px 30px 35px;
