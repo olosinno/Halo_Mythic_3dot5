@@ -36,6 +36,11 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 .charsheet .sheet-item.sheet-920 { width: 90px }
 .sheet-full_width_17px{width: calc(100% - 17px);}
 
+.sheet-collapsible_ability_description_window_a,
+.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }
+.sheet-collapsible_ability_description_window_b,
+.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none }
+
 /* ______________________________ start of CSS selectors, patterns used to select element(s) for styling ______________________________ */
 
 @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
@@ -112,6 +117,9 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-half_width { width: 50% }
 /* full width of containing block */
 .sheet-full_width { width: 100% }
+
+/* full height of containing block */
+.sheet-full_height{height: 100% }
 
 .sheet-white_text { color: white }
 .sheet-huge_text { font-size: 36px }
@@ -346,13 +354,12 @@ ______________________________ start of core tab ______________________________ 
 	grid-template-areas:
 	'cl1 cl2'
 	'cl1 cl3';
-	grid-template-columns: 450px auto
+	grid-template-columns: 450px auto;
 }
 .sheet-skills_table {
 	background: #506b95;
 	color: white;
 	font-family: Saira Semi Condensed;
-	font-size: 18px;
 	display: flex;
 	flex-direction: column;
 }
@@ -366,7 +373,7 @@ ______________________________ start of core tab ______________________________ 
 	border-bottom: 1px dotted grey;
 }
 .sheet-skills_item {
-	margin: 10px 5px
+	margin: 11px 5px
 }
 .sheet-skill_name_heading_width { width: 106px;}
 .sheet-skill_diff_heading_width { width: 70px;}
@@ -384,16 +391,20 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skill_right-hand { text-align: right; width: 50% }
 .sheet-custom_skill { width: 200px; margin-right: 45px }
 
-.sheet-education { width: 75%; margin-right: 10px }
-.sheet-education_margin { margin: 0px 5px }
-.sheet-education_marginL { margin-right: 5px }
+.sheet-education1{ width: 60%; text-align: left!important;}
+.sheet-education2{ width: 60px;}
+.sheet-education3{ }
+.sheet-education4{ width: 20px;}
+.sheet-education5{ width: 20px;}
+.sheet-education6{ width: 20px;}
+.sheet-education_row{
+	display: flex;
+	flex-direction: row;
+	height: 30px;
+	align-items: center;
+	border-bottom: 1px dotted grey;
+}
 
-
-
-.sheet-collapsible_ability_description_window_a,
-.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }
-.sheet-collapsible_ability_description_window_b,
-.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none }
 
 /* ______________________________ end of core tab ______________________________
 ______________________________ start of equipment tab ______________________________ */
@@ -402,6 +413,7 @@ ______________________________ start of equipment tab __________________________
 .sheet-equipment_items_list{		grid-area: e3}
 
 .sheet-equipment_divider {
+		font-size: 18px;
 	display: grid;
 		grid-template-columns: auto 10px auto;
 	grid-template-areas:

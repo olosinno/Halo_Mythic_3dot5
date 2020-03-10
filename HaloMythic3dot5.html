@@ -963,15 +963,51 @@
       </div>
 
 
-      <div class='core_lists2 edge_padding'>
+      <div class='core_lists2 edge_padding skills_table'>
         <h3><b>Education</b></h3>
+        <div class="education_row">
+          <input type="text" name="attr_education_name" class="full_width education1"/>
+          <select name='attr_education_mod1' class='skills_item full_width education2'>
+            <option value='@{STR} + @{STR_advancement}' >STR</option>
+            <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+            <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+            <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+            <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+            <option value='@{INT} + @{INT_advancement}' selected='selected'>INT</option>
+            <option value='@{PER} + @{PER_advancement}' >PER</option>
+            <option value='@{CR} + @{CR_advancement}' >CR</option>
+            <option value='@{CH} + @{CH_advancement}' >CH</option>
+            <option value='@{LD} + @{LD_advancement}' >LD</option>
+          </select>
+          <input type="number" name="attr_education_mod2" value="0" class="education3"/>
+          <div class="education4"><input type="checkbox" name="attr_education_mod3" value="5"class='skills_item '/></div>
+          <div class="education5"><input type="checkbox" name="attr_education_mod3" value="10"class='skills_item'/></div>
+          <button type="roll" name="education_roll" value='/me rolls @{education_name} achieving: [[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]] degrees of success.' class="education6">
+        </div>
+
         <fieldset name='skills' class='repeating_education'>
-          <input name='attr_education' type='text' class='education education_marginL'>+10
-          <input name="attr_education10" type="checkbox" value="5" class='education_margin'</input>
-          <button type="roll" name="technology_roll" value='/me Shoot, I dunno.  [[floor(([[@{education10}]] + 5]]+?{Modifier|0}-1d100)/10)]] degrees of success.' />
+          <div class="education_row">
+            <input type="text" name="attr_education_name" class="full_width education1"/>
+            <select name='attr_education_mod1' class='skills_item full_width education2'>
+              <option value='@{STR} + @{STR_advancement}' >STR</option>
+              <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+              <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+              <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+              <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+              <option value='@{INT} + @{INT_advancement}' selected='selected'>INT</option>
+              <option value='@{PER} + @{PER_advancement}' >PER</option>
+              <option value='@{CR} + @{CR_advancement}' >CR</option>
+              <option value='@{CH} + @{CH_advancement}' >CH</option>
+              <option value='@{LD} + @{LD_advancement}' >LD</option>
+            </select>
+            <input type="number" name="attr_education_mod2" value="0" class="education3"/>
+            <div class="education4"><input type="checkbox" name="attr_education_mod3" value="5"class='skills_item '/></div>
+            <div class="education5"><input type="checkbox" name="attr_education_mod3" value="10"class='skills_item'/></div>
+            <button type="roll" name="education_roll" value='/me rolls @{education_name} achieving: [[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]] degrees of success.' class="education6">
+          </div>
         </fieldset>
       </div>
-      <div class='core_lists3 edge_padding'>
+      <div class='core_lists3 skills_table edge_padding'>
         <h3><b>Languages</b></h3>
         <fieldset name='skills' class='repeating_languages'>
           <input name='attr_language' type='text' class='full_width' />
