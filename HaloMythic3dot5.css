@@ -16,7 +16,8 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 */
 .sheet-background{
 	border: 1px solid black;
-  border-radius: 5px;}
+	border-radius: 5px;
+}
 
 .charsheet .sheet-row {
 	height: 24px;
@@ -78,8 +79,8 @@ button[type='roll'] {
 }
 /* clear buttons with the clear class */
 button[type="roll"].sheet-clear::before {
-    content: "";
-    display: none;
+	content: "";
+	display: none;
 }
 
 /* All button elements of type roll when hovered over: */
@@ -426,7 +427,7 @@ ______________________________ start of core tab ______________________________ 
 	grid-template-rows: 27px;
 	border-bottom: 1px dotted darkgrey;
 	padding-bottom: 1.5px;
-		padding-top: 1.5px;
+	padding-top: 1.5px;
 
 }
 .sheet-education_grid{
@@ -435,7 +436,7 @@ ______________________________ start of core tab ______________________________ 
 	grid-template-rows: 27px;
 	border-bottom: 1px dotted darkgrey;
 	padding-bottom: 1.5px;
-		padding-top: 1.5px;
+	padding-top: 1.5px;
 }
 
 .sheet-education_header{
@@ -452,7 +453,7 @@ ______________________________ start of core tab ______________________________ 
 	grid-template-rows: 27px;
 	border-bottom: 1px dotted darkgrey;
 	padding-bottom: 1.5px;
-		padding-top: 1.5px;
+	padding-top: 1.5px;
 
 }
 
@@ -467,9 +468,9 @@ ______________________________ start of equipment tab __________________________
 .sheet-equipment_items_list{		grid-area: e3}
 
 .sheet-equipment_divider {
-		font-size: 18px;
+	font-size: 18px;
 	display: grid;
-		grid-template-columns: auto 10px auto;
+	grid-template-columns: auto 10px auto;
 	grid-template-areas:
 	'e1 e0 e2'
 	'e3 e3 e3';
@@ -483,7 +484,7 @@ ______________________________ start of medical tab ____________________________
 .sheet-medicalG {
 	background: #475f85;
 	border-left: 15px solid #475f85;
-		border-right: 15px solid #475f85;
+	border-right: 15px solid #475f85;
 	color: white;
 	font-family: Saira Semi Condensed
 }
