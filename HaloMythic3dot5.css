@@ -391,19 +391,18 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skill_right-hand { text-align: right; width: 50% }
 .sheet-custom_skill { width: 200px; margin-right: 45px }
 
-.sheet-education1{ width: 100%; text-align: left!important;}
-.sheet-education2{ width: 60px;}
-.sheet-education3{ }
-.sheet-education4{ width: 20px;}
-.sheet-education5{ width: 20px;}
-.sheet-education6{ width: 20px;}
-.sheet-education_row{
-	display: flex;
-	flex-direction: row;
-	height: 30px;
-	align-items: center;
-	border-bottom: 1px dotted grey;
+
+.sheet-education1{text-align: left!important;}
+.sheet-education2{margin: 3 0}
+.sheet-education_grid{
+	display: grid;
+	grid-template-columns: auto 70px 55px 30px 30px 35px;
+	grid-template-rows: 30px;
+		border-bottom: 1px dotted grey;
 }
+
+
+
 
 
 /* ______________________________ end of core tab ______________________________
