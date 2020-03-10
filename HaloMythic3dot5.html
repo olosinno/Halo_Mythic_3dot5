@@ -966,14 +966,14 @@
       <div class='core_lists2 edge_padding skills_table'>
         <h3><b>Education</b></h3>
 
-<div class="education_grid">
-<p class='bold_text education_header'>Name</p>
-<p class='bold_text education_header'>Char</p>
-<p class='bold_text education_header'>Mod</p>
-<p class='bold_text education_header'>+5</p>
-<p class='bold_text education_header'>+10</p>
-<p class='bold_text education_header'>Roll</p>
-</div>
+        <div class="education_header">
+          <p class='bold_text'>Name</p>
+          <p class='bold_text'>Char</p>
+          <p class='bold_text'>Mod</p>
+          <p class='bold_text'>+5</p>
+          <p class='bold_text'>+10</p>
+          <p class='bold_text'>Roll</p>
+        </div>
 
         <div class="education_grid">
           <input type="text" name="attr_education_name" class="full_width education1"/>
@@ -1013,7 +1013,7 @@
             <input type="number" name="attr_education_mod2" value="0" class="education3"/>
             <div class="education4"><input type="checkbox" name="attr_education_mod3" value="5"class='skills_item '/></div>
             <div class="education5"><input type="checkbox" name="attr_education_mod3" value="10"class='skills_item'/></div>
-            <button type="roll" name="education_roll" value='/me rolls @{education_name} achieving: [[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]] degrees of success.' class="education6"/>
+            <button type="roll" name="education_roll" value='/me rolls @{education_name} achieving: [[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]] degrees of success.'/>
           </div>
         </fieldset>
       </div>

@@ -373,7 +373,7 @@ ______________________________ start of core tab ______________________________ 
 	border-bottom: 1px dotted grey;
 }
 .sheet-skills_item {
-	margin: 11px 5px
+	margin: 7px 5px
 }
 .sheet-skill_name_heading_width { width: 106px;}
 .sheet-skill_diff_heading_width { width: 70px;}
@@ -391,17 +391,25 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skill_right-hand { text-align: right; width: 50% }
 .sheet-custom_skill { width: 200px; margin-right: 45px }
 
-.sheet_education_header{
+
+.sheet-education_header{
+	display: grid;
 	margin-top: 7px;
+	grid-template-columns: auto 63px 55px 30px 30px 35px;
+	grid-template-rows: 23px;
+	border-bottom: 1px dotted darkgrey;
 }
 
 .sheet-education1{text-align: left!important;}
 .sheet-education2{margin: 3 0}
 .sheet-education_grid{
 	display: grid;
-	grid-template-columns: auto 70px 55px 30px 30px 35px;
-	grid-template-rows: 30px;
-		border-bottom: 1px dotted grey;
+	grid-template-columns: auto 63px 55px 30px 30px 35px;
+	grid-template-rows: 27px;
+	border-bottom: 1px dotted darkgrey;
+	padding-bottom: 1.5px;
+		padding-top: 1.5px;
+
 }
 
 
