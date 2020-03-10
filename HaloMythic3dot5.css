@@ -65,9 +65,16 @@ button[type='roll'] {
 	color: white;
 	font-family: Saira Semi Condensed
 }
+/* clear buttons with the clear class */
+button[type="roll"].sheet-clear::before {
+    content: ""!important;
+font-size:0.75em;
+    display: none;
+}
 
 /* All button elements of type roll when hovered over: */
 button[type='roll']:hover { background-color: red }
+
 
 /* Both header elements 2 and 3 receive the following CSS properties. */
 h2, h3 {
@@ -375,6 +382,7 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skills_item {
 	margin: 7px 5px
 }
+
 .sheet-skill_name_heading_width { width: 106px;}
 .sheet-skill_diff_heading_width { width: 70px;}
 .sheet-skill_stat_heading_width { width: 67px;}
