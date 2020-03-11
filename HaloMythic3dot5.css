@@ -558,9 +558,12 @@ ______________________________ start of medical tab ____________________________
 /* ______________________________ end of medical tab __________________________________________________________
 ______________________________ start of vehicles tab ___________________________________________________________ */
 
-.sheet-vehicles_grid1 { grid-area: vg1; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color:white; font-family: Saira Semi Condensed }
-.sheet-vehicles_grid2 { grid-area: vg2; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color:white; font-family: Saira Semi Condensed }
-.sheet-vehicles_grid3 { grid-area: vg3; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color:white; font-family: Saira Semi Condensed }
+
+
+
+.sheet-vehicles_grid1 { margin-right: 10px; grid-area: vg1; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-top-left-radius: 10px; border-top-right-radius: 10px; color:white; font-family: Saira Semi Condensed }
+.sheet-vehicles_grid2 { margin-right: 10px; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color:white; font-family: Saira Semi Condensed }
+.sheet-vehicles_grid3 { margin-right: 10px; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-bottom-left-radius: 3px; border-bottom-right-radius: 10px; color:white; font-family: Saira Semi Condensed }
 .sheet-vehicle_weapons { grid-area: vgw }
 .sheet-vehicles_divider {
 	display: grid;
@@ -570,7 +573,7 @@ ______________________________ start of vehicles tab ___________________________
 	'vg3 vgw';
 	grid-template-columns: 50% 50%
 }
-.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; color: white; font-family: Saira Semi Condensed; text-align: center }
+.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; border-top-left-radius: 9px; border-top-right-radius: 9px; color: white; font-family: Saira Semi Condensed; text-align: center }
 .sheet-vehicles_Gs  { grid-area: vs; height: 28.5px; margin-bottom: -8px; margin-top: -1px }
 .sheet-vehicles_Gt  { grid-area: vt; height: 28.5px; margin-bottom: -8px; margin-top: -1px }
 .sheet-vehicles_G1  { grid-area: v1 }
