@@ -145,6 +145,8 @@ ______________________________ start of multipurpose or special-use classes such
 }
 
 .sheet-edge_padding { padding: 2px }
+/* 5% width of containing block */
+.sheet-mini_width { width: 20% }
 /* half width of containing block */
 .sheet-half_width { width: 50% }
 /* full width of containing block */
@@ -157,7 +159,7 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-huge_text { font-size: 36px }
 .sheet-bold_text { font-weight: bold }
 .sheet-centered { margin: auto }
-
+.sheet-text_centered{text-align: center;}
 .sheet-radius_border{
 	border-radius: 10px;
 }
@@ -387,6 +389,10 @@ ______________________________ start of minimisable infographic ________________
 	display: grid;
 	grid-template-columns: 120px 120px 230px
 }
+.sheet-minimisable_infographic_header{
+
+}
+
 .sheet-minimisable_infographic_g1{grid-area: mi1; justify-self:center; color:white; font-family: Saira Semi Condensed; background:#506b95 }
 .sheet-minimisable_infographic_g2{grid-area: mi2; justify-self: right; margin-right: 3px; margin-top: 3px; color:white; font-family: Saira Semi Condensed }
 .sheet-minimisable_infographic_g3{grid-area: mi3; border-right: 1px solid #506b95;}
