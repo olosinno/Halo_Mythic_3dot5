@@ -381,27 +381,28 @@ ______________________________ start of minimisable infographic ________________
 
 .sheet-minimisable_infographic_main {
 	display: grid;
-	grid-template-columns: 18px auto
+	grid-template-columns: 18px auto;
 }
 .sheet-minimisable_infographic_grid{
 	display: grid;
-	grid-template-columns: 120px 120px 120px 230px
+	grid-template-columns: 110px 110px 110px 230px 230px
 }
 .sheet-wounds_width { width: 50px;}
 .sheet-Fatigue_width { width: 45px;}
 .sheet-luck_width { width: 26px;}
 .sheet-shields_width { width: 50px;}
+.sheet-armor_width { width: 40px;}
 
 .sheet-minimisable_infographic_g1{grid-area: mi1; justify-self: center; color:white; text-align: left!important;font-family: Saira Semi Condensed; background:#506b95}
 .sheet-minimisable_infographic_g2{grid-area: mi2; justify-self: right; margin-right: 3px; margin-top: 3px; color:white; font-family: Saira Semi Condensed }
-.sheet-minimisable_infographic_g3{grid-area: mi3; border-right: 1px solid #506b95;}
+.sheet-minimisable_infographic_g3{grid-area: mi3; border-right: 1px solid #394C6A;}
 .sheet-minimisable_infographic_g4{grid-area: mi4; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
-.sheet-minimisable_infographic_g5{grid-area: mi5; border-right: 1px solid #506b95; border-bottom: 1px solid #506b95; border-bottom-right-radius: 10px}
+.sheet-minimisable_infographic_g5{grid-area: mi5; border-right: 1px solid #394C6A; border-bottom: 1px solid #394C6A; border-bottom-right-radius: 10px}
 .sheet-minimisable_infographic_field2x3{
 	margin-right: 10px;
 	background:#506b95;
 	display: grid;
-	grid-template-columns: 55px 55px;
+	grid-template-columns: 50px 50px;
 	grid-template-rows: 25px 25px 25px;
 	grid-template-areas:
 	'mi1 mi1'
@@ -412,7 +413,7 @@ ______________________________ start of minimisable infographic ________________
 .sheet-minimisable_infographic_g6{grid-area: mi6; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
 .sheet-minimisable_infographic_g7{grid-area: mi7; }
 .sheet-minimisable_infographic_g8{grid-area: mi8; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
-.sheet-minimisable_infographic_g9{grid-area: mi9; border-bottom: 1px solid #506b95;}
+.sheet-minimisable_infographic_g9{grid-area: mi9; border-bottom: 1px solid #394C6A;}
 .sheet-minimisable_infographic_field4x3{
 	margin-right: 10px;
 	background:#506b95;

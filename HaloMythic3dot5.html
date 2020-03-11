@@ -429,9 +429,9 @@
     });
   </script>
 
+
+
   <hr>
-
-
 
   <!-- ______________________________ start of minimisable infographic ______________________________ -->
 
@@ -439,6 +439,8 @@
     <input type='checkbox' class='minimisable_switch'>
     <div class='minimisable_infographic_expand'>
       <div class="minimisable_infographic_grid">
+
+
 
         <div class="minimisable_infographic_field2x3 radius_border">
           <label class="minimisable_infographic_g1 wounds_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{wounds} wounds out of @{wounds|max}"></button><h3 class='minimisable_infographic_g1'>Wounds</h3></label>
@@ -476,6 +478,20 @@
           <p class='minimisable_infographic_g4'>Delay</p>
           <input class="minimisable_infographic_g5 full_width" type="text" name="attr_shields_delay" value="0">
         </div>
+
+        <div class="minimisable_infographic_field4x3 radius_border">
+          <button class="hidden" type="roll" name="rolo" value="@attr_shields"></button>
+          <label class="minimisable_infographic_g1 armor_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{Armor_head} head armor | @{Armor_arms} arm armor | @{Armor_chest} chest armor | @{Armor_legs} leg armor"></button><h3 class='minimisable_infographic_g1'>armor</h3></label>
+          <p class='minimisable_infographic_g6'>Head</p>
+          <input class="minimisable_infographic_g7 full_width" type="text" name="attr_Armor_head" value="0">
+          <p class='minimisable_infographic_g8'>Arms</p>
+          <input class="minimisable_infographic_g9 full_width" type="text" name="attr_Armor_arms" value="0">
+          <p class='minimisable_infographic_g2'>Chest</p>
+          <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Armor_chest" value="0">
+          <p class='minimisable_infographic_g4'>Legs</p>
+          <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Armor_legs" value="0">
+        </div>
+
 
 
 
