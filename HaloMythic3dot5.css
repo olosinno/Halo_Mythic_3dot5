@@ -14,6 +14,10 @@ text-decoration: underline
 no ending semicolons needed, properly space out properties line-by-line.  Alphabetized each properties list for easier reading.
 2. Keep order in HTML elements' attributes by the way they're listed.  name type value class
 */
+.sheet-background{
+	border: 1px solid black;
+	border-radius: 5px;
+}
 
 .charsheet .sheet-row {
 	height: 24px;
@@ -33,6 +37,30 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 .charsheet .sheet-item.sheet-920 { width: 90px }
 .sheet-full_width_17px{width: calc(100% - 17px);}
 
+.sheet-collapsible_ability_description_window_a,
+.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }
+.sheet-collapsible_ability_description_window_b,
+.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none }
+
+.sheet-input_background{
+	background: transparent;
+	color: white;
+	border-color: transparent;
+	font-size: 16px;
+	width: 35px;
+	margin-left: -7px;
+	margin-top: -3px;
+	text-align: center;
+	cursor: pointer;
+}
+.sheet-input_c_background{
+	width: 50px;
+	font-size: 16px;
+	margin-top: -7px!important;
+	margin-bottom: -4px!important;
+	cursor: pointer;
+
+}
 /* ______________________________ start of CSS selectors, patterns used to select element(s) for styling ______________________________ */
 
 @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
@@ -57,9 +85,16 @@ button[type='roll'] {
 	color: white;
 	font-family: Saira Semi Condensed
 }
+/* clear buttons with the clear class */
+button[type="roll"].sheet-clear::before {
+	content: "";
+	display: none;
+}
 
 /* All button elements of type roll when hovered over: */
-button[type='roll']:hover { background-color: red }
+button[type='roll']:hover { background-color: red;}
+label:hover { cursor: pointer;}
+
 
 /* Both header elements 2 and 3 receive the following CSS properties. */
 h2, h3 {
@@ -67,17 +102,20 @@ h2, h3 {
 	text-align: center;
 	text-decoration: underline
 }
-
+/* Only type-2 headers receive the following CSS properties. */
+h2{
+	color: white;
+}
 /* Only type-3 headers receive the following CSS properties. */
 h3 {
 	background: #394C6A;
-	color: white
+	color: white;
 }
 
 /* All instances of the placeholder attribute across all elements */
 ::placeholder {
 	color: white;
-	opacity: 0.6
+	opacity: 0.7
 }
 
 /* All textarea elements (keep width for textarea to prevent stretching off of sheet) */
@@ -89,8 +127,6 @@ textarea {
 	width: calc(100% - 10px)
 }
 
-
-
 /* ______________________________ end of CSS selectors ______________________________
 ______________________________ start of multipurpose or special-use classes such as grey border box on Core and Settings tabs ______________________________ */
 
@@ -101,9 +137,11 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-hidernot:checked + input { display: none }
 
 .sheet-box {
-	background: #353535;
+	background: #404040;
 	border-style: solid;
-	border-width: 1px
+	border-width: 1px;
+	border-color: black;
+	color: white;
 }
 
 .sheet-edge_padding { padding: 2px }
@@ -112,10 +150,29 @@ ______________________________ start of multipurpose or special-use classes such
 /* full width of containing block */
 .sheet-full_width { width: 100% }
 
+/* full height of containing block */
+.sheet-full_height{height: 100% }
+
 .sheet-white_text { color: white }
 .sheet-huge_text { font-size: 36px }
 .sheet-bold_text { font-weight: bold }
 .sheet-centered { margin: auto }
+
+.sheet-radius_border{
+	border-radius: 10px;
+}
+.sheet-radius_border_top{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.sheet-radius_border_bottom{
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.sheet-radius_border_heading{
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+}
 
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
@@ -326,6 +383,42 @@ ______________________________ start of minimisable infographic ________________
 	display: grid;
 	grid-template-columns: 18px auto
 }
+.sheet-minimisable_infographic_grid{
+	display: grid;
+	grid-template-columns: 120px 120px 230px
+}
+.sheet-minimisable_infographic_g1{grid-area: mi1; justify-self:center; color:white; font-family: Saira Semi Condensed; background:#506b95 }
+.sheet-minimisable_infographic_g2{grid-area: mi2; justify-self: right; margin-right: 3px; margin-top: 3px; color:white; font-family: Saira Semi Condensed }
+.sheet-minimisable_infographic_g3{grid-area: mi3; border-right: 1px solid #506b95;}
+.sheet-minimisable_infographic_g4{grid-area: mi4; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
+.sheet-minimisable_infographic_g5{grid-area: mi5; border-right: 1px solid #506b95; border-bottom: 1px solid #506b95; border-bottom-right-radius: 10px}
+.sheet-minimisable_infographic_field2x3{
+	margin-right: 10px;
+	background:#506b95;
+	display: grid;
+	grid-template-columns: 55px 55px;
+	grid-template-rows: 25px 25px 25px;
+	grid-template-areas:
+	'mi1 mi1'
+	'mi2 mi3'
+	'mi4 mi5'
+}
+
+.sheet-minimisable_infographic_g6{grid-area: mi6; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
+.sheet-minimisable_infographic_g7{grid-area: mi7; }
+.sheet-minimisable_infographic_g8{grid-area: mi8; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
+.sheet-minimisable_infographic_g9{grid-area: mi9; }
+.sheet-minimisable_infographic_field4x3{
+	margin-right: 10px;
+	background:#506b95;
+	display: grid;
+	grid-template-columns: 55px 55px 55px 55px;
+	grid-template-rows: 25px 25px 25px;
+	grid-template-areas:
+	'mi1 mi1 mi1 mi1'
+	'mi6 mi7 mi2 mi3'
+	'mi8 mi9 mi4 mi5'
+}
 
 .sheet-minimisable_infographic_expand,
 .sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_collapse { color: black; display: block; font-weight: bold }
@@ -337,23 +430,19 @@ ______________________________ start of minimisable infographic ________________
 ______________________________ start of core tab ______________________________ */
 
 .sheet-core_lists1 { grid-area: cl1; margin-right: 10px }
-.sheet-core_lists2 { grid-area: cl2 }
-.sheet-core_lists3 { grid-area: cl3 }
+.sheet-core_lists2 { grid-area: cl2; margin-bottom: 5px;}
+.sheet-core_lists3 { grid-area: cl3; margin-top: 5px}
 .sheet-core_lists {
 	display: grid;
-	height: auto;
 	grid-template-areas:
 	'cl1 cl2'
 	'cl1 cl3';
-	grid-template-columns: 450px auto
+	grid-template-columns: 450px auto;
 }
-.sheet-skills_table {
+.sheet-core_table {
 	background: #506b95;
 	color: white;
 	font-family: Saira Semi Condensed;
-	font-size: 18px;
-	display: flex;
-	flex-direction: column;
 }
 
 .sheet-skills_row {
@@ -364,9 +453,7 @@ ______________________________ start of core tab ______________________________ 
 	align-items: center;
 	border-bottom: 1px dotted grey;
 }
-.sheet-skills_item {
-	margin: 10px 5px
-}
+
 .sheet-skill_name_heading_width { width: 106px;}
 .sheet-skill_diff_heading_width { width: 70px;}
 .sheet-skill_stat_heading_width { width: 67px;}
@@ -383,49 +470,109 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skill_right-hand { text-align: right; width: 50% }
 .sheet-custom_skill { width: 200px; margin-right: 45px }
 
-.sheet-education { width: 75%; margin-right: 10px }
-.sheet-education_margin { margin: 0px 5px }
-.sheet-education_marginL { margin-right: 5px }
+
+
+.sheet-skills_item {margin: 7px 5px}
+.sheet-skills_text {margin: 4px 0px}
+.sheet-text_left{text-align: left!important;}
+
+.sheet-skill_header{
+	display: grid;
+	margin-top: 7px;
+	grid-template-columns: auto 25px 63px 59px 21px 30px 38px 30px;
+	grid-template-rows: 23px;
+	border-bottom: 1px dotted darkgrey;
+}
+
+.sheet-skill_grid{
+	display: grid;
+	grid-template-columns: auto 48px 63px 55px 30px 30px 30px 35px;
+	grid-template-rows: 27px;
+	border-bottom: 1px dotted darkgrey;
+	padding-bottom: 1.5px;
+	padding-top: 1.5px;
+
+}
+.sheet-education_grid{
+	display: grid;
+	grid-template-columns: auto 63px 55px 30px 30px 35px;
+	grid-template-rows: 27px;
+	border-bottom: 1px dotted darkgrey;
+	padding-bottom: 1.5px;
+	padding-top: 1.5px;
+}
+
+.sheet-education_header{
+	display: grid;
+	margin-top: 7px;
+	grid-template-columns: auto 63px 55px 25px 38px 30px;
+	grid-template-rows: 23px;
+	border-bottom: 1px dotted darkgrey;
+}
+
+.sheet-education_grid{
+	display: grid;
+	grid-template-columns: auto 63px 55px 30px 30px 35px;
+	grid-template-rows: 27px;
+	border-bottom: 1px dotted darkgrey;
+	padding-bottom: 1.5px;
+	padding-top: 1.5px;
+
+}
 
 
 
-.sheet-collapsible_ability_description_window_a,
-.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }
-.sheet-collapsible_ability_description_window_b,
-.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none }
+
 
 /* ______________________________ end of core tab ______________________________
+______________________________ start of equipment tab ______________________________ */
+.sheet-equipment_ranged_weapons{grid-area: e1}
+.sheet-equipment_melee_weapons{ grid-area: e2}
+.sheet-equipment_items_list{		grid-area: e3}
+
+.sheet-equipment_divider {
+	font-size: 18px;
+	display: grid;
+	grid-template-columns: auto 10px auto;
+	grid-template-areas:
+	'e1 e0 e2'
+	'e3 e3 e3';
+
+}
+
+
+/* ______________________________ end of equipment tab ______________________________
 ______________________________ start of medical tab ______________________________ */
 
 .sheet-medicalG {
 	background: #475f85;
 	border-left: 15px solid #475f85;
-		border-right: 15px solid #475f85;
+	border-right: 15px solid #475f85;
 	color: white;
 	font-family: Saira Semi Condensed
 }
 
-.sheet-medicalg1 { grid-area: m1 }
-.sheet-medicalg2 { grid-area: m2 }
-.sheet-medicalg3 { grid-area: m3 }
-.sheet-medicalg4 { grid-area: m4 }
-.sheet-medicalg5 { grid-area: m5 }
-.sheet-medicalg6 { grid-area: m6 }
-.sheet-medicalg7 { grid-area: m7 }
-.sheet-medicalg8 { grid-area: m8 }
-.sheet-medicalg9 { grid-area: m9 }
-.sheet-medicalg10 { grid-area: m10 }
-.sheet-medicalg11 { grid-area: m11 }
-.sheet-medicalg12 { grid-area: m12 }
-.sheet-medicalg13 { grid-area: m13 }
-.sheet-medicalg14 { grid-area: m14 }
-.sheet-medicalg15 { grid-area: m15 }
-.sheet-medicalg17 { grid-area: m17 }
-.sheet-medicalg16 { grid-area: m16 }
-.sheet-medicalgT { grid-area: mT }
-.sheet-medicalgR { grid-area: mR }
+.sheet-medicalg1 { grid-area: m1; border-top-left-radius: 10px;}
+.sheet-medicalg2 { grid-area: m2; }
+.sheet-medicalg3 { grid-area: m3; border-top-right-radius: 10px;}
+.sheet-medicalg4 { grid-area: m4; }
+.sheet-medicalg5 { grid-area: m5; }
+.sheet-medicalg6 { grid-area: m6; }
+.sheet-medicalg7 { grid-area: m7; }
+.sheet-medicalg8 { grid-area: m8; }
+.sheet-medicalg9 { grid-area: m9; }
+.sheet-medicalg10 { grid-area: m10; }
+.sheet-medicalg11 { grid-area: m11; }
+.sheet-medicalg12 { grid-area: m12; }
+.sheet-medicalg13 { grid-area: m13; }
+.sheet-medicalg14 { grid-area: m14; }
+.sheet-medicalg15 { grid-area: m15; border-bottom-left-radius: 10px;}
+.sheet-medicalg16 { grid-area: m16; }
+.sheet-medicalg17 { grid-area: m17; border-bottom-right-radius: 10px;}
+.sheet-medicalgT { grid-area: mT; margin-left: 10px;}
+.sheet-medicalgR { grid-area: mR; margin-top: 10px;}
 .sheet-medical-grid {
-	height: 50px;
+
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: 120px 120px 120px 120px 120px 150px auto;
@@ -447,7 +594,6 @@ ______________________________ start of medical tab ____________________________
 .sheet-medical_table {
 	background: #475f85;
 	border-bottom: 1px dotted grey;
-	border-left: 3px solid #394C6A;
 	color: white;
 	font-family: Saira Semi Condensed;
 	text-align: center;
@@ -457,9 +603,12 @@ ______________________________ start of medical tab ____________________________
 /* ______________________________ end of medical tab __________________________________________________________
 ______________________________ start of vehicles tab ___________________________________________________________ */
 
-.sheet-vehicles_grid1 { grid-area: vg1; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color:white; font-family: Saira Semi Condensed }
-.sheet-vehicles_grid2 { grid-area: vg2; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color:white; font-family: Saira Semi Condensed }
-.sheet-vehicles_grid3 { grid-area: vg3; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color:white; font-family: Saira Semi Condensed }
+
+
+
+.sheet-vehicles_grid1 { margin-right: 10px; grid-area: vg1; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-top-left-radius: 10px; border-top-right-radius: 10px; color:white; font-family: Saira Semi Condensed }
+.sheet-vehicles_grid2 { margin-right: 10px; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color:white; font-family: Saira Semi Condensed }
+.sheet-vehicles_grid3 { margin-right: 10px; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-bottom-left-radius: 3px; border-bottom-right-radius: 10px; color:white; font-family: Saira Semi Condensed }
 .sheet-vehicle_weapons { grid-area: vgw }
 .sheet-vehicles_divider {
 	display: grid;
@@ -469,7 +618,7 @@ ______________________________ start of vehicles tab ___________________________
 	'vg3 vgw';
 	grid-template-columns: 50% 50%
 }
-.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; color: white; font-family: Saira Semi Condensed; text-align: center }
+.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; border-top-left-radius: 9px; border-top-right-radius: 9px; color: white; font-family: Saira Semi Condensed; text-align: center }
 .sheet-vehicles_Gs  { grid-area: vs; height: 28.5px; margin-bottom: -8px; margin-top: -1px }
 .sheet-vehicles_Gt  { grid-area: vt; height: 28.5px; margin-bottom: -8px; margin-top: -1px }
 .sheet-vehicles_G1  { grid-area: v1 }
