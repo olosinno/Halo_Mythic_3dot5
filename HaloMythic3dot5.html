@@ -458,13 +458,12 @@
 
   <!-- ______________________________ start of core ______________________________ -->
 
-  <div class='core'>
+  <div class='core box'>
     <!-- Core Data -->
     <div class='core_lists box'>
-      <div class='core_lists1 edge_padding'>
-        <h3><b>Skills</b></h3>
-        <div class="skills_table">
 
+            <div class='core_lists1 edge_padding core_table radius_border'>
+        <h3 class="radius_border_top"><b>Skills</b></h3>
           <div class='skill_header'>
             <p class='bold_text'>Name</p>
             <p class='bold_text'></p>
@@ -1032,11 +1031,10 @@
           </fieldset>
           <!-- ______________________________ Repeating skills end ______________________________ -->
         </div>
-      </div>
 
 
-      <div class='core_lists2 edge_padding skills_table'>
-        <h3><b>Education</b></h3>
+      <div class='core_lists2 edge_padding core_table radius_border'>
+        <h3 class="radius_border_top"><b>Education</b></h3>
 
         <div class="education_header">
           <p class='bold_text'>Name</p>
@@ -1089,14 +1087,17 @@
           </div>
         </fieldset>
       </div>
-      <div class='core_lists3 skills_table edge_padding'>
-        <h3><b>Languages</b></h3>
+
+      <div class='core_lists3 core_table edge_padding radius_border'>
+        <h3 class="radius_border_top"><b>Languages</b></h3>
         <fieldset name='skills' class='repeating_languages'>
           <input name='attr_language' type='text' class='full_width' />
         </fieldset>
       </div>
     </div>
+
     <br>
+
     <h2>Abilities</h2>
     <p style='text-align: right; margin-top:-19px; margin-right: 5px'><b>Expand or collapse ability's descriptor block ⯆</b></p>
     <div class='edge_padding'>
@@ -1142,7 +1143,7 @@
   </div>
 
 
-  <div class='medical'>
+  <div class='medical box'>
     <!-- Medical -->
     <div class='medical-grid'>
       <div class='medicalg1 medicalG'>
@@ -1701,7 +1702,7 @@
     </div>
   </div>
 
-  <div class='advancements'>
+  <div class='advancements box'>
     <script type='text/worker'>
       on('change:xp_total change:repeating_advancements:advancement_costL change:repeating_advancements:advancement_costR remove:repeating_advancements', () => {
         // get section IDs because of operation both inside and outside of fieldset
@@ -1767,176 +1768,179 @@
     </div>
   </div>
 
-  <div class='vehicles'>
-    <div class='vehicles_divider'>
-      <div class='vehicles_grid1'>
-        <input type='text' class='vehicles_Gn full_width' placeholder='Name' />
+  <div class='vehicles box'>
+    <fieldset name='vehicles-R' class='repeating_vehicles'>
+      <div class='vehicles_divider'>
+        <div class='vehicles_grid1'>
+          <input type='text' class='vehicles_Gn full_width' placeholder='Name' />
 
-        <select name='attr_vehicle-shield' class='vehicles_Gs full_width'>
-          <option value='0' selected='selected'>Unshielded</option>
-          <option value='1'>Shielded</option>
-        </select>
+          <select name='attr_vehicle-shield' class='vehicles_Gs full_width'>
+            <option value='0' selected='selected'>Unshielded</option>
+            <option value='1'>Shielded</option>
+          </select>
 
-        <select name='attr_vehicle-type' class='vehicles_Gt full_width'>
-          <option value='0' selected='selected'>Ground</option>
-          <option value='1'>Air</option>
-          <option value='2'>Walker</option>
-          <option value='3'>Stationary</option>
-        </select>
-        <div class='vehicles_G1'><h3>DIMENSIONS</h3></div>
-        <div class='vehicles_G2'>Length</div>
-        <div class='vehicles_G3'>Width</div>
-        <div class='vehicles_G4'>Height</div>
-        <div class='vehicles_G5'>Weight</div>
-        <input name='attr_vehicle-length' type='text' class='vehicles_G6 full_width' placeholder='# Meters' />
-        <input name='attr_vehicle-width' type='text' class='vehicles_G7 full_width' placeholder='# Meters' />
-        <input name='attr_vehicle-height' type='text' class='vehicles_G8 full_width' placeholder='# Meters' />
-        <input name='attr_vehicle-weight' type='text' class='vehicles_G9 full_width' placeholder='KG / Metric Tons' />
+          <select name='attr_vehicle-type' class='vehicles_Gt full_width'>
+            <option value='0' selected='selected'>Ground</option>
+            <option value='1'>Air</option>
+            <option value='2'>Walker</option>
+            <option value='3'>Stationary</option>
+          </select>
+          <div class='vehicles_G1'><h3>DIMENSIONS</h3></div>
+          <div class='vehicles_G2'>Length</div>
+          <div class='vehicles_G3'>Width</div>
+          <div class='vehicles_G4'>Height</div>
+          <div class='vehicles_G5'>Weight</div>
+          <input name='attr_vehicle-length' type='text' class='vehicles_G6 full_width' placeholder='# Meters' />
+          <input name='attr_vehicle-width' type='text' class='vehicles_G7 full_width' placeholder='# Meters' />
+          <input name='attr_vehicle-height' type='text' class='vehicles_G8 full_width' placeholder='# Meters' />
+          <input name='attr_vehicle-weight' type='text' class='vehicles_G9 full_width' placeholder='KG / Metric Tons' />
 
-        <input name='attr_vehicle-type' type='checkbox' value='0' class='hidden hider' checked />
-        <div class='vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
-        <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
-        <div class='vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
-        <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
-        <div class='vehicles_G10'><h3>CHARACTERISTICS</h3></div>
+          <input name='attr_vehicle-type' type='checkbox' value='0' class='hidden hider' checked />
+          <div class='vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
+          <div class='vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
+          <div class='vehicles_G10'><h3>CHARACTERISTICS</h3></div>
 
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-        <div class='vehicles_G11'>Accelerate</div>
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-        <div class='vehicles_G12'>Brake</div>
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-        <div class='vehicles_G13'>Top Speed</div>
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-        <div class='vehicles_G14'>Maneuver</div>
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
-        <input name='attr_vehicle-accelerate' type='text' class='vehicles_G15 full_width' placeholder='Meters per Turn' />
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
-        <input name='attr_vehicle-brake' type='text' class='vehicles_G16 full_width' placeholder='Meters per Turn' />
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
-        <input name='attr_vehicle-top_speed' type='text' class='vehicles_G17 full_width' placeholder='MpT/(# km/h)' />
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
-        <input name='attr_vehicle-maneuver' type='text' class='vehicles_G18 full_width' placeholder="Pilot's Evasion" />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G11'>Accelerate</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G12'>Brake</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G13'>Top Speed</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G14'>Maneuver</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-accelerate' type='text' class='vehicles_G15 full_width' placeholder='Meters per Turn' />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-brake' type='text' class='vehicles_G16 full_width' placeholder='Meters per Turn' />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-top_speed' type='text' class='vehicles_G17 full_width' placeholder='MpT/(# km/h)' />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-maneuver' type='text' class='vehicles_G18 full_width' placeholder="Pilot's Evasion" />
 
-        <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
-        <div class='vehicles_G19'>Vertical</div>
-        <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
-        <div class='vehicles_G20'>Takeoff</div>
-        <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
-        <div class='vehicles_G21'>Target Range</div>
-        <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
-        <div class='vehicles_G22'>Targeting</div>
-        <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
-        <input name='attr_vehicle-vertical' type='text' class='vehicles_G23 full_width' placeholder='MpT' />
-        <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
-        <input name='attr_vehicle-takeoff' type='text' class='vehicles_G24 full_width' placeholder='Min Half-Actions' />
-        <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
-        <input name='attr_vehicle-target_range' type='text' class='vehicles_G25 full_width' placeholder='Meters' />
-        <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
-        <input name='attr_vehicle-targeting' type='text' class='vehicles_G26 full_width' placeholder='Min Half-Actions' />
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <div class='vehicles_G19'>Vertical</div>
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <div class='vehicles_G20'>Takeoff</div>
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <div class='vehicles_G21'>Target Range</div>
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <div class='vehicles_G22'>Targeting</div>
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-vertical' type='text' class='vehicles_G23 full_width' placeholder='MpT' />
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-takeoff' type='text' class='vehicles_G24 full_width' placeholder='Min Half-Actions' />
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-target_range' type='text' class='vehicles_G25 full_width' placeholder='Meters' />
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-targeting' type='text' class='vehicles_G26 full_width' placeholder='Min Half-Actions' />
 
-        <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
-        <div class='vehicles_G27'>Strength</div>
-        <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider full_width' >
-        <div class='vehicles_G28'>Melee</div>
-        <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
-        <input type='text' name='attr_vehicle-strength' class='vehicles_G29 full_width'/>
-        <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
-        <input name='attr_vehicle-melee' type='text' class='vehicles_G30 full_width' />
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
+          <div class='vehicles_G27'>Strength</div>
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider full_width' >
+          <div class='vehicles_G28'>Melee</div>
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
+          <input type='text' name='attr_vehicle-strength' class='vehicles_G29 full_width'/>
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
+          <input name='attr_vehicle-melee' type='text' class='vehicles_G30 full_width' />
 
-        <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
-        <input name='attr_vehicle-strength-mythic' class='vehicles_G31 full_width' type='text' />
-        <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
-        <div class='vehicles_G32'>Mythic</div>
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
+          <input name='attr_vehicle-strength-mythic' class='vehicles_G31 full_width' type='text' />
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
+          <div class='vehicles_G32'>Mythic</div>
 
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
-        <div class='vehicles_G33'><h3>CREW AND COMPLEMENT</h3></div>
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
-        <div class='vehicles_G34'>Crew</div>
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
-        <div class='vehicles_G35'>Complement</div>
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
-        <input name='attr_vehicle-crew' type='text' class='vehicles_G36 full_width' placeholder='Minimum Crew Prerequisite' />
-        <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
-        <input name='attr_vehicle-compliment' type='text' class='vehicles_G37 full_width' placeholder='Maximum Crew Space' />
-        <div class='vehicles_G38'><h3>HULL</h3></div>
-        <div class='vehicles_G39'>Hull Material</div>
-        <input name='attr_vehicle-hull' type='text' class='vehicles_G40 full_width' placeholder='Alloy Composition & Plating' />
-      </div>
-      <div class='vehicles_grid2'>
-        <div class='vehicles_G41'><h3>BREAKPOINTS</h3></div>
-        <div class='vehicles_G42'>Wep</div>
-        <div class='vehicles_G43'>Mod</div>
-        <div class='vehicles_G44'>Eng</div>
-        <div class='vehicles_G45'>Op</div>
-        <div class='vehicles_G46'>Crew</div>
-        <input name='attr_vehicle-bp-wep' type='text' class='vehicles_G47 full_width' placeholder='Weapon' />
-        <input name='attr_vehicle-bp-mod' type='text' class='vehicles_G48 full_width' placeholder='Mobility' />
-        <input name='attr_vehicle-bp-eng'type='text' class='vehicles_G49 full_width' placeholder='Engine' />
-        <input name='attr_vehicle-bp-op'type='text' class='vehicles_G50 full_width' placeholder='Optic' />
-        <input name='attr_vehicle-bp-crew'type='text' class='vehicles_G51 full_width' placeholder='Compartment' />
-        <div class='vehicles_G52'><h3>Armor</h3></div>
-        <div class='vehicles_G53'>Front</div>
-        <div class='vehicles_G54'>Back</div>
-        <div class='vehicles_G55'>Side</div>
-        <div class='vehicles_G56'>Top</div>
-        <div class='vehicles_G57'>Bottom</div>
-        <input name='attr_vehicle-armor-front' type='text' class='vehicles_G58 full_width' />
-        <input name='attr_vehicle-armor-back' type='text' class='vehicles_G59 full_width' />
-        <input name='attr_vehicle-armor-side' type='text' class='vehicles_G60 full_width' />
-        <input name='attr_vehicle-armor-top' type='text' class='vehicles_G61 full_width' />
-        <input name='attr_vehicle-armor-bottom' type='text' class='vehicles_G62 full_width' />
-      </div>
-      <div class='vehicles_grid3'>
-        <div class='vehicles_G63'><h3>Miscellaneous</h3></div>
-        <div class='vehicles_G64'>Size Points</div>
-        <div class='vehicles_G65'>Weapon Points</div>
-        <input name='attr_vehicle-size-points' type='text' class='vehicles_G66 full_width' placeholder='Warthog = 2' />
-        <input name='attr_vehicle-weapon-points' type='text' class='vehicles_G67 full_width' />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <div class='vehicles_G33'><h3>CREW AND COMPLEMENT</h3></div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <div class='vehicles_G34'>Crew</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <div class='vehicles_G35'>Complement</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-crew' type='text' class='vehicles_G36 full_width' placeholder='Minimum Crew Prerequisite' />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-compliment' type='text' class='vehicles_G37 full_width' placeholder='Maximum Crew Space' />
+          <div class='vehicles_G38'><h3>HULL</h3></div>
+          <div class='vehicles_G39'>Hull Material</div>
+          <input name='attr_vehicle-hull' type='text' class='vehicles_G40 full_width' placeholder='Alloy Composition & Plating' />
+        </div>
+        <div class='vehicles_grid2'>
+          <div class='vehicles_G41'><h3>BREAKPOINTS</h3></div>
+          <div class='vehicles_G42'>Wep</div>
+          <div class='vehicles_G43'>Mod</div>
+          <div class='vehicles_G44'>Eng</div>
+          <div class='vehicles_G45'>Op</div>
+          <div class='vehicles_G46'>Crew</div>
+          <input name='attr_vehicle-bp-wep' type='text' class='vehicles_G47 full_width' placeholder='Weapon' />
+          <input name='attr_vehicle-bp-mod' type='text' class='vehicles_G48 full_width' placeholder='Mobility' />
+          <input name='attr_vehicle-bp-eng'type='text' class='vehicles_G49 full_width' placeholder='Engine' />
+          <input name='attr_vehicle-bp-op'type='text' class='vehicles_G50 full_width' placeholder='Optic' />
+          <input name='attr_vehicle-bp-crew'type='text' class='vehicles_G51 full_width' placeholder='Compartment' />
+          <div class='vehicles_G52'><h3>Armor</h3></div>
+          <div class='vehicles_G53'>Front</div>
+          <div class='vehicles_G54'>Back</div>
+          <div class='vehicles_G55'>Side</div>
+          <div class='vehicles_G56'>Top</div>
+          <div class='vehicles_G57'>Bottom</div>
+          <input name='attr_vehicle-armor-front' type='text' class='vehicles_G58 full_width' />
+          <input name='attr_vehicle-armor-back' type='text' class='vehicles_G59 full_width' />
+          <input name='attr_vehicle-armor-side' type='text' class='vehicles_G60 full_width' />
+          <input name='attr_vehicle-armor-top' type='text' class='vehicles_G61 full_width' />
+          <input name='attr_vehicle-armor-bottom' type='text' class='vehicles_G62 full_width' />
+        </div>
+        <div class='vehicles_grid3'>
+          <div class='vehicles_G63'><h3>Miscellaneous</h3></div>
+          <div class='vehicles_G64'>Size Points</div>
+          <div class='vehicles_G65'>Weapon Points</div>
+          <input name='attr_vehicle-size-points' type='text' class='vehicles_G66 full_width' placeholder='Warthog = 2' />
+          <input name='attr_vehicle-weapon-points' type='text' class='vehicles_G67 full_width' />
 
-        <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
-        <div class='vehicles_G68'>Shield Rating</div>
-        <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
-        <div class='vehicles_G69'>Shield Current</div>
-        <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
-        <div class='vehicles_G70'>Recharge Delay</div>
-        <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
-        <div class='vehicles_G71'>Recharge Rate</div>
-        <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
-        <input name='attr_vehicle-shield-rating' type='text' class='vehicles_G72 full_width' />
-        <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
-        <input name='attr_vehicle-shield-current' type='text' class='vehicles_G73 full_width' />
-        <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
-        <input name='attr_vehicle-recharge-delay' type='text' class='vehicles_G74 full_width' />
-        <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
-        <input name='attr_vehicle-recharge-rate' type='text' class='vehicles_G75 full_width' />
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <div class='vehicles_G68'>Shield Rating</div>
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <div class='vehicles_G69'>Shield Current</div>
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <div class='vehicles_G70'>Recharge Delay</div>
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <div class='vehicles_G71'>Recharge Rate</div>
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-shield-rating' type='text' class='vehicles_G72 full_width' />
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-shield-current' type='text' class='vehicles_G73 full_width' />
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-recharge-delay' type='text' class='vehicles_G74 full_width' />
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-recharge-rate' type='text' class='vehicles_G75 full_width' />
 
-        <div class='vehicles_G76 '>
-          <div class='collapsible_ability_description_window_a' ></div>
-          <fieldset>
-            <input type='text' placeholder='Additional Info' class='full_width_17px'>
-            <input type='checkbox' class='collapsible_ability_block_switch'>
+          <div class='vehicles_G76 '>
             <div class='collapsible_ability_description_window_a' ></div>
-            <textarea class='collapsible_ability_description_window_b' placeholder='Enter any vehicle-specific rules or other unique information here.'></textarea>
-          </fieldset>
-          <fieldset>
-            <input type='text' placeholder='Modifications' class='full_width_17px'>
-            <input type='checkbox' class='collapsible_ability_block_switch'>
-            <div class='collapsible_ability_description_window_a' ></div>
-            <textarea class='collapsible_ability_description_window_b' placeholder='Vehicles in Halo Mythic can be modified in many ways.  These use a Vehicle’s Weapon Points and Size Points, which are specialized Hardpoints on a Vehicle.  Each Modification takes a specified amount of Weapon and Size Points.
-            &#10;Vehicle modifications are classified into five categories; Body, Propulsion, Electronic, Combat, and Miscellaneous.'></textarea>
-          </fieldset>
+            <fieldset>
+              <input type='text' placeholder='Additional Info' class='full_width_17px'>
+              <input type='checkbox' class='collapsible_ability_block_switch'>
+              <div class='collapsible_ability_description_window_a' ></div>
+              <textarea class='collapsible_ability_description_window_b' placeholder='Enter any vehicle-specific rules or other unique information here.'></textarea>
+            </fieldset>
+            <fieldset>
+              <input type='text' placeholder='Modifications' class='full_width_17px'>
+              <input type='checkbox' class='collapsible_ability_block_switch'>
+              <div class='collapsible_ability_description_window_a' ></div>
+              <textarea class='collapsible_ability_description_window_b' placeholder='Vehicles in Halo Mythic can be modified in many ways.  These use a Vehicle’s Weapon Points and Size Points, which are specialized Hardpoints on a Vehicle.  Each Modification takes a specified amount of Weapon and Size Points.
+              &#10;Vehicle modifications are classified into five categories; Body, Propulsion, Electronic, Combat, and Miscellaneous.'></textarea>
+            </fieldset>
+          </div>
+        </div>
+
+
+
+        <div class='vehicle_weapons'>
+          [placeholder] this will be a duplicate of the weapons section in the equipment tab
         </div>
       </div>
-
-
-
-      <div class='vehicle_weapons'>
-        [placeholder] this will be a duplicate of the weapons section in the equipment tab
-      </div>
-    </div>
+      <br>
+    </fieldset>
   </div>
 
-  <div class='settings'>
+  <div class='settings box'>
     <h2>Settings</h2>
     <select name='attr_settings_race' class='centered edge_padding'>
       <option selected='selected' value='0'>Racial Features: N/A </option>

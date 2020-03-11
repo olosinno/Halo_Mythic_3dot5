@@ -93,17 +93,20 @@ h2, h3 {
 	text-align: center;
 	text-decoration: underline
 }
-
+/* Only type-2 headers receive the following CSS properties. */
+h2{
+		color: white;
+}
 /* Only type-3 headers receive the following CSS properties. */
 h3 {
 	background: #394C6A;
-	color: white
+		color: white;
 }
 
 /* All instances of the placeholder attribute across all elements */
 ::placeholder {
 	color: white;
-	opacity: 0.6
+	opacity: 0.7
 }
 
 /* All textarea elements (keep width for textarea to prevent stretching off of sheet) */
@@ -125,9 +128,11 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-hidernot:checked + input { display: none }
 
 .sheet-box {
-	background: #353535;
+	background: #404040;
 	border-style: solid;
-	border-width: 1px
+	border-width: 1px;
+	border-color: black;
+	color: white;
 }
 
 .sheet-edge_padding { padding: 2px }
@@ -143,6 +148,14 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-huge_text { font-size: 36px }
 .sheet-bold_text { font-weight: bold }
 .sheet-centered { margin: auto }
+
+.sheet-radius_border{
+	border-radius: 10px;
+}
+.sheet-radius_border_top{
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+}
 
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
@@ -364,22 +377,19 @@ ______________________________ start of minimisable infographic ________________
 ______________________________ start of core tab ______________________________ */
 
 .sheet-core_lists1 { grid-area: cl1; margin-right: 10px }
-.sheet-core_lists2 { grid-area: cl2 }
-.sheet-core_lists3 { grid-area: cl3 }
+.sheet-core_lists2 { grid-area: cl2; margin-bottom: 5px;}
+.sheet-core_lists3 { grid-area: cl3; margin-top: 5px}
 .sheet-core_lists {
 	display: grid;
-	height: auto;
 	grid-template-areas:
 	'cl1 cl2'
 	'cl1 cl3';
 	grid-template-columns: 450px auto;
 }
-.sheet-skills_table {
+.sheet-core_table {
 	background: #506b95;
 	color: white;
 	font-family: Saira Semi Condensed;
-	display: flex;
-	flex-direction: column;
 }
 
 .sheet-skills_row {
@@ -509,7 +519,7 @@ ______________________________ start of medical tab ____________________________
 .sheet-medicalgT { grid-area: mT }
 .sheet-medicalgR { grid-area: mR }
 .sheet-medical-grid {
-	height: 50px;
+
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: 120px 120px 120px 120px 120px 150px auto;
