@@ -1,418 +1,492 @@
-<input name='attr_faction' type='radio' value='1' class='background_switch_1' display=none hidden checked />
-<input name='attr_faction' type='radio' value='2' class='background_switch_2' display=none hidden />
-<input name='attr_faction' type='radio' value='3' class='background_switch_3' display=none hidden />
-<input name='attr_faction' type='radio' value='4' class='background_switch_4' display=none hidden />
-<input name='attr_faction' type='radio' value='5' class='background_switch_5' display=none hidden />
 
-<div class='background'>
+<div class="background_radius">
+  <input name='attr_faction' type='radio' value='1' class='background_switch_1' display=none hidden checked />
+  <input name='attr_faction' type='radio' value='2' class='background_switch_2' display=none hidden />
+  <input name='attr_faction' type='radio' value='3' class='background_switch_3' display=none hidden />
+  <input name='attr_faction' type='radio' value='4' class='background_switch_4' display=none hidden />
+  <input name='attr_faction' type='radio' value='5' class='background_switch_5' display=none hidden />
+  <div class='background'>
 
-  <!-- character information grid ________________________________________________ -->
+    <!-- character information grid ________________________________________________ -->
 
-  <div class='header_logo'>
+    <div class='header_logo'>
 
-    <!-- first column of grid: left-side fields' labels/names -->
-    <div class='gs1'><b>Character Name</b></div>
-    <div class='gs2'><b>Faction</b></div>
-    <div class='gs3'><b>Soldier Type</b></div>
-    <div class='gs4'><b>Rank</b></div>
-    <div class='gs5'><b>Build / Size</b></div>
-    <div class='gs6'><b>Specialisation</b></div>
-    <!-- second column of grid: left-side fields -->
-    <input class='gs7' name='attr_character_name' type='text' />
-    <select class='gs8' name='attr_faction'>
-      <option value='1' selected='selected' disabled hidden />
-      <option value='2'>United Nations Space Command</option>
-      <option value='3'>Covenant</option>
-      <option value='4'>Forerunner</option>
-      <option value='5'>Other</option>
-    </select>
-    <input class='gs9' name='attr_soldier_type' type='text' />
-    <input class='gs10'name='attr_rank' type='text' />
-    <input class='gs11'name='attr_size' type='text' placeholder='Average' />
-    <input class='gs12'name='attr_specialisation' type='text' />
-    <!-- third column of grid: header logo -->
-    <div class='gs13'>
-      <input name='attr_faction' type='checkbox' value='1' class='hidden hider' checked>
-      <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130' width='130' /></div>
-      <input name='attr_faction' type='checkbox' value='2' class='hidden hider'>
-      <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_UNSC.png' height='130' width='130' /></div>
-      <input name='attr_faction' type='checkbox' value='3' class='hidden hider'>
-      <div><img name='logo'src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Covenant.png' height='130' width='130' /></div>
-      <input name='attr_faction' type='checkbox' value='4' class='hidden hider'>
-      <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Forerunner.png' height='130' width='130' /></div>
-      <input name='attr_faction' type='checkbox' value='5' class='hidden hider'>
-      <div><img name='logo'  src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130' width='130' /></div>
-    </div>
-    <!-- REPLACE LOGO SOURCE ONCE COMPLETE: src='images/mythic_logo.png' -->
-    <!-- fourth column of grid: right-side fields -->
-    <input  class='gs14' name='attr_player_name' type='text' />
-    <input  class='gs15' name='attr_sex' type='text' />
-    <input  class='gs16' name='attr_race' type='text' />
-    <input  class='gs17' name='attr_upbringing' type='text' />
-    <input  class='gs18' name='attr_environment' type='text' />
-    <input  class='gs19' name='attr_lifestyle' type='text' />
-    <!-- fifth column of grid: right-side fields' labels/names -->
-    <div class='gs20'><b>Player Name</b></div>
-    <div class='gs21'><b>Gender</b></div>
-    <div class='gs22'><b>Race</b></div>
-    <div class='gs23'><b>Upbringing</b></div>
-    <div class='gs24'><b>Environment</b></div>
-    <div class='gs25'><b>Lifestyle</b></div>
-
-  </div>
-  <br>
-
-
-
-  <!-- ______________________________ characteristics grid ______________________________ -->
-
-  <div class='characteristics_background'>
-
-    <div>
-      <div class='characteristics'><button class="clear" name='STR' type='roll' value='/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>STR |<input class="input_background input_c_background"name="attr_STR_total" value="@{STR} + @{STR_advancement}" disabled="true"/></button></div>
-      <div class='characteristics'><input name='attr_STR' type='text' value='0' /></div>
-      <select name='attr_STR_advancement' class='full_width'>
-        <option value='0' selected='selected'>None +0</option>
-        <option value='5'>S +5</option>
-        <option value='10'>R +10</option>
-        <option value='15'>I +15</option>
-        <option value='20'>T +20</option>
-        <option value='25'>M +25</option>
+      <!-- first column of grid: left-side fields' labels/names -->
+      <div class='gs1'><b>Character Name</b></div>
+      <div class='gs2'><b>Faction</b></div>
+      <div class='gs3'><b>Soldier Type</b></div>
+      <div class='gs4'><b>Rank</b></div>
+      <div class='gs5'><b>Build / Size</b></div>
+      <div class='gs6'><b>Specialisation</b></div>
+      <!-- second column of grid: left-side fields -->
+      <input class='gs7' name='attr_character_name' type='text' />
+      <select class='gs8' name='attr_faction'>
+        <option value='1' selected='selected' disabled hidden />
+        <option value='2'>United Nations Space Command</option>
+        <option value='3'>Covenant</option>
+        <option value='4'>Forerunner</option>
+        <option value='5'>Other</option>
       </select>
+      <input class='gs9' name='attr_soldier_type' type='text' />
+      <input class='gs10'name='attr_rank' type='text' />
+      <input class='gs11'name='attr_size' type='text' placeholder='Average' />
+      <input class='gs12'name='attr_specialisation' type='text' />
+      <!-- third column of grid: header logo -->
+      <div class='gs13'>
+        <input name='attr_faction' type='checkbox' value='1' class='hidden hider' checked>
+        <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130' width='130' /></div>
+        <input name='attr_faction' type='checkbox' value='2' class='hidden hider'>
+        <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_UNSC.png' height='130' width='130' /></div>
+        <input name='attr_faction' type='checkbox' value='3' class='hidden hider'>
+        <div><img name='logo'src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Covenant.png' height='130' width='130' /></div>
+        <input name='attr_faction' type='checkbox' value='4' class='hidden hider'>
+        <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Forerunner.png' height='130' width='130' /></div>
+        <input name='attr_faction' type='checkbox' value='5' class='hidden hider'>
+        <div><img name='logo'  src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130' width='130' /></div>
+      </div>
+      <!-- REPLACE LOGO SOURCE ONCE COMPLETE: src='images/mythic_logo.png' -->
+      <!-- fourth column of grid: right-side fields -->
+      <input  class='gs14' name='attr_player_name' type='text' />
+      <input  class='gs15' name='attr_sex' type='text' />
+      <input  class='gs16' name='attr_race' type='text' />
+      <input  class='gs17' name='attr_upbringing' type='text' />
+      <input  class='gs18' name='attr_environment' type='text' />
+      <input  class='gs19' name='attr_lifestyle' type='text' />
+      <!-- fifth column of grid: right-side fields' labels/names -->
+      <div class='gs20'><b>Player Name</b></div>
+      <div class='gs21'><b>Gender</b></div>
+      <div class='gs22'><b>Race</b></div>
+      <div class='gs23'><b>Upbringing</b></div>
+      <div class='gs24'><b>Environment</b></div>
+      <div class='gs25'><b>Lifestyle</b></div>
+
     </div>
+    <br>
 
-    <div>
-      <div class='characteristics'><button class="clear" name='TOU' type='roll' value='/me rolls toughness with [[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>TOU |<input class="input_background input_c_background"name="attr_TOU_total" value="@{TOU} + @{TOU_advancement}" disabled="true"/></button></div>
-      <div class='characteristics'><input name='attr_TOU' type='text' value='0' /></div>
-      <select name='attr_TOU_advancement' class='full_width'>
-        <option value='0' selected='selected'>None +0</option>
-        <option value='5'>S +5</option>
-        <option value='10'>R +10</option>
-        <option value='15'>I +15</option>
-        <option value='20'>T +20</option>
-        <option value='25'>M +25</option>
-      </select>
+
+
+    <!-- ______________________________ characteristics grid ______________________________ -->
+
+    <div class='characteristics_background'>
+
+      <div>
+        <div class='characteristics'><button class="clear" name='STR' type='roll' value='/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>STR |<input class="input_background input_c_background"name="attr_STR_total" value="@{STR} + @{STR_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><input name='attr_STR' type='text' value='0' /></div>
+        <select name='attr_STR_advancement' class='full_width'>
+          <option value='0' selected='selected'>None +0</option>
+          <option value='5'>S +5</option>
+          <option value='10'>R +10</option>
+          <option value='15'>I +15</option>
+          <option value='20'>T +20</option>
+          <option value='25'>M +25</option>
+        </select>
+      </div>
+
+      <div>
+        <div class='characteristics'><button class="clear" name='TOU' type='roll' value='/me rolls toughness with [[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>TOU |<input class="input_background input_c_background"name="attr_TOU_total" value="@{TOU} + @{TOU_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><input name='attr_TOU' type='text' value='0' /></div>
+        <select name='attr_TOU_advancement' class='full_width'>
+          <option value='0' selected='selected'>None +0</option>
+          <option value='5'>S +5</option>
+          <option value='10'>R +10</option>
+          <option value='15'>I +15</option>
+          <option value='20'>T +20</option>
+          <option value='25'>M +25</option>
+        </select>
+      </div>
+
+      <div>
+        <div class='characteristics'><button class="clear" name='AGI' type='roll' value='/me rolls agility with [[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>AGI |<input class="input_background input_c_background"name="attr_AGI_total" value="@{AGI} + @{AGI_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><input name='attr_AGI' type='text' value='0' /></div>
+        <select name='attr_AGI_advancement' class='full_width'>
+          <option value='0' selected='selected'>None +0</option>
+          <option value='5'>S +5</option>
+          <option value='10'>R +10</option>
+          <option value='15'>I +15</option>
+          <option value='20'>T +20</option>
+          <option value='25'>M +25</option>
+        </select>
+      </div>
+
+      <div>
+        <div class='characteristics'><button class="clear" name='WFR' type='roll' value='/me rolls warfare ranged with [[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>WFR |<input class="input_background input_c_background"name="attr_WFR_total" value="@{WFR} + @{WFR_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><input name='attr_WFR' type='text' value='0' /></div>
+        <select name='attr_WFR_advancement' class='full_width'>
+          <option value='0' selected='selected'>None +0</option>
+          <option value='5'>S +5</option>
+          <option value='10'>R +10</option>
+          <option value='15'>I +15</option>
+          <option value='20'>T +20</option>
+          <option value='25'>M +25</option>
+        </select>
+      </div>
+
+      <div>
+        <div class='characteristics'><button class="clear" name='WFM' type='roll' value='/me rolls warfare melee with [[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>WFM |<input class="input_background input_c_background"name="attr_WFM_total" value="@{WFM} + @{WFM_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><input name='attr_WFM' type='text' value='0' /></div>
+        <select name='attr_WFM_advancement' class='full_width'>
+          <option value='0' selected='selected'>None +0</option>
+          <option value='5'>S +5</option>
+          <option value='10'>R +10</option>
+          <option value='15'>I +15</option>
+          <option value='20'>T +20</option>
+          <option value='25'>M +25</option>
+        </select>
+      </div>
+
+      <div>
+        <div class='characteristics'><button class="clear" name='INT' type='roll' value='/me rolls intellect [[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>INT |<input class="input_background input_c_background"name="attr_INT_total" value="@{INT} + @{INT_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><input name='attr_INT' type='text' value='0' /></div>
+        <select name='attr_INT_advancement' class='full_width'>
+          <option value='0' selected='selected'>None +0</option>
+          <option value='5'>S +5</option>
+          <option value='10'>R +10</option>
+          <option value='15'>I +15</option>
+          <option value='20'>T +20</option>
+          <option value='25'>M +25</option>
+        </select>
+      </div>
+
+      <div>
+        <div class='characteristics'><button class="clear" name='PER' type='roll' value='/me rolls perception with [[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>PER |<input class="input_background input_c_background"name="attr_PER_total" value="@{PER} + @{PER_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><input name='attr_PER' type='text' value='0' /></div>
+        <select name='attr_PER_advancement' class='full_width'>
+          <option value='0' selected='selected'>None +0</option>
+          <option value='5'>S +5</option>
+          <option value='10'>R +10</option>
+          <option value='15'>I +15</option>
+          <option value='20'>T +20</option>
+          <option value='25'>M +25</option>
+        </select>
+      </div>
+
+      <div>
+        <div class='characteristics'><button class="clear" name='CR' type='roll' value='/me rolls courage with [[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>CR |<input class="input_background input_c_background"name="attr_CR_total" value="@{CR} + @{CR_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><input name='attr_CR' type='text' value='0' /></div>
+        <select name='attr_CR_advancement' class='full_width'>
+          <option value='0' selected='selected'>None +0</option>
+          <option value='5'>S +5</option>
+          <option value='10'>R +10</option>
+          <option value='15'>I +15</option>
+          <option value='20'>T +20</option>
+          <option value='25'>M +25</option>
+        </select>
+      </div>
+
+      <div>
+        <div class='characteristics'><button class="clear" name='CH' type='roll' value='/me rolls charisma with [[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>CH |<input class="input_background input_c_background"name="attr_CH_total" value="@{CH} + @{CH_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><input name='attr_CH' type='text' value='0' /></div>
+        <select name='attr_CH_advancement' class='full_width'>
+          <option value='0' selected='selected'>None +0</option>
+          <option value='5'>S +5</option>
+          <option value='10'>R +10</option>
+          <option value='15'>I +15</option>
+          <option value='20'>T +20</option>
+          <option value='25'>M +25</option>
+        </select>
+      </div>
+
+      <div>
+        <div class='characteristics'><button class="clear" name='LD' type='roll' value='/me rolls leadership with [[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>LD |<input class="input_background input_c_background"name="attr_LD_total" value="@{LD} + @{LD_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><input name='attr_LD' type='text' value='0' /></div>
+        <select name='attr_LD_advancement' class='full_width'>
+          <option value='0' selected='selected'>None +0</option>
+          <option value='5'>S +5</option>
+          <option value='10'>R +10</option>
+          <option value='15'>I +15</option>
+          <option value='20'>T +20</option>
+          <option value='25'>M +25</option>
+        </select>
+      </div>
+
     </div>
-
-    <div>
-      <div class='characteristics'><button class="clear" name='AGI' type='roll' value='/me rolls agility with [[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>AGI |<input class="input_background input_c_background"name="attr_AGI_total" value="@{AGI} + @{AGI_advancement}" disabled="true"/></button></div>
-      <div class='characteristics'><input name='attr_AGI' type='text' value='0' /></div>
-      <select name='attr_AGI_advancement' class='full_width'>
-        <option value='0' selected='selected'>None +0</option>
-        <option value='5'>S +5</option>
-        <option value='10'>R +10</option>
-        <option value='15'>I +15</option>
-        <option value='20'>T +20</option>
-        <option value='25'>M +25</option>
-      </select>
-    </div>
-
-    <div>
-      <div class='characteristics'><button class="clear" name='WFR' type='roll' value='/me rolls warfare ranged with [[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>WFR |<input class="input_background input_c_background"name="attr_WFR_total" value="@{WFR} + @{WFR_advancement}" disabled="true"/></button></div>
-      <div class='characteristics'><input name='attr_WFR' type='text' value='0' /></div>
-      <select name='attr_WFR_advancement' class='full_width'>
-        <option value='0' selected='selected'>None +0</option>
-        <option value='5'>S +5</option>
-        <option value='10'>R +10</option>
-        <option value='15'>I +15</option>
-        <option value='20'>T +20</option>
-        <option value='25'>M +25</option>
-      </select>
-    </div>
-
-    <div>
-      <div class='characteristics'><button class="clear" name='WFM' type='roll' value='/me rolls warfare melee with [[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>WFM |<input class="input_background input_c_background"name="attr_WFM_total" value="@{WFM} + @{WFM_advancement}" disabled="true"/></button></div>
-      <div class='characteristics'><input name='attr_WFM' type='text' value='0' /></div>
-      <select name='attr_WFM_advancement' class='full_width'>
-        <option value='0' selected='selected'>None +0</option>
-        <option value='5'>S +5</option>
-        <option value='10'>R +10</option>
-        <option value='15'>I +15</option>
-        <option value='20'>T +20</option>
-        <option value='25'>M +25</option>
-      </select>
-    </div>
-
-    <div>
-      <div class='characteristics'><button class="clear" name='INT' type='roll' value='/me rolls intellect [[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>INT |<input class="input_background input_c_background"name="attr_INT_total" value="@{INT} + @{INT_advancement}" disabled="true"/></button></div>
-      <div class='characteristics'><input name='attr_INT' type='text' value='0' /></div>
-      <select name='attr_INT_advancement' class='full_width'>
-        <option value='0' selected='selected'>None +0</option>
-        <option value='5'>S +5</option>
-        <option value='10'>R +10</option>
-        <option value='15'>I +15</option>
-        <option value='20'>T +20</option>
-        <option value='25'>M +25</option>
-      </select>
-    </div>
-
-    <div>
-      <div class='characteristics'><button class="clear" name='PER' type='roll' value='/me rolls perception with [[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>PER |<input class="input_background input_c_background"name="attr_PER_total" value="@{PER} + @{PER_advancement}" disabled="true"/></button></div>
-      <div class='characteristics'><input name='attr_PER' type='text' value='0' /></div>
-      <select name='attr_PER_advancement' class='full_width'>
-        <option value='0' selected='selected'>None +0</option>
-        <option value='5'>S +5</option>
-        <option value='10'>R +10</option>
-        <option value='15'>I +15</option>
-        <option value='20'>T +20</option>
-        <option value='25'>M +25</option>
-      </select>
-    </div>
-
-    <div>
-      <div class='characteristics'><button class="clear" name='CR' type='roll' value='/me rolls courage with [[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>CR |<input class="input_background input_c_background"name="attr_CR_total" value="@{CR} + @{CR_advancement}" disabled="true"/></button></div>
-      <div class='characteristics'><input name='attr_CR' type='text' value='0' /></div>
-      <select name='attr_CR_advancement' class='full_width'>
-        <option value='0' selected='selected'>None +0</option>
-        <option value='5'>S +5</option>
-        <option value='10'>R +10</option>
-        <option value='15'>I +15</option>
-        <option value='20'>T +20</option>
-        <option value='25'>M +25</option>
-      </select>
-    </div>
-
-    <div>
-      <div class='characteristics'><button class="clear" name='CH' type='roll' value='/me rolls charisma with [[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>CH |<input class="input_background input_c_background"name="attr_CH_total" value="@{CH} + @{CH_advancement}" disabled="true"/></button></div>
-      <div class='characteristics'><input name='attr_CH' type='text' value='0' /></div>
-      <select name='attr_CH_advancement' class='full_width'>
-        <option value='0' selected='selected'>None +0</option>
-        <option value='5'>S +5</option>
-        <option value='10'>R +10</option>
-        <option value='15'>I +15</option>
-        <option value='20'>T +20</option>
-        <option value='25'>M +25</option>
-      </select>
-    </div>
-
-    <div>
-      <div class='characteristics'><button class="clear" name='LD' type='roll' value='/me rolls leadership with [[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>LD |<input class="input_background input_c_background"name="attr_LD_total" value="@{LD} + @{LD_advancement}" disabled="true"/></button></div>
-      <div class='characteristics'><input name='attr_LD' type='text' value='0' /></div>
-      <select name='attr_LD_advancement' class='full_width'>
-        <option value='0' selected='selected'>None +0</option>
-        <option value='5'>S +5</option>
-        <option value='10'>R +10</option>
-        <option value='15'>I +15</option>
-        <option value='20'>T +20</option>
-        <option value='25'>M +25</option>
-      </select>
-    </div>
-
-  </div>
-  <br>
+    <br>
 
 
 
-  <!-- ______________________________ mythic characteristics, movement and pushing grid ______________________________ -->
+    <!-- ______________________________ mythic characteristics, movement and pushing grid ______________________________ -->
 
-  <div class='characteristics_mythic_movement_carry'>
+    <div class='characteristics_mythic_movement_carry'>
 
-    <div class='characteristics2_mythic edge_padding'>
-      <p class='mythicgs1 mythicgs_heading'><b>Mythic Characteristics</b></p>
-      <input name='attr_STR_mythic' type='text' value='0' class='mythicgs2 mythicgs_width' />
-      <input name='attr_TOU_mythic' type='text' value='0' class='mythicgs3 mythicgs_width' />
-      <input name='attr_AGI_mythic' type='text' value='0' class='mythicgs4 mythicgs_width' />
-      <p class='mythicgs5'>STR</p>
-      <p class='mythicgs6'>TOU</p>
-      <p class='mythicgs7'>AGI</p>
-    </div>
+      <div class='characteristics2_mythic edge_padding'>
+        <p class='mythicgs1 mythicgs_heading'><b>Mythic Characteristics</b></p>
+        <input name='attr_STR_mythic' type='text' value='0' class='mythicgs2 mythicgs_width' />
+        <input name='attr_TOU_mythic' type='text' value='0' class='mythicgs3 mythicgs_width' />
+        <input name='attr_AGI_mythic' type='text' value='0' class='mythicgs4 mythicgs_width' />
+        <p class='mythicgs5'>STR</p>
+        <p class='mythicgs6'>TOU</p>
+        <p class='mythicgs7'>AGI</p>
+      </div>
 
-    <div class='characteristics2_movement'>
-      <p class='movementgs1 mythicgs_heading'><b>Character Movement</b></p>
-      <input name='attr_half_move' type='text' class='movementgs2 mythicgs_width' />
-      <input name='attr_full_move' type='text' class='movementgs3 mythicgs_width' />
-      <input name='attr_charge_move' type='text' class='movementgs4 mythicgs_width' />
-      <input name='attr_run_move' type='text' class='movementgs5 mythicgs_width' />
-      <input name='attr_sprint_move' type='text' class='movementgs6 mythicgs_width' />
-      <input name='attr_jump_move' type='text' class='movementgs7 mythicgs_width' />
-      <input name='attr_leap_move' type='text' class='movementgs8 mythicgs_width' />
-      <p class='movementgs9 '>Half</p>
-      <p class='movementgs10 '>Full</p>
-      <p class='movementgs11 '>Charge</p>
-      <p class='movementgs12 '>Run</p>
-      <p class='movementgs13 '>Sprint</p>
-      <p class='movementgs14 '>Jump</p>
-      <p class='movementgs15 '>Leap</p>
+      <div class='characteristics2_movement'>
+        <p class='movementgs1 mythicgs_heading'><b>Character Movement</b></p>
+        <input name='attr_half_move' type='text' class='movementgs2 mythicgs_width' />
+        <input name='attr_full_move' type='text' class='movementgs3 mythicgs_width' />
+        <input name='attr_charge_move' type='text' class='movementgs4 mythicgs_width' />
+        <input name='attr_run_move' type='text' class='movementgs5 mythicgs_width' />
+        <input name='attr_sprint_move' type='text' class='movementgs6 mythicgs_width' />
+        <input name='attr_jump_move' type='text' class='movementgs7 mythicgs_width' />
+        <input name='attr_leap_move' type='text' class='movementgs8 mythicgs_width' />
+        <p class='movementgs9 '>Half</p>
+        <p class='movementgs10 '>Full</p>
+        <p class='movementgs11 '>Charge</p>
+        <p class='movementgs12 '>Run</p>
+        <p class='movementgs13 '>Sprint</p>
+        <p class='movementgs14 '>Jump</p>
+        <p class='movementgs15 '>Leap</p>
 
-      <script type='text/worker'>
-        on('change:settings_race change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
-          getAttrs([
-          'settings_race',
-          'agi',
-          'agi_mythic',
-          'agi_advancement',
-          'str',
-          'str_mythic',
-          'str_advancement',
-          'tou',
-          'tou_mythic',
-          'tou_advancement'
-          ], function(values) {
-            var settings_race = parseInt(values['settings_race'], 10) || 0;
-            var agi = parseInt(values['agi'], 10) || 0;
-            var agi_mythic = parseInt(values['agi_mythic'], 10) || 0;
-            var agi_advancement = parseInt(values['agi_advancement'], 10) || 0;
-            var str = parseInt(values['str'], 10) || 0;
-            var str_mythic = parseInt(values['str_mythic'], 10) || 0;
-            var str_advancement = parseInt(values['str_advancement'], 10) || 0;
-            var tou = parseInt(values['tou'], 10) || 0;
-            var tou_mythic = parseInt(values['tou_mythic'], 10) || 0;
-            var tou_advancement = parseInt(values['tou_advancement'], 10) || 0;
-            var weight_mod = str + str_advancement + tou + tou_advancement + (str_mythic + tou_mythic) * 10;
-            var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
-            var str_mod = str + str_advancement;
-            var agi_mod = agi + agi_advancement;
+        <script type='text/worker'>
+          on('change:settings_race change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
+            getAttrs([
+            'settings_race',
+            'agi',
+            'agi_mythic',
+            'agi_advancement',
+            'str',
+            'str_mythic',
+            'str_advancement',
+            'tou',
+            'tou_mythic',
+            'tou_advancement'
+            ], function(values) {
+              var settings_race = parseInt(values['settings_race'], 10) || 0;
+              var agi = parseInt(values['agi'], 10) || 0;
+              var agi_mythic = parseInt(values['agi_mythic'], 10) || 0;
+              var agi_advancement = parseInt(values['agi_advancement'], 10) || 0;
+              var str = parseInt(values['str'], 10) || 0;
+              var str_mythic = parseInt(values['str_mythic'], 10) || 0;
+              var str_advancement = parseInt(values['str_advancement'], 10) || 0;
+              var tou = parseInt(values['tou'], 10) || 0;
+              var tou_mythic = parseInt(values['tou_mythic'], 10) || 0;
+              var tou_advancement = parseInt(values['tou_advancement'], 10) || 0;
+              var weight_mod = str + str_advancement + tou + tou_advancement + (str_mythic + tou_mythic) * 10;
+              var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
+              var str_mod = str + str_advancement;
+              var agi_mod = agi + agi_advancement;
 
-            // normal no modifiers ____________________________________________________________
+              // normal no modifiers ____________________________________________________________
 
-            setAttrs({
-              half_move: (move_mod),
-              full_move: (move_mod * 2),
-              charge_move: (move_mod * 3),
-              run_move: (move_mod * 6),
-              sprint_move: (move_mod * 8),
-              jump_move:(str_mod / 4),
-              leap_move:(agi_mod / 2),
-              carry: (weight_mod),
-              lift: (weight_mod * 2),
-              push: (weight_mod * 4)
-            });
-            if (str_mod >= agi_mod) {
               setAttrs({
-                leap_move:(str_mod / 2)
+                half_move: (move_mod),
+                full_move: (move_mod * 2),
+                charge_move: (move_mod * 3),
+                run_move: (move_mod * 6),
+                sprint_move: (move_mod * 8),
+                jump_move:(str_mod / 4),
+                leap_move:(agi_mod / 2),
+                carry: (weight_mod),
+                lift: (weight_mod * 2),
+                push: (weight_mod * 4)
               });
-            }
-
-            // Spartan + Jiralhanae + Promethean Knight (carry weight * 2) ______________________________
-            if(settings_race == 1) {
-              setAttrs({
-                carry: (weight_mod * 2),
-                lift: (weight_mod * 2 * 2),
-                push: (weight_mod * 4 * 2)
-              });
-            }
-            // end of Spartan + Jiralhanae ______________________________
-
-            // Sangheili (+2 agi leap, carry weight * 2) ______________________________
-            if(settings_race == 2) {
-              setAttrs({
-                carry: (weight_mod * 2),
-                lift: (weight_mod * 2 * 2),
-                push: (weight_mod * 4 * 2),
-                leap_move: ((agi_mod + 4) / 2) // modifier plus 4, sum halved
-              });
-              if(str_mod >= agi_mod) {
+              if (str_mod >= agi_mod) {
                 setAttrs({
-                  leap_move: ((str_mod + 4) / 2)
+                  leap_move:(str_mod / 2)
                 });
               }
-            }
-            // end of Sangheili ______________________________
 
-            // Ruutian & Ibie'shan (double agi to jump) ______________________________
-            if(settings_race == 3) {
-              setAttrs({
-                jump_move:(str_mod / 4 * 2)
-              });
-            }
-            // end of Ruutian & Ibie'shan ______________________________
+              // Spartan + Jiralhanae + Promethean Knight (carry weight * 2) ______________________________
+              if(settings_race == 1) {
+                setAttrs({
+                  carry: (weight_mod * 2),
+                  lift: (weight_mod * 2 * 2),
+                  push: (weight_mod * 4 * 2)
+                });
+              }
+              // end of Spartan + Jiralhanae ______________________________
 
-            // Jackal T'vaoan (agi to jump * 4) ______________________________
-            if(settings_race == 4) {
-              setAttrs({
-                jump_move:(str_mod / 4 * 4)
-              });
-            }
-            // end of T'vaoan ______________________________
+              // Sangheili (+2 agi leap, carry weight * 2) ______________________________
+              if(settings_race == 2) {
+                setAttrs({
+                  carry: (weight_mod * 2),
+                  lift: (weight_mod * 2 * 2),
+                  push: (weight_mod * 4 * 2),
+                  leap_move: ((agi_mod + 4) / 2) // modifier plus 4, sum halved
+                });
+                if(str_mod >= agi_mod) {
+                  setAttrs({
+                    leap_move: ((str_mod + 4) / 2)
+                  });
+                }
+              }
+              // end of Sangheili ______________________________
 
-            // Mgalekgolo (Hunter) (weight = 4000, double agi to charge/run) ______________________________
-            if(settings_race == 5) {
-              setAttrs({
-                carry: (4000),
-                lift: (4000 * 2),
-                push: (4000 * 4),
-                charge_move: (move_mod * 3 * 2),
-                run_move: (move_mod * 6 * 2)
-              });
-            }
-            // end of Mgalekgolo (Hunter) ______________________________
-            if (move_mod <= 0) {
-              setAttrs({
-                half_move: (0.5),
-                full_move: (1),
-                charge_move: (2),
-                run_move: (3),
-                sprint_move: (4)
-              });
-            }
-            if ((move_mod <= 0) && (settings_race == 5)) {
-              setAttrs({
-                half_move: (0.5),
-                full_move: (1),
-                charge_move: (4),
-                run_move: (6),
-                sprint_move: (4)
-              });
-            }
+              // Ruutian & Ibie'shan (double agi to jump) ______________________________
+              if(settings_race == 3) {
+                setAttrs({
+                  jump_move:(str_mod / 4 * 2)
+                });
+              }
+              // end of Ruutian & Ibie'shan ______________________________
+
+              // Jackal T'vaoan (agi to jump * 4) ______________________________
+              if(settings_race == 4) {
+                setAttrs({
+                  jump_move:(str_mod / 4 * 4)
+                });
+              }
+              // end of T'vaoan ______________________________
+
+              // Mgalekgolo (Hunter) (weight = 4000, double agi to charge/run) ______________________________
+              if(settings_race == 5) {
+                setAttrs({
+                  carry: (4000),
+                  lift: (4000 * 2),
+                  push: (4000 * 4),
+                  charge_move: (move_mod * 3 * 2),
+                  run_move: (move_mod * 6 * 2)
+                });
+              }
+              // end of Mgalekgolo (Hunter) ______________________________
+              if (move_mod <= 0) {
+                setAttrs({
+                  half_move: (0.5),
+                  full_move: (1),
+                  charge_move: (2),
+                  run_move: (3),
+                  sprint_move: (4)
+                });
+              }
+              if ((move_mod <= 0) && (settings_race == 5)) {
+                setAttrs({
+                  half_move: (0.5),
+                  full_move: (1),
+                  charge_move: (4),
+                  run_move: (6),
+                  sprint_move: (4)
+                });
+              }
+            });
           });
-        });
-      </script>
+        </script>
+      </div>
+
+
+
+      <div class='characteristics2_carry'>
+        <p class='carrygs1 mythicgs_heading'><b>Carrying Capacity</b></p>
+        <input name='attr_carry' type='text' class='carrygs2 mythicgs_width' />
+        <input name='attr_lift'  type='text' class='carrygs3 mythicgs_width' />
+        <input name='attr_push'  type='text' class='carrygs4 mythicgs_width' />
+        <p class='carrygs5'>Carry</p>
+        <p class='carrygs6'>Lift</p>
+        <p class='carrygs7'>Push</p>
+      </div>
+    </div>
+    <hr>
+
+
+
+    <!-- ______________________________ initiative plus sheet tabs grid ______________________________ -->
+
+    <div class='tabs_main'>
+
+      <div class='initiative-container'>
+        <button name='initiative' type='roll' value='/me rolls initiative with @{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'class="clear">Initiative|<input class="input_background"name="attr_init_total" value="floor(@{initmod2}+@{initmod3})" disabled="true"/></button>
+        <select name='attr_initmod1' class='init_field'>
+          <option value='1d10' selected='selected'>Standard</option>
+          <option value='2d10k1'>Fast Foot</option>
+          <option value='?{dice|1d10}'>Custom</option>
+        </select>
+        <p class='init_plus1'>+</p>
+        <input name='attr_initmod2' type='number' value='0' />
+        <p class='init_plus1'>+</p>
+        <select name='attr_initmod3' class='init_field'>
+          <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
+          <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
+          <option value='0'>N/A</option>
+        </select>
+      </div>
+
+      <div class='sheet_tabs'>
+        <input name='attr_sheetTab' type='checkbox' value='core' class='hidden core_bttn' checked />
+        <button name='act_core' type='action' class='core_bttn bold_text'>Core</button>
+        <input name='attr_sheetTab' type='checkbox' value='equipment' class='hidden core_bttn' />
+        <button name='act_equipment' type='action' class='equipment_bttn bold_text'>Equipment</button>
+        <input name='attr_sheetTab' type='checkbox' value='medical' class='hidden core_bttn' />
+        <button name='act_medical' type='action' class='medical_bttn bold_text'>Medical</button>
+        <input name='attr_sheetTab' type='checkbox' value='advancements' class='hidden core_bttn' />
+        <button name='act_advancements' type='action' class='advancements_bttn bold_text'>Advancements</button>
+        <input name='attr_sheetTab' type='checkbox' value='journal' class='hidden core_bttn' />
+        <button name='act_journal' type='action' class='journal_bttn bold_text'>Journal</button>
+        <input name='attr_sheetTab' type='checkbox' value='vehicles' class='hidden core_bttn' />
+        <button name='act_vehicles' type='action' class='vehicles_bttn bold_text'>Vehicles</button>
+        <input name='attr_sheetTab' type='checkbox' value='settings' class='hidden core_bttn' />
+        <button name='act_settings' type='action' class='settings_bttn huge_text'>⚙</button>
+      </div>
     </div>
 
+    <hr>
+
+    <div class='minimisable_infographic_main'>
+      <input type='checkbox' class='minimisable_switch'>
+      expand here
+      <div class='minimisable_infographic_expand'>
+        <div class="minimisable_infographic_grid">
 
 
-    <div class='characteristics2_carry'>
-      <p class='carrygs1 mythicgs_heading'><b>Carrying Capacity</b></p>
-      <input name='attr_carry' type='text' class='carrygs2 mythicgs_width' />
-      <input name='attr_lift'  type='text' class='carrygs3 mythicgs_width' />
-      <input name='attr_push'  type='text' class='carrygs4 mythicgs_width' />
-      <p class='carrygs5'>Carry</p>
-      <p class='carrygs6'>Lift</p>
-      <p class='carrygs7'>Push</p>
+
+          <div class="minimisable_infographic_field2x3 radius_border">
+            <label class="minimisable_infographic_g1 wounds_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{wounds} wounds out of @{wounds|max}"></button><h3 class='minimisable_infographic_g1'>Wounds</h3></label>
+            <p class='minimisable_infographic_g2'>Current</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Wounds" value="0">
+            <p class='minimisable_infographic_g4'>Max</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Wounds_max" value="0">
+          </div>
+
+          <div class="minimisable_infographic_field2x3 radius_border">
+            <label class="minimisable_infographic_g1 Fatigue_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{Fatigue} fatigue out of @{Fatigue|max}"></button><h3 class='minimisable_infographic_g1'>Fatigue</h3></label>
+            <p class='minimisable_infographic_g2'>Current</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Fatigue" value="0">
+            <p class='minimisable_infographic_g4'>Max</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Fatigue_max" value="0">
+          </div>
+
+          <div class="minimisable_infographic_field2x3 radius_border">
+            <label class="minimisable_infographic_g1 luck_width"><button class="hidden" type="roll" name="luck_roll" value="/me has @{luck} luck out of @{luck|max}"></button><h3 class='minimisable_infographic_g1'>Luck</h3></label>
+            <p class='minimisable_infographic_g2'>Current</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Luck" value="0">
+            <p class='minimisable_infographic_g4'>Max</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Luck_max" value="0">
+          </div>
+
+          <div class="minimisable_infographic_field4x3 radius_border">
+            <button class="hidden" type="roll" name="rolo" value="@attr_shields"></button>
+            <label class="minimisable_infographic_g1 shields_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{shields} shields of @{shields|max}. the shields recharge with a rate of @{shields_recharge} on  a delay of @{shields_delay} half actions"></button><h3 class='minimisable_infographic_g1'>Shields</h3></label>
+            <p class='minimisable_infographic_g6'>Current</p>
+            <input class="minimisable_infographic_g7 full_width" type="text" name="attr_shields" value="0">
+            <p class='minimisable_infographic_g8'>Max</p>
+            <input class="minimisable_infographic_g9 full_width" type="text" name="attr_shields_max" value="0">
+            <p class='minimisable_infographic_g2'>Recharge</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_shields_recharge" value="0">
+            <p class='minimisable_infographic_g4'>Delay</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_shields_delay" value="0">
+          </div>
+
+          <div class="minimisable_infographic_field4x3 radius_border">
+            <button class="hidden" type="roll" name="rolo" value="@attr_shields"></button>
+            <label class="minimisable_infographic_g1 armor_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{Armor_head} head armor | @{Armor_arms} arm armor | @{Armor_chest} chest armor | @{Armor_legs} leg armor"></button><h3 class='minimisable_infographic_g1'>armor</h3></label>
+            <p class='minimisable_infographic_g6'>Head</p>
+            <input class="minimisable_infographic_g7 full_width" type="text" name="attr_Armor_head" value="0">
+            <p class='minimisable_infographic_g8'>Arms</p>
+            <input class="minimisable_infographic_g9 full_width" type="text" name="attr_Armor_arms" value="0">
+            <p class='minimisable_infographic_g2'>Chest</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Armor_chest" value="0">
+            <p class='minimisable_infographic_g4'>Legs</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Armor_legs" value="0">
+          </div>
+        </div>
+      </div>
+      <div class='minimisable_infographic_collapse'>
+        <div class='item 5'></div>
+        <div class='item 90'>Courage</div>
+        <div class='item 70'><input name='attr_courage' type='text' value='0' class='data_2' /></div>
+        <div class='item 5'></div>
+        <div class='item 90'>Resistance</div>
+        <div class='item 70'><input name='attr_resistance' type='text' value='0' class='data_2' /></div>
+      </div>
+
     </div>
-  </div>
-  <hr>
-
-
-
-  <!-- ______________________________ initiative plus sheet tabs grid ______________________________ -->
-
-  <div class='tabs_main'>
-
-    <div class='initiative-container'>
-      <button name='initiative' type='roll' value='/me rolls initiative with @{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'class="clear">Initiative|<input class="input_background"name="attr_init_total" value="floor(@{initmod2}+@{initmod3})" disabled="true"/></button>
-      <select name='attr_initmod1' class='init_field'>
-        <option value='1d10' selected='selected'>Standard</option>
-        <option value='2d10k1'>Fast Foot</option>
-        <option value='?{dice|1d10}'>Custom</option>
-      </select>
-      <p class='init_plus1'>+</p>
-      <input name='attr_initmod2' type='number' value='0' />
-      <p class='init_plus1'>+</p>
-      <select name='attr_initmod3' class='init_field'>
-        <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
-        <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
-        <option value='0'>N/A</option>
-      </select>
-    </div>
-
-    <div class='sheet_tabs'>
-      <input name='attr_sheetTab' type='checkbox' value='core' class='hidden core_bttn' checked />
-      <button name='act_core' type='action' class='core_bttn bold_text'>Core</button>
-      <input name='attr_sheetTab' type='checkbox' value='equipment' class='hidden core_bttn' />
-      <button name='act_equipment' type='action' class='equipment_bttn bold_text'>Equipment</button>
-      <input name='attr_sheetTab' type='checkbox' value='medical' class='hidden core_bttn' />
-      <button name='act_medical' type='action' class='medical_bttn bold_text'>Medical</button>
-      <input name='attr_sheetTab' type='checkbox' value='advancements' class='hidden core_bttn' />
-      <button name='act_advancements' type='action' class='advancements_bttn bold_text'>Advancements</button>
-      <input name='attr_sheetTab' type='checkbox' value='journal' class='hidden core_bttn' />
-      <button name='act_journal' type='action' class='journal_bttn bold_text'>Journal</button>
-      <input name='attr_sheetTab' type='checkbox' value='vehicles' class='hidden core_bttn' />
-      <button name='act_vehicles' type='action' class='vehicles_bttn bold_text'>Vehicles</button>
-      <input name='attr_sheetTab' type='checkbox' value='settings' class='hidden core_bttn' />
-      <button name='act_settings' type='action' class='settings_bttn huge_text'>⚙</button>
-    </div>
-
+    <br>
   </div>
 
   <!-- ______________________________ sheet tabs _________________________________ -->
@@ -428,87 +502,7 @@
       });
     });
   </script>
-
-
-
-  <hr>
-
   <!-- ______________________________ start of minimisable infographic ______________________________ -->
-
-  <div class='minimisable_infographic_main'>
-    <input type='checkbox' class='minimisable_switch'>
-    <div class='minimisable_infographic_expand'>
-      <div class="minimisable_infographic_grid">
-
-
-
-        <div class="minimisable_infographic_field2x3 radius_border">
-          <label class="minimisable_infographic_g1 wounds_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{wounds} wounds out of @{wounds|max}"></button><h3 class='minimisable_infographic_g1'>Wounds</h3></label>
-          <p class='minimisable_infographic_g2'>Current</p>
-          <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Wounds" value="0">
-          <p class='minimisable_infographic_g4'>Max</p>
-          <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Wounds_max" value="0">
-        </div>
-
-        <div class="minimisable_infographic_field2x3 radius_border">
-          <label class="minimisable_infographic_g1 Fatigue_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{Fatigue} fatigue out of @{Fatigue|max}"></button><h3 class='minimisable_infographic_g1'>Fatigue</h3></label>
-          <p class='minimisable_infographic_g2'>Current</p>
-          <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Fatigue" value="0">
-          <p class='minimisable_infographic_g4'>Max</p>
-          <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Fatigue_max" value="0">
-        </div>
-
-        <div class="minimisable_infographic_field2x3 radius_border">
-          <label class="minimisable_infographic_g1 luck_width"><button class="hidden" type="roll" name="luck_roll" value="/me has @{luck} luck out of @{luck|max}"></button><h3 class='minimisable_infographic_g1'>Luck</h3></label>
-          <p class='minimisable_infographic_g2'>Current</p>
-          <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Luck" value="0">
-          <p class='minimisable_infographic_g4'>Max</p>
-          <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Luck_max" value="0">
-        </div>
-
-        <div class="minimisable_infographic_field4x3 radius_border">
-          <button class="hidden" type="roll" name="rolo" value="@attr_shields"></button>
-          <label class="minimisable_infographic_g1 shields_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{shields} shields of @{shields|max}. the shields recharge with a rate of @{shields_recharge} on  a delay of @{shields_delay} half actions"></button><h3 class='minimisable_infographic_g1'>Shields</h3></label>
-          <p class='minimisable_infographic_g6'>Current</p>
-          <input class="minimisable_infographic_g7 full_width" type="text" name="attr_shields" value="0">
-          <p class='minimisable_infographic_g8'>Max</p>
-          <input class="minimisable_infographic_g9 full_width" type="text" name="attr_shields_max" value="0">
-          <p class='minimisable_infographic_g2'>Recharge</p>
-          <input class="minimisable_infographic_g3 full_width" type="text" name="attr_shields_recharge" value="0">
-          <p class='minimisable_infographic_g4'>Delay</p>
-          <input class="minimisable_infographic_g5 full_width" type="text" name="attr_shields_delay" value="0">
-        </div>
-
-        <div class="minimisable_infographic_field4x3 radius_border">
-          <button class="hidden" type="roll" name="rolo" value="@attr_shields"></button>
-          <label class="minimisable_infographic_g1 armor_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{Armor_head} head armor | @{Armor_arms} arm armor | @{Armor_chest} chest armor | @{Armor_legs} leg armor"></button><h3 class='minimisable_infographic_g1'>armor</h3></label>
-          <p class='minimisable_infographic_g6'>Head</p>
-          <input class="minimisable_infographic_g7 full_width" type="text" name="attr_Armor_head" value="0">
-          <p class='minimisable_infographic_g8'>Arms</p>
-          <input class="minimisable_infographic_g9 full_width" type="text" name="attr_Armor_arms" value="0">
-          <p class='minimisable_infographic_g2'>Chest</p>
-          <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Armor_chest" value="0">
-          <p class='minimisable_infographic_g4'>Legs</p>
-          <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Armor_legs" value="0">
-        </div>
-
-
-
-
-      </div>
-    </div>
-    <div class='minimisable_infographic_collapse'>
-      <div class='item 5'></div>
-      <div class='item 90'>Courage</div>
-      <div class='item 70'><input name='attr_courage' type='text' value='0' class='data_2' /></div>
-      <div class='item 5'></div>
-      <div class='item 90'>Resistance</div>
-      <div class='item 70'><input name='attr_resistance' type='text' value='0' class='data_2' /></div>
-    </div>
-    <br>
-  </div>
-
-
 
   <!-- ______________________________ start of core ______________________________ -->
 
@@ -531,7 +525,7 @@
 
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Appeal</p>
-          <p class='bold_text skills_text'> </p>
+          <p class='bold_text skills_text'>(A)</p>
           <select name='attr_appeal_mod1' class="full_width full_height">
             <option value='@{STR} + @{STR_advancement}'>STR</option>
             <option value='@{TOU} + @{TOU_advancement}' >TOU</option>

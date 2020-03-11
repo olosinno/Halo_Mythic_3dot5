@@ -14,9 +14,9 @@ text-decoration: underline
 no ending semicolons needed, properly space out properties line-by-line.  Alphabetized each properties list for easier reading.
 2. Keep order in HTML elements' attributes by the way they're listed.  name type value class
 */
-.sheet-background{
+.sheet-background_radius{
 	border: 1px solid black;
-	border-radius: 5px;
+	border-radius: 11px;
 }
 
 .charsheet .sheet-row {
@@ -380,8 +380,10 @@ ______________________________ start of tab buttons toggles ____________________
 ______________________________ start of minimisable infographic ______________________________ */
 
 .sheet-minimisable_infographic_main {
+	margin-left: 10px;
 	display: grid;
 	grid-template-columns: 18px auto;
+
 }
 .sheet-minimisable_infographic_grid{
 	display: grid;
