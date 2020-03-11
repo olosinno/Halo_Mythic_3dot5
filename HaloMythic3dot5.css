@@ -469,7 +469,7 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skill_header {
 	display: grid;
 	margin-top: 7px;
-	grid-template-columns: auto 25px 63px 59px 21px 30px 38px 30px;
+	grid-template-columns: 130px 25px 55px 59px 21px 30px 38px 30px;
 	grid-template-rows: 23px;
 	border-bottom: 1px dotted darkgrey;
 }
