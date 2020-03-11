@@ -153,6 +153,14 @@ ______________________________ start of multipurpose or special-use classes such
 	border-radius: 10px;
 }
 .sheet-radius_border_top{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.sheet-radius_border_bottom{
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.sheet-radius_border_heading{
 	border-top-left-radius: 9px;
 	border-top-right-radius: 9px;
 }
@@ -499,25 +507,25 @@ ______________________________ start of medical tab ____________________________
 	font-family: Saira Semi Condensed
 }
 
-.sheet-medicalg1 { grid-area: m1 }
-.sheet-medicalg2 { grid-area: m2 }
-.sheet-medicalg3 { grid-area: m3 }
-.sheet-medicalg4 { grid-area: m4 }
-.sheet-medicalg5 { grid-area: m5 }
-.sheet-medicalg6 { grid-area: m6 }
-.sheet-medicalg7 { grid-area: m7 }
-.sheet-medicalg8 { grid-area: m8 }
-.sheet-medicalg9 { grid-area: m9 }
-.sheet-medicalg10 { grid-area: m10 }
-.sheet-medicalg11 { grid-area: m11 }
-.sheet-medicalg12 { grid-area: m12 }
-.sheet-medicalg13 { grid-area: m13 }
-.sheet-medicalg14 { grid-area: m14 }
-.sheet-medicalg15 { grid-area: m15 }
-.sheet-medicalg17 { grid-area: m17 }
-.sheet-medicalg16 { grid-area: m16 }
-.sheet-medicalgT { grid-area: mT }
-.sheet-medicalgR { grid-area: mR }
+.sheet-medicalg1 { grid-area: m1; border-top-left-radius: 10px;}
+.sheet-medicalg2 { grid-area: m2; }
+.sheet-medicalg3 { grid-area: m3; border-top-right-radius: 10px;}
+.sheet-medicalg4 { grid-area: m4; }
+.sheet-medicalg5 { grid-area: m5; }
+.sheet-medicalg6 { grid-area: m6; }
+.sheet-medicalg7 { grid-area: m7; }
+.sheet-medicalg8 { grid-area: m8; }
+.sheet-medicalg9 { grid-area: m9; }
+.sheet-medicalg10 { grid-area: m10; }
+.sheet-medicalg11 { grid-area: m11; }
+.sheet-medicalg12 { grid-area: m12; }
+.sheet-medicalg13 { grid-area: m13; }
+.sheet-medicalg14 { grid-area: m14; }
+.sheet-medicalg15 { grid-area: m15; border-bottom-left-radius: 10px;}
+.sheet-medicalg16 { grid-area: m16; }
+.sheet-medicalg17 { grid-area: m17; border-bottom-right-radius: 10px;}
+.sheet-medicalgT { grid-area: mT; margin-left: 10px;}
+.sheet-medicalgR { grid-area: mR; margin-top: 10px;}
 .sheet-medical-grid {
 
 	display: grid;
@@ -541,7 +549,6 @@ ______________________________ start of medical tab ____________________________
 .sheet-medical_table {
 	background: #475f85;
 	border-bottom: 1px dotted grey;
-	border-left: 3px solid #394C6A;
 	color: white;
 	font-family: Saira Semi Condensed;
 	text-align: center;
