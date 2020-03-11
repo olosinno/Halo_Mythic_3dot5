@@ -51,12 +51,15 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 	margin-left: -7px;
 	margin-top: -3px;
 	text-align: center;
+	cursor: pointer;
 }
 .sheet-input_c_background{
 	width: 50px;
-		font-size: 16px;
-				margin-top: -7px!important;
-		margin-bottom: -4px!important;
+	font-size: 16px;
+	margin-top: -7px!important;
+	margin-bottom: -4px!important;
+	cursor: pointer;
+
 }
 /* ______________________________ start of CSS selectors, patterns used to select element(s) for styling ______________________________ */
 
@@ -89,7 +92,8 @@ button[type="roll"].sheet-clear::before {
 }
 
 /* All button elements of type roll when hovered over: */
-button[type='roll']:hover { background-color: red }
+button[type='roll']:hover { background-color: red;}
+label:hover { cursor: pointer;}
 
 
 /* Both header elements 2 and 3 receive the following CSS properties. */
@@ -100,12 +104,12 @@ h2, h3 {
 }
 /* Only type-2 headers receive the following CSS properties. */
 h2{
-		color: white;
+	color: white;
 }
 /* Only type-3 headers receive the following CSS properties. */
 h3 {
 	background: #394C6A;
-		color: white;
+	color: white;
 }
 
 /* All instances of the placeholder attribute across all elements */
@@ -381,13 +385,12 @@ ______________________________ start of minimisable infographic ________________
 }
 .sheet-minimisable_infographic_grid{
 	display: grid;
-	grid-template-columns: 120px 120px
+	grid-template-columns: 120px 120px 230px
 }
-
 .sheet-minimisable_infographic_g1{grid-area: mi1; justify-self:center; color:white; font-family: Saira Semi Condensed; background:#506b95 }
-.sheet-minimisable_infographic_g2{grid-area: mi2; justify-self: right; margin-right: 3px; color:white; font-family: Saira Semi Condensed }
+.sheet-minimisable_infographic_g2{grid-area: mi2; justify-self: right; margin-right: 3px; margin-top: 3px; color:white; font-family: Saira Semi Condensed }
 .sheet-minimisable_infographic_g3{grid-area: mi3; border-right: 1px solid #506b95;}
-.sheet-minimisable_infographic_g4{grid-area: mi4; justify-self: right; margin-right: 3px; color:white; font-family: Saira Semi Condensed }
+.sheet-minimisable_infographic_g4{grid-area: mi4; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
 .sheet-minimisable_infographic_g5{grid-area: mi5; border-right: 1px solid #506b95; border-bottom: 1px solid #506b95; border-bottom-right-radius: 10px}
 .sheet-minimisable_infographic_field2x3{
 	margin-right: 10px;
@@ -399,6 +402,22 @@ ______________________________ start of minimisable infographic ________________
 	'mi1 mi1'
 	'mi2 mi3'
 	'mi4 mi5'
+}
+
+.sheet-minimisable_infographic_g6{grid-area: mi6; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
+.sheet-minimisable_infographic_g7{grid-area: mi7; }
+.sheet-minimisable_infographic_g8{grid-area: mi8; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
+.sheet-minimisable_infographic_g9{grid-area: mi9; }
+.sheet-minimisable_infographic_field4x3{
+	margin-right: 10px;
+	background:#506b95;
+	display: grid;
+	grid-template-columns: 55px 55px 55px 55px;
+	grid-template-rows: 25px 25px 25px;
+	grid-template-areas:
+	'mi1 mi1 mi1 mi1'
+	'mi6 mi7 mi2 mi3'
+	'mi8 mi9 mi4 mi5'
 }
 
 .sheet-minimisable_infographic_expand,
