@@ -445,7 +445,7 @@ ______________________________ start of core tab ______________________________ 
 	grid-template-areas:
 	'cl1 cl2'
 	'cl1 cl3';
-	grid-template-columns: 450px auto;
+	grid-template-columns: 400px auto;
 }
 .sheet-core_table {
 	background: #506b95;
@@ -462,29 +462,11 @@ ______________________________ start of core tab ______________________________ 
 	border-bottom: 1px dotted grey;
 }
 
-.sheet-skill_name_heading_width { width: 106px;}
-.sheet-skill_diff_heading_width { width: 70px;}
-.sheet-skill_stat_heading_width { width: 67px;}
-.sheet-skill_num_heading_width { 	width: 40px;}
-.sheet-skill_t_heading_width { 		width: 6px;}
-.sheet-skill_10_heading_width { 	width: 18px;}
-.sheet-skill_20_heading_width { 	width: 26px;}
-.sheet-skill_roll_heading_width { width: 0px;}
+.sheet-skills_item { margin: 7px 5px }
+.sheet-skills_text { margin: 4px 0px }
+.sheet-text_left { text-align: left!important; }
 
-.sheet-skill_name_width { width: 150px }
-.sheet-skill_stat_width { width: 100px }
-
-.sheet-skill_num_width { width: 30px; margin-left: -30px; margin-right: 10px }
-.sheet-skill_right-hand { text-align: right; width: 50% }
-.sheet-custom_skill { width: 200px; margin-right: 45px }
-
-
-
-.sheet-skills_item {margin: 7px 5px}
-.sheet-skills_text {margin: 4px 0px}
-.sheet-text_left{text-align: left!important;}
-
-.sheet-skill_header{
+.sheet-skill_header {
 	display: grid;
 	margin-top: 7px;
 	grid-template-columns: auto 25px 63px 59px 21px 30px 38px 30px;
@@ -492,16 +474,16 @@ ______________________________ start of core tab ______________________________ 
 	border-bottom: 1px dotted darkgrey;
 }
 
-.sheet-skill_grid{
+.sheet-skill_grid {
 	display: grid;
-	grid-template-columns: auto 48px 63px 55px 30px 30px 30px 35px;
+	grid-template-columns: auto 53px 59px 50px 30px 30px 30px 35px;
 	grid-template-rows: 27px;
 	border-bottom: 1px dotted darkgrey;
 	padding-bottom: 1.5px;
 	padding-top: 1.5px;
 
 }
-.sheet-education_grid{
+.sheet-education_grid {
 	display: grid;
 	grid-template-columns: auto 63px 55px 30px 30px 35px;
 	grid-template-rows: 27px;
@@ -510,7 +492,7 @@ ______________________________ start of core tab ______________________________ 
 	padding-top: 1.5px;
 }
 
-.sheet-education_header{
+.sheet-education_header {
 	display: grid;
 	margin-top: 7px;
 	grid-template-columns: auto 63px 55px 25px 38px 30px;
@@ -518,7 +500,7 @@ ______________________________ start of core tab ______________________________ 
 	border-bottom: 1px dotted darkgrey;
 }
 
-.sheet-education_grid{
+.sheet-education_grid {
 	display: grid;
 	grid-template-columns: auto 63px 55px 30px 30px 35px;
 	grid-template-rows: 27px;
