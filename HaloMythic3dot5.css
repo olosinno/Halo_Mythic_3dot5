@@ -52,7 +52,12 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 	margin-top: -3px;
 	text-align: center;
 }
-
+.sheet-input_c_background{
+	width: 50px;
+		font-size: 16px;
+				margin-top: -7px!important;
+		margin-bottom: -4px!important;
+}
 /* ______________________________ start of CSS selectors, patterns used to select element(s) for styling ______________________________ */
 
 @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');

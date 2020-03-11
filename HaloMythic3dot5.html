@@ -69,7 +69,7 @@
   <div class='characteristics_background'>
 
     <div>
-      <div class='characteristics'><button name='STR' type='roll' value='/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> STR</span></button></div>
+      <div class='characteristics'><button class="clear" name='STR' type='roll' value='/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>STR |<input class="input_background input_c_background"name="attr_STR_total" value="@{STR} + @{STR_advancement}" disabled="true"/></button></div>
       <div class='characteristics'><input name='attr_STR' type='text' value='0' /></div>
       <select name='attr_STR_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
@@ -82,7 +82,7 @@
     </div>
 
     <div>
-      <div class='characteristics'><button name='TOU' type='roll' value='/me rolls toughness with [[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> TOU</span></button></div>
+      <div class='characteristics'><button class="clear" name='TOU' type='roll' value='/me rolls toughness with [[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>TOU |<input class="input_background input_c_background"name="attr_TOU_total" value="@{TOU} + @{TOU_advancement}" disabled="true"/></button></div>
       <div class='characteristics'><input name='attr_TOU' type='text' value='0' /></div>
       <select name='attr_TOU_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
@@ -95,7 +95,7 @@
     </div>
 
     <div>
-      <div class='characteristics'><button name='AGI' type='roll' value='/me rolls agility with [[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> AGI</span></button></div>
+      <div class='characteristics'><button class="clear" name='AGI' type='roll' value='/me rolls agility with [[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>AGI |<input class="input_background input_c_background"name="attr_AGI_total" value="@{AGI} + @{AGI_advancement}" disabled="true"/></button></div>
       <div class='characteristics'><input name='attr_AGI' type='text' value='0' /></div>
       <select name='attr_AGI_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
@@ -108,7 +108,7 @@
     </div>
 
     <div>
-      <div class='characteristics'><button name='WFR' type='roll' value='/me rolls warfare ranged with [[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> WFR</span></button></div>
+      <div class='characteristics'><button class="clear" name='WFR' type='roll' value='/me rolls warfare ranged with [[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>WFR |<input class="input_background input_c_background"name="attr_WFR_total" value="@{WFR} + @{WFR_advancement}" disabled="true"/></button></div>
       <div class='characteristics'><input name='attr_WFR' type='text' value='0' /></div>
       <select name='attr_WFR_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
@@ -121,7 +121,7 @@
     </div>
 
     <div>
-      <div class='characteristics'><button name='WFM' type='roll' value='/me rolls warfare melee with [[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> WFM</span></button></div>
+      <div class='characteristics'><button class="clear" name='WFM' type='roll' value='/me rolls warfare melee with [[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>WFM |<input class="input_background input_c_background"name="attr_WFM_total" value="@{WFM} + @{WFM_advancement}" disabled="true"/></button></div>
       <div class='characteristics'><input name='attr_WFM' type='text' value='0' /></div>
       <select name='attr_WFM_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
@@ -134,7 +134,7 @@
     </div>
 
     <div>
-      <div class='characteristics'><button name='INT' type='roll' value='/me rolls intellect [[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> INT</span></button></div>
+      <div class='characteristics'><button class="clear" name='INT' type='roll' value='/me rolls intellect [[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>INT |<input class="input_background input_c_background"name="attr_INT_total" value="@{INT} + @{INT_advancement}" disabled="true"/></div>
       <div class='characteristics'><input name='attr_INT' type='text' value='0' /></div>
       <select name='attr_INT_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
@@ -147,7 +147,7 @@
     </div>
 
     <div>
-      <div class='characteristics'><button name='PER' type='roll' value='/me rolls perception with [[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> PER</span></button></div>
+      <div class='characteristics'><button class="clear" name='PER' type='roll' value='/me rolls perception with [[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>PER |<input class="input_background input_c_background"name="attr_PER_total" value="@{PER} + @{PER_advancement}" disabled="true"/></div>
       <div class='characteristics'><input name='attr_PER' type='text' value='0' /></div>
       <select name='attr_PER_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
@@ -160,7 +160,7 @@
     </div>
 
     <div>
-      <div class='characteristics'><button name='CR' type='roll' value='/me rolls courage with [[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> CR</span></button></div>
+      <div class='characteristics'><button class="clear" name='CR' type='roll' value='/me rolls courage with [[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>CR |<input class="input_background input_c_background"name="attr_CR_total" value="@{CR} + @{CR_advancement}" disabled="true"/></button></div>
       <div class='characteristics'><input name='attr_CR' type='text' value='0' /></div>
       <select name='attr_CR_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
@@ -173,7 +173,7 @@
     </div>
 
     <div>
-      <div class='characteristics'><button name='CH' type='roll' value='/me rolls charisma with [[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> CH</span></button></div>
+      <div class='characteristics'><button class="clear" name='CH' type='roll' value='/me rolls charisma with [[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>CH |<input class="input_background input_c_background"name="attr_CH_total" value="@{CH} + @{CH_advancement}" disabled="true"/></button></div>
       <div class='characteristics'><input name='attr_CH' type='text' value='0' /></div>
       <select name='attr_CH_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
@@ -186,7 +186,7 @@
     </div>
 
     <div>
-      <div class='characteristics'><button name='LD' type='roll' value='/me rolls leadership with [[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success' <span> LD</span></button></div>
+      <div class='characteristics'><button class="clear" name='LD' type='roll' value='/me rolls leadership with [[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>LD |<input class="input_background input_c_background"name="attr_LD_total" value="@{LD} + @{LD_advancement}" disabled="true"/></button></div>
       <div class='characteristics'><input name='attr_LD' type='text' value='0' /></div>
       <select name='attr_LD_advancement' class='full_width'>
         <option value='0' selected='selected'>None +0</option>
