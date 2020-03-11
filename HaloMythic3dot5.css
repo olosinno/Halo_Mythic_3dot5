@@ -385,10 +385,11 @@ ______________________________ start of minimisable infographic ________________
 }
 .sheet-minimisable_infographic_grid{
 	display: grid;
-	grid-template-columns: 120px 120px 230px
+	grid-template-columns: 120px 120px 120px 230px
 }
 .sheet-wounds_width { width: 50px;}
-.sheet-luck_width { width: 28px;}
+.sheet-Fatigue_width { width: 45px;}
+.sheet-luck_width { width: 26px;}
 .sheet-shields_width { width: 50px;}
 
 .sheet-minimisable_infographic_g1{grid-area: mi1; justify-self: center; color:white; text-align: left!important;font-family: Saira Semi Condensed; background:#506b95}
