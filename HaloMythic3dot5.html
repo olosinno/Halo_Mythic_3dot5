@@ -380,8 +380,7 @@
   <div class='tabs_main'>
 
     <div class='initiative-container'>
-      <input name='attr_initmod0' value='floor' class='hidden' />
-      <button name='initiative' type='roll' value='/me rolls initiative with [[@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'><span>Initiative</span></button>
+      <button name='initiative' type='roll' value='/me rolls initiative with @{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'class="clear">Initiative|<input class="input_background"name="attr_init_total" value="floor(@{initmod2}+@{initmod3})" disabled="true"/></button>
       <select name='attr_initmod1' class='init_field'>
         <option value='1d10' selected='selected'>Standard</option>
         <option value='2d10k1'>Fast Foot</option>
@@ -1942,6 +1941,7 @@
 
   <div class='settings box'>
     <h2>Settings</h2>
+    <h3>race overrides</h3>
     <select name='attr_settings_race' class='centered edge_padding'>
       <option selected='selected' value='0'>Racial Features: N/A </option>
       <option value='1'>Spartan 2 / Spartan 3 / Spartan 4 </option>
@@ -1952,6 +1952,13 @@
       <option value='3'>Kig-yar Ibie'shan / Halo 4/5 Jackals </option>
       <option value='5'>Mgalekgolo / Hunters </option>
       <option value='1'>Promethean Knight </option>
+    </select>
+    <br>
+    <h3>initiative overrides</h3>
+    <select name='attr_initmod0' class='centered edge_padding'>
+      <option selected='selected' value='[[floor'>no tie breaker</option>
+      <option value='[['>decimal tiebreaker</option>
+      <option value='tiebreaker [[@{AGI_total}]] roll [['>AGI tiebreaker</option>
     </select>
   </div>
 </div>
