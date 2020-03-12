@@ -2,7 +2,8 @@ input.sheet-background_switch_1:checked ~ div.sheet-background { background: whi
 input.sheet-background_switch_2:checked ~ div.sheet-background { background-image: linear-gradient(#738132, #4b5320); color: white }
 input.sheet-background_switch_3:checked ~ div.sheet-background { background-image: linear-gradient(#8f489d, #59357a); color: white }
 input.sheet-background_switch_4:checked ~ div.sheet-background { background-image: linear-gradient(#C45911, #833C0B); color: white }
-input.sheet-background_switch_5:checked ~ div.sheet-background { background: white }
+input.sheet-background_switch_5:checked ~ div.sheet-background { background-image: linear-gradient(#aa3f3c, #772C2A); color: white }
+input.sheet-background_switch_6:checked ~ div.sheet-background { background: white }
 
 /*
 METHODS OF MY MADNESS
