@@ -1,7 +1,7 @@
 input.sheet-background_switch_1:checked ~ div.sheet-background { background: white }
-input.sheet-background_switch_2:checked ~ div.sheet-background { background-image: linear-gradient(#7e8c36, #4b5320); color: white }
-input.sheet-background_switch_3:checked ~ div.sheet-background { background-image: linear-gradient(#bd7fbf, #b84c6f); color: black }
-input.sheet-background_switch_4:checked ~ div.sheet-background { background-image: linear-gradient(#ff9100, #e69500) }
+input.sheet-background_switch_2:checked ~ div.sheet-background { background-image: linear-gradient(#738132, #4b5320); color: white }
+input.sheet-background_switch_3:checked ~ div.sheet-background { background-image: linear-gradient(#8f489d, #59357a); color: white }
+input.sheet-background_switch_4:checked ~ div.sheet-background { background-image: linear-gradient(#C45911, #833C0B); color: white }
 input.sheet-background_switch_5:checked ~ div.sheet-background { background: white }
 
 /*
@@ -137,7 +137,7 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-hidernot:checked + input { display: none }
 
 .sheet-box {
-	background: #404040;
+	background: #4d4d4d;
 	border-style: solid;
 	border-width: 1px;
 	border-color: black;
@@ -330,13 +330,12 @@ select,
 .sheet-initiative-container { display: grid }
 
 .sheet-initiative-container {
-
-	grid-template-columns: 100px 90px 18px 50px 18px 90px
+	grid-template-columns: 100px 90px 18px 50px 18px 90px;
 }
 
-.sheet-init_field {width:85px; height: 100%; margin-right:-60px}
+.sheet-init_field {width:85px; height: 100%; margin-right:-60px;}
 
-.sheet-init_plus1 {
+.sheet-init_plus {
 	font-size: 24px;
 	font-weight: bold;
 	padding-top: 12px;

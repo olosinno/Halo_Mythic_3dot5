@@ -381,15 +381,15 @@
     <div class='tabs_main'>
 
       <div class='initiative-container'>
-        <button name='initiative' type='roll' value='/me rolls initiative with @{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]'class="clear">Initiative|<input class="input_background"name="attr_init_total" value="floor(@{initmod2}+@{initmod3})" disabled="true"/></button>
+        <button name='initiative' type='roll' value=' /me rolls initiative with @{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]] degrees of success'class="clear">Initiative|<input class="input_background"name="attr_init_total" value="floor(@{initmod2}+@{initmod3})" disabled="true"/></button>
         <select name='attr_initmod1' class='init_field'>
           <option value='1d10' selected='selected'>Standard</option>
           <option value='2d10k1'>Fast Foot</option>
           <option value='?{dice|1d10}'>Custom</option>
         </select>
-        <p class='init_plus1'>+</p>
+        <p class='init_plus'>+</p>
         <input name='attr_initmod2' type='number' value='0' />
-        <p class='init_plus1'>+</p>
+        <p class='init_plus'>+</p>
         <select name='attr_initmod3' class='init_field'>
           <option value='(@{AGI}+@{AGI_advancement})/10+@{AGI_mythic}' selected='selected'>Agility</option>
           <option value='(@{INT}+@{INT_advancement})/10'>Intellect</option>
