@@ -1,8 +1,9 @@
 input.sheet-background_switch_1:checked ~ div.sheet-background { background: white }
-input.sheet-background_switch_2:checked ~ div.sheet-background { background-image: linear-gradient(#7e8c36, #4b5320); color: white }
-input.sheet-background_switch_3:checked ~ div.sheet-background { background-image: linear-gradient(#bd7fbf, #b84c6f); color: black }
-input.sheet-background_switch_4:checked ~ div.sheet-background { background-image: linear-gradient(#ff9100, #e69500) }
-input.sheet-background_switch_5:checked ~ div.sheet-background { background: white }
+input.sheet-background_switch_2:checked ~ div.sheet-background { background-image: linear-gradient(#738132, #4b5320); color: white }
+input.sheet-background_switch_3:checked ~ div.sheet-background { background-image: linear-gradient(#8f489d, #59357a); color: white }
+input.sheet-background_switch_4:checked ~ div.sheet-background { background-image: linear-gradient(#C45911, #833C0B); color: white }
+input.sheet-background_switch_5:checked ~ div.sheet-background { background-image: linear-gradient(#aa3f3c, #772C2A); color: white }
+input.sheet-background_switch_6:checked ~ div.sheet-background { background: white }
 
 /*
 METHODS OF MY MADNESS
@@ -137,7 +138,7 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-hidernot:checked + input { display: none }
 
 .sheet-box {
-	background: #404040;
+	background: #4d4d4d;
 	border-style: solid;
 	border-width: 1px;
 	border-color: black;
@@ -149,7 +150,6 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-half_width { width: 50% }
 /* full width of containing block */
 .sheet-full_width { width: 100% }
-
 /* full height of containing block */
 .sheet-full_height{height: 100% }
 
@@ -158,8 +158,7 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-bold_text { font-weight: bold }
 .sheet-centered { margin: auto }
 .sheet-text_centered{text-align: center;}
-.sheet-radius_border{
-	border-radius: 10px;
+.sheet-radius_border{border-radius: 10px;
 }
 .sheet-radius_border_top{
 	border-top-left-radius: 10px;
@@ -208,9 +207,9 @@ ______________________________ start of grid structure for character information
 	display: grid;
 	font-family: Serif;
 	grid-template-areas:
-	'ah1 ah7 ah13 ah14 ah20'
-	'ah2 ah8 ah13 ah15 ah21'
-	'ah3 ah9 ah13 ah16 ah22'
+	'ah1 ah7  ah13 ah14 ah20'
+	'ah2 ah8  ah13 ah15 ah21'
+	'ah3 ah9  ah13 ah16 ah22'
 	'ah4 ah10 ah13 ah17 ah23'
 	'ah5 ah11 ah13 ah18 ah24'
 	'ah6 ah12 ah13 ah19 ah25';
@@ -294,8 +293,8 @@ ______________________________ start of grid structure for the mythic characteri
 	justify-content: center;
 	text-align: center;
 	grid-template-areas:
-	'amm1 amm1 amm1  amm1  amm1  amm1 amm1'
-	'amm2 amm3 amm4  amm5  amm6  amm7 amm8'
+	'amm1 amm1  amm1  amm1  amm1  amm1 amm1'
+	'amm2 amm3  amm4  amm5  amm6  amm7 amm8'
 	'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
 	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px
 }
@@ -332,13 +331,12 @@ select,
 .sheet-initiative-container { display: grid }
 
 .sheet-initiative-container {
-
-	grid-template-columns: 100px 90px 18px 50px 18px 90px
+	grid-template-columns: 100px 90px 18px 50px 18px 90px;
 }
 
-.sheet-init_field {width:85px; height: 100%; margin-right:-60px}
+.sheet-init_field {width:85px; height: 100%; margin-right:-60px;}
 
-.sheet-init_plus1 {
+.sheet-init_plus {
 	font-size: 24px;
 	font-weight: bold;
 	padding-top: 12px;
@@ -453,15 +451,6 @@ ______________________________ start of core tab ______________________________ 
 	font-family: Saira Semi Condensed;
 }
 
-.sheet-skills_row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	height: 30px;
-	align-items: center;
-	border-bottom: 1px dotted grey;
-}
-
 .sheet-skills_item { margin: 7px 5px }
 .sheet-skills_text { margin: 4px 0px }
 .sheet-text_left { text-align: left!important; }
@@ -469,14 +458,14 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skill_header {
 	display: grid;
 	margin-top: 7px;
-	grid-template-columns: 130px 25px 55px 59px 21px 30px 38px 30px;
+	grid-template-columns: auto 28px 63px 56px 21px 30px 38px 30px;
 	grid-template-rows: 23px;
 	border-bottom: 1px dotted darkgrey;
 }
 
 .sheet-skill_grid {
 	display: grid;
-	grid-template-columns: auto 53px 59px 50px 30px 30px 30px 35px;
+	grid-template-columns: auto 53px 64px 50px 30px 30px 30px 35px;
 	grid-template-rows: 27px;
 	border-bottom: 1px dotted darkgrey;
 	padding-bottom: 1.5px;
@@ -498,16 +487,6 @@ ______________________________ start of core tab ______________________________ 
 	grid-template-columns: auto 63px 55px 25px 38px 30px;
 	grid-template-rows: 23px;
 	border-bottom: 1px dotted darkgrey;
-}
-
-.sheet-education_grid {
-	display: grid;
-	grid-template-columns: auto 63px 55px 30px 30px 35px;
-	grid-template-rows: 27px;
-	border-bottom: 1px dotted darkgrey;
-	padding-bottom: 1.5px;
-	padding-top: 1.5px;
-
 }
 
 
