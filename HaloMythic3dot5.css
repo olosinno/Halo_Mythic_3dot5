@@ -458,14 +458,14 @@ ______________________________ start of core tab ______________________________ 
 .sheet-skill_header {
 	display: grid;
 	margin-top: 7px;
-	grid-template-columns: 130px 25px 55px 59px 21px 30px 38px 30px;
+	grid-template-columns: auto 28px 63px 56px 21px 30px 38px 30px;
 	grid-template-rows: 23px;
 	border-bottom: 1px dotted darkgrey;
 }
 
 .sheet-skill_grid {
 	display: grid;
-	grid-template-columns: auto 53px 59px 50px 30px 30px 30px 35px;
+	grid-template-columns: auto 53px 64px 50px 30px 30px 30px 35px;
 	grid-template-rows: 27px;
 	border-bottom: 1px dotted darkgrey;
 	padding-bottom: 1.5px;
