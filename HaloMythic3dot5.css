@@ -570,6 +570,18 @@ ______________________________ start of medical tab ____________________________
 }
 
 /* ______________________________ end of medical tab __________________________________________________________
+______________________________ start of advancements tab ______________________________ */
+
+.sheet-training {
+	display: grid;
+	grid-template-areas:
+	't1 t2';
+	grid-template-columns: 50% 50%;
+}
+.sheet-faction_training { grid-area: t1 }
+.sheet-weapon_training { grid-area: t2 }
+
+/* ______________________________ end of advancements tab ______________________________
 ______________________________ start of vehicles tab ___________________________________________________________ */
 
 

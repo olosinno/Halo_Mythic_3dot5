@@ -1644,39 +1644,30 @@
         });
       });
     </script>
-    <div style='text-align: center'>
-      <h2>faction training</h2>
-      Faction training: Covenant <input name='attr_Weapons_training_Covenant' type='checkbox'  style='width: 2%; margin-right: 20px'>
-      Faction training: UNSC <input name='attr_Weapons_training_UNSC' type='checkbox' style='width: 2%; margin-right: 20px'>
-      Faction training: Forerunner <input name='attr_Weapons_training_Forerunner' type='checkbox' style='width: 2%'>
-    </div>
-    <div style='text-align: center'>
-      Weapons training: Explosive/Ordnance <input name='attr_Weapons_training_Covenant' type='checkbox'  style='width: 2%; margin-right: 20px'>
-    </div>
-    <div style='text-align: center'>
-      Weapons training: Long-Range <input name='attr_Weapons_training_Covenant' type='checkbox'  style='width: 2%; margin-right: 20px'>
-    </div>
-    <div style='text-align: center'>
-      Weapons training:     Advanced <input name='attr_Weapons_training_Covenant' type='checkbox'  style='width: 2%; margin-right: 20px'>
-    </div>
-    <div style='text-align: center'>
-      Weapons training:     Infantry <input name='attr_Weapons_training_Covenant' type='checkbox'  style='width: 2%; margin-right: 20px'>
-    </div>
-    <div style='text-align: center'>
-      Weapons training: Vehicle <input name='attr_Weapons_training_Covenant' type='checkbox'  style='width: 2%; margin-right: 20px'>
-    </div>
-    <div style='text-align: center'>
-      Weapons training: Basic <input name='attr_Weapons_training_Covenant' type='checkbox'  style='width: 2%; margin-right: 20px'>
-    </div>
-    <div style='text-align: center '>
-      Weapons training: Melee <input name='attr_Weapons_training_Covenant' type='checkbox'  style='width: 2%; margin-right: 20px'>
-    </div>
-    <div style='text-align: center'>
-      Weapons training: Heavy <input name='attr_Weapons_training_Covenant' type='checkbox'  style='width: 2%; margin-right: 20px'>
-    </div>
+	<div class='training'>
+		<div class='faction_training core_table centered edge_padding'>
+			<h2>Faction Training</h2>
+			<input name='attr_Weapons_training_UNSC' type='checkbox'>U.N.S.C.<br>
+			<input name='attr_Weapons_training_Covenant' type='checkbox'>Covenant<br>
+			<input name='attr_Weapons_training_Forerunner' type='checkbox'>Forerunner<br>
+		</div>
+		<div class='weapon_training core_table centered edge_padding'>
+			<h2>Weapon Training</h2>
+			<div class='training'>
+				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Basic</div>
+				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Infantry</div>
+				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Vehicle</div>
+				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Melee</div>
+				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Heavy</div>
+				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Advanced</div>
+			</div>
+			<input name='attr_Weapons_training_Covenant' type='checkbox'>Long-Range<br>
+			<input name='attr_Weapons_training_Covenant' type='checkbox'>Explosive Launchers & Ordnance
+		</div>
+	</div>
 
     <h2>Experience Summary</h2>
-    <div style='text-align: center'>
+    <div class='text_centered'>
       Unspent XP: <input name='attr_XP_current' type='number' value='@{XP_total}-@{XP_spent}' style='width: 10%; margin-right: 20px' readonly>
       Spent XP: <input name='attr_XP_spent' type='number' value='@{XP_total}-(@{advancement_costL}+@{advancement_costR})' style='width: 10%; margin-right: 20px' readonly>
       XP Total: <input name='attr_XP_total' type='number' style='width: 10%'>
