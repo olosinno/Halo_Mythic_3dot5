@@ -149,7 +149,6 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-half_width { width: 50% }
 /* full width of containing block */
 .sheet-full_width { width: 100% }
-
 /* full height of containing block */
 .sheet-full_height{height: 100% }
 
@@ -158,8 +157,7 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-bold_text { font-weight: bold }
 .sheet-centered { margin: auto }
 .sheet-text_centered{text-align: center;}
-.sheet-radius_border{
-	border-radius: 10px;
+.sheet-radius_border{border-radius: 10px;
 }
 .sheet-radius_border_top{
 	border-top-left-radius: 10px;
@@ -208,9 +206,9 @@ ______________________________ start of grid structure for character information
 	display: grid;
 	font-family: Serif;
 	grid-template-areas:
-	'ah1 ah7 ah13 ah14 ah20'
-	'ah2 ah8 ah13 ah15 ah21'
-	'ah3 ah9 ah13 ah16 ah22'
+	'ah1 ah7  ah13 ah14 ah20'
+	'ah2 ah8  ah13 ah15 ah21'
+	'ah3 ah9  ah13 ah16 ah22'
 	'ah4 ah10 ah13 ah17 ah23'
 	'ah5 ah11 ah13 ah18 ah24'
 	'ah6 ah12 ah13 ah19 ah25';
@@ -294,8 +292,8 @@ ______________________________ start of grid structure for the mythic characteri
 	justify-content: center;
 	text-align: center;
 	grid-template-areas:
-	'amm1 amm1 amm1  amm1  amm1  amm1 amm1'
-	'amm2 amm3 amm4  amm5  amm6  amm7 amm8'
+	'amm1 amm1  amm1  amm1  amm1  amm1 amm1'
+	'amm2 amm3  amm4  amm5  amm6  amm7 amm8'
 	'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
 	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px
 }
@@ -453,15 +451,6 @@ ______________________________ start of core tab ______________________________ 
 	font-family: Saira Semi Condensed;
 }
 
-.sheet-skills_row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	height: 30px;
-	align-items: center;
-	border-bottom: 1px dotted grey;
-}
-
 .sheet-skills_item { margin: 7px 5px }
 .sheet-skills_text { margin: 4px 0px }
 .sheet-text_left { text-align: left!important; }
@@ -498,16 +487,6 @@ ______________________________ start of core tab ______________________________ 
 	grid-template-columns: auto 63px 55px 25px 38px 30px;
 	grid-template-rows: 23px;
 	border-bottom: 1px dotted darkgrey;
-}
-
-.sheet-education_grid {
-	display: grid;
-	grid-template-columns: auto 63px 55px 30px 30px 35px;
-	grid-template-rows: 27px;
-	border-bottom: 1px dotted darkgrey;
-	padding-bottom: 1.5px;
-	padding-top: 1.5px;
-
 }
 
 
