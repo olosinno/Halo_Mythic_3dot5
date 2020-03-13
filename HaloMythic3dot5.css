@@ -565,6 +565,16 @@ grid-template-columns: 8% 8% 4% 8% 4% 8% 15% 20% 13% 12%;
 grid-template-areas:
 'rw21 rw22 rw23 rw24 rw25 rw26 rw27 rw28 rw29 rw30'}
 
+
+
+
+
+.sheet-equipment_melee_weapons_grid3{
+display: grid;
+grid-template-columns: 12% 12% 12% 11% 10% 10% 4% 10% 8% 8%;
+grid-template-areas:
+'rw13 rw14 rw15 rw16 rw19 rw18 rw17 rw20 rw21 rw22'}
+
 /* ______________________________ end of equipment tab ______________________________
 ______________________________ start of medical tab ______________________________ */
 
