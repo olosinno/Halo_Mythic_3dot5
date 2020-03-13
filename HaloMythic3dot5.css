@@ -392,6 +392,7 @@ ______________________________ start of minimisable infographic ________________
 .sheet-luck_width { width: 26px;}
 .sheet-shields_width { width: 45px;}
 .sheet-armor_width { width: 35px;}
+.sheet-support_width { width: 25px }
 
 .sheet-minimisable_infographic_g1{grid-area: mi1; justify-self: center; color:white; text-align: left!important;font-family: Saira Semi Condensed; background:#506b95}
 .sheet-minimisable_infographic_g2{grid-area: mi2; justify-self: right; margin-right: 3px; margin-top: 3px; color:white; font-family: Saira Semi Condensed }
