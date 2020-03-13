@@ -495,19 +495,20 @@ ______________________________ start of core tab ______________________________ 
 
 /* ______________________________ end of core tab ______________________________
 ______________________________ start of equipment tab ______________________________ */
-.sheet-equipment_ranged_weapons{grid-area: e1; border:1px solid black }
-.sheet-equipment_melee_weapons{ grid-area: e2}
-.sheet-equipment_items_list{		grid-area: e3}
-
 .sheet-equipment_divider {
 	display: grid;
 	grid-template-columns: 48.5% 1% 48.5%;
 	grid-template-areas:
 	'e1 e0 e2'
 	'e3 e3 e3';
-	font-size: 18px;
-
 }
+
+.sheet-equipment_ranged_weapons{grid-area: e1}
+.sheet-equipment_melee_weapons{ grid-area: e2}
+.sheet-equipment_items_list{		grid-area: e3}
+.sheet-equipment_ranged_weapons_rep{border:1px solid black; border-radius: 10px; background:#475f85 }}
+
+
 .sheet-equipment_ranged_weapons_gs1{ grid-area: rw1; 	color: white; font-size: 14px;}
 .sheet-equipment_ranged_weapons_gs2{ grid-area: rw2; 	color: white;font-size: 14px;}
 .sheet-equipment_ranged_weapons_gs3{ grid-area: rw3; 	color: white;font-size: 14px;}
