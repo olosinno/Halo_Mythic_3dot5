@@ -385,13 +385,13 @@ ______________________________ start of minimisable infographic ________________
 }
 .sheet-minimisable_infographic_grid{
 	display: grid;
-	grid-template-columns: 110px 110px 110px 230px 230px
+	grid-template-columns: 100px 100px 100px 185px 185px
 }
 .sheet-wounds_width { width: 50px;}
 .sheet-Fatigue_width { width: 45px;}
 .sheet-luck_width { width: 26px;}
-.sheet-shields_width { width: 50px;}
-.sheet-armor_width { width: 40px;}
+.sheet-shields_width { width: 45px;}
+.sheet-armor_width { width: 35px;}
 
 .sheet-minimisable_infographic_g1{grid-area: mi1; justify-self: center; color:white; text-align: left!important;font-family: Saira Semi Condensed; background:#506b95}
 .sheet-minimisable_infographic_g2{grid-area: mi2; justify-self: right; margin-right: 3px; margin-top: 3px; color:white; font-family: Saira Semi Condensed }
@@ -402,7 +402,7 @@ ______________________________ start of minimisable infographic ________________
 	margin-right: 10px;
 	background:#506b95;
 	display: grid;
-	grid-template-columns: 50px 50px;
+	grid-template-columns: 50px 40px;
 	grid-template-rows: 25px 25px 25px;
 	grid-template-areas:
 	'mi1 mi1'
@@ -418,7 +418,7 @@ ______________________________ start of minimisable infographic ________________
 	margin-right: 10px;
 	background:#506b95;
 	display: grid;
-	grid-template-columns: 55px 55px 55px 55px;
+	grid-template-columns: 50px 40px 45px 40px;
 	grid-template-rows: 25px 25px 25px;
 	grid-template-areas:
 	'mi1 mi1 mi1 mi1'
