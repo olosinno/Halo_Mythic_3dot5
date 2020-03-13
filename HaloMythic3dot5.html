@@ -1953,7 +1953,55 @@
 
 
         <div class='vehicle_weapons'>
-          [placeholder] this will be a duplicate of the weapons section in the equipment tab
+          <fieldset name="rangedweapons" class="repeating_Rangedweapons">
+            <div class="equipment_ranged_weapons_rep">
+              <div class="equipment_ranged_weapons_grid1">
+                <label class="equipment_ranged_weapons_gs1">Name</label>
+                <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_weapon-name" >
+                <label class="equipment_ranged_weapons_gs3">class</label>
+                <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_weapon-class" >
+              </div>
+              <div class="equipment_ranged_weapons_grid2">
+                <label class="equipment_ranged_weapons_gs5">Range</label>
+                <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_weapon-range" >
+                <label class="equipment_ranged_weapons_gs7">damroll</label>
+                <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_weapon-dam-roll" >
+                <label class="equipment_ranged_weapons_gs9">base</label>
+                <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_weapon-base" >
+                <label class="equipment_ranged_weapons_gs11">pierce</label>
+                <input class="equipment_ranged_weapons_gs12 full_width" type="text" value='0' name="attr_weapon-pierce" >
+              </div>
+              <div class="equipment_ranged_weapons_grid3">
+                <label class="equipment_ranged_weapons_gs13">Hitmod</label>
+                <input class="equipment_ranged_weapons_gs14 full_width" type="text" value='0' name="attr_weapon-mod1" >
+                <label class="equipment_ranged_weapons_gs15">magazine</label>
+                <input class="equipment_ranged_weapons_gs16 full_width" type="text" value='0' name="attr_weapon-mag" >
+                <label class="equipment_ranged_weapons_gs17">/</label>
+                <input class="equipment_ranged_weapons_gs18 full_width" type="text" value='0' name="attr_weapon-mag_max" >
+                <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='/me rolls to hit with his @{weapon-name} gaining [[floor(([[@{WFR}+@{WFR_advancement}+@{weapon-mod1}]]+?{Modifier|0}-1d100)/10)]] degrees of success' >Hit</button>
+                <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='/me rolls deals [[@{weapon-dam-roll}+@{weapon-base}]] damage with [[@{weapon-pierce}]] pierce' >DMG</button>
+              </div>
+              <div class="equipment_ranged_weapons_grid4">
+                <label class="equipment_ranged_weapons_gs21">RoF</label>
+                <input class="equipment_ranged_weapons_gs22 full_width" type="text" value='0' name="attr_weapon-semi" >
+                <label class="equipment_ranged_weapons_gs23">/</label>
+                <input class="equipment_ranged_weapons_gs24 full_width" type="text" value='0' name="attr_weapon-burst" >
+                <label class="equipment_ranged_weapons_gs25">/</label>
+                <input class="equipment_ranged_weapons_gs26 full_width" type="text" value='0' name="attr_weapon-auto" >
+                <label class="equipment_ranged_weapons_gs27">Reload</label>
+                <input class="equipment_ranged_weapons_gs28 full_width" type="text" name="attr_weapon-reload" >
+                <label class="equipment_ranged_weapons_gs29">weight</label>
+                <input class="equipment_ranged_weapons_gs30 full_width" type="text" value='0' name="attr_weapon-weight" >
+              </div>
+              <div>
+                <input name='attr_ability_r' type='text' placeholder='Description' class='full_width_17px' />
+                <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
+                <div class='collapsible_ability_description_window_a' ></div>
+                <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b'></textarea>
+              </div>
+            </div>
+            <br>
+          </fieldset>
         </div>
       </div>
       <br>
