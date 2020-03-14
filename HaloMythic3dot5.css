@@ -251,21 +251,17 @@ ______________________________ start of grid structure for the mythic characteri
 }
 
 .sheet-mythicgs_width { width: 40px }
-.sheet-mythicgs_heading {
-	font-family: Serif;
-	font-size: 15px
-}
-
-.sheet-mythicgs1 { grid-area: amy1; }
+.sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Serif }
 .sheet-mythicgs2 { grid-area: amy2; margin-left:3px;}
 .sheet-mythicgs3 { grid-area: amy3; margin-left:3px;}
 .sheet-mythicgs4 { grid-area: amy4; margin-left:3px;}
 .sheet-mythicgs5 { grid-area: amy5; margin-left:12px; font-size: 13px; font-family: Serif }
-.sheet-mythicgs6 { grid-area: amy6; margin-left:9px; 	font-size: 13px; font-family: Serif }
-.sheet-mythicgs7 { grid-area: amy7; margin-left:12px; font-size: 13px; font-family: Serif;}
+.sheet-mythicgs6 { grid-area: amy6; margin-left:9px; font-size: 13px; font-family: Serif }
+.sheet-mythicgs7 { grid-area: amy7; margin-left:12px; font-size: 13px; font-family: Serif }
 .sheet-characteristics2_mythic {
 	display: grid;
 	justify-content: left;
+	margin-left: 5px;
 	grid-template-areas:
 	'amy1 amy1 amy1'
 	'amy2 amy3 amy4'
@@ -273,7 +269,7 @@ ______________________________ start of grid structure for the mythic characteri
 	grid-template-columns: 50px 50px 50px
 }
 
-.sheet-movementgs1 { grid-area: amm1; }
+.sheet-movementgs1 { grid-area: amm1; font-size: 15px; font-family: Serif }
 .sheet-movementgs2 { grid-area: amm2; 	margin-left:6px;}
 .sheet-movementgs3 { grid-area: amm3; 	margin-left:6px;}
 .sheet-movementgs4 { grid-area: amm4; 	margin-left:6px;}
@@ -299,7 +295,7 @@ ______________________________ start of grid structure for the mythic characteri
 	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px
 }
 
-.sheet-carrygs1 { grid-area: ac1; margin-left:10px;}
+.sheet-carrygs1 { grid-area: ac1; margin-left:10px; font-size: 15px; font-family: Serif }
 .sheet-carrygs2 { grid-area: ac2; margin-left:10px; width: 80%; }
 .sheet-carrygs3 { grid-area: ac3; margin-left:10px; width: 80%;}
 .sheet-carrygs4 { grid-area: ac4; margin-left:10px; width: 80%;}

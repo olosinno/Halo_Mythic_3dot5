@@ -213,8 +213,8 @@
 
     <div class='characteristics_mythic_movement_carry'>
 
-      <div class='characteristics2_mythic edge_padding'>
-        <p class='mythicgs1 mythicgs_heading'><b>Mythic Characteristics</b></p>
+      <div class='characteristics2_mythic'>
+        <p class='mythicgs1'><b>Mythic Characteristics</b></p>
         <input name='attr_STR_mythic' type='text' value='0' class='mythicgs2 mythicgs_width' />
         <input name='attr_TOU_mythic' type='text' value='0' class='mythicgs3 mythicgs_width' />
         <input name='attr_AGI_mythic' type='text' value='0' class='mythicgs4 mythicgs_width' />
@@ -1022,7 +1022,7 @@
     <br>
 
     <h2>Abilities</h2>
-    <p style='text-align: right; margin-top:-19px; margin-right: 5px'><b>Expand or collapse ability's descriptor block ⯆</b></p>
+    <p style='text-align: right; margin-top:-21px; margin-right: 5px'><b>Expand or collapse ability's descriptor block ⯆</b></p>
     <div class='edge_padding'>
       <input name='ability' type='text' placeholder='SQUAD UP' class='full_width_17px'/>
       <input name="attr_abilitycollapse" type='checkbox'  value="2" class='collapsible_ability_block_switch' />
@@ -1153,9 +1153,9 @@
     <!-- Medical -->
     <div class='medical-grid'>
       <div class='medicalg1 medicalG'>
-        Finger/toe
+        Finger / Toe
         <select name='attr_medical_finger/toe' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-15</option>
           <option value='2'>16-30</option>
           <option value='3'>31-45</option>
@@ -1163,22 +1163,22 @@
         </select>
         <div>
           <input type='checkbox' name='attr_medical_finger/toe' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_medical_finger/toe' value='1' class='hidden hider' >
-          <div>-1 WFM and WFR to Finger, -2 Agility to Toe</div>
+          <div>-1 WFM + WFR to Finger,<br>-2 Agility to Toe</div>
           <input type='checkbox' name='attr_medical_finger/toe' value='2' class='hidden hider' >
-          <div>-2 WFM and WFR to Finger, -4 Agility to Toe</div>
+          <div>-2 WFM + WFR to Finger,<br>-4 Agility to Toe</div>
           <input type='checkbox' name='attr_medical_finger/toe' value='3' class='hidden hider' >
-          <div>Body Location damaged. No longer usable. -3 Strength to Finger, -3 Agility to Toe</div>
+          <div>Body Location damaged.<br>No longer usable. -3 Strength to Finger, -3 Agility to Toe</div>
           <input type='checkbox' name='attr_medical_finger/toe' value='4' class='hidden hider' >
-          <div>Body Locaton Destroyed. -4 Strength to Finger, -4 Agility to Toe</div>
+          <div>Body Locaton destroyed,<br>-4 Strength to Finger, -4 Agility to Toe</div>
         </div>
       </div>
 
       <div class='medicalg2 medicalG'>
         Heart
         <select name='attr_medical_heart' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-30</option>
           <option value='3'>31-40</option>
@@ -1187,24 +1187,24 @@
         </select>
         <div>
           <input type='checkbox' name='attr_medical_heart' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_medical_heart' value='1' class='hidden hider'>
-          <div>-2 Strength, Toughness, Agility</div>
+          <div>-2 Strength + Toughness + Agility</div>
           <input type='checkbox' name='attr_medical_heart' value='2' class='hidden hider'>
-          <div>-5 Strength, Toughness, Agility</div>
+          <div>-5 Strength + Toughness + Agility</div>
           <input type='checkbox' name='attr_medical_heart' value='3' class='hidden hider'>
-          <div>-10 Strength, Toughness, Agility</div>
+          <div>-10 Strength + Toughness + Agility</div>
           <input type='checkbox' name='attr_medical_heart' value='4' class='hidden hider'>
-          <div>Body Location damaged. +10 Fatigue, -15 Strength, Toughness, Agility</div>
+          <div>Body Location damaged.<br>+10 Fatigue, -15 Strength + Toughness + Agility</div>
           <input type='checkbox' name='attr_medical_heart' value='5' class='hidden hider'>
-          <div>Body Locaton Destroyed, instant death</div>
+          <div>Body Locaton destroyed,<br>instant death</div>
         </div>
       </div>
 
       <div class='medicalg3 medicalG'>
         Neck
         <select name='attr_neck' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1214,7 +1214,7 @@
         </select>
         <div>
           <input type='checkbox' name='attr_neck' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_neck' value='1' class='hidden hider'>
           <div>-2 Toughness</div>
           <input type='checkbox' name='attr_neck' value='2' class='hidden hider'>
@@ -1222,18 +1222,18 @@
           <input type='checkbox' name='attr_neck' value='3' class='hidden hider'>
           <div>-10 Toughness</div>
           <input type='checkbox' name='attr_neck' value='4' class='hidden hider'>
-          <div>-10 Toughness, +1 Fatigue</div>
+          <div>+1 Fatigue, -10 Toughness</div>
           <input type='checkbox' name='attr_neck' value='5' class='hidden hider'>
-          <div>Body Location damaged. -20 Toughness, Paralyzed and Helpless</div>
+          <div>Body Location damaged.<br>-20 Toughness, Paralyzed and Helpless</div>
           <input type='checkbox' name='attr_neck' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, instant deaths</div>
+          <div>Body Location destroyed,<br>instant death</div>
         </div>
       </div>
 
       <div class='medicalg4 medicalG'>
-        Skull/brain
+        Skull / Brain
         <select name='attr_skull/brain' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-30</option>
           <option value='3'>31-40</option>
@@ -1242,24 +1242,24 @@
         </select>
         <div>
           <input type='checkbox' name='attr_skull/brain' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_skull/brain' value='1' class='hidden hider'>
-          <div>-2 Perception, Intellect, Warfare Range, Warfare Melee</div>
+          <div>-2 Perception + Intellect + WFM + WFR</div>
           <input type='checkbox' name='attr_skull/brain' value='2' class='hidden hider'>
-          <div>-5 Perception, Intellect, Warfare Range, Warfare Melee</div>
+          <div>-5 Perception + Intellect + WFM + WFR</div>
           <input type='checkbox' name='attr_skull/brain' value='3' class='hidden hider'>
-          <div>-10 Perception, Intellect, Warfare Range, Warfare Melee</div>
+          <div>-10 Perception + Intellect + WFM + WFR</div>
           <input type='checkbox' name='attr_skull/brain' value='4' class='hidden hider'>
-          <div>Body Location damaged. +10 Fatigue, -15 Perception, Intellect, Warfare Range, Warfare Melee</div>
+          <div>Body Location damaged.<br>+10 Fatigue, -15 Perception + Intellect + WFM + WFR</div>
           <input type='checkbox' name='attr_skull/brain' value='5' class='hidden hider'>
-          <div>Body Location Destroyed, instant death</div>
+          <div>Body Location destroyed,<br>instant death</div>
         </div>
       </div>
 
       <div class='medicalg5 medicalG'>
-        Nose/ear
+        Nose / Ear
         <select name='attr_nose/ear' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1269,26 +1269,26 @@
         </select>
         <div>
           <input type='checkbox' name='attr_nose/ear' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_nose/ear' value='1' class='hidden hider'>
-          <div>-2 Perception to Smelling or Hearing Perception Tests</div>
+          <div>-2 Perception to smelling or hearing Perception tests</div>
           <input type='checkbox' name='attr_nose/ear' value='2' class='hidden hider'>
-          <div>-5 Perception to Smelling or Hearing Perception Tests</div>
+          <div>-5 Perception to smelling or hearing Perception tests</div>
           <input type='checkbox' name='attr_nose/ear' value='3' class='hidden hider'>
-          <div>-10 Perception to Smelling or Hearing Perception Tests</div>
+          <div>-10 Perception to smelling or hearing Perception tests</div>
           <input type='checkbox' name='attr_nose/ear' value='4' class='hidden hider'>
-          <div>-15 Perception to Smelling or Hearing Perception Tests</div>
+          <div>-15 Perception to smelling or hearing Perception tests</div>
           <input type='checkbox' name='attr_nose/ear' value='5' class='hidden hider'>
-          <div>Body Location broken, -20 Perception to Smelling or Hearing Perception Tests</div>
+          <div>Body Location broken,<br>-20 Perception to smelling or hearing Perception tests</div>
           <input type='checkbox' name='attr_nose/ear' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, cannot make Smelling Tests, or halves Perception for Hearing Tests</div>
+          <div>Body Location destroyed,<br>cannot make or halve Perception to smelling or hearing tests</div>
         </div>
       </div>
 
       <div class='medicalg6 medicalG'>
-        Arm/leg
+        Limb (Arm / Leg)
         <select name='attr_arm/leg' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1298,26 +1298,26 @@
         </select>
         <div>
           <input type='checkbox' name='attr_arm/leg' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_arm/leg' value='1' class='hidden hider'>
-          <div>-2 Strength to Arm, or -2 Agility to Leg</div>
+          <div>-2 Strength to Arm or<br>-2 Agility to Leg</div>
           <input type='checkbox' name='attr_arm/leg' value='2' class='hidden hider'>
-          <div>-5 Strength to Arm, or -5 Agility to Leg</div>
+          <div>-5 Strength to Arm, or<br>-5 Agility to Leg</div>
           <input type='checkbox' name='attr_arm/leg' value='3' class='hidden hider'>
-          <div>-10 Strength to Arm, or -10 Agility to Leg</div>
+          <div>-10 Strength to Arm, or<br>-10 Agility to Leg</div>
           <input type='checkbox' name='attr_arm/leg' value='4' class='hidden hider'>
-          <div>-15 Strength to Arm, or -15 Agility to Leg</div>
+          <div>-15 Strength to Arm, or<br>-15 Agility to Leg</div>
           <input type='checkbox' name='attr_arm/leg' value='5' class='hidden hider'>
-          <div>Body Location damaged, -15 Strength to Arm, or-15 Agility to Leg. -5 to any Action with thislimb.</div>
+          <div>Body Location damaged, -15 Strength to Arm, or -15 Agility to Leg. -5 to limb's Actions</div>
           <input type='checkbox' name='attr_arm/leg' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, limb cannot be used. +3 Fatigue.</div>
+          <div>Body Location destroyed,<br>limb cannot be used.<br>+3 Fatigue</div>
         </div>
       </div>
 
       <div class='medicalg7 medicalG'>
-        Small/large intestines
+        Small / Large Intestines
         <select name='attr_small/large intestines' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1327,26 +1327,26 @@
         </select>
         <div>
           <input type='checkbox' name='attr_small/large intestines' value='0' class='hidden hider' checked >
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_small/large intestines' value='1' class='hidden hider' >
-          <div>-2 Toughness, -2 Agility</div>
+          <div>-2 Toughness + Agility</div>
           <input type='checkbox' name='attr_small/large intestines' value='2' class='hidden hider'>
-          <div>-4 Toughness, -4 Agility</div>
+          <div>-4 Toughness + Agility</div>
           <input type='checkbox' name='attr_small/large intestines' value='3' class='hidden hider'>
-          <div>-6 Toughness, -6 Agility</div>
+          <div>-6 Toughness + Agility</div>
           <input type='checkbox' name='attr_small/large intestines' value='4' class='hidden hider'>
-          <div>-10 Toughness, -10 Agility</div>
+          <div>-10 Toughness + Agility</div>
           <input type='checkbox' name='attr_small/large intestines' value='5' class='hidden hider'>
-          <div>Body Location damaged, -15 Toughness, -15 Agility. +2 Fatigue</div>
+          <div>Body Location damaged,<br>+2 Fatigue, -15 Toughness + Agility</div>
           <input type='checkbox' name='attr_small/large intestines' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, -20 Toughness, -20 Agility. +5 Fatigue.</div>
+          <div>Body Location destroyed,<br>+5 Fatigue, -20 Toughness + Agility</div>
         </div>
       </div>
 
       <div class='medicalg8 medicalG'>
-        Lung
+        Lungs
         <select name='attr_lung' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1356,26 +1356,26 @@
         </select>
         <div>
           <input type='checkbox' name='attr_lung' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_lung' value='1' class='hidden hider'>
-          <div>-2 Toughness, Stunned for 1D5-Toughness Modifier in Rounds.</div>
+          <div>-2 Toughness, stunned for<br>(D5-Toughness Modifier) rounds.</div>
           <input type='checkbox' name='attr_lung' value='2' class='hidden hider'>
-          <div>-5 Toughness, Stunned for 2D5-Toughness Modifier in Rounds.</div>
+          <div>-5 Toughness, stunned for<br>(2D5-Toughness Modifier) rounds.</div>
           <input type='checkbox' name='attr_lung' value='3' class='hidden hider'>
-          <div>-10 Toughness, Stunned for 3D5-Toughness Modifier in Rounds.</div>
+          <div>-10 Toughness, stunned for<br>(3D5-Toughness Modifier) rounds.</div>
           <input type='checkbox' name='attr_lung' value='4' class='hidden hider'>
-          <div>-15 Toughness, Stunned for 4D5-Toughness Modifier in Rounds.</div>
+          <div>-15 Toughness, stunned for<br>(4D5-Toughness Modifier) rounds.</div>
           <input type='checkbox' name='attr_lung' value='5' class='hidden hider'>
-          <div>Body Location damaged, -20 Toughness, Stunned for 5D5-Toughness Modifier in Rounds.</div>
+          <div>Body Location damaged,<br>-20 Toughness, stunned for<br>(5D5-Toughness Modifier) rounds.</div>
           <input type='checkbox' name='attr_lung' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, -25 Toughness, Stunned for 6D5-Toughness Modifier in Rounds. Character will take 2 Wounds whenever they take a Movement Action quicker than 2 Meters per Turn.</div>
+          <div>Body Location destroyed,<br>-25 Toughness, stunned for<br>(6D5-Toughness Modifier) rounds.<br>Character will take 2 Wounds whenever they take a Movement Action quicker than 2 Meters per Turn.</div>
         </div>
       </div>
 
       <div class='medicalg9 medicalG'>
-        Kidney/stomach/liver/spleen
+        Kidney / Stomach / Liver / Spleen
         <select name='attr_kidney/stomach/liver/spleen' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1385,26 +1385,26 @@
         </select>
         <div>
           <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='1' class='hidden hider'>
-          <div>-2 Toughness, -2 Agility</div>
+          <div>-2 Toughness + Agility</div>
           <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='2' class='hidden hider'>
-          <div>-4 Toughness, -4 Agility</div>
+          <div>-4 Toughness + Agility</div>
           <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='3' class='hidden hider'>
-          <div>-6 Toughness, -6 Agility</div>
+          <div>-6 Toughness + Agility</div>
           <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='4' class='hidden hider'>
-          <div>-10 Toughness, -10 Agility</div>
+          <div>-10 Toughness + Agility</div>
           <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='5' class='hidden hider'>
-          <div>Body Location damaged, -15 Toughness, -15 Agility. +1 Fatigue</div>
+          <div>Body Location damaged,<br>+1 Fatigue, -15 Toughness + Agility</div>
           <input type='checkbox' name='attr_kidney/stomach/liver/spleen' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, -20 Toughness, -20 Agility. +5 Fatigue.</div>
+          <div>Body Location destroyed,<br>+5 Fatigue, -20 Toughness + Agility</div>
         </div>
       </div>
 
       <div class='medicalg10 medicalG'>
-        Knee/ankle/shoulder/elbow
+        Knee / Ankle / Shoulder / Elbow
         <select name='attr_knee/ankle/shoulder/elbow' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1414,26 +1414,26 @@
         </select>
         <div>
           <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='1' class='hidden hider'>
-          <div>-2 Strength, -2 Agility</div>
+          <div>-2 Strength + Agility</div>
           <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='2' class='hidden hider'>
-          <div>-4 Strength, -4 Agility</div>
+          <div>-4 Strength + Agility</div>
           <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='3' class='hidden hider'>
-          <div>-6 Strength, -6 Agility</div>
+          <div>-6 Strength + Agility</div>
           <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='4' class='hidden hider'>
-          <div>-10 Strength, -10 Agility</div>
+          <div>-10 Strength + Agility</div>
           <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='5' class='hidden hider'>
-          <div>Body Location damaged, -15 Strength, -15 Agility. +1 Fatigue</div>
+          <div>Body Location damaged,<br>+1 Fatigue, -15 Strength + Agility</div>
           <input type='checkbox' name='attr_knee/ankle/shoulder/elbow' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, -20 Strength, -20 Agility. +5 Fatigue.</div>
+          <div>Body Location destroyed,<br>+5 Fatigue, -20 Strength + Agility</div>
         </div>
       </div>
 
       <div class='medicalg11 medicalG'>
         Eye
         <select name='attr_eye' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1443,26 +1443,26 @@
         </select>
         <div>
           <input type='checkbox' name='attr_eye' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_eye' value='1' class='hidden hider'>
-          <div>-2 eyesight-based Perception Tests</div>
+          <div>-2 Perception to seeing tests</div>
           <input type='checkbox' name='attr_eye' value='2' class='hidden hider'>
-          <div>-5 eyesight-based Perception Tests</div>
+          <div>-5 Perception to seeing tests</div>
           <input type='checkbox' name='attr_eye' value='3' class='hidden hider'>
-          <div>-10 eyesight-based Perception Tests</div>
+          <div>-10 Perception to seeing tests</div>
           <input type='checkbox' name='attr_eye' value='4' class='hidden hider'>
-          <div>-12 eyesight-based Perception Tests</div>
+          <div>-12 Perception to seeing tests</div>
           <input type='checkbox' name='attr_eye' value='5' class='hidden hider'>
-          <div>Body Location broken, -15 eyesight-based Perception Tests</div>
+          <div>Body Location broken,<br>-15 Perception to seeing tests</div>
           <input type='checkbox' name='attr_eye' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, Character is blinded for 1D5 Rounds. -20 eye-based Perception Tests.</div>
+          <div>Body Location destroyed,<br>Character blinded for D5 rounds. -20 Perception to seeing tests</div>
         </div>
       </div>
 
       <div class='medicalg12 medicalG'>
         Mouth
         <select name='attr_mouth' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1472,26 +1472,26 @@
         </select>
         <div>
           <input type='checkbox' name='attr_mouth' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_mouth' value='1' class='hidden hider'>
-          <div>-1 Toughness, -5 to Speech-based Tests.</div>
+          <div>-1 Toughness, -5 to speaking tests</div>
           <input type='checkbox' name='attr_mouth' value='2' class='hidden hider'>
-          <div>-3 Toughness, -5 to Speech-based Tests.</div>
+          <div>-3 Toughness, -5 to speaking tests</div>
           <input type='checkbox' name='attr_mouth' value='3' class='hidden hider'>
-          <div>-5 Toughness, -10 to Speech-based Tests.</div>
+          <div>-5 Toughness, -10 to speaking tests</div>
           <input type='checkbox' name='attr_mouth' value='4' class='hidden hider'>
-          <div>-8 Toughness, -10 to Speech-based Tests.</div>
+          <div>-8 Toughness, -10 to speaking tests</div>
           <input type='checkbox' name='attr_mouth' value='5' class='hidden hider'>
-          <div>Body Location broken, damaged. -12 Toughness,+1 Fatigue, -15 to Speech-based Tests.</div>
+          <div>Body Location broken,<br>+1 Fatigue, -12 Toughness, -15 to speaking tests</div>
           <input type='checkbox' name='attr_mouth' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, -15 Toughness, +2 Fatigue, -15 to Speech-based Tests.</div>
+          <div>Body Location destroyed,<br>+2 Fatigue, -15 Toughness, -15 to speaking tests</div>
         </div>
       </div>
 
       <div class='medicalg13 medicalG'>
         Hand
         <select name='attr_hand' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1501,26 +1501,26 @@
         </select>
         <div>
           <input type='checkbox' name='attr_hand' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_hand' value='1' class='hidden hider'>
-          <div>-3 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+          <div>-3 to both Warfare stats if hand is used to Attack.</div>
           <input type='checkbox' name='attr_hand' value='2' class='hidden hider'>
-          <div>-5 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+          <div>-5 to both Warfare stats if hand is used to Attack.</div>
           <input type='checkbox' name='attr_hand' value='3' class='hidden hider'>
-          <div>-10 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+          <div>-10 to both Warfare stats if hand is used to Attack.</div>
           <input type='checkbox' name='attr_hand' value='4' class='hidden hider'>
-          <div>-13 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+          <div>-13 to both Warfare stats if hand is used to Attack.</div>
           <input type='checkbox' name='attr_hand' value='5' class='hidden hider'>
-          <div>Body Location broken, -15 to Warfare Melee and Warfare Range if the hand is used in the Attack.</div>
+          <div>Body Location broken,<br>-15 to both Warfare stats if hand is used to Attack.</div>
           <input type='checkbox' name='attr_hand' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, Character cannot use the hand for any Actions.</div>
+          <div>Body Location destroyed,<br>Character cannot use the hand for any Actions.</div>
         </div>
       </div>
 
       <div class='medicalg14 medicalG'>
-        Chin/jaw/cheek
+        Chin / Jaw / Cheek
         <select name='attr_chin/jaw/cheek' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1530,26 +1530,26 @@
         </select>
         <div>
           <input type='checkbox' name='attr_chin/jaw/cheek' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_chin/jaw/cheek' value='1' class='hidden hider'>
           <div>-2 Toughness</div>
           <input type='checkbox' name='attr_chin/jaw/cheek' value='2' class='hidden hider'>
-          <div>-4 Toughness, -5 to Speech-based Tests.</div>
+          <div>-4 Toughness, -5 to speaking tests</div>
           <input type='checkbox' name='attr_chin/jaw/cheek' value='3' class='hidden hider'>
-          <div>-6 Toughness, -10 to Speech-based Tests.</div>
+          <div>-6 Toughness, -10 to speaking tests</div>
           <input type='checkbox' name='attr_chin/jaw/cheek' value='4' class='hidden hider'>
-          <div>-10 Toughness, +1 Fatigue, -10 to Speech-based Tests.</div>
+          <div>+1 Fatigue, -10 Toughness, -10 to speaking tests</div>
           <input type='checkbox' name='attr_chin/jaw/cheek' value='5' class='hidden hider'>
-          <div>Body Location damaged. -15 Toughness,+2 Fatigue, -15 to Speech-based Tests.</div>
+          <div>Body Location damaged,<br>+2 Fatigue, -15 Toughness, -15 to speaking tests</div>
           <input type='checkbox' name='attr_chin/jaw/cheek' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, -20 Toughness, +3 Fatigue, -20 to Speech-based Tests.</div>
+          <div>Body Location destroyed,<br>+3 Fatigue, -20 Toughness, -20 to speaking tests</div>
         </div>
       </div>
 
       <div class='medicalg15 medicalG'>
         Foot
         <select name='attr_foot' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1559,7 +1559,7 @@
         </select>
         <div>
           <input type='checkbox' name='attr_foot' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_foot' value='1' class='hidden hider'>
           <div>-5 to Agility when figuring Movement Speed.</div>
           <input type='checkbox' name='attr_foot' value='2' class='hidden hider'>
@@ -1569,16 +1569,16 @@
           <input type='checkbox' name='attr_foot' value='4' class='hidden hider'>
           <div>-20 to Agility when figuring Movement Speed.</div>
           <input type='checkbox' name='attr_foot' value='5' class='hidden hider'>
-          <div>Body Location broken, -25 to Agility when figuring Movement Speed.</div>
+          <div>Body Location broken,<br>-25 to Agility when figuring Movement Speed.</div>
           <input type='checkbox' name='attr_foot' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, Character cannot use the Foot for any Actions. Half Move reduced to 1 Meter, Full Move reduced to 2 Meters, Charge and Run are impossible.</div>
+          <div>Body Location destroyed,<br>Character cannot use the Foot for any Actions. Half Move reduced to 1 Meter, Full Move reduced to 2 Meters, Charge and Run are impossible.</div>
         </div>
       </div>
 
       <div class='medicalg16 medicalG'>
         Pelvis
         <select name='attr_pelvis' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1588,7 +1588,7 @@
         </select>
         <div>
           <input type='checkbox' name='attr_pelvis' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_pelvis' value='1' class='hidden hider'>
           <div>-1 Toughness, -4 Agility</div>
           <input type='checkbox' name='attr_pelvis' value='2' class='hidden hider'>
@@ -1598,16 +1598,16 @@
           <input type='checkbox' name='attr_pelvis' value='4' class='hidden hider'>
           <div>-8 Toughness, -12 Agility</div>
           <input type='checkbox' name='attr_pelvis' value='5' class='hidden hider'>
-          <div>Body Location damaged, -20 Toughness, -20 Agility.</div>
+          <div>Body Location damaged,<br>-20 Toughness + Agility.</div>
           <input type='checkbox' name='attr_pelvis' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, -30 Toughness, -30 Agility.</div>
+          <div>Body Location destroyed,<br>-30 Toughness + Agility.</div>
         </div>
       </div>
 
       <div class='medicalg17 medicalG'>
         Chest
         <select name='attr_chest' class='full_width'>
-          <option selected='selected' value='0'>nominal</option>
+          <option selected='selected' value='0'>Nominal</option>
           <option value='1'>01-20</option>
           <option value='2'>21-25</option>
           <option value='3'>26-30</option>
@@ -1617,19 +1617,19 @@
         </select>
         <div>
           <input type='checkbox' name='attr_chest' value='0' class='hidden hider' checked>
-          <div>No effect/healthy</div>
+          <div>No Effect / Healthy</div>
           <input type='checkbox' name='attr_chest' value='1' class='hidden hider'>
           <div>-2 Toughness</div>
           <input type='checkbox' name='attr_chest' value='2' class='hidden hider'>
           <div>-4 Toughness</div>
           <input type='checkbox' name='attr_chest' value='3' class='hidden hider'>
-          <div>-8 Toughness, Stunned for 1D5 Rounds.</div>
+          <div>-8 Toughness, stunned for 1D5 Rounds.</div>
           <input type='checkbox' name='attr_chest' value='4' class='hidden hider'>
-          <div>-10 Toughness, Stunned for 2D5 Rounds.</div>
+          <div>-10 Toughness, stunned for 2D5 Rounds.</div>
           <input type='checkbox' name='attr_chest' value='5' class='hidden hider'>
-          <div>Body Location broken, damaged. -15 Toughness, Stunned for 3D5 Rounds.</div>
+          <div>Body Location broken,<br>-15 Toughness, stunned for 3D5 Rounds.</div>
           <input type='checkbox' name='attr_chest' value='6' class='hidden hider'>
-          <div>Body Location Destroyed, instant death.</div>
+          <div>Body Location destroyed,<br>instant death.</div>
         </div>
       </div>
 
@@ -1678,7 +1678,7 @@
         <div class='medical_table'>61-66 Small Intestines</div>
         <div class='medical_table'>67-72 Large Intestines</div>
         <div class='medical_table'>73-78 Kidney</div>
-        <div class='medical_table'>79-84 Stomach/Liver</div>
+        <div class='medical_table'>79-84 Stomach / Liver</div>
         <div class='medical_table'>85-89 Heart</div>
         <div class='medical_table'>90-96 Lungs</div>
         <div class='medical_table radius_border_bottom'>97-100 No Organ Hit</div>
@@ -1701,7 +1701,8 @@
         <!-- Every fieldset requires to be of class repeating_word1word2. -->
         <!-- Every fieldset requires its named element to be of attr_ prefix. -->
         <!-- Every textarea element requires a closing tag; cannot be a void element. -->
-        <fieldset class='repeating_medical'>
+        <textarea class="radius_border_bottom"name='attr_medical' placeholder='Not all injuries in 100DOS are lethal. Exhaustion, combat trauma, or exchanging blows with bare fists can all leave a character tattered, but intact. Fatigue measures the amount of non-lethal injury a character can take. For every level of Fatigue a Character has, they take a -5 Penalty to all Tests made.&#10;&#10;Once a Character surpasses their Toughness Modifier, multiplied by 2, in Fatigue, they fall into a coma. The Character’s coma will last one hour for every level of Fatigue the Character has. Every hour that passes, the level of Fatigue is reduced by one. The Character may wake up once their level of Fatigue is their Toughness Modifier or lower.'></textarea>
+		<fieldset class='repeating_medical'>
           <textarea class="radius_border_bottom"name='attr_medical'></textarea>
         </fieldset>
       </div>
@@ -1734,24 +1735,24 @@
       });
     </script>
 	<div class='training'>
-		<div class='faction_training core_table centered edge_padding'>
+		<div class='faction_training core_table centered half_width'>
 			<h2>Faction Training</h2>
 			<input name='attr_Weapons_training_UNSC' type='checkbox'>U.N.S.C.<br>
 			<input name='attr_Weapons_training_Covenant' type='checkbox'>Covenant<br>
 			<input name='attr_Weapons_training_Forerunner' type='checkbox'>Forerunner<br>
 		</div>
-		<div class='weapon_training core_table centered edge_padding'>
+		<div class='weapon_training core_table centered half_width'>
 			<h2>Weapon Training</h2>
-			<div class='training'>
-				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Basic</div>
-				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Infantry</div>
-				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Vehicle</div>
-				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Melee</div>
-				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Heavy</div>
-				<div><input name='attr_Weapons_training_Covenant' type='checkbox'>Advanced</div>
+			<div class='training edge_padding'>
+				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Basic</p>
+				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Infantry</p>
+				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Vehicle</p>
+				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Melee</p>
+				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Heavy</p>
+				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Advanced</p>
+				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Long-Range</p>
+				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Explosives</p>
 			</div>
-			<input name='attr_Weapons_training_Covenant' type='checkbox'>Long-Range<br>
-			<input name='attr_Weapons_training_Covenant' type='checkbox'>Explosive Launchers & Ordnance
 		</div>
 	</div>
 
