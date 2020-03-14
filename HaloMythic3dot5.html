@@ -266,8 +266,8 @@
               var tou_advancement = parseInt(values['tou_advancement'], 10) || 0;
               var weight_mod = str + str_advancement + tou + tou_advancement + (str_mythic + tou_mythic) * 10;
               var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
-              var str_mod = str + str_advancement;
-              var agi_mod = agi + agi_advancement;
+              var str_mod = str + str_advancement / 10;
+              var agi_mod = agi + agi_advancement / 10;
 
               // normal no modifiers ____________________________________________________________
 
@@ -288,7 +288,7 @@
                   leap_move:(str_mod / 2)
                 });
               }
-
+..
               // Spartan + Jiralhanae + Promethean Knight (carry weight * 2) ______________________________
               if(settings_race == 1) {
                 setAttrs({
