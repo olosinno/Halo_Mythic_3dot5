@@ -422,11 +422,13 @@
     <hr>
 
     <div class='minimisable_infographic_main'>
-      <input type='checkbox' name='attr_minimisable' value='0' class='minimisable_switch'>
-      <div class='minimisable_infographic_expand'>
+      <input type='radio' name='attr_minimisable' value='0' class='minimisable_switch0' checked>
+      <input type='radio' name='attr_minimisable' value='1' class='minimisable_switch1'>
+      <input type='radio' name='attr_minimisable' value='2' class='minimisable_switch2'>
+      use these buttons to cycle through the different infographics styles
 
+      <div class='minimisable_infographic_0'>
         <div class="minimisable_infographic_grid">
-
           <div class="minimisable_infographic_field2x3 radius_border">
             <label class="minimisable_infographic_g1 wounds_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{wounds} wounds out of @{wounds|max}"></button><h3 class='minimisable_infographic_g1'>Wounds</h3></label>
             <p class='minimisable_infographic_g2'>Current</p>
@@ -452,7 +454,6 @@
           </div>
 
           <div class="minimisable_infographic_field4x3 radius_border">
-            <button class="hidden" type="roll" name="rolo" value="@attr_shields"></button>
             <label class="minimisable_infographic_g1 shields_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{shields} shields of @{shields|max}. the shields recharge with a rate of @{shields_charge} on  a delay of @{shields_delay} half actions"></button><h3 class='minimisable_infographic_g1'>Shields</h3></label>
             <p class='minimisable_infographic_g6'>Current</p>
             <input class="minimisable_infographic_g7 full_width" type="text" name="attr_shields" value="0">
@@ -465,7 +466,6 @@
           </div>
 
           <div class="minimisable_infographic_field4x3 radius_border">
-            <button class="hidden" type="roll" name="rolo" value="@attr_shields"></button>
             <label class="minimisable_infographic_g1 armor_width"><button class="hidden" type="roll" name="shield_roll" value="/me has @{Armor_head} head armor | @{Armor_arms} arm armor | @{Armor_chest} chest armor | @{Armor_legs} leg armor"></button><h3 class='minimisable_infographic_g1'>armor</h3></label>
             <p class='minimisable_infographic_g6'>Head</p>
             <input class="minimisable_infographic_g7 full_width" type="text" name="attr_Armor_head" value="0">
@@ -476,7 +476,18 @@
             <p class='minimisable_infographic_g4'>Legs</p>
             <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Armor_legs" value="0">
           </div>
+        </div>
+      </div>
 
+      <div class='minimisable_infographic_1'>
+        <div class="minimisable_infographic_field2x3 radius_border">
+          <label class="minimisable_infographic_g1 support_width"><button class="hidden" type="roll" name="support_roll" value="/me has @{support} support points out of @{support|max}"></button><h3 class='minimisable_infographic_g1'>SP</h3></label>
+          <p class='minimisable_infographic_g2'>Current</p>
+          <input class="minimisable_infographic_g3 full_width" type="text" name="attr_support" value="0">
+          <p class='minimisable_infographic_g4'>Max</p>
+          <input class="minimisable_infographic_g5 full_width" type="text" name="attr_support_max" value="0">
+        </div>
+        <div class='minimisable_infographic_2'>
           <div class="minimisable_infographic_field2x3 radius_border">
             <label class="minimisable_infographic_g1 support_width"><button class="hidden" type="roll" name="support_roll" value="/me has @{support} support points out of @{support|max}"></button><h3 class='minimisable_infographic_g1'>SP</h3></label>
             <p class='minimisable_infographic_g2'>Current</p>
@@ -484,11 +495,6 @@
             <p class='minimisable_infographic_g4'>Max</p>
             <input class="minimisable_infographic_g5 full_width" type="text" name="attr_support_max" value="0">
           </div>
-
-        </div>
-      </div>
-      <div class='minimisable_infographic_collapse'>
-		Uncheck box to EXPAND your minimizable infographic!
       </div>
     </div>
     <br>
