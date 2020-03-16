@@ -489,7 +489,7 @@ ______________________________ start of core tab ______________________________ 
 ______________________________ start of equipment tab ______________________________ */
 .sheet-equipment_divider {
 	display: grid;
-	grid-template-columns: 48.5% 1% 48.5%;
+	grid-template-columns: 49.5% 1% 49.5%;
 	grid-template-areas:
 	'e1 e0 e2'
 	'e3 e3 e3';
