@@ -570,9 +570,9 @@
           <button type="roll" name="athletics_roll" value='/me rolls Athletics with [[floor(([[@{athletics_mod1}]]+@{athletics_mod2}+[[@{athletics_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{athletics_mod1}+@{athletics_mod2}+@{athletics_mod3}-20" disabled="true"/></button>
         </div>
         <div class='skill_grid'>
-          <p class='bold_text skills_text'>Camoflage</p>
+          <p class='bold_text skills_text'>Camouflage</p>
           <p class='bold_text skills_text'></p>
-          <select name='attr_camoflage_mod1' class="full_width full_height">
+          <select name='attr_camouflage_mod1' class="full_width full_height">
             <option value='@{STR} + @{STR_advancement}' >STR</option>
             <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
             <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
@@ -584,11 +584,11 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_camoflage_mod2' type='number' value='0'/>
-          <input name="attr_camoflage_mod3" type="checkbox" value="20" class='skills_item'/>
-          <input name="attr_camoflage_mod3" type="checkbox" value="30" class='skills_item'/>
-          <input name="attr_camoflage_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="camoflage_roll" value='/me rolls Camoflage with [[floor(([[@{camoflage_mod1}]]+@{camoflage_mod2}+[[@{camoflage_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{camoflage_mod1}+@{camoflage_mod2}+@{camoflage_mod3}-20" disabled="true"/></button>
+          <input name='attr_camouflage_mod2' type='number' value='0'/>
+          <input name="attr_camouflage_mod3" type="checkbox" value="20" class='skills_item'/>
+          <input name="attr_camouflage_mod3" type="checkbox" value="30" class='skills_item'/>
+          <input name="attr_camouflage_mod3" type="checkbox" value="40" class='skills_item'/>
+          <button type="roll" name="camouflage_roll" value='/me rolls Camouflage with [[floor(([[@{camouflage_mod1}]]+@{camouflage_mod2}+[[@{camouflage_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{camouflage_mod1}+@{camouflage_mod2}+@{camouflage_mod3}-20" disabled="true"/></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Command</p>
@@ -627,9 +627,9 @@
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
           <input name='attr_cryptography_mod2' type='number' value='0'/>
-          <input name="attr_cryptography_mod3" type="checkbox" value="20" class='skills_item'/>
-          <input name="attr_cryptography_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_cryptography_mod3" type="checkbox" value="40" class='skills_item'/>
+          <input name="attr_cryptography_mod3" type="checkbox" value="50" class='skills_item'/>
+          <input name="attr_cryptography_mod3" type="checkbox" value="60" class='skills_item'/>
           <button type="roll" name="cryptography_roll" value='/me rolls Cryptography with [[floor(([[@{cryptography_mod1}]]+@{cryptography_mod2}+[[@{cryptography_mod3} -40]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{cryptography_mod1}+@{cryptography_mod2}+@{cryptography_mod3}-40" disabled="true"/></button>
         </div>
         <div class='skill_grid'>
@@ -669,9 +669,9 @@
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
           <input name='attr_demolition_mod2' type='number' value='0'/>
-          <input name="attr_demolition_mod3" type="checkbox" value="20" class='skills_item'/>
-          <input name="attr_demolition_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_demolition_mod3" type="checkbox" value="40" class='skills_item'/>
+          <input name="attr_demolition_mod3" type="checkbox" value="50" class='skills_item'/>
+          <input name="attr_demolition_mod3" type="checkbox" value="60" class='skills_item'/>
           <button type="roll" name="demolition_roll" value='/me rolls Demolition with [[floor(([[@{demolition_mod1}]]+@{demolition_mod2}+[[@{demolition_mod3} -40]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{demolition_mod1}+@{demolition_mod2}+@{demolition_mod3}-40" disabled="true"/></button>
         </div>
         <div class='skill_grid'>
@@ -759,6 +759,27 @@
           <button type="roll" name="intimidation_roll" value='/me rolls Intimidation with [[floor(([[@{intimidation_mod1}]]+@{intimidation_mod2}+[[@{intimidation_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{intimidation_mod1}+@{intimidation_mod2}+@{intimidation_mod3}-20" disabled="true"/></button>
         </div>
         <div class='skill_grid'>
+          <p class='bold_text skills_text'>Investigation</p>
+          <p class='bold_text skills_text'></p>
+          <select name='attr_investigation_mod1' class="full_width full_height">
+            <option value='@{STR} + @{STR_advancement}' >STR</option>
+            <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
+            <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
+            <option value='@{WFR} + @{WFR_advancement}' >WFR</option>
+            <option value='@{WFM} + @{WFM_advancement}' >WFM</option>
+            <option value='@{INT} + @{INT_advancement}' >INT</option>
+            <option value='@{PER} + @{PER_advancement}' >PER</option>
+            <option value='@{CR} + @{CR_advancement}' >CR</option>
+            <option value='@{CH} + @{CH_advancement}' >CH</option>
+            <option value='@{LD} + @{LD_advancement}' selected='selected'>LD</option>
+          </select>
+          <input name='attr_investigation_mod2' type='number' value='0'/>
+          <input name="attr_investigation_mod3" type="checkbox" value="20" class='skills_item'/>
+          <input name="attr_investigation_mod3" type="checkbox" value="30" class='skills_item'/>
+          <input name="attr_investigation_mod3" type="checkbox" value="40" class='skills_item'/>
+          <button type="roll" name="investigation_roll" value='/me rolls Investigation with [[floor(([[@{investigation_mod1}]]+@{investigation_mod2}+[[@{investigation_mod3} -20]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{investigation_mod1}+@{investigation_mod2}+@{investigation_mod3}-20" disabled="true"/></button>
+        </div>
+        <div class='skill_grid'>
           <p class='bold_text skills_text'>Medication</p>
           <p class='bold_text skills_text'>(A)</p>
           <select name='attr_medication_mod1' class="full_width full_height">
@@ -774,9 +795,9 @@
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
           <input name='attr_medication_mod2' type='number' value='0'/>
-          <input name="attr_medication_mod3" type="checkbox" value="20" class='skills_item'/>
-          <input name="attr_medication_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_medication_mod3" type="checkbox" value="40" class='skills_item'/>
+          <input name="attr_medication_mod3" type="checkbox" value="50" class='skills_item'/>
+          <input name="attr_medication_mod3" type="checkbox" value="60" class='skills_item'/>
           <button type="roll" name="medication_roll" value='/me rolls Medication with [[floor(([[@{medication_mod1}]]+@{medication_mod2}+[[@{medication_mod3} -40]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{medication_mod1}+@{medication_mod2}+@{medication_mod3}-40" disabled="true"/></button>
         </div>
         <div class='skill_grid'>
@@ -858,9 +879,9 @@
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
           <input name='attr_security_mod2' type='number' value='0'/>
-          <input name="attr_security_mod3" type="checkbox" value="20" class='skills_item'/>
-          <input name="attr_security_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_security_mod3" type="checkbox" value="40" class='skills_item'/>
+          <input name="attr_security_mod3" type="checkbox" value="50" class='skills_item'/>
+          <input name="attr_security_mod3" type="checkbox" value="60" class='skills_item'/>
           <button type="roll" name="security_roll" value='/me rolls Security with [[floor(([[@{security_mod1}]]+@{security_mod2}+[[@{security_mod3} -40]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{security_mod1}+@{security_mod2}+@{security_mod3}-40" disabled="true"/></button>
         </div>
         <div class='skill_grid'>
@@ -921,9 +942,9 @@
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
           <input name='attr_technology_mod2' type='number' value='0'/>
-          <input name="attr_technology_mod3" type="checkbox" value="20" class='skills_item'/>
-          <input name="attr_technology_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_technology_mod3" type="checkbox" value="40" class='skills_item'/>
+          <input name="attr_technology_mod3" type="checkbox" value="50" class='skills_item'/>
+          <input name="attr_technology_mod3" type="checkbox" value="60" class='skills_item'/>
           <button type="roll" name="technology_roll" value='/me rolls Technology with [[floor(([[@{technology_mod1}]]+@{technology_mod2}+[[@{technology_mod3} -40]]+?{Modifier|0}-1d100)/10)]] degrees of success.' class="clear"><input class="input_background"name="attr_education_total" value="@{technology_mod1}+@{technology_mod2}+@{technology_mod3}-40" disabled="true"/></button>
         </div>
         <fieldset name='skills' class='repeating_skills'>
@@ -1024,10 +1045,10 @@
     <h2>Abilities</h2>
     <p style='text-align: right; margin-top:-21px; margin-right: 5px'><b>Expand or collapse ability's descriptor block ⯆</b></p>
     <div class='edge_padding'>
-      <input name='ability' type='text' placeholder='SQUAD UP' class='full_width_17px'/>
+      <input name='attr_ability' type='text' placeholder='SQUAD UP' class='full_width_17px'/>
       <input name="attr_abilitycollapse" type='checkbox'  value="2" class='collapsible_ability_block_switch' />
       <div class='collapsible_ability_description_window_a' ></div>
-      <textarea name='attr_ability' class='collapsible_ability_description_window_b'
+      <textarea name='attr_ability_desc' class='collapsible_ability_description_window_b'
       placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
       Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
       <fieldset name='abilities' class='repeating_abilities'>
@@ -1141,7 +1162,7 @@
 
       <div class="equipment_items_list">
         <fieldset name="items" class="repeating_items">
-          <textarea></textarea>
+          <textarea name="item_desc"></textarea>
         </fieldset>
       </div>
 
@@ -1737,21 +1758,21 @@
 	<div class='training'>
 		<div class='faction_training core_table centered half_width'>
 			<h2>Faction Training</h2>
-			<input name='attr_Weapons_training_UNSC' type='checkbox'>U.N.S.C.<br>
-			<input name='attr_Weapons_training_Covenant' type='checkbox'>Covenant<br>
-			<input name='attr_Weapons_training_Forerunner' type='checkbox'>Forerunner<br>
+			<input name='attr_faction_training_human' type='checkbox'>U.N.S.C.<br>
+			<input name='attr_faction_training_covenant' type='checkbox'>Covenant<br>
+			<input name='attr_faction_training_forerunner' type='checkbox'>Forerunner<br>
 		</div>
 		<div class='weapon_training core_table centered half_width'>
 			<h2>Weapon Training</h2>
 			<div class='training edge_padding'>
-				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Basic</p>
-				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Infantry</p>
-				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Vehicle</p>
-				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Melee</p>
-				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Heavy</p>
-				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Advanced</p>
-				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Long-Range</p>
-				<p><input name='attr_Weapons_training_Covenant' type='checkbox'>Explosives</p>
+				<p><input name='attr_weapons_training_basic' type='checkbox'>Basic</p>
+				<p><input name='attr_weapons_training_infantry' type='checkbox'>Infantry</p>
+				<p><input name='attr_weapons_training_vehicle' type='checkbox'>Vehicle</p>
+				<p><input name='attr_weapons_training_melee' type='checkbox'>Melee</p>
+				<p><input name='attr_weapons_training_heavy' type='checkbox'>Heavy</p>
+				<p><input name='attr_weapons_training_special' type='checkbox'>Advanced</p>
+				<p><input name='attr_weapons_training_long-range' type='checkbox'>Long-Range</p>
+				<p><input name='attr_weapons_training_explosives' type='checkbox'>Explosives</p>
 			</div>
 		</div>
 	</div>
