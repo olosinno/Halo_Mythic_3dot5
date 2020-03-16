@@ -16,7 +16,7 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 2. Keep order in HTML elements' attributes by the way they're listed.  name type value class
 */
 .sheet-background_radius{
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 11px;
 }
 
@@ -93,7 +93,7 @@ button[type="roll"].sheet-clear::before {
 }
 
 /* All button elements of type roll when hovered over: */
-button[type='roll']:hover { background-color: red;}
+button[type='roll']:hover { background: rgb(200, 0, 0) !important;}
 label:hover { cursor: pointer;}
 
 
@@ -376,23 +376,14 @@ ______________________________ start of tab buttons toggles ____________________
 ______________________________ start of minimisable infographic ______________________________ */
 
 .sheet-minimisable_infographic_main {
-	margin-left: 10px;
-	display: grid;
-	grid-template-columns: 18px auto;
-
+	margin-left: 5px;
 }
 .sheet-minimisable_infographic_grid{
 	display: grid;
 	grid-template-columns: 100px 100px 100px 185px 185px
 }
-.sheet-wounds_width { width: 50px;}
-.sheet-Fatigue_width { width: 45px;}
-.sheet-luck_width { width: 26px;}
-.sheet-shields_width { width: 45px;}
-.sheet-armor_width { width: 35px;}
-.sheet-support_width { width: 25px }
 
-.sheet-minimisable_infographic_g1{grid-area: mi1; justify-self: center; color:white; text-align: left!important;font-family: Saira Semi Condensed; background:#506b95}
+.sheet-minimisable_infographic_g1{grid-area: mi1; width: calc(100% - 6px);justify-self: center; border: 0px solid transparent; background:#394C6A !important;	font-family: Saira Semi Condensed; font-size: 20px; text-decoration: underline}
 .sheet-minimisable_infographic_g2{grid-area: mi2; justify-self: right; margin-right: 3px; margin-top: 3px; color:white; font-family: Saira Semi Condensed }
 .sheet-minimisable_infographic_g3{grid-area: mi3; border-right: 1px solid #394C6A;}
 .sheet-minimisable_infographic_g4{grid-area: mi4; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
@@ -425,11 +416,13 @@ ______________________________ start of minimisable infographic ________________
 	'mi8 mi9 mi4 mi5'
 }
 
-.sheet-minimisable_infographic_expand,
-.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_collapse { color: black; display: block; font-weight: bold }
+.sheet-minimisable_infographic_0,
+.sheet-minimisable_infographic_1{ display: none }
 
-.sheet-minimisable_infographic_collapse,
-.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_expand { display: none }
+.sheet-minimisable_switch0:checked ~ div.sheet-minimisable_infographic_0 { color: black; display: block; font-weight: bold }
+.sheet-minimisable_switch1:checked ~ div.sheet-minimisable_infographic_1 { color: black; display: block; font-weight: bold }
+
+
 
 /* ______________________________ end of minimisable infographic ______________________________
 ______________________________ start of core tab ______________________________ */
@@ -540,39 +533,44 @@ ______________________________ start of equipment tab __________________________
 .sheet-equipment_ranged_weapons_gs30{ grid-area: rw30; 	color: white;font-size: 14px;}
 
 .sheet-equipment_ranged_weapons_grid1{
-display: grid;
-grid-template-columns: 11% 4% 10% 10% 10% 10% 10% 10% 10% 15%;
-grid-template-areas:
-'rw1  rw2  rw2  rw2  rw2  rw2  rw2  rw3  rw4  rw4'}
+	display: grid;
+	grid-template-columns: 11% 4% 10% 10% 10% 10% 10% 10% 10% 15%;
+	grid-template-areas:
+	'rw1  rw2  rw2  rw2  rw2  rw2  rw2  rw3  rw4  rw4'
+}
 
 .sheet-equipment_ranged_weapons_grid2{
-display: grid;
-grid-template-columns: 12% 0% 10% 10% 15% 8% 10% 10% 15% 10%;
-grid-template-areas:
-'rw5  rw6  rw6  rw6  rw7  rw8  rw9  rw10 rw11 rw12'}
+	display: grid;
+	grid-template-columns: 12% 0% 10% 10% 15% 8% 10% 10% 15% 10%;
+	grid-template-areas:
+	'rw5  rw6  rw6  rw6  rw7  rw8  rw9  rw10 rw11 rw12'
+}
 
 .sheet-equipment_ranged_weapons_grid3{
-display: grid;
-grid-template-columns: 14% 15% 18% 8% 4% 8% 15% 15%;
-grid-template-areas:
-'rw13 rw14 rw15 rw16 rw17 rw18 rw19 rw20'}
+	display: grid;
+	grid-template-columns: 14% 15% 18% 8% 4% 8% 15% 15%;
+	grid-template-areas:
+	'rw13 rw14 rw15 rw16 rw17 rw18 rw19 rw20'
+}
 
 
 .sheet-equipment_ranged_weapons_grid4{
-display: grid;
-grid-template-columns: 8% 8% 4% 8% 4% 8% 15% 20% 13% 12%;
-grid-template-areas:
-'rw21 rw22 rw23 rw24 rw25 rw26 rw27 rw28 rw29 rw30'}
+	display: grid;
+	grid-template-columns: 8% 8% 4% 8% 4% 8% 15% 20% 13% 12%;
+	grid-template-areas:
+	'rw21 rw22 rw23 rw24 rw25 rw26 rw27 rw28 rw29 rw30'
+}
 
 
 
 
 
 .sheet-equipment_melee_weapons_grid3{
-display: grid;
-grid-template-columns: 12% 12% 12% 11% 10% 10% 4% 10% 8% 8%;
-grid-template-areas:
-'rw13 rw14 rw15 rw16 rw19 rw18 rw17 rw20 rw21 rw22'}
+	display: grid;
+	grid-template-columns: 12% 12% 12% 11% 10% 10% 4% 10% 8% 8%;
+	grid-template-areas:
+	'rw13 rw14 rw15 rw16 rw19 rw18 rw17 rw20 rw21 rw22'
+}
 
 /* ______________________________ end of equipment tab ______________________________
 ______________________________ start of medical tab ______________________________ */
@@ -786,4 +784,112 @@ ______________________________ start of vehicles tab ___________________________
 	'v72 v73 v74 v75'
 	'v76 v76 v76 v76';
 	grid-template-columns: 25% 25% 25% 25%
+}
+
+
+
+
+
+
+
+
+
+.sheet-rolltemplate-test div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-test .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-test div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-test div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+
+.sheet-rolltemplate-test .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1);
+}
+
+.sheet-rolltemplate-test .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-test .inlinerollresult.fullfail {
+	border: 3px solid #B31515;
+}
+
+.sheet-rolltemplate-test .inlinerollresult.importantroll {
+	border: 3px solid #4A57ED;
+}
+
+
+
+
+
+
+
+.sheet-rolltemplate-info .sheet-template-header,
+.sheet-rolltemplate-info .sheet-template-row {
+	color: white;
+	line-height: 1.6em;
+	font-size: 1.2em;
+	font-family: Saira Semi Condensed;
+	font-weight: bold;
+}
+
+
+.sheet-rolltemplate-info .sheet-template-header {
+	background: #394C6A;
+	border-radius: 10px 10px 0px 0px;
+	text-align: center;
+	text-decoration: underline;
+}
+.sheet-rolltemplate-info .sheet-template-content {
+	background: #506b95;
+	border-radius: 0px 0px 10px 10px;
+	padding: 2px;
+	padding-left: 5px;
+	display: grid;
+	grid-template-columns: auto auto
+}
+.sheet-rolltemplate-info .sheet-template-right{
+	text-align: right;
+	margin-right: 5px
+}
+
+
+
+
+
+.sheet-rolltemplate-info .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 1px solid white;
+		border-radius: 3px 3px 3px 3px;
+	background: #394C6A
+}
+.sheet-rolltemplate-info .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-info .inlinerollresult.fullfail {
+	border: 3px solid #B31515;
+}
+
+.sheet-rolltemplate-info .inlinerollresult.importantroll {
+	border: 3px solid #4A57ED;
 }
