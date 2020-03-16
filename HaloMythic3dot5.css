@@ -93,7 +93,7 @@ button[type="roll"].sheet-clear::before {
 }
 
 /* All button elements of type roll when hovered over: */
-button[type='roll']:hover { background-color: red;}
+button[type='roll']:hover { background: rgb(200, 0, 0) !important;}
 label:hover { cursor: pointer;}
 
 
@@ -380,14 +380,8 @@ ______________________________ start of minimisable infographic ________________
 	display: grid;
 	grid-template-columns: 100px 100px 100px 185px 185px
 }
-.sheet-wounds_width { width: 50px;}
-.sheet-Fatigue_width { width: 45px;}
-.sheet-luck_width { width: 26px;}
-.sheet-shields_width { width: 45px;}
-.sheet-armor_width { width: 35px;}
-.sheet-support_width { width: 25px }
 
-.sheet-minimisable_infographic_g1{grid-area: mi1; justify-self: center; color:white; text-align: left!important;font-family: Saira Semi Condensed; background:#506b95}
+.sheet-minimisable_infographic_g1{grid-area: mi1; width: calc(100% - 6px);justify-self: center; border: 0px solid transparent; background:#394C6A !important;	font-family: Saira Semi Condensed; font-size: 20px; text-decoration: underline}
 .sheet-minimisable_infographic_g2{grid-area: mi2; justify-self: right; margin-right: 3px; margin-top: 3px; color:white; font-family: Saira Semi Condensed }
 .sheet-minimisable_infographic_g3{grid-area: mi3; border-right: 1px solid #394C6A;}
 .sheet-minimisable_infographic_g4{grid-area: mi4; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
