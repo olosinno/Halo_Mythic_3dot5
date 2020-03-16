@@ -16,7 +16,7 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 2. Keep order in HTML elements' attributes by the way they're listed.  name type value class
 */
 .sheet-background_radius{
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 11px;
 }
 
