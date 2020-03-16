@@ -1191,19 +1191,18 @@
       });
     </script>
 
-	<div class='text_centered'>
-		<fieldset name='gear' class='repeating_gear'>
-			<input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 25%'></input>
-			<input name='attr_gear_cost' type='number' placeholder='cR Value' style='width: 10%'>
-			<input name='attr_gear_weight' type='number' placeholder='Weight' style='width: 10%'>
-			<input name='attr_gear_bp' type='number' placeholder='Break Points' style='width: 15%'>
-			<input name='attr_gear_pg#' type='number' placeholder='Page #' style='width: 10%'>
-			Expand description
-			<input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
-            <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 84%'></textarea>
-		</fieldset>
-	</div>
-  </div>
+  <fieldset name='gear' class='repeating_gear'>
+    <div class="equipment_gear text_centered">
+      <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 68%'></input>
+      <input name='attr_gear_cost' type='text' placeholder='cR Cost' style='width: 6%'>
+      <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 6%'>
+      <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 11%'>
+      <input name='attr_gear_pg#' type='text' placeholder='P#' style='width: 4%'>
+      <input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
+      <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 84%'></textarea>
+    </div>
+  </fieldset>
+</div>
 
 
   <div class='medical box'>
@@ -2017,6 +2016,7 @@
 
 
         <div class='vehicle_weapons'>
+          <h3>Ranged weapon</h3>
           <fieldset name="rangedweapons" class="repeating_Rangedweapons">
             <div class="equipment_ranged_weapons_rep">
               <div class="equipment_ranged_weapons_grid1">
@@ -2065,6 +2065,10 @@
               </div>
             </div>
             <br>
+          </fieldset>
+          <h3>Melee weapon</h3>
+          <fieldset name="meleeweapons" class="repeating_Meleeweapons">
+
           </fieldset>
         </div>
       </div>
@@ -2117,20 +2121,20 @@
 <button type="roll" value="&{template:info} {{name=Wounds}} {{wounds=[[@{wounds}]]}} {{wounds-max=[[@{wounds|max}]]}}"></button>
 
 <rolltemplate class="sheet-rolltemplate-info">
-    <div class="sheet-template-header">{{name}}</div>
-    <div class="sheet-template-content">
-<div class="sheet-template-row sheet-template-right">Current </div>
-<div class="sheet-template-row">{{wounds}}</div>
-<div class="sheet-template-row sheet-template-right">Max </div>
-<div class="sheet-template-row">{{wounds-max}}</div>
+  <div class="sheet-template-header">{{name}}</div>
+  <div class="sheet-template-content">
+    <div class="sheet-template-row sheet-template-right">Current </div>
+    <div class="sheet-template-row">{{wounds}}</div>
+    <div class="sheet-template-row sheet-template-right">Max </div>
+    <div class="sheet-template-row">{{wounds-max}}</div>
+  </div>
 
 
 
-
-      {{#damage}}
-      <div class="sheet-template-row"><span>Damage: </span>{{damage}}
-        <span>Crit: </span>{{dmgcrit}}</div>
-        <div class="sheet-template-row"><span>Type: </span>{{dmgtype}}</div>
-        {{/damage}}
-      </div>
-    </rolltemplate>
+    {{#damage}}
+    <div class="sheet-template-row"><span>Damage: </span>{{damage}}
+      <span>Crit: </span>{{dmgcrit}}</div>
+      <div class="sheet-template-row"><span>Type: </span>{{dmgtype}}</div>
+      {{/damage}}
+    </div>
+  </rolltemplate>
