@@ -1160,14 +1160,25 @@
         </fieldset>
       </div>
 
-      <div class="equipment_items_list">
-        <fieldset name="items" class="repeating_items">
-          <textarea name="item_desc"></textarea>
-        </fieldset>
-      </div>
-
-    </div>
+	  <div class='equipment_credits text_centered'>
+		cR: <input name='attr_credit_total' type='number' style='width: 20%'>
+	  </div>
+	</div>
+	<br>
+	<div class='text_centered'>
+		<fieldset name='gear' class='repeating_gear'>
+			<input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 25%'></input>
+			<input name='attr_gear_cost' type='number' placeholder='cR Value' style='width: 10%'>
+			<input name='attr_gear_weight' type='number' placeholder='Weight' style='width: 10%'>
+			<input name='attr_gear_bp' type='number' placeholder='Break Points' style='width: 15%'>
+			<input name='attr_gear_pg#' type='number' placeholder='Page #' style='width: 10%'>
+			Expand description
+			<input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
+            <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 84%'></textarea>
+		</fieldset>
+	</div>
   </div>
+
 
 
   <div class='medical box radius_border_bottom'>
