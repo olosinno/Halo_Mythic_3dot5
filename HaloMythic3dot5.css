@@ -415,12 +415,10 @@ ______________________________ start of minimisable infographic ________________
 }
 
 .sheet-minimisable_infographic_0,
-.sheet-minimisable_infographic_1,
-.sheet-minimisable_infographic_2{ display: none }
+.sheet-minimisable_infographic_1{ display: none }
 
 .sheet-minimisable_switch0:checked ~ div.sheet-minimisable_infographic_0 { color: black; display: block; font-weight: bold }
 .sheet-minimisable_switch1:checked ~ div.sheet-minimisable_infographic_1 { color: black; display: block; font-weight: bold }
-.sheet-minimisable_switch2:checked ~ div.sheet-minimisable_infographic_2 { color: black; display: block; font-weight: bold }
 
 
 
