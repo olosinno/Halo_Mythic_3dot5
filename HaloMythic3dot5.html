@@ -1165,10 +1165,32 @@
       </div>
 
 	  <div class='equipment_credits text_centered'>
-		cR: <input name='attr_credit_total' type='number' style='width: 20%'>
+		cR: <input name='attr_credit_total' type='number' style='width: 20%' readonly>
 	  </div>
-  </div>
-  <br>
+	</div>
+	<br>
+
+	<script type='text/worker'>
+      on('change:repeating_gear:gear_cost remove:repeating_gear', () => {
+        // get section IDs because of operation both inside and outside of fieldset
+        getSectionIDs(`repeating_gear`, idArray => {
+          const fieldnames = [];
+          idArray.forEach(id => fieldnames.push (
+          `repeating_gear_${id}_gear_cost`
+          ));
+          // spread operator to get every array value
+          getAttrs(['credit_total',...fieldnames], v => {
+            const getValue = (id,field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
+            const cost = idArray.reduce((total, id) => total + getValue(id,'gear_cost'),0)
+            const total = parseFloat(v.credit_total) || 0
+            setAttrs({
+              credit_total: cost
+            });
+          });
+        });
+      });
+    </script>
+
   <fieldset name='gear' class='repeating_gear'>
     <div class="equipment_gear text_centered">
       <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 68%'></input>
