@@ -146,6 +146,8 @@ ______________________________ start of multipurpose or special-use classes such
 }
 
 .sheet-edge_padding { padding: 2px }
+/* 40% width of containing block */
+.sheet-40width { width: 40% }
 /* half width of containing block */
 .sheet-half_width { width: 50% }
 /* full width of containing block */
@@ -495,7 +497,7 @@ ______________________________ start of equipment tab __________________________
 
 .sheet-equipment_ranged_weapons{grid-area: e1}
 .sheet-equipment_melee_weapons{ grid-area: e2}
-.sheet-equipment_items_list{		grid-area: e3}
+.sheet-equipment_credits{ grid-area: e3 }
 .sheet-equipment_ranged_weapons_rep{border:1px solid black; border-radius: 10px; background:#475f85 }}
 
 
