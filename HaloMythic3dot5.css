@@ -380,7 +380,7 @@ ______________________________ start of minimisable infographic ________________
 }
 .sheet-minimisable_infographic_grid{
 	display: grid;
-	grid-template-columns: 100px 100px 100px 185px 185px
+	grid-template-columns: 100px 100px 100px 100px 185px 185px
 }
 
 .sheet-minimisable_infographic_g1{grid-area: mi1; width: calc(100% - 6px);justify-self: center; border: 0px solid transparent; background:#394C6A !important;	font-family: Saira Semi Condensed; font-size: 20px; text-decoration: underline}
@@ -791,56 +791,6 @@ ______________________________ start of vehicles tab ___________________________
 
 
 
-
-
-
-.sheet-rolltemplate-test div.sheet-template-container {
-	border: 2px solid #000 !important;
-	border-radius: 3px 3px 3px 3px;
-}
-
-.sheet-rolltemplate-test .sheet-template-header {
-	background-color: rgba(112, 32, 130,1);
-	color: #000;
-	padding: 2px;
-	border-bottom: 1px solid black;
-	line-height: 1.6em;
-	font-size: 1.2em;
-}
-
-.sheet-rolltemplate-test div:nth-child(odd) {
-	background-color: rgba(217, 217, 214,1);
-}
-
-.sheet-rolltemplate-test div:nth-child(even) {
-	background-color: rgba(233, 233, 233,1);
-}
-
-.sheet-rolltemplate-test .inlinerollresult  {
-	display: inline-block;
-	min-width: 1.5em;
-	text-align: center;
-	border: 2px solid rgba(167, 168, 170,1);
-}
-
-.sheet-rolltemplate-test .inlinerollresult.fullcrit {
-	border: 2px solid #3FB315;
-}
-
-.sheet-rolltemplate-test .inlinerollresult.fullfail {
-	border: 3px solid #B31515;
-}
-
-.sheet-rolltemplate-test .inlinerollresult.importantroll {
-	border: 3px solid #4A57ED;
-}
-
-
-
-
-
-
-
 .sheet-rolltemplate-info .sheet-template-header,
 .sheet-rolltemplate-info .sheet-template-row {
 	color: white;
@@ -854,25 +804,45 @@ ______________________________ start of vehicles tab ___________________________
 .sheet-rolltemplate-info .sheet-template-header {
 	background: #394C6A;
 	border-radius: 10px 10px 0px 0px;
+	border-left: 2px solid grey;
+	border-right: 2px solid grey;
+	border-top: 2px solid grey;
 	text-align: center;
 	text-decoration: underline;
 }
 .sheet-rolltemplate-info .sheet-template-content {
 	background: #506b95;
 	border-radius: 0px 0px 10px 10px;
-	padding: 2px;
-	padding-left: 5px;
+	border-left: 2px solid grey;
+	border-right: 2px solid grey;
+	border-bottom: 2px solid grey;
+	padding: 2px
+}
+
+.sheet-rolltemplate-info .sheet-template-2x2 {
 	display: grid;
 	grid-template-columns: auto auto
 }
+
 .sheet-rolltemplate-info .sheet-template-right{
 	text-align: right;
 	margin-right: 5px
 }
 
-
-
-
+.sheet-rolltemplate-info .sheet-inlineresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 1px solid white;
+	border-radius: 3px 3px 3px 3px;
+	background: #394C6A;
+	color: white;
+	line-height: 1.6em;
+	font-size: 1.2em;
+	font-family: Saira Semi Condensed;
+	font-weight: bold;
+	padding: 0px 4px 0px 4px
+}
 
 .sheet-rolltemplate-info .inlinerollresult  {
 	display: inline-block;

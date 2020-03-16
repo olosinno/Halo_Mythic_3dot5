@@ -430,7 +430,7 @@
       <div class='minimisable_infographic_0'>
         <div class="minimisable_infographic_grid">
           <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="/me has @{wounds} wounds out of @{wounds|max}"> wounds</button>
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:info} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}"> wounds</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Wounds" value="0">
             <p class='minimisable_infographic_g4'>Max</p>
@@ -438,7 +438,7 @@
           </div>
 
           <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="/me has @{Fatigue} fatigue out of @{Fatigue|max}">Fatigue</button>
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:info} {{name=Fatigue}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}">Fatigue</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Fatigue" value="0">
             <p class='minimisable_infographic_g4'>Max</p>
@@ -446,15 +446,23 @@
           </div>
 
           <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="luck_roll" value="/me has @{luck} luck out of @{luck|max}">Luck</button>
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="luck_roll" value="&{template:info} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}">Luck</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Luck" value="0">
             <p class='minimisable_infographic_g4'>Max</p>
             <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Luck_max" value="0">
           </div>
 
+          <div class="minimisable_infographic_field2x3 radius_border">
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="support_roll" value="&{template:info} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}">SP</button>
+            <p class='minimisable_infographic_g2'>Current</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_support" value="0">
+            <p class='minimisable_infographic_g4'>Max</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_support_max" value="0">
+          </div>
+
           <div class="minimisable_infographic_field4x3 radius_border">
-          <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="/me has @{shields} shields of @{shields|max}. the shields recharge with a rate of @{shields_charge} on  a delay of @{shields_delay} half actions">Shields</button>
+          <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:info} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}">Shields</button>
             <p class='minimisable_infographic_g6'>Current</p>
             <input class="minimisable_infographic_g7 full_width" type="text" name="attr_shields" value="0">
             <p class='minimisable_infographic_g8'>Max</p>
@@ -466,7 +474,7 @@
           </div>
 
           <div class="minimisable_infographic_field4x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="/me has @{Armor_head} head armor | @{Armor_arms} arm armor | @{Armor_chest} chest armor | @{Armor_legs} leg armor">Armor</button>
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:info} {{name=Armor}} {{4x2-1-name=Head}} {{4x2-1=@{Armor_head}}} {{4x2-1-name-max=Arms}} {{4x2-1-max=@{Armor_arms}}} {{4x2-2-name=Chest}} {{4x2-2=@{Armor_chest}}} {{4x2-2-name-max=Legs}} {{4x2-2-max=@{Armor_legs}}}">Armor</button>
             <p class='minimisable_infographic_g6'>Head</p>
             <input class="minimisable_infographic_g7 full_width" type="text" name="attr_Armor_head" value="0">
             <p class='minimisable_infographic_g8'>Arms</p>
@@ -2078,41 +2086,50 @@
   </div>
 </div>
 
-<button type="roll" value="&{template:test} {{name=Test Attack}} {{attack=[[1d20]]}} {{damage=[[2d6]]}} {{dmgtype=ble}}"></button>
-
-<rolltemplate class="sheet-rolltemplate-test">
-    <div class="sheet-template-container">
-	<div class="sheet-template-header">{{name}}</div>
-	{{#attack}}<div class="sheet-template-row">Attack: {{attack}} {{attackadvantage}} vs AC</div>{{/attack}}
-        {{#damage}}
-	<div class="sheet-template-row"><span>Damage: </span>{{damage}}
-        <span>Crit: </span>{{dmgcrit}}</div>
-	<div class="sheet-template-row"><span>Type: </span>{{dmgtype}}</div>
-       {{/damage}}
-</rolltemplate>
 
 
 
 
 
-/me has @{wounds} wounds out of @{wounds|max}"
-<button type="roll" value="&{template:info} {{name=Wounds}} {{wounds=[[@{wounds}]]}} {{wounds-max=[[@{wounds|max}]]}}"></button>
+
+
+
+
+<button type="roll" value="&{template:info} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}"></button>
+
+<button type="roll" value="&{template:info} {{name=Wounds}} {{4x2-1-name=current}} {{4x2-1=1}} {{4x2-1-name-max=}} {{4x2-1-max=}} {{4x2-2-name=}} {{4x2-2=}} {{4x2-2-name-max=}} {{4x2-2-max=}}"></button>
 
 <rolltemplate class="sheet-rolltemplate-info">
   <div class="sheet-template-header">{{name}}</div>
   <div class="sheet-template-content">
-    <div class="sheet-template-row sheet-template-right">Current </div>
-    <div class="sheet-template-row">{{wounds}}</div>
-    <div class="sheet-template-row sheet-template-right">Max </div>
-    <div class="sheet-template-row">{{wounds-max}}</div>
+
+    {{#2x2}}
+    <div class="sheet-template-2x2">
+      <div class="sheet-template-row sheet-template-right">{{2x2-name}}</div>
+      <div><div class="sheet-inlineresult">{{2x2}}</div></div>
+      <div class="sheet-template-row sheet-template-right">{{2x2-name-max}}</div>
+      <div><div class="sheet-inlineresult">{{2x2-max}}</div></div>
+    </div>
+    {{/2x2}}
+
+    {{#4x2-1}}
+    <div class="sheet-template-2x2">
+      <div class="sheet-template-2x2">
+        <div class="sheet-template-row sheet-template-right">{{4x2-1-name}}</div>
+        <div><div class="sheet-inlineresult">{{4x2-1}}</div></div>
+        <div class="sheet-template-row sheet-template-right">{{4x2-1-name-max}}</div>
+        <div><div class="sheet-inlineresult">{{4x2-1-max}}</div></div>
+      </div>
+      <div class="sheet-template-2x2">
+        <div class="sheet-template-row sheet-template-right">{{4x2-2-name}}</div>
+        <div><div class="sheet-inlineresult">{{4x2-2}}</div></div>
+        <div class="sheet-template-row sheet-template-right">{{4x2-2-name-max}}</div>
+        <div><div class="sheet-inlineresult">{{4x2-2-max}}</div></div>
+      </div>
+    </div>
+    {{/4x2-1}}
+
   </div>
 
 
-
-    {{#damage}}
-    <div class="sheet-template-row"><span>Damage: </span>{{damage}}
-      <span>Crit: </span>{{dmgcrit}}</div>
-      <div class="sheet-template-row"><span>Type: </span>{{dmgtype}}</div>
-      {{/damage}}
-    </div>
-  </rolltemplate>
+</rolltemplate>
