@@ -797,7 +797,6 @@ ______________________________ start of vehicles tab ___________________________
 	line-height: 1.6em;
 	font-size: 1.2em;
 	font-family: Saira Semi Condensed;
-	font-weight: bold;
 }
 
 
@@ -827,6 +826,9 @@ ______________________________ start of vehicles tab ___________________________
 .sheet-rolltemplate-info .sheet-template-right{
 	text-align: right;
 	margin-right: 5px
+}
+.sheet-rolltemplate-info .sheet-template-center{
+	text-align: center;
 }
 
 .sheet-rolltemplate-info .sheet-inlineresult  {
@@ -862,4 +864,12 @@ ______________________________ start of vehicles tab ___________________________
 
 .sheet-rolltemplate-info .inlinerollresult.importantroll {
 	border: 3px solid #4A57ED;
+}
+
+.sheet-rolltemplate-info .sheet-green {
+	color: #7cff4d;
+}
+
+.sheet-rolltemplate-info .sheet-red {
+	color: #ff3333;
 }

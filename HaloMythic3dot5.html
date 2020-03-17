@@ -75,7 +75,7 @@
     <div class='characteristics_background'>
 
       <div>
-        <div class='characteristics'><button class="clear" name='STR' type='roll' value='/me rolls strength with [[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]] degrees of success'>STR |<input class="input_background input_c_background"name="attr_STR_total" value="@{STR} + @{STR_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button class="clear" name='STR' type='roll' value='&{template:info} {{character=@{character_name} }} {{name=strength}} {{roll=[[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>STR |<input class="input_background input_c_background"name="attr_STR_total" value="@{STR} + @{STR_advancement}" disabled="true"/></button></div>
         <div class='characteristics'><input name='attr_STR' type='text' value='0' /></div>
         <select name='attr_STR_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
@@ -2107,7 +2107,7 @@
     </select>
   </div>
 </div>
-
+</div>
 
 
 
@@ -2118,40 +2118,61 @@
 
 
 <button type="roll" value="&{template:info} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}"></button>
-
 <button type="roll" value="&{template:info} {{name=Wounds}} {{4x2-1-name=current}} {{4x2-1=1}} {{4x2-1-name-max=}} {{4x2-1-max=}} {{4x2-2-name=}} {{4x2-2=}} {{4x2-2-name-max=}} {{4x2-2-max=}}"></button>
-
+<button type="roll" value="&{template:info} {{character=@{character_name} }} {{name=strength}} {{roll=[[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}"></button>
 <rolltemplate class="sheet-rolltemplate-info">
+
+
+  {{#character}}
+  <div class="sheet-template-header">{{character}}rolls for {{name}}</div>
+  <div class="sheet-template-content">
+    <div class="sheet-template-2x2">
+      <div class="sheet-template-row sheet-template-right">{{roll}}</div>
+      <div><div class="sheet-template-row">
+        {{#^rollLess() roll 0 }}<div class="green">Degrees of success</div>{{/^rollLess() roll 0 }}
+        {{#rollLess() roll 0 }}<div class="red">Degrees of failure</div>{{/rollLess() roll 0 }}
+      </div></div>
+    </div>
+    {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasCrit() roll }}
+    {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasFumble() roll }}
+  </div>
+  {{/character}}
+
+  {{#2x2}}
   <div class="sheet-template-header">{{name}}</div>
   <div class="sheet-template-content">
 
-    {{#2x2}}
     <div class="sheet-template-2x2">
       <div class="sheet-template-row sheet-template-right">{{2x2-name}}</div>
       <div><div class="sheet-inlineresult">{{2x2}}</div></div>
       <div class="sheet-template-row sheet-template-right">{{2x2-name-max}}</div>
       <div><div class="sheet-inlineresult">{{2x2-max}}</div></div>
     </div>
-    {{/2x2}}
 
-    {{#4x2-1}}
+  </div>
+  {{/2x2}}
+
+  {{#4x2-1}}
+  <div class="sheet-template-header">{{name}}</div>
+  <div class="sheet-template-content">
     <div class="sheet-template-2x2">
+
       <div class="sheet-template-2x2">
         <div class="sheet-template-row sheet-template-right">{{4x2-1-name}}</div>
         <div><div class="sheet-inlineresult">{{4x2-1}}</div></div>
         <div class="sheet-template-row sheet-template-right">{{4x2-1-name-max}}</div>
         <div><div class="sheet-inlineresult">{{4x2-1-max}}</div></div>
       </div>
+
       <div class="sheet-template-2x2">
         <div class="sheet-template-row sheet-template-right">{{4x2-2-name}}</div>
         <div><div class="sheet-inlineresult">{{4x2-2}}</div></div>
         <div class="sheet-template-row sheet-template-right">{{4x2-2-name-max}}</div>
         <div><div class="sheet-inlineresult">{{4x2-2-max}}</div></div>
       </div>
+
     </div>
     {{/4x2-1}}
 
   </div>
-
-
 </rolltemplate>
