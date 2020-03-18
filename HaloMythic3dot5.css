@@ -378,6 +378,12 @@ ______________________________ start of minimisable infographic ________________
 .sheet-minimisable_infographic_main {
 	margin-left: 5px;
 }
+
+.sheet-minimisable_infographic_expand,
+.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_collapse { color: black; display: block; font-weight: bold }
+.sheet-minimisable_infographic_collapse,
+.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_expand { display: none }
+
 .sheet-minimisable_infographic_grid{
 	display: grid;
 	grid-template-columns: 100px 100px 100px 100px 185px 185px
@@ -415,12 +421,6 @@ ______________________________ start of minimisable infographic ________________
 	'mi6 mi7 mi2 mi3'
 	'mi8 mi9 mi4 mi5'
 }
-
-.sheet-minimisable_infographic_0,
-.sheet-minimisable_infographic_1{ display: none }
-
-.sheet-minimisable_switch0:checked ~ div.sheet-minimisable_infographic_0 { color: black; display: block; font-weight: bold }
-.sheet-minimisable_switch1:checked ~ div.sheet-minimisable_infographic_1 { color: black; display: block; font-weight: bold }
 
 
 

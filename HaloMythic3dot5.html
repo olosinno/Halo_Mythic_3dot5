@@ -421,13 +421,12 @@
     </div>
     <hr>
 
-    <div class='minimisable_infographic_main'>
-      <input type='radio' name='attr_minimisable' value='0' class='minimisable_switch0' checked>
-      <input type='radio' name='attr_minimisable' value='1' class='minimisable_switch1'>
-      <input type='radio' name='attr_minimisable' value='2' class='minimisable_switch2'>
-      use these buttons to cycle through the different infographics styles
-
-      <div class='minimisable_infographic_0'>
+	<div class='minimisable_infographic_main'>
+      <button class='minimisable_infographic_field2x3'>Public</button>
+	  <button class='minimisable_infographic_field2x3' value='/w gm '>Whisper</button>
+      <input type='checkbox' class='minimisable_switch'>
+	  <p class='minimisable_infographic_expand'>Click on this box to EXPAND your minimizable infographic!</p>
+      <div class='minimisable_infographic_collapse'>
         <div class="minimisable_infographic_grid">
           <div class="minimisable_infographic_field2x3 radius_border">
             <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}"> wounds</button>
@@ -484,23 +483,7 @@
             <p class='minimisable_infographic_g4'>Legs</p>
             <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Armor_legs" value="0">
           </div>
-        </div>
-      </div>
 
-      <div class='minimisable_infographic_1'>
-        <div class="minimisable_infographic_field2x3 radius_border">
-          <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="support_roll" value="/me has @{support} support points out of @{support|max}">SP</button>
-          <p class='minimisable_infographic_g2'>Current</p>
-          <input class="minimisable_infographic_g3 full_width" type="text" name="attr_support" value="0">
-          <p class='minimisable_infographic_g4'>Max</p>
-          <input class="minimisable_infographic_g5 full_width" type="text" name="attr_support_max" value="0">
-        </div>
-        <div class="minimisable_infographic_field2x3 radius_border">
-          <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="CR_roll" value="/me has @{CR} credits out of @{CR|max}">CR</button>
-          <p class='minimisable_infographic_g2'>Current</p>
-          <input class="minimisable_infographic_g3 full_width" type="text" name="attr_CR" value="0">
-          <p class='minimisable_infographic_g4'>spent</p>
-          <input class="minimisable_infographic_g5 full_width" type="text" name="attr_CR_max" value="0">
         </div>
       </div>
       <br>
