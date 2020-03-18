@@ -422,14 +422,22 @@
     <hr>
 
 	<div class='minimisable_infographic_main'>
-      <button class='minimisable_infographic_field2x3'>Public</button>
-	  <button class='minimisable_infographic_field2x3' value='/w gm '>Whisper</button>
       <input type='checkbox' class='minimisable_switch'>
-	  <p class='minimisable_infographic_expand'>Click on this box to EXPAND your minimizable infographic!</p>
-      <div class='minimisable_infographic_collapse'>
+      <button style='background-color: yellow; color: black; margin-left: 80%'>Public</button>
+	  <button style='background-color: yellow; color: black' value='/w gm '>Whisper</button>
+	  <p class='minimisable_infographic_collapse'>Click on this box to EXPAND your minimizable infographic!</p>
+      <div class='minimisable_infographic_expand'>
         <div class="minimisable_infographic_grid">
           <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}"> wounds</button>
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="luck_roll" value="&{template:mythic} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}">Luck</button>
+            <p class='minimisable_infographic_g2'>Current</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Luck" value="0">
+            <p class='minimisable_infographic_g4'>Max</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Luck_max" value="0">
+          </div>
+
+          <div class="minimisable_infographic_field2x3 radius_border">
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}">Wounds</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Wounds" value="0">
             <p class='minimisable_infographic_g4'>Max</p>
@@ -445,31 +453,11 @@
           </div>
 
           <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="luck_roll" value="&{template:mythic} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}">Luck</button>
-            <p class='minimisable_infographic_g2'>Current</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Luck" value="0">
-            <p class='minimisable_infographic_g4'>Max</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Luck_max" value="0">
-          </div>
-
-          <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="support_roll" value="&{template:mythic} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}">SP</button>
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="support_roll" value="&{template:mythic} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}">Support Pts</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_support" value="0">
             <p class='minimisable_infographic_g4'>Max</p>
             <input class="minimisable_infographic_g5 full_width" type="text" name="attr_support_max" value="0">
-          </div>
-
-          <div class="minimisable_infographic_field4x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}">Shields</button>
-            <p class='minimisable_infographic_g6'>Current</p>
-            <input class="minimisable_infographic_g7 full_width" type="text" name="attr_shields" value="0">
-            <p class='minimisable_infographic_g8'>Max</p>
-            <input class="minimisable_infographic_g9 full_width" type="text" name="attr_shields_max" value="0">
-            <p class='minimisable_infographic_g2'>charge</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_shields_charge" value="0">
-            <p class='minimisable_infographic_g4'>Delay</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_shields_delay" value="0">
           </div>
 
           <div class="minimisable_infographic_field4x3 radius_border">
@@ -482,6 +470,18 @@
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Armor_chest" value="0">
             <p class='minimisable_infographic_g4'>Legs</p>
             <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Armor_legs" value="0">
+          </div>
+
+          <div class="minimisable_infographic_field4x3 radius_border">
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}">Shields</button>
+            <p class='minimisable_infographic_g6'>Current</p>
+            <input class="minimisable_infographic_g7 full_width" type="text" name="attr_shields" value="0">
+            <p class='minimisable_infographic_g8'>Max</p>
+            <input class="minimisable_infographic_g9 full_width" type="text" name="attr_shields_max" value="0">
+            <p class='minimisable_infographic_g2'>Delay</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_shields_delay" value="0">
+			<p class='minimisable_infographic_g4'>Charge</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_shields_charge" value="0">
           </div>
 
         </div>
@@ -1156,8 +1156,10 @@
         </fieldset>
       </div>
 
-      <div class='equipment_credits text_centered'>
-        cR: <input name='attr_credit_total' type='number' style='width: 20%' readonly>
+      <div class='equipment_credits text_centered' style='margin-top: 10px'>
+        cRedit Count: <input name='attr_credits' type='number' style='width: 10%; margin-right: 20px' />
+        cRedit Calculation: <input name='attr_credit_total' type='number' style='width: 10%; margin-right: 20px' readonly />
+		Weight Calculation: <input name='attr_weight_total' type='number' style='width: 10%' readonly> kilograms</input>
       </div>
     </div>
     <br>
@@ -1183,15 +1185,36 @@
       });
     </script>
 
+    <script type='text/worker'>
+      on('change:repeating_gear:gear_weight remove:repeating_gear', () => {
+        // get section IDs because of operation both inside and outside of fieldset
+        getSectionIDs(`repeating_gear`, idArray => {
+          const fieldnames = [];
+          idArray.forEach(id => fieldnames.push (
+          `repeating_gear_${id}_gear_weight`
+          ));
+          // spread operator to get every array value
+          getAttrs(['weight_total',...fieldnames], v => {
+            const getValue = (id,field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
+            const weight = idArray.reduce((total, id) => total + getValue(id,'gear_weight'),0)
+            const total = parseFloat(v.weight_total) || 0
+            setAttrs({
+              weight_total: weight
+            });
+          });
+        });
+      });
+    </script>
+
     <fieldset name='gear' class='repeating_gear'>
       <div class="equipment_gear text_centered">
-        <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 68%'></input>
-        <input name='attr_gear_cost' type='text' placeholder='cR Cost' style='width: 6%'>
-        <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 6%'>
-        <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 11%'>
-        <input name='attr_gear_pg#' type='text' placeholder='P#' style='width: 4%'>
+        <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 45%'></input>
+        <input name='attr_gear_cost' type='text' placeholder='cR Value' style='width: 10%'>
+        <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 10%'>
+        <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 10%'>
+        <input name='attr_gear_pg#' type='text' placeholder='Page #' style='width: 10%'>
         <input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
-        <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 84%'></textarea>
+        <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 90%'></textarea>
       </div>
     </fieldset>
   </div>
@@ -1783,15 +1806,17 @@
       });
     </script>
     <div class='training'>
-      <div class='faction_training core_table centered half_width'>
-        <h2>Faction Training</h2>
-        <input name='attr_faction_training_human' type='checkbox'>U.N.S.C.<br>
-        <input name='attr_faction_training_covenant' type='checkbox'>Covenant<br>
-        <input name='attr_faction_training_forerunner' type='checkbox'>Forerunner<br>
+      <div class='faction_training core_table centered 90width radius_border'>
+        <h3 class='radius_border_top'>Faction Training</h3>
+        <div class='faction_training_grid'>
+		  <p><input name='attr_faction_training_human' type='checkbox'>U.N.S.C.</p>
+          <p><input name='attr_faction_training_forerunner' type='checkbox'>Forerunner</p>
+		</div>
+        <p><input name='attr_faction_training_covenant' type='checkbox' style='margin-left: 10px'>Covenant / Banished</p>
       </div>
-      <div class='weapon_training core_table centered half_width'>
-        <h2>Weapon Training</h2>
-        <div class='training edge_padding'>
+      <div class='weapon_training core_table centered 90width radius_border'>
+        <h3 class='radius_border_top'>Weapon Training</h3>
+        <div class='weapon_training_grid'>
           <p><input name='attr_weapons_training_basic' type='checkbox'>Basic</p>
           <p><input name='attr_weapons_training_infantry' type='checkbox'>Infantry</p>
           <p><input name='attr_weapons_training_vehicle' type='checkbox'>Vehicle</p>
