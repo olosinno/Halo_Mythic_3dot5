@@ -2114,7 +2114,6 @@
 
     </select>
   </div>
-
 </div>
 
 
@@ -2128,16 +2127,16 @@
 <rolltemplate class="sheet-rolltemplate-mythic">
 
 
-{{#initiative}}
-<div class="sheet-template-header">{{character}} rolls for Initiative</div>
-<div class="sheet-template-content">
-<div class="sheet-template-row sheet-template-center">{{initiative}} degrees of sucess</div>
+  {{#initiative}}
+  <div class="sheet-template-header">{{character}} rolls for Initiative</div>
+  <div class="sheet-template-content">
+    <div class="sheet-template-row sheet-template-center">{{initiative}} degrees of sucess</div>
 
-  {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
-  {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
+    {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
+    {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
 
-</div>
-{{/initiative}}
+  </div>
+  {{/initiative}}
 
   {{#roll-name}}
   <div class="sheet-template-header">{{character}} rolls for {{roll-name}}</div>
