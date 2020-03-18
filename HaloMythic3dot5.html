@@ -386,7 +386,7 @@
     <div class='tabs_main'>
 
       <div class='initiative-container'>
-        <button name='initiative' type='roll' value=' /me rolls initiative with @{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]] degrees of success'class="clear">Initiative|<input class="input_background"name="attr_init_total" value="floor(@{initmod2}+@{initmod3})" disabled="true"/></button>
+        <button name='initiative' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]}}'class="clear">Initiative|<input class="input_background"name="attr_init_total" value="floor(@{initmod2}+@{initmod3})" disabled="true"/></button>
         <select name='attr_initmod1' class='init_field'>
           <option value='1d10' selected='selected'>Standard</option>
           <option value='2d10k1'>Fast Foot</option>
@@ -461,7 +461,7 @@
           </div>
 
           <div class="minimisable_infographic_field4x3 radius_border">
-          <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}">Shields</button>
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}">Shields</button>
             <p class='minimisable_infographic_g6'>Current</p>
             <input class="minimisable_infographic_g7 full_width" type="text" name="attr_shields" value="0">
             <p class='minimisable_infographic_g8'>Max</p>
@@ -488,12 +488,10 @@
       </div>
       <br>
     </div>
-  </div>
-  <br>
-</div>
 
-  <!-- ______________________________ sheet tabs _________________________________ -->
-  <!-- ______________________________ SHEET TABS LOGIC ______________________________ -->
+    <!-- ______________________________ sheet tabs _________________________________ -->
+    <!-- ______________________________ SHEET TABS LOGIC ______________________________ -->
+  </div>
   <input name='attr_sheetTab' type='hidden' value='core' class='tabstoggle' />
   <script type='text/worker'>
     const buttonlist = ['core','equipment','medical','advancements','journal','vehicles','settings'];
@@ -1158,13 +1156,13 @@
         </fieldset>
       </div>
 
-	  <div class='equipment_credits text_centered'>
-		cR: <input name='attr_credit_total' type='number' style='width: 20%' readonly>
-	  </div>
-	</div>
-	<br>
+      <div class='equipment_credits text_centered'>
+        cR: <input name='attr_credit_total' type='number' style='width: 20%' readonly>
+      </div>
+    </div>
+    <br>
 
-	<script type='text/worker'>
+    <script type='text/worker'>
       on('change:repeating_gear:gear_cost remove:repeating_gear', () => {
         // get section IDs because of operation both inside and outside of fieldset
         getSectionIDs(`repeating_gear`, idArray => {
@@ -1185,18 +1183,18 @@
       });
     </script>
 
-  <fieldset name='gear' class='repeating_gear'>
-    <div class="equipment_gear text_centered">
-      <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 68%'></input>
-      <input name='attr_gear_cost' type='text' placeholder='cR Cost' style='width: 6%'>
-      <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 6%'>
-      <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 11%'>
-      <input name='attr_gear_pg#' type='text' placeholder='P#' style='width: 4%'>
-      <input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
-      <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 84%'></textarea>
-    </div>
-  </fieldset>
-</div>
+    <fieldset name='gear' class='repeating_gear'>
+      <div class="equipment_gear text_centered">
+        <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 68%'></input>
+        <input name='attr_gear_cost' type='text' placeholder='cR Cost' style='width: 6%'>
+        <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 6%'>
+        <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 11%'>
+        <input name='attr_gear_pg#' type='text' placeholder='P#' style='width: 4%'>
+        <input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
+        <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 84%'></textarea>
+      </div>
+    </fieldset>
+  </div>
 
 
   <div class='medical box'>
@@ -1752,7 +1750,7 @@
         <!-- Every fieldset requires its named element to be of attr_ prefix. -->
         <!-- Every textarea element requires a closing tag; cannot be a void element. -->
         <textarea class="radius_border_bottom"name='attr_medical' placeholder='Not all injuries in 100DOS are lethal. Exhaustion, combat trauma, or exchanging blows with bare fists can all leave a character tattered, but intact. Fatigue measures the amount of non-lethal injury a character can take. For every level of Fatigue a Character has, they take a -5 Penalty to all Tests made.&#10;&#10;Once a Character surpasses their Toughness Modifier, multiplied by 2, in Fatigue, they fall into a coma. The Character’s coma will last one hour for every level of Fatigue the Character has. Every hour that passes, the level of Fatigue is reduced by one. The Character may wake up once their level of Fatigue is their Toughness Modifier or lower.'></textarea>
-		<fieldset class='repeating_medical'>
+        <fieldset class='repeating_medical'>
           <textarea class="radius_border_bottom"name='attr_medical'></textarea>
         </fieldset>
       </div>
@@ -1784,27 +1782,27 @@
         });
       });
     </script>
-	<div class='training'>
-		<div class='faction_training core_table centered half_width'>
-			<h2>Faction Training</h2>
-			<input name='attr_faction_training_human' type='checkbox'>U.N.S.C.<br>
-			<input name='attr_faction_training_covenant' type='checkbox'>Covenant<br>
-			<input name='attr_faction_training_forerunner' type='checkbox'>Forerunner<br>
-		</div>
-		<div class='weapon_training core_table centered half_width'>
-			<h2>Weapon Training</h2>
-			<div class='training edge_padding'>
-				<p><input name='attr_weapons_training_basic' type='checkbox'>Basic</p>
-				<p><input name='attr_weapons_training_infantry' type='checkbox'>Infantry</p>
-				<p><input name='attr_weapons_training_vehicle' type='checkbox'>Vehicle</p>
-				<p><input name='attr_weapons_training_melee' type='checkbox'>Melee</p>
-				<p><input name='attr_weapons_training_heavy' type='checkbox'>Heavy</p>
-				<p><input name='attr_weapons_training_special' type='checkbox'>Advanced</p>
-				<p><input name='attr_weapons_training_long-range' type='checkbox'>Long-Range</p>
-				<p><input name='attr_weapons_training_explosives' type='checkbox'>Explosives</p>
-			</div>
-		</div>
-	</div>
+    <div class='training'>
+      <div class='faction_training core_table centered half_width'>
+        <h2>Faction Training</h2>
+        <input name='attr_faction_training_human' type='checkbox'>U.N.S.C.<br>
+        <input name='attr_faction_training_covenant' type='checkbox'>Covenant<br>
+        <input name='attr_faction_training_forerunner' type='checkbox'>Forerunner<br>
+      </div>
+      <div class='weapon_training core_table centered half_width'>
+        <h2>Weapon Training</h2>
+        <div class='training edge_padding'>
+          <p><input name='attr_weapons_training_basic' type='checkbox'>Basic</p>
+          <p><input name='attr_weapons_training_infantry' type='checkbox'>Infantry</p>
+          <p><input name='attr_weapons_training_vehicle' type='checkbox'>Vehicle</p>
+          <p><input name='attr_weapons_training_melee' type='checkbox'>Melee</p>
+          <p><input name='attr_weapons_training_heavy' type='checkbox'>Heavy</p>
+          <p><input name='attr_weapons_training_special' type='checkbox'>Advanced</p>
+          <p><input name='attr_weapons_training_long-range' type='checkbox'>Long-Range</p>
+          <p><input name='attr_weapons_training_explosives' type='checkbox'>Explosives</p>
+        </div>
+      </div>
+    </div>
 
     <h2>Experience Summary</h2>
     <div class='text_centered'>
@@ -2087,19 +2085,19 @@
     <br>
     <h3>initiative overrides</h3>
     <select name='attr_initmod0' class='centered edge_padding'>
-      <option selected='selected' value='[[floor'>no tie breaker</option>
-      <option value='[['>decimal tiebreaker</option>
-      <option value='tiebreaker [[@{AGI_total}]] roll [['>AGI tiebreaker</option>
+      <option selected='selected' value='[[floor'>No tie breaker</option>
+      <option value='[['>Decimal tiebreaker</option>
+      <option value='tiebreaker [[@{AGI_total}]] roll [[floor'>AGI tiebreaker</option>
     </select>
     <br>
     <h3>Auto roll Hit locations</h3>
     <select name='attr_settings_hitroll' class='centered edge_padding'>
-      <option selected='selected' value=' '>dont auto roll hit locations</option>
-      <option value='{{loc=[[1d100]]}}'>autoroll hit locations</option>
+      <option value='{{loc=[[1d100]]}}'selected='selected'>Autoroll hit locations</option>
+      <option  value=' '>Dont auto roll hit locations</option>
+
     </select>
   </div>
 </div>
-</div>
 
 
 
@@ -2108,49 +2106,60 @@
 
 
 
-<button type="roll" value="/w gm &{template:mythic} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}"></button>
-<button type="roll" value="&{template:mythic} {{name=Wounds}} {{4x2-1-name=current}} {{4x2-1=1}} {{4x2-1-name-max=}} {{4x2-1-max=}} {{4x2-2-name=}} {{4x2-2=}} {{4x2-2-name-max=}} {{4x2-2-max=}}"></button>
-<button type="roll" value="&{template:mythic} {{character=@{character_name} }} {{name=strength}} {{roll=[[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}"></button>
-<button type="roll" value="&{template:mythic} {{character=@{character_name} }} {{weapon=@{weapon-name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}}"></button>
+
 <rolltemplate class="sheet-rolltemplate-mythic">
 
+
+  {{#initiative}}
+  <div class="sheet-template-header">{{character}} rolls for Initiative</div>
+  <div class="sheet-template-content">
+    <div class="sheet-template-row sheet-template-center">{{initiative}} degrees of sucess</div>
+
+    {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
+    {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
+
+  </div>
+  {{/initiative}}
 
   {{#roll-name}}
   <div class="sheet-template-header">{{character}} rolls for {{roll-name}}</div>
   <div class="sheet-template-content">
     <div class="sheet-template-2x2">
       <div class="sheet-template-row sheet-template-right">{{roll}}</div>
-      <div><div class="sheet-template-row">
+      <div class="sheet-template-row">
         {{#^rollLess() roll 0 }}Degrees of success{{/^rollLess() roll 0 }}
         {{#rollLess() roll 0 }}Degrees of failure{{/rollLess() roll 0 }}
-      </div></div>
+      </div>
     </div>
+
     {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
     {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
+
   </div>
   {{/roll-name}}
 
   {{#weapon}}
   <div class="sheet-template-header">{{character}}rolls to attack</div>
   <div class="sheet-template-content">
+
     <div class="sheet-template-row sheet-template-center">
       using their {{weapon}} they score:
     </div>
+
     <div class="sheet-template-2x2 sheet-template-row">
       <div class="sheet-template-right">{{roll}}</div>
       {{#^rollLess() roll 0 }}<div style="float: right">Degrees of success</div>{{/^rollLess() roll 0 }}
       {{#rollLess() roll 0 }}<div style="float: right">Degrees of failure</div>{{/rollLess() roll 0 }}
-          </div>
-      {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
-      {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
+    </div>
+
+    {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
+    {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
     {{/weapon}}
 
     {{#loc}}
-    <div class="sheet-template-row sheet-template-center sheet-template-break">
-      rolling hit location {{loc}}
-    </div>
+    <div class="sheet-template-row sheet-template-center sheet-template-break">rolling hit location {{loc}}</div>
     <div class="sheet-template-row sheet-template-center">
-      {{#rollBetween() loc 1 10}}   HEAD:         {{/rollBetween() loc 1 10}}
+      {{#rollBetween() loc 1 10}}   HEAD:        {{/rollBetween() loc 1 10}}
       {{#rollBetween() loc 1 1}}    01 Neck      {{/rollBetween() loc 1 1}}
       {{#rollBetween() loc 2 2}}    02 Chin      {{/rollBetween() loc 2 2}}
       {{#rollBetween() loc 3 3}}    03 Mouth     {{/rollBetween() loc 3 3}}
@@ -2160,7 +2169,7 @@
       {{#rollBetween() loc 9 9}}    09 Forehead  {{/rollBetween() loc 9 9}}
       {{#rollBetween() loc 10 10}}  10 Ear       {{/rollBetween() loc 10 10}}
 
-      {{#rollBetween() loc 11 20}}  LEFT ARM:       {{/rollBetween() loc 11 20}}
+      {{#rollBetween() loc 11 20}}  LEFT ARM:      {{/rollBetween() loc 11 20}}
       {{#rollBetween() loc 11 11}}  11 Fingers     {{/rollBetween() loc 11 11}}
       {{#rollBetween() loc 12 12}}  12 Hands       {{/rollBetween() loc 12 12}}
       {{#rollBetween() loc 13 15}}  13-15 Forearm  {{/rollBetween() loc 13 15}}
@@ -2168,40 +2177,40 @@
       {{#rollBetween() loc 17 19}}  17-19 Bicep    {{/rollBetween() loc 17 19}}
       {{#rollBetween() loc 20 20}}  20 Shoulder    {{/rollBetween() loc 20 20}}
 
-      {{#rollBetween() loc 21 30}}  RIGHT ARM:         {{/rollBetween() loc 21 30}}
-      {{#rollBetween() loc 21 21}}  21 Finger         {{/rollBetween() loc 21 21}}
-      {{#rollBetween() loc 22 22}}  22 Hands          {{/rollBetween() loc 22 22}}
-      {{#rollBetween() loc 23 25}}  23-25 Forearm     {{/rollBetween() loc 23 25}}
-      {{#rollBetween() loc 26 26}}  26 Elbow          {{/rollBetween() loc 26 26}}
-      {{#rollBetween() loc 27 29}}  27-29 Bicep       {{/rollBetween() loc 27 29}}
-      {{#rollBetween() loc 30 30}}  30 Shoulder       {{/rollBetween() loc 30 30}}
+      {{#rollBetween() loc 21 30}}  RIGHT ARM:      {{/rollBetween() loc 21 30}}
+      {{#rollBetween() loc 21 21}}  21 Finger       {{/rollBetween() loc 21 21}}
+      {{#rollBetween() loc 22 22}}  22 Hands        {{/rollBetween() loc 22 22}}
+      {{#rollBetween() loc 23 25}}  23-25 Forearm   {{/rollBetween() loc 23 25}}
+      {{#rollBetween() loc 26 26}}  26 Elbow        {{/rollBetween() loc 26 26}}
+      {{#rollBetween() loc 27 29}}  27-29 Bicep     {{/rollBetween() loc 27 29}}
+      {{#rollBetween() loc 30 30}}  30 Shoulder     {{/rollBetween() loc 30 30}}
 
-      {{#rollBetween() loc 31 45}}  LEFT LEG:          {{/rollBetween() loc 31 45}}
-      {{#rollBetween() loc 31 31}}  31 Toes           {{/rollBetween() loc 31 31}}
-      {{#rollBetween() loc 32 32}}  32 Foot           {{/rollBetween() loc 32 32}}
-      {{#rollBetween() loc 33 33}}  33 Ankle          {{/rollBetween() loc 33 33}}
-      {{#rollBetween() loc 34 37}}  34-37 Shin        {{/rollBetween() loc 34 37}}
-      {{#rollBetween() loc 38 38}}  38 Kne            {{/rollBetween() loc 38 38}}
-      {{#rollBetween() loc 39 43}}  39-43 Thigh       {{/rollBetween() loc 39 43}}
-      {{#rollBetween() loc 44 45}}  44-45 Pelvis      {{/rollBetween() loc 44 45}}
+      {{#rollBetween() loc 31 45}}  LEFT LEG:       {{/rollBetween() loc 31 45}}
+      {{#rollBetween() loc 31 31}}  31 Toes         {{/rollBetween() loc 31 31}}
+      {{#rollBetween() loc 32 32}}  32 Foot         {{/rollBetween() loc 32 32}}
+      {{#rollBetween() loc 33 33}}  33 Ankle        {{/rollBetween() loc 33 33}}
+      {{#rollBetween() loc 34 37}}  34-37 Shin      {{/rollBetween() loc 34 37}}
+      {{#rollBetween() loc 38 38}}  38 Kne          {{/rollBetween() loc 38 38}}
+      {{#rollBetween() loc 39 43}}  39-43 Thigh     {{/rollBetween() loc 39 43}}
+      {{#rollBetween() loc 44 45}}  44-45 Pelvis    {{/rollBetween() loc 44 45}}
 
-      {{#rollBetween() loc 46 61}}  RIGHT LEG:         {{/rollBetween() loc 46 61}}
-      {{#rollBetween() loc 46 46}}  46 Toes           {{/rollBetween() loc 46 46}}
-      {{#rollBetween() loc 47 47}}  47 Foot           {{/rollBetween() loc 47 47}}
-      {{#rollBetween() loc 48 48}}  48 Ankle          {{/rollBetween() loc 48 48}}
-      {{#rollBetween() loc 49 53}}  49-53 Shin        {{/rollBetween() loc 49 53}}
-      {{#rollBetween() loc 54 54}}  54 Knee           {{/rollBetween() loc 54 54}}
-      {{#rollBetween() loc 55 58}}  55-58 Thigh       {{/rollBetween() loc 55 58}}
-      {{#rollBetween() loc 59 60}}  59-60 Pelvis      {{/rollBetween() loc 59 60}}
+      {{#rollBetween() loc 46 61}}  RIGHT LEG:      {{/rollBetween() loc 46 61}}
+      {{#rollBetween() loc 46 46}}  46 Toes         {{/rollBetween() loc 46 46}}
+      {{#rollBetween() loc 47 47}}  47 Foot         {{/rollBetween() loc 47 47}}
+      {{#rollBetween() loc 48 48}}  48 Ankle        {{/rollBetween() loc 48 48}}
+      {{#rollBetween() loc 49 53}}  49-53 Shin      {{/rollBetween() loc 49 53}}
+      {{#rollBetween() loc 54 54}}  54 Knee         {{/rollBetween() loc 54 54}}
+      {{#rollBetween() loc 55 58}}  55-58 Thigh     {{/rollBetween() loc 55 58}}
+      {{#rollBetween() loc 59 60}}  59-60 Pelvis    {{/rollBetween() loc 59 60}}
 
-      {{#rollBetween() loc 62 100}} CHEST:                     {{/rollBetween() loc 62 100}}
-      {{#rollBetween() loc 61 66}}  61-66 Small Intestines    {{/rollBetween() loc 61 66}}
-      {{#rollBetween() loc 67 72}}  67-72 Large Intestines    {{/rollBetween() loc 67 72}}
-      {{#rollBetween() loc 73 78}}  73-78 Kidney              {{/rollBetween() loc 73 78}}
-      {{#rollBetween() loc 79 84}}  79-84 Stomach / Liver     {{/rollBetween() loc 79 84}}
-      {{#rollBetween() loc 85 89}}  85-89 Heart               {{/rollBetween() loc 85 89}}
-      {{#rollBetween() loc 90 96}}  90-96 Lungs               {{/rollBetween() loc 90 96}}
-      {{#rollBetween() loc 97 100}} 97-100 No Organ Hit       {{/rollBetween() loc 97 100}}
+      {{#rollBetween() loc 62 100}} CHEST:                  {{/rollBetween() loc 62 100}}
+      {{#rollBetween() loc 61 66}}  61-66 Small Intestines  {{/rollBetween() loc 61 66}}
+      {{#rollBetween() loc 67 72}}  67-72 Large Intestines  {{/rollBetween() loc 67 72}}
+      {{#rollBetween() loc 73 78}}  73-78 Kidney            {{/rollBetween() loc 73 78}}
+      {{#rollBetween() loc 79 84}}  79-84 Stomach / Liver   {{/rollBetween() loc 79 84}}
+      {{#rollBetween() loc 85 89}}  85-89 Heart             {{/rollBetween() loc 85 89}}
+      {{#rollBetween() loc 90 96}}  90-96 Lungs             {{/rollBetween() loc 90 96}}
+      {{#rollBetween() loc 97 100}} 97-100 No Organ Hit     {{/rollBetween() loc 97 100}}
     </div>
   </div>
   {{/loc}}
