@@ -1783,15 +1783,17 @@
       });
     </script>
     <div class='training'>
-      <div class='faction_training core_table centered half_width'>
-        <h2>Faction Training</h2>
-        <input name='attr_faction_training_human' type='checkbox'>U.N.S.C.<br>
-        <input name='attr_faction_training_covenant' type='checkbox'>Covenant<br>
-        <input name='attr_faction_training_forerunner' type='checkbox'>Forerunner<br>
+      <div class='faction_training core_table centered 90width radius_border'>
+        <h3 class='radius_border_top'>Faction Training</h3>
+        <div class='faction_training_grid'>
+		  <p><input name='attr_faction_training_human' type='checkbox'>U.N.S.C.</p>
+          <p><input name='attr_faction_training_forerunner' type='checkbox'>Forerunner</p>
+		</div>
+        <p><input name='attr_faction_training_covenant' type='checkbox' style='margin-left: 10px'>Covenant / Banished</p>
       </div>
-      <div class='weapon_training core_table centered half_width'>
-        <h2>Weapon Training</h2>
-        <div class='training edge_padding'>
+      <div class='weapon_training core_table centered 90width radius_border'>
+        <h3 class='radius_border_top'>Weapon Training</h3>
+        <div class='weapon_training_grid'>
           <p><input name='attr_weapons_training_basic' type='checkbox'>Basic</p>
           <p><input name='attr_weapons_training_infantry' type='checkbox'>Infantry</p>
           <p><input name='attr_weapons_training_vehicle' type='checkbox'>Vehicle</p>

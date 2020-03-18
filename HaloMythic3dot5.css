@@ -150,6 +150,8 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-40width { width: 40% }
 /* half width of containing block */
 .sheet-half_width { width: 50% }
+/* 90% width of containing block */
+.sheet-90width { width: 90% }
 /* full width of containing block */
 .sheet-full_width { width: 100% }
 /* full height of containing block */
@@ -638,10 +640,22 @@ ______________________________ start of advancements tab _______________________
 	display: grid;
 	grid-template-areas:
 	't1 t2';
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 33% 67%;
 }
 .sheet-faction_training { grid-area: t1 }
 .sheet-weapon_training { grid-area: t2 }
+
+.sheet-faction_training_grid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	margin: 0px 10px
+}
+
+.sheet-weapon_training_grid {
+	display: grid;
+	grid-template-columns: 20% 25% 30% 25%;
+	margin: 0px 10px
+}
 
 /* ______________________________ end of advancements tab ______________________________
 ______________________________ start of vehicles tab ___________________________________________________________ */
