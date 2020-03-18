@@ -791,17 +791,16 @@ ______________________________ start of vehicles tab ___________________________
 
 
 
-.sheet-rolltemplate-info .sheet-template-header,
-.sheet-rolltemplate-info .sheet-template-row {
+.sheet-rolltemplate-mythic .sheet-template-header,
+.sheet-rolltemplate-mythic .sheet-template-row {
 	color: white;
 	line-height: 1.6em;
 	font-size: 1.2em;
 	font-family: Saira Semi Condensed;
-	font-weight: bold;
 }
 
 
-.sheet-rolltemplate-info .sheet-template-header {
+.sheet-rolltemplate-mythic .sheet-template-header {
 	background: #394C6A;
 	border-radius: 10px 10px 0px 0px;
 	border-left: 2px solid grey;
@@ -810,8 +809,9 @@ ______________________________ start of vehicles tab ___________________________
 	text-align: center;
 	text-decoration: underline;
 }
-.sheet-rolltemplate-info .sheet-template-content {
+.sheet-rolltemplate-mythic .sheet-template-content {
 	background: #506b95;
+	background-image: url(https://cdn.discordapp.com/attachments/676016722939084800/689454608283729965/yxN94xs.png);
 	border-radius: 0px 0px 10px 10px;
 	border-left: 2px solid grey;
 	border-right: 2px solid grey;
@@ -819,17 +819,25 @@ ______________________________ start of vehicles tab ___________________________
 	padding: 2px
 }
 
-.sheet-rolltemplate-info .sheet-template-2x2 {
+.sheet-rolltemplate-mythic .sheet-template-2x2 {
 	display: grid;
 	grid-template-columns: auto auto
 }
 
-.sheet-rolltemplate-info .sheet-template-right{
+.sheet-rolltemplate-mythic .sheet-template-right{
 	text-align: right;
 	margin-right: 5px
 }
+.sheet-rolltemplate-mythic .sheet-template-center{
+	text-align: center;
+}
 
-.sheet-rolltemplate-info .sheet-inlineresult  {
+.sheet-rolltemplate-mythic .sheet-template-break{
+	margin-top: 20px;
+}
+
+
+.sheet-rolltemplate-mythic .sheet-inlineresult  {
 	display: inline-block;
 	min-width: 1.5em;
 	text-align: center;
@@ -844,7 +852,7 @@ ______________________________ start of vehicles tab ___________________________
 	padding: 0px 4px 0px 4px
 }
 
-.sheet-rolltemplate-info .inlinerollresult  {
+.sheet-rolltemplate-mythic .inlinerollresult  {
 	display: inline-block;
 	min-width: 1.5em;
 	text-align: center;
@@ -852,14 +860,14 @@ ______________________________ start of vehicles tab ___________________________
 		border-radius: 3px 3px 3px 3px;
 	background: #394C6A
 }
-.sheet-rolltemplate-info .inlinerollresult.fullcrit {
+.sheet-rolltemplate-mythic .inlinerollresult.fullcrit {
 	border: 2px solid #3FB315;
 }
 
-.sheet-rolltemplate-info .inlinerollresult.fullfail {
+.sheet-rolltemplate-mythic .inlinerollresult.fullfail {
 	border: 3px solid #B31515;
 }
 
-.sheet-rolltemplate-info .inlinerollresult.importantroll {
+.sheet-rolltemplate-mythic .inlinerollresult.importantroll {
 	border: 3px solid #4A57ED;
 }
