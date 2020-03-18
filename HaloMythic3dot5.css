@@ -832,6 +832,11 @@ ______________________________ start of vehicles tab ___________________________
 	text-align: center;
 }
 
+.sheet-rolltemplate-mythic .sheet-template-break{
+	margin-top: 20px;
+}
+
+
 .sheet-rolltemplate-mythic .sheet-inlineresult  {
 	display: inline-block;
 	min-width: 1.5em;
@@ -865,12 +870,4 @@ ______________________________ start of vehicles tab ___________________________
 
 .sheet-rolltemplate-mythic .inlinerollresult.importantroll {
 	border: 3px solid #4A57ED;
-}
-
-.sheet-rolltemplate-mythic .sheet-green {
-	color: #7cff4d;
-}
-
-.sheet-rolltemplate-mythic .sheet-red {
-	color: #ff3333;
 }
