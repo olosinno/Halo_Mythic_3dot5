@@ -1156,8 +1156,10 @@
         </fieldset>
       </div>
 
-      <div class='equipment_credits text_centered'>
-        cR: <input name='attr_credit_total' type='number' style='width: 20%' readonly>
+      <div class='equipment_credits text_centered' style='margin-top: 10px'>
+        cRedit Count: <input name='attr_credits' type='number' style='width: 10%; margin-right: 20px' />
+        cRedit Calculation: <input name='attr_credit_total' type='number' style='width: 10%; margin-right: 20px' readonly />
+		Weight Calculation: <input name='attr_weight_total' type='number' style='width: 10%' readonly> kilograms</input>
       </div>
     </div>
     <br>
@@ -1183,15 +1185,36 @@
       });
     </script>
 
+    <script type='text/worker'>
+      on('change:repeating_gear:gear_weight remove:repeating_gear', () => {
+        // get section IDs because of operation both inside and outside of fieldset
+        getSectionIDs(`repeating_gear`, idArray => {
+          const fieldnames = [];
+          idArray.forEach(id => fieldnames.push (
+          `repeating_gear_${id}_gear_weight`
+          ));
+          // spread operator to get every array value
+          getAttrs(['weight_total',...fieldnames], v => {
+            const getValue = (id,field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
+            const weight = idArray.reduce((total, id) => total + getValue(id,'gear_weight'),0)
+            const total = parseFloat(v.weight_total) || 0
+            setAttrs({
+              weight_total: weight
+            });
+          });
+        });
+      });
+    </script>
+
     <fieldset name='gear' class='repeating_gear'>
       <div class="equipment_gear text_centered">
-        <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 68%'></input>
-        <input name='attr_gear_cost' type='text' placeholder='cR Cost' style='width: 6%'>
-        <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 6%'>
-        <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 11%'>
-        <input name='attr_gear_pg#' type='text' placeholder='P#' style='width: 4%'>
+        <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 45%'></input>
+        <input name='attr_gear_cost' type='text' placeholder='cR Value' style='width: 10%'>
+        <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 10%'>
+        <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 10%'>
+        <input name='attr_gear_pg#' type='text' placeholder='Page #' style='width: 10%'>
         <input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
-        <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 84%'></textarea>
+        <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 90%'></textarea>
       </div>
     </fieldset>
   </div>
