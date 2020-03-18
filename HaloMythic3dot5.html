@@ -386,7 +386,7 @@
     <div class='tabs_main'>
 
       <div class='initiative-container'>
-        <button name='initiative' type='roll' value=' /me rolls initiative with @{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]] degrees of success'class="clear">Initiative|<input class="input_background"name="attr_init_total" value="floor(@{initmod2}+@{initmod3})" disabled="true"/></button>
+        <button name='initiative' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]}}'class="clear">Initiative|<input class="input_background"name="attr_init_total" value="floor(@{initmod2}+@{initmod3})" disabled="true"/></button>
         <select name='attr_initmod1' class='init_field'>
           <option value='1d10' selected='selected'>Standard</option>
           <option value='2d10k1'>Fast Foot</option>
@@ -2104,8 +2104,8 @@
     <select name='attr_initmod0' class='centered edge_padding'>
       <option selected='selected' value='[[floor'>no tie breaker</option>
       <option value='[['>decimal tiebreaker</option>
-      <option value='tiebreaker [[@{AGI_total}]] roll [['>AGI tiebreaker</option>
-    </select>
+      <option value='tiebreaker [[@{AGI_total}]] roll [[floor'>AGI tiebreaker</option>
+    </select>  
     <br>
     <h3>Auto roll Hit locations</h3>
     <select name='attr_settings_hitroll' class='centered edge_padding'>
@@ -2127,40 +2127,54 @@
 <rolltemplate class="sheet-rolltemplate-mythic">
 
 
+{{#initiative}}
+<div class="sheet-template-header">{{character}} rolls for Initiative</div>
+<div class="sheet-template-content">
+<div class="sheet-template-row sheet-template-center">{{initiative}} degrees of sucess</div>
+
+  {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
+  {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
+
+</div>
+{{/initiative}}
+
   {{#roll-name}}
   <div class="sheet-template-header">{{character}} rolls for {{roll-name}}</div>
   <div class="sheet-template-content">
     <div class="sheet-template-2x2">
       <div class="sheet-template-row sheet-template-right">{{roll}}</div>
-      <div><div class="sheet-template-row">
+      <div class="sheet-template-row">
         {{#^rollLess() roll 0 }}Degrees of success{{/^rollLess() roll 0 }}
         {{#rollLess() roll 0 }}Degrees of failure{{/rollLess() roll 0 }}
-      </div></div>
+      </div>
     </div>
+
     {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
     {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
+
   </div>
   {{/roll-name}}
 
   {{#weapon}}
   <div class="sheet-template-header">{{character}}rolls to attack</div>
   <div class="sheet-template-content">
+
     <div class="sheet-template-row sheet-template-center">
       using their {{weapon}} they score:
     </div>
+
     <div class="sheet-template-2x2 sheet-template-row">
       <div class="sheet-template-right">{{roll}}</div>
       {{#^rollLess() roll 0 }}<div style="float: right">Degrees of success</div>{{/^rollLess() roll 0 }}
       {{#rollLess() roll 0 }}<div style="float: right">Degrees of failure</div>{{/rollLess() roll 0 }}
     </div>
+
     {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
     {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
     {{/weapon}}
 
     {{#loc}}
-    <div class="sheet-template-row sheet-template-center sheet-template-break">
-      rolling hit location {{loc}}
-    </div>
+    <div class="sheet-template-row sheet-template-center sheet-template-break">rolling hit location {{loc}}</div>
     <div class="sheet-template-row sheet-template-center">
       {{#rollBetween() loc 1 10}}   HEAD:        {{/rollBetween() loc 1 10}}
       {{#rollBetween() loc 1 1}}    01 Neck      {{/rollBetween() loc 1 1}}
