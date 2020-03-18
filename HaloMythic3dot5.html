@@ -422,14 +422,22 @@
     <hr>
 
 	<div class='minimisable_infographic_main'>
-      <button class='minimisable_infographic_field2x3'>Public</button>
-	  <button class='minimisable_infographic_field2x3' value='/w gm '>Whisper</button>
       <input type='checkbox' class='minimisable_switch'>
-	  <p class='minimisable_infographic_expand'>Click on this box to EXPAND your minimizable infographic!</p>
-      <div class='minimisable_infographic_collapse'>
+      <button style='background-color: yellow; color: black; margin-left: 80%'>Public</button>
+	  <button style='background-color: yellow; color: black' value='/w gm '>Whisper</button>
+	  <p class='minimisable_infographic_collapse'>Click on this box to EXPAND your minimizable infographic!</p>
+      <div class='minimisable_infographic_expand'>
         <div class="minimisable_infographic_grid">
           <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}"> wounds</button>
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="luck_roll" value="&{template:mythic} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}">Luck</button>
+            <p class='minimisable_infographic_g2'>Current</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Luck" value="0">
+            <p class='minimisable_infographic_g4'>Max</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Luck_max" value="0">
+          </div>
+
+          <div class="minimisable_infographic_field2x3 radius_border">
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}">Wounds</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Wounds" value="0">
             <p class='minimisable_infographic_g4'>Max</p>
@@ -445,31 +453,11 @@
           </div>
 
           <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="luck_roll" value="&{template:mythic} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}">Luck</button>
-            <p class='minimisable_infographic_g2'>Current</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Luck" value="0">
-            <p class='minimisable_infographic_g4'>Max</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Luck_max" value="0">
-          </div>
-
-          <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="support_roll" value="&{template:mythic} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}">SP</button>
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="support_roll" value="&{template:mythic} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}">Support Pts</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_support" value="0">
             <p class='minimisable_infographic_g4'>Max</p>
             <input class="minimisable_infographic_g5 full_width" type="text" name="attr_support_max" value="0">
-          </div>
-
-          <div class="minimisable_infographic_field4x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}">Shields</button>
-            <p class='minimisable_infographic_g6'>Current</p>
-            <input class="minimisable_infographic_g7 full_width" type="text" name="attr_shields" value="0">
-            <p class='minimisable_infographic_g8'>Max</p>
-            <input class="minimisable_infographic_g9 full_width" type="text" name="attr_shields_max" value="0">
-            <p class='minimisable_infographic_g2'>charge</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_shields_charge" value="0">
-            <p class='minimisable_infographic_g4'>Delay</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_shields_delay" value="0">
           </div>
 
           <div class="minimisable_infographic_field4x3 radius_border">
@@ -482,6 +470,18 @@
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Armor_chest" value="0">
             <p class='minimisable_infographic_g4'>Legs</p>
             <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Armor_legs" value="0">
+          </div>
+
+          <div class="minimisable_infographic_field4x3 radius_border">
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}">Shields</button>
+            <p class='minimisable_infographic_g6'>Current</p>
+            <input class="minimisable_infographic_g7 full_width" type="text" name="attr_shields" value="0">
+            <p class='minimisable_infographic_g8'>Max</p>
+            <input class="minimisable_infographic_g9 full_width" type="text" name="attr_shields_max" value="0">
+            <p class='minimisable_infographic_g2'>Delay</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_shields_delay" value="0">
+			<p class='minimisable_infographic_g4'>Charge</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_shields_charge" value="0">
           </div>
 
         </div>
