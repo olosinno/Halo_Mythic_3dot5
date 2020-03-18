@@ -861,11 +861,11 @@ ______________________________ start of vehicles tab ___________________________
 	background: #394C6A
 }
 .sheet-rolltemplate-mythic .inlinerollresult.fullcrit {
-	border: 2px solid #3FB315;
+	border: 3px solid #B31515;
 }
 
 .sheet-rolltemplate-mythic .inlinerollresult.fullfail {
-	border: 3px solid #B31515;
+	border: 2px solid #3FB315;
 }
 
 .sheet-rolltemplate-mythic .inlinerollresult.importantroll {
