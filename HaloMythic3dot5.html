@@ -1157,29 +1157,26 @@
       </div>
 
       <div class='equipment_credits text_centered' style='margin-top: 10px'>
-        cRedit Count: <input name='attr_credits' type='number' style='width: 10%; margin-right: 20px' />
-        cRedit Calculation: <input name='attr_credit_total' type='number' style='width: 10%; margin-right: 20px' readonly />
+        cR Count: <input name='attr_credits' type='number' style='width: 10%; margin-right: 20px' />
+        cR Calculation: <input name='attr_credit_total' type='number' style='width: 10%; margin-right: 20px' readonly />
 		Weight Calculation: <input name='attr_weight_total' type='number' style='width: 10%' readonly> kilograms</input>
       </div>
     </div>
     <br>
 
     <script type='text/worker'>
-      on('change:repeating_gear:gear_cost remove:repeating_gear', () => {
+      on('change:gear_cost change:repeating_gear:gear_cost_r remove:repeating_gear', () => {
         // get section IDs because of operation both inside and outside of fieldset
         getSectionIDs(`repeating_gear`, idArray => {
           const fieldnames = [];
-          idArray.forEach(id => fieldnames.push (
-          `repeating_gear_${id}_gear_cost`
-          ));
+          idArray.forEach(id => fieldnames.push (`repeating_gear_${id}_gear_cost_r`));
           // spread operator to get every array value
-          getAttrs(['credit_total',...fieldnames], v => {
-            const getValue = (id,field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
-            const cost = idArray.reduce((total, id) => total + getValue(id,'gear_cost'),0)
+          getAttrs(['credit_total', 'gear_cost', ...fieldnames], v => {
+            const getValue = (id, field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
             const total = parseFloat(v.credit_total) || 0
-            setAttrs({
-              credit_total: cost
-            });
+			const cost = parseFloat(v.gear_cost) || 0
+            const cost_r = idArray.reduce((total, id) => total + getValue(id, 'gear_cost_r'), 0)
+            setAttrs({credit_total: cost + cost_r});
           });
         });
       });
@@ -1206,13 +1203,22 @@
       });
     </script>
 
+	<div class="equipment_gear text_centered">
+	  <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 40%'></input>
+	  <input name='attr_gear_cost' type='text' placeholder='cR Value' style='width: 90px'>
+	  <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 90px'>
+	  <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 90px'>
+	  <input name='attr_gear_pg#' type='text' placeholder='Page #' style='width: 90px'>
+	  <input name='attr_gear_collapse' type='checkbox'  class='collapsible_ability_block_switch' />
+	  <textarea name='attr_ability_desc' class='collapsible_ability_description_window_b centered' style='width: 90%'></textarea>
+	</div>
     <fieldset name='gear' class='repeating_gear'>
       <div class="equipment_gear text_centered">
-        <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 45%'></input>
-        <input name='attr_gear_cost' type='text' placeholder='cR Value' style='width: 10%'>
-        <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 10%'>
-        <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 10%'>
-        <input name='attr_gear_pg#' type='text' placeholder='Page #' style='width: 10%'>
+        <input name='attr_gear_name_r' type='text' style='width: 40%'></input>
+        <input name='attr_gear_cost_r' type='text' style='width: 90px'>
+        <input name='attr_gear_weight_r' type='text' style='width: 90px'>
+        <input name='attr_gear_bp_r' type='text' style='width: 90px'>
+        <input name='attr_gear_pg#_r' type='text' style='width: 90px'>
         <input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
         <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 90%'></textarea>
       </div>
