@@ -1785,20 +1785,23 @@
 
   <div class='advancements box'>
     <script type='text/worker'>
-      on('change:xp_total change:repeating_advancements:advancement_costL change:repeating_advancements:advancement_costR remove:repeating_advancements', () => {
+      on('change:xp_total change:advancement_costL change:advancement_costR change:repeating_advancements:advancement_costL_r change:repeating_advancements:advancement_costR_r remove:repeating_advancements', () => {
         // get section IDs because of operation both inside and outside of fieldset
         getSectionIDs(`repeating_advancements`, idArray => {
           const fieldnames = [];
           idArray.forEach(id => fieldnames.push (
-          `repeating_advancements_${id}_advancement_costL`,
-          `repeating_advancements_${id}_advancement_costR`
+          `repeating_advancements_${id}_advancement_costL_r`,
+          `repeating_advancements_${id}_advancement_costR_r`
           ));
           // spread operator to get every array value
-          getAttrs(['XP_total',...fieldnames], v => {
-            const getValue = (id,field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
-            const left = idArray.reduce((total, id) => total + getValue(id,'advancement_costL'),0)
-            const right = idArray.reduce((total, id) => total + getValue(id,'advancement_costR'),0)
-            const spent = left + right
+          getAttrs(['XP_total', 'advancement_costL', 'advancement_costR', ...fieldnames], v => {
+            const getValue = (id, field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
+			const cost = parseFloat(v.gear_cost) || 0
+            const left = parseFloat(v.advancement_costL) || 0
+            const right = parseFloat(v.advancement_costR) || 0
+            const left_r = idArray.reduce((total, id) => total + getValue(id,'advancement_costL_r'),0)
+            const right_r = idArray.reduce((total, id) => total + getValue(id,'advancement_costR_r'),0)
+            const spent = left + right + left_r + right_r
             const total = parseFloat(v.XP_total) || 0
             setAttrs({
               XP_spent: spent,
@@ -1839,13 +1842,22 @@
       XP Total: <input name='attr_XP_total' type='number' style='width: 10%'>
     </div>
     <br>
+
+    <div class='edge_padding'>
+      <input name='attr_advancementL' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
+      <input name='attr_advancement_costL' type='number' placeholder='XP Cost' style='width: 10%'>
+      <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px'>
+      <input name='attr_advancementR' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
+      <input name='attr_advancement_costR' type='number' placeholder='XP Cost' style='width: 10%'>
+      <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%'>
+    </div>
     <div class='edge_padding'>
       <fieldset name='advancements' class='repeating_advancements'>
         <input name='attr_advancementL' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
-        <input name='attr_advancement_costL' type='number' placeholder='XP Cost' style='width: 10%'>
+        <input name='attr_advancement_costL_r' type='number' placeholder='XP Cost' style='width: 10%'>
         <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px'>
         <input name='attr_advancementR' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
-        <input name='attr_advancement_costR' type='number' placeholder='XP Cost' style='width: 10%'>
+        <input name='attr_advancement_costR_r' type='number' placeholder='XP Cost' style='width: 10%'>
         <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%'>
       </fieldset>
     </div>
