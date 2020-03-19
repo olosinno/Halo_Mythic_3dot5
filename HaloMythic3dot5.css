@@ -389,7 +389,6 @@ ______________________________ start of minimisable infographic ________________
 .sheet-minimisable_infographic_grid{
 	display: grid;
 	grid-template-columns: 100px 100px 100px 100px 185px 185px;
-	justify-content: end;
 }
 
 .sheet-minimisable_infographic_g1{grid-area: mi1; width: calc(100% - 6px);justify-self: center; border: 0px solid transparent; background:#394C6A !important;	font-family: Saira Semi Condensed; font-size: 20px; text-decoration: underline}
