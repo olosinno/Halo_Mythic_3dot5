@@ -429,14 +429,6 @@
       <div class='minimisable_infographic_expand'>
         <div class="minimisable_infographic_grid">
           <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="luck_roll" value="&{template:mythic} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}">Luck</button>
-            <p class='minimisable_infographic_g2'>Current</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Luck" value="0">
-            <p class='minimisable_infographic_g4'>Max</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Luck_max" value="0">
-          </div>
-
-          <div class="minimisable_infographic_field2x3 radius_border">
             <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}">Wounds</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Wounds" value="0">
@@ -453,23 +445,19 @@
           </div>
 
           <div class="minimisable_infographic_field2x3 radius_border">
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="luck_roll" value="&{template:mythic} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}">Luck</button>
+            <p class='minimisable_infographic_g2'>Current</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Luck" value="0">
+            <p class='minimisable_infographic_g4'>Max</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Luck_max" value="0">
+          </div>
+
+          <div class="minimisable_infographic_field2x3 radius_border">
             <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="support_roll" value="&{template:mythic} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}">Support Pts</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_support" value="0">
             <p class='minimisable_infographic_g4'>Max</p>
             <input class="minimisable_infographic_g5 full_width" type="text" name="attr_support_max" value="0">
-          </div>
-
-          <div class="minimisable_infographic_field4x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Armor}} {{4x2-1-name=Head}} {{4x2-1=@{Armor_head}}} {{4x2-1-name-max=Arms}} {{4x2-1-max=@{Armor_arms}}} {{4x2-2-name=Chest}} {{4x2-2=@{Armor_chest}}} {{4x2-2-name-max=Legs}} {{4x2-2-max=@{Armor_legs}}}">Armor</button>
-            <p class='minimisable_infographic_g6'>Head</p>
-            <input class="minimisable_infographic_g7 full_width" type="text" name="attr_Armor_head" value="0">
-            <p class='minimisable_infographic_g8'>Arms</p>
-            <input class="minimisable_infographic_g9 full_width" type="text" name="attr_Armor_arms" value="0">
-            <p class='minimisable_infographic_g2'>Chest</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Armor_chest" value="0">
-            <p class='minimisable_infographic_g4'>Legs</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Armor_legs" value="0">
           </div>
 
           <div class="minimisable_infographic_field4x3 radius_border">
@@ -482,6 +470,18 @@
             <input class="minimisable_infographic_g3 full_width" type="text" name="attr_shields_delay" value="0">
 			<p class='minimisable_infographic_g4'>Charge</p>
             <input class="minimisable_infographic_g5 full_width" type="text" name="attr_shields_charge" value="0">
+          </div>
+
+          <div class="minimisable_infographic_field4x3 radius_border">
+            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Armor}} {{4x2-1-name=Head}} {{4x2-1=@{Armor_head}}} {{4x2-1-name-max=Arms}} {{4x2-1-max=@{Armor_arms}}} {{4x2-2-name=Chest}} {{4x2-2=@{Armor_chest}}} {{4x2-2-name-max=Legs}} {{4x2-2-max=@{Armor_legs}}}">Armor</button>
+            <p class='minimisable_infographic_g6'>Head</p>
+            <input class="minimisable_infographic_g7 full_width" type="text" name="attr_Armor_head" value="0">
+            <p class='minimisable_infographic_g8'>Arms</p>
+            <input class="minimisable_infographic_g9 full_width" type="text" name="attr_Armor_arms" value="0">
+            <p class='minimisable_infographic_g2'>Chest</p>
+            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Armor_chest" value="0">
+            <p class='minimisable_infographic_g4'>Legs</p>
+            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Armor_legs" value="0">
           </div>
 
         </div>
@@ -1157,62 +1157,65 @@
       </div>
 
       <div class='equipment_credits text_centered' style='margin-top: 10px'>
-        cRedit Count: <input name='attr_credits' type='number' style='width: 10%; margin-right: 20px' />
-        cRedit Calculation: <input name='attr_credit_total' type='number' style='width: 10%; margin-right: 20px' readonly />
+        cR Count: <input name='attr_credits' type='number' style='width: 10%; margin-right: 20px' />
+        cR Calculation: <input name='attr_credit_total' type='number' style='width: 10%; margin-right: 20px' readonly />
 		Weight Calculation: <input name='attr_weight_total' type='number' style='width: 10%' readonly> kilograms</input>
       </div>
     </div>
     <br>
 
     <script type='text/worker'>
-      on('change:repeating_gear:gear_cost remove:repeating_gear', () => {
+      on('change:gear_cost change:repeating_gear:gear_cost_r remove:repeating_gear', () => {
         // get section IDs because of operation both inside and outside of fieldset
         getSectionIDs(`repeating_gear`, idArray => {
           const fieldnames = [];
-          idArray.forEach(id => fieldnames.push (
-          `repeating_gear_${id}_gear_cost`
-          ));
+          idArray.forEach(id => fieldnames.push (`repeating_gear_${id}_gear_cost_r`));
           // spread operator to get every array value
-          getAttrs(['credit_total',...fieldnames], v => {
-            const getValue = (id,field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
-            const cost = idArray.reduce((total, id) => total + getValue(id,'gear_cost'),0)
+          getAttrs(['credit_total', 'gear_cost', ...fieldnames], v => {
+            const getValue = (id, field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
             const total = parseFloat(v.credit_total) || 0
-            setAttrs({
-              credit_total: cost
-            });
+			const cost = parseFloat(v.gear_cost) || 0
+            const cost_r = idArray.reduce((total, id) => total + getValue(id, 'gear_cost_r'), 0)
+            setAttrs({credit_total: cost + cost_r});
           });
         });
       });
     </script>
 
     <script type='text/worker'>
-      on('change:repeating_gear:gear_weight remove:repeating_gear', () => {
+      on('change:gear_weight change:repeating_gear:gear_weight_r remove:repeating_gear', () => {
         // get section IDs because of operation both inside and outside of fieldset
         getSectionIDs(`repeating_gear`, idArray => {
           const fieldnames = [];
-          idArray.forEach(id => fieldnames.push (
-          `repeating_gear_${id}_gear_weight`
-          ));
+          idArray.forEach(id => fieldnames.push (`repeating_gear_${id}_gear_weight_r`));
           // spread operator to get every array value
-          getAttrs(['weight_total',...fieldnames], v => {
-            const getValue = (id,field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
-            const weight = idArray.reduce((total, id) => total + getValue(id,'gear_weight'),0)
+          getAttrs(['weight_total', 'gear_weight', ...fieldnames], v => {
+            const getValue = (id, field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
             const total = parseFloat(v.weight_total) || 0
-            setAttrs({
-              weight_total: weight
-            });
+			const weight = parseFloat(v.gear_weight) || 0
+            const weight_r = idArray.reduce((total, id) => total + getValue(id,'gear_weight_r'), 0)
+            setAttrs({weight_total: weight + weight_r});
           });
         });
       });
     </script>
 
+	<div class="equipment_gear text_centered">
+	  <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 40%'></input>
+	  <input name='attr_gear_cost' type='text' placeholder='cR Value' style='width: 90px'>
+	  <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 90px'>
+	  <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 90px'>
+	  <input name='attr_gear_pg#' type='text' placeholder='Page #' style='width: 90px'>
+	  <input name='attr_gear_collapse' type='checkbox'  class='collapsible_ability_block_switch' />
+	  <textarea name='attr_ability_desc' class='collapsible_ability_description_window_b centered' style='width: 90%'></textarea>
+	</div>
     <fieldset name='gear' class='repeating_gear'>
       <div class="equipment_gear text_centered">
-        <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 45%'></input>
-        <input name='attr_gear_cost' type='text' placeholder='cR Value' style='width: 10%'>
-        <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 10%'>
-        <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 10%'>
-        <input name='attr_gear_pg#' type='text' placeholder='Page #' style='width: 10%'>
+        <input name='attr_gear_name_r' type='text' style='width: 40%'></input>
+        <input name='attr_gear_cost_r' type='text' style='width: 90px'>
+        <input name='attr_gear_weight_r' type='text' style='width: 90px'>
+        <input name='attr_gear_bp_r' type='text' style='width: 90px'>
+        <input name='attr_gear_pg#_r' type='text' style='width: 90px'>
         <input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
         <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 90%'></textarea>
       </div>
@@ -1782,20 +1785,23 @@
 
   <div class='advancements box'>
     <script type='text/worker'>
-      on('change:xp_total change:repeating_advancements:advancement_costL change:repeating_advancements:advancement_costR remove:repeating_advancements', () => {
+      on('change:xp_total change:advancement_costL change:advancement_costR change:repeating_advancements:advancement_costL_r change:repeating_advancements:advancement_costR_r remove:repeating_advancements', () => {
         // get section IDs because of operation both inside and outside of fieldset
         getSectionIDs(`repeating_advancements`, idArray => {
           const fieldnames = [];
           idArray.forEach(id => fieldnames.push (
-          `repeating_advancements_${id}_advancement_costL`,
-          `repeating_advancements_${id}_advancement_costR`
+          `repeating_advancements_${id}_advancement_costL_r`,
+          `repeating_advancements_${id}_advancement_costR_r`
           ));
           // spread operator to get every array value
-          getAttrs(['XP_total',...fieldnames], v => {
-            const getValue = (id,field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
-            const left = idArray.reduce((total, id) => total + getValue(id,'advancement_costL'),0)
-            const right = idArray.reduce((total, id) => total + getValue(id,'advancement_costR'),0)
-            const spent = left + right
+          getAttrs(['XP_total', 'advancement_costL', 'advancement_costR', ...fieldnames], v => {
+            const getValue = (id, field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
+			const cost = parseFloat(v.gear_cost) || 0
+            const left = parseFloat(v.advancement_costL) || 0
+            const right = parseFloat(v.advancement_costR) || 0
+            const left_r = idArray.reduce((total, id) => total + getValue(id,'advancement_costL_r'),0)
+            const right_r = idArray.reduce((total, id) => total + getValue(id,'advancement_costR_r'),0)
+            const spent = left + right + left_r + right_r
             const total = parseFloat(v.XP_total) || 0
             setAttrs({
               XP_spent: spent,
@@ -1836,13 +1842,22 @@
       XP Total: <input name='attr_XP_total' type='number' style='width: 10%'>
     </div>
     <br>
+
+    <div class='edge_padding'>
+      <input name='attr_advancementL' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
+      <input name='attr_advancement_costL' type='number' placeholder='XP Cost' style='width: 10%'>
+      <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px'>
+      <input name='attr_advancementR' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
+      <input name='attr_advancement_costR' type='number' placeholder='XP Cost' style='width: 10%'>
+      <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%'>
+    </div>
     <div class='edge_padding'>
       <fieldset name='advancements' class='repeating_advancements'>
         <input name='attr_advancementL' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
-        <input name='attr_advancement_costL' type='number' placeholder='XP Cost' style='width: 10%'>
+        <input name='attr_advancement_costL_r' type='number' placeholder='XP Cost' style='width: 10%'>
         <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px'>
         <input name='attr_advancementR' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
-        <input name='attr_advancement_costR' type='number' placeholder='XP Cost' style='width: 10%'>
+        <input name='attr_advancement_costR_r' type='number' placeholder='XP Cost' style='width: 10%'>
         <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%'>
       </fieldset>
     </div>
