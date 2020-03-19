@@ -1183,21 +1183,18 @@
     </script>
 
     <script type='text/worker'>
-      on('change:repeating_gear:gear_weight remove:repeating_gear', () => {
+      on('change:gear_weight change:repeating_gear:gear_weight_r remove:repeating_gear', () => {
         // get section IDs because of operation both inside and outside of fieldset
         getSectionIDs(`repeating_gear`, idArray => {
           const fieldnames = [];
-          idArray.forEach(id => fieldnames.push (
-          `repeating_gear_${id}_gear_weight`
-          ));
+          idArray.forEach(id => fieldnames.push (`repeating_gear_${id}_gear_weight_r`));
           // spread operator to get every array value
-          getAttrs(['weight_total',...fieldnames], v => {
-            const getValue = (id,field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
-            const weight = idArray.reduce((total, id) => total + getValue(id,'gear_weight'),0)
+          getAttrs(['weight_total', 'gear_weight', ...fieldnames], v => {
+            const getValue = (id, field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
             const total = parseFloat(v.weight_total) || 0
-            setAttrs({
-              weight_total: weight
-            });
+			const weight = parseFloat(v.gear_weight) || 0
+            const weight_r = idArray.reduce((total, id) => total + getValue(id,'gear_weight_r'), 0)
+            setAttrs({weight_total: weight + weight_r});
           });
         });
       });
