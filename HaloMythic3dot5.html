@@ -2143,7 +2143,7 @@
 
 
 
-
+<button type="roll" value="&{template:mythic} {{loc=[[1d100]]}}" name="button"></button>
 
 
 
@@ -2194,9 +2194,11 @@
 
     {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
     {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
+        </div>
     {{/weapon}}
 
     {{#loc}}
+      <div class="sheet-template-content sheet-template-round">
     <div class="sheet-template-row sheet-template-center sheet-template-break">rolling hit location {{loc}}</div>
     <div class="sheet-template-row sheet-template-center">
       {{#rollBetween() loc 1 10}}   HEAD:        {{/rollBetween() loc 1 10}}
@@ -2251,7 +2253,7 @@
       {{#rollBetween() loc 85 89}}  85-89 Heart             {{/rollBetween() loc 85 89}}
       {{#rollBetween() loc 90 96}}  90-96 Lungs             {{/rollBetween() loc 90 96}}
       {{#rollBetween() loc 97 100}} 97-100 No Organ Hit     {{/rollBetween() loc 97 100}}
-    </div>
+        </div>
   </div>
   {{/loc}}
 

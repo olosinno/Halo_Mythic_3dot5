@@ -833,6 +833,10 @@ ______________________________ start of vehicles tab ___________________________
 	padding: 2px
 }
 
+.sheet-rolltemplate-mythic .sheet-template-round {
+		border-radius: 10px 10px 10px 10px;
+	}
+
 .sheet-rolltemplate-mythic .sheet-template-2x2 {
 	display: grid;
 	grid-template-columns: auto auto
@@ -847,7 +851,7 @@ ______________________________ start of vehicles tab ___________________________
 }
 
 .sheet-rolltemplate-mythic .sheet-template-break{
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 
