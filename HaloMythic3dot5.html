@@ -446,7 +446,7 @@
 
       <input type='checkbox' class='minimisable_switch'>
       <button style='background-color: yellow; color: black; margin-left: 80%'>Public</button>
-	  <button style='background-color: yellow; color: black' value='/w gm '>Whisper</button>
+	  <button style='background-color: yellow; color: black' value='/w gm '>To gm</button>
 	  <p class='minimisable_infographic_collapse'>Click on this box to EXPAND your minimizable infographic!</p>
       <div class='minimisable_infographic_expand'>
         <div class='minimisable_infographic_grid'>
@@ -2205,7 +2205,7 @@
 
 
 
-
+<button type="roll" value="&{template:mythic} {{loc=[[1d100]]}}" name="button"></button>
 
 
 
@@ -2256,9 +2256,11 @@
 
     {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
     {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
+        </div>
     {{/weapon}}
 
     {{#loc}}
+      <div class="sheet-template-content sheet-template-round">
     <div class="sheet-template-row sheet-template-center sheet-template-break">rolling hit location {{loc}}</div>
     <div class="sheet-template-row sheet-template-center">
       {{#rollBetween() loc 1 10}}   HEAD:        {{/rollBetween() loc 1 10}}
@@ -2313,7 +2315,7 @@
       {{#rollBetween() loc 85 89}}  85-89 Heart             {{/rollBetween() loc 85 89}}
       {{#rollBetween() loc 90 96}}  90-96 Lungs             {{/rollBetween() loc 90 96}}
       {{#rollBetween() loc 97 100}} 97-100 No Organ Hit     {{/rollBetween() loc 97 100}}
-    </div>
+        </div>
   </div>
   {{/loc}}
 
