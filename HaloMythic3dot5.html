@@ -1,4 +1,3 @@
-
 <div class="background_radius">
   <input name='attr_faction' type='radio' value='1' class='background_switch_1' display=none hidden checked />
   <input name='attr_faction' type='radio' value='2' class='background_switch_2' display=none hidden />
@@ -20,20 +19,19 @@
       <div class='gs5'><b>Build / Size</b></div>
       <div class='gs6'><b>Specialisation</b></div>
       <!-- second column of grid: left-side fields -->
-      <input class='gs7' name='attr_character_name' type='text' />
-      <select class='gs8' name='attr_faction'>
+      <input name='attr_character_name' type='text' class='gs7' />
+      <select name='attr_faction' class='gs8'>
         <option value='1' selected='selected' disabled hidden />
         <option value='2'>United Nations Space Command</option>
         <option value='3'>Covenant</option>
         <option value='4'>Forerunner</option>
         <option value='5'>Banished</option>
         <option value='6'>Other</option>
-
       </select>
-      <input class='gs9' name='attr_soldier_type' type='text' />
-      <input class='gs10'name='attr_rank' type='text' />
-      <input class='gs11'name='attr_size' type='text' placeholder='Average' />
-      <input class='gs12'name='attr_specialisation' type='text' />
+      <input name='attr_soldier_type' type='text' class='gs9' />
+      <input name='attr_rank' type='text' class='gs10' />
+      <input name='attr_size' type='text' class='gs11' placeholder='Average' />
+      <input name='attr_specialisation' type='text' class='gs12'/>
       <!-- third column of grid: header logo -->
       <div class='gs13'>
         <input name='attr_faction' type='checkbox' value='1' class='hidden hider' checked>
@@ -51,12 +49,12 @@
       </div>
       <!-- REPLACE LOGO SOURCE ONCE COMPLETE: src='images/mythic_logo.png' -->
       <!-- fourth column of grid: right-side fields -->
-      <input  class='gs14' name='attr_player_name' type='text' />
-      <input  class='gs15' name='attr_sex' type='text' />
-      <input  class='gs16' name='attr_race' type='text' />
-      <input  class='gs17' name='attr_upbringing' type='text' />
-      <input  class='gs18' name='attr_environment' type='text' />
-      <input  class='gs19' name='attr_lifestyle' type='text' />
+      <input name='attr_player_name' type='text' class='gs14' />
+      <input name='attr_sex' type='text' class='gs15' />
+      <input name='attr_race' type='text' class='gs16' />
+      <input name='attr_upbringing' type='text' class='gs17' />
+      <input name='attr_environment' type='text' class='gs18' />
+      <input name='attr_lifestyle' type='text' class='gs19' />
       <!-- fifth column of grid: right-side fields' labels/names -->
       <div class='gs20'><b>Player Name</b></div>
       <div class='gs21'><b>Gender</b></div>
@@ -75,7 +73,9 @@
     <div class='characteristics_background'>
 
       <div>
-        <div class='characteristics'><button class="clear" name='STR' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Strength}} {{roll=[[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>STR |<input class="input_background input_c_background"name="attr_STR_total" value="@{STR} + @{STR_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button name='STR' type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Strength}} {{roll=[[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
+		STR |<input name='attr_STR_total' value='@{STR} + @{STR_advancement}' class='input_background input_c_background' disabled /></button></div>
         <div class='characteristics'><input name='attr_STR' type='text' value='0' /></div>
         <select name='attr_STR_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
@@ -88,7 +88,9 @@
       </div>
 
       <div>
-        <div class='characteristics'><button class="clear" name='TOU' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Toughness}} {{roll=[[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>TOU |<input class="input_background input_c_background"name="attr_TOU_total" value="@{TOU} + @{TOU_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button name='TOU' type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Toughness}} {{roll=[[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
+		TOU |<input name='attr_TOU_total' value='@{TOU} + @{TOU_advancement}' class='input_background input_c_background' disabled /></button></div>
         <div class='characteristics'><input name='attr_TOU' type='text' value='0' /></div>
         <select name='attr_TOU_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
@@ -101,7 +103,9 @@
       </div>
 
       <div>
-        <div class='characteristics'><button class="clear" name='AGI' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Agility}} {{roll=[[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>AGI |<input class="input_background input_c_background"name="attr_AGI_total" value="@{AGI} + @{AGI_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button name='AGI'  type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Agility}} {{roll=[[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
+		AGI |<input name='attr_AGI_total' value='@{AGI} + @{AGI_advancement}' class='input_background input_c_background' disabled /></button></div>
         <div class='characteristics'><input name='attr_AGI' type='text' value='0' /></div>
         <select name='attr_AGI_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
@@ -114,7 +118,9 @@
       </div>
 
       <div>
-        <div class='characteristics'><button class="clear" name='WFR' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Warfare Ranged}} {{roll=[[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>WFR |<input class="input_background input_c_background"name="attr_WFR_total" value="@{WFR} + @{WFR_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button name='WFR' type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Warfare Ranged}} {{roll=[[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
+		WFR |<input name='attr_WFR_total' value='@{WFR} + @{WFR_advancement}' class='input_background input_c_background' disabled /></button></div>
         <div class='characteristics'><input name='attr_WFR' type='text' value='0' /></div>
         <select name='attr_WFR_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
@@ -127,7 +133,9 @@
       </div>
 
       <div>
-        <div class='characteristics'><button class="clear" name='WFM' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Warfare Melee}} {{roll=[[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>WFM |<input class="input_background input_c_background"name="attr_WFM_total" value="@{WFM} + @{WFM_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button name='WFM' type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Warfare Melee}} {{roll=[[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
+		WFM |<input name='attr_WFM_total' value='@{WFM} + @{WFM_advancement}' class='input_background input_c_background' disabled /></button></div>
         <div class='characteristics'><input name='attr_WFM' type='text' value='0' /></div>
         <select name='attr_WFM_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
@@ -140,7 +148,9 @@
       </div>
 
       <div>
-        <div class='characteristics'><button class="clear" name='INT' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Inteligence}} {{roll=[[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>INT |<input class="input_background input_c_background"name="attr_INT_total" value="@{INT} + @{INT_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button name='INT' type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Inteligence}} {{roll=[[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
+		INT |<input name='attr_INT_total' value='@{INT} + @{INT_advancement}' class='input_background input_c_background' disabled /></button></div>
         <div class='characteristics'><input name='attr_INT' type='text' value='0' /></div>
         <select name='attr_INT_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
@@ -153,7 +163,9 @@
       </div>
 
       <div>
-        <div class='characteristics'><button class="clear" name='PER' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Perception}} {{roll=[[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>PER |<input class="input_background input_c_background"name="attr_PER_total" value="@{PER} + @{PER_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button name='PER' type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Perception}} {{roll=[[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
+		PER |<input name='attr_PER_total' value='@{PER} + @{PER_advancement}' class='input_background input_c_background' disabled /></button></div>
         <div class='characteristics'><input name='attr_PER' type='text' value='0' /></div>
         <select name='attr_PER_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
@@ -166,7 +178,9 @@
       </div>
 
       <div>
-        <div class='characteristics'><button class="clear" name='CR' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Courage}} {{roll=[[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>CR |<input class="input_background input_c_background"name="attr_CR_total" value="@{CR} + @{CR_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button name='CR' type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Courage}} {{roll=[[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
+		CR |<input name='attr_CR_total' value='@{CR} + @{CR_advancement}' class='input_background input_c_background' disabled /></button></div>
         <div class='characteristics'><input name='attr_CR' type='text' value='0' /></div>
         <select name='attr_CR_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
@@ -179,7 +193,9 @@
       </div>
 
       <div>
-        <div class='characteristics'><button class="clear" name='CH' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Charisma}} {{roll=[[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>CH |<input class="input_background input_c_background"name="attr_CH_total" value="@{CH} + @{CH_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button name='CH' type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Charisma}} {{roll=[[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
+		CH |<input name='attr_CH_total' value='@{CH} + @{CH_advancement}' class='input_background input_c_background' disabled /></button></div>
         <div class='characteristics'><input name='attr_CH' type='text' value='0' /></div>
         <select name='attr_CH_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
@@ -192,7 +208,9 @@
       </div>
 
       <div>
-        <div class='characteristics'><button class="clear" name='LD' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Leadership}} {{roll=[[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>LD |<input class="input_background input_c_background"name="attr_LD_total" value="@{LD} + @{LD_advancement}" disabled="true"/></button></div>
+        <div class='characteristics'><button name='LD' type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Leadership}} {{roll=[[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
+		LD |<input name='attr_LD_total' value='@{LD} + @{LD_advancement}' class='input_background input_c_background' disabled /></button></div>
         <div class='characteristics'><input name='attr_LD' type='text' value='0' /></div>
         <select name='attr_LD_advancement' class='full_width'>
           <option value='0' selected='selected'>None +0</option>
