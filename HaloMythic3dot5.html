@@ -1007,9 +1007,9 @@
 
 
       <div class='core_lists2 edge_padding core_table radius_border'>
-        <h3 class="radius_border_heading"><b>Education</b></h3>
+        <h3 class='radius_border_heading'><b>Education</b></h3>
 
-        <div class="education_header">
+        <div class='education_header'>
           <p class='bold_text'>Name</p>
           <p class='bold_text'>Char</p>
           <p class='bold_text'>Mod</p>
@@ -1018,8 +1018,8 @@
           <p class='bold_text'>Roll</p>
         </div>
 
-        <div class="education_grid">
-          <input type="text" name="attr_education_name" class="full_width text_left"/>
+        <div class='education_grid'>
+          <input name='attr_education_name' type='text' class='full_width text_left' />
           <select name='attr_education_mod1' class=' full_width full_height'>
             <option value='@{STR} + @{STR_advancement}' >STR</option>
             <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
@@ -1032,15 +1032,17 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input type="number" name="attr_education_mod2" value="0"/>
-          <div class="education4"><input type="checkbox" name="attr_education_mod3" value="5"class='skills_item '/></div>
-          <div class="education5"><input type="checkbox" name="attr_education_mod3" value="10"class='skills_item'/></div>
-          <button class="clear" type="roll" name="education_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=@{education_name} }} {{roll=[[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]]}}'><input class="input_background"name="attr_education_total" value="@{education_mod1}+@{education_mod2}+@{education_mod3}" disabled /></button>
+          <input name='attr_education_mod2' type='number' value='0' />
+          <div class='education4'><input name='attr_education_mod3' type='checkbox' value='5' class='skills_item ' /></div>
+          <div class='education5'><input name='attr_education_mod3' type='checkbox' value='10' class='skills_item' /></div>
+          <button name='education_roll' type='roll' class='clear'
+		  value='&{template:mythic} {{character=@{character_name} }} {{roll-name=@{education_name} }} {{roll=[[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]]}}'>
+		  <input name='attr_education_total' value='@{education_mod1}+@{education_mod2}+@{education_mod3}' class='input_background' disabled /></button>
         </div>
 
         <fieldset name='education' class='repeating_education'>
-          <div class="education_grid">
-            <input type="text" name="attr_education_name" class="full_width text_left"/>
+          <div class='education_grid'>
+            <input name='attr_education_name' type='text' class='full_width text_left' />
             <select name='attr_education_r_mod1' class=' full_width full_height'>
               <option value='@{STR} + @{STR_advancement}' >STR</option>
               <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
@@ -1053,10 +1055,12 @@
               <option value='@{CH} + @{CH_advancement}' >CH</option>
               <option value='@{LD} + @{LD_advancement}' >LD</option>
             </select>
-            <input type="number" name="attr_education_r_mod2" value="0"/>
-            <div class="education4"><input type="checkbox" name="attr_education_r_mod3" value="5"class='skills_item '/></div>
-            <div class="education5"><input type="checkbox" name="attr_education_r_mod3" value="10"class='skills_item'/></div>
-            <button class="clear" type="roll" name="education_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=@{education_name} }} {{roll=[[floor(([[@{education_r_mod1}]]+@{education_r_mod2}+@{education_r_mod3}+?{Modifier|0}-1d100)/10)]]}}'><input class="input_background"name="attr_education_total" value="@{education_r_mod1}+@{education_r_mod2}+@{education_r_mod3}" disabled /></button>
+            <input name='attr_education_r_mod2' type='number' value='0' />
+            <div class='education4'><input name='attr_education_r_mod3' type='checkbox' value='5' class='skills_item ' /></div>
+            <div class='education5'><input name='attr_education_r_mod3' type='checkbox' value='10' class='skills_item' /></div>
+            <button name='education_roll' type='roll' class='clear'
+			value='&{template:mythic} {{character=@{character_name} }} {{roll-name=@{education_name} }} {{roll=[[floor(([[@{education_r_mod1}]]+@{education_r_mod2}+@{education_r_mod3}+?{Modifier|0}-1d100)/10)]]}}'>
+			<input name='attr_education_total' value='@{education_r_mod1}+@{education_r_mod2}+@{education_r_mod3}' class='input_background' disabled /></button>
           </div>
         </fieldset>
       </div>
