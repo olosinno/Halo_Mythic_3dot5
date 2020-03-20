@@ -240,7 +240,6 @@
         <p class='mythicgs6'>TOU</p>
         <p class='mythicgs7'>AGI</p>
       </div>
-
       <div class='characteristics2_movement'>
         <p class='movementgs1 mythicgs_heading'><b>Character Movement</b></p>
         <input name='attr_half_move' type='text' class='movementgs2 mythicgs_width' />
@@ -382,17 +381,15 @@
           });
         </script>
       </div>
-
-
-
       <div class='characteristics2_carry'>
         <p class='carrygs1 mythicgs_heading'><b>Carrying Capacity</b></p>
         <input name='attr_carry' type='text' class='carrygs2 mythicgs_width' />
-        <input name='attr_lift'  type='text' class='carrygs3 mythicgs_width' />
-        <input name='attr_push'  type='text' class='carrygs4 mythicgs_width' />
+        <input name='attr_lift' type='text' class='carrygs3 mythicgs_width' />
+        <input name='attr_push' type='text' class='carrygs4 mythicgs_width' />
         <p class='carrygs5'>Carry</p>
         <p class='carrygs6'>Lift</p>
         <p class='carrygs7'>Push</p>
+
       </div>
     </div>
     <hr>
@@ -404,7 +401,9 @@
     <div class='tabs_main'>
 
       <div class='initiative-container'>
-        <button name='initiative' type='roll' value='&{template:mythic} {{character=@{character_name} }} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]}}'class="clear">Initiative|<input class="input_background"name="attr_init_total" value="floor(@{initmod2}+@{initmod3})" disabled="true"/></button>
+        <button name='initiative' type='roll' class='clear'
+		value='&{template:mythic} {{character=@{character_name} }} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]}}'>
+		Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3})' class='input_background' disabled /></button>
         <select name='attr_initmod1' class='init_field'>
           <option value='1d10' selected='selected'>Standard</option>
           <option value='2d10k1'>Fast Foot</option>
@@ -419,7 +418,6 @@
           <option value='0'>N/A</option>
         </select>
       </div>
-
       <div class='sheet_tabs'>
         <input name='attr_sheetTab' type='checkbox' value='core' class='hidden core_bttn' checked />
         <button name='act_core' type='action' class='core_bttn bold_text'>Core</button>
@@ -436,80 +434,92 @@
         <input name='attr_sheetTab' type='checkbox' value='settings' class='hidden core_bttn' />
         <button name='act_settings' type='action' class='settings_bttn huge_text'>⚙</button>
       </div>
+
     </div>
     <hr>
 
+
+
+    <!-- ______________________________ whisper buttons plus collapsible infographics section ______________________________ -->
+
 	<div class='minimisable_infographic_main'>
+
       <input type='checkbox' class='minimisable_switch'>
       <button style='background-color: yellow; color: black; margin-left: 80%'>Public</button>
 	  <button style='background-color: yellow; color: black' value='/w gm '>Whisper</button>
 	  <p class='minimisable_infographic_collapse'>Click on this box to EXPAND your minimizable infographic!</p>
       <div class='minimisable_infographic_expand'>
-        <div class="minimisable_infographic_grid">
-          <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}">Wounds</button>
+        <div class='minimisable_infographic_grid'>
+
+          <div class='minimisable_infographic_field2x3 radius_border'>
+            <button class='minimisable_infographic_g1 clear radius_border_top' type='roll' name='shield_roll' value='&{template:mythic} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}'>Wounds</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Wounds" value="0">
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_Wounds' value='0'>
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Wounds_max" value="0">
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_Wounds_max' value='0'>
           </div>
 
-          <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Fatigue}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}">Fatigue</button>
+          <div class='minimisable_infographic_field2x3 radius_border'>
+            <button class='minimisable_infographic_g1 clear radius_border_top' type='roll' name='shield_roll' value='&{template:mythic} {{name=Fatigue}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>Fatigue</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Fatigue" value="0">
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_Fatigue' value='0'>
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Fatigue_max" value="0">
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_Fatigue_max' value='0'>
           </div>
 
-          <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="luck_roll" value="&{template:mythic} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}">Luck</button>
+          <div class='minimisable_infographic_field2x3 radius_border'>
+            <button class='minimisable_infographic_g1 clear radius_border_top' type='roll' name='luck_roll' value='&{template:mythic} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}'>Luck</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Luck" value="0">
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_Luck' value='0'>
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Luck_max" value="0">
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_Luck_max' value='0'>
           </div>
 
-          <div class="minimisable_infographic_field2x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="support_roll" value="&{template:mythic} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}">Support Pts</button>
+          <div class='minimisable_infographic_field2x3 radius_border'>
+            <button class='minimisable_infographic_g1 clear radius_border_top' type='roll' name='support_roll' value='&{template:mythic} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>Support Pts</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_support" value="0">
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_support' value='0'>
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_support_max" value="0">
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_support_max' value='0'>
           </div>
 
-          <div class="minimisable_infographic_field4x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}">Shields</button>
+          <div class='minimisable_infographic_field4x3 radius_border'>
+            <button class='minimisable_infographic_g1 clear radius_border_top' type='roll' name='shield_roll' value='&{template:mythic} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}'>Shields</button>
             <p class='minimisable_infographic_g6'>Current</p>
-            <input class="minimisable_infographic_g7 full_width" type="text" name="attr_shields" value="0">
+            <input class='minimisable_infographic_g7 full_width' type='text' name='attr_shields' value='0'>
             <p class='minimisable_infographic_g8'>Max</p>
-            <input class="minimisable_infographic_g9 full_width" type="text" name="attr_shields_max" value="0">
+            <input class='minimisable_infographic_g9 full_width' type='text' name='attr_shields_max' value='0'>
             <p class='minimisable_infographic_g2'>Delay</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_shields_delay" value="0">
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_shields_delay' value='0'>
 			<p class='minimisable_infographic_g4'>Charge</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_shields_charge" value="0">
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_shields_charge' value='0'>
           </div>
 
-          <div class="minimisable_infographic_field4x3 radius_border">
-            <button class="minimisable_infographic_g1 clear radius_border_top" type="roll" name="shield_roll" value="&{template:mythic} {{name=Armor}} {{4x2-1-name=Head}} {{4x2-1=@{Armor_head}}} {{4x2-1-name-max=Arms}} {{4x2-1-max=@{Armor_arms}}} {{4x2-2-name=Chest}} {{4x2-2=@{Armor_chest}}} {{4x2-2-name-max=Legs}} {{4x2-2-max=@{Armor_legs}}}">Armor</button>
+          <div class='minimisable_infographic_field4x3 radius_border'>
+            <button class='minimisable_infographic_g1 clear radius_border_top' type='roll' name='shield_roll' value='&{template:mythic} {{name=Armor}} {{4x2-1-name=Head}} {{4x2-1=@{Armor_head}}} {{4x2-1-name-max=Arms}} {{4x2-1-max=@{Armor_arms}}} {{4x2-2-name=Chest}} {{4x2-2=@{Armor_chest}}} {{4x2-2-name-max=Legs}} {{4x2-2-max=@{Armor_legs}}}'>Armor</button>
             <p class='minimisable_infographic_g6'>Head</p>
-            <input class="minimisable_infographic_g7 full_width" type="text" name="attr_Armor_head" value="0">
+            <input class='minimisable_infographic_g7 full_width' type='text' name='attr_Armor_head' value='0'>
             <p class='minimisable_infographic_g8'>Arms</p>
-            <input class="minimisable_infographic_g9 full_width" type="text" name="attr_Armor_arms" value="0">
+            <input class='minimisable_infographic_g9 full_width' type='text' name='attr_Armor_arms' value='0'>
             <p class='minimisable_infographic_g2'>Chest</p>
-            <input class="minimisable_infographic_g3 full_width" type="text" name="attr_Armor_chest" value="0">
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_Armor_chest' value='0'>
             <p class='minimisable_infographic_g4'>Legs</p>
-            <input class="minimisable_infographic_g5 full_width" type="text" name="attr_Armor_legs" value="0">
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_Armor_legs' value='0'>
           </div>
 
         </div>
       </div>
       <br>
+
     </div>
+
+  </div>
+
+
 
     <!-- ______________________________ sheet tabs _________________________________ -->
     <!-- ______________________________ SHEET TABS LOGIC ______________________________ -->
-  </div>
+
   <input name='attr_sheetTab' type='hidden' value='core' class='tabstoggle' />
   <script type='text/worker'>
     const buttonlist = ['core','equipment','medical','advancements','journal','vehicles','settings'];
@@ -521,12 +531,11 @@
       });
     });
   </script>
-  <!-- ______________________________ start of minimisable infographic ______________________________ -->
 
-  <!-- ______________________________ start of core ______________________________ -->
+  <!-- ______________________________ start of tab Core ______________________________ -->
 
   <div class='core box'>
-    <!-- Core Data -->
+  <!-- Core Data -->
     <div class='core_lists '>
 
       <div class='core_lists1 edge_padding core_table radius_border'>
@@ -560,7 +569,7 @@
           <input name="attr_appeal_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_appeal_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_appeal_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="appeal_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Appeal}} {{roll=[[floor(([[@{appeal_mod1}]]+@{appeal_mod2}+[[@{appeal_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{appeal_mod1}+@{appeal_mod2}+@{appeal_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="appeal_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Appeal}} {{roll=[[floor(([[@{appeal_mod1}]]+@{appeal_mod2}+[[@{appeal_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{appeal_mod1}+@{appeal_mod2}+@{appeal_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Athletics</p>
@@ -581,7 +590,7 @@
           <input name="attr_athletics_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_athletics_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_athletics_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="athletics_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Athletics}} {{roll=[[floor(([[@{athletics_mod1}]]+@{athletics_mod2}+[[@{athletics_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{athletics_mod1}+@{athletics_mod2}+@{athletics_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="athletics_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Athletics}} {{roll=[[floor(([[@{athletics_mod1}]]+@{athletics_mod2}+[[@{athletics_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{athletics_mod1}+@{athletics_mod2}+@{athletics_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Camouflage</p>
@@ -602,7 +611,7 @@
           <input name="attr_camouflage_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_camouflage_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_camouflage_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="camouflage_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Camouflage}} {{roll=[[floor(([[@{camouflage_mod1}]]+@{camouflage_mod2}+[[@{camouflage_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{camouflage_mod1}+@{camouflage_mod2}+@{camouflage_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="camouflage_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Camouflage}} {{roll=[[floor(([[@{camouflage_mod1}]]+@{camouflage_mod2}+[[@{camouflage_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{camouflage_mod1}+@{camouflage_mod2}+@{camouflage_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Command</p>
@@ -623,7 +632,7 @@
           <input name="attr_command_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_command_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_command_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="command_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Command}} {{roll=[[floor(([[@{command_mod1}]]+@{command_mod2}+[[@{command_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{command_mod1}+@{command_mod2}+@{command_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="command_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Command}} {{roll=[[floor(([[@{command_mod1}]]+@{command_mod2}+[[@{command_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{command_mod1}+@{command_mod2}+@{command_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Cryptography</p>
@@ -644,7 +653,7 @@
           <input name="attr_cryptography_mod3" type="checkbox" value="40" class='skills_item'/>
           <input name="attr_cryptography_mod3" type="checkbox" value="50" class='skills_item'/>
           <input name="attr_cryptography_mod3" type="checkbox" value="60" class='skills_item'/>
-          <button type="roll" name="cryptography_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Cryptography}} {{roll=[[floor(([[@{cryptography_mod1}]]+@{cryptography_mod2}+[[@{cryptography_mod3} -40]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{cryptography_mod1}+@{cryptography_mod2}+@{cryptography_mod3}-40" disabled="true"/></button>
+          <button type="roll" name="cryptography_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Cryptography}} {{roll=[[floor(([[@{cryptography_mod1}]]+@{cryptography_mod2}+[[@{cryptography_mod3} -40]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{cryptography_mod1}+@{cryptography_mod2}+@{cryptography_mod3}-40" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Deception</p>
@@ -665,7 +674,7 @@
           <input name="attr_deception_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_deception_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_deception_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="deception_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Deception}} {{roll=[[floor(([[@{deception_mod1}]]+@{deception_mod2}+[[@{deception_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{deception_mod1}+@{deception_mod2}+@{deception_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="deception_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Deception}} {{roll=[[floor(([[@{deception_mod1}]]+@{deception_mod2}+[[@{deception_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{deception_mod1}+@{deception_mod2}+@{deception_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Demolition</p>
@@ -686,7 +695,7 @@
           <input name="attr_demolition_mod3" type="checkbox" value="40" class='skills_item'/>
           <input name="attr_demolition_mod3" type="checkbox" value="50" class='skills_item'/>
           <input name="attr_demolition_mod3" type="checkbox" value="60" class='skills_item'/>
-          <button type="roll" name="demolition_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Demolition}} {{roll=[[floor(([[@{demolition_mod1}]]+@{demolition_mod2}+[[@{demolition_mod3} -40]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{demolition_mod1}+@{demolition_mod2}+@{demolition_mod3}-40" disabled="true"/></button>
+          <button type="roll" name="demolition_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Demolition}} {{roll=[[floor(([[@{demolition_mod1}]]+@{demolition_mod2}+[[@{demolition_mod3} -40]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{demolition_mod1}+@{demolition_mod2}+@{demolition_mod3}-40" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Evasion</p>
@@ -707,7 +716,7 @@
           <input name="attr_evasion_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_evasion_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_evasion_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="evasion_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Evasion}} {{roll=[[floor(([[@{evasion_mod1}]]+@{evasion_mod2}+[[@{evasion_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{evasion_mod1}+@{evasion_mod2}+@{evasion_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="evasion_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Evasion}} {{roll=[[floor(([[@{evasion_mod1}]]+@{evasion_mod2}+[[@{evasion_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{evasion_mod1}+@{evasion_mod2}+@{evasion_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Gambling</p>
@@ -728,7 +737,7 @@
           <input name="attr_gambling_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_gambling_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_gambling_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="gambling_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Gambling}} {{roll=[[floor(([[@{gambling_mod1}]]+@{gambling_mod2}+[[@{gambling_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{gambling_mod1}+@{gambling_mod2}+@{gambling_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="gambling_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Gambling}} {{roll=[[floor(([[@{gambling_mod1}]]+@{gambling_mod2}+[[@{gambling_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{gambling_mod1}+@{gambling_mod2}+@{gambling_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Interrogation</p>
@@ -749,7 +758,7 @@
           <input name="attr_interrogation_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_interrogation_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_interrogation_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="interrogation_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Interrogation}} {{roll=[[floor(([[@{interrogation_mod1}]]+@{interrogation_mod2}+[[@{interrogation_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{interrogation_mod1}+@{interrogation_mod2}+@{interrogation_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="interrogation_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Interrogation}} {{roll=[[floor(([[@{interrogation_mod1}]]+@{interrogation_mod2}+[[@{interrogation_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{interrogation_mod1}+@{interrogation_mod2}+@{interrogation_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Intimidation</p>
@@ -770,7 +779,7 @@
           <input name="attr_intimidation_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_intimidation_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_intimidation_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="intimidation_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Intimidation}} {{roll=[[floor(([[@{intimidation_mod1}]]+@{intimidation_mod2}+[[@{intimidation_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{intimidation_mod1}+@{intimidation_mod2}+@{intimidation_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="intimidation_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Intimidation}} {{roll=[[floor(([[@{intimidation_mod1}]]+@{intimidation_mod2}+[[@{intimidation_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{intimidation_mod1}+@{intimidation_mod2}+@{intimidation_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Investigation</p>
@@ -791,7 +800,7 @@
           <input name="attr_investigation_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_investigation_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_investigation_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="investigation_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Investigation}} {{roll=[[floor(([[@{investigation_mod1}]]+@{investigation_mod2}+[[@{investigation_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{investigation_mod1}+@{investigation_mod2}+@{investigation_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="investigation_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Investigation}} {{roll=[[floor(([[@{investigation_mod1}]]+@{investigation_mod2}+[[@{investigation_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{investigation_mod1}+@{investigation_mod2}+@{investigation_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Medication</p>
@@ -812,7 +821,7 @@
           <input name="attr_medication_mod3" type="checkbox" value="40" class='skills_item'/>
           <input name="attr_medication_mod3" type="checkbox" value="50" class='skills_item'/>
           <input name="attr_medication_mod3" type="checkbox" value="60" class='skills_item'/>
-          <button type="roll" name="medication_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Medication}} {{roll=[[floor(([[@{medication_mod1}]]+@{medication_mod2}+[[@{medication_mod3} -40]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{medication_mod1}+@{medication_mod2}+@{medication_mod3}-40" disabled="true"/></button>
+          <button type="roll" name="medication_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Medication}} {{roll=[[floor(([[@{medication_mod1}]]+@{medication_mod2}+[[@{medication_mod3} -40]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{medication_mod1}+@{medication_mod2}+@{medication_mod3}-40" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Navigation</p>
@@ -833,7 +842,7 @@
           <input name="attr_navigation_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_navigation_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_navigation_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="navigation_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Navigation}} {{roll=[[floor(([[@{navigation_mod1}]]+@{navigation_mod2}+[[@{navigation_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{navigation_mod1}+@{navigation_mod2}+@{navigation_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="navigation_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Navigation}} {{roll=[[floor(([[@{navigation_mod1}]]+@{navigation_mod2}+[[@{navigation_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{navigation_mod1}+@{navigation_mod2}+@{navigation_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Negotiation</p>
@@ -854,7 +863,7 @@
           <input name="attr_negotiation_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_negotiation_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_negotiation_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="negotiation_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Negotiation}} {{roll=[[floor(([[@{negotiation_mod1}]]+@{negotiation_mod2}+[[@{negotiation_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{negotiation_mod1}+@{negotiation_mod2}+@{negotiation_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="negotiation_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Negotiation}} {{roll=[[floor(([[@{negotiation_mod1}]]+@{negotiation_mod2}+[[@{negotiation_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{negotiation_mod1}+@{negotiation_mod2}+@{negotiation_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Pilot</p>
@@ -875,7 +884,7 @@
           <input name="attr_pilot_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_pilot_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_pilot_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="pilot_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Pilot}} {{roll=[[floor(([[@{pilot_mod1}]]+@{pilot_mod2}+[[@{pilot_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{pilot_mod1}+@{pilot_mod2}+@{pilot_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="pilot_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Pilot}} {{roll=[[floor(([[@{pilot_mod1}]]+@{pilot_mod2}+[[@{pilot_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{pilot_mod1}+@{pilot_mod2}+@{pilot_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Security</p>
@@ -896,7 +905,7 @@
           <input name="attr_security_mod3" type="checkbox" value="40" class='skills_item'/>
           <input name="attr_security_mod3" type="checkbox" value="50" class='skills_item'/>
           <input name="attr_security_mod3" type="checkbox" value="60" class='skills_item'/>
-          <button type="roll" name="security_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Security}} {{roll=[[floor(([[@{security_mod1}]]+@{security_mod2}+[[@{security_mod3} -40]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{security_mod1}+@{security_mod2}+@{security_mod3}-40" disabled="true"/></button>
+          <button type="roll" name="security_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Security}} {{roll=[[floor(([[@{security_mod1}]]+@{security_mod2}+[[@{security_mod3} -40]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{security_mod1}+@{security_mod2}+@{security_mod3}-40" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Stunting</p>
@@ -917,7 +926,7 @@
           <input name="attr_stunting_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_stunting_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_stunting_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="stunting_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Stunting}} {{roll=[[floor(([[@{stunting_mod1}]]+@{stunting_mod2}+[[@{stunting_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{stunting_mod1}+@{stunting_mod2}+@{stunting_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="stunting_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Stunting}} {{roll=[[floor(([[@{stunting_mod1}]]+@{stunting_mod2}+[[@{stunting_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{stunting_mod1}+@{stunting_mod2}+@{stunting_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Survival</p>
@@ -938,7 +947,7 @@
           <input name="attr_survival_mod3" type="checkbox" value="20" class='skills_item'/>
           <input name="attr_survival_mod3" type="checkbox" value="30" class='skills_item'/>
           <input name="attr_survival_mod3" type="checkbox" value="40" class='skills_item'/>
-          <button type="roll" name="survival_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Survival}} {{roll=[[floor(([[@{survival_mod1}]]+@{survival_mod2}+[[@{survival_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{survival_mod1}+@{survival_mod2}+@{survival_mod3}-20" disabled="true"/></button>
+          <button type="roll" name="survival_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Survival}} {{roll=[[floor(([[@{survival_mod1}]]+@{survival_mod2}+[[@{survival_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{survival_mod1}+@{survival_mod2}+@{survival_mod3}-20" disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Technology</p>
@@ -959,7 +968,7 @@
           <input name="attr_technology_mod3" type="checkbox" value="40" class='skills_item'/>
           <input name="attr_technology_mod3" type="checkbox" value="50" class='skills_item'/>
           <input name="attr_technology_mod3" type="checkbox" value="60" class='skills_item'/>
-          <button type="roll" name="technology_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Technology}} {{roll=[[floor(([[@{technology_mod1}]]+@{technology_mod2}+[[@{technology_mod3} -40]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{technology_mod1}+@{technology_mod2}+@{technology_mod3}-40" disabled="true"/></button>
+          <button type="roll" name="technology_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=Technology}} {{roll=[[floor(([[@{technology_mod1}]]+@{technology_mod2}+[[@{technology_mod3} -40]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{technology_mod1}+@{technology_mod2}+@{technology_mod3}-40" disabled /></button>
         </div>
         <fieldset name='skills' class='repeating_skills'>
           <div class='skill_grid'>
@@ -984,7 +993,7 @@
             <input name="attr_skill_R_mod3" type="checkbox" value="20+@{skill_R_mod4}" class='skills_item'/>
             <input name="attr_skill_R_mod3" type="checkbox" value="30+@{skill_R_mod4}" class='skills_item'/>
             <input name="attr_skill_R_mod3" type="checkbox" value="40+@{skill_R_mod4}" class='skills_item'/>
-            <button type="roll" name="skill_Roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=@{skill_R_name} }} {{roll=[[floor(([[@{skill_R_mod1}]]+@{skill_R_mod2}+[[@{skill_R_mod3}-(20+@{skill_R_mod4})]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{skill_R_mod1}]]+@{skill_R_mod2}+[[@{skill_R_mod3}-(20+@{skill_R_mod4})" disabled="true"/></button>
+            <button type="roll" name="skill_Roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=@{skill_R_name} }} {{roll=[[floor(([[@{skill_R_mod1}]]+@{skill_R_mod2}+[[@{skill_R_mod3}-(20+@{skill_R_mod4})]]+?{Modifier|0}-1d100)/10)]]}}' class="clear"><input class="input_background"name="attr_education_total" value="@{skill_R_mod1}]]+@{skill_R_mod2}+[[@{skill_R_mod3}-(20+@{skill_R_mod4})" disabled /></button>
           </div>
         </fieldset>
       </div>
@@ -1020,7 +1029,7 @@
           <input type="number" name="attr_education_mod2" value="0"/>
           <div class="education4"><input type="checkbox" name="attr_education_mod3" value="5"class='skills_item '/></div>
           <div class="education5"><input type="checkbox" name="attr_education_mod3" value="10"class='skills_item'/></div>
-          <button class="clear" type="roll" name="education_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=@{education_name} }} {{roll=[[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]]}}'><input class="input_background"name="attr_education_total" value="@{education_mod1}+@{education_mod2}+@{education_mod3}" disabled="true"/></button>
+          <button class="clear" type="roll" name="education_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=@{education_name} }} {{roll=[[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]]}}'><input class="input_background"name="attr_education_total" value="@{education_mod1}+@{education_mod2}+@{education_mod3}" disabled /></button>
         </div>
 
         <fieldset name='education' class='repeating_education'>
@@ -1041,7 +1050,7 @@
             <input type="number" name="attr_education_r_mod2" value="0"/>
             <div class="education4"><input type="checkbox" name="attr_education_r_mod3" value="5"class='skills_item '/></div>
             <div class="education5"><input type="checkbox" name="attr_education_r_mod3" value="10"class='skills_item'/></div>
-            <button class="clear" type="roll" name="education_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=@{education_name} }} {{roll=[[floor(([[@{education_r_mod1}]]+@{education_r_mod2}+@{education_r_mod3}+?{Modifier|0}-1d100)/10)]]}}'><input class="input_background"name="attr_education_total" value="@{education_r_mod1}+@{education_r_mod2}+@{education_r_mod3}" disabled="true"/></button>
+            <button class="clear" type="roll" name="education_roll" value='&{template:mythic} {{character=@{character_name} }} {{roll-name=@{education_name} }} {{roll=[[floor(([[@{education_r_mod1}]]+@{education_r_mod2}+@{education_r_mod3}+?{Modifier|0}-1d100)/10)]]}}'><input class="input_background"name="attr_education_total" value="@{education_r_mod1}+@{education_r_mod2}+@{education_r_mod3}" disabled /></button>
           </div>
         </fieldset>
       </div>
@@ -1241,8 +1250,11 @@
   </div>
 
 
+
+  <!-- ______________________________ start of tab Medical ______________________________ -->
+
   <div class='medical box'>
-    <!-- Medical -->
+  <!-- Medical -->
     <div class='medical-grid'>
       <div class='medicalg1 medicalG'>
         Finger / Toe
@@ -1801,7 +1813,12 @@
     </div>
   </div>
 
+
+
+  <!-- ______________________________ start of tab Advancements ______________________________ -->
+
   <div class='advancements box'>
+  <!-- Advancements -->
     <script type='text/worker'>
       on('change:xp_total change:advancement_costL change:advancement_costR change:repeating_advancements:advancement_costL_r change:repeating_advancements:advancement_costR_r remove:repeating_advancements', () => {
         // get section IDs because of operation both inside and outside of fieldset
@@ -1882,7 +1899,12 @@
 
   </div>
 
+
+
+  <!-- ______________________________ start of tab Journal ______________________________ -->
+
   <div class='journal box'>
+  <!-- Journal -->
     <h2 class='white_text'>Journal: Objectives</h2>
     <div class='edge_padding'>
       <fieldset name='objectives' class='repeating_objectives'>
@@ -1902,7 +1924,12 @@
     </div>
   </div>
 
+
+
+  <!-- ______________________________ start of tab Vehicles ______________________________ -->
+
   <div class='vehicles box'>
+  <!-- Vehicles -->
     <fieldset name='vehicles-R' class='repeating_vehicles'>
       <div class='vehicles_divider'>
         <div class='vehicles_grid1'>
@@ -2126,7 +2153,12 @@
     </fieldset>
   </div>
 
+
+
+  <!-- ______________________________ start of tab Settings ______________________________ -->
+
   <div class='settings box'>
+  <!-- Settings -->
     <h2>Settings</h2>
     <h3>race overrides</h3>
     <select name='attr_settings_race' class='centered edge_padding'>
