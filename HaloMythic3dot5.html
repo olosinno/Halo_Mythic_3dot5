@@ -1799,12 +1799,12 @@
         <div class='medical_table'>90-96 Lungs</div>
         <div class='medical_table radius_border_bottom'>97-100 No Organ Hit</div>
         <br>
-        <h3 class="radius_border_top">ROLL LOCATION (optional)</h3>
+        <h3 class='radius_border_top'>ROLL LOCATION (optional)</h3>
         <div class='medical_table'>1-3 Left</div>
         <div class='medical_table'>  4-7 Center</div>
         <div class='medical_table radius_border_bottom'>8-10 Right</div>
         <br>
-        <h3 class="radius_border_top">IF Fingers/Toes(1D10)</h3>
+        <h3 class='radius_border_top'>IF Fingers/Toes(1D10)</h3>
         <div class='medical_table'>1-2 Pinky Finger/Toe</div>
         <div class='medical_table'>3-4 Ring Finger/Toe</div>
         <div class='medical_table'>5-6 Middle Finger/Toe</div>
@@ -1813,13 +1813,13 @@
       </div>
 
       <div class='medicalgR'>
-        <h2 class="medical_h2 radius_border_top">Medical Information</h2>
+        <h2 class='medical_h2 radius_border_top'>Medical Information</h2>
         <!-- Every fieldset requires to be of class repeating_word1word2. -->
         <!-- Every fieldset requires its named element to be of attr_ prefix. -->
         <!-- Every textarea element requires a closing tag; cannot be a void element. -->
-        <textarea class="radius_border_bottom"name='attr_medical' placeholder='Not all injuries in 100DOS are lethal. Exhaustion, combat trauma, or exchanging blows with bare fists can all leave a character tattered, but intact. Fatigue measures the amount of non-lethal injury a character can take. For every level of Fatigue a Character has, they take a -5 Penalty to all Tests made.&#10;&#10;Once a Character surpasses their Toughness Modifier, multiplied by 2, in Fatigue, they fall into a coma. The Character’s coma will last one hour for every level of Fatigue the Character has. Every hour that passes, the level of Fatigue is reduced by one. The Character may wake up once their level of Fatigue is their Toughness Modifier or lower.'></textarea>
+        <textarea name='attr_medical' class='radius_border_bottom' placeholder='Not all injuries in 100DOS are lethal. Exhaustion, combat trauma, or exchanging blows with bare fists can all leave a character tattered, but intact. Fatigue measures the amount of non-lethal injury a character can take. For every level of Fatigue a Character has, they take a -5 Penalty to all Tests made.&#10;&#10;Once a Character surpasses their Toughness Modifier, multiplied by 2, in Fatigue, they fall into a coma. The Character’s coma will last one hour for every level of Fatigue the Character has. Every hour that passes, the level of Fatigue is reduced by one. The Character may wake up once their level of Fatigue is their Toughness Modifier or lower.'></textarea>
         <fieldset class='repeating_medical'>
-          <textarea class="radius_border_bottom"name='attr_medical'></textarea>
+          <textarea name='attr_medical' class='radius_border_bottom'></textarea>
         </fieldset>
       </div>
     </div>
@@ -1945,7 +1945,7 @@
     <fieldset name='vehicles-R' class='repeating_vehicles'>
       <div class='vehicles_divider'>
         <div class='vehicles_grid1'>
-          <input type='text' name="attr_vehicle-name" class='vehicles_Gn full_width' placeholder='Name' />
+          <input name='attr_vehicle-name' type='text' class='vehicles_Gn full_width' placeholder='Name' />
 
           <select name='attr_vehicle-shield' class='vehicles_Gs full_width'>
             <option value='0' selected='selected'>Unshielded</option>
@@ -2093,8 +2093,8 @@
               <textarea class='collapsible_ability_description_window_b' placeholder='Enter any vehicle-specific rules or other unique information here.'></textarea>
             </div>
             <div>
-              <input name="attr_modifications" type='text' placeholder='Modifications' class='full_width_17px'>
-              <input name="attr_modificationsc" type="checkbox" value="6" class='collapsible_ability_block_switch'>
+              <input name='attr_modifications' type='text' placeholder='Modifications' class='full_width_17px'>
+              <input name='attr_modificationsc' type='checkbox' value='6' class='collapsible_ability_block_switch'>
               <div class='collapsible_ability_description_window_a' ></div>
               <textarea class='collapsible_ability_description_window_b' placeholder='Vehicles in Halo Mythic can be modified in many ways.  These use a Vehicle’s Weapon Points and Size Points, which are specialized Hardpoints on a Vehicle.  Each Modification takes a specified amount of Weapon and Size Points.
               &#10;Vehicle modifications are classified into five categories; Body, Propulsion, Electronic, Combat, and Miscellaneous.'></textarea>
