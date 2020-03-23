@@ -650,14 +650,14 @@ ______________________________ start of medical tab ____________________________
 }
 .sheet-medical_h2_background,
 .sheet-medical_background{
-		background: #475f85;
-		margin-bottom: 10px;
-		border-radius: 10px;
-		padding: 2px
+	background: #475f85;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	padding: 2px
 }
 .sheet-medical_h2_background{
-		border-radius: 10px 10px 0px 0px;
-				margin-bottom: 0;
+	border-radius: 10px 10px 0px 0px;
+	margin-bottom: 0;
 }
 
 /* ______________________________ end of medical tab __________________________________________________________
@@ -668,6 +668,7 @@ ______________________________ start of advancements tab _______________________
 	grid-template-areas:
 	't1 t2';
 	grid-template-columns: 33% 67%;
+	margin-left: 1.5%
 }
 .sheet-faction_training { grid-area: t1 }
 .sheet-weapon_training { grid-area: t2 }
