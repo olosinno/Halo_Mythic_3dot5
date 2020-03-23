@@ -558,7 +558,7 @@
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Appeal</p>
           <p class='bold_text skills_text'></p>
-          <select name='attr_appeal_mod1' class='full_width full_height'>
+          <select name='attr_mod_3_appeal' class='full_width full_height'>
             <option value='@{STR} + @{STR_advancement}' >STR</option>
             <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
             <option value='@{AGI} + @{AGI_advancement}' >AGI</option>
@@ -570,11 +570,11 @@
             <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_appeal_mod2' type='number' value='0'/>
-          <input name='attr_appeal_mod3' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_appeal_mod3' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_appeal_mod3' type='checkbox' value='40' class='skills_item'/>
-          <button type='roll' name='appeal_roll' value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{roll-name=Appeal}} {{roll=[[floor(([[@{appeal_mod1}]]+@{appeal_mod2}+[[@{appeal_mod3} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_appeal_total' value='@{appeal_mod1}+@{appeal_mod2}+@{appeal_mod3}-20' class='input_background' disabled /></button>
+          <input name='attr_mod_2_appeal' type='number' value='0'/>
+          <input name='attr_mod_3_appeal' type='checkbox' value='20' class='skills_item'/>
+          <input name='attr_mod_3_appeal' type='checkbox' value='30' class='skills_item'/>
+          <input name='attr_mod_3_appeal' type='checkbox' value='40' class='skills_item'/>
+          <button type='roll' name='appeal_roll' value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{roll-name=Appeal}} {{roll=[[floor(([[@{mod_1_appeal}]]+@{mod_2_appeal}+[[@{mod_3_appeal} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_appeal_total' value='@{mod_1_appeal}+@{mod_2_appeal}+@{mod_3_appeal}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Athletics</p>
@@ -1890,10 +1890,10 @@
     <br>
 
     <div class='edge_padding'>
-      <input name='attr_advancementL' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
+      <input name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
       <input name='attr_advancement_costL' type='number' placeholder='XP Cost' style='width: 10%'>
       <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px'>
-      <input name='attr_advancementR' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
+      <input name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
       <input name='attr_advancement_costR' type='number' placeholder='XP Cost' style='width: 10%'>
       <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%'>
     </div>
