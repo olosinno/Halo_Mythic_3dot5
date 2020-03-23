@@ -668,10 +668,10 @@ ______________________________ start of advancements tab _______________________
 	grid-template-areas:
 	't1 t2';
 	grid-template-columns: 33% 67%;
-	margin-left: 1.5%
+	margin-left: 1.5%;
 }
-.sheet-faction_training { grid-area: t1 }
-.sheet-weapon_training { grid-area: t2 }
+.sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85;}
+.sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85;}
 
 .sheet-faction_training_grid {
 	display: grid;
