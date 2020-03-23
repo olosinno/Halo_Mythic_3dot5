@@ -457,27 +457,27 @@
             <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}'>Wounds</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_Wounds' value='0'>
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_wounds' value='0'>
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_Wounds_max' value='0'>
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_wounds_max' value='0'>
           </div>
 
           <div class='minimisable_infographic_field2x3 radius_border'>
             <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{name=Fatigue}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>Fatigue</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_Fatigue' value='0'>
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_fatigue' value='0'>
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_Fatigue_max' value='0'>
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_fatigue_max' value='0'>
           </div>
 
           <div class='minimisable_infographic_field2x3 radius_border'>
             <button name='luck_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}'>Luck</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_Luck' value='0'>
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_luck' value='0'>
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_Luck_max' value='0'>
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_luck_max' value='0'>
           </div>
 
           <div class='minimisable_infographic_field2x3 radius_border'>
@@ -1483,7 +1483,7 @@
           <input name='attr_medical_lung' type='checkbox' value='5' class='hidden hider'>
           <div>Body Location damaged.<br>-20 Toughness, stunned for<br>(5D5-Toughness Modifier) rounds</div>
           <input name='attr_medical_lung' type='checkbox' value='6' class='hidden hider'>
-          <div>Body Location destroyed,<br>-25 Toughness, stunned for<br>(6D5-Toughness Modifier) rounds.<br>Character will take 2 Wounds whenever they take a Movement Action quicker than 2 Meters per Turn.</div>
+          <div>Body Location destroyed,<br>-25 Toughness, stunned for<br>(6D5-Toughness Modifier) rounds.<br>Character will take 2 wounds whenever they take a Movement Action quicker than 2 Meters per Turn.</div>
         </div>
       </div>
 
@@ -1846,7 +1846,7 @@
           `repeating_advancements_${id}_advancement_costR_r`
           ));
           // spread operator to get every array value
-          getAttrs(['XP_total', 'advancement_costL', 'advancement_costR', ...fieldnames], v => {
+          getAttrs(['xp_total', 'advancement_costL', 'advancement_costR', ...fieldnames], v => {
             const getValue = (id, field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
 			const cost = parseFloat(v.gear_cost) || 0
             const left = parseFloat(v.advancement_costL) || 0
@@ -1854,10 +1854,10 @@
             const left_r = idArray.reduce((total, id) => total + getValue(id,'advancement_costL_r'),0)
             const right_r = idArray.reduce((total, id) => total + getValue(id,'advancement_costR_r'),0)
             const spent = left + right + left_r + right_r
-            const total = parseFloat(v.XP_total) || 0
+            const total = parseFloat(v.xp_total) || 0
             setAttrs({
-              XP_spent: spent,
-              XP_current: total - spent
+              xp_spent: spent,
+              xp_current: total - spent
             });
           });
         });
@@ -1889,9 +1889,9 @@
 
     <h2>Experience Summary</h2>
     <div class='text_centered'>
-      Unspent XP: <input name='attr_XP_current' type='number' value='@{XP_total}-@{XP_spent}' style='width: 10%; margin-right: 20px' readonly>
-      Spent XP: <input name='attr_XP_spent' type='number' value='@{XP_total}-(@{advancement_costL}+@{advancement_costR})' style='width: 10%; margin-right: 20px' readonly>
-      XP Total: <input name='attr_XP_total' type='number' style='width: 10%'>
+      Unspent XP: <input name='attr_xp_current' type='number' value='@{xp_total}-@{xp_spent}' style='width: 10%; margin-right: 20px' readonly>
+      Spent XP: <input name='attr_xp_spent' type='number' value='@{xp_total}-(@{advancement_costL}+@{advancement_costR})' style='width: 10%; margin-right: 20px' readonly>
+      XP Total: <input name='attr_xp_total' type='number' style='width: 10%'>
     </div>
     <br>
 
@@ -1905,10 +1905,10 @@
     </div>
     <div class='edge_padding'>
       <fieldset name='advancements' class='repeating_advancements'>
-        <input name='attr_advancementL' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
+        <input name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
         <input name='attr_advancement_costL_r' type='number' placeholder='XP Cost' style='width: 10%'>
         <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px'>
-        <input name='attr_advancementR' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
+        <input name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
         <input name='attr_advancement_costR_r' type='number' placeholder='XP Cost' style='width: 10%'>
         <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%'>
       </fieldset>
