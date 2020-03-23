@@ -401,9 +401,9 @@
     <div class='tabs_main'>
 
       <div class='initiative-container'>
-        <button name='initiative' type='roll' class='clear'
+        <button name='initiative' type='roll' class='clear' style="padding-top:5px"
 		value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]}}'>
-		Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3})' class='input_background' disabled /></button>
+		Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3})' class='input_background input_i_background' disabled /></button>
         <select name='attr_initmod1' class='init_field'>
           <option value='1d10' selected='selected'>Standard</option>
           <option value='2d10k1'>Fast Foot</option>

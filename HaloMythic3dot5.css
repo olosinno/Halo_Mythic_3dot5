@@ -56,11 +56,13 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 }
 .sheet-input_c_background{
 	width: 50px;
-	font-size: 16px;
-	margin-top: -7px!important;
+	margin-top: -5px!important;
 	margin-bottom: -4px!important;
-	cursor: pointer;
-
+}
+.sheet-input_i_background{
+	width: 35px;
+	margin-top: -3px!important;
+	margin-bottom: -2px!important;
 }
 /* ______________________________ start of CSS selectors, patterns used to select element(s) for styling ______________________________ */
 
@@ -84,7 +86,8 @@ hr { border-top: 1px dotted black }
 button[type='roll'] {
 	background: black;
 	color: white;
-	font-family: Saira Semi Condensed
+	font-family: Saira Semi Condensed;
+	text-shadow: none;
 }
 /* clear buttons with the clear class */
 button[type="roll"].sheet-clear::before {
