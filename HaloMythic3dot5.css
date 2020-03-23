@@ -377,14 +377,25 @@ ______________________________ start of tab buttons toggles ____________________
 /* ______________________________ end of tab buttons toggles ______________________________
 ______________________________ start of minimisable infographic ______________________________ */
 
+.sheet-select_text{
+padding: 0px 3px 0px 3px;
+background: #394C6A;
+color:white; font-family: Saira Semi Condensed;
+border: 1px solid white;
+border-radius: 5px;
+margin-left: 5px;
+}
+.sheet-select_button:checked ~ .sheet-select_text {
+	background: rgb(200, 0, 0);
+}
+
 .sheet-minimisable_infographic_main {
 	margin-left: 5px;
 }
+.sheet-minimisable_switch{float: left; margin-top: 3px;}
+.sheet-minimisable_infographic_expand{ display: none }
+.sheet-minimisable_switch:checked ~  .sheet-minimisable_infographic_expand{display: block;}
 
-.sheet-minimisable_infographic_collapse,
-.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_expand { color: black; display: block; font-weight: bold }
-.sheet-minimisable_infographic_expand,
-.sheet-minimisable_switch:checked ~ .sheet-minimisable_infographic_collapse { display: none }
 
 .sheet-minimisable_infographic_grid{
 	display: grid;
