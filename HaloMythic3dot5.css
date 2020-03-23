@@ -638,16 +638,26 @@ ______________________________ start of medical tab ____________________________
 
 .sheet-medical_h2 {
 	background: #394C6A;
-	color: white
+	color: white;
 }
 
 .sheet-medical_table {
-	background: #475f85;
 	border-bottom: 1px dotted grey;
 	color: white;
 	font-family: Saira Semi Condensed;
 	text-align: center;
 	text-indent: 5px
+}
+.sheet-medical_h2_background,
+.sheet-medical_background{
+		background: #475f85;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		padding: 2px
+}
+.sheet-medical_h2_background{
+		border-radius: 10px 10px 0px 0px;
+				margin-bottom: 0;
 }
 
 /* ______________________________ end of medical tab __________________________________________________________
