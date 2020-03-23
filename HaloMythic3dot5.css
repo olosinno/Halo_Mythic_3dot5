@@ -378,12 +378,11 @@ ______________________________ start of tab buttons toggles ____________________
 ______________________________ start of minimisable infographic ______________________________ */
 
 .sheet-select_text{
-padding: 0px 3px 0px 3px;
+padding: 0px 4px 0px 4px;
 background: #394C6A;
 color:white; font-family: Saira Semi Condensed;
 border: 1px solid white;
-border-radius: 5px;
-margin-left: 5px;
+border-radius: 4px;
 }
 .sheet-select_button:checked ~ .sheet-select_text {
 	background: rgb(200, 0, 0);
@@ -392,7 +391,11 @@ margin-left: 5px;
 .sheet-minimisable_infographic_main {
 	margin-left: 5px;
 }
-.sheet-minimisable_switch{float: left; margin-top: 3px;}
+.sheet-minimisable_infographic_toggles{
+display: grid;
+grid-template-columns: 90px auto
+}
+
 .sheet-minimisable_infographic_expand{ display: none }
 .sheet-minimisable_switch:checked ~  .sheet-minimisable_infographic_expand{display: block;}
 
