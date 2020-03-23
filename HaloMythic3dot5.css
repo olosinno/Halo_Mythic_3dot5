@@ -625,7 +625,7 @@ ______________________________ start of medical tab ____________________________
 
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
-	grid-template-rows: 120px 120px 120px 120px 120px 150px auto;
+	grid-template-rows: 120px 120px 120px 120px 120px 170px auto;
 	grid-template-areas:
 	'm1  m2  m3  mT'
 	'm4  m5  m6  mT'
