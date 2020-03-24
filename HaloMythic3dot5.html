@@ -1115,15 +1115,15 @@
           <div class="equipment_ranged_weapons_rep">
             <div class="equipment_ranged_weapons_grid1">
               <div class="equipment_ranged_weapons_gs1">Name</div>
-              <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_R_weapon-name" >
+              <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_R_weapon-name" placeholder='Name'>
               <div class="equipment_ranged_weapons_gs3">Class</div>
-              <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_R_weapon-class" >
+              <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_R_weapon-class" placeholder='Class'>
             </div>
             <div class="equipment_ranged_weapons_grid2">
               <div class="equipment_ranged_weapons_gs5">Range</div>
               <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_R_weapon-range" >
-              <div class="equipment_ranged_weapons_gs7">Damroll</div>
-              <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_R_weapon-dam-roll" >
+              <div class="equipment_ranged_weapons_gs7">Dam-roll</div>
+              <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='2d10' name="attr_R_weapon-dam-roll" >
               <div class="equipment_ranged_weapons_gs9">Base</div>
               <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_R_weapon-base" >
               <div class="equipment_ranged_weapons_gs11">Pierce</div>
@@ -1147,7 +1147,7 @@
               <div class="equipment_ranged_weapons_gs25">/</div>
               <input class="equipment_ranged_weapons_gs26 full_width" type="text" value='0' name="attr_R_weapon-auto" >
               <div class="equipment_ranged_weapons_gs27">Reload</div>
-              <input class="equipment_ranged_weapons_gs28 full_width" type="text" name="attr_R_weapon-reload" >
+              <input class="equipment_ranged_weapons_gs28 full_width" type="text" value='2 half' name="attr_R_weapon-reload" >
               <div class="equipment_ranged_weapons_gs29">Weight</div>
               <input class="equipment_ranged_weapons_gs30 full_width" type="text" value='0' name="attr_R_weapon-weight" >
             </div>
@@ -1169,15 +1169,15 @@
           <div class="equipment_ranged_weapons_rep">
             <div class="equipment_ranged_weapons_grid1">
               <div class="equipment_ranged_weapons_gs1">Name</div>
-              <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_M_weapon-name" >
+              <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_M_weapon-name" placeholder='Name'>
               <div class="equipment_ranged_weapons_gs3">class</div>
-              <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_M_weapon-class" >
+              <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_M_weapon-class" placeholder='Class'>
             </div>
             <div class="equipment_ranged_weapons_grid2">
               <div class="equipment_ranged_weapons_gs5">Reach</div>
               <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_M_weapon-range" >
-              <div class="equipment_ranged_weapons_gs7">damroll</div>
-              <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_M_weapon-dam-roll" >
+              <div class="equipment_ranged_weapons_gs7">dam-roll</div>
+              <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='2d10' name="attr_M_weapon-dam-roll" >
               <div class="equipment_ranged_weapons_gs9">base</div>
               <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_M_weapon-base" >
               <div class="equipment_ranged_weapons_gs11">pierce</div>
@@ -2100,7 +2100,7 @@
           <div class='vehicles_G64'>Size Points</div>
           <div class='vehicles_G65'>Weapon Points</div>
           <input name='attr_vehicle-size-points' type='text' class='vehicles_G66 full_width' placeholder='Warthog = 2' />
-          <input name='attr_vehicle-weapon-points' type='text' class='vehicles_G67 full_width' />
+          <input name='attr_vehicle-weapon-points' type='text' class='vehicles_G67 full_width' placeholder='Warthog = 2' />
 
           <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
           <div class='vehicles_G68'>Shield Rating</div>
@@ -2141,20 +2141,20 @@
 
       <div class='vehicle_weapons'>
         <div class="equipment_ranged_weapons">
-          <h3 class="radius_border_top">Ranged Weapons</h3>
+          <h3 class="radius_border_top">Vehicle Ranged Weapons</h3>
           <br>
           <fieldset name="rangedweapons" class="repeating_Rangedweapons">
             <div class="equipment_ranged_weapons_rep">
               <div class="equipment_ranged_weapons_grid1">
                 <div class="equipment_ranged_weapons_gs1">Name</div>
-                <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_V_R_weapon-name" >
+                <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_V_R_weapon-name" placeholder='Name'>
                 <div class="equipment_ranged_weapons_gs3">Class</div>
-                <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_V_R_weapon-class" >
+                <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_V_R_weapon-class" placeholder='class'>
               </div>
               <div class="equipment_ranged_weapons_grid2">
                 <div class="equipment_ranged_weapons_gs5">Range</div>
                 <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_V_R_weapon-range" >
-                <div class="equipment_ranged_weapons_gs7">Damroll</div>
+                <div class="equipment_ranged_weapons_gs7">Dam-roll</div>
                 <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_V_R_weapon-dam-roll" >
                 <div class="equipment_ranged_weapons_gs9">Base</div>
                 <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_V_R_weapon-base" >
@@ -2195,20 +2195,20 @@
         </div>
 
         <div class="equipment_melee_weapons">
-          <h3 class="radius_border_top">Melee Weapons</h3>
+          <h3 class="radius_border_top">Vehicle Melee Weapons</h3>
           <br>
           <fieldset name="meleeweapons" class="repeating_meleeweapons">
             <div class="equipment_ranged_weapons_rep">
               <div class="equipment_ranged_weapons_grid1">
                 <div class="equipment_ranged_weapons_gs1">Name</div>
-                <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_V_M_weapon-name" >
+                <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_V_M_weapon-name" placeholder='Name'>
                 <div class="equipment_ranged_weapons_gs3">class</div>
-                <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_V_M_weapon-class" >
+                <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_V_M_weapon-class" placeholder='Class'>
               </div>
               <div class="equipment_ranged_weapons_grid2">
                 <div class="equipment_ranged_weapons_gs5">Reach</div>
                 <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_V_M_weapon-range" >
-                <div class="equipment_ranged_weapons_gs7">damroll</div>
+                <div class="equipment_ranged_weapons_gs7">dam-roll</div>
                 <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_V_M_weapon-dam-roll" >
                 <div class="equipment_ranged_weapons_gs9">base</div>
                 <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_V_M_weapon-base" >

@@ -772,7 +772,7 @@ ______________________________ start of vehicles tab ___________________________
 .sheet-vehicles_G29 { grid-area: v29 }
 .sheet-vehicles_G30 { grid-area: v30 }
 .sheet-vehicles_G31 { grid-area: v31 }
-.sheet-vehicles_G32 { grid-area: v32 }
+.sheet-vehicles_G32 { grid-area: v32; margin-top: 6px}
 .sheet-vehicles_G33 { grid-area: v33 }
 .sheet-vehicles_G34 { grid-area: v34; text-align: center}
 .sheet-vehicles_G35 { grid-area: v35; text-align: center}
