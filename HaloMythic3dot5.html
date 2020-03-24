@@ -1269,23 +1269,25 @@
       });
     </script>
 
-	<div class='equipment_gear text_centered'>
+	<div class='equipment_gear'>
 	  <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' class='gear_name'></input>
 	  <input name='attr_gear_cost' type='text' placeholder='cR Value' class='gear_field'>
 	  <input name='attr_gear_weight' type='text' placeholder='Weight' class='gear_field'>
 	  <input name='attr_gear_bp' type='text' placeholder='Break Points' class='gear_field'>
 	  <input name='attr_gear_pg#' type='text' placeholder='Page #' class='gear_field'>
-	  <input name='attr_gear_collapse' type='checkbox'  class='collapsible_ability_block_switch' />
+    <label class="width_adjust"><input type="checkbox" name='attr_abilitycollapse' value="7" class="collapsible_ability_block_switch select_button hidden"><span class="select_text ">🗭</span></label>
+    <input name='attr_abilitycollapse' type='checkbox'  value='7' class='collapsible_ability_block_switch hidden' />
 	  <textarea name='attr_ability_desc' class='collapsible_ability_description_window_b centered 90width'></textarea>
 	</div>
     <fieldset name='gear' class='repeating_gear'>
-      <div class='equipment_gear text_centered'>
+      <div class='equipment_gear'>
         <input name='attr_gear_name_r' type='text'  class='gear_name'></input>
         <input name='attr_gear_cost_r' type='text' class='gear_field'>
         <input name='attr_gear_weight_r' type='text' class='gear_field'>
         <input name='attr_gear_bp_r' type='text' class='gear_field'>
         <input name='attr_gear_pg#_r' type='text' class='gear_field'>
-        <input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
+        <label class="width_adjust"><input type="checkbox" name='attr_abilitycollapse_r' value="2" class="collapsible_ability_block_switch select_button hidden"><span class="select_text ">🗭</span></label>
+        <input name='attr_abilitycollapse_r' type='checkbox'  value='2' class='collapsible_ability_block_switch hidden' />
         <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered 90width'></textarea>
       </div>
     </fieldset>
@@ -2147,7 +2149,6 @@
       <div class='vehicle_weapons'>
         <div class="equipment_ranged_weapons">
           <h3 class="radius_border_top">Vehicle Ranged Weapons</h3>
-          <br>
           <fieldset name="rangedweapons" class="repeating_Rangedweapons">
             <div class="equipment_ranged_weapons_rep">
               <div class="equipment_ranged_weapons_grid1">
@@ -2202,7 +2203,6 @@
 
         <div class="equipment_melee_weapons">
           <h3 class="radius_border_top">Vehicle Melee Weapons</h3>
-          <br>
           <fieldset name="meleeweapons" class="repeating_meleeweapons">
             <div class="equipment_ranged_weapons_rep">
               <div class="equipment_ranged_weapons_grid1">

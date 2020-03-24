@@ -39,7 +39,7 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 .sheet-full_width_17px{width: calc(100% - 26px);}
 
 .sheet-width_adjust{margin-top: -23px; margin-left: calc(100% - 26px); margin-bottom: 4px}
-.sheet-width_adjust_wep{margin-top: -19px; margin-left: calc(100% - 23px); margin-bottom: 1px}
+.sheet-width_adjust_wep{margin-top: -19px; margin-left: calc(100% - 23px); margin-bottom: 2px}
 .sheet-radius_border_right{border-bottom-right-radius: 7px !important;}
 .sheet-radius_border_right_wep{border-bottom-right-radius: 10px !important;}
 
@@ -644,7 +644,7 @@ select,
 }
 .sheet-equipment_end_field { margin-right: 0px }
 
-.sheet-gear_name { width: 40% }
+.sheet-gear_name { width: calc(100% - 402px) }
 .sheet-gear_field { width: 90px }
 
 
@@ -760,7 +760,7 @@ ______________________________ start of vehicles tab ___________________________
 	'vg0 vgw';
 	grid-template-columns: 50% 50%
 }
-.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; border: none; border-bottom: 1px solid white; border-radius: 9px 9px 0px 0px; color: white; font-family: Saira Semi Condensed; text-align: center;}
+.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; border: none; border-bottom: 1px solid white; border-radius: 9px 9px 0px 0px; color: white; font-family: Saira Semi Condensed; text-align: center; font-size: 16px}
 .sheet-vehicles_Gs  { grid-area: vs; height: 28.5px; margin-bottom: -8px; margin-top: -1px; border-top: 1px solid white;}
 .sheet-vehicles_Gt  { grid-area: vt; height: 28.5px; margin-bottom: -8px; margin-top: -1px; border-top: 1px solid white;}
 .sheet-vehicles_G1  { grid-area: v1 }
