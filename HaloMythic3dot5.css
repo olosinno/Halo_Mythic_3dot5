@@ -39,7 +39,7 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 .sheet-full_width_17px{width: calc(100% - 17px);}
 
 .sheet-collapsible_ability_description_window_a,
-.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block }
+.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block;}
 .sheet-collapsible_ability_description_window_b,
 .sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none }
 
@@ -178,6 +178,11 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-radius_border_heading{
 	border-top-left-radius: 9px;
 	border-top-right-radius: 9px;
+}
+
+.sheet-description_rounded_margin{
+	margin-bottom: 0px;
+	border-radius: 0px 0px 8px 8px
 }
 
 /* ______________________________ end of special-use classes ______________________________
@@ -381,11 +386,11 @@ ______________________________ start of tab buttons toggles ____________________
 ______________________________ start of minimisable infographic ______________________________ */
 
 .sheet-select_text{
-padding: 0px 4px 0px 4px;
-background: #394C6A;
-color:white; font-family: Saira Semi Condensed;
-border: 1px solid white;
-border-radius: 4px;
+	padding: 0px 4px 0px 4px;
+	background: #394C6A;
+	color:white; font-family: Saira Semi Condensed;
+	border: 1px solid white;
+	border-radius: 4px;
 }
 .sheet-select_button:checked ~ .sheet-select_text {
 	background: rgb(200, 0, 0);
@@ -395,8 +400,8 @@ border-radius: 4px;
 	margin-left: 5px;
 }
 .sheet-minimisable_infographic_toggles{
-display: grid;
-grid-template-columns: 90px 51px auto
+	display: grid;
+	grid-template-columns: 90px 51px auto
 }
 
 .sheet-minimisable_infographic_expand{ display: none }
@@ -517,83 +522,113 @@ ______________________________ start of equipment tab __________________________
 	grid-template-areas:
 	'e1 e0 e2'
 	'e3 e3 e3';
+
 }
 
-.sheet-equipment_ranged_weapons{grid-area: e1}
-.sheet-equipment_melee_weapons{ grid-area: e2}
+.sheet-equipment_ranged_weapons{grid-area: e1; background:#475f85; padding:2px; border-radius: 10px}
+.sheet-equipment_melee_weapons{ grid-area: e2; background:#475f85; padding:2px; border-radius: 10px}
 .sheet-equipment_credits{ grid-area: e3 }
-.sheet-equipment_ranged_weapons_rep{border:1px solid black; border-radius: 10px; background:#475f85 }}
+.sheet-equipment_ranged_weapons_rep{border:1px solid white; border-radius: 10px; padding: 2px; background:#475f85 }}
 
 
-.sheet-equipment_ranged_weapons_gs1{ grid-area: rw1; 	color: white; font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs2{ grid-area: rw2; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs3{ grid-area: rw3; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs4{ grid-area: rw4; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs5{ grid-area: rw5; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs6{ grid-area: rw6; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs7{ grid-area: rw7; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs8{ grid-area: rw8; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs9{ grid-area: rw9; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs10{ grid-area: rw10; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs11{ grid-area: rw11; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs12{ grid-area: rw12; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs13{ grid-area: rw13; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs14{ grid-area: rw14; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs15{ grid-area: rw15; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs16{ grid-area: rw16; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs17{ grid-area: rw17; 	color: white;font-size: 30px; text-align: center;}
-.sheet-equipment_ranged_weapons_gs18{ grid-area: rw18; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs19{ grid-area: rw19; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs20{ grid-area: rw20; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs21{ grid-area: rw21; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs22{ grid-area: rw22; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs23{ grid-area: rw23; 	color: white;font-size: 30px; text-align: center;}
-.sheet-equipment_ranged_weapons_gs24{ grid-area: rw24; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs25{ grid-area: rw25; 	color: white;font-size: 30px; text-align: center;}
-.sheet-equipment_ranged_weapons_gs26{ grid-area: rw26; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs27{ grid-area: rw27; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs28{ grid-area: rw28; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs29{ grid-area: rw29; 	color: white;font-size: 14px;}
-.sheet-equipment_ranged_weapons_gs30{ grid-area: rw30; 	color: white;font-size: 14px;}
+.sheet-equipment_ranged_weapons_gs1{ grid-area: rw1; 	color: white;font-size: 12px;  }
+.sheet-equipment_ranged_weapons_gs2{ grid-area: rw2; 	color: white;font-size: 12px;  border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs3{ grid-area: rw3; 	color: white;font-size: 12px;  }
+.sheet-equipment_ranged_weapons_gs4{ grid-area: rw4; 	color: white;font-size: 12px;  border: none; border-bottom: 1px dotted white;border-top-right-radius:10px }
+.sheet-equipment_ranged_weapons_gs5{ grid-area: rw5; 	color: white;font-size: 12px;  }
+.sheet-equipment_ranged_weapons_gs6{ grid-area: rw6; 	color: white;font-size: 12px;  border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs7{ grid-area: rw7; 	color: white;font-size: 12px;  }
+.sheet-equipment_ranged_weapons_gs8{ grid-area: rw8; 	color: white;font-size: 12px;  border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs9{ grid-area: rw9; 	color: white;font-size: 12px;  }
+.sheet-equipment_ranged_weapons_gs10{ grid-area: rw10; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs11{ grid-area: rw11; 	color: white;font-size: 12px;}
+.sheet-equipment_ranged_weapons_gs12{ grid-area: rw12; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs13{ grid-area: rw13; 	color: white;font-size: 12px;}
+.sheet-equipment_ranged_weapons_gs14{ grid-area: rw14; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs15{ grid-area: rw15; 	color: white;font-size: 12px;}
+.sheet-equipment_ranged_weapons_gs16{ grid-area: rw16; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs17{ grid-area: rw17; 	color: white;font-size: 30px; text-align: center; height: 12px; margin-top: -27px}
+.sheet-equipment_ranged_weapons_gs18{ grid-area: rw18; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs19{ grid-area: rw19; 	color: white;font-size: 12px;width: 50px!important;}
+.sheet-equipment_ranged_weapons_gs20{ grid-area: rw20; 	color: white;font-size: 12px;width: 50px!important;}
+.sheet-equipment_ranged_weapons_gs21{ grid-area: rw21; 	color: white;font-size: 12px;}
+.sheet-equipment_ranged_weapons_gs22{ grid-area: rw22; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs23{ grid-area: rw23; 	color: white;font-size: 30px; text-align: center; height: 12px; margin-top: -27px}
+.sheet-equipment_ranged_weapons_gs24{ grid-area: rw24; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs25{ grid-area: rw25; 	color: white;font-size: 30px; text-align: center; height: 12px; margin-top: -27px}
+.sheet-equipment_ranged_weapons_gs26{ grid-area: rw26; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs27{ grid-area: rw27; 	color: white;font-size: 12px;}
+.sheet-equipment_ranged_weapons_gs28{ grid-area: rw28; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_ranged_weapons_gs29{ grid-area: rw29; 	color: white;font-size: 12px;}
+.sheet-equipment_ranged_weapons_gs30{ grid-area: rw30; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
 
 .sheet-equipment_ranged_weapons_grid1{
 	display: grid;
-	grid-template-columns: 11% 4% 10% 10% 10% 10% 10% 10% 10% 15%;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
 	grid-template-areas:
-	'rw1  rw2  rw2  rw2  rw2  rw2  rw2  rw3  rw4  rw4'
+	'rw1  rw2  rw2  rw2  rw2  rw2  rw2  rw3  rw4  rw4';
+	align-items: center;
 }
 
 .sheet-equipment_ranged_weapons_grid2{
 	display: grid;
-	grid-template-columns: 12% 0% 10% 10% 15% 8% 10% 10% 15% 10%;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
 	grid-template-areas:
-	'rw5  rw6  rw6  rw6  rw7  rw8  rw9  rw10 rw11 rw12'
+	'rw5  rw6  rw6  rw7  rw7  rw8  rw9  rw10 rw11 rw12';
+	align-items: center;
 }
 
 .sheet-equipment_ranged_weapons_grid3{
 	display: grid;
-	grid-template-columns: 14% 15% 18% 8% 4% 8% 15% 15%;
+	grid-template-columns: auto auto auto auto auto auto 61px 61px;
 	grid-template-areas:
-	'rw13 rw14 rw15 rw16 rw17 rw18 rw19 rw20'
+	'rw13 rw14 rw15 rw16 rw17 rw18 rw19 rw20';
+	align-items: center;
 }
 
 
 .sheet-equipment_ranged_weapons_grid4{
 	display: grid;
-	grid-template-columns: 8% 8% 4% 8% 4% 8% 15% 20% 13% 12%;
+	grid-template-columns: auto 8% 4% 8% 4% 8% auto auto auto auto;
 	grid-template-areas:
-	'rw21 rw22 rw23 rw24 rw25 rw26 rw27 rw28 rw29 rw30'
+	'rw21 rw22 rw23 rw24 rw25 rw26 rw27 rw28 rw29 rw30';
+	align-items: center;
 }
+
+.sheet-equipment_melee_weapons_gs1{ grid-area: mw1; 	color: white;font-size: 12px;}
+.sheet-equipment_melee_weapons_gs2{ grid-area: mw2; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_melee_weapons_gs3{ grid-area: mw3; 	color: white;font-size: 12px;}
+.sheet-equipment_melee_weapons_gs4{ grid-area: mw4; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_melee_weapons_gs5{ grid-area: mw5; 	color: white;font-size: 12px;}
+.sheet-equipment_melee_weapons_gs6{ grid-area: mw6; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_melee_weapons_gs7{ grid-area: mw7; 	color: white;font-size: 30px; text-align: center; height: 12px; margin-top: -27px}
+.sheet-equipment_melee_weapons_gs8{ grid-area: mw8; 	color: white;font-size: 12px;border: none; border-bottom: 1px dotted white}
+.sheet-equipment_melee_weapons_gs9{ grid-area: mw9; 	color: white;font-size: 12px;width: 50px!important;}
+.sheet-equipment_melee_weapons_gs10{ grid-area: mw10; color: white;font-size: 12px;width: 50px!important;}
+.sheet-equipment_melee_weapons_gs11{ grid-area: mw11; color: white;font-size: 12px;}
+.sheet-equipment_melee_weapons_gs12{ grid-area: mw12; color: white;font-size: 12px;border: none; border-bottom: 1px dotted white; margin-left: -8px; margin-bottom: 0px; height: 27px;}
+.sheet-equipment_melee_weapons_gs13{ grid-area: mw13; color: white;font-size: 12px;}
+.sheet-equipment_melee_weapons_gs14{ grid-area: mw14; color: white;font-size: 12px;border: none; border-bottom: 1px dotted white; margin-bottom: 0px; height: 27px;}
 
 .sheet-equipment_melee_weapons_grid3{
 	display: grid;
-	grid-template-columns: 12% 12% 12% 11% 10% 10% 4% 10% 8% 8%;
+	grid-template-columns: auto auto auto auto auto auto auto auto 61px 61px;
 	grid-template-areas:
-	'rw13 rw14 rw15 rw16 rw19 rw18 rw17 rw20 rw21 rw22'
+	'mw1 mw2 mw3 mw4 mw5 mw6 mw7 mw8 mw9 mw10';
+	align-items: center;
 }
+
+.sheet-equipment_melee_weapons_grid4{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-template-areas:
+	'mw11 mw12 mw13 mw14';
+	align-items: center;
+}
+
 .sheet-repeating_gear{
-		display: grid;
-grid-template-columns: auto auto auto auto auto auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
 }
 
 select,
@@ -707,22 +742,22 @@ ______________________________ start of vehicles tab ___________________________
 
 
 
-
 .sheet-vehicles_grid1 { margin-right: 10px; grid-area: vg1; background:#506b95; border-top:2px solid #506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-top-left-radius: 10px; border-top-right-radius: 10px; color:white; font-family: Saira Semi Condensed }
 .sheet-vehicles_grid2 { margin-right: 10px; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color:white; font-family: Saira Semi Condensed }
-.sheet-vehicles_grid3 { margin-right: 10px; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-bottom-left-radius: 3px; border-bottom-right-radius: 10px; color:white; font-family: Saira Semi Condensed }
+.sheet-vehicles_grid3 { margin-right: 10px; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; color:white; font-family: Saira Semi Condensed }
 .sheet-vehicle_weapons { grid-area: vgw }
 .sheet-vehicles_divider {
 	display: grid;
 	grid-template-areas:
 	'vg1 vgw'
 	'vg2 vgw'
-	'vg3 vgw';
+	'vg3 vgw'
+	'vg0 vgw';
 	grid-template-columns: 50% 50%
 }
-.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; border-top-left-radius: 9px; border-top-right-radius: 9px; color: white; font-family: Saira Semi Condensed; text-align: center }
-.sheet-vehicles_Gs  { grid-area: vs; height: 28.5px; margin-bottom: -8px; margin-top: -1px }
-.sheet-vehicles_Gt  { grid-area: vt; height: 28.5px; margin-bottom: -8px; margin-top: -1px }
+.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; border: none; border-bottom: 1px solid white; border-radius: 9px 9px 0px 0px; color: white; font-family: Saira Semi Condensed; text-align: center;}
+.sheet-vehicles_Gs  { grid-area: vs; height: 28.5px; margin-bottom: -8px; margin-top: -1px; border-top: 1px solid white;}
+.sheet-vehicles_Gt  { grid-area: vt; height: 28.5px; margin-bottom: -8px; margin-top: -1px; border-top: 1px solid white;}
 .sheet-vehicles_G1  { grid-area: v1 }
 .sheet-vehicles_G2  { grid-area: v2; text-align: center}
 .sheet-vehicles_G3  { grid-area: v3; text-align: center}
@@ -754,7 +789,7 @@ ______________________________ start of vehicles tab ___________________________
 .sheet-vehicles_G29 { grid-area: v29 }
 .sheet-vehicles_G30 { grid-area: v30 }
 .sheet-vehicles_G31 { grid-area: v31 }
-.sheet-vehicles_G32 { grid-area: v32 }
+.sheet-vehicles_G32 { grid-area: v32; margin-top: 6px}
 .sheet-vehicles_G33 { grid-area: v33 }
 .sheet-vehicles_G34 { grid-area: v34; text-align: center}
 .sheet-vehicles_G35 { grid-area: v35; text-align: center}
@@ -879,8 +914,8 @@ ______________________________ start of vehicles tab ___________________________
 }
 
 .sheet-rolltemplate-mythic .sheet-template-round {
-		border-radius: 10px 10px 10px 10px;
-	}
+	border-radius: 10px 10px 10px 10px;
+}
 
 .sheet-rolltemplate-mythic .sheet-template-2x2 {
 	display: grid;
@@ -920,7 +955,7 @@ ______________________________ start of vehicles tab ___________________________
 	min-width: 1.5em;
 	text-align: center;
 	border: 1px solid white;
-		border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
 	background: #394C6A
 }
 .sheet-rolltemplate-mythic .inlinerollresult.fullcrit {
