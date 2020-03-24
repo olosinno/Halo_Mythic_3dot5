@@ -640,7 +640,7 @@ select,
 .sheet-equipment_numerical_field,
 .sheet-equipment_end_field {
 	margin-right: 20px;
-	width: 10%;
+	width: 100px !important;
 }
 .sheet-equipment_end_field { margin-right: 0px }
 
