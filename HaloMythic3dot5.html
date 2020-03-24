@@ -1193,8 +1193,25 @@
               <div class="equipment_melee_weapons_gs7">/</div>
               <input class="equipment_melee_weapons_gs8 full_width" type="text" value='0' name="attr_M_weapon-breakpoints_max" >
               <button class="equipment_melee_weapons_gs9 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{M_weapon-name} }} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"' >Hit</button>
-              <button class="equipment_melee_weapons_gs10 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{M_weapon-name} }} {{damage=[[@{M_weapon-dam-roll}+@{M_weapon-base}]] }} {{pierce=[[@{M_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
+              <button class="equipment_melee_weapons_gs10 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{M_weapon-name} }} {{damage=[[@{M_weapon-dam-roll}+@{M_weapon-base}+@{M_weapon-base-mod}]] }} {{pierce=[[@{M_weapon-pierce}+@{M_weapon-pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
             </div>
+
+            <div class="equipment_melee_weapons_grid4">
+              <div class="equipment_melee_weapons_gs11">damage plus strength</div>
+              <select class="equipment_melee_weapons_gs12 full_width" name="attr_M_weapon-base-mod">
+                <option selected='selected' value='0'>None</option>
+                <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>half</option>
+                <option value='[[floor(@{str}/10 + @{str_mythic})]]'>full</option>
+              </select>
+
+              <div class="equipment_melee_weapons_gs13">pierce plus strength</div>
+              <select class="equipment_melee_weapons_gs14 full_width" name="attr_M_weapon-pierce-mod">
+                <option selected='selected' value='0'>None</option>
+                <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>half</option>
+                <option value='[[floor(@{str}/10 + @{str_mythic})]]'>full</option>
+              </select>
+            </div>
+
             <div>
               <input style="border:none" name='attr_M_ability_r' type='text' placeholder='Description' class='full_width_17px' />
               <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
@@ -1202,7 +1219,6 @@
               <textarea name='attr_M_ability_desc_r' class='collapsible_ability_description_window_b description_rounded_margin'></textarea>
             </div>
           </div>
-          <div style="height:27px">&nbsp;</div>
           <hr>
         </fieldset>
       </div>
@@ -1960,8 +1976,8 @@
 
   <div class='vehicles box'>
     <!-- Vehicles -->
-    <fieldset name='vehicles-R' class='repeating_vehicles'>
-      <div class='vehicles_divider'>
+    <div class='vehicles_divider'>
+      <fieldset name='vehicles-R' class='repeating_vehicles'>
         <div class='vehicles_grid1'>
           <input name='attr_vehicle-name' type='text' class='vehicles_Gn full_width' placeholder='Name' />
 
@@ -2119,111 +2135,110 @@
             </div>
           </div>
         </div>
+        <br>
+      </fieldset>
 
 
-
-        <div class='vehicle_weapons'>
-          <div class="equipment_ranged_weapons">
-            <h3 class="radius_border_top">Ranged Weapons</h3>
-            <br>
-            <fieldset name="rangedweapons" class="repeating_Rangedweapons">
-              <div class="equipment_ranged_weapons_rep">
-                <div class="equipment_ranged_weapons_grid1">
-                  <div class="equipment_ranged_weapons_gs1">Name</div>
-                  <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_V_R_weapon-name" >
-                  <div class="equipment_ranged_weapons_gs3">Class</div>
-                  <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_V_R_weapon-class" >
-                </div>
-                <div class="equipment_ranged_weapons_grid2">
-                  <div class="equipment_ranged_weapons_gs5">Range</div>
-                  <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_V_R_weapon-range" >
-                  <div class="equipment_ranged_weapons_gs7">Damroll</div>
-                  <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_V_R_weapon-dam-roll" >
-                  <div class="equipment_ranged_weapons_gs9">Base</div>
-                  <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_V_R_weapon-base" >
-                  <div class="equipment_ranged_weapons_gs11">Pierce</div>
-                  <input class="equipment_ranged_weapons_gs12 full_width" type="text" value='0' name="attr_V_R_weapon-pierce" >
-                </div>
-                <div class="equipment_ranged_weapons_grid3">
-                  <div class="equipment_ranged_weapons_gs13">Hitmod</div>
-                  <input class="equipment_ranged_weapons_gs14 full_width" type="text" value='0' name="attr_V_R_weapon-mod1" >
-                  <div class="equipment_ranged_weapons_gs15">Magazine</div>
-                  <input class="equipment_ranged_weapons_gs16 full_width" type="text" value='0' name="attr_V_R_weapon-mag" >
-                  <div class="equipment_ranged_weapons_gs17">/</div>
-                  <input class="equipment_ranged_weapons_gs18 full_width" type="text" value='0' name="attr_V_R_weapon-mag_max" >
-                  <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_R_weapon-name} }} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{V_R_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
-                  <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_R_weapon-name} }} {{damage=[[@{V_R_weapon-dam-roll}+@{V_R_weapon-base}]] }} {{pierce=[[@{V_R_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{V_R_ability_r} }}' >DMG</button>
-                </div>
-                <div class="equipment_ranged_weapons_grid4">
-                  <div class="equipment_ranged_weapons_gs21">RoF</div>
-                  <input class="equipment_ranged_weapons_gs22 full_width" type="text" value='0' name="attr_V_R_weapon-semi" >
-                  <div class="equipment_ranged_weapons_gs23">/</div>
-                  <input class="equipment_ranged_weapons_gs24 full_width" type="text" value='0' name="attr_V_R_weapon-burst" >
-                  <div class="equipment_ranged_weapons_gs25">/</div>
-                  <input class="equipment_ranged_weapons_gs26 full_width" type="text" value='0' name="attr_V_R_weapon-auto" >
-                  <div class="equipment_ranged_weapons_gs27">Reload</div>
-                  <input class="equipment_ranged_weapons_gs28 full_width" type="text" name="attr_V_R_weapon-reload" >
-                  <div class="equipment_ranged_weapons_gs29">Weight</div>
-                  <input class="equipment_ranged_weapons_gs30 full_width" type="text" value='0' name="attr_V_R_weapon-weight" >
-                </div>
-                <div>
-                  <input style="border: none" name='attr_V_R_ability_r' type='text' placeholder='Description' class='full_width_17px' />
-                  <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
-                  <div class='collapsible_ability_description_window_a' ></div>
-                  <textarea name='attr_V_R_ability_desc_r' class='collapsible_ability_description_window_b description_rounded_margin'></textarea>
-                </div>
+      <div class='vehicle_weapons'>
+        <div class="equipment_ranged_weapons">
+          <h3 class="radius_border_top">Ranged Weapons</h3>
+          <br>
+          <fieldset name="rangedweapons" class="repeating_Rangedweapons">
+            <div class="equipment_ranged_weapons_rep">
+              <div class="equipment_ranged_weapons_grid1">
+                <div class="equipment_ranged_weapons_gs1">Name</div>
+                <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_V_R_weapon-name" >
+                <div class="equipment_ranged_weapons_gs3">Class</div>
+                <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_V_R_weapon-class" >
               </div>
-              <br>
-            </fieldset>
-          </div>
-
-          <div class="equipment_melee_weapons">
-            <h3 class="radius_border_top">Melee Weapons</h3>
-            <br>
-            <fieldset name="meleeweapons" class="repeating_meleeweapons">
-              <div class="equipment_ranged_weapons_rep">
-                <div class="equipment_ranged_weapons_grid1">
-                  <div class="equipment_ranged_weapons_gs1">Name</div>
-                  <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_V_M_weapon-name" >
-                  <div class="equipment_ranged_weapons_gs3">class</div>
-                  <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_V_M_weapon-class" >
-                </div>
-                <div class="equipment_ranged_weapons_grid2">
-                  <div class="equipment_ranged_weapons_gs5">Reach</div>
-                  <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_V_M_weapon-range" >
-                  <div class="equipment_ranged_weapons_gs7">damroll</div>
-                  <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_V_M_weapon-dam-roll" >
-                  <div class="equipment_ranged_weapons_gs9">base</div>
-                  <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_V_M_weapon-base" >
-                  <div class="equipment_ranged_weapons_gs11">pierce</div>
-                  <input class="equipment_ranged_weapons_gs12 full_width" type="text" value='0' name="attr_V_M_weapon-pierce" >
-                </div>
-                <div class="equipment_melee_weapons_grid3">
-                  <div class="equipment_melee_weapons_gs1">Hitmod</div>
-                  <input class="equipment_melee_weapons_gs2 full_width" type="text" value='0' name="attr_V_M_weapon-mod1" >
-                  <div class="equipment_melee_weapons_gs3">weight</div>
-                  <input class="equipment_melee_weapons_gs4 full_width" type="text" value='0' name="attr_V_M_weapon-weight" >
-                  <div class="equipment_melee_weapons_gs5">Br pts</div>
-                  <input class="equipment_melee_weapons_gs6 full_width" type="text" value='0' name="attr_V_M_weapon-breakpoints" >
-                  <div class="equipment_melee_weapons_gs7">/</div>
-                  <input class="equipment_melee_weapons_gs8 full_width" type="text" value='0' name="attr_V_M_weapon-breakpoints_max" >
-                  <button class="equipment_melee_weapons_gs9 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_M_weapon-name} }} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{V_M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"' >Hit</button>
-                  <button class="equipment_melee_weapons_gs10 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_M_weapon-name} }} {{damage=[[@{V_M_weapon-dam-roll}+@{V_M_weapon-base}]] }} {{pierce=[[@{V_M_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{V_M_ability_r} }}' >DMG</button>
-                </div>
-                <div>
-                  <input style="border:none" name='attr_V_M_ability_r' type='text' placeholder='Description' class='full_width_17px' />
-                  <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
-                  <div class='collapsible_ability_description_window_a' ></div>
-                  <textarea name='attr_V_M_ability_desc_r' class='collapsible_ability_description_window_b description_rounded_margin'></textarea>
-                </div>
+              <div class="equipment_ranged_weapons_grid2">
+                <div class="equipment_ranged_weapons_gs5">Range</div>
+                <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_V_R_weapon-range" >
+                <div class="equipment_ranged_weapons_gs7">Damroll</div>
+                <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_V_R_weapon-dam-roll" >
+                <div class="equipment_ranged_weapons_gs9">Base</div>
+                <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_V_R_weapon-base" >
+                <div class="equipment_ranged_weapons_gs11">Pierce</div>
+                <input class="equipment_ranged_weapons_gs12 full_width" type="text" value='0' name="attr_V_R_weapon-pierce" >
               </div>
-              <br>
-            </fieldset>
-          </div>
+              <div class="equipment_ranged_weapons_grid3">
+                <div class="equipment_ranged_weapons_gs13">Hitmod</div>
+                <input class="equipment_ranged_weapons_gs14 full_width" type="text" value='0' name="attr_V_R_weapon-mod1" >
+                <div class="equipment_ranged_weapons_gs15">Magazine</div>
+                <input class="equipment_ranged_weapons_gs16 full_width" type="text" value='0' name="attr_V_R_weapon-mag" >
+                <div class="equipment_ranged_weapons_gs17">/</div>
+                <input class="equipment_ranged_weapons_gs18 full_width" type="text" value='0' name="attr_V_R_weapon-mag_max" >
+                <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_R_weapon-name} }} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{V_R_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
+                <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_R_weapon-name} }} {{damage=[[@{V_R_weapon-dam-roll}+@{V_R_weapon-base}]] }} {{pierce=[[@{V_R_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{V_R_ability_r} }}' >DMG</button>
+              </div>
+              <div class="equipment_ranged_weapons_grid4">
+                <div class="equipment_ranged_weapons_gs21">RoF</div>
+                <input class="equipment_ranged_weapons_gs22 full_width" type="text" value='0' name="attr_V_R_weapon-semi" >
+                <div class="equipment_ranged_weapons_gs23">/</div>
+                <input class="equipment_ranged_weapons_gs24 full_width" type="text" value='0' name="attr_V_R_weapon-burst" >
+                <div class="equipment_ranged_weapons_gs25">/</div>
+                <input class="equipment_ranged_weapons_gs26 full_width" type="text" value='0' name="attr_V_R_weapon-auto" >
+                <div class="equipment_ranged_weapons_gs27">Reload</div>
+                <input class="equipment_ranged_weapons_gs28 full_width" type="text" name="attr_V_R_weapon-reload" >
+                <div class="equipment_ranged_weapons_gs29">Weight</div>
+                <input class="equipment_ranged_weapons_gs30 full_width" type="text" value='0' name="attr_V_R_weapon-weight" >
+              </div>
+              <div>
+                <input style="border: none" name='attr_V_R_ability_r' type='text' placeholder='Description' class='full_width_17px' />
+                <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
+                <div class='collapsible_ability_description_window_a' ></div>
+                <textarea name='attr_V_R_ability_desc_r' class='collapsible_ability_description_window_b description_rounded_margin'></textarea>
+              </div>
+            </div>
+            <br>
+          </fieldset>
+        </div>
+
+        <div class="equipment_melee_weapons">
+          <h3 class="radius_border_top">Melee Weapons</h3>
+          <br>
+          <fieldset name="meleeweapons" class="repeating_meleeweapons">
+            <div class="equipment_ranged_weapons_rep">
+              <div class="equipment_ranged_weapons_grid1">
+                <div class="equipment_ranged_weapons_gs1">Name</div>
+                <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_V_M_weapon-name" >
+                <div class="equipment_ranged_weapons_gs3">class</div>
+                <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_V_M_weapon-class" >
+              </div>
+              <div class="equipment_ranged_weapons_grid2">
+                <div class="equipment_ranged_weapons_gs5">Reach</div>
+                <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_V_M_weapon-range" >
+                <div class="equipment_ranged_weapons_gs7">damroll</div>
+                <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_V_M_weapon-dam-roll" >
+                <div class="equipment_ranged_weapons_gs9">base</div>
+                <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_V_M_weapon-base" >
+                <div class="equipment_ranged_weapons_gs11">pierce</div>
+                <input class="equipment_ranged_weapons_gs12 full_width" type="text" value='0' name="attr_V_M_weapon-pierce" >
+              </div>
+              <div class="equipment_melee_weapons_grid3">
+                <div class="equipment_melee_weapons_gs1">Hitmod</div>
+                <input class="equipment_melee_weapons_gs2 full_width" type="text" value='0' name="attr_V_M_weapon-mod1" >
+                <div class="equipment_melee_weapons_gs3">weight</div>
+                <input class="equipment_melee_weapons_gs4 full_width" type="text" value='0' name="attr_V_M_weapon-weight" >
+                <div class="equipment_melee_weapons_gs5">Br pts</div>
+                <input class="equipment_melee_weapons_gs6 full_width" type="text" value='0' name="attr_V_M_weapon-breakpoints" >
+                <div class="equipment_melee_weapons_gs7">/</div>
+                <input class="equipment_melee_weapons_gs8 full_width" type="text" value='0' name="attr_V_M_weapon-breakpoints_max" >
+                <button class="equipment_melee_weapons_gs9 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_M_weapon-name} }} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{V_M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"' >Hit</button>
+                <button class="equipment_melee_weapons_gs10 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_M_weapon-name} }} {{damage=[[@{V_M_weapon-dam-roll}+@{V_M_weapon-base}+@{V_M_weapon-base-mod}]] }} {{pierce=[[@{V_M_weapon-pierce}+@{V_M_weapon-pierce-mod}]] }} {{@{settings_weapondescription}description=@{V_M_ability_r} }}' >DMG</button>
+              </div>
+              <div>
+                <input style="border:none" name='attr_V_M_ability_r' type='text' placeholder='Description' class='full_width_17px' />
+                <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
+                <div class='collapsible_ability_description_window_a' ></div>
+                <textarea name='attr_V_M_ability_desc_r' class='collapsible_ability_description_window_b description_rounded_margin'></textarea>
+              </div>
+            </div>
+            <br>
+          </fieldset>
         </div>
       </div>
-      <br>
-    </fieldset>
+    </div>
   </div>
 
 
