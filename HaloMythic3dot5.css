@@ -469,6 +469,7 @@ ______________________________ start of core tab ______________________________ 
 
 .sheet-skills_item { margin: 7px 5px }
 .sheet-skills_text { margin: 4px 0px }
+.sheet-skills_diff { margin-left: 8px }
 .sheet-text_left { text-align: left!important; }
 
 .sheet-skill_header {
@@ -505,7 +506,11 @@ ______________________________ start of core tab ______________________________ 
 	border-bottom: 1px dotted darkgrey;
 }
 
-
+.sheet-abilities_checkbox_pointer {
+	margin-top:-21px;
+	margin-right: 5px;
+	text-align: right;
+}
 
 
 
@@ -622,10 +627,23 @@ ______________________________ start of equipment tab __________________________
 }
 
 .sheet-repeating_gear{
-	display: grid;
-	grid-template-columns: auto auto auto auto auto auto;
-
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
 }
+
+select,
+.sheet-equipment_numerical_field,
+.sheet-equipment_end_field {
+	margin-right: 20px;
+	width: 10%;
+}
+.sheet-equipment_end_field { margin-right: 0px }
+
+.sheet-gear_name { width: 40% }
+.sheet-gear_field { width: 90px }
+
+
+
 /* ______________________________ end of equipment tab ______________________________
 ______________________________ start of medical tab ______________________________ */
 
@@ -703,17 +721,16 @@ ______________________________ start of advancements tab _______________________
 	grid-template-areas:
 	't1 t2';
 	grid-template-columns: 33% 67%;
-	margin-left: 1.5%;
+	margin: 10px 0px 10px 1.5%;
 }
 .sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85;}
 .sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85;}
-
 .sheet-faction_training_grid {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	margin: 0px 10px
 }
-
+.sheet-faction_training_alien {	margin-left: 10px }
 .sheet-weapon_training_grid {
 	display: grid;
 	grid-template-columns: 20% 25% 30% 25%;
