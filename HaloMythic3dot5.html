@@ -1863,30 +1863,6 @@
         });
       });
     </script>
-    <div class='training'>
-      <div class='faction_training core_table centered 90width radius_border'>
-        <h3 class='radius_border_top'>Faction Training</h3>
-        <div class='faction_training_grid'>
-		  <p><input name='attr_faction_training_human' type='checkbox'>U.N.S.C.</p>
-          <p><input name='attr_faction_training_forerunner' type='checkbox'>Forerunner</p>
-		</div>
-        <p><input name='attr_faction_training_covenant' type='checkbox' class='faction_training_alien'>Covenant / Banished</p>
-      </div>
-      <div class='weapon_training core_table centered 90width radius_border'>
-        <h3 class='radius_border_top'>Weapon Training</h3>
-        <div class='weapon_training_grid'>
-          <p><input name='attr_weapons_training_basic' type='checkbox'>Basic</p>
-          <p><input name='attr_weapons_training_infantry' type='checkbox'>Infantry</p>
-          <p><input name='attr_weapons_training_vehicle' type='checkbox'>Vehicle</p>
-          <p><input name='attr_weapons_training_melee' type='checkbox'>Melee</p>
-          <p><input name='attr_weapons_training_heavy' type='checkbox'>Heavy</p>
-          <p><input name='attr_weapons_training_special' type='checkbox'>Advanced</p>
-          <p><input name='attr_weapons_training_long-range' type='checkbox'>Long-Range</p>
-          <p><input name='attr_weapons_training_explosives' type='checkbox'>Explosives</p>
-        </div>
-      </div>
-    </div>
-
     <h2>Experience Summary</h2>
     <div class='text_centered'>
       Unspent XP: <input name='attr_xp_current' type='number' value='@{xp_total}-@{xp_spent}' style='width: 10%; margin-right: 20px' readonly>
@@ -1912,6 +1888,30 @@
         <input name='attr_advancement_costR_r' type='number' placeholder='XP Cost' style='width: 10%'>
         <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%'>
       </fieldset>
+    </div>
+
+    <div class='training'>
+      <div class='faction_training core_table centered 90width radius_border'>
+        <h3 class='radius_border_top'>Faction Training</h3>
+        <div class='faction_training_grid'>
+		  <p><input name='attr_faction_training_human' type='checkbox'>U.N.S.C.</p>
+          <p><input name='attr_faction_training_forerunner' type='checkbox'>Forerunner</p>
+		</div>
+        <p><input name='attr_faction_training_covenant' type='checkbox' class='faction_training_alien'>Covenant / Banished</p>
+      </div>
+      <div class='weapon_training core_table centered 90width radius_border'>
+        <h3 class='radius_border_top'>Weapon Training</h3>
+        <div class='weapon_training_grid'>
+          <p><input name='attr_weapons_training_basic' type='checkbox'>Basic</p>
+          <p><input name='attr_weapons_training_infantry' type='checkbox'>Infantry</p>
+          <p><input name='attr_weapons_training_vehicle' type='checkbox'>Vehicle</p>
+          <p><input name='attr_weapons_training_melee' type='checkbox'>Melee</p>
+          <p><input name='attr_weapons_training_heavy' type='checkbox'>Heavy</p>
+          <p><input name='attr_weapons_training_special' type='checkbox'>Advanced</p>
+          <p><input name='attr_weapons_training_long-range' type='checkbox'>Long-Range</p>
+          <p><input name='attr_weapons_training_explosives' type='checkbox'>Explosives</p>
+        </div>
+      </div>
     </div>
 
   </div>
