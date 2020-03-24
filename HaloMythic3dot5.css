@@ -396,7 +396,7 @@ border-radius: 4px;
 }
 .sheet-minimisable_infographic_toggles{
 display: grid;
-grid-template-columns: 90px auto
+grid-template-columns: 90px 51px auto
 }
 
 .sheet-minimisable_infographic_expand{ display: none }
