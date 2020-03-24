@@ -401,7 +401,7 @@
     <div class='tabs_main'>
 
       <div class='initiative-container'>
-        <button name='initiative' type='roll' class='clear' style='padding-top:5px'
+        <button name='initiative' type='roll' class='clear' style='padding-top: 5px'
 		value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]}}'>
 		Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3})' class='input_background input_i_background' disabled /></button>
         <select name='attr_initmod1' class='init_field'>
@@ -641,7 +641,7 @@
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Cryptography</p>
-          <p class='bold_text skills_text'style='margin-left: 8px'>Adv.</p>
+          <p class='bold_text skills_text skills_diff'>Adv.</p>
           <select name='attr_mod1_cryptography' class='full_width full_height'>
             <option value='@{STR} + @{STR_advancement}' >STR</option>
             <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
@@ -683,7 +683,7 @@
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Demolition</p>
-          <p class='bold_text skills_text'style='margin-left: 8px'>Adv.</p>
+          <p class='bold_text skills_text skills_diff'>Adv.</p>
           <select name='attr_mod1_demolition' class='full_width full_height'>
             <option value='@{STR} + @{STR_advancement}' >STR</option>
             <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
@@ -809,7 +809,7 @@
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Medication</p>
-          <p class='bold_text skills_text'style='margin-left: 8px'>Adv.</p>
+          <p class='bold_text skills_text skills_diff'>Adv.</p>
           <select name='attr_mod1_medication' class='full_width full_height'>
             <option value='@{STR} + @{STR_advancement}' >STR</option>
             <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
@@ -893,7 +893,7 @@
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Security</p>
-          <p class='bold_text skills_text'style='margin-left: 8px'>Adv.</p>
+          <p class='bold_text skills_text skills_diff'>Adv.</p>
           <select name='attr_mod1_security' class='full_width full_height'>
             <option value='@{STR} + @{STR_advancement}' >STR</option>
             <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
@@ -956,7 +956,7 @@
         </div>
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Technology</p>
-          <p class='bold_text skills_text'style='margin-left: 8px'>Adv.</p>
+          <p class='bold_text skills_text skills_diff'>Adv.</p>
           <select name='attr_mod1_technology' class='full_width full_height'>
             <option value='@{STR} + @{STR_advancement}' >STR</option>
             <option value='@{TOU} + @{TOU_advancement}' >TOU</option>
@@ -1075,7 +1075,7 @@
     <br>
 
     <h2>Abilities</h2>
-    <p style='text-align: right; margin-top:-21px; margin-right: 5px'><b>Expand or collapse ability's descriptor block ⯆</b></p>
+    <p class='abilities_checkbox_pointer'><b>Expand or collapse ability's descriptor block ⯆</b></p>
     <div class='edge_padding'>
       <input name='attr_ability' type='text' placeholder='SQUAD UP' class='full_width_17px'/>
       <input name='attr_abilitycollapse' type='checkbox'  value='2' class='collapsible_ability_block_switch' />
@@ -1195,9 +1195,9 @@
       </div>
 
       <div class='equipment_credits text_centered' style='margin-top: 10px'>
-        cR Count: <input name='attr_credits' type='number' style='width: 10%; margin-right: 20px' />
-        cR Calculation: <input name='attr_credit_total' type='number' style='width: 10%; margin-right: 20px' readonly />
-		Weight Calculation: <input name='attr_weight_total' type='number' style='width: 10%' readonly> kilograms</input>
+        cR Count: <input name='attr_credits' type='number' class='equipment_numerical_field' />
+        cR Calculation: <input name='attr_credit_total' type='number' class='equipment_numerical_field' readonly />
+		Weight Calculation: <input name='attr_weight_total' type='number' class='equipment_numerical_field equipment_end_field' readonly> kilograms</input>
       </div>
     </div>
     <br>
@@ -1239,23 +1239,23 @@
     </script>
 
 	<div class='equipment_gear text_centered'>
-	  <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' style='width: 40%'></input>
-	  <input name='attr_gear_cost' type='text' placeholder='cR Value' style='width: 90px'>
-	  <input name='attr_gear_weight' type='text' placeholder='Weight' style='width: 90px'>
-	  <input name='attr_gear_bp' type='text' placeholder='Break Points' style='width: 90px'>
-	  <input name='attr_gear_pg#' type='text' placeholder='Page #' style='width: 90px'>
+	  <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' class='gear_name'></input>
+	  <input name='attr_gear_cost' type='text' placeholder='cR Value' class='gear_field'>
+	  <input name='attr_gear_weight' type='text' placeholder='Weight' class='gear_field'>
+	  <input name='attr_gear_bp' type='text' placeholder='Break Points' class='gear_field'>
+	  <input name='attr_gear_pg#' type='text' placeholder='Page #' class='gear_field'>
 	  <input name='attr_gear_collapse' type='checkbox'  class='collapsible_ability_block_switch' />
-	  <textarea name='attr_ability_desc' class='collapsible_ability_description_window_b centered' style='width: 90%'></textarea>
+	  <textarea name='attr_ability_desc' class='collapsible_ability_description_window_b centered 90width'></textarea>
 	</div>
     <fieldset name='gear' class='repeating_gear'>
       <div class='equipment_gear text_centered'>
-        <input name='attr_gear_name_r' type='text' style='width: 40%'></input>
-        <input name='attr_gear_cost_r' type='text' style='width: 90px'>
-        <input name='attr_gear_weight_r' type='text' style='width: 90px'>
-        <input name='attr_gear_bp_r' type='text' style='width: 90px'>
-        <input name='attr_gear_pg#_r' type='text' style='width: 90px'>
+        <input name='attr_gear_name_r' type='text'  class='gear_name'></input>
+        <input name='attr_gear_cost_r' type='text' class='gear_field'>
+        <input name='attr_gear_weight_r' type='text' class='gear_field'>
+        <input name='attr_gear_bp_r' type='text' class='gear_field'>
+        <input name='attr_gear_pg#_r' type='text' class='gear_field'>
         <input name='attr_gear_collapse_r' type='checkbox'  class='collapsible_ability_block_switch' />
-        <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered' style='width: 90%'></textarea>
+        <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b centered 90width'></textarea>
       </div>
     </fieldset>
   </div>
