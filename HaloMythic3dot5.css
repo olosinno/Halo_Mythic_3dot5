@@ -690,13 +690,12 @@ ______________________________ start of advancements tab _______________________
 }
 .sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85;}
 .sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85;}
-
 .sheet-faction_training_grid {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	margin: 0px 10px
 }
-
+.sheet-faction_training_alien {	margin-left: 10px }
 .sheet-weapon_training_grid {
 	display: grid;
 	grid-template-columns: 20% 25% 30% 25%;
