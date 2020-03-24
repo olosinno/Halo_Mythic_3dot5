@@ -1041,9 +1041,9 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_education' type='number' value='0' />
-          <div class='education4'><input name='attr_mod3_education' type='checkbox' value='5' class='skills_item ' /></div>
-          <div class='education5'><input name='attr_mod3_education' type='checkbox' value='10' class='skills_item' /></div>
+          <input name='attr_education_mod2' type='number' value='0' />
+          <div class='education4'><input name='attr_education_mod3' type='checkbox' value='5' class='skills_item ' /></div>
+          <div class='education5'><input name='attr_education_mod3' type='checkbox' value='10' class='skills_item' /></div>
           <button name='education_roll' type='roll' class='clear'
           value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{roll-name=@{education_name} }} {{roll=[[floor(([[@{education_mod1}]]+@{education_mod2}+@{education_mod3}+?{Modifier|0}-1d100)/10)]]}}'>
           <input name='attr_education_total' value='@{education_mod1}+@{education_mod2}+@{education_mod3}' class='input_background' disabled /></button>
@@ -1136,7 +1136,7 @@
               <input class="equipment_ranged_weapons_gs16 full_width" type="text" value='0' name="attr_R_weapon-mag" >
               <div class="equipment_ranged_weapons_gs17">/</div>
               <input class="equipment_ranged_weapons_gs18 full_width" type="text" value='0' name="attr_R_weapon-mag_max" >
-              <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{R_weapon-name} }} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{R_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
+              <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{attack= }} {{weapon=@{R_weapon-name} }} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{R_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
               <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{R_weapon-name} }} {{damage=[[@{R_weapon-dam-roll}+@{R_weapon-base}]] }} {{pierce=[[@{R_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{R_ability_r} }}' >DMG</button>
             </div>
             <div class="equipment_ranged_weapons_grid4">
@@ -1192,7 +1192,7 @@
               <input class="equipment_melee_weapons_gs6 full_width" type="text" value='0' name="attr_M_weapon-breakpoints" >
               <div class="equipment_melee_weapons_gs7">/</div>
               <input class="equipment_melee_weapons_gs8 full_width" type="text" value='0' name="attr_M_weapon-breakpoints_max" >
-              <button class="equipment_melee_weapons_gs9 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{M_weapon-name} }} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"' >Hit</button>
+              <button class="equipment_melee_weapons_gs9 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{attack= }}{{weapon=@{M_weapon-name} }} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"' >Hit</button>
               <button class="equipment_melee_weapons_gs10 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{M_weapon-name} }} {{damage=[[@{M_weapon-dam-roll}+@{M_weapon-base}+@{M_weapon-base-mod}]] }} {{pierce=[[@{M_weapon-pierce}+@{M_weapon-pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
             </div>
 
@@ -2169,7 +2169,7 @@
                 <input class="equipment_ranged_weapons_gs16 full_width" type="text" value='0' name="attr_V_R_weapon-mag" >
                 <div class="equipment_ranged_weapons_gs17">/</div>
                 <input class="equipment_ranged_weapons_gs18 full_width" type="text" value='0' name="attr_V_R_weapon-mag_max" >
-                <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_R_weapon-name} }} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{V_R_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
+                <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{attack= }} {{weapon=@{V_R_weapon-name} }} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{V_R_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
                 <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_R_weapon-name} }} {{damage=[[@{V_R_weapon-dam-roll}+@{V_R_weapon-base}]] }} {{pierce=[[@{V_R_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{V_R_ability_r} }}' >DMG</button>
               </div>
               <div class="equipment_ranged_weapons_grid4">
@@ -2225,8 +2225,8 @@
                 <input class="equipment_melee_weapons_gs6 full_width" type="text" value='0' name="attr_V_M_weapon-breakpoints" >
                 <div class="equipment_melee_weapons_gs7">/</div>
                 <input class="equipment_melee_weapons_gs8 full_width" type="text" value='0' name="attr_V_M_weapon-breakpoints_max" >
-                <button class="equipment_melee_weapons_gs9 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_M_weapon-name} }} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{V_M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"' >Hit</button>
-                <button class="equipment_melee_weapons_gs10 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_M_weapon-name} }} {{damage=[[@{V_M_weapon-dam-roll}+@{V_M_weapon-base}+@{V_M_weapon-base-mod}]] }} {{pierce=[[@{V_M_weapon-pierce}+@{V_M_weapon-pierce-mod}]] }} {{@{settings_weapondescription}description=@{V_M_ability_r} }}' >DMG</button>
+                <button class="equipment_melee_weapons_gs9 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{attack= }} {{weapon=@{V_M_weapon-name} }} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{V_M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"' >Hit</button>
+                <button class="equipment_melee_weapons_gs10 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character=@{character_name} }} {{weapon=@{V_M_weapon-name} }} {{damage=[[@{V_M_weapon-dam-roll}+@{V_M_weapon-base}]] }} {{pierce=[[@{V_M_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{V_M_ability_r} }}' >DMG</button>
               </div>
               <div>
                 <input style="border:none" name='attr_V_M_ability_r' type='text' placeholder='Description' class='full_width_17px' />
@@ -2325,7 +2325,7 @@
   </div>
   {{/roll-name}}
 
-  {{#roll}}
+  {{#attack}}
   <div class="sheet-template-header">{{character}}rolls to attack</div>
   <div class="sheet-template-content">
 
@@ -2342,7 +2342,7 @@
     {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
     {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
   </div>
-  {{/roll}}
+  {{/attack}}
 
   {{#loc}}
   <div class="sheet-template-content sheet-template-round">
