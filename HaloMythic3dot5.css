@@ -722,12 +722,13 @@ ______________________________ start of vehicles tab ___________________________
 	grid-template-areas:
 	'vg1 vgw'
 	'vg2 vgw'
-	'vg3 vgw';
+	'vg3 vgw'
+	'vg0 vgw';
 	grid-template-columns: 50% 50%
 }
-.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; border-top-left-radius: 9px; border-top-right-radius: 9px; color: white; font-family: Saira Semi Condensed; text-align: center }
-.sheet-vehicles_Gs  { grid-area: vs; height: 28.5px; margin-bottom: -8px; margin-top: -1px }
-.sheet-vehicles_Gt  { grid-area: vt; height: 28.5px; margin-bottom: -8px; margin-top: -1px }
+.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; border: none; border-bottom: 1px solid white; border-radius: 9px 9px 0px 0px; color: white; font-family: Saira Semi Condensed; text-align: center;}
+.sheet-vehicles_Gs  { grid-area: vs; height: 28.5px; margin-bottom: -8px; margin-top: -1px; border-top: 1px solid white;}
+.sheet-vehicles_Gt  { grid-area: vt; height: 28.5px; margin-bottom: -8px; margin-top: -1px; border-top: 1px solid white;}
 .sheet-vehicles_G1  { grid-area: v1 }
 .sheet-vehicles_G2  { grid-area: v2; text-align: center}
 .sheet-vehicles_G3  { grid-area: v3; text-align: center}
