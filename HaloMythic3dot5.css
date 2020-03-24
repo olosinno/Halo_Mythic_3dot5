@@ -386,11 +386,11 @@ ______________________________ start of tab buttons toggles ____________________
 ______________________________ start of minimisable infographic ______________________________ */
 
 .sheet-select_text{
-padding: 0px 4px 0px 4px;
-background: #394C6A;
-color:white; font-family: Saira Semi Condensed;
-border: 1px solid white;
-border-radius: 4px;
+	padding: 0px 4px 0px 4px;
+	background: #394C6A;
+	color:white; font-family: Saira Semi Condensed;
+	border: 1px solid white;
+	border-radius: 4px;
 }
 .sheet-select_button:checked ~ .sheet-select_text {
 	background: rgb(200, 0, 0);
@@ -400,8 +400,8 @@ border-radius: 4px;
 	margin-left: 5px;
 }
 .sheet-minimisable_infographic_toggles{
-display: grid;
-grid-template-columns: 90px 51px auto
+	display: grid;
+	grid-template-columns: 90px 51px auto
 }
 
 .sheet-minimisable_infographic_expand{ display: none }
@@ -562,7 +562,7 @@ ______________________________ start of equipment tab __________________________
 	grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
 	grid-template-areas:
 	'rw1  rw2  rw2  rw2  rw2  rw2  rw2  rw3  rw4  rw4';
-	 align-items: center;
+	align-items: center;
 }
 
 .sheet-equipment_ranged_weapons_grid2{
@@ -570,7 +570,7 @@ ______________________________ start of equipment tab __________________________
 	grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
 	grid-template-areas:
 	'rw5  rw6  rw6  rw7  rw7  rw8  rw9  rw10 rw11 rw12';
-	 align-items: center;
+	align-items: center;
 }
 
 .sheet-equipment_ranged_weapons_grid3{
@@ -578,7 +578,7 @@ ______________________________ start of equipment tab __________________________
 	grid-template-columns: auto auto auto auto auto auto 61px 61px;
 	grid-template-areas:
 	'rw13 rw14 rw15 rw16 rw17 rw18 rw19 rw20';
-	 align-items: center;
+	align-items: center;
 }
 
 
@@ -587,7 +587,7 @@ ______________________________ start of equipment tab __________________________
 	grid-template-columns: auto 8% 4% 8% 4% 8% auto auto auto auto;
 	grid-template-areas:
 	'rw21 rw22 rw23 rw24 rw25 rw26 rw27 rw28 rw29 rw30';
-	 align-items: center;
+	align-items: center;
 }
 
 .sheet-equipment_melee_weapons_gs1{ grid-area: mw1; 	color: white;font-size: 12px;}
@@ -606,11 +606,11 @@ ______________________________ start of equipment tab __________________________
 	grid-template-columns: auto auto auto auto auto auto auto auto 61px 61px;
 	grid-template-areas:
 	'mw1 mw2 mw3 mw4 mw5 mw6 mw7 mw8 mw9 mw10';
-	 align-items: center;
+	align-items: center;
 }
 .sheet-repeating_gear{
-		display: grid;
-grid-template-columns: auto auto auto auto auto auto;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
 
 }
 /* ______________________________ end of equipment tab ______________________________
@@ -885,8 +885,8 @@ ______________________________ start of vehicles tab ___________________________
 }
 
 .sheet-rolltemplate-mythic .sheet-template-round {
-		border-radius: 10px 10px 10px 10px;
-	}
+	border-radius: 10px 10px 10px 10px;
+}
 
 .sheet-rolltemplate-mythic .sheet-template-2x2 {
 	display: grid;
@@ -926,7 +926,7 @@ ______________________________ start of vehicles tab ___________________________
 	min-width: 1.5em;
 	text-align: center;
 	border: 1px solid white;
-		border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
 	background: #394C6A
 }
 .sheet-rolltemplate-mythic .inlinerollresult.fullcrit {
