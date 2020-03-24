@@ -1087,16 +1087,16 @@
     <h2>Abilities</h2>
     <p class='abilities_checkbox_pointer'><b>Expand or collapse ability's descriptor block ⯆</b></p>
     <div class='edge_padding'>
-      <input name='attr_ability' type='text' placeholder='SQUAD UP' class='full_width_17px'/>
-      <input name='attr_abilitycollapse' type='checkbox'  value='2' class='collapsible_ability_block_switch' />
-      <div class='collapsible_ability_description_window_a' ></div>
+      <input name='attr_ability' type='text' placeholder='SQUAD UP' class='full_width_17px'>
+      <label class="width_adjust"><input type="checkbox" name='attr_abilitycollapse' value="2" class="collapsible_ability_block_switch select_button hidden"><span class="select_text ">🗭</span></label>
+      <input name='attr_abilitycollapse' type='checkbox'  value='2' class='collapsible_ability_block_switch hidden' />
       <textarea name='attr_ability_desc' class='collapsible_ability_description_window_b'
       placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
       Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
       <fieldset name='abilities' class='repeating_abilities'>
-        <input name='attr_ability_r' type='text' placeholder='Write ability / trait name here' class='full_width_17px' />
-        <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
-        <div class='collapsible_ability_description_window_a' ></div>
+        <input name='attr_ability' type='text' placeholder='SQUAD UP' class='full_width_17px'>
+        <label class="width_adjust"><input type="checkbox" name='attr_abilitycollapse' value="3" class="collapsible_ability_block_switch select_button hidden"><span class="select_text ">🗭</span></label>
+        <input name='attr_abilitycollapse' type='checkbox'  value='3' class='collapsible_ability_block_switch hidden' />
         <textarea name='attr_ability_desc_r' class='collapsible_ability_description_window_b'></textarea>
       </fieldset>
     </div>
@@ -1153,7 +1153,8 @@
             </div>
             <div>
               <input style="border: none" name='attr_R_ability_r' type='text' placeholder='Description' class='full_width_17px' />
-              <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
+                <label class="width_adjust_wep"><input type="checkbox" name='attr_abilitycollapse' value="3" class="collapsible_ability_block_switch select_button hidden"><span class="select_text radius_border_right_wep">🗭</span></label>
+              <input name='attr_abilitycollapse' type='checkbox'  value='3' class='collapsible_ability_block_switch hidden' />
               <div class='collapsible_ability_description_window_a' ></div>
               <textarea name='attr_R_ability_desc_r' class='collapsible_ability_description_window_b description_rounded_margin'></textarea>
             </div>
@@ -1214,7 +1215,8 @@
 
             <div>
               <input style="border:none" name='attr_M_ability_r' type='text' placeholder='Description' class='full_width_17px' />
-              <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
+                <label class="width_adjust_wep"><input type="checkbox" name='attr_abilitycollapse' value="3" class="collapsible_ability_block_switch select_button hidden"><span class="select_text radius_border_right_wep">🗭</span></label>
+              <input name='attr_abilitycollapse' type='checkbox'  value='3' class='collapsible_ability_block_switch hidden' />
               <div class='collapsible_ability_description_window_a' ></div>
               <textarea name='attr_M_ability_desc_r' class='collapsible_ability_description_window_b description_rounded_margin'></textarea>
             </div>
@@ -2123,13 +2125,15 @@
           <div class='vehicles_G76 '>
             <div>
               <input name='attr_aditional_info' type='text' placeholder='Additional Info' class='full_width_17px'>
-              <input name='attr_aditional_infoc' type='checkbox' value='5' class='collapsible_ability_block_switch'>
+              <label class="width_adjust"><input type="checkbox" name='attr_abilitycollapse' value="5" class="collapsible_ability_block_switch select_button hidden"><span class="select_text ">🗭</span></label>
+              <input name='attr_abilitycollapse' type='checkbox'  value='5' class='collapsible_ability_block_switch hidden' />
               <div class='collapsible_ability_description_window_a' ></div>
               <textarea class='collapsible_ability_description_window_b' placeholder='Enter any vehicle-specific rules or other unique information here.'></textarea>
             </div>
             <div>
               <input style="border-bottom-left-radius:8px"name='attr_modifications' type='text' placeholder='Modifications' class='full_width_17px'>
-              <input name='attr_modificationsc' type='checkbox' value='6' class='collapsible_ability_block_switch'>
+                <label class="width_adjust"><input type="checkbox" name='attr_abilitycollapse' value="6" class="collapsible_ability_block_switch select_button hidden"><span class="select_text radius_border_right">🗭</span></label>
+              <input name='attr_abilitycollapse' type='checkbox'  value='6' class='collapsible_ability_block_switch hidden' />
               <div class='collapsible_ability_description_window_a' ></div>
               <textarea class='collapsible_ability_description_window_b description_rounded_margin' placeholder='Vehicles in Halo Mythic can be modified in many ways.  These use a Vehicle’s Weapon Points and Size Points, which are specialized Hardpoints on a Vehicle.  Each Modification takes a specified amount of Weapon and Size Points.
               &#10;Vehicle modifications are classified into five categories; Body, Propulsion, Electronic, Combat, and Miscellaneous.'></textarea>
@@ -2186,7 +2190,8 @@
               </div>
               <div>
                 <input style="border: none" name='attr_V_R_ability_r' type='text' placeholder='Description' class='full_width_17px' />
-                <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
+                <label class="width_adjust_wep"><input type="checkbox" name='attr_abilitycollapse' value="3" class="collapsible_ability_block_switch select_button hidden"><span class="select_text radius_border_right_wep">🗭</span></label>
+                <input name='attr_abilitycollapse' type='checkbox'  value='3' class='collapsible_ability_block_switch hidden' />
                 <div class='collapsible_ability_description_window_a' ></div>
                 <textarea name='attr_V_R_ability_desc_r' class='collapsible_ability_description_window_b description_rounded_margin'></textarea>
               </div>
@@ -2230,7 +2235,8 @@
               </div>
               <div>
                 <input style="border:none" name='attr_V_M_ability_r' type='text' placeholder='Description' class='full_width_17px' />
-                <input name='attr_abilitycollapse_r' type='checkbox'  value='3' class='collapsible_ability_block_switch' />
+                <label class="width_adjust_wep"><input type="checkbox" name='attr_abilitycollapse' value="3" class="collapsible_ability_block_switch select_button hidden"><span class="select_text radius_border_right_wep">🗭</span></label>
+                <input name='attr_abilitycollapse' type='checkbox'  value='3' class='collapsible_ability_block_switch hidden' />
                 <div class='collapsible_ability_description_window_a' ></div>
                 <textarea name='attr_V_M_ability_desc_r' class='collapsible_ability_description_window_b description_rounded_margin'></textarea>
               </div>

@@ -36,7 +36,12 @@ no ending semicolons needed, properly space out properties line-by-line.  Alphab
 .charsheet .sheet-item.sheet-5 { width: 5px }
 .charsheet .sheet-item.sheet-70 { width: 70px }
 .charsheet .sheet-item.sheet-920 { width: 90px }
-.sheet-full_width_17px{width: calc(100% - 17px);}
+.sheet-full_width_17px{width: calc(100% - 26px);}
+
+.sheet-width_adjust{margin-top: -23px; margin-left: calc(100% - 26px); margin-bottom: 4px}
+.sheet-width_adjust_wep{margin-top: -19px; margin-left: calc(100% - 23px); margin-bottom: 1px}
+.sheet-radius_border_right{border-bottom-right-radius: 7px !important;}
+.sheet-radius_border_right_wep{border-bottom-right-radius: 10px !important;}
 
 .sheet-collapsible_ability_description_window_a,
 .sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block;}
