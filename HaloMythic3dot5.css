@@ -5,17 +5,7 @@ input.sheet-background_switch_4:checked ~ div.sheet-background { background-imag
 input.sheet-background_switch_5:checked ~ div.sheet-background { background-image: linear-gradient(#aa3f3c, #772C2A); color: white }
 input.sheet-background_switch_6:checked ~ div.sheet-background { background: white }
 
-/*
-METHODS OF MY MADNESS
-Keep select parameters on separate lines to better track what is being selected
-Enter in CSS properties as following Format: {
-text-align: center;
-text-decoration: underline
-}
-no ending semicolons needed, properly space out properties line-by-line.  Alphabetized each properties list for easier reading.
-2. Keep order in HTML elements' attributes by the way they're listed.  name type value class
-*/
-.sheet-background_radius{
+.sheet-background_radius {
 	border: 2px solid black;
 	border-radius: 11px;
 }
@@ -173,8 +163,8 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-bold_text { font-weight: bold }
 .sheet-centered { margin: auto }
 .sheet-text_centered{text-align: center;}
-.sheet-radius_border{border-radius: 10px;
-}
+.sheet-radius_border { border-radius: 10px; }
+.sheet-border_none { border: none!important }
 .sheet-radius_border_top{
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -535,7 +525,7 @@ ______________________________ start of equipment tab __________________________
 
 .sheet-equipment_ranged_weapons{grid-area: e1; background:#475f85; padding:2px; border-radius: 10px}
 .sheet-equipment_melee_weapons{ grid-area: e2; background:#475f85; padding:2px; border-radius: 10px}
-.sheet-equipment_credits{ grid-area: e3 }
+.sheet-equipment_numerics{ grid-area: e3; margin-top: 10px; }
 .sheet-equipment_ranged_weapons_rep{border:1px solid white; border-radius: 10px; padding: 2px; background:#475f85 }}
 
 
@@ -701,6 +691,12 @@ ______________________________ start of medical tab ____________________________
 	background: #394C6A;
 	color: white;
 }
+.sheet-medical_h2_rollable:hover {
+	background-color: rgb(200, 0, 0);
+}
+.sheet-medical_initial_label {
+	margin-bottom: -5px
+}
 
 .sheet-medical_table {
 	border-bottom: 1px dotted grey;
@@ -723,6 +719,11 @@ ______________________________ start of medical tab ____________________________
 
 /* ______________________________ end of medical tab __________________________________________________________
 ______________________________ start of advancements tab ______________________________ */
+
+.sheet-advancements_numerical_field {
+	margin-right: 20px;
+	width: 80px!important;
+}
 
 .sheet-training {
 	display: grid;
@@ -887,6 +888,9 @@ ______________________________ start of vehicles tab ___________________________
 	'v76 v76 v76 v76';
 	grid-template-columns: 25% 25% 25% 25%
 }
+
+.sheet-vehicles_descriptor { border-bottom-left-radius: 8px }
+
 
 
 
