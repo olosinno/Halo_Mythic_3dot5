@@ -636,7 +636,7 @@ ______________________________ start of equipment tab __________________________
   grid-template-columns: auto auto auto auto auto auto;
 }
 
-select,
+
 .sheet-equipment_numerical_field,
 .sheet-equipment_end_field {
 	margin-right: 20px;
