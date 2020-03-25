@@ -746,9 +746,10 @@ ______________________________ start of advancements tab _______________________
 }
 .sheet-faction_training_alien {	margin-left: 10px }
 .sheet-weapon_training_grid {
+	font-size: 16px;
+	margin: 2px 10px 0px 10px;
 	display: grid;
 	grid-template-columns: 20% 25% 30% 25%;
-	margin: 0px 10px;
 }
 
 
