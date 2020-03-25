@@ -740,11 +740,11 @@ ______________________________ start of advancements tab _______________________
 .sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85; }
 .sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85; }
 .sheet-faction_training_grid {
+	font-size: 16px;
+	margin: 2px 10px 0px 10px;
 	display: grid;
 	grid-template-columns: 50% 50%;
-	margin: 0px 10px;
 }
-.sheet-faction_training_alien {	margin-left: 10px }
 .sheet-weapon_training_grid {
 	font-size: 16px;
 	margin: 2px 10px 0px 10px;
@@ -899,7 +899,8 @@ ______________________________ start of vehicles tab ___________________________
 
 .sheet-vehicles_descriptor { border-bottom-left-radius: 8px; }
 
-/* the hider checkboxes have names whic hmatc hthe select element on a 1-2-3 the apropriate element is displayed on a 4 all elements are hidden */
+/* These hider checkboxes have names which match the select element on a 1-2-3;
+the appropriate element is displayed on a 4 all elements are hidden */
 .sheet-hider:not(:checked) + div { display: none }
 .sheet-hider:not(:checked) + input { display: none }
 .sheet-hidernot:checked + div { display: none }
