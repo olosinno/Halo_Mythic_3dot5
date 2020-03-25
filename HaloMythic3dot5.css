@@ -29,10 +29,10 @@ input.sheet-background_switch_6:checked ~ div.sheet-background { background: whi
 .sheet-full_width_49px{width: calc(100% - 49px);}
 .sheet-full_width_30px{width: calc(100% - 30px);}
 
-.sheet-width_adjust{margin-top: -23px; margin-left: calc(100% - 26px); margin-bottom: 4px}
-.sheet-width_adjust2{margin-top: -22px; margin-left: calc(100% - 52px); margin-bottom: 4px}
-.sheet-width_adjust_wep{margin-top: -19px; margin-left: calc(100% - 23px); margin-bottom: 2px}
-.sheet-width_adjust_wep2{margin-top: -20px; margin-left: calc(100% - 49px); margin-bottom: 2px}
+.sheet-width_adjust{margin-top: -23px; margin-bottom: 4px; text-align: right;}
+.sheet-width_adjust2{margin-top: -22px; margin-left: -25px; margin-bottom: 4px; text-align: right;}
+.sheet-width_adjust_wep{margin-top: -19px; margin-left: 3px; margin-bottom: 2px; text-align: right;}
+.sheet-width_adjust_wep2{margin-top: -20px; margin-left: -22px; margin-bottom: 2px; text-align: right;}
 .sheet-radius_border_right{border-bottom-right-radius: 7px !important;}
 .sheet-radius_border_right_wep{border-bottom-right-radius: 10px !important;}
 
