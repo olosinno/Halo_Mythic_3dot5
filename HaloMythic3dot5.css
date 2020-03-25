@@ -1,68 +1,15 @@
 input.sheet-background_switch_1:checked ~ div.sheet-background { background: white }
-input.sheet-background_switch_2:checked ~ div.sheet-background { background-image: linear-gradient(#738132, #4b5320); color: white }
-input.sheet-background_switch_3:checked ~ div.sheet-background { background-image: linear-gradient(#8f489d, #59357a); color: white }
-input.sheet-background_switch_4:checked ~ div.sheet-background { background-image: linear-gradient(#C45911, #833C0B); color: white }
-input.sheet-background_switch_5:checked ~ div.sheet-background { background-image: linear-gradient(#aa3f3c, #772C2A); color: white }
-input.sheet-background_switch_6:checked ~ div.sheet-background { background: white }
+input.sheet-background_switch_2:checked ~ div.sheet-background { background-image: linear-gradient(#738132, #4b5320); color: white; }
+input.sheet-background_switch_3:checked ~ div.sheet-background { background-image: linear-gradient(#8f489d, #59357a); color: white; }
+input.sheet-background_switch_4:checked ~ div.sheet-background { background-image: linear-gradient(#C45911, #833C0B); color: white; }
+input.sheet-background_switch_5:checked ~ div.sheet-background { background-image: linear-gradient(#aa3f3c, #772C2A); color: white; }
+input.sheet-background_switch_6:checked ~ div.sheet-background { background: white; }
 
-.sheet-background_radius {
-	border: 2px solid black;
-	border-radius: 11px;
-}
 
-.charsheet .sheet-row {
-	height: 24px;
-	margin: 2px 0px 2px
-}
-.charsheet .sheet-item {
-	display: inline-block;
-	height: 28px;
-	margin: 0 -2px;
-	padding: 3px 2px;
-	text-align: left;
-	vertical-align: middle;
-	width: 100%
-}
-.charsheet .sheet-item.sheet-5 { width: 5px }
-.charsheet .sheet-item.sheet-70 { width: 70px }
-.charsheet .sheet-item.sheet-920 { width: 90px }
-.sheet-full_width_49px{width: calc(100% - 49px);}
-.sheet-full_width_30px{width: calc(100% - 30px);}
 
-.sheet-width_adjust{margin-top: -23px; margin-bottom: 4px; text-align: right;}
-.sheet-width_adjust2{margin-top: -22px; margin-left: -25px; margin-bottom: 4px; text-align: right;}
-.sheet-width_adjust_wep{margin-top: -19px; margin-left: 3px; margin-bottom: 2px; text-align: right;}
-.sheet-width_adjust_wep2{margin-top: -20px; margin-left: -22px; margin-bottom: 2px; text-align: right;}
-.sheet-radius_border_right{border-bottom-right-radius: 7px !important;}
-.sheet-radius_border_right_wep{border-bottom-right-radius: 10px !important;}
-
-.sheet-collapsible_ability_description_window_a,
-.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_b { display: block;}
-.sheet-collapsible_ability_description_window_b,
-.sheet-collapsible_ability_block_switch:checked ~ .sheet-collapsible_ability_description_window_a { display: none }
-
-.sheet-input_background{
-	background: transparent;
-	color: white;
-	border-color: transparent;
-	font-size: 16px;
-	width: 35px;
-	margin-left: -7px;
-	margin-top: -3px;
-	text-align: center;
-	cursor: pointer;
-}
-.sheet-input_c_background{
-	width: 50px;
-	margin-top: -5px!important;
-	margin-bottom: -4px!important;
-}
-.sheet-input_i_background{
-	width: 35px;
-	margin-top: -3px!important;
-	margin-bottom: -2px!important;
-}
 /* ______________________________ start of CSS selectors, patterns used to select element(s) for styling ______________________________ */
+
+
 
 @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
 
@@ -74,11 +21,11 @@ button[type='action'] {
 	background: #394C6A;
 	color: white;
 	font-family: Saira Semi Condensed;
-	text-align: center
+	text-align: center;
 }
 
 /* All horizontal rule elements receive the following CSS property. */
-hr { border-top: 1px dotted black }
+hr { border-top: 1px dotted black; }
 
 /* All button elements of type roll */
 button[type='roll'] {
@@ -87,6 +34,7 @@ button[type='roll'] {
 	font-family: Saira Semi Condensed;
 	text-shadow: none;
 }
+
 /* clear buttons with the clear class */
 button[type="roll"].sheet-clear::before {
 	content: "";
@@ -94,30 +42,24 @@ button[type="roll"].sheet-clear::before {
 }
 
 /* All button elements of type roll when hovered over: */
-button[type='roll']:hover { background: rgb(200, 0, 0) !important;}
-label:hover { cursor: pointer;}
-
+button[type='roll']:hover { background: rgb(200, 0, 0) !important; }
+label:hover { cursor: pointer; }
 
 /* Both header elements 2 and 3 receive the following CSS properties. */
 h2, h3 {
+	color: white;
 	font-family: Saira Semi Condensed;
 	text-align: center;
-	text-decoration: underline
+	text-decoration: underline;
 }
-/* Only type-2 headers receive the following CSS properties. */
-h2{
-	color: white;
-}
+
 /* Only type-3 headers receive the following CSS properties. */
-h3 {
-	background: #394C6A;
-	color: white;
-}
+h3 { background: #394C6A; }
 
 /* All instances of the placeholder attribute across all elements */
 ::placeholder {
 	color: white;
-	opacity: 0.7
+	opacity: 0.7;
 }
 
 /* All textarea elements (keep width for textarea to prevent stretching off of sheet) */
@@ -126,76 +68,125 @@ textarea {
 	color: white;
 	font-family: Saira Semi Condensed;
 	resize: vertical;
-	width: calc(100% - 10px)
+	width: calc(100% - 10px);
 }
+
+
 
 /* ______________________________ end of CSS selectors ______________________________
 ______________________________ start of multipurpose or special-use classes such as grey border box on Core and Settings tabs ______________________________ */
 
-.sheet-hidden { display: none }
-.sheet-hider:not(:checked) + div { display: none }
-.sheet-hider:not(:checked) + input { display: none }
-.sheet-hidernot:checked + div { display: none }
-.sheet-hidernot:checked + input { display: none }
+
+
+.sheet-background_radius {
+	border: 2px solid black;
+	border-radius: 11px;
+}
+
+.sheet-full_width_49px { width: calc(100% - 49px); }
+.sheet-full_width_30px { width: calc(100% - 30px); }
+
+.sheet-margin_adjust { margin-top: -23px; margin-bottom: 4px; text-align: right; }
+.sheet-margin_adjust2 { margin-top: -22px; margin-bottom: 4px; margin-left: -25px; text-align: right; }
+.sheet-margin_adjust_wep { margin-top: -19px; margin-bottom: 2px; margin-left: 3px; text-align: right; }
+.sheet-margin_adjust_wep2 { margin-top: -20px; margin-bottom: 2px; margin-left: -22px; text-align: right; }
+.sheet-radius_border_right { border-bottom-right-radius: 7px !important; }
+.sheet-radius_border_right_wep { border-bottom-right-radius: 10px !important; }
+
+.sheet-collapsible_entity_block { display: none; }
+.sheet-collapsible_entity_switch:checked ~ .sheet-collapsible_entity_block { display: block; }
+
+.sheet-hidden { display: none; }
+
+.sheet-input_background {
+	background: transparent;
+	border-color: transparent;
+	color: white;
+	cursor: pointer;
+	font-size: 16px;
+	margin-left: -7px;
+	margin-top: -3px;
+	text-align: center;
+	width: 35px;
+}
+
+.sheet-input_char_background {
+	margin-top: -5px !important;
+	margin-bottom: -4px !important;
+	width: 50px;
+}
+
+.sheet-input_init_background {
+	margin-top: -3px !important;
+	margin-bottom: -2px !important;
+	width: 35px;
+}
 
 .sheet-box {
 	background: #4d4d4d;
+	border-color: black;
 	border-style: solid;
 	border-width: 1px;
-	border-color: black;
 	color: white;
 }
 
-.sheet-edge_padding { padding: 2px }
-/* 40% width of containing block */
-.sheet-40width { width: 40% }
-/* half width of containing block */
-.sheet-half_width { width: 50% }
-/* 90% width of containing block */
-.sheet-90width { width: 90% }
-/* full width of containing block */
-.sheet-full_width { width: 100% }
-/* full height of containing block */
-.sheet-full_height{height: 100% }
+.sheet-table {
+	background: #506b95;
+	color: white;
+	font-family: Saira Semi Condensed;
+}
 
-.sheet-white_text { color: white }
-.sheet-huge_text { font-size: 36px }
-.sheet-bold_text { font-weight: bold }
-.sheet-centered { margin: auto }
-.sheet-text_centered{text-align: center;}
+.sheet-edge_padding { padding: 2px; }
+/* full height of containing block */
+.sheet-full_height {height: 100%; }
+/* 40% width of containing block */
+.sheet-40width { width: 40%; }
+/* half width of containing block */
+.sheet-half_width { width: 50%; }
+/* 90% width of containing block */
+.sheet-90width { width: 90%; }
+/* full width of containing block */
+.sheet-full_width { width: 100%; }
+
+.sheet-bold_text { font-weight: bold; }
+.sheet-border_none { border: none !important; }
+.sheet-auto_margin { margin: auto; }
+.sheet-huge_text { font-size: 36px; }
+.sheet-text_centered { text-align: center; }
 .sheet-radius_border { border-radius: 10px; }
-.sheet-border_none { border: none!important }
-.sheet-radius_border_top{
+.sheet-radius_border_top {
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
-.sheet-radius_border_bottom{
+.sheet-radius_border_bottom {
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
-.sheet-radius_border_heading{
+.sheet-radius_border_heading {
 	border-top-left-radius: 9px;
 	border-top-right-radius: 9px;
 }
-
-.sheet-description_rounded_margin{
+.sheet-description_rounded_margin {
 	margin-bottom: 0px;
-	border-radius: 0px 0px 8px 8px
+	border-radius: 0px 0px 8px 8px;
 }
+
+
 
 /* ______________________________ end of special-use classes ______________________________
 ______________________________ start of grid structure for character information ______________________________ */
 
 
-.sheet-gs1 { grid-area: ah1;		margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs2 { grid-area: ah2;		margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs3 { grid-area: ah3;		margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs4 { grid-area: ah4;		margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs5 { grid-area: ah5;		margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs6 { grid-area: ah6;		margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs7 { grid-area: ah7;	  width: calc(100%); }
-.sheet-gs8 { grid-area: ah8;	  width: calc(100% + 65px); margin-left: -65px ; height: 100%}
-.sheet-gs9 { grid-area: ah9;	  width: calc(100% + 30px); margin-left: -30px ;}
+
+.sheet-gs1 { grid-area: ah1;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
+.sheet-gs2 { grid-area: ah2;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
+.sheet-gs3 { grid-area: ah3;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
+.sheet-gs4 { grid-area: ah4;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
+.sheet-gs5 { grid-area: ah5;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
+.sheet-gs6 { grid-area: ah6;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
+.sheet-gs7 { grid-area: ah7;    width: calc(100%); }
+.sheet-gs8 { grid-area: ah8;    width: calc(100% + 65px); margin-left: -65px ; height: 100%}
+.sheet-gs9 { grid-area: ah9;    width: calc(100% + 30px); margin-left: -30px ;}
 .sheet-gs10 { grid-area: ah10;  width: calc(100% + 78px); margin-left: -78px ;}
 .sheet-gs11 { grid-area: ah11;  width: calc(100% + 37px); margin-left: -37px ;}
 .sheet-gs12 { grid-area: ah12;  width: calc(100% + 20px); margin-left: -20px ;}
@@ -214,8 +205,10 @@ ______________________________ start of grid structure for character information
 .sheet-gs25 { grid-area: ah25;  margin-top: 2px;  font-size: 18px;  padding-right: 5px; text-align: right }
 
 .sheet-header_logo {
-	display: grid;
 	font-family: Serif;
+	display: grid;
+	grid-template-columns: 140px auto 123px auto 135px;
+	grid-template-rows: 30px 30px 30px 30px 30px 30px;
 	grid-template-areas:
 	'ah1 ah7  ah13 ah14 ah20'
 	'ah2 ah8  ah13 ah15 ah21'
@@ -223,124 +216,134 @@ ______________________________ start of grid structure for character information
 	'ah4 ah10 ah13 ah17 ah23'
 	'ah5 ah11 ah13 ah18 ah24'
 	'ah6 ah12 ah13 ah19 ah25';
-	grid-template-columns: 140px auto 123px auto 135px;
-	grid-template-rows: 30px 30px 30px 30px 30px 30px
 }
+
+
 
 /* ______________________________ end of grid structure for character information ______________________________
 ______________________________ start of structure for characteristics ______________________________ */
 
+
+
 .sheet-characteristics_background {
 	background: black;
 	display: grid;
-	grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%
+	grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
 .sheet-characteristics {
 	margin-left: -9.5%;
 	text-align: center;
-	width: 120%
+	width: 120%;
 }
 
 /* Select those buttons of class characteristics and type roll, those buttons of class characteristics and type text */
-select,
 .sheet-characteristics button[type='roll'],
-.sheet-characteristics input[type='text'] { width: 75% }
+.sheet-characteristics input[type='text'] { width: 75%; }
 
 .sheet-characteristics input[type='text'] {
 	font-size: 30px;
-	height: 40px
+	height: 40px;
 }
+
+
 
 /* ______________________________ end of structure for characteristics ______________________________
 ______________________________ start of grid structure for the mythic characteristics, movement and pushing ______________________________ */
 
+
+
 .sheet-characteristics_mythic_movement_carry {
 	display: grid;
-	grid-template-columns: 10% 80% 10%
+	grid-template-columns: 10% 80% 10%;
 }
 
-.sheet-mythicgs_width { width: 40px }
-.sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Serif }
-.sheet-mythicgs2 { grid-area: amy2; margin-left:3px;}
-.sheet-mythicgs3 { grid-area: amy3; margin-left:3px;}
-.sheet-mythicgs4 { grid-area: amy4; margin-left:3px;}
-.sheet-mythicgs5 { grid-area: amy5; margin-left:12px; font-size: 13px; font-family: Serif }
-.sheet-mythicgs6 { grid-area: amy6; margin-left:9px; font-size: 13px; font-family: Serif }
-.sheet-mythicgs7 { grid-area: amy7; margin-left:12px; font-size: 13px; font-family: Serif }
+.sheet-mythicgs_width { width: 40px; }
+.sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Serif; }
+.sheet-mythicgs2 { grid-area: amy2; margin-left: 3px; }
+.sheet-mythicgs3 { grid-area: amy3; margin-left: 3px; }
+.sheet-mythicgs4 { grid-area: amy4; margin-left: 3px; }
+.sheet-mythicgs5 { grid-area: amy5; margin-left: 12px; font-family: Serif; font-size: 13px; }
+.sheet-mythicgs6 { grid-area: amy6; margin-left: 9px; font-family: Serif; font-size: 13px; }
+.sheet-mythicgs7 { grid-area: amy7; margin-left: 12px; font-family: Serif; font-size: 13px; }
 .sheet-characteristics2_mythic {
-	display: grid;
 	justify-content: left;
 	margin-left: 5px;
+	display: grid;
+	grid-template-columns: 50px 50px 50px;
 	grid-template-areas:
 	'amy1 amy1 amy1'
 	'amy2 amy3 amy4'
 	'amy5 amy6 amy7';
-	grid-template-columns: 50px 50px 50px
 }
 
 .sheet-movementgs1 { grid-area: amm1; font-size: 15px; font-family: Serif }
-.sheet-movementgs2 { grid-area: amm2; 	margin-left:6px;}
-.sheet-movementgs3 { grid-area: amm3; 	margin-left:6px;}
-.sheet-movementgs4 { grid-area: amm4; 	margin-left:6px;}
-.sheet-movementgs5 { grid-area: amm5; 	margin-left:6px;}
-.sheet-movementgs6 { grid-area: amm6; 	margin-left:6px;}
-.sheet-movementgs7 { grid-area: amm7; 	margin-left:6px;}
-.sheet-movementgs8 { grid-area: amm8; 	margin-left:6px;}
-.sheet-movementgs9 { grid-area: amm9;   margin-left:3px; font-size: 13px; font-family: Serif }
-.sheet-movementgs10 { grid-area: amm10; margin-left:5px; font-size: 13px; font-family: Serif }
-.sheet-movementgs11 { grid-area: amm11; margin-left:5px; font-size: 13px; font-family: Serif }
-.sheet-movementgs12 { grid-area: amm12; margin-left:5px; font-size: 13px; font-family: Serif }
-.sheet-movementgs13 { grid-area: amm13; margin-left:4px; font-size: 13px; font-family: Serif }
-.sheet-movementgs14 { grid-area: amm14; margin-left:4px; font-size: 13px; font-family: Serif }
-.sheet-movementgs15 { grid-area: amm15; margin-left:4px; font-size: 13px; font-family: Serif }
+.sheet-movementgs2 { grid-area: amm2; 	margin-left: 6px; }
+.sheet-movementgs3 { grid-area: amm3; 	margin-left: 6px; }
+.sheet-movementgs4 { grid-area: amm4; 	margin-left: 6px; }
+.sheet-movementgs5 { grid-area: amm5; 	margin-left: 6px; }
+.sheet-movementgs6 { grid-area: amm6; 	margin-left: 6px; }
+.sheet-movementgs7 { grid-area: amm7; 	margin-left: 6px; }
+.sheet-movementgs8 { grid-area: amm8; 	margin-left: 6px; }
+.sheet-movementgs9 { grid-area: amm9;   margin-left: 3px; font-size: 13px; font-family: Serif }
+.sheet-movementgs10 { grid-area: amm10; margin-left: 5px; font-size: 13px; font-family: Serif }
+.sheet-movementgs11 { grid-area: amm11; margin-left: 5px; font-size: 13px; font-family: Serif }
+.sheet-movementgs12 { grid-area: amm12; margin-left: 5px; font-size: 13px; font-family: Serif }
+.sheet-movementgs13 { grid-area: amm13; margin-left: 4px; font-size: 13px; font-family: Serif }
+.sheet-movementgs14 { grid-area: amm14; margin-left: 4px; font-size: 13px; font-family: Serif }
+.sheet-movementgs15 { grid-area: amm15; margin-left: 4px; font-size: 13px; font-family: Serif }
 .sheet-characteristics2_movement {
-	display: grid;
 	justify-content: center;
 	text-align: center;
+	display: grid;
+	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
 	grid-template-areas:
 	'amm1 amm1  amm1  amm1  amm1  amm1 amm1'
 	'amm2 amm3  amm4  amm5  amm6  amm7 amm8'
 	'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
-	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px
 }
 
-.sheet-carrygs1 { grid-area: ac1; margin-left:10px; font-size: 15px; font-family: Serif }
-.sheet-carrygs2 { grid-area: ac2; margin-left:10px; width: 80%; }
-.sheet-carrygs3 { grid-area: ac3; margin-left:10px; width: 80%;}
-.sheet-carrygs4 { grid-area: ac4; margin-left:10px; width: 80%;}
-.sheet-carrygs5 { grid-area: ac5; margin-left:10px; font-size: 13px; font-family: Serif; }
-.sheet-carrygs6 { grid-area: ac6; margin-left:11px; font-size: 13px; font-family: Serif; }
-.sheet-carrygs7 { grid-area: ac7; margin-left:12px; font-size: 13px; font-family: Serif; }
+.sheet-carrygs1 { grid-area: ac1; margin-left: 10px; font-size: 15px; font-family: Serif; }
+.sheet-carrygs2 { grid-area: ac2; margin-left: 10px; width: 80%; }
+.sheet-carrygs3 { grid-area: ac3; margin-left: 10px; width: 80%; }
+.sheet-carrygs4 { grid-area: ac4; margin-left: 10px; width: 80%; }
+.sheet-carrygs5 { grid-area: ac5; margin-left: 10px; font-size: 13px; font-family: Serif; }
+.sheet-carrygs6 { grid-area: ac6; margin-left: 11px; font-size: 13px; font-family: Serif; }
+.sheet-carrygs7 { grid-area: ac7; margin-left: 12px; font-size: 13px; font-family: Serif; }
 .sheet-characteristics2_carry {
-	margin-right: 5px;
-	display: grid;
 	justify-content: right;
+	margin-right: 5px;
 	text-align: center;
+	display: grid;
+	grid-template-columns: 55px 55px 55px;
 	grid-template-areas:
 	'ac1 ac1 ac1'
 	'ac2 ac3 ac4'
 	'ac5 ac6 ac7';
-	grid-template-columns: 55px 55px 55px
 }
+
+
 
 /* ______________________________ end of grid structure for the mythic characteristics, movement and pushing ______________________________
 ______________________________ start of grid structure for initiative and sheet tabs ______________________________ */
 
+
+
 .sheet-tabs_main {
 	display: grid;
-	grid-template-columns: 50% 50%
+	grid-template-columns: 50% 50%;
 }
 
-select,
-.sheet-sheet_tabs,
-.sheet-initiative-container { display: grid }
-
-.sheet-initiative-container {
+.sheet-initiative_container {
+	display: grid;
 	grid-template-columns: 100px 90px 18px 50px 18px 90px;
 }
 
-.sheet-init_field {width:85px; height: 100%; margin-right:-60px;}
+.sheet-init_field {
+	height: 100%;
+	margin-right: -60px;
+	width:85px;
+}
 
 .sheet-init_plus {
 	font-size: 24px;
@@ -348,15 +351,19 @@ select,
 	padding-top: 12px;
 }
 
-
 .sheet-sheet_tabs {
+	justify-content: right;
 	margin-right: 3px;
+	display: grid;
 	grid-template-columns: 45px 75px 60px 95px 60px 60px 45px;
-	justify-content: right
 }
+
+
 
 /* ______________________________ end of grid structure for initiative and sheet tabs ______________________________
 ______________________________ start of tab buttons toggles ______________________________ */
+
+
 
 .sheet-core,
 .sheet-medical,
@@ -377,71 +384,68 @@ ______________________________ start of tab buttons toggles ____________________
 .sheet-core_bttn:checked + button {
 	background: rgb(200, 0, 0);
 	color: white;
-	vertical-align: center
+	vertical-align: center;
 }
+
+
 
 /* ______________________________ end of tab buttons toggles ______________________________
 ______________________________ start of minimisable infographic ______________________________ */
 
-.sheet-select_text{
-	padding: 0px 4px 0px 4px;
+
+
+.sheet-select_text {
 	background: #394C6A;
-	color:white; font-family: Saira Semi Condensed;
 	border: 1px solid white;
 	border-radius: 4px;
+	color:white; font-family: Saira Semi Condensed;
+	padding: 0px 4px 0px 4px;
 }
-.sheet-select_button:checked ~ .sheet-select_text {
-	background: rgb(200, 0, 0);
-}
+.sheet-select_button:checked ~ .sheet-select_text { background: rgb(200, 0, 0); }
 
-.sheet-minimisable_infographic_main {
-	margin-left: 5px;
-}
-.sheet-minimisable_infographic_toggles{
+.sheet-minimisable_infographic_main { margin-left: 5px; }
+
+.sheet-minimisable_infographic_toggles {
 	display: grid;
-	grid-template-columns: 90px 51px auto
+	grid-template-columns: 90px 51px auto;
 }
 
-.sheet-minimisable_infographic_expand{ display: none }
-.sheet-minimisable_switch:checked ~  .sheet-minimisable_infographic_expand{display: block;}
-
-
-.sheet-minimisable_infographic_grid{
+.sheet-minimisable_infographic_grid {
 	display: grid;
 	grid-template-columns: 100px 100px 100px 100px 185px 185px;
 }
 
-.sheet-minimisable_infographic_g1{grid-area: mi1; width: calc(100% - 6px);justify-self: center; border: 0px solid transparent; background:#394C6A !important;	font-family: Saira Semi Condensed; font-size: 20px; text-decoration: underline}
-.sheet-minimisable_infographic_g2{grid-area: mi2; justify-self: right; margin-right: 3px; margin-top: 3px; color:white; font-family: Saira Semi Condensed }
-.sheet-minimisable_infographic_g3{grid-area: mi3; border-right: 1px solid #394C6A;}
-.sheet-minimisable_infographic_g4{grid-area: mi4; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
-.sheet-minimisable_infographic_g5{grid-area: mi5; border-right: 1px solid #394C6A; border-bottom: 1px solid #394C6A; border-bottom-right-radius: 10px}
-.sheet-minimisable_infographic_field2x3{
+.sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Saira Semi Condensed; font-size: 20px; justify-self: center; text-decoration: underline; width: calc(100% - 6px); }
+.sheet-minimisable_infographic_g2 { grid-area: mi2; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
+.sheet-minimisable_infographic_g3 { grid-area: mi3; border-right: 1px solid #394C6A; }
+.sheet-minimisable_infographic_g4 { grid-area: mi4; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
+.sheet-minimisable_infographic_g5 { grid-area: mi5; border-right: 1px solid #394C6A; border-bottom: 1px solid #394C6A; border-bottom-right-radius: 10px; }
+.sheet-minimisable_infographic_field2x3 {
+	background: #506b95;
 	margin-right: 10px;
-	background:#506b95;
 	display: grid;
 	grid-template-columns: 50px 40px;
 	grid-template-rows: 25px 25px 25px;
 	grid-template-areas:
 	'mi1 mi1'
 	'mi2 mi3'
-	'mi4 mi5'
+	'mi4 mi5';
 }
 
-.sheet-minimisable_infographic_g6{grid-area: mi6; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
-.sheet-minimisable_infographic_g7{grid-area: mi7; }
-.sheet-minimisable_infographic_g8{grid-area: mi8; justify-self: right; margin-right: 3px; margin-top: 3px;  color:white; font-family: Saira Semi Condensed }
-.sheet-minimisable_infographic_g9{grid-area: mi9; border-bottom: 1px solid #394C6A;}
-.sheet-minimisable_infographic_field4x3{
+.sheet-minimisable_infographic_g6 { grid-area: mi6; color: white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
+.sheet-minimisable_infographic_g7 { grid-area: mi7; }
+.sheet-minimisable_infographic_g8 { grid-area: mi8; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
+.sheet-minimisable_infographic_g9 { grid-area: mi9; border-bottom: 1px solid #394C6A; }
+.sheet-minimisable_infographic_field4x3 {
+	background: #506b95;
 	margin-right: 10px;
-	background:#506b95;
 	display: grid;
 	grid-template-columns: 50px 40px 45px 40px;
 	grid-template-rows: 25px 25px 25px;
 	grid-template-areas:
 	'mi1 mi1 mi1 mi1'
 	'mi6 mi7 mi2 mi3'
-	'mi8 mi9 mi4 mi5'
+	'mi8 mi9 mi4 mi5';
 }
 
 
@@ -449,63 +453,60 @@ ______________________________ start of minimisable infographic ________________
 /* ______________________________ end of minimisable infographic ______________________________
 ______________________________ start of core tab ______________________________ */
 
-.sheet-core_lists1 { grid-area: cl1; margin-right: 10px }
-.sheet-core_lists2 { grid-area: cl2; margin-bottom: 5px;}
-.sheet-core_lists3 { grid-area: cl3; margin-top: 5px}
+
+
+.sheet-core_lists1 { grid-area: cl1; margin-right: 10px; }
+.sheet-core_lists2 { grid-area: cl2; margin-bottom: 5px; }
+.sheet-core_lists3 { grid-area: cl3; margin-top: 5px; }
 .sheet-core_lists {
 	display: grid;
+	grid-template-columns: 400px auto;
 	grid-template-areas:
 	'cl1 cl2'
 	'cl1 cl3';
-	grid-template-columns: 400px auto;
-}
-.sheet-core_table {
-	background: #506b95;
-	color: white;
-	font-family: Saira Semi Condensed;
 }
 
-.sheet-skills_item { margin: 7px 5px }
-.sheet-skills_text { margin: 4px 0px }
-.sheet-skills_diff { margin-left: 8px }
-.sheet-text_left { text-align: left!important; }
+.sheet-skills_item { margin: 7px 5px; }
+.sheet-skills_text { margin: 4px 0px; }
+.sheet-skills_diff { margin-left: 8px; }
+.sheet-text_left { text-align: left !important; }
 
 .sheet-skill_header {
-	display: grid;
+	border-bottom: 1px dotted darkgrey;
 	margin-top: 7px;
+	display: grid;
 	grid-template-columns: auto 28px 63px 56px 21px 30px 38px 30px;
 	grid-template-rows: 23px;
-	border-bottom: 1px dotted darkgrey;
 }
 
 .sheet-skill_grid {
+	border-bottom: 1px dotted darkgrey;
+	padding-top: 1.5px;
+	padding-bottom: 1.5px;
 	display: grid;
 	grid-template-columns: auto 53px 64px 50px 30px 30px 30px 35px;
 	grid-template-rows: 27px;
-	border-bottom: 1px dotted darkgrey;
-	padding-bottom: 1.5px;
-	padding-top: 1.5px;
 
 }
 .sheet-education_grid {
+	border-bottom: 1px dotted darkgrey;
+	padding-top: 1.5px;
+	padding-bottom: 1.5px;
 	display: grid;
 	grid-template-columns: auto 63px 55px 30px 30px 35px;
 	grid-template-rows: 27px;
-	border-bottom: 1px dotted darkgrey;
-	padding-bottom: 1.5px;
-	padding-top: 1.5px;
 }
 
 .sheet-education_header {
-	display: grid;
+	border-bottom: 1px dotted darkgrey;
 	margin-top: 7px;
+	display: grid;
 	grid-template-columns: auto 63px 55px 25px 38px 30px;
 	grid-template-rows: 23px;
-	border-bottom: 1px dotted darkgrey;
 }
 
 .sheet-abilities_checkbox_pointer {
-	margin-top:-21px;
+	margin-top: -21px;
 	margin-right: 5px;
 	text-align: right;
 }
@@ -514,13 +515,15 @@ ______________________________ start of core tab ______________________________ 
 
 /* ______________________________ end of core tab ______________________________
 ______________________________ start of equipment tab ______________________________ */
+
+
+
 .sheet-equipment_divider {
 	display: grid;
 	grid-template-columns: 49.5% 1% 49.5%;
 	grid-template-areas:
 	'e1 e0 e2'
 	'e3 e3 e3';
-
 }
 
 .sheet-equipment_ranged_weapons{grid-area: e1; background:#475f85; padding:2px; border-radius: 10px}
@@ -645,35 +648,36 @@ ______________________________ start of equipment tab __________________________
 /* ______________________________ end of equipment tab ______________________________
 ______________________________ start of medical tab ______________________________ */
 
+
+
 .sheet-medicalG {
 	background: #475f85;
 	border-left: 15px solid #475f85;
 	border-right: 15px solid #475f85;
 	color: white;
-	font-family: Saira Semi Condensed
+	font-family: Saira Semi Condensed;
 }
 
-.sheet-medicalg1 { grid-area: m1; border-top-left-radius: 10px;}
-.sheet-medicalg2 { grid-area: m2; }
-.sheet-medicalg3 { grid-area: m3; border-top-right-radius: 10px;}
-.sheet-medicalg4 { grid-area: m4; }
-.sheet-medicalg5 { grid-area: m5; }
-.sheet-medicalg6 { grid-area: m6; }
-.sheet-medicalg7 { grid-area: m7; }
-.sheet-medicalg8 { grid-area: m8; }
-.sheet-medicalg9 { grid-area: m9; }
+.sheet-medicalg1 {  grid-area: m1; border-top-left-radius: 10px; }
+.sheet-medicalg2 {  grid-area: m2; }
+.sheet-medicalg3 {  grid-area: m3; border-top-right-radius: 10px; }
+.sheet-medicalg4 {  grid-area: m4; }
+.sheet-medicalg5 {  grid-area: m5; }
+.sheet-medicalg6 {  grid-area: m6; }
+.sheet-medicalg7 {  grid-area: m7; }
+.sheet-medicalg8 {  grid-area: m8; }
+.sheet-medicalg9 {  grid-area: m9; }
 .sheet-medicalg10 { grid-area: m10; }
 .sheet-medicalg11 { grid-area: m11; }
 .sheet-medicalg12 { grid-area: m12; }
 .sheet-medicalg13 { grid-area: m13; }
 .sheet-medicalg14 { grid-area: m14; }
-.sheet-medicalg15 { grid-area: m15; border-bottom-left-radius: 10px;}
+.sheet-medicalg15 { grid-area: m15; border-bottom-left-radius: 10px; }
 .sheet-medicalg16 { grid-area: m16; }
-.sheet-medicalg17 { grid-area: m17; border-bottom-right-radius: 10px;}
-.sheet-medicalgT { grid-area: mT; margin-left: 10px;}
-.sheet-medicalgR { grid-area: mR; margin-top: 10px;}
+.sheet-medicalg17 { grid-area: m17; border-bottom-right-radius: 10px; }
+.sheet-medicalgT {  grid-area: mT; margin-left: 10px; }
+.sheet-medicalgR {  grid-area: mR; margin-top: 10px; }
 .sheet-medical-grid {
-
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: 120px 120px 120px 120px 120px 170px auto;
@@ -691,124 +695,128 @@ ______________________________ start of medical tab ____________________________
 	background: #394C6A;
 	color: white;
 }
-.sheet-medical_h2_rollable:hover {
-	background-color: rgb(200, 0, 0);
-}
-.sheet-medical_initial_label {
-	margin-bottom: -5px
-}
-
+.sheet-medical_h2_rollable:hover { background-color: rgb(200, 0, 0); }
+.sheet-medical_initial_label { margin-bottom: -5px; }
 .sheet-medical_table {
 	border-bottom: 1px dotted grey;
 	color: white;
 	font-family: Saira Semi Condensed;
 	text-align: center;
-	text-indent: 5px
+	text-indent: 5px;
 }
 .sheet-medical_h2_background,
-.sheet-medical_background{
+.sheet-medical_background {
 	background: #475f85;
 	margin-bottom: 10px;
 	border-radius: 10px;
-	padding: 2px
+	padding: 2px;
 }
-.sheet-medical_h2_background{
+.sheet-medical_h2_background {
 	border-radius: 10px 10px 0px 0px;
 	margin-bottom: 0;
 }
 
+
+
 /* ______________________________ end of medical tab __________________________________________________________
 ______________________________ start of advancements tab ______________________________ */
 
-.sheet-advancements_numerical_field {
+
+
+.sheet-advancements_numerical_field,
+.sheet-advancements_end_field {
 	margin-right: 20px;
-	width: 80px!important;
+	width: 80px !important;
 }
+.sheet-advancements_end_field { margin-right: 0px }
 
 .sheet-training {
+	margin: 10px 0px 10px 1.5%;
 	display: grid;
+	grid-template-columns: 33% 67%;
 	grid-template-areas:
 	't1 t2';
-	grid-template-columns: 33% 67%;
-	margin: 10px 0px 10px 1.5%;
 }
-.sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85;}
-.sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85;}
+.sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85; }
+.sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85; }
 .sheet-faction_training_grid {
 	display: grid;
 	grid-template-columns: 50% 50%;
-	margin: 0px 10px
+	margin: 0px 10px;
 }
 .sheet-faction_training_alien {	margin-left: 10px }
 .sheet-weapon_training_grid {
 	display: grid;
 	grid-template-columns: 20% 25% 30% 25%;
-	margin: 0px 10px
+	margin: 0px 10px;
 }
+
+
 
 /* ______________________________ end of advancements tab ______________________________
 ______________________________ start of vehicles tab ___________________________________________________________ */
 
 
 
-.sheet-vehicles_grid1 { margin-right: 10px; grid-area: vg1; background:#506b95; border-top:2px solid #506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-top-left-radius: 10px; border-top-right-radius: 10px; color:white; font-family: Saira Semi Condensed }
-.sheet-vehicles_grid2 { margin-right: 10px; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color:white; font-family: Saira Semi Condensed }
-.sheet-vehicles_grid3 { margin-right: 10px; background:#506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; color:white; font-family: Saira Semi Condensed }
-.sheet-vehicle_weapons { grid-area: vgw }
+.sheet-vehicles_grid1 { margin-right: 10px; background: #506b95; border-top: 2px solid #506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-top-left-radius: 10px; border-top-right-radius: 10px; color: white; font-family: Saira Semi Condensed; }
+.sheet-vehicles_grid2 { margin-right: 10px; background: #506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; color: white; font-family: Saira Semi Condensed; }
+.sheet-vehicles_grid3 { margin-right: 10px; background: #506b95; border-left: 2px solid #506b95; border-right: 2px solid #506b95; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; color: white; font-family: Saira Semi Condensed; }
+.sheet-vehicle_weapons { grid-area: vgw; }
 .sheet-vehicles_divider {
 	display: grid;
+	grid-template-columns: 50% 50%;
 	grid-template-areas:
 	'vg1 vgw'
 	'vg2 vgw'
 	'vg3 vgw'
 	'vg0 vgw';
-	grid-template-columns: 50% 50%
 }
-.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; border: none; border-bottom: 1px solid white; border-radius: 9px 9px 0px 0px; color: white; font-family: Saira Semi Condensed; text-align: center; font-size: 16px}
-.sheet-vehicles_Gs  { grid-area: vs; height: 28.5px; margin-bottom: -8px; margin-top: -1px; border-top: 1px solid white;}
-.sheet-vehicles_Gt  { grid-area: vt; height: 28.5px; margin-bottom: -8px; margin-top: -1px; border-top: 1px solid white;}
+.sheet-vehicles_Gn  { grid-area: vn; background: #394C6A; border: none; border-bottom: 1px solid white; border-radius: 9px 9px 0px 0px; color: white; font-family: Saira Semi Condensed; text-align: center; font-size: 16px; }
+.sheet-vehicles_Gs  { grid-area: vs; height: 28.5px; margin-bottom: -8px; margin-top: -1px; border-top: 1px solid white; }
+.sheet-vehicles_Gt  { grid-area: vt; height: 28.5px; margin-bottom: -8px; margin-top: -1px; border-top: 1px solid white; }
 .sheet-vehicles_G1  { grid-area: v1 }
-.sheet-vehicles_G2  { grid-area: v2; text-align: center}
-.sheet-vehicles_G3  { grid-area: v3; text-align: center}
-.sheet-vehicles_G4  { grid-area: v4; text-align: center}
-.sheet-vehicles_G5  { grid-area: v5; text-align: center}
+.sheet-vehicles_G2  { grid-area: v2; text-align: center }
+.sheet-vehicles_G3  { grid-area: v3; text-align: center }
+.sheet-vehicles_G4  { grid-area: v4; text-align: center }
+.sheet-vehicles_G5  { grid-area: v5; text-align: center }
 .sheet-vehicles_G6  { grid-area: v6 }
 .sheet-vehicles_G7  { grid-area: v7 }
 .sheet-vehicles_G8  { grid-area: v8 }
 .sheet-vehicles_G9  { grid-area: v9 }
 .sheet-vehicles_G10 { grid-area: v10 }
-.sheet-vehicles_G11 { grid-area: v11; text-align: center}
-.sheet-vehicles_G12 { grid-area: v12; text-align: center}
-.sheet-vehicles_G13 { grid-area: v13; text-align: center}
-.sheet-vehicles_G14 { grid-area: v14; text-align: center}
+.sheet-vehicles_G11 { grid-area: v11; text-align: center }
+.sheet-vehicles_G12 { grid-area: v12; text-align: center }
+.sheet-vehicles_G13 { grid-area: v13; text-align: center }
+.sheet-vehicles_G14 { grid-area: v14; text-align: center }
 .sheet-vehicles_G15 { grid-area: v15 }
 .sheet-vehicles_G16 { grid-area: v16 }
 .sheet-vehicles_G17 { grid-area: v17 }
 .sheet-vehicles_G18 { grid-area: v18 }
-.sheet-vehicles_G19 { grid-area: v19; text-align: center}
-.sheet-vehicles_G20 { grid-area: v20; text-align: center}
-.sheet-vehicles_G21 { grid-area: v21; text-align: center}
-.sheet-vehicles_G22 { grid-area: v22; text-align: center}
+.sheet-vehicles_G19 { grid-area: v19; text-align: center }
+.sheet-vehicles_G20 { grid-area: v20; text-align: center }
+.sheet-vehicles_G21 { grid-area: v21; text-align: center }
+.sheet-vehicles_G22 { grid-area: v22; text-align: center }
 .sheet-vehicles_G23 { grid-area: v23 }
 .sheet-vehicles_G24 { grid-area: v24 }
 .sheet-vehicles_G25 { grid-area: v25 }
 .sheet-vehicles_G26 { grid-area: v26 }
-.sheet-vehicles_G27 { grid-area: v27; text-align: center}
-.sheet-vehicles_G28 { grid-area: v28; text-align: center}
+.sheet-vehicles_G27 { grid-area: v27; text-align: center }
+.sheet-vehicles_G28 { grid-area: v28; text-align: center }
 .sheet-vehicles_G29 { grid-area: v29 }
 .sheet-vehicles_G30 { grid-area: v30 }
 .sheet-vehicles_G31 { grid-area: v31 }
-.sheet-vehicles_G32 { grid-area: v32; margin-top: 6px}
+.sheet-vehicles_G32 { grid-area: v32; margin-top: 6px }
 .sheet-vehicles_G33 { grid-area: v33 }
-.sheet-vehicles_G34 { grid-area: v34; text-align: center}
-.sheet-vehicles_G35 { grid-area: v35; text-align: center}
+.sheet-vehicles_G34 { grid-area: v34; text-align: center }
+.sheet-vehicles_G35 { grid-area: v35; text-align: center }
 .sheet-vehicles_G36 { grid-area: v36 }
 .sheet-vehicles_G37 { grid-area: v37 }
 .sheet-vehicles_G38 { grid-area: v38 }
-.sheet-vehicles_G39 { grid-area: v39; text-align: center}
+.sheet-vehicles_G39 { grid-area: v39; text-align: center }
 .sheet-vehicles_G40 { grid-area: v40 }
 .sheet-vehicles_grid1 {
 	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-areas:
 	'vn  vn  vn  vn'
 	'vs  v1  v1  vt'
@@ -828,25 +836,24 @@ ______________________________ start of vehicles tab ___________________________
 	'v38 v38 v38 v38'
 	'v39 v39 v39 v39'
 	'v40 v40 v40 v40';
-	grid-template-columns: 25% 25% 25% 25%
 }
 .sheet-vehicles_G41 { grid-area: v41 }
-.sheet-vehicles_G42 { grid-area: v42; text-align: center}
-.sheet-vehicles_G43 { grid-area: v43; text-align: center}
-.sheet-vehicles_G44 { grid-area: v44; text-align: center}
-.sheet-vehicles_G45 { grid-area: v45; text-align: center}
-.sheet-vehicles_G46 { grid-area: v46; text-align: center}
+.sheet-vehicles_G42 { grid-area: v42; text-align: center }
+.sheet-vehicles_G43 { grid-area: v43; text-align: center }
+.sheet-vehicles_G44 { grid-area: v44; text-align: center }
+.sheet-vehicles_G45 { grid-area: v45; text-align: center }
+.sheet-vehicles_G46 { grid-area: v46; text-align: center }
 .sheet-vehicles_G47 { grid-area: v47 }
 .sheet-vehicles_G48 { grid-area: v48 }
 .sheet-vehicles_G49 { grid-area: v49 }
 .sheet-vehicles_G50 { grid-area: v50 }
 .sheet-vehicles_G51 { grid-area: v51 }
-.sheet-vehicles_G52 { grid-area: v52; text-align: center}
-.sheet-vehicles_G53 { grid-area: v53; text-align: center}
-.sheet-vehicles_G54 { grid-area: v54; text-align: center}
-.sheet-vehicles_G55 { grid-area: v55; text-align: center}
-.sheet-vehicles_G56 { grid-area: v56; text-align: center}
-.sheet-vehicles_G57 { grid-area: v57; text-align: center}
+.sheet-vehicles_G52 { grid-area: v52; text-align: center }
+.sheet-vehicles_G53 { grid-area: v53; text-align: center }
+.sheet-vehicles_G54 { grid-area: v54; text-align: center }
+.sheet-vehicles_G55 { grid-area: v55; text-align: center }
+.sheet-vehicles_G56 { grid-area: v56; text-align: center }
+.sheet-vehicles_G57 { grid-area: v57; text-align: center }
 .sheet-vehicles_G58 { grid-area: v58 }
 .sheet-vehicles_G59 { grid-area: v59 }
 .sheet-vehicles_G60 { grid-area: v60 }
@@ -854,6 +861,7 @@ ______________________________ start of vehicles tab ___________________________
 .sheet-vehicles_G62 { grid-area: v62 }
 .sheet-vehicles_grid2 {
 	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
 	grid-template-areas:
 	'v41 v41 v41 v41 v41'
 	'v42 v43 v44 v45 v46'
@@ -861,24 +869,24 @@ ______________________________ start of vehicles tab ___________________________
 	'v52 v52 v52 v52 v52'
 	'v53 v54 v55 v56 v57'
 	'v58 v59 v60 v61 v62';
-	grid-template-columns: 20% 20% 20% 20% 20%
 }
 .sheet-vehicles_G63 { grid-area: v63 }
-.sheet-vehicles_G64 { grid-area: v64; text-align: center}
-.sheet-vehicles_G65 { grid-area: v65; text-align: center}
+.sheet-vehicles_G64 { grid-area: v64; text-align: center }
+.sheet-vehicles_G65 { grid-area: v65; text-align: center }
 .sheet-vehicles_G66 { grid-area: v66 }
 .sheet-vehicles_G67 { grid-area: v67 }
-.sheet-vehicles_G68 { grid-area: v68; text-align: center}
-.sheet-vehicles_G69 { grid-area: v69; text-align: center}
-.sheet-vehicles_G70 { grid-area: v70; text-align: center}
-.sheet-vehicles_G71 { grid-area: v71; text-align: center}
+.sheet-vehicles_G68 { grid-area: v68; text-align: center }
+.sheet-vehicles_G69 { grid-area: v69; text-align: center }
+.sheet-vehicles_G70 { grid-area: v70; text-align: center }
+.sheet-vehicles_G71 { grid-area: v71; text-align: center }
 .sheet-vehicles_G72 { grid-area: v72 }
 .sheet-vehicles_G73 { grid-area: v73 }
 .sheet-vehicles_G74 { grid-area: v74 }
 .sheet-vehicles_G75 { grid-area: v75 }
-.sheet-vehicles_G76 { grid-area: v76; padding-bottom: 2px}
+.sheet-vehicles_G76 { grid-area: v76; padding-bottom: 2px; }
 .sheet-vehicles_grid3 {
 	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-areas:
 	'v63 v63 v63 v63'
 	'v64 v64 v65 v65'
@@ -886,10 +894,15 @@ ______________________________ start of vehicles tab ___________________________
 	'v68 v69 v70 v71'
 	'v72 v73 v74 v75'
 	'v76 v76 v76 v76';
-	grid-template-columns: 25% 25% 25% 25%
 }
 
-.sheet-vehicles_descriptor { border-bottom-left-radius: 8px }
+.sheet-vehicles_descriptor { border-bottom-left-radius: 8px; }
+
+/* WRITE COMMENT EXPLAINING HOW THIS WORKS HERE */
+.sheet-hider:not(:checked) + div { display: none }
+.sheet-hider:not(:checked) + input { display: none }
+.sheet-hidernot:checked + div { display: none }
+.sheet-hidernot:checked + input { display: none }
 
 
 
