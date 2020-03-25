@@ -899,7 +899,7 @@ ______________________________ start of vehicles tab ___________________________
 
 .sheet-vehicles_descriptor { border-bottom-left-radius: 8px; }
 
-/* WRITE COMMENT EXPLAINING HOW THIS WORKS HERE */
+/* the hider checkboxes have names whic hmatc hthe select element on a 1-2-3 the apropriate element is displayed on a 4 all elements are hidden */
 .sheet-hider:not(:checked) + div { display: none }
 .sheet-hider:not(:checked) + input { display: none }
 .sheet-hidernot:checked + div { display: none }
