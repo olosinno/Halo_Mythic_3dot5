@@ -2303,23 +2303,16 @@
 
 
 <rolltemplate class="sheet-rolltemplate-mythic">
-{{#description}}
-<div class="sheet-template-header">{{name}}</div>
-<div class="sheet-template-content">
-  <div class="sheet-template-row ">{{description}}</div>
-  </div>
-{{/description}}
 
   {{#initiative}}
   <div class="sheet-template-header">{{character}} rolls for Initiative</div>
   <div class="sheet-template-content">
-    <div class="sheet-template-row sheet-template-center">{{initiative}} degrees of sucess</div>
-
-    {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
-    {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
+    <div class="sheet-template-row sheet-template-center mythic_crit">{{initiative}} degrees of sucess</div>
 
   </div>
   {{/initiative}}
+
+
 
   {{#roll-name}}
   <div class="sheet-template-header">{{character}} rolls for {{roll-name}}</div>
@@ -2332,15 +2325,16 @@
       </div>
     </div>
 
-    {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
-    {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
-
   </div>
   {{/roll-name}}
 
+
+
   {{#attack}}
   <div class="sheet-template-header">{{character}}rolls to attack</div>
-  <div class="sheet-template-content">
+    {{#loc}}<div class="sheet-template-content template-content_top">{{/loc}}
+    {{^loc}}<div class="sheet-template-content">{{/loc}}
+
 
     <div class="sheet-template-row sheet-template-center">
       using their {{weapon}} they score:
@@ -2357,8 +2351,11 @@
   </div>
   {{/attack}}
 
+
+
   {{#loc}}
-  <div class="sheet-template-content sheet-template-round">
+  {{^attack}}<div class="sheet-template-content sheet-template-round">{{/attack}}
+  {{#attack}} <div class="sheet-template-content">{{/attack}}
     <div class="sheet-template-row sheet-template-center sheet-template-break">rolling hit location {{loc}}</div>
     <div class="sheet-template-row sheet-template-center">
       {{#rollBetween() loc 1 10}}   HEAD:        {{/rollBetween() loc 1 10}}
@@ -2417,27 +2414,34 @@
   </div>
   {{/loc}}
 
+
+
   {{#damage}}
   <div class="sheet-template-header">{{character}} rolls for damage using their {{weapon}} </div>
-  <div class="sheet-template-content">
+  {{#description}}<div class="sheet-template-content template-content_top">{{/description}}
+    {{^description}}<div class="sheet-template-content">  {{/description}}
     <div class="sheet-template-2x2">
 
       <div class="sheet-template-2x2">
         <div class="sheet-template-row sheet-template-right">Damage</div>
-        <div class="sheet-template-row">{{damage}}</div>
+        <div class="sheet-template-row mythic_crit">{{damage}}</div>
       </div>
 
       <div class="sheet-template-2x2">
         <div class="sheet-template-row sheet-template-right">Pierce</div>
-        <div class="sheet-template-row">{{pierce}}</div>
+        <div class="sheet-template-row mythic_crit">{{pierce}}</div>
       </div>
-
     </div>
-
-    <div class="sheet-template-row template-center">{{description}}</div>
 
   </div>
   {{/damage}}
+  {{#description}}
+  {{#name}}<div class="sheet-template-header">{{name}}</div>{{/name}}
+  <div class="sheet-template-content">
+    <div class="sheet-template-row ">{{description}}</div>
+    </div>
+  {{/description}}
+
 
 
   {{#2x2}}
