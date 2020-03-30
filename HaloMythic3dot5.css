@@ -939,6 +939,10 @@ the appropriate element is displayed on a 4 all elements are hidden */
 	border-bottom: 2px solid grey;
 	padding: 2px
 }
+.sheet-rolltemplate-mythic .sheet-template-content_top {
+	border-radius: 0px 0px 0px 0px;
+	border-bottom: 3px solid #394C6A;
+}
 
 .sheet-rolltemplate-mythic .sheet-template-round {
 	border-radius: 10px 10px 10px 10px;
@@ -995,4 +999,12 @@ the appropriate element is displayed on a 4 all elements are hidden */
 
 .sheet-rolltemplate-mythic .inlinerollresult.importantroll {
 	border: 3px solid #4A57ED;
+}
+
+.sheet-rolltemplate-mythic .sheet-mythic_crit .inlinerollresult.fullcrit {
+	border: 3px solid #3FB315;
+}
+
+.sheet-rolltemplate-mythic .sheet-mythic_crit .inlinerollresult.fullfail {
+	border: 3px solid #B31515;
 }
