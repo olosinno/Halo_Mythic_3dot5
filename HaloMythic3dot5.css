@@ -156,6 +156,8 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-auto_margin { margin: auto; }
 .sheet-huge_text { font-size: 36px; }
 .sheet-text_centered { text-align: center; }
+.sheet-ssc { font-family: Saira Semi Condensed; }
+
 .sheet-radius_border { border-radius: 10px; }
 .sheet-radius_border_top {
 	border-top-left-radius: 10px;

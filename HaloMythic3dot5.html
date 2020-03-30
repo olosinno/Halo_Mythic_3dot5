@@ -1087,7 +1087,7 @@
 
     <h2>Abilities</h2>
     <p class='abilities_checkbox_pointer'><b>Expand or collapse ability's descriptor block ⯆</b></p>
-    <div class='edge_padding'>
+    <div class='edge_padding ssc'>
       <input name='attr_ability' type='text' placeholder='SQUAD UP' class='full_width_49px' />
       <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
       <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{ability} }} {{description=@{ability_desc} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
@@ -1111,7 +1111,7 @@
 
   <div class='equipment box'>
     <div class='equipment_divider'>
-      <div class='equipment_ranged_weapons'>
+      <div class='equipment_ranged_weapons ssc'>
         <h3 class='radius_border_top'>Ranged Weapons</h3>
         <fieldset name='rangedweapons' class='repeating_Rangedweapons'>
           <div class='equipment_ranged_weapons_rep'>
@@ -1165,7 +1165,7 @@
         </fieldset>
       </div>
 
-      <div class='equipment_melee_weapons'>
+      <div class='equipment_melee_weapons ssc'>
         <h3 class='radius_border_top'>Melee Weapons</h3>
         <fieldset name='meleeweapons' class='repeating_meleeweapons'>
           <div class='equipment_ranged_weapons_rep'>
@@ -1281,8 +1281,8 @@
     <input name='attr_collapse' type='checkbox'  value='7' class='collapsible_entity_switch hidden' />
 	  <textarea name='attr_gear_desc' class='collapsible_entity_block auto_margin 90width'></textarea>
 	</div>
-    <fieldset name='gear' class='repeating_gear'>
-      <div class='equipment_gear'>
+    <div class='equipment_gear ssc'>
+      <fieldset name='gear' class='repeating_gear'>
         <input name='attr_gear_name_r' type='text'  class='gear_name' />
         <input name='attr_gear_cost_r' type='text' class='gear_field' />
         <input name='attr_gear_weight_r' type='text' class='gear_field' />
@@ -1850,7 +1850,7 @@
         </div>
       </div>
 
-      <div class='medicalgR'>
+      <div class='medicalgR ssc'>
         <div class='medical_h2_background'>
           <h2 class='medical_h2 radius_border_top'>Medical Information</h2>
         </div>
@@ -1915,7 +1915,7 @@
       <input name='attr_advancement_costR' type='number' placeholder='XP Cost' style='width: 10%' />
       <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%' />
     </div>
-    <div class='edge_padding'>
+    <div class='edge_padding ssc'>
       <fieldset name='advancements' class='repeating_advancements'>
         <input name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' style='width: 25%' />
         <input name='attr_advancement_costL_r' type='number' placeholder='XP Cost' style='width: 10%' />
@@ -1927,7 +1927,7 @@
     </div>
 
     <div class='training'>
-      <div class='faction_training table auto_margin 90width radius_border'>
+      <div class='faction_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Faction Training</h3>
         <div class='faction_training_grid'>
 		  <div><input name='attr_faction_training_human' type='checkbox' />U.N.S.C.</div>
@@ -1936,7 +1936,7 @@
 		  <div style='margin-left: -30%'>Banished</div>
 		</div>
       </div>
-      <div class='weapon_training table auto_margin 90width radius_border'>
+      <div class='weapon_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Weapon Training</h3>
         <div class='weapon_training_grid'>
           <div><input name='attr_weapons_training_basic' type='checkbox' />Basic</div>
@@ -1960,14 +1960,14 @@
   <div class='journal box'>
     <!-- Journal -->
     <h2>Journal: Objectives</h2>
-    <div class='edge_padding'>
+    <div class='edge_padding ssc'>
       <fieldset name='objectives' class='repeating_objectives'>
       <input name='attr_objective' type='text' class='full_width_30px' />
       <label class='margin_adjust'><input type='checkbox' name='attr_objective_completed' value='1' class='select_button hidden' /><span class='select_text '>✔</span></label>
       </fieldset>
     </div>
     <h2>Journal: Notes</h2>
-    <div class='edge_padding'>
+    <div class='edge_padding ssc'>
       <fieldset name='notes' class='repeating_notes'>
         <!-- insert new line html entity [&#10;] inside of placeholder attribute -->
         <textarea name='attr_notes'
@@ -1982,7 +1982,7 @@
 
   <!-- ______________________________ start of tab Vehicles ______________________________ -->
 
-  <div class='vehicles box'>
+  <div class='vehicles box ssc'>
     <!-- Vehicles -->
     <div class='vehicles_divider'>
       <fieldset name='vehicles-R' class='repeating_vehicles'>
