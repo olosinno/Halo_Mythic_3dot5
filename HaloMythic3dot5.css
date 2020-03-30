@@ -11,7 +11,8 @@ input.sheet-background_switch_6:checked ~ div.sheet-background { background: whi
 
 
 
-@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+/* Import multiple Google font families; Should ALWAYS be done at the TOP of the page! */
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Saira+Semi+Condensed&display=swap');
 
 /* All input elements that are of type number or type text */
 select,
@@ -48,11 +49,13 @@ label:hover { cursor: pointer; }
 /* Both header elements 2 and 3 receive the following CSS properties. */
 h2, h3 {
 	color: white;
-	font-family: Saira Semi Condensed;
+	font-family: Orbitron;
+	letter-spacing: 1px;
 	text-align: center;
-	text-decoration: underline;
 }
 
+/* Only type-3 headers receive the following CSS properties. */
+h2 { text-decoration: underline; }
 /* Only type-3 headers receive the following CSS properties. */
 h3 { background: #394C6A; }
 
@@ -205,7 +208,8 @@ ______________________________ start of grid structure for character information
 .sheet-gs25 { grid-area: ah25;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
 
 .sheet-header_logo {
-	font-family: Saira Semi Condensed;
+	font-family: Orbitron;
+	letter-spacing: 1px;
 	display: grid;
 	grid-template-columns: 140px auto 123px auto 135px;
 	grid-template-rows: 30px 30px 30px 30px 30px 30px;
@@ -259,7 +263,7 @@ ______________________________ start of grid structure for the mythic characteri
 }
 
 .sheet-mythicgs_width { width: 40px; }
-.sheet-mythicgs1 { grid-area: amy1; font-size: 12px; font-family: Saira Semi Condensed; }
+.sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
 .sheet-mythicgs2 { grid-area: amy2; margin-left: 3px; }
 .sheet-mythicgs3 { grid-area: amy3; margin-left: 3px; }
 .sheet-mythicgs4 { grid-area: amy4; margin-left: 3px; }
@@ -277,7 +281,7 @@ ______________________________ start of grid structure for the mythic characteri
 	'amy5 amy6 amy7';
 }
 
-.sheet-movementgs1 { grid-area: amm1; font-size: 15px; font-family: Saira Semi Condensed; }
+.sheet-movementgs1 { grid-area: amm1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
 .sheet-movementgs2 { grid-area: amm2; 	margin-left: 6px; }
 .sheet-movementgs3 { grid-area: amm3; 	margin-left: 6px; }
 .sheet-movementgs4 { grid-area: amm4; 	margin-left: 6px; }
@@ -303,7 +307,7 @@ ______________________________ start of grid structure for the mythic characteri
 	'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
 }
 
-.sheet-carrygs1 { grid-area: ac1; margin-left: 10px; font-size: 15px; font-family: Saira Semi Condensed; }
+.sheet-carrygs1 { grid-area: ac1; margin-left: 10px; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
 .sheet-carrygs2 { grid-area: ac2; margin-left: 10px; width: 80%; }
 .sheet-carrygs3 { grid-area: ac3; margin-left: 10px; width: 80%; }
 .sheet-carrygs4 { grid-area: ac4; margin-left: 10px; width: 80%; }
@@ -415,7 +419,7 @@ ______________________________ start of minimisable infographic ________________
 	grid-template-columns: 100px 100px 100px 100px 185px 185px;
 }
 
-.sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Saira Semi Condensed; font-size: 20px; justify-self: center; text-decoration: underline; width: calc(100% - 6px); }
+.sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Saira Semi Condensed; font-size: 20px; justify-self: center; width: calc(100% - 6px); }
 .sheet-minimisable_infographic_g2 { grid-area: mi2; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
 .sheet-minimisable_infographic_g3 { grid-area: mi3; border-right: 1px solid #394C6A; }
 .sheet-minimisable_infographic_g4 { grid-area: mi4; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
