@@ -312,7 +312,7 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-carrygs1 { grid-area: ac1; margin-left: 10px; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
 .sheet-carrygs2 { grid-area: ac2; margin-left: 10px; width: 80%; }
 .sheet-carrygs3 { grid-area: ac3; margin-left: 10px; width: 80%; }
-.sheet-carrygs4 { grid-area: ac4; margin-left: 10px; width: 80%; }
+.sheet-carrygs4 { grid-area: ac4; margin-left: 10px; width: 85%; }
 .sheet-carrygs5 { grid-area: ac5; margin-left: 10px; font-size: 13px; font-family: Saira Semi Condensed; }
 .sheet-carrygs6 { grid-area: ac6; margin-left: 11px; font-size: 13px; font-family: Saira Semi Condensed; }
 .sheet-carrygs7 { grid-area: ac7; margin-left: 12px; font-size: 13px; font-family: Saira Semi Condensed; }
