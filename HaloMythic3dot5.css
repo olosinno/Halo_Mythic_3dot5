@@ -640,8 +640,8 @@ ______________________________ start of equipment tab __________________________
 }
 .sheet-equipment_end_field { margin-right: 0px }
 
-.sheet-gear_name { width: calc(100% - 402px) }
-.sheet-gear_field { width: 90px }
+.sheet-gear_name { width: calc(100% - 408px) }
+.sheet-gear_field { width: 72px }
 
 
 
