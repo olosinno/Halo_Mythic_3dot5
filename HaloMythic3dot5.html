@@ -1270,29 +1270,40 @@
       });
     </script>
 
-	<div class='equipment_gear'>
-	  <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' class='gear_name' />
-	  <input name='attr_gear_quantity' type='text' placeholder='Amount' class='gear_field' />
-	  <input name='attr_gear_cost' type='text' placeholder='cR Value' class='gear_field' />
-	  <input name='attr_gear_weight' type='text' placeholder='Weight' class='gear_field' />
-	  <input name='attr_gear_bp' type='text' placeholder='Break Points' class='gear_field' />
-	  <input name='attr_gear_pg#' type='text' placeholder='Page #' class='gear_field' />
-    <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='7' class='collapsible_entity_switch select_button hidden'><span class='select_text'>▼</span></label>
+    <div class='equipment_gear equipment_header'>
+      <div class="equipment_gear_gs1">Gear / Item Name</div>
+      <div class="equipment_gear_gs2">Amt</div>
+      <div class="equipment_gear_gs3">cR value</div>
+      <div class="equipment_gear_gs4">Weight</div>
+      <div class="equipment_gear_gs5">BP</div>
+      <div class="equipment_gear_gs6">Page #</div>
+    </div>
+
+    <div class='equipment_gear'>
+      <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
+      <input name='attr_gear_quantity' type='text' placeholder='Amt' class='equipment_gear_gs2' />
+      <input name='attr_gear_cost' type='text' placeholder='cR Value' class='equipment_gear_gs3' />
+      <input name='attr_gear_weight' type='text' placeholder='Weight' class='equipment_gear_gs4' />
+      <input name='attr_gear_bp' type='text' placeholder='Break Points' class='equipment_gear_gs5' />
+      <input name='attr_gear_pg#' type='text' placeholder='Page #' class='equipment_gear_gs6' />
+      <label class='margin_adjust equipment_gear_gs7'><input type='checkbox' name='attr_collapse' value='7' class='collapsible_entity_switch select_button hidden'><span class='select_text'>▼</span></label>
+    </div>
     <input name='attr_collapse' type='checkbox'  value='7' class='collapsible_entity_switch hidden' />
-	  <textarea name='attr_gear_desc' class='collapsible_entity_block auto_margin 90width'></textarea>
-	</div>
-    <div class='equipment_gear ssc'>
-      <fieldset name='gear' class='repeating_gear'>
-        <input name='attr_gear_name_r' type='text'  class='gear_name' />
-		<input name='attr_gear_quantity_r' type='text' placeholder='Amount' class='gear_field' />
-        <input name='attr_gear_cost_r' type='text' class='gear_field' />
-        <input name='attr_gear_weight_r' type='text' class='gear_field' />
-        <input name='attr_gear_bp_r' type='text' class='gear_field' />
-        <input name='attr_gear_pg#_r' type='text' class='gear_field' />
-        <label class='margin_adjust'><input type='checkbox' name='attr_collapse_r' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
-        <input name='attr_collapse_r' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
-        <textarea name='attr_ability_desc_r' class='collapsible_entity_block auto_margin 90width'></textarea>
+    <textarea name='attr_gear_desc' class='collapsible_entity_block auto_margin 90width'></textarea>
+
+
+    <fieldset name='gear' class='repeating_gear'>
+      <div class='equipment_gear'>
+        <input name='attr_gear_name_r' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
+        <input name='attr_gear_quantity_r' type='text' placeholder='Amt' class='equipment_gear_gs2' />
+        <input name='attr_gear_cost_r' type='text' placeholder='cR Value' class='equipment_gear_gs3' />
+        <input name='attr_gear_weight_r' type='text' placeholder='Weight' class='equipment_gear_gs4' />
+        <input name='attr_gear_bp_r' type='text' placeholder='Break Points' class='equipment_gear_gs5' />
+        <input name='attr_gear_pg#_r' type='text' placeholder='Page #' class='equipment_gear_gs6' />
+        <label class='margin_adjust equipment_gear_gs7'><input type='checkbox' name='attr_collapse_r' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
       </div>
+      <input name='attr_collapse_r' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
+      <textarea name='attr_ability_desc_r' class='collapsible_entity_block auto_margin 90width'></textarea>
     </fieldset>
   </div>
 

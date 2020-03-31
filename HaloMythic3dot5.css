@@ -633,21 +633,31 @@ ______________________________ start of equipment tab __________________________
 	'mw11 mw12 mw13 mw14';
 }
 
-.sheet-repeating_gear{
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+.sheet-equipment_gear_gs1{grid-area: eg1; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs2{grid-area: eg2; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs3{grid-area: eg3; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs4{grid-area: eg4; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs5{grid-area: eg5; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs6{grid-area: eg6; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs7{margin-top: 5px !important;}
+.sheet-equipment_gear{
+	display: grid;
+	grid-template-columns: auto 50px 80px 80px 80px 80px 25px ;
+	grid-template-areas:
+	'eg1 eg2 eg3 eg4 eg5 eg6 eg7';
 }
 
-
-.sheet-equipment_numerical_field,
-.sheet-equipment_end_field {
-	margin-right: 20px;
-	width: 100px !important;
+.sheet-equipment_header{
+	background: #394C6A;
+	border: 2px solid #475f85;.
+	border-bottom: none;
+	border-radius: 10px 10px 0px 0px;
+	font-family: Orbitron;
+	font-size: 14px;
+	height: 30px;
+	letter-spacing: 1px;
 }
-.sheet-equipment_end_field { margin-right: 0px }
 
-.sheet-gear_name { width: calc(100% - 408px) }
-.sheet-gear_field { width: 72px }
 
 
 
