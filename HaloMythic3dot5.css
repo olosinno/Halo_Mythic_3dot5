@@ -266,17 +266,15 @@ ______________________________ start of grid structure for the mythic characteri
 
 .sheet-mythicgs_width { width: 40px; }
 .sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; text-align: center; }
-.sheet-mythicgs2 { grid-area: amy2; }
-.sheet-mythicgs3 { grid-area: amy3; }
-.sheet-mythicgs4 { grid-area: amy4; }
+.sheet-mythicgs2 { grid-area: amy2;     z-index: 1; position:relative;}
+.sheet-mythicgs3 { grid-area: amy3; z-index: 1; position:relative;}
+.sheet-mythicgs4 { grid-area: amy4; z-index: 1; position:relative;}
 .sheet-mythicgs5 { grid-area: amy5; font-family: Saira Semi Condensed; font-size: 14px; text-align: center;}
 .sheet-mythicgs6 { grid-area: amy6; font-family: Saira Semi Condensed; font-size: 14px; text-align: center;}
 .sheet-mythicgs7 { grid-area: amy7; font-family: Saira Semi Condensed; font-size: 14px; text-align: center;}
 .sheet-characteristics2_mythic {
-	justify-content: left;
-	margin-left: 5px;
 	display: grid;
-	  justify-items: center;
+	justify-items: center;
 	grid-template-columns: 50px 50px 50px;
 	grid-template-areas:
 	'amy1 amy1 amy1'
@@ -303,7 +301,7 @@ ______________________________ start of grid structure for the mythic characteri
 	justify-content: center;
 	text-align: center;
 	display: grid;
-	  justify-items: center;
+	justify-items: center;
 	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
 	grid-template-areas:
 	'amm1 amm1  amm1  amm1  amm1  amm1 amm1'
@@ -320,10 +318,9 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Saira Semi Condensed; }
 .sheet-characteristics2_carry {
 	justify-content: right;
-	margin-right: 5px;
 	text-align: center;
 	display: grid;
-		  justify-items: center;
+	justify-items: center;
 	grid-template-columns: 60px 60px 60px;
 	grid-template-areas:
 	'ac1 ac1 ac1'
