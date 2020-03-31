@@ -412,8 +412,8 @@
 
       <div class='initiative_container'>
         <button name='initiative' type='roll' class='clear' style='padding-top: 5px'
-    		value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]}}'>
-    		Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3})' class='input_background input_init_background' disabled /></button>
+        value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]}}'>
+        Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3})' class='input_background input_init_background' disabled /></button>
         <select name='attr_initmod1' class='init_field'>
           <option value='1d10' selected='selected'>Standard</option>
           <option value='2d10k1'>Fast Foot</option>
@@ -1098,7 +1098,7 @@
       <fieldset name='abilities' class='repeating_abilities'>
         <input name='attr_ability_r' type='text' placeholder='Name' class='full_width_49px' />
         <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text '>▼</span></label>
-      <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{ability_r} }} {{description=@{ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+        <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{ability_r} }} {{description=@{ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
         <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
         <textarea name='attr_ability_desc_r' class='collapsible_entity_block'></textarea>
       </fieldset>
@@ -1155,8 +1155,8 @@
             </div>
             <div>
               <input name='attr_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
-                <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
-                <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{R_ability_r} }} {{description=@{R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+              <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+              <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{R_ability_r} }} {{description=@{R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
               <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
               <textarea name='attr_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
             </div>
@@ -1216,8 +1216,8 @@
 
             <div>
               <input name='attr_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
-                <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
-                      <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{M_ability_r} }} {{description=@{M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+              <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+              <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{M_ability_r} }} {{description=@{M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
               <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
               <textarea name='attr_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
             </div>
@@ -1229,7 +1229,7 @@
       <div class='equipment_numerics text_centered'>
         cR Count: <input name='attr_credits' type='number' class='equipment_numerical_field' />
         cR Calculation: <input name='attr_credit_total' type='number' class='equipment_numerical_field' readonly />
-    		Weight Calculation: <input name='attr_weight_total' type='number' class='equipment_numerical_field equipment_end_field' readonly> kilograms</input>
+        Weight Calculation: <input name='attr_weight_total' type='number' class='equipment_numerical_field equipment_end_field' readonly> kilograms</input>
       </div>
     </div>
     <br>
@@ -1920,7 +1920,7 @@
     <br>
 
     <div class='advancements_grid equipment_header'>
-    <div class="advancements_grid_gs1">Name</div>
+      <div class="advancements_grid_gs1">Name</div>
       <div class="advancements_grid_gs2">XP Cost</div>
       <div class="advancements_grid_gs3">Page #</div>
       <div class="advancements_grid_gs4">Name</div>
@@ -1937,26 +1937,26 @@
       <input class='advancements_grid_gs6' name='attr_advancement_pg#R' type='number' placeholder='Page #' />
     </div>
 
-      <fieldset name='advancements' class='repeating_advancements'>
-        <div class='advancements_grid'>
-          <input class='advancements_grid_gs1' name='attr_advancement_nameL_r' type='text' placeholder='Write XP-costing item name here' />
-          <input class='advancements_grid_gs2' name='attr_advancement_costL_r' type='number' placeholder='XP Cost' />
-          <input class='advancements_grid_gs3' name='attr_advancement_pg#L_r' type='number' placeholder='Page #'  />
-          <input class='advancements_grid_gs4' name='attr_advancement_nameR_r' type='text' placeholder='Write XP-costing item name here' />
-          <input class='advancements_grid_gs5' name='attr_advancement_costR_r' type='number' placeholder='XP Cost' />
-          <input class='advancements_grid_gs6' name='attr_advancement_pg#R_r' type='number' placeholder='Page #' />
-        </div>
-      </fieldset>
+    <fieldset name='advancements' class='repeating_advancements'>
+      <div class='advancements_grid'>
+        <input class='advancements_grid_gs1' name='attr_advancement_nameL_r' type='text' placeholder='Write XP-costing item name here' />
+        <input class='advancements_grid_gs2' name='attr_advancement_costL_r' type='number' placeholder='XP Cost' />
+        <input class='advancements_grid_gs3' name='attr_advancement_pg#L_r' type='number' placeholder='Page #'  />
+        <input class='advancements_grid_gs4' name='attr_advancement_nameR_r' type='text' placeholder='Write XP-costing item name here' />
+        <input class='advancements_grid_gs5' name='attr_advancement_costR_r' type='number' placeholder='XP Cost' />
+        <input class='advancements_grid_gs6' name='attr_advancement_pg#R_r' type='number' placeholder='Page #' />
+      </div>
+    </fieldset>
 
 
     <div class='training'>
       <div class='faction_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Faction Training</h3>
         <div class='faction_training_grid'>
-		  <div class="faction_training_grid_g1"><input name='attr_faction_training_human' type='checkbox'>U.N.S.C.</div>
-      <div class="faction_training_grid_g2"><input name='attr_faction_training_forerunner' type='checkbox'>Forerunner</div>
-		  <div class="faction_training_grid_g3"><input name='attr_faction_training_covenant' type='checkbox'>Covenant / Banished</div>
-		</div>
+          <div class="faction_training_grid_g1"><input name='attr_faction_training_human' type='checkbox'>U.N.S.C.</div>
+          <div class="faction_training_grid_g2"><input name='attr_faction_training_forerunner' type='checkbox'>Forerunner</div>
+          <div class="faction_training_grid_g3"><input name='attr_faction_training_covenant' type='checkbox'>Covenant / Banished</div>
+        </div>
       </div>
       <div class='weapon_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Weapon Training</h3>
@@ -1984,8 +1984,8 @@
     <h2>Journal: Objectives</h2>
     <div class='edge_padding ssc'>
       <fieldset name='objectives' class='repeating_objectives'>
-      <input name='attr_objective' type='text' class='full_width_30px' />
-      <label class='margin_adjust'><input type='checkbox' name='attr_objective_completed' value='1' class='select_button hidden' /><span class='select_text '>✔</span></label>
+        <input name='attr_objective' type='text' class='full_width_30px' />
+        <label class='margin_adjust'><input type='checkbox' name='attr_objective_completed' value='1' class='select_button hidden' /><span class='select_text '>✔</span></label>
       </fieldset>
     </div>
     <h2>Journal: Notes</h2>
@@ -2153,14 +2153,14 @@
             <div>
               <input name='attr_aditional_info' type='text' placeholder='Additional Info' class='full_width_49px' />
               <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='5' class='collapsible_entity_switch select_button hidden' /><span class='select_text '>▼</span></label>
-               <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{aditional_info} }} {{description=@{aditional_info_desc} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+              <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{aditional_info} }} {{description=@{aditional_info_desc} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
               <input name='attr_collapse' type='checkbox'  value='5' class='collapsible_entity_switch hidden' />
               <textarea name='attr_aditional_info_desc' class='collapsible_entity_block' placeholder='Enter any vehicle-specific rules or other unique information here.'></textarea>
             </div>
             <div>
               <input name='attr_modifications' type='text' placeholder='Modifications' class='full_width_49px vehicles_descriptor' />
               <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='6' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right'>▼</span></label>
-               <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{modifications} }} {{description=@{modifications_desc} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+              <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{modifications} }} {{description=@{modifications_desc} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
               <input name='attr_collapse' type='checkbox'  value='6' class='collapsible_entity_switch hidden' />
               <textarea name='attr_modifications_desc' class='collapsible_entity_block description_rounded_margin' placeholder='Vehicles in Halo Mythic can be modified in many ways.  These use a Vehicle’s Weapon Points and Size Points, which are specialized Hardpoints on a Vehicle.  Each Modification takes a specified amount of Weapon and Size Points.
               &#10;Vehicle modifications are classified into five categories; Body, Propulsion, Electronic, Combat, and Miscellaneous.'></textarea>
@@ -2217,7 +2217,7 @@
               <div>
                 <input name='attr_V_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
                 <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
-                                <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{V_R_ability_r} }} {{description=@{V_R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+                <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{V_R_ability_r} }} {{description=@{V_R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
                 <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
                 <textarea name='attr_V_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
               </div>
@@ -2261,7 +2261,7 @@
               <div>
                 <input name='attr_V_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
                 <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
-                                <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{V_M_ability_r} }} {{description=@{V_M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+                <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{V_M_ability_r} }} {{description=@{V_M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
                 <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
                 <textarea name='attr_V_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
               </div>
@@ -2355,148 +2355,148 @@
 
   {{#attack}}
   <div class="sheet-template-header">{{character}} rolls to attack using their {{weapon}}</div>
-    {{#loc}}<div class="sheet-template-content template-content_top">{{/loc}}
+  {{#loc}}<div class="sheet-template-content template-content_top">{{/loc}}
     {{^loc}}<div class="sheet-template-content">{{/loc}}
 
-    <div class="sheet-template-2x2 sheet-template-row">
-      <div class="sheet-template-right">{{roll}}</div>
-      {{#^rollLess() roll 0 }}<div style="float: right">Degrees of success</div>{{/^rollLess() roll 0 }}
-      {{#rollLess() roll 0 }}<div style="float: right">Degrees of failure</div>{{/rollLess() roll 0 }}
-    </div>
-
-    {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
-    {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
-  </div>
-  {{/attack}}
-
-
-
-  {{#loc}}
-  {{^attack}}<div class="sheet-template-content sheet-template-round">{{/attack}}
-  {{#attack}} <div class="sheet-template-content">{{/attack}}
-    <div class="sheet-template-row sheet-template-center sheet-template-break">rolling hit location {{loc}}</div>
-    <div class="sheet-template-row sheet-template-center">
-      {{#rollBetween() loc 1 10}}   HEAD:        {{/rollBetween() loc 1 10}}
-      {{#rollBetween() loc 1 1}}    01 Neck      {{/rollBetween() loc 1 1}}
-      {{#rollBetween() loc 2 2}}    02 Chin      {{/rollBetween() loc 2 2}}
-      {{#rollBetween() loc 3 3}}    03 Mouth     {{/rollBetween() loc 3 3}}
-      {{#rollBetween() loc 4 5}}    04-05 Nose   {{/rollBetween() loc 4 5}}
-      {{#rollBetween() loc 6 7}}    06-07 Cheeks {{/rollBetween() loc 6 7}}
-      {{#rollBetween() loc 8 8}}    08 Eyes      {{/rollBetween() loc 8 8}}
-      {{#rollBetween() loc 9 9}}    09 Forehead  {{/rollBetween() loc 9 9}}
-      {{#rollBetween() loc 10 10}}  10 Ear       {{/rollBetween() loc 10 10}}
-
-      {{#rollBetween() loc 11 20}}  LEFT ARM:      {{/rollBetween() loc 11 20}}
-      {{#rollBetween() loc 11 11}}  11 Fingers     {{/rollBetween() loc 11 11}}
-      {{#rollBetween() loc 12 12}}  12 Hands       {{/rollBetween() loc 12 12}}
-      {{#rollBetween() loc 13 15}}  13-15 Forearm  {{/rollBetween() loc 13 15}}
-      {{#rollBetween() loc 16 16}}  16 Elbow       {{/rollBetween() loc 16 16}}
-      {{#rollBetween() loc 17 19}}  17-19 Bicep    {{/rollBetween() loc 17 19}}
-      {{#rollBetween() loc 20 20}}  20 Shoulder    {{/rollBetween() loc 20 20}}
-
-      {{#rollBetween() loc 21 30}}  RIGHT ARM:      {{/rollBetween() loc 21 30}}
-      {{#rollBetween() loc 21 21}}  21 Finger       {{/rollBetween() loc 21 21}}
-      {{#rollBetween() loc 22 22}}  22 Hands        {{/rollBetween() loc 22 22}}
-      {{#rollBetween() loc 23 25}}  23-25 Forearm   {{/rollBetween() loc 23 25}}
-      {{#rollBetween() loc 26 26}}  26 Elbow        {{/rollBetween() loc 26 26}}
-      {{#rollBetween() loc 27 29}}  27-29 Bicep     {{/rollBetween() loc 27 29}}
-      {{#rollBetween() loc 30 30}}  30 Shoulder     {{/rollBetween() loc 30 30}}
-
-      {{#rollBetween() loc 31 45}}  LEFT LEG:       {{/rollBetween() loc 31 45}}
-      {{#rollBetween() loc 31 31}}  31 Toes         {{/rollBetween() loc 31 31}}
-      {{#rollBetween() loc 32 32}}  32 Foot         {{/rollBetween() loc 32 32}}
-      {{#rollBetween() loc 33 33}}  33 Ankle        {{/rollBetween() loc 33 33}}
-      {{#rollBetween() loc 34 37}}  34-37 Shin      {{/rollBetween() loc 34 37}}
-      {{#rollBetween() loc 38 38}}  38 Kne          {{/rollBetween() loc 38 38}}
-      {{#rollBetween() loc 39 43}}  39-43 Thigh     {{/rollBetween() loc 39 43}}
-      {{#rollBetween() loc 44 45}}  44-45 Pelvis    {{/rollBetween() loc 44 45}}
-
-      {{#rollBetween() loc 46 61}}  RIGHT LEG:      {{/rollBetween() loc 46 61}}
-      {{#rollBetween() loc 46 46}}  46 Toes         {{/rollBetween() loc 46 46}}
-      {{#rollBetween() loc 47 47}}  47 Foot         {{/rollBetween() loc 47 47}}
-      {{#rollBetween() loc 48 48}}  48 Ankle        {{/rollBetween() loc 48 48}}
-      {{#rollBetween() loc 49 53}}  49-53 Shin      {{/rollBetween() loc 49 53}}
-      {{#rollBetween() loc 54 54}}  54 Knee         {{/rollBetween() loc 54 54}}
-      {{#rollBetween() loc 55 58}}  55-58 Thigh     {{/rollBetween() loc 55 58}}
-      {{#rollBetween() loc 59 60}}  59-60 Pelvis    {{/rollBetween() loc 59 60}}
-
-      {{#rollBetween() loc 62 100}} CHEST:                  {{/rollBetween() loc 62 100}}
-      {{#rollBetween() loc 61 66}}  61-66 Small Intestines  {{/rollBetween() loc 61 66}}
-      {{#rollBetween() loc 67 72}}  67-72 Large Intestines  {{/rollBetween() loc 67 72}}
-      {{#rollBetween() loc 73 78}}  73-78 Kidney            {{/rollBetween() loc 73 78}}
-      {{#rollBetween() loc 79 84}}  79-84 Stomach / Liver   {{/rollBetween() loc 79 84}}
-      {{#rollBetween() loc 85 89}}  85-89 Heart             {{/rollBetween() loc 85 89}}
-      {{#rollBetween() loc 90 96}}  90-96 Lungs             {{/rollBetween() loc 90 96}}
-      {{#rollBetween() loc 97 100}} 97-100 No Organ Hit     {{/rollBetween() loc 97 100}}
-    </div>
-  </div>
-  {{/loc}}
-
-
-
-  {{#damage}}
-  <div class="sheet-template-header">{{character}} rolls for damage using their {{weapon}} </div>
-  {{#description}}<div class="sheet-template-content template-content_top">{{/description}}
-    {{^description}}<div class="sheet-template-content">  {{/description}}
-    <div class="sheet-template-2x2">
-
-      <div class="sheet-template-2x2">
-        <div class="sheet-template-row sheet-template-right">Damage</div>
-        <div class="sheet-template-row mythic_crit">{{damage}}</div>
+      <div class="sheet-template-2x2 sheet-template-row">
+        <div class="sheet-template-right">{{roll}}</div>
+        {{#^rollLess() roll 0 }}<div style="float: right">Degrees of success</div>{{/^rollLess() roll 0 }}
+        {{#rollLess() roll 0 }}<div style="float: right">Degrees of failure</div>{{/rollLess() roll 0 }}
       </div>
 
-      <div class="sheet-template-2x2">
-        <div class="sheet-template-row sheet-template-right">Pierce</div>
-        <div class="sheet-template-row mythic_crit">{{pierce}}</div>
+      {{#rollWasCrit() roll }}<div class="sheet-template-row template-center">A CRITICAL FAIL!</div>{{/rollWasCrit() roll }}
+      {{#rollWasFumble() roll }}<div class="sheet-template-row template-center">A CRITICAL HIT!</div>{{/rollWasFumble() roll }}
+    </div>
+    {{/attack}}
+
+
+
+    {{#loc}}
+    {{^attack}}<div class="sheet-template-content sheet-template-round">{{/attack}}
+      {{#attack}} <div class="sheet-template-content">{{/attack}}
+        <div class="sheet-template-row sheet-template-center sheet-template-break">rolling hit location {{loc}}</div>
+        <div class="sheet-template-row sheet-template-center">
+          {{#rollBetween() loc 1 10}}   HEAD:        {{/rollBetween() loc 1 10}}
+          {{#rollBetween() loc 1 1}}    01 Neck      {{/rollBetween() loc 1 1}}
+          {{#rollBetween() loc 2 2}}    02 Chin      {{/rollBetween() loc 2 2}}
+          {{#rollBetween() loc 3 3}}    03 Mouth     {{/rollBetween() loc 3 3}}
+          {{#rollBetween() loc 4 5}}    04-05 Nose   {{/rollBetween() loc 4 5}}
+          {{#rollBetween() loc 6 7}}    06-07 Cheeks {{/rollBetween() loc 6 7}}
+          {{#rollBetween() loc 8 8}}    08 Eyes      {{/rollBetween() loc 8 8}}
+          {{#rollBetween() loc 9 9}}    09 Forehead  {{/rollBetween() loc 9 9}}
+          {{#rollBetween() loc 10 10}}  10 Ear       {{/rollBetween() loc 10 10}}
+
+          {{#rollBetween() loc 11 20}}  LEFT ARM:      {{/rollBetween() loc 11 20}}
+          {{#rollBetween() loc 11 11}}  11 Fingers     {{/rollBetween() loc 11 11}}
+          {{#rollBetween() loc 12 12}}  12 Hands       {{/rollBetween() loc 12 12}}
+          {{#rollBetween() loc 13 15}}  13-15 Forearm  {{/rollBetween() loc 13 15}}
+          {{#rollBetween() loc 16 16}}  16 Elbow       {{/rollBetween() loc 16 16}}
+          {{#rollBetween() loc 17 19}}  17-19 Bicep    {{/rollBetween() loc 17 19}}
+          {{#rollBetween() loc 20 20}}  20 Shoulder    {{/rollBetween() loc 20 20}}
+
+          {{#rollBetween() loc 21 30}}  RIGHT ARM:      {{/rollBetween() loc 21 30}}
+          {{#rollBetween() loc 21 21}}  21 Finger       {{/rollBetween() loc 21 21}}
+          {{#rollBetween() loc 22 22}}  22 Hands        {{/rollBetween() loc 22 22}}
+          {{#rollBetween() loc 23 25}}  23-25 Forearm   {{/rollBetween() loc 23 25}}
+          {{#rollBetween() loc 26 26}}  26 Elbow        {{/rollBetween() loc 26 26}}
+          {{#rollBetween() loc 27 29}}  27-29 Bicep     {{/rollBetween() loc 27 29}}
+          {{#rollBetween() loc 30 30}}  30 Shoulder     {{/rollBetween() loc 30 30}}
+
+          {{#rollBetween() loc 31 45}}  LEFT LEG:       {{/rollBetween() loc 31 45}}
+          {{#rollBetween() loc 31 31}}  31 Toes         {{/rollBetween() loc 31 31}}
+          {{#rollBetween() loc 32 32}}  32 Foot         {{/rollBetween() loc 32 32}}
+          {{#rollBetween() loc 33 33}}  33 Ankle        {{/rollBetween() loc 33 33}}
+          {{#rollBetween() loc 34 37}}  34-37 Shin      {{/rollBetween() loc 34 37}}
+          {{#rollBetween() loc 38 38}}  38 Kne          {{/rollBetween() loc 38 38}}
+          {{#rollBetween() loc 39 43}}  39-43 Thigh     {{/rollBetween() loc 39 43}}
+          {{#rollBetween() loc 44 45}}  44-45 Pelvis    {{/rollBetween() loc 44 45}}
+
+          {{#rollBetween() loc 46 61}}  RIGHT LEG:      {{/rollBetween() loc 46 61}}
+          {{#rollBetween() loc 46 46}}  46 Toes         {{/rollBetween() loc 46 46}}
+          {{#rollBetween() loc 47 47}}  47 Foot         {{/rollBetween() loc 47 47}}
+          {{#rollBetween() loc 48 48}}  48 Ankle        {{/rollBetween() loc 48 48}}
+          {{#rollBetween() loc 49 53}}  49-53 Shin      {{/rollBetween() loc 49 53}}
+          {{#rollBetween() loc 54 54}}  54 Knee         {{/rollBetween() loc 54 54}}
+          {{#rollBetween() loc 55 58}}  55-58 Thigh     {{/rollBetween() loc 55 58}}
+          {{#rollBetween() loc 59 60}}  59-60 Pelvis    {{/rollBetween() loc 59 60}}
+
+          {{#rollBetween() loc 62 100}} CHEST:                  {{/rollBetween() loc 62 100}}
+          {{#rollBetween() loc 61 66}}  61-66 Small Intestines  {{/rollBetween() loc 61 66}}
+          {{#rollBetween() loc 67 72}}  67-72 Large Intestines  {{/rollBetween() loc 67 72}}
+          {{#rollBetween() loc 73 78}}  73-78 Kidney            {{/rollBetween() loc 73 78}}
+          {{#rollBetween() loc 79 84}}  79-84 Stomach / Liver   {{/rollBetween() loc 79 84}}
+          {{#rollBetween() loc 85 89}}  85-89 Heart             {{/rollBetween() loc 85 89}}
+          {{#rollBetween() loc 90 96}}  90-96 Lungs             {{/rollBetween() loc 90 96}}
+          {{#rollBetween() loc 97 100}} 97-100 No Organ Hit     {{/rollBetween() loc 97 100}}
+        </div>
       </div>
-    </div>
-
-  </div>
-  {{/damage}}
-  {{#description}}
-  {{#name}}<div class="sheet-template-header">{{name}}</div>{{/name}}
-  <div class="sheet-template-content">
-    <div class="sheet-template-row ">{{description}}</div>
-    </div>
-  {{/description}}
+      {{/loc}}
 
 
 
-  {{#2x2}}
-  <div class="sheet-template-header">{{character}}: {{name}}</div>
-  <div class="sheet-template-content">
+      {{#damage}}
+      <div class="sheet-template-header">{{character}} rolls for damage using their {{weapon}} </div>
+      {{#description}}<div class="sheet-template-content template-content_top">{{/description}}
+        {{^description}}<div class="sheet-template-content">  {{/description}}
+          <div class="sheet-template-2x2">
 
-    <div class="sheet-template-2x2">
-      <div class="sheet-template-row sheet-template-right">{{2x2-name}}</div>
-      <div><div class="sheet-inlineresult">{{2x2}}</div></div>
-      <div class="sheet-template-row sheet-template-right">{{2x2-name-max}}</div>
-      <div><div class="sheet-inlineresult">{{2x2-max}}</div></div>
-    </div>
+            <div class="sheet-template-2x2">
+              <div class="sheet-template-row sheet-template-right">Damage</div>
+              <div class="sheet-template-row mythic_crit">{{damage}}</div>
+            </div>
 
-  </div>
-  {{/2x2}}
+            <div class="sheet-template-2x2">
+              <div class="sheet-template-row sheet-template-right">Pierce</div>
+              <div class="sheet-template-row mythic_crit">{{pierce}}</div>
+            </div>
+          </div>
 
-  {{#4x2-1}}
-  <div class="sheet-template-header">{{character}}: {{name}}</div>
-  <div class="sheet-template-content">
-    <div class="sheet-template-2x2">
+        </div>
+        {{/damage}}
+        {{#description}}
+        {{#name}}<div class="sheet-template-header">{{name}}</div>{{/name}}
+        <div class="sheet-template-content">
+          <div class="sheet-template-row ">{{description}}</div>
+        </div>
+        {{/description}}
 
-      <div class="sheet-template-2x2">
-        <div class="sheet-template-row sheet-template-right">{{4x2-1-name}}</div>
-        <div><div class="sheet-inlineresult">{{4x2-1}}</div></div>
-        <div class="sheet-template-row sheet-template-right">{{4x2-1-name-max}}</div>
-        <div><div class="sheet-inlineresult">{{4x2-1-max}}</div></div>
-      </div>
 
-      <div class="sheet-template-2x2">
-        <div class="sheet-template-row sheet-template-right">{{4x2-2-name}}</div>
-        <div><div class="sheet-inlineresult">{{4x2-2}}</div></div>
-        <div class="sheet-template-row sheet-template-right">{{4x2-2-name-max}}</div>
-        <div><div class="sheet-inlineresult">{{4x2-2-max}}</div></div>
-      </div>
 
-    </div>
-    {{/4x2-1}}
+        {{#2x2}}
+        <div class="sheet-template-header">{{character}}: {{name}}</div>
+        <div class="sheet-template-content">
 
-  </div>
-</rolltemplate>
+          <div class="sheet-template-2x2">
+            <div class="sheet-template-row sheet-template-right">{{2x2-name}}</div>
+            <div><div class="sheet-inlineresult">{{2x2}}</div></div>
+            <div class="sheet-template-row sheet-template-right">{{2x2-name-max}}</div>
+            <div><div class="sheet-inlineresult">{{2x2-max}}</div></div>
+          </div>
+
+        </div>
+        {{/2x2}}
+
+        {{#4x2-1}}
+        <div class="sheet-template-header">{{character}}: {{name}}</div>
+        <div class="sheet-template-content">
+          <div class="sheet-template-2x2">
+
+            <div class="sheet-template-2x2">
+              <div class="sheet-template-row sheet-template-right">{{4x2-1-name}}</div>
+              <div><div class="sheet-inlineresult">{{4x2-1}}</div></div>
+              <div class="sheet-template-row sheet-template-right">{{4x2-1-name-max}}</div>
+              <div><div class="sheet-inlineresult">{{4x2-1-max}}</div></div>
+            </div>
+
+            <div class="sheet-template-2x2">
+              <div class="sheet-template-row sheet-template-right">{{4x2-2-name}}</div>
+              <div><div class="sheet-inlineresult">{{4x2-2}}</div></div>
+              <div class="sheet-template-row sheet-template-right">{{4x2-2-name-max}}</div>
+              <div><div class="sheet-inlineresult">{{4x2-2-max}}</div></div>
+            </div>
+
+          </div>
+          {{/4x2-1}}
+
+        </div>
+      </rolltemplate>
