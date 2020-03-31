@@ -744,7 +744,21 @@ ______________________________ start of advancements tab _______________________
 	margin-right: 20px;
 	width: 80px !important;
 }
-.sheet-advancements_end_field { margin-right: 0px }
+
+.sheet-advancements_grid_gs1{grid-area: e1; align-self: center; text-align: center; width: 100%;  }
+.sheet-advancements_grid_gs2{grid-area: e2; align-self: center; text-align: center; width: 100% !important; }
+.sheet-advancements_grid_gs3{grid-area: e3; align-self: center; text-align: center; width: 100% !important; }
+.sheet-advancements_grid_gs4{grid-area: e4; align-self: center; text-align: center; width: 100%; }
+.sheet-advancements_grid_gs5{grid-area: e5; align-self: center; text-align: center; width: 100% !important; }
+.sheet-advancements_grid_gs6{grid-area: e6; align-self: center; text-align: center; width: 100% !important; }
+.sheet-advancements_grid{
+	justify-content: center;
+	display: grid;
+	grid-template-columns: 29% 10% 10% 2% 29% 10% 10% ;
+	grid-template-areas:
+	'e1 e2 e3 e0 e4 e5 e6';
+}
+
 
 .sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85; }
 .sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85; }

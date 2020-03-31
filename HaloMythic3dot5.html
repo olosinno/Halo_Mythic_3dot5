@@ -1919,24 +1919,35 @@
     </div>
     <br>
 
-    <div class='edge_padding'>
-      <input name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' style='width: 25%' />
-      <input name='attr_advancement_costL' type='number' placeholder='XP Cost' style='width: 10%' />
-      <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px' />
-      <input name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' style='width: 25%' />
-      <input name='attr_advancement_costR' type='number' placeholder='XP Cost' style='width: 10%' />
-      <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%' />
+    <div class='advancements_grid equipment_header'>
+    <div class="advancements_grid_gs1">Name</div>
+      <div class="advancements_grid_gs2">XP Cost</div>
+      <div class="advancements_grid_gs3">Page #</div>
+      <div class="advancements_grid_gs4">Name</div>
+      <div class="advancements_grid_gs5">XP Cost</div>
+      <div class="advancements_grid_gs6">Page #</div>
     </div>
-    <div class='edge_padding ssc'>
+
+    <div class='advancements_grid'>
+      <input class='advancements_grid_gs1' name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' />
+      <input class='advancements_grid_gs2' name='attr_advancement_costL' type='number' placeholder='XP Cost' />
+      <input class='advancements_grid_gs3' name='attr_advancement_pg#L' type='number' placeholder='Page #'  />
+      <input class='advancements_grid_gs4' name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' />
+      <input class='advancements_grid_gs5' name='attr_advancement_costR' type='number' placeholder='XP Cost' />
+      <input class='advancements_grid_gs6' name='attr_advancement_pg#R' type='number' placeholder='Page #' />
+    </div>
+
       <fieldset name='advancements' class='repeating_advancements'>
-        <input name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' style='width: 25%' />
-        <input name='attr_advancement_costL_r' type='number' placeholder='XP Cost' style='width: 10%' />
-        <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px' />
-        <input name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' style='width: 25%' />
-        <input name='attr_advancement_costR_r' type='number' placeholder='XP Cost' style='width: 10%' />
-        <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%' />
+        <div class='advancements_grid'>
+          <input class='advancements_grid_gs1' name='attr_advancement_nameL_r' type='text' placeholder='Write XP-costing item name here' />
+          <input class='advancements_grid_gs2' name='attr_advancement_costL_r' type='number' placeholder='XP Cost' />
+          <input class='advancements_grid_gs3' name='attr_advancement_pg#L_r' type='number' placeholder='Page #'  />
+          <input class='advancements_grid_gs4' name='attr_advancement_nameR_r' type='text' placeholder='Write XP-costing item name here' />
+          <input class='advancements_grid_gs5' name='attr_advancement_costR_r' type='number' placeholder='XP Cost' />
+          <input class='advancements_grid_gs6' name='attr_advancement_pg#R_r' type='number' placeholder='Page #' />
+        </div>
       </fieldset>
-    </div>
+
 
     <div class='training'>
       <div class='faction_training ssc auto_margin 90width radius_border'>
