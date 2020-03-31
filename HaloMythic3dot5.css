@@ -11,7 +11,8 @@ input.sheet-background_switch_6:checked ~ div.sheet-background { background: whi
 
 
 
-@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+/* Import multiple Google font families; Should ALWAYS be done at the TOP of the page! */
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Saira+Semi+Condensed&display=swap');
 
 /* All input elements that are of type number or type text */
 select,
@@ -48,11 +49,13 @@ label:hover { cursor: pointer; }
 /* Both header elements 2 and 3 receive the following CSS properties. */
 h2, h3 {
 	color: white;
-	font-family: Saira Semi Condensed;
+	font-family: Orbitron;
+	letter-spacing: 1px;
 	text-align: center;
-	text-decoration: underline;
 }
 
+/* Only type-3 headers receive the following CSS properties. */
+h2 { text-decoration: underline; }
 /* Only type-3 headers receive the following CSS properties. */
 h3 { background: #394C6A; }
 
@@ -153,6 +156,8 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-auto_margin { margin: auto; }
 .sheet-huge_text { font-size: 36px; }
 .sheet-text_centered { text-align: center; }
+.sheet-ssc { font-family: Saira Semi Condensed; }
+
 .sheet-radius_border { border-radius: 10px; }
 .sheet-radius_border_top {
 	border-top-left-radius: 10px;
@@ -178,12 +183,12 @@ ______________________________ start of grid structure for character information
 
 
 
-.sheet-gs1 { grid-area: ah1;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs2 { grid-area: ah2;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs3 { grid-area: ah3;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs4 { grid-area: ah4;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs5 { grid-area: ah5;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
-.sheet-gs6 { grid-area: ah6;    margin-top: 2px;  font-size: 18px;  padding-left: 5px }
+.sheet-gs1 { grid-area: ah1;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
+.sheet-gs2 { grid-area: ah2;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
+.sheet-gs3 { grid-area: ah3;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
+.sheet-gs4 { grid-area: ah4;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
+.sheet-gs5 { grid-area: ah5;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
+.sheet-gs6 { grid-area: ah6;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
 .sheet-gs7 { grid-area: ah7;    width: calc(100%); }
 .sheet-gs8 { grid-area: ah8;    width: calc(100% + 65px); margin-left: -65px ; height: 100%}
 .sheet-gs9 { grid-area: ah9;    width: calc(100% + 30px); margin-left: -30px ;}
@@ -197,15 +202,16 @@ ______________________________ start of grid structure for character information
 .sheet-gs17 { grid-area: ah17;  width: calc(100% + 35px);}
 .sheet-gs18 { grid-area: ah18;  width: calc(100% + 23px);}
 .sheet-gs19 { grid-area: ah19;  width: calc(100% + 55px);}
-.sheet-gs20 { grid-area: ah20;  margin-top: 2px;  font-size: 18px;  padding-right: 5px; text-align: right }
-.sheet-gs21 { grid-area: ah21;  margin-top: 2px;  font-size: 18px;  padding-right: 5px; text-align: right }
-.sheet-gs22 { grid-area: ah22;  margin-top: 2px;  font-size: 18px;  padding-right: 5px; text-align: right }
-.sheet-gs23 { grid-area: ah23;  margin-top: 2px;  font-size: 18px;  padding-right: 5px; text-align: right }
-.sheet-gs24 { grid-area: ah24;  margin-top: 2px;  font-size: 18px;  padding-right: 5px; text-align: right }
-.sheet-gs25 { grid-area: ah25;  margin-top: 2px;  font-size: 18px;  padding-right: 5px; text-align: right }
+.sheet-gs20 { grid-area: ah20;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
+.sheet-gs21 { grid-area: ah21;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
+.sheet-gs22 { grid-area: ah22;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
+.sheet-gs23 { grid-area: ah23;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
+.sheet-gs24 { grid-area: ah24;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
+.sheet-gs25 { grid-area: ah25;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
 
 .sheet-header_logo {
-	font-family: Serif;
+	font-family: Orbitron;
+	letter-spacing: 1px;
 	display: grid;
 	grid-template-columns: 140px auto 123px auto 135px;
 	grid-template-rows: 30px 30px 30px 30px 30px 30px;
@@ -259,13 +265,13 @@ ______________________________ start of grid structure for the mythic characteri
 }
 
 .sheet-mythicgs_width { width: 40px; }
-.sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Serif; }
+.sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
 .sheet-mythicgs2 { grid-area: amy2; margin-left: 3px; }
 .sheet-mythicgs3 { grid-area: amy3; margin-left: 3px; }
 .sheet-mythicgs4 { grid-area: amy4; margin-left: 3px; }
-.sheet-mythicgs5 { grid-area: amy5; margin-left: 12px; font-family: Serif; font-size: 13px; }
-.sheet-mythicgs6 { grid-area: amy6; margin-left: 9px; font-family: Serif; font-size: 13px; }
-.sheet-mythicgs7 { grid-area: amy7; margin-left: 12px; font-family: Serif; font-size: 13px; }
+.sheet-mythicgs5 { grid-area: amy5; margin-left: 12px; font-family: Saira Semi Condensed; font-size: 12px; }
+.sheet-mythicgs6 { grid-area: amy6; margin-left: 9px; font-family: Saira Semi Condensed; font-size: 12px; }
+.sheet-mythicgs7 { grid-area: amy7; margin-left: 12px; font-family: Saira Semi Condensed; font-size: 12px; }
 .sheet-characteristics2_mythic {
 	justify-content: left;
 	margin-left: 5px;
@@ -277,7 +283,7 @@ ______________________________ start of grid structure for the mythic characteri
 	'amy5 amy6 amy7';
 }
 
-.sheet-movementgs1 { grid-area: amm1; font-size: 15px; font-family: Serif }
+.sheet-movementgs1 { grid-area: amm1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
 .sheet-movementgs2 { grid-area: amm2; 	margin-left: 6px; }
 .sheet-movementgs3 { grid-area: amm3; 	margin-left: 6px; }
 .sheet-movementgs4 { grid-area: amm4; 	margin-left: 6px; }
@@ -285,13 +291,13 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-movementgs6 { grid-area: amm6; 	margin-left: 6px; }
 .sheet-movementgs7 { grid-area: amm7; 	margin-left: 6px; }
 .sheet-movementgs8 { grid-area: amm8; 	margin-left: 6px; }
-.sheet-movementgs9 { grid-area: amm9;   margin-left: 3px; font-size: 13px; font-family: Serif }
-.sheet-movementgs10 { grid-area: amm10; margin-left: 5px; font-size: 13px; font-family: Serif }
-.sheet-movementgs11 { grid-area: amm11; margin-left: 5px; font-size: 13px; font-family: Serif }
-.sheet-movementgs12 { grid-area: amm12; margin-left: 5px; font-size: 13px; font-family: Serif }
-.sheet-movementgs13 { grid-area: amm13; margin-left: 4px; font-size: 13px; font-family: Serif }
-.sheet-movementgs14 { grid-area: amm14; margin-left: 4px; font-size: 13px; font-family: Serif }
-.sheet-movementgs15 { grid-area: amm15; margin-left: 4px; font-size: 13px; font-family: Serif }
+.sheet-movementgs9 { grid-area: amm9;   margin-left: 3px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-movementgs10 { grid-area: amm10; margin-left: 5px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-movementgs11 { grid-area: amm11; margin-left: 5px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-movementgs12 { grid-area: amm12; margin-left: 5px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-movementgs13 { grid-area: amm13; margin-left: 4px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-movementgs14 { grid-area: amm14; margin-left: 4px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-movementgs15 { grid-area: amm15; margin-left: 4px; font-size: 13px; font-family: Saira Semi Condensed; }
 .sheet-characteristics2_movement {
 	justify-content: center;
 	text-align: center;
@@ -303,13 +309,13 @@ ______________________________ start of grid structure for the mythic characteri
 	'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
 }
 
-.sheet-carrygs1 { grid-area: ac1; margin-left: 10px; font-size: 15px; font-family: Serif; }
+.sheet-carrygs1 { grid-area: ac1; margin-left: 10px; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
 .sheet-carrygs2 { grid-area: ac2; margin-left: 10px; width: 80%; }
 .sheet-carrygs3 { grid-area: ac3; margin-left: 10px; width: 80%; }
-.sheet-carrygs4 { grid-area: ac4; margin-left: 10px; width: 80%; }
-.sheet-carrygs5 { grid-area: ac5; margin-left: 10px; font-size: 13px; font-family: Serif; }
-.sheet-carrygs6 { grid-area: ac6; margin-left: 11px; font-size: 13px; font-family: Serif; }
-.sheet-carrygs7 { grid-area: ac7; margin-left: 12px; font-size: 13px; font-family: Serif; }
+.sheet-carrygs4 { grid-area: ac4; margin-left: 10px; width: 85%; }
+.sheet-carrygs5 { grid-area: ac5; margin-left: 10px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-carrygs6 { grid-area: ac6; margin-left: 11px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-carrygs7 { grid-area: ac7; margin-left: 12px; font-size: 13px; font-family: Saira Semi Condensed; }
 .sheet-characteristics2_carry {
 	justify-content: right;
 	margin-right: 5px;
@@ -415,7 +421,7 @@ ______________________________ start of minimisable infographic ________________
 	grid-template-columns: 100px 100px 100px 100px 185px 185px;
 }
 
-.sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Saira Semi Condensed; font-size: 20px; justify-self: center; text-decoration: underline; width: calc(100% - 6px); }
+.sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Saira Semi Condensed; font-size: 20px; justify-self: center; width: calc(100% - 6px); }
 .sheet-minimisable_infographic_g2 { grid-area: mi2; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
 .sheet-minimisable_infographic_g3 { grid-area: mi3; border-right: 1px solid #394C6A; }
 .sheet-minimisable_infographic_g4 { grid-area: mi4; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
@@ -640,8 +646,8 @@ ______________________________ start of equipment tab __________________________
 }
 .sheet-equipment_end_field { margin-right: 0px }
 
-.sheet-gear_name { width: calc(100% - 402px) }
-.sheet-gear_field { width: 90px }
+.sheet-gear_name { width: calc(100% - 408px) }
+.sheet-gear_field { width: 72px }
 
 
 

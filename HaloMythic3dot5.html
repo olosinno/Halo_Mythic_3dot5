@@ -31,20 +31,20 @@
       <input name='attr_soldier_type' type='text' class='gs9' />
       <input name='attr_rank' type='text' class='gs10' />
       <input name='attr_size' type='text' class='gs11' placeholder='Average' />
-      <input name='attr_specialisation' type='text' class='gs12'/>
+      <input name='attr_specialisation' type='text' class='gs12' />
       <!-- third column of grid: header logo -->
       <div class='gs13'>
-        <input name='attr_faction' type='checkbox' value='1' class='hidden hider' checked>
+        <input name='attr_faction' type='checkbox' value='1' class='hidden hider' checked />
         <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130' width='130' /></div>
-        <input name='attr_faction' type='checkbox' value='2' class='hidden hider'>
+        <input name='attr_faction' type='checkbox' value='2' class='hidden hider' />
         <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_UNSC.png' height='130' width='130' /></div>
-        <input name='attr_faction' type='checkbox' value='3' class='hidden hider'>
+        <input name='attr_faction' type='checkbox' value='3' class='hidden hider' />
         <div><img name='logo'src='https://cdn.discordapp.com/attachments/676016722939084800/687614044999516200/faction_logo_Covenant_coloured.png' height='130' width='130' /></div>
-        <input name='attr_faction' type='checkbox' value='4' class='hidden hider'>
+        <input name='attr_faction' type='checkbox' value='4' class='hidden hider' />
         <div><img name='logo' src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/faction_logo_Forerunner.png' height='130' width='130' /></div>
-        <input name='attr_faction' type='checkbox' value='5' class='hidden hider'>
+        <input name='attr_faction' type='checkbox' value='5' class='hidden hider' />
         <div><img name='logo'  src='https://github.com/olosinno/Halo_Mythic_3dot5/blob/br_warh/images/faction_Logo_Banished.png?raw=true' height='130' width='130' /></div>
-        <input name='attr_faction' type='checkbox' value='6' class='hidden hider'>
+        <input name='attr_faction' type='checkbox' value='6' class='hidden hider' />
         <div><img name='logo'  src='https://raw.githubusercontent.com/olosinno/Halo_Mythic_3dot5/master/images/mythic_logo.png' height='130' width='130' /></div>
       </div>
       <!-- REPLACE LOGO SOURCE ONCE COMPLETE: src='images/mythic_logo.png' -->
@@ -454,12 +454,12 @@
 
 
     <div class='minimisable_infographic_main'>
-      <div class="minimisable_infographic_toggles">
-        <label><input type="checkbox" name='attr_infographic' class='collapsible_entity_switch select_button hidden'><span class="select_text">Infographic</span></label>
-        <label><input type="checkbox" name='attr_to-gm' value="/w gm" class="select_button hidden"><span class="select_text">To GM</span></label>
+      <div class='minimisable_infographic_toggles'>
+        <label><input type='checkbox' name='attr_infographic' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>Infographic</span></label>
+        <label><input type='checkbox' name='attr_to-gm' value='/w gm' class='select_button hidden' /><span class='select_text'>To GM</span></label>
       </div>
 
-      <input type='checkbox' name='attr_infographic' class='collapsible_entity_switch hidden'>
+      <input type='checkbox' name='attr_infographic' class='collapsible_entity_switch hidden' />
       <div class='collapsible_entity_block'>
         <div class='minimisable_infographic_grid'>
 
@@ -467,62 +467,62 @@
             <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}'>Wounds</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_wounds' value='0'>
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_wounds' value='0' />
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_wounds_max' value='0'>
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_wounds_max' value='0' />
           </div>
 
           <div class='minimisable_infographic_field2x3 radius_border'>
             <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Fatigue}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>Fatigue</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_fatigue' value='0'>
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_fatigue' value='0' />
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_fatigue_max' value='0'>
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_fatigue_max' value='0' />
           </div>
 
           <div class='minimisable_infographic_field2x3 radius_border'>
             <button name='luck_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}'>Luck</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_luck' value='0'>
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_luck' value='0' />
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_luck_max' value='0'>
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_luck_max' value='0' />
           </div>
 
           <div class='minimisable_infographic_field2x3 radius_border'>
             <button name='support_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>Support Pts</button>
             <p class='minimisable_infographic_g2'>Current</p>
-            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_support' value='0'>
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_support' value='0' />
             <p class='minimisable_infographic_g4'>Max</p>
-            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_support_max' value='0'>
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_support_max' value='0' />
           </div>
 
           <div class='minimisable_infographic_field4x3 radius_border'>
             <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}'>Shields</button>
             <p class='minimisable_infographic_g6'>Current</p>
-            <input class='minimisable_infographic_g7 full_width' type='text' name='attr_shields' value='0'>
+            <input class='minimisable_infographic_g7 full_width' type='text' name='attr_shields' value='0' />
             <p class='minimisable_infographic_g8'>Max</p>
-            <input class='minimisable_infographic_g9 full_width' type='text' name='attr_shields_max' value='0'>
+            <input class='minimisable_infographic_g9 full_width' type='text' name='attr_shields_max' value='0' />
             <p class='minimisable_infographic_g2'>Delay</p>
-            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_shields_delay' value='0'>
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_shields_delay' value='0' />
             <p class='minimisable_infographic_g4'>Charge</p>
-            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_shields_charge' value='0'>
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_shields_charge' value='0' />
           </div>
 
           <div class='minimisable_infographic_field4x3 radius_border'>
             <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Armor}} {{4x2-1-name=Head}} {{4x2-1=@{armor_head}}} {{4x2-1-name-max=Arms}} {{4x2-1-max=@{armor_arms}}} {{4x2-2-name=Chest}} {{4x2-2=@{armor_chest}}} {{4x2-2-name-max=Legs}} {{4x2-2-max=@{armor_legs}}}'>Armor</button>
             <p class='minimisable_infographic_g6'>Head</p>
-            <input class='minimisable_infographic_g7 full_width' type='text' name='attr_armor_head' value='0'>
+            <input class='minimisable_infographic_g7 full_width' type='text' name='attr_armor_head' value='0' />
             <p class='minimisable_infographic_g8'>Arms</p>
-            <input class='minimisable_infographic_g9 full_width' type='text' name='attr_armor_arms' value='0'>
+            <input class='minimisable_infographic_g9 full_width' type='text' name='attr_armor_arms' value='0' />
             <p class='minimisable_infographic_g2'>Chest</p>
-            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_armor_chest' value='0'>
+            <input class='minimisable_infographic_g3 full_width' type='text' name='attr_armor_chest' value='0' />
             <p class='minimisable_infographic_g4'>Legs</p>
-            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_armor_legs' value='0'>
+            <input class='minimisable_infographic_g5 full_width' type='text' name='attr_armor_legs' value='0' />
           </div>
         </div>
       </div>
@@ -580,10 +580,10 @@
             <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_appeal' type='number' value='0'/>
-          <input name='attr_mod3_appeal' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_appeal' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_appeal' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_appeal' type='number' value='0' />
+          <input name='attr_mod3_appeal' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_appeal' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_appeal' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='appeal_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Appeal}} {{roll=[[floor(([[@{mod1_appeal}]]+@{mod2_appeal}+[[@{mod3_appeal} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_appeal_total' value='@{mod1_appeal}+@{mod2_appeal}+@{mod3_appeal}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -601,10 +601,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_athletics' type='number' value='0'/>
-          <input name='attr_mod3_athletics' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_athletics' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_athletics' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_athletics' type='number' value='0' />
+          <input name='attr_mod3_athletics' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_athletics' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_athletics' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='athletics_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Athletics}} {{roll=[[floor(([[@{mod1_athletics}]]+@{mod2_athletics}+[[@{mod3_athletics} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_athletics_total' value='@{mod1_athletics}+@{mod2_athletics}+@{mod3_athletics}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -622,10 +622,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_camouflage' type='number' value='0'/>
-          <input name='attr_mod3_camouflage' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_camouflage' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_camouflage' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_camouflage' type='number' value='0' />
+          <input name='attr_mod3_camouflage' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_camouflage' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_camouflage' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='camouflage_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Camouflage}} {{roll=[[floor(([[@{mod1_camouflage}]]+@{mod2_camouflage}+[[@{mod3_camouflage} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_camouflage_total' value='@{mod1_camouflage}+@{mod2_camouflage}+@{mod3_camouflage}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -643,10 +643,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' selected='selected'>LD</option>
           </select>
-          <input name='attr_mod2_command' type='number' value='0'/>
-          <input name='attr_mod3_command' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_command' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_command' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_command' type='number' value='0' />
+          <input name='attr_mod3_command' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_command' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_command' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='command_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Command}} {{roll=[[floor(([[@{mod1_command}]]+@{mod2_command}+[[@{mod3_command} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_command_total' value='@{mod1_command}+@{mod2_command}+@{mod3_command}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -664,10 +664,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_cryptography' type='number' value='0'/>
-          <input name='attr_mod3_cryptography' type='checkbox' value='40' class='skills_item'/>
-          <input name='attr_mod3_cryptography' type='checkbox' value='50' class='skills_item'/>
-          <input name='attr_mod3_cryptography' type='checkbox' value='60' class='skills_item'/>
+          <input name='attr_mod2_cryptography' type='number' value='0' />
+          <input name='attr_mod3_cryptography' type='checkbox' value='40' class='skills_item' />
+          <input name='attr_mod3_cryptography' type='checkbox' value='50' class='skills_item' />
+          <input name='attr_mod3_cryptography' type='checkbox' value='60' class='skills_item' />
           <button type='roll' name='cryptography_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Cryptography}} {{roll=[[floor(([[@{mod1_cryptography}]]+@{mod2_cryptography}+[[@{mod3_cryptography} -40]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_cryptography_total' value='@{mod1_cryptography}+@{mod2_cryptography}+@{mod3_cryptography}-40' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -685,10 +685,10 @@
             <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_deception' type='number' value='0'/>
-          <input name='attr_mod3_deception' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_deception' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_deception' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_deception' type='number' value='0' />
+          <input name='attr_mod3_deception' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_deception' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_deception' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='deception_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Deception}} {{roll=[[floor(([[@{mod1_deception}]]+@{mod2_deception}+[[@{mod3_deception} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_deception_total' value='@{mod1_deception}+@{mod2_deception}+@{mod3_deception}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -706,10 +706,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_demolition' type='number' value='0'/>
-          <input name='attr_mod3_demolition' type='checkbox' value='40' class='skills_item'/>
-          <input name='attr_mod3_demolition' type='checkbox' value='50' class='skills_item'/>
-          <input name='attr_mod3_demolition' type='checkbox' value='60' class='skills_item'/>
+          <input name='attr_mod2_demolition' type='number' value='0' />
+          <input name='attr_mod3_demolition' type='checkbox' value='40' class='skills_item' />
+          <input name='attr_mod3_demolition' type='checkbox' value='50' class='skills_item' />
+          <input name='attr_mod3_demolition' type='checkbox' value='60' class='skills_item' />
           <button type='roll' name='demolition_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Demolition}} {{roll=[[floor(([[@{mod1_demolition}]]+@{mod2_demolition}+[[@{mod3_demolition} -40]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_demolition_total' value='@{mod1_demolition}+@{mod2_demolition}+@{mod3_demolition}-40' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -727,10 +727,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_evasion' type='number' value='0'/>
-          <input name='attr_mod3_evasion' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_evasion' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_evasion' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_evasion' type='number' value='0' />
+          <input name='attr_mod3_evasion' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_evasion' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_evasion' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='evasion_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Evasion}} {{roll=[[floor(([[@{mod1_evasion}]]+@{mod2_evasion}+[[@{mod3_evasion} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_evasion_total' value='@{mod1_evasion}+@{mod2_evasion}+@{mod3_evasion}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -748,10 +748,10 @@
             <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_gambling' type='number' value='0'/>
-          <input name='attr_mod3_gambling' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_gambling' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_gambling' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_gambling' type='number' value='0' />
+          <input name='attr_mod3_gambling' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_gambling' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_gambling' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='gambling_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Gambling}} {{roll=[[floor(([[@{mod1_gambling}]]+@{mod2_gambling}+[[@{mod3_gambling} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_gambling_total' value='@{mod1_gambling}+@{mod2_gambling}+@{mod3_gambling}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -769,10 +769,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' selected='selected'>LD</option>
           </select>
-          <input name='attr_mod2_interrogation' type='number' value='0'/>
-          <input name='attr_mod3_interrogation' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_interrogation' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_interrogation' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_interrogation' type='number' value='0' />
+          <input name='attr_mod3_interrogation' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_interrogation' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_interrogation' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='interrogation_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Interrogation}} {{roll=[[floor(([[@{mod1_interrogation}]]+@{mod2_interrogation}+[[@{mod3_interrogation} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_interrogation_total' value='@{mod1_interrogation}+@{mod2_interrogation}+@{mod3_interrogation}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -790,10 +790,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' selected='selected'>LD</option>
           </select>
-          <input name='attr_mod2_intimidation' type='number' value='0'/>
-          <input name='attr_mod3_intimidation' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_intimidation' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_intimidation' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_intimidation' type='number' value='0' />
+          <input name='attr_mod3_intimidation' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_intimidation' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_intimidation' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='intimidation_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Intimidation}} {{roll=[[floor(([[@{mod1_intimidation}]]+@{mod2_intimidation}+[[@{mod3_intimidation} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_intimidation_total' value='@{mod1_intimidation}+@{mod2_intimidation}+@{mod3_intimidation}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -811,10 +811,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_investigation' type='number' value='0'/>
-          <input name='attr_mod3_investigation' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_investigation' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_investigation' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_investigation' type='number' value='0' />
+          <input name='attr_mod3_investigation' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_investigation' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_investigation' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='investigation_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Investigation}} {{roll=[[floor(([[@{mod1_investigation}]]+@{mod2_investigation}+[[@{mod3_investigation} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_investigation_total' value='@{mod1_investigation}+@{mod2_investigation}+@{mod3_investigation}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -832,10 +832,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_medication' type='number' value='0'/>
-          <input name='attr_mod3_medication' type='checkbox' value='40' class='skills_item'/>
-          <input name='attr_mod3_medication' type='checkbox' value='50' class='skills_item'/>
-          <input name='attr_mod3_medication' type='checkbox' value='60' class='skills_item'/>
+          <input name='attr_mod2_medication' type='number' value='0' />
+          <input name='attr_mod3_medication' type='checkbox' value='40' class='skills_item' />
+          <input name='attr_mod3_medication' type='checkbox' value='50' class='skills_item' />
+          <input name='attr_mod3_medication' type='checkbox' value='60' class='skills_item' />
           <button type='roll' name='medication_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Medication}} {{roll=[[floor(([[@{mod1_medication}]]+@{mod2_medication}+[[@{mod3_medication} -40]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_medication_total' value='@{mod1_medication}+@{mod2_medication}+@{mod3_medication}-40' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -853,10 +853,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_navigation' type='number' value='0'/>
-          <input name='attr_mod3_navigation' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_navigation' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_navigation' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_navigation' type='number' value='0' />
+          <input name='attr_mod3_navigation' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_navigation' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_navigation' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='navigation_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Navigation}} {{roll=[[floor(([[@{mod1_navigation}]]+@{mod2_navigation}+[[@{mod3_navigation} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_navigation_total' value='@{mod1_navigation}+@{mod2_navigation}+@{mod3_navigation}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -874,10 +874,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' selected='selected'>LD</option>
           </select>
-          <input name='attr_mod2_negotiation' type='number' value='0'/>
-          <input name='attr_mod3_negotiation' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_negotiation' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_negotiation' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_negotiation' type='number' value='0' />
+          <input name='attr_mod3_negotiation' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_negotiation' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_negotiation' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='negotiation_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Negotiation}} {{roll=[[floor(([[@{mod1_negotiation}]]+@{mod2_negotiation}+[[@{mod3_negotiation} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_negotiation_total' value='@{mod1_negotiation}+@{mod2_negotiation}+@{mod3_negotiation}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -895,10 +895,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_pilot' type='number' value='0'/>
-          <input name='attr_mod3_pilot' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_pilot' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_pilot' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_pilot' type='number' value='0' />
+          <input name='attr_mod3_pilot' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_pilot' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_pilot' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='pilot_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Pilot}} {{roll=[[floor(([[@{mod1_pilot}]]+@{mod2_pilot}+[[@{mod3_pilot} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_pilot_total' value='@{mod1_pilot}+@{mod2_pilot}+@{mod3_pilot}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -916,10 +916,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_security' type='number' value='0'/>
-          <input name='attr_mod3_security' type='checkbox' value='40' class='skills_item'/>
-          <input name='attr_mod3_security' type='checkbox' value='50' class='skills_item'/>
-          <input name='attr_mod3_security' type='checkbox' value='60' class='skills_item'/>
+          <input name='attr_mod2_security' type='number' value='0' />
+          <input name='attr_mod3_security' type='checkbox' value='40' class='skills_item' />
+          <input name='attr_mod3_security' type='checkbox' value='50' class='skills_item' />
+          <input name='attr_mod3_security' type='checkbox' value='60' class='skills_item' />
           <button type='roll' name='security_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Security}} {{roll=[[floor(([[@{mod1_security}]]+@{mod2_security}+[[@{mod3_security} -40]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_security_total' value='@{mod1_security}+@{mod2_security}+@{mod3_security}-40' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -937,10 +937,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_stunting' type='number' value='0'/>
-          <input name='attr_mod3_stunting' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_stunting' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_stunting' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_stunting' type='number' value='0' />
+          <input name='attr_mod3_stunting' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_stunting' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_stunting' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='stunting_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Stunting}} {{roll=[[floor(([[@{mod1_stunting}]]+@{mod2_stunting}+[[@{mod3_stunting} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_stunting_total' value='@{mod1_stunting}+@{mod2_stunting}+@{mod3_stunting}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -958,10 +958,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_survival' type='number' value='0'/>
-          <input name='attr_mod3_survival' type='checkbox' value='20' class='skills_item'/>
-          <input name='attr_mod3_survival' type='checkbox' value='30' class='skills_item'/>
-          <input name='attr_mod3_survival' type='checkbox' value='40' class='skills_item'/>
+          <input name='attr_mod2_survival' type='number' value='0' />
+          <input name='attr_mod3_survival' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_survival' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_survival' type='checkbox' value='40' class='skills_item' />
           <button type='roll' name='survival_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Survival}} {{roll=[[floor(([[@{mod1_survival}]]+@{mod2_survival}+[[@{mod3_survival} -20]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_survival_total' value='@{mod1_survival}+@{mod2_survival}+@{mod3_survival}-20' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
@@ -979,10 +979,10 @@
             <option value='@{CH} + @{CH_advancement}' >CH</option>
             <option value='@{LD} + @{LD_advancement}' >LD</option>
           </select>
-          <input name='attr_mod2_technology' type='number' value='0'/>
-          <input name='attr_mod3_technology' type='checkbox' value='40' class='skills_item'/>
-          <input name='attr_mod3_technology' type='checkbox' value='50' class='skills_item'/>
-          <input name='attr_mod3_technology' type='checkbox' value='60' class='skills_item'/>
+          <input name='attr_mod2_technology' type='number' value='0' />
+          <input name='attr_mod3_technology' type='checkbox' value='40' class='skills_item' />
+          <input name='attr_mod3_technology' type='checkbox' value='50' class='skills_item' />
+          <input name='attr_mod3_technology' type='checkbox' value='60' class='skills_item' />
           <button type='roll' name='technology_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Technology}} {{roll=[[floor(([[@{mod1_technology}]]+@{mod2_technology}+[[@{mod3_technology} -40]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_technology_total' value='@{mod1_technology}+@{mod2_technology}+@{mod3_technology}-40' class='input_background' disabled /></button>
         </div>
         <fieldset name='skills' class='repeating_skills'>
@@ -1004,10 +1004,10 @@
               <option value='@{CH} + @{CH_advancement}' selected='selected'>CH</option>
               <option value='@{LD} + @{LD_advancement}' >LD</option>
             </select>
-            <input name='attr_skill_R_mod2' type='number' value='0'/>
-            <input name='attr_skill_R_mod3' type='checkbox' value='20+@{skill_R_mod4}' class='skills_item'/>
-            <input name='attr_skill_R_mod3' type='checkbox' value='30+@{skill_R_mod4}' class='skills_item'/>
-            <input name='attr_skill_R_mod3' type='checkbox' value='40+@{skill_R_mod4}' class='skills_item'/>
+            <input name='attr_skill_R_mod2' type='number' value='0' />
+            <input name='attr_skill_R_mod3' type='checkbox' value='20+@{skill_R_mod4}' class='skills_item' />
+            <input name='attr_skill_R_mod3' type='checkbox' value='30+@{skill_R_mod4}' class='skills_item' />
+            <input name='attr_skill_R_mod3' type='checkbox' value='40+@{skill_R_mod4}' class='skills_item' />
             <button type='roll' name='skill_Roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=@{skill_R_name} }} {{roll=[[floor(([[@{skill_R_mod1}]]+@{skill_R_mod2}+[[@{skill_R_mod3}-(20+@{skill_R_mod4})]]+?{Modifier|0}-1d100)/10)]]}}' class='clear'><input name='attr_skill_R_total' value='@{skill_R_mod1}]]+@{skill_R_mod2}+[[@{skill_R_mod3}-(20+@{skill_R_mod4})' class='input_background' disabled /></button>
           </div>
         </fieldset>
@@ -1087,18 +1087,18 @@
 
     <h2>Abilities</h2>
     <p class='abilities_checkbox_pointer'><b>Expand or collapse ability's descriptor block ⯆</b></p>
-    <div class='edge_padding'>
-      <input name='attr_ability' type='text' placeholder='SQUAD UP' class='full_width_49px'>
-      <label class="margin_adjust"><input type="checkbox" name='attr_collapse' value="2" class="collapsible_entity_switch select_button hidden"><span class="select_text">▼</span></label>
-      <label class="margin_adjust2"><button type="roll" value="@{to-gm}&{template:mythic} {{name=@{ability} }} {{description=@{ability_desc} }}" class="hidden"></button><span class="select_text">🗭</span></label>
+    <div class='edge_padding ssc'>
+      <input name='attr_ability' type='text' placeholder='SQUAD UP' class='full_width_49px' />
+      <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
+      <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{ability} }} {{description=@{ability_desc} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
       <input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
       <textarea name='attr_ability_desc' class='collapsible_entity_block'
       placeholder='Prerequisites: Race Human, Faction Type U.N.S.C. Military Branch&#10;
       Benefit: When with others from the Army, Marine, Air Force, Navy, ORION, ODST, Militiaman, and Spartan IV Soldier Types: these characters gain a +5 Bonus to Courage. The Characters also gain a +10 Bonus to Warfare Melee and Warfare Range Tests when taking Combined Actions.'></textarea>
       <fieldset name='abilities' class='repeating_abilities'>
-        <input name='attr_ability_r' type='text' placeholder='Name' class='full_width_49px'>
-        <label class="margin_adjust"><input type="checkbox" name='attr_collapse' value="3" class="collapsible_entity_switch select_button hidden"><span class="select_text ">▼</span></label>
-      <label class="margin_adjust2"><button type="roll" value="@{to-gm}&{template:mythic} {{name=@{ability_r} }} {{description=@{ability_desc_r} }}" class="hidden"></button><span class="select_text">🗭</span></label>
+        <input name='attr_ability_r' type='text' placeholder='Name' class='full_width_49px' />
+        <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text '>▼</span></label>
+      <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{ability_r} }} {{description=@{ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
         <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
         <textarea name='attr_ability_desc_r' class='collapsible_entity_block'></textarea>
       </fieldset>
@@ -1110,53 +1110,53 @@
   <!-- ______________________________ start of tab Equipment ______________________________ -->
 
   <div class='equipment box'>
-    <div class="equipment_divider">
-      <div class="equipment_ranged_weapons">
-        <h3 class="radius_border_top">Ranged Weapons</h3>
-        <fieldset name="rangedweapons" class="repeating_Rangedweapons">
-          <div class="equipment_ranged_weapons_rep">
-            <div class="equipment_ranged_weapons_grid1">
-              <div class="equipment_ranged_weapons_gs1">Name</div>
-              <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_R_weapon-name" placeholder='Name'>
-              <div class="equipment_ranged_weapons_gs3">Class</div>
-              <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_R_weapon-class" placeholder='Class'>
+    <div class='equipment_divider'>
+      <div class='equipment_ranged_weapons ssc'>
+        <h3 class='radius_border_top'>Ranged Weapons</h3>
+        <fieldset name='rangedweapons' class='repeating_Rangedweapons'>
+          <div class='equipment_ranged_weapons_rep'>
+            <div class='equipment_ranged_weapons_grid1'>
+              <div class='equipment_ranged_weapons_gs1'>Name</div>
+              <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_R_weapon-name' placeholder='Name' />
+              <div class='equipment_ranged_weapons_gs3'>Class</div>
+              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_R_weapon-class' placeholder='Class' />
             </div>
-            <div class="equipment_ranged_weapons_grid2">
-              <div class="equipment_ranged_weapons_gs5">Range</div>
-              <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_R_weapon-range" >
-              <div class="equipment_ranged_weapons_gs7">Dam-roll</div>
-              <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='2d10' name="attr_R_weapon-dam-roll" >
-              <div class="equipment_ranged_weapons_gs9">Base</div>
-              <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_R_weapon-base" >
-              <div class="equipment_ranged_weapons_gs11">Pierce</div>
-              <input class="equipment_ranged_weapons_gs12 full_width" type="text" value='0' name="attr_R_weapon-pierce" >
+            <div class='equipment_ranged_weapons_grid2'>
+              <div class='equipment_ranged_weapons_gs5'>Range</div>
+              <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_R_weapon-range' />
+              <div class='equipment_ranged_weapons_gs7'>Dam-roll</div>
+              <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_R_weapon-dam-roll' />
+              <div class='equipment_ranged_weapons_gs9'>Base</div>
+              <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_R_weapon-base' />
+              <div class='equipment_ranged_weapons_gs11'>Pierce</div>
+              <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_R_weapon-pierce' />
             </div>
-            <div class="equipment_ranged_weapons_grid3">
-              <div class="equipment_ranged_weapons_gs13">Hitmod</div>
-              <input class="equipment_ranged_weapons_gs14 full_width" type="text" value='0' name="attr_R_weapon-mod1" >
-              <div class="equipment_ranged_weapons_gs15">Magazine</div>
-              <input class="equipment_ranged_weapons_gs16 full_width" type="text" value='0' name="attr_R_weapon-mag" >
-              <div class="equipment_ranged_weapons_gs17">/</div>
-              <input class="equipment_ranged_weapons_gs18 full_width" type="text" value='0' name="attr_R_weapon-mag_max" >
+            <div class='equipment_ranged_weapons_grid3'>
+              <div class='equipment_ranged_weapons_gs13'>Hitmod</div>
+              <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_R_weapon-mod1' />
+              <div class='equipment_ranged_weapons_gs15'>Magazine</div>
+              <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_R_weapon-mag' />
+              <div class='equipment_ranged_weapons_gs17'>/</div>
+              <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_R_weapon-mag_max' />
               <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{R_weapon-name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{R_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
               <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon-name}}} {{damage=[[@{R_weapon-dam-roll}+@{R_weapon-base}]] }} {{pierce=[[@{R_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{R_ability_r} }}' >DMG</button>
             </div>
-            <div class="equipment_ranged_weapons_grid4">
-              <div class="equipment_ranged_weapons_gs21">RoF</div>
-              <input class="equipment_ranged_weapons_gs22 full_width" type="text" value='0' name="attr_R_weapon-semi" >
-              <div class="equipment_ranged_weapons_gs23">/</div>
-              <input class="equipment_ranged_weapons_gs24 full_width" type="text" value='0' name="attr_R_weapon-burst" >
-              <div class="equipment_ranged_weapons_gs25">/</div>
-              <input class="equipment_ranged_weapons_gs26 full_width" type="text" value='0' name="attr_R_weapon-auto" >
-              <div class="equipment_ranged_weapons_gs27">Reload</div>
-              <input class="equipment_ranged_weapons_gs28 full_width" type="text" value='2 half' name="attr_R_weapon-reload" >
-              <div class="equipment_ranged_weapons_gs29">Weight</div>
-              <input class="equipment_ranged_weapons_gs30 full_width" type="text" value='0' name="attr_R_weapon-weight" >
+            <div class='equipment_ranged_weapons_grid4'>
+              <div class='equipment_ranged_weapons_gs21'>RoF</div>
+              <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_R_weapon-semi' />
+              <div class='equipment_ranged_weapons_gs23'>/</div>
+              <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Brst' name='attr_R_weapon-burst' />
+              <div class='equipment_ranged_weapons_gs25'>/</div>
+              <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_R_weapon-auto' />
+              <div class='equipment_ranged_weapons_gs27'>Reload</div>
+              <input class='equipment_ranged_weapons_gs28 full_width' type='text' value='2 half actions' name='attr_R_weapon-reload' />
+              <div class='equipment_ranged_weapons_gs29'>Weight</div>
+              <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_R_weapon-weight' />
             </div>
             <div>
               <input name='attr_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
-                <label class="margin_adjust_wep"><input type="checkbox" name='attr_collapse' value="3" class="collapsible_entity_switch select_button hidden"><span class="select_text radius_border_right_wep">▼</span></label>
-                <label class="margin_adjust_wep2"><button type="roll" value="@{to-gm}&{template:mythic} {{name=@{R_ability_r} }} {{description=@{R_ability_desc_r} }}" class="hidden"></button><span class="select_text">🗭</span></label>
+                <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+                <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{R_ability_r} }} {{description=@{R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
               <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
               <textarea name='attr_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
             </div>
@@ -1165,49 +1165,49 @@
         </fieldset>
       </div>
 
-      <div class="equipment_melee_weapons">
-        <h3 class="radius_border_top">Melee Weapons</h3>
-        <fieldset name="meleeweapons" class="repeating_meleeweapons">
-          <div class="equipment_ranged_weapons_rep">
-            <div class="equipment_ranged_weapons_grid1">
-              <div class="equipment_ranged_weapons_gs1">Name</div>
-              <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_M_weapon-name" placeholder='Name'>
-              <div class="equipment_ranged_weapons_gs3">class</div>
-              <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_M_weapon-class" placeholder='Class'>
+      <div class='equipment_melee_weapons ssc'>
+        <h3 class='radius_border_top'>Melee Weapons</h3>
+        <fieldset name='meleeweapons' class='repeating_meleeweapons'>
+          <div class='equipment_ranged_weapons_rep'>
+            <div class='equipment_ranged_weapons_grid1'>
+              <div class='equipment_ranged_weapons_gs1'>Name</div>
+              <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_M_weapon-name' placeholder='Name' />
+              <div class='equipment_ranged_weapons_gs3'>class</div>
+              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon-class' placeholder='Class' />
             </div>
-            <div class="equipment_ranged_weapons_grid2">
-              <div class="equipment_ranged_weapons_gs5">Reach</div>
-              <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_M_weapon-range" >
-              <div class="equipment_ranged_weapons_gs7">dam-roll</div>
-              <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='2d10' name="attr_M_weapon-dam-roll" >
-              <div class="equipment_ranged_weapons_gs9">base</div>
-              <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_M_weapon-base" >
-              <div class="equipment_ranged_weapons_gs11">pierce</div>
-              <input class="equipment_ranged_weapons_gs12 full_width" type="text" value='0' name="attr_M_weapon-pierce" >
+            <div class='equipment_ranged_weapons_grid2'>
+              <div class='equipment_ranged_weapons_gs5'>Reach</div>
+              <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon-range' />
+              <div class='equipment_ranged_weapons_gs7'>dam-roll</div>
+              <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_M_weapon-dam-roll' />
+              <div class='equipment_ranged_weapons_gs9'>base</div>
+              <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_M_weapon-base' />
+              <div class='equipment_ranged_weapons_gs11'>pierce</div>
+              <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_M_weapon-pierce' />
             </div>
-            <div class="equipment_melee_weapons_grid3">
-              <div class="equipment_melee_weapons_gs1">Hitmod</div>
-              <input class="equipment_melee_weapons_gs2 full_width" type="text" value='0' name="attr_M_weapon-mod1" >
-              <div class="equipment_melee_weapons_gs3">weight</div>
-              <input class="equipment_melee_weapons_gs4 full_width" type="text" value='0' name="attr_M_weapon-weight" >
-              <div class="equipment_melee_weapons_gs5">Br pts</div>
-              <input class="equipment_melee_weapons_gs6 full_width" type="text" value='0' name="attr_M_weapon-breakpoints" >
-              <div class="equipment_melee_weapons_gs7">/</div>
-              <input class="equipment_melee_weapons_gs8 full_width" type="text" value='0' name="attr_M_weapon-breakpoints_max" >
-              <button class="equipment_melee_weapons_gs9 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon-name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"' >Hit</button>
-              <button class="equipment_melee_weapons_gs10 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon-name}}} {{damage=[[@{M_weapon-dam-roll}+@{M_weapon-base}+@{M_weapon-base-mod}]] }} {{pierce=[[@{M_weapon-pierce}+@{M_weapon-pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
+            <div class='equipment_melee_weapons_grid3'>
+              <div class='equipment_melee_weapons_gs1'>Hitmod</div>
+              <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_M_weapon-mod1' />
+              <div class='equipment_melee_weapons_gs3'>weight</div>
+              <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_M_weapon-weight' />
+              <div class='equipment_melee_weapons_gs5'>Br pts</div>
+              <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon-breakpoints' />
+              <div class='equipment_melee_weapons_gs7'>/</div>
+              <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon-breakpoints_max' />
+              <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon-name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
+              <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon-name}}} {{damage=[[@{M_weapon-dam-roll}+@{M_weapon-base}+@{M_weapon-base-mod}]] }} {{pierce=[[@{M_weapon-pierce}+@{M_weapon-pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
             </div>
 
-            <div class="equipment_melee_weapons_grid4">
-              <div class="equipment_melee_weapons_gs11">damage plus strength</div>
-              <select class="equipment_melee_weapons_gs12 full_width" name="attr_M_weapon-base-mod">
+            <div class='equipment_melee_weapons_grid4'>
+              <div class='equipment_melee_weapons_gs11'>damage plus strength</div>
+              <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon-base-mod'>
                 <option selected='selected' value='0'>None</option>
                 <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>half</option>
                 <option value='[[floor(@{str}/10 + @{str_mythic})]]'>full</option>
               </select>
 
-              <div class="equipment_melee_weapons_gs13">pierce plus strength</div>
-              <select class="equipment_melee_weapons_gs14 full_width" name="attr_M_weapon-pierce-mod">
+              <div class='equipment_melee_weapons_gs13'>pierce plus strength</div>
+              <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon-pierce-mod'>
                 <option selected='selected' value='0'>None</option>
                 <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>half</option>
                 <option value='[[floor(@{str}/10 + @{str_mythic})]]'>full</option>
@@ -1216,8 +1216,8 @@
 
             <div>
               <input name='attr_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
-                <label class="margin_adjust_wep"><input type="checkbox" name='attr_collapse' value="3" class="collapsible_entity_switch select_button hidden"><span class="select_text radius_border_right_wep">▼</span></label>
-                      <label class="margin_adjust_wep2"><button type="roll" value="@{to-gm}&{template:mythic} {{name=@{M_ability_r} }} {{description=@{M_ability_desc_r} }}" class="hidden"></button><span class="select_text">🗭</span></label>
+                <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+                      <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{M_ability_r} }} {{description=@{M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
               <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
               <textarea name='attr_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
             </div>
@@ -1271,23 +1271,25 @@
     </script>
 
 	<div class='equipment_gear'>
-	  <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' class='gear_name'></input>
-	  <input name='attr_gear_cost' type='text' placeholder='cR Value' class='gear_field'>
-	  <input name='attr_gear_weight' type='text' placeholder='Weight' class='gear_field'>
-	  <input name='attr_gear_bp' type='text' placeholder='Break Points' class='gear_field'>
-	  <input name='attr_gear_pg#' type='text' placeholder='Page #' class='gear_field'>
-    <label class="margin_adjust"><input type="checkbox" name='attr_collapse' value="7" class="collapsible_entity_switch select_button hidden"><span class="select_text ">▼</span></label>
+	  <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' class='gear_name' />
+	  <input name='attr_gear_quantity' type='text' placeholder='Amount' class='gear_field' />
+	  <input name='attr_gear_cost' type='text' placeholder='cR Value' class='gear_field' />
+	  <input name='attr_gear_weight' type='text' placeholder='Weight' class='gear_field' />
+	  <input name='attr_gear_bp' type='text' placeholder='Break Points' class='gear_field' />
+	  <input name='attr_gear_pg#' type='text' placeholder='Page #' class='gear_field' />
+    <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='7' class='collapsible_entity_switch select_button hidden'><span class='select_text'>▼</span></label>
     <input name='attr_collapse' type='checkbox'  value='7' class='collapsible_entity_switch hidden' />
 	  <textarea name='attr_gear_desc' class='collapsible_entity_block auto_margin 90width'></textarea>
 	</div>
-    <fieldset name='gear' class='repeating_gear'>
-      <div class='equipment_gear'>
-        <input name='attr_gear_name_r' type='text'  class='gear_name'></input>
-        <input name='attr_gear_cost_r' type='text' class='gear_field'>
-        <input name='attr_gear_weight_r' type='text' class='gear_field'>
-        <input name='attr_gear_bp_r' type='text' class='gear_field'>
-        <input name='attr_gear_pg#_r' type='text' class='gear_field'>
-        <label class="margin_adjust"><input type="checkbox" name='attr_collapse_r' value="2" class="collapsible_entity_switch select_button hidden"><span class="select_text ">▼</span></label>
+    <div class='equipment_gear ssc'>
+      <fieldset name='gear' class='repeating_gear'>
+        <input name='attr_gear_name_r' type='text'  class='gear_name' />
+		<input name='attr_gear_quantity_r' type='text' placeholder='Amount' class='gear_field' />
+        <input name='attr_gear_cost_r' type='text' class='gear_field' />
+        <input name='attr_gear_weight_r' type='text' class='gear_field' />
+        <input name='attr_gear_bp_r' type='text' class='gear_field' />
+        <input name='attr_gear_pg#_r' type='text' class='gear_field' />
+        <label class='margin_adjust'><input type='checkbox' name='attr_collapse_r' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
         <input name='attr_collapse_r' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
         <textarea name='attr_ability_desc_r' class='collapsible_entity_block auto_margin 90width'></textarea>
       </div>
@@ -1311,15 +1313,15 @@
           <option value='4'>46+</option>
         </select>
         <div>
-          <input name='attr_medical_finger/toe' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_finger/toe' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_finger/toe' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_medical_finger/toe' type='checkbox' value='1' class='hidden hider' />
           <div>-1 WFM + WFR to Finger,<br>-2 Agility to Toe</div>
-          <input name='attr_medical_finger/toe' type='checkbox' value='2' class='hidden hider' >
+          <input name='attr_medical_finger/toe' type='checkbox' value='2' class='hidden hider' />
           <div>-2 WFM + WFR to Finger,<br>-4 Agility to Toe</div>
-          <input name='attr_medical_finger/toe' type='checkbox' value='3' class='hidden hider' >
+          <input name='attr_medical_finger/toe' type='checkbox' value='3' class='hidden hider' />
           <div>Body Location damaged.<br>No longer usable. -3 Strength to Finger, -3 Agility to Toe</div>
-          <input name='attr_medical_finger/toe' type='checkbox' value='4' class='hidden hider' >
+          <input name='attr_medical_finger/toe' type='checkbox' value='4' class='hidden hider' />
           <div>Body Locaton destroyed,<br>-4 Strength to Finger, -4 Agility to Toe</div>
         </div>
       </div>
@@ -1335,17 +1337,17 @@
           <option value='5'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_heart' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_heart' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_heart' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_heart' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Strength + Toughness + Agility</div>
-          <input name='attr_medical_heart' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_heart' type='checkbox' value='2' class='hidden hider' />
           <div>-5 Strength + Toughness + Agility</div>
-          <input name='attr_medical_heart' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_heart' type='checkbox' value='3' class='hidden hider' />
           <div>-10 Strength + Toughness + Agility</div>
-          <input name='attr_medical_heart' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_heart' type='checkbox' value='4' class='hidden hider' />
           <div>Body Location damaged.<br>+10 Fatigue, -15 Strength + Toughness + Agility</div>
-          <input name='attr_medical_heart' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_heart' type='checkbox' value='5' class='hidden hider' />
           <div>Body Locaton destroyed,<br>instant death</div>
         </div>
       </div>
@@ -1362,19 +1364,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_neck' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_neck' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_neck' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_neck' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Toughness</div>
-          <input name='attr_medical_neck' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_neck' type='checkbox' value='2' class='hidden hider' />
           <div>-5 Toughness</div>
-          <input name='attr_medical_neck' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_neck' type='checkbox' value='3' class='hidden hider' />
           <div>-10 Toughness</div>
-          <input name='attr_medical_neck' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_neck' type='checkbox' value='4' class='hidden hider' />
           <div>+1 Fatigue, -10 Toughness</div>
-          <input name='attr_medical_neck' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_neck' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location damaged.<br>-20 Toughness, Paralyzed and Helpless</div>
-          <input name='attr_medical_neck' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_neck' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>instant death</div>
         </div>
       </div>
@@ -1390,17 +1392,17 @@
           <option value='5'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_skull/brain' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_skull/brain' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_skull/brain' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_skull/brain' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Perception + Intellect + WFM + WFR</div>
-          <input name='attr_medical_skull/brain' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_skull/brain' type='checkbox' value='2' class='hidden hider' />
           <div>-5 Perception + Intellect + WFM + WFR</div>
-          <input name='attr_medical_skull/brain' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_skull/brain' type='checkbox' value='3' class='hidden hider' />
           <div>-10 Perception + Intellect + WFM + WFR</div>
-          <input name='attr_medical_skull/brain' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_skull/brain' type='checkbox' value='4' class='hidden hider' />
           <div>Body Location damaged.<br>+10 Fatigue, -15 Perception + Intellect + WFM + WFR</div>
-          <input name='attr_medical_skull/brain' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_skull/brain' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location destroyed,<br>instant death</div>
         </div>
       </div>
@@ -1417,19 +1419,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_nose/ear' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_nose/ear' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_nose/ear' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_nose/ear' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Perception to smelling or hearing Perception tests</div>
-          <input name='attr_medical_nose/ear' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_nose/ear' type='checkbox' value='2' class='hidden hider' />
           <div>-5 Perception to smelling or hearing Perception tests</div>
-          <input name='attr_medical_nose/ear' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_nose/ear' type='checkbox' value='3' class='hidden hider' />
           <div>-10 Perception to smelling or hearing Perception tests</div>
-          <input name='attr_medical_nose/ear' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_nose/ear' type='checkbox' value='4' class='hidden hider' />
           <div>-15 Perception to smelling or hearing Perception tests</div>
-          <input name='attr_medical_nose/ear' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_nose/ear' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location broken.<br>-20 Perception to smelling or hearing Perception tests</div>
-          <input name='attr_medical_nose/ear' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_nose/ear' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>cannot make or halve Perception to smelling or hearing tests</div>
         </div>
       </div>
@@ -1446,19 +1448,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_arm/leg' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_arm/leg' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_arm/leg' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_arm/leg' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Strength to Arm or<br>-2 Agility to Leg</div>
-          <input name='attr_medical_arm/leg' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_arm/leg' type='checkbox' value='2' class='hidden hider' />
           <div>-5 Strength to Arm, or<br>-5 Agility to Leg</div>
-          <input name='attr_medical_arm/leg' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_arm/leg' type='checkbox' value='3' class='hidden hider' />
           <div>-10 Strength to Arm, or<br>-10 Agility to Leg</div>
-          <input name='attr_medical_arm/leg' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_arm/leg' type='checkbox' value='4' class='hidden hider' />
           <div>-15 Strength to Arm, or<br>-15 Agility to Leg</div>
-          <input name='attr_medical_arm/leg' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_arm/leg' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location damaged. -15 Strength to Arm, or -15 Agility to Leg. -5 to limb's Actions</div>
-          <input name='attr_medical_arm/leg' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_arm/leg' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>limb cannot be used<br>+3 Fatigue</div>
         </div>
       </div>
@@ -1477,17 +1479,17 @@
         <div>
           <input name='attr_medical_small/large_intestines' type='checkbox' value='0' class='hidden hider' checked >
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_small/large_intestines' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_medical_small/large_intestines' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Toughness + Agility</div>
-          <input name='attr_medical_small/large_intestines' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_small/large_intestines' type='checkbox' value='2' class='hidden hider' />
           <div>-4 Toughness + Agility</div>
-          <input name='attr_medical_small/large_intestines' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_small/large_intestines' type='checkbox' value='3' class='hidden hider' />
           <div>-6 Toughness + Agility</div>
-          <input name='attr_medical_small/large_intestines' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_small/large_intestines' type='checkbox' value='4' class='hidden hider' />
           <div>-10 Toughness + Agility</div>
-          <input name='attr_medical_small/large_intestines' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_small/large_intestines' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location damaged.<br>+2 Fatigue, -15 Toughness + Agility</div>
-          <input name='attr_medical_small/large_intestines' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_small/large_intestines' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>+5 Fatigue, -20 Toughness + Agility</div>
         </div>
       </div>
@@ -1504,19 +1506,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_lung' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_lung' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_lung' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_lung' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Toughness, stunned for<br>(D5-Toughness Modifier) rounds</div>
-          <input name='attr_medical_lung' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_lung' type='checkbox' value='2' class='hidden hider' />
           <div>-5 Toughness, stunned for<br>(2D5-Toughness Modifier) rounds</div>
-          <input name='attr_medical_lung' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_lung' type='checkbox' value='3' class='hidden hider' />
           <div>-10 Toughness, stunned for<br>(3D5-Toughness Modifier) rounds</div>
-          <input name='attr_medical_lung' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_lung' type='checkbox' value='4' class='hidden hider' />
           <div>-15 Toughness, stunned for<br>(4D5-Toughness Modifier) rounds</div>
-          <input name='attr_medical_lung' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_lung' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location damaged.<br>-20 Toughness, stunned for<br>(5D5-Toughness Modifier) rounds</div>
-          <input name='attr_medical_lung' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_lung' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>-25 Toughness, stunned for<br>(6D5-Toughness Modifier) rounds.<br>Character will take 2 wounds whenever they take a Movement Action quicker than 2 Meters per Turn.</div>
         </div>
       </div>
@@ -1533,19 +1535,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Toughness + Agility</div>
-          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='2' class='hidden hider' />
           <div>-4 Toughness + Agility</div>
-          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='3' class='hidden hider' />
           <div>-6 Toughness + Agility</div>
-          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='4' class='hidden hider' />
           <div>-10 Toughness + Agility</div>
-          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location damaged.<br>+1 Fatigue, -15 Toughness + Agility</div>
-          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_kidney/stomach/liver/spleen' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>+5 Fatigue, -20 Toughness + Agility</div>
         </div>
       </div>
@@ -1562,19 +1564,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Strength + Agility</div>
-          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='2' class='hidden hider' />
           <div>-4 Strength + Agility</div>
-          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='3' class='hidden hider' />
           <div>-6 Strength + Agility</div>
-          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='4' class='hidden hider' />
           <div>-10 Strength + Agility</div>
-          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location damaged.<br>+1 Fatigue, -15 Strength + Agility</div>
-          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_knee/ankle/shoulder/elbow' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>+5 Fatigue, -20 Strength + Agility</div>
         </div>
       </div>
@@ -1591,19 +1593,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_eye' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_eye' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_eye' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_eye' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Perception to seeing tests</div>
-          <input name='attr_medical_eye' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_eye' type='checkbox' value='2' class='hidden hider' />
           <div>-5 Perception to seeing tests</div>
-          <input name='attr_medical_eye' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_eye' type='checkbox' value='3' class='hidden hider' />
           <div>-10 Perception to seeing tests</div>
-          <input name='attr_medical_eye' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_eye' type='checkbox' value='4' class='hidden hider' />
           <div>-12 Perception to seeing tests</div>
-          <input name='attr_medical_eye' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_eye' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location broken.<br>-15 Perception to seeing tests</div>
-          <input name='attr_medical_eye' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_eye' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>Character blinded for D5 rounds. -20 Perception to seeing tests</div>
         </div>
       </div>
@@ -1620,19 +1622,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_mouth' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_mouth' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_mouth' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_mouth' type='checkbox' value='1' class='hidden hider' />
           <div>-1 Toughness, -5 to speaking tests</div>
-          <input name='attr_medical_mouth' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_mouth' type='checkbox' value='2' class='hidden hider' />
           <div>-3 Toughness, -5 to speaking tests</div>
-          <input name='attr_medical_mouth' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_mouth' type='checkbox' value='3' class='hidden hider' />
           <div>-5 Toughness, -10 to speaking tests</div>
-          <input name='attr_medical_mouth' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_mouth' type='checkbox' value='4' class='hidden hider' />
           <div>-8 Toughness, -10 to speaking tests</div>
-          <input name='attr_medical_mouth' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_mouth' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location broken.<br>+1 Fatigue, -12 Toughness, -15 to speaking tests</div>
-          <input name='attr_medical_mouth' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_mouth' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>+2 Fatigue, -15 Toughness, -15 to speaking tests</div>
         </div>
       </div>
@@ -1649,19 +1651,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_hand' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_hand' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_hand' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_hand' type='checkbox' value='1' class='hidden hider' />
           <div>-3 to both Warfare stats if hand is used to Attack</div>
-          <input name='attr_medical_hand' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_hand' type='checkbox' value='2' class='hidden hider' />
           <div>-5 to both Warfare stats if hand is used to Attack</div>
-          <input name='attr_medical_hand' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_hand' type='checkbox' value='3' class='hidden hider' />
           <div>-10 to both Warfare stats if hand is used to Attack</div>
-          <input name='attr_medical_hand' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_hand' type='checkbox' value='4' class='hidden hider' />
           <div>-13 to both Warfare stats if hand is used to Attack</div>
-          <input name='attr_medical_hand' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_hand' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location broken.<br>-15 to both Warfare stats if hand is used to Attack</div>
-          <input name='attr_medical_hand' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_hand' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>Character cannot use the hand for any Actions</div>
         </div>
       </div>
@@ -1678,19 +1680,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Toughness</div>
-          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='2' class='hidden hider' />
           <div>-4 Toughness, -5 to speaking tests</div>
-          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='3' class='hidden hider' />
           <div>-6 Toughness, -10 to speaking tests</div>
-          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='4' class='hidden hider' />
           <div>+1 Fatigue, -10 Toughness, -10 to speaking tests</div>
-          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location damaged.<br>+2 Fatigue, -15 Toughness, -15 to speaking tests</div>
-          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_chin/jaw/cheek' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>+3 Fatigue, -20 Toughness, -20 to speaking tests</div>
         </div>
       </div>
@@ -1707,19 +1709,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_foot' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_foot' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_foot' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_foot' type='checkbox' value='1' class='hidden hider' />
           <div>-5 to Agility when figuring Movement Speed</div>
-          <input name='attr_medical_foot' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_foot' type='checkbox' value='2' class='hidden hider' />
           <div>-10 to Agility when figuring Movement Speed</div>
-          <input name='attr_medical_foot' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_foot' type='checkbox' value='3' class='hidden hider' />
           <div>-15 to Agility when figuring Movement Speed</div>
-          <input name='attr_medical_foot' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_foot' type='checkbox' value='4' class='hidden hider' />
           <div>-20 to Agility when figuring Movement Speed</div>
-          <input name='attr_medical_foot' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_foot' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location broken.<br>-25 to Agility when figuring Movement Speed</div>
-          <input name='attr_medical_foot' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_foot' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>Character cannot use the Foot for any Actions. Half Move reduced to 1 Meter, Full Move reduced to 2 Meters, Charge and Run are impossible.</div>
         </div>
       </div>
@@ -1736,19 +1738,19 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_pelvis' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_pelvis' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_pelvis' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_pelvis' type='checkbox' value='1' class='hidden hider' />
           <div>-1 Toughness, -4 Agility</div>
-          <input name='attr_medical_pelvis' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_pelvis' type='checkbox' value='2' class='hidden hider' />
           <div>-3 Toughness, -6 Agility</div>
-          <input name='attr_medical_pelvis' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_pelvis' type='checkbox' value='3' class='hidden hider' />
           <div>-6 Toughness, -8 Agility</div>
-          <input name='attr_medical_pelvis' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_pelvis' type='checkbox' value='4' class='hidden hider' />
           <div>-8 Toughness, -12 Agility</div>
-          <input name='attr_medical_pelvis' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_pelvis' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location damaged.<br>-20 Toughness + Agility</div>
-          <input name='attr_medical_pelvis' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_pelvis' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>-30 Toughness + Agility</div>
         </div>
       </div>
@@ -1765,26 +1767,26 @@
           <option value='6'>60+</option>
         </select>
         <div>
-          <input name='attr_medical_chest' type='checkbox' value='0' class='hidden hider' checked>
+          <input name='attr_medical_chest' type='checkbox' value='0' class='hidden hider' checked />
           <div>No Effect / Healthy</div>
-          <input name='attr_medical_chest' type='checkbox' value='1' class='hidden hider'>
+          <input name='attr_medical_chest' type='checkbox' value='1' class='hidden hider' />
           <div>-2 Toughness</div>
-          <input name='attr_medical_chest' type='checkbox' value='2' class='hidden hider'>
+          <input name='attr_medical_chest' type='checkbox' value='2' class='hidden hider' />
           <div>-4 Toughness</div>
-          <input name='attr_medical_chest' type='checkbox' value='3' class='hidden hider'>
+          <input name='attr_medical_chest' type='checkbox' value='3' class='hidden hider' />
           <div>-8 Toughness, stunned for 1D5 rounds</div>
-          <input name='attr_medical_chest' type='checkbox' value='4' class='hidden hider'>
+          <input name='attr_medical_chest' type='checkbox' value='4' class='hidden hider' />
           <div>-10 Toughness, stunned for 2D5 rounds</div>
-          <input name='attr_medical_chest' type='checkbox' value='5' class='hidden hider'>
+          <input name='attr_medical_chest' type='checkbox' value='5' class='hidden hider' />
           <div>Body Location broken.<br>-15 Toughness, stunned for 3D5 rounds</div>
-          <input name='attr_medical_chest' type='checkbox' value='6' class='hidden hider'>
+          <input name='attr_medical_chest' type='checkbox' value='6' class='hidden hider' />
           <div>Body Location destroyed,<br>instant death</div>
         </div>
       </div>
 
       <div class='medicalgT'>
         <div class='medical_background'>
-          <label class='medical_initial_label'><h2 class='medical_h2 medical_h2_rollable radius_border_top'>Hit Location</h2> <button type="roll" name="button" value="@{to-gm}&{template:mythic} {{loc=[[1d100]]}}" class="hidden"></button></label>
+          <label class='medical_initial_label'><h2 class='medical_h2 medical_h2_rollable radius_border_top'>Hit Location</h2> <button type='roll' name='button' value='@{to-gm}&{template:mythic} {{loc=[[1d100]]}}' class='hidden'></button></label>
           <h3> 01-10 HEAD</h3>
           <div class='medical_table'> 01 Neck</div>
           <div class='medical_table'> 02 Chin</div>
@@ -1849,7 +1851,7 @@
         </div>
       </div>
 
-      <div class='medicalgR'>
+      <div class='medicalgR ssc'>
         <div class='medical_h2_background'>
           <h2 class='medical_h2 radius_border_top'>Medical Information</h2>
         </div>
@@ -1900,41 +1902,48 @@
 
     <h2>Experience Summary</h2>
     <div class='text_centered'>
-      Unspent XP: <input name='attr_xp_current' type='number' value='@{xp_total}-@{xp_spent}' class='advancements_numerical_field' readonly>
-      Spent XP: <input name='attr_xp_spent' type='number' value='@{xp_total}-(@{advancement_costL}+@{advancement_costR})' class='advancements_numerical_field' readonly>
-      XP Total: <input name='attr_xp_total' type='number' class='advancements_numerical_field advancements_end_field'>
+      Unspent XP: <input name='attr_xp_current' type='number' value='@{xp_total}-@{xp_spent}' class='advancements_numerical_field' readonly />
+      Spent XP: <input name='attr_xp_spent' type='number' value='@{xp_total}-(@{advancement_costL}+@{advancement_costR})' class='advancements_numerical_field' readonly />
+      XP Total: <input name='attr_xp_total' type='number' class='advancements_numerical_field advancements_end_field' />
     </div>
     <br>
 
     <div class='edge_padding'>
-      <input name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
-      <input name='attr_advancement_costL' type='number' placeholder='XP Cost' style='width: 10%'>
-      <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px'>
-      <input name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
-      <input name='attr_advancement_costR' type='number' placeholder='XP Cost' style='width: 10%'>
-      <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%'>
+      <input name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' style='width: 25%' />
+      <input name='attr_advancement_costL' type='number' placeholder='XP Cost' style='width: 10%' />
+      <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px' />
+      <input name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' style='width: 25%' />
+      <input name='attr_advancement_costR' type='number' placeholder='XP Cost' style='width: 10%' />
+      <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%' />
     </div>
-    <div class='edge_padding'>
+    <div class='edge_padding ssc'>
       <fieldset name='advancements' class='repeating_advancements'>
-        <input name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
-        <input name='attr_advancement_costL_r' type='number' placeholder='XP Cost' style='width: 10%'>
-        <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px'>
-        <input name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' style='width: 25%'>
-        <input name='attr_advancement_costR_r' type='number' placeholder='XP Cost' style='width: 10%'>
-        <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%'>
+        <input name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' style='width: 25%' />
+        <input name='attr_advancement_costL_r' type='number' placeholder='XP Cost' style='width: 10%' />
+        <input name='attr_advancement_pg#L' type='number' placeholder='Page #' style='width: 10%; margin-right: 10px' />
+        <input name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' style='width: 25%' />
+        <input name='attr_advancement_costR_r' type='number' placeholder='XP Cost' style='width: 10%' />
+        <input name='attr_advancement_pg#R' type='number' placeholder='Page #' style='width: 10%' />
       </fieldset>
     </div>
 
     <div class='training'>
-      <div class='faction_training table auto_margin 90width radius_border'>
+      <div class='faction_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Faction Training</h3>
         <div class='faction_training_grid'>
+<<<<<<< HEAD
 		  <div class="faction_training_grid_g1"><input name='attr_faction_training_human' type='checkbox'>U.N.S.C.</div>
       <div class="faction_training_grid_g2"><input name='attr_faction_training_forerunner' type='checkbox'>Forerunner</div>
 		  <div class="faction_training_grid_g3"><input name='attr_faction_training_covenant' type='checkbox'>Covenant / Banished</div>
+=======
+		  <div><input name='attr_faction_training_human' type='checkbox' />U.N.S.C.</div>
+          <div><input name='attr_faction_training_forerunner' type='checkbox' />Forerunner</div>
+		  <div><input name='attr_faction_training_covenant' type='checkbox' />Covenant</div>
+		  <div style='margin-left: -30%'>Banished</div>
+>>>>>>> b3e11610ea0048018dd5b77ea3e16fd796417d7f
 		</div>
       </div>
-      <div class='weapon_training table auto_margin 90width radius_border'>
+      <div class='weapon_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Weapon Training</h3>
         <div class='weapon_training_grid'>
           <div><input name='attr_weapons_training_basic' type='checkbox' />Basic</div>
@@ -1958,14 +1967,14 @@
   <div class='journal box'>
     <!-- Journal -->
     <h2>Journal: Objectives</h2>
-    <div class='edge_padding'>
+    <div class='edge_padding ssc'>
       <fieldset name='objectives' class='repeating_objectives'>
       <input name='attr_objective' type='text' class='full_width_30px' />
-      <label class="margin_adjust"><input type="checkbox" name='attr_objective_completed' value="1" class="select_button hidden"><span class="select_text ">✔</span></label>
+      <label class='margin_adjust'><input type='checkbox' name='attr_objective_completed' value='1' class='select_button hidden' /><span class='select_text '>✔</span></label>
       </fieldset>
     </div>
     <h2>Journal: Notes</h2>
-    <div class='edge_padding'>
+    <div class='edge_padding ssc'>
       <fieldset name='notes' class='repeating_notes'>
         <!-- insert new line html entity [&#10;] inside of placeholder attribute -->
         <textarea name='attr_notes'
@@ -1980,7 +1989,7 @@
 
   <!-- ______________________________ start of tab Vehicles ______________________________ -->
 
-  <div class='vehicles box'>
+  <div class='vehicles box ssc'>
     <!-- Vehicles -->
     <div class='vehicles_divider'>
       <fieldset name='vehicles-R' class='repeating_vehicles'>
@@ -2023,55 +2032,55 @@
           <div class='vehicles_G13'>Top Speed</div>
           <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
           <div class='vehicles_G14'>Maneuver</div>
-          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
           <input name='attr_vehicle-accelerate' type='text' class='vehicles_G15 full_width' placeholder='Meters per Turn' />
-          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
           <input name='attr_vehicle-brake' type='text' class='vehicles_G16 full_width' placeholder='Meters per Turn' />
-          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
           <input name='attr_vehicle-top_speed' type='text' class='vehicles_G17 full_width' placeholder='MpT/(# km/h)' />
-          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
           <input name='attr_vehicle-maneuver' type='text' class='vehicles_G18 full_width' placeholder="Pilot's Evasion" />
 
-          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
           <div class='vehicles_G19'>Vertical</div>
-          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
           <div class='vehicles_G20'>Takeoff</div>
-          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
           <div class='vehicles_G21'>Target Range</div>
-          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
           <div class='vehicles_G22'>Targeting</div>
-          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
           <input name='attr_vehicle-vertical' type='text' class='vehicles_G23 full_width' placeholder='MpT' />
-          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
           <input name='attr_vehicle-takeoff' type='text' class='vehicles_G24 full_width' placeholder='Min Half-Actions' />
-          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
           <input name='attr_vehicle-target_range' type='text' class='vehicles_G25 full_width' placeholder='Meters' />
-          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
           <input name='attr_vehicle-targeting' type='text' class='vehicles_G26 full_width' placeholder='Min Half-Actions' />
 
-          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
           <div class='vehicles_G27'>Strength</div>
-          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider full_width' >
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider full_width' />
           <div class='vehicles_G28'>Melee</div>
-          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
           <input type='text' name='attr_vehicle-strength' class='vehicles_G29 full_width'/>
-          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
           <input name='attr_vehicle-melee' type='text' class='vehicles_G30 full_width' />
 
-          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
           <input name='attr_vehicle-strength-mythic' class='vehicles_G31 full_width' type='text' />
-          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' >
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
           <div class='vehicles_G32'>Mythic</div>
 
-          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
           <div class='vehicles_G33'><h3>CREW AND COMPLEMENT</h3></div>
-          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
           <div class='vehicles_G34'>Crew</div>
-          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
           <div class='vehicles_G35'>Complement</div>
-          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
           <input name='attr_vehicle-crew' type='text' class='vehicles_G36 full_width' placeholder='Minimum Crew Prerequisite' />
-          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' >
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
           <input name='attr_vehicle-compliment' type='text' class='vehicles_G37 full_width' placeholder='Maximum Crew Space' />
           <div class='vehicles_G38'><h3>HULL</h3></div>
           <div class='vehicles_G39'>Hull Material</div>
@@ -2108,35 +2117,35 @@
           <input name='attr_vehicle-size-points' type='text' class='vehicles_G66 full_width' placeholder='Warthog = 2' />
           <input name='attr_vehicle-weapon-points' type='text' class='vehicles_G67 full_width' placeholder='Warthog = 2' />
 
-          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
           <div class='vehicles_G68'>Shield Rating</div>
-          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
           <div class='vehicles_G69'>Shield Current</div>
-          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
           <div class='vehicles_G70'>Recharge Delay</div>
-          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
           <div class='vehicles_G71'>Recharge Rate</div>
-          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
           <input name='attr_vehicle-shield-rating' type='text' class='vehicles_G72 full_width' />
-          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
           <input name='attr_vehicle-shield-current' type='text' class='vehicles_G73 full_width' />
-          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
           <input name='attr_vehicle-recharge-delay' type='text' class='vehicles_G74 full_width' />
-          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' >
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
           <input name='attr_vehicle-recharge-rate' type='text' class='vehicles_G75 full_width' />
 
           <div class='vehicles_G76 '>
             <div>
-              <input name='attr_aditional_info' type='text' placeholder='Additional Info' class='full_width_49px'>
-              <label class="margin_adjust"><input type="checkbox" name='attr_collapse' value="5" class="collapsible_entity_switch select_button hidden"><span class="select_text ">▼</span></label>
-               <label class="margin_adjust2"><button type="roll" value="@{to-gm}&{template:mythic} {{name=@{aditional_info} }} {{description=@{aditional_info_desc} }}" class="hidden"></button><span class="select_text">🗭</span></label>
+              <input name='attr_aditional_info' type='text' placeholder='Additional Info' class='full_width_49px' />
+              <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='5' class='collapsible_entity_switch select_button hidden' /><span class='select_text '>▼</span></label>
+               <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{aditional_info} }} {{description=@{aditional_info_desc} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
               <input name='attr_collapse' type='checkbox'  value='5' class='collapsible_entity_switch hidden' />
               <textarea name='attr_aditional_info_desc' class='collapsible_entity_block' placeholder='Enter any vehicle-specific rules or other unique information here.'></textarea>
             </div>
             <div>
-              <input name='attr_modifications' type='text' placeholder='Modifications' class='full_width_49px vehicles_descriptor'>
-              <label class="margin_adjust"><input type="checkbox" name='attr_collapse' value="6" class="collapsible_entity_switch select_button hidden"><span class="select_text radius_border_right">▼</span></label>
-               <label class="margin_adjust2"><button type="roll" value="@{to-gm}&{template:mythic} {{name=@{modifications} }} {{description=@{modifications_desc} }}" class="hidden"></button><span class="select_text">🗭</span></label>
+              <input name='attr_modifications' type='text' placeholder='Modifications' class='full_width_49px vehicles_descriptor' />
+              <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='6' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right'>▼</span></label>
+               <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{modifications} }} {{description=@{modifications_desc} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
               <input name='attr_collapse' type='checkbox'  value='6' class='collapsible_entity_switch hidden' />
               <textarea name='attr_modifications_desc' class='collapsible_entity_block description_rounded_margin' placeholder='Vehicles in Halo Mythic can be modified in many ways.  These use a Vehicle’s Weapon Points and Size Points, which are specialized Hardpoints on a Vehicle.  Each Modification takes a specified amount of Weapon and Size Points.
               &#10;Vehicle modifications are classified into five categories; Body, Propulsion, Electronic, Combat, and Miscellaneous.'></textarea>
@@ -2148,52 +2157,52 @@
 
 
       <div class='vehicle_weapons'>
-        <div class="equipment_ranged_weapons">
-          <h3 class="radius_border_top">Vehicle Ranged Weapons</h3>
-          <fieldset name="vehiclerangedweapons" class="repeating_vrangedweapons">
-            <div class="equipment_ranged_weapons_rep">
-              <div class="equipment_ranged_weapons_grid1">
-                <div class="equipment_ranged_weapons_gs1">Name</div>
-                <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_V_R_weapon-name" placeholder='Name'>
-                <div class="equipment_ranged_weapons_gs3">Class</div>
-                <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_V_R_weapon-class" placeholder='class'>
+        <div class='equipment_ranged_weapons'>
+          <h3 class='radius_border_top'>Vehicle Ranged Weapons</h3>
+          <fieldset name='vehiclerangedweapons' class='repeating_vrangedweapons'>
+            <div class='equipment_ranged_weapons_rep'>
+              <div class='equipment_ranged_weapons_grid1'>
+                <div class='equipment_ranged_weapons_gs1'>Name</div>
+                <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_R_weapon-name' placeholder='Name' />
+                <div class='equipment_ranged_weapons_gs3'>Class</div>
+                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_R_weapon-class' placeholder='class' />
               </div>
-              <div class="equipment_ranged_weapons_grid2">
-                <div class="equipment_ranged_weapons_gs5">Range</div>
-                <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_V_R_weapon-range" >
-                <div class="equipment_ranged_weapons_gs7">Dam-roll</div>
-                <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_V_R_weapon-dam-roll" >
-                <div class="equipment_ranged_weapons_gs9">Base</div>
-                <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_V_R_weapon-base" >
-                <div class="equipment_ranged_weapons_gs11">Pierce</div>
-                <input class="equipment_ranged_weapons_gs12 full_width" type="text" value='0' name="attr_V_R_weapon-pierce" >
+              <div class='equipment_ranged_weapons_grid2'>
+                <div class='equipment_ranged_weapons_gs5'>Range</div>
+                <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_R_weapon-range' />
+                <div class='equipment_ranged_weapons_gs7'>Dam-roll</div>
+                <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_R_weapon-dam-roll' />
+                <div class='equipment_ranged_weapons_gs9'>Base</div>
+                <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_R_weapon-base' />
+                <div class='equipment_ranged_weapons_gs11'>Pierce</div>
+                <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_R_weapon-pierce' />
               </div>
-              <div class="equipment_ranged_weapons_grid3">
-                <div class="equipment_ranged_weapons_gs13">Hitmod</div>
-                <input class="equipment_ranged_weapons_gs14 full_width" type="text" value='0' name="attr_V_R_weapon-mod1" >
-                <div class="equipment_ranged_weapons_gs15">Magazine</div>
-                <input class="equipment_ranged_weapons_gs16 full_width" type="text" value='0' name="attr_V_R_weapon-mag" >
-                <div class="equipment_ranged_weapons_gs17">/</div>
-                <input class="equipment_ranged_weapons_gs18 full_width" type="text" value='0' name="attr_V_R_weapon-mag_max" >
+              <div class='equipment_ranged_weapons_grid3'>
+                <div class='equipment_ranged_weapons_gs13'>Hitmod</div>
+                <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_V_R_weapon-mod1' />
+                <div class='equipment_ranged_weapons_gs15'>Magazine</div>
+                <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_V_R_weapon-mag' />
+                <div class='equipment_ranged_weapons_gs17'>/</div>
+                <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_V_R_weapon-mag_max' />
                 <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_R_weapon-name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{V_R_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
                 <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_R_weapon-name}}} {{damage=[[@{V_R_weapon-dam-roll}+@{V_R_weapon-base}]] }} {{pierce=[[@{V_R_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{V_R_ability_r} }}' >DMG</button>
               </div>
-              <div class="equipment_ranged_weapons_grid4">
-                <div class="equipment_ranged_weapons_gs21">RoF</div>
-                <input class="equipment_ranged_weapons_gs22 full_width" type="text" value='0' name="attr_V_R_weapon-semi" >
-                <div class="equipment_ranged_weapons_gs23">/</div>
-                <input class="equipment_ranged_weapons_gs24 full_width" type="text" value='0' name="attr_V_R_weapon-burst" >
-                <div class="equipment_ranged_weapons_gs25">/</div>
-                <input class="equipment_ranged_weapons_gs26 full_width" type="text" value='0' name="attr_V_R_weapon-auto" >
-                <div class="equipment_ranged_weapons_gs27">Reload</div>
-                <input class="equipment_ranged_weapons_gs28 full_width" type="text" name="attr_V_R_weapon-reload" >
-                <div class="equipment_ranged_weapons_gs29">Weight</div>
-                <input class="equipment_ranged_weapons_gs30 full_width" type="text" value='0' name="attr_V_R_weapon-weight" >
+              <div class='equipment_ranged_weapons_grid4'>
+                <div class='equipment_ranged_weapons_gs21'>RoF</div>
+                <input class='equipment_ranged_weapons_gs22 full_width' type='text' value='0' name='attr_V_R_weapon-semi' />
+                <div class='equipment_ranged_weapons_gs23'>/</div>
+                <input class='equipment_ranged_weapons_gs24 full_width' type='text' value='0' name='attr_V_R_weapon-burst' />
+                <div class='equipment_ranged_weapons_gs25'>/</div>
+                <input class='equipment_ranged_weapons_gs26 full_width' type='text' value='0' name='attr_V_R_weapon-auto' />
+                <div class='equipment_ranged_weapons_gs27'>Reload</div>
+                <input class='equipment_ranged_weapons_gs28 full_width' type='text' name='attr_V_R_weapon-reload' />
+                <div class='equipment_ranged_weapons_gs29'>Weight</div>
+                <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_V_R_weapon-weight' />
               </div>
               <div>
                 <input name='attr_V_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
-                <label class="margin_adjust_wep"><input type="checkbox" name='attr_collapse' value="3" class="collapsible_entity_switch select_button hidden"><span class="select_text radius_border_right_wep">▼</span></label>
-                                <label class="margin_adjust_wep2"><button type="roll" value="@{to-gm}&{template:mythic} {{name=@{V_R_ability_r} }} {{description=@{V_R_ability_desc_r} }}" class="hidden"></button><span class="select_text">🗭</span></label>
+                <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+                                <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{V_R_ability_r} }} {{description=@{V_R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
                 <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
                 <textarea name='attr_V_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
               </div>
@@ -2202,42 +2211,42 @@
           </fieldset>
         </div>
 
-        <div class="equipment_melee_weapons">
-          <h3 class="radius_border_top">Vehicle Melee Weapons</h3>
-          <fieldset name="vehiclemeleeweapons" class="repeating_vmeleeweapons">
-            <div class="equipment_ranged_weapons_rep">
-              <div class="equipment_ranged_weapons_grid1">
-                <div class="equipment_ranged_weapons_gs1">Name</div>
-                <input class="equipment_ranged_weapons_gs2 full_width" type="text" name="attr_V_M_weapon-name" placeholder='Name'>
-                <div class="equipment_ranged_weapons_gs3">class</div>
-                <input class="equipment_ranged_weapons_gs4 full_width" type="text" name="attr_V_M_weapon-class" placeholder='Class'>
+        <div class='equipment_melee_weapons'>
+          <h3 class='radius_border_top'>Vehicle Melee Weapons</h3>
+          <fieldset name='vehiclemeleeweapons' class='repeating_vmeleeweapons'>
+            <div class='equipment_ranged_weapons_rep'>
+              <div class='equipment_ranged_weapons_grid1'>
+                <div class='equipment_ranged_weapons_gs1'>Name</div>
+                <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_M_weapon-name' placeholder='Name' />
+                <div class='equipment_ranged_weapons_gs3'>class</div>
+                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_M_weapon-class' placeholder='Class' />
               </div>
-              <div class="equipment_ranged_weapons_grid2">
-                <div class="equipment_ranged_weapons_gs5">Reach</div>
-                <input class="equipment_ranged_weapons_gs6 full_width" type="text" value='0' name="attr_V_M_weapon-range" >
-                <div class="equipment_ranged_weapons_gs7">dam-roll</div>
-                <input class="equipment_ranged_weapons_gs8 full_width" type="text" value='0' name="attr_V_M_weapon-dam-roll" >
-                <div class="equipment_ranged_weapons_gs9">base</div>
-                <input class="equipment_ranged_weapons_gs10 full_width" type="text" value='0' name="attr_V_M_weapon-base" >
-                <div class="equipment_ranged_weapons_gs11">pierce</div>
-                <input class="equipment_ranged_weapons_gs12 full_width" type="text" value='0' name="attr_V_M_weapon-pierce" >
+              <div class='equipment_ranged_weapons_grid2'>
+                <div class='equipment_ranged_weapons_gs5'>Reach</div>
+                <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon-range' />
+                <div class='equipment_ranged_weapons_gs7'>dam-roll</div>
+                <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon-dam-roll' />
+                <div class='equipment_ranged_weapons_gs9'>base</div>
+                <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_M_weapon-base' />
+                <div class='equipment_ranged_weapons_gs11'>pierce</div>
+                <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_M_weapon-pierce' />
               </div>
-              <div class="equipment_melee_weapons_grid3">
-                <div class="equipment_melee_weapons_gs1">Hitmod</div>
-                <input class="equipment_melee_weapons_gs2 full_width" type="text" value='0' name="attr_V_M_weapon-mod1" >
-                <div class="equipment_melee_weapons_gs3">weight</div>
-                <input class="equipment_melee_weapons_gs4 full_width" type="text" value='0' name="attr_V_M_weapon-weight" >
-                <div class="equipment_melee_weapons_gs5">Br pts</div>
-                <input class="equipment_melee_weapons_gs6 full_width" type="text" value='0' name="attr_V_M_weapon-breakpoints" >
-                <div class="equipment_melee_weapons_gs7">/</div>
-                <input class="equipment_melee_weapons_gs8 full_width" type="text" value='0' name="attr_V_M_weapon-breakpoints_max" >
-                <button class="equipment_melee_weapons_gs9 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_M_weapon-name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{V_M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}"' >Hit</button>
-                <button class="equipment_melee_weapons_gs10 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_M_weapon-name}}} {{damage=[[@{V_M_weapon-dam-roll}+@{V_M_weapon-base}]] }} {{pierce=[[@{V_M_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{V_M_ability_r} }}' >DMG</button>
+              <div class='equipment_melee_weapons_grid3'>
+                <div class='equipment_melee_weapons_gs1'>Hitmod</div>
+                <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_V_M_weapon-mod1' />
+                <div class='equipment_melee_weapons_gs3'>weight</div>
+                <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_V_M_weapon-weight' />
+                <div class='equipment_melee_weapons_gs5'>Br pts</div>
+                <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon-breakpoints' />
+                <div class='equipment_melee_weapons_gs7'>/</div>
+                <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon-breakpoints_max' />
+                <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_M_weapon-name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{V_M_weapon-mod1}]]+?{Modifier|0}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
+                <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_M_weapon-name}}} {{damage=[[@{V_M_weapon-dam-roll}+@{V_M_weapon-base}]] }} {{pierce=[[@{V_M_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{V_M_ability_r} }}' >DMG</button>
               </div>
               <div>
                 <input name='attr_V_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
-                <label class="margin_adjust_wep"><input type="checkbox" name='attr_collapse' value="3" class="collapsible_entity_switch select_button hidden"><span class="select_text radius_border_right_wep">▼</span></label>
-                                <label class="margin_adjust_wep2"><button type="roll" value="@{to-gm}&{template:mythic} {{name=@{V_M_ability_r} }} {{description=@{V_M_ability_desc_r} }}" class="hidden"></button><span class="select_text">🗭</span></label>
+                <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+                                <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{V_M_ability_r} }} {{description=@{V_M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
                 <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
                 <textarea name='attr_V_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
               </div>
