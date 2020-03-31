@@ -730,6 +730,8 @@ ______________________________ start of advancements tab _______________________
 }
 .sheet-advancements_end_field { margin-right: 0px }
 
+.sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85; }
+.sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85; }
 .sheet-training {
 	margin: 10px 0px 10px 1.5%;
 	display: grid;
@@ -737,17 +739,23 @@ ______________________________ start of advancements tab _______________________
 	grid-template-areas:
 	't1 t2';
 }
-.sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85; }
-.sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85; }
+
+.sheet-faction_training_grid_g1{grid-area: ft1;}
+.sheet-faction_training_grid_g2{grid-area: ft2;}
+.sheet-faction_training_grid_g3{grid-area: ft3;}
 .sheet-faction_training_grid {
 	font-size: 16px;
-	margin: 2px 10px 0px 10px;
+	margin: 2px 0px 0px 20px;
 	display: grid;
 	grid-template-columns: 50% 50%;
+	grid-template-areas:
+	'ft1 ft2'
+	'ft3 ft3';
 }
+
 .sheet-weapon_training_grid {
 	font-size: 16px;
-	margin: 2px 10px 0px 10px;
+	margin: 2px -5px 0px 25px;
 	display: grid;
 	grid-template-columns: 20% 25% 30% 25%;
 }
