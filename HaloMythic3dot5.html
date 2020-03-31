@@ -242,7 +242,7 @@
     <div class='characteristics_mythic_movement_carry'>
 
       <div class='characteristics2_mythic'>
-        <p class='mythicgs1'><b>Mythic Characteristics</b></p>
+        <p class='mythicgs1'><b>Mythic</b></p>
         <input name='attr_STR_mythic' type='text' value='0' class='mythicgs2 mythicgs_width' />
         <input name='attr_TOU_mythic' type='text' value='0' class='mythicgs3 mythicgs_width' />
         <input name='attr_AGI_mythic' type='text' value='0' class='mythicgs4 mythicgs_width' />
@@ -392,7 +392,7 @@
         </script>
       </div>
       <div class='characteristics2_carry'>
-        <p class='carrygs1 mythicgs_heading'><b>Carrying Capacity</b></p>
+        <p class='carrygs1 mythicgs_heading'><b>Weight Capacity</b></p>
         <input name='attr_carry' type='text' class='carrygs2 mythicgs_width' />
         <input name='attr_lift' type='text' class='carrygs3 mythicgs_width' />
         <input name='attr_push' type='text' class='carrygs4 mythicgs_width' />
@@ -492,7 +492,7 @@
 
           <div class='minimisable_infographic_field2x3 radius_border'>
             <button name='support_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
-            value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>Support Pts</button>
+            value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>SP</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class='minimisable_infographic_g3 full_width' type='text' name='attr_support' value='0' />
             <p class='minimisable_infographic_g4'>Max</p>
@@ -1931,10 +1931,9 @@
       <div class='faction_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Faction Training</h3>
         <div class='faction_training_grid'>
-		  <div><input name='attr_faction_training_human' type='checkbox' />U.N.S.C.</div>
-          <div><input name='attr_faction_training_forerunner' type='checkbox' />Forerunner</div>
-		  <div><input name='attr_faction_training_covenant' type='checkbox' />Covenant</div>
-		  <div style='margin-left: -30%'>Banished</div>
+		  <div class="faction_training_grid_g1"><input name='attr_faction_training_human' type='checkbox'>U.N.S.C.</div>
+      <div class="faction_training_grid_g2"><input name='attr_faction_training_forerunner' type='checkbox'>Forerunner</div>
+		  <div class="faction_training_grid_g3"><input name='attr_faction_training_covenant' type='checkbox'>Covenant / Banished</div>
 		</div>
       </div>
       <div class='weapon_training ssc auto_margin 90width radius_border'>

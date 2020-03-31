@@ -183,37 +183,37 @@ ______________________________ start of grid structure for character information
 
 
 
-.sheet-gs1 { grid-area: ah1;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
-.sheet-gs2 { grid-area: ah2;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
-.sheet-gs3 { grid-area: ah3;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
-.sheet-gs4 { grid-area: ah4;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
-.sheet-gs5 { grid-area: ah5;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
-.sheet-gs6 { grid-area: ah6;    margin-top: 2px;  font-size: 14px;  padding-left: 5px }
-.sheet-gs7 { grid-area: ah7;    width: calc(100%); }
-.sheet-gs8 { grid-area: ah8;    width: calc(100% + 65px); margin-left: -65px ; height: 100%}
-.sheet-gs9 { grid-area: ah9;    width: calc(100% + 30px); margin-left: -30px ;}
-.sheet-gs10 { grid-area: ah10;  width: calc(100% + 78px); margin-left: -78px ;}
-.sheet-gs11 { grid-area: ah11;  width: calc(100% + 37px); margin-left: -37px ;}
-.sheet-gs12 { grid-area: ah12;  width: calc(100% + 20px); margin-left: -20px ;}
-.sheet-gs13 { grid-area: ah13; 	margin: 0px 5px}
-.sheet-gs14 { grid-area: ah14;  width: calc(100% + 25px);}
-.sheet-gs15 { grid-area: ah15;  width: calc(100% + 65px);}
-.sheet-gs16 { grid-area: ah16;  width: calc(100% + 85px);}
-.sheet-gs17 { grid-area: ah17;  width: calc(100% + 35px);}
-.sheet-gs18 { grid-area: ah18;  width: calc(100% + 23px);}
-.sheet-gs19 { grid-area: ah19;  width: calc(100% + 55px);}
-.sheet-gs20 { grid-area: ah20;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
-.sheet-gs21 { grid-area: ah21;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
-.sheet-gs22 { grid-area: ah22;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
-.sheet-gs23 { grid-area: ah23;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
-.sheet-gs24 { grid-area: ah24;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
-.sheet-gs25 { grid-area: ah25;  margin-top: 2px;  font-size: 14px;  padding-right: 5px; text-align: right }
+.sheet-gs1 { grid-area: ah1;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
+.sheet-gs2 { grid-area: ah2;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
+.sheet-gs3 { grid-area: ah3;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
+.sheet-gs4 { grid-area: ah4;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
+.sheet-gs5 { grid-area: ah5;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
+.sheet-gs6 { grid-area: ah6;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
+.sheet-gs7 { grid-area: ah7;    width: calc(100%); text-align: right !important; }
+.sheet-gs8 { grid-area: ah8;    width: calc(100% + 77px); margin-left: -77px ; height: 100%;}
+.sheet-gs9 { grid-area: ah9;    width: calc(100% + 33px); margin-left: -33px ; text-align: right !important; }
+.sheet-gs10 { grid-area: ah10;  width: calc(100% + 97px); margin-left: -97px ; text-align: right !important; }
+.sheet-gs11 { grid-area: ah11;  width: calc(100% + 43px); margin-left: -43px ; text-align: right !important; }
+.sheet-gs12 { grid-area: ah12;  width: calc(100% + 20px); margin-left: -20px ; text-align: right !important; }
+.sheet-gs13 { grid-area: ah13; 	margin: 0px 5px; }
+.sheet-gs14 { grid-area: ah14;  width: calc(100% + 21px); text-align: left !important; }
+.sheet-gs15 { grid-area: ah15;  width: calc(100% + 68px); text-align: left !important; }
+.sheet-gs16 { grid-area: ah16;  width: calc(100% + 86px); text-align: left !important; }
+.sheet-gs17 { grid-area: ah17;  width: calc(100% + 39px); text-align: left !important; }
+.sheet-gs18 { grid-area: ah18;  width: calc(100% + 21px); text-align: left !important; }
+.sheet-gs19 { grid-area: ah19;  width: calc(100% + 54px); text-align: left !important; }
+.sheet-gs20 { grid-area: ah20;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
+.sheet-gs21 { grid-area: ah21;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
+.sheet-gs22 { grid-area: ah22;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
+.sheet-gs23 { grid-area: ah23;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
+.sheet-gs24 { grid-area: ah24;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
+.sheet-gs25 { grid-area: ah25;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
 
 .sheet-header_logo {
 	font-family: Orbitron;
 	letter-spacing: 1px;
 	display: grid;
-	grid-template-columns: 140px auto 123px auto 135px;
+	grid-template-columns: 145px auto 123px auto 135px;
 	grid-template-rows: 30px 30px 30px 30px 30px 30px;
 	grid-template-areas:
 	'ah1 ah7  ah13 ah14 ah20'
@@ -265,17 +265,16 @@ ______________________________ start of grid structure for the mythic characteri
 }
 
 .sheet-mythicgs_width { width: 40px; }
-.sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
-.sheet-mythicgs2 { grid-area: amy2; margin-left: 3px; }
-.sheet-mythicgs3 { grid-area: amy3; margin-left: 3px; }
-.sheet-mythicgs4 { grid-area: amy4; margin-left: 3px; }
-.sheet-mythicgs5 { grid-area: amy5; margin-left: 12px; font-family: Saira Semi Condensed; font-size: 12px; }
-.sheet-mythicgs6 { grid-area: amy6; margin-left: 9px; font-family: Saira Semi Condensed; font-size: 12px; }
-.sheet-mythicgs7 { grid-area: amy7; margin-left: 12px; font-family: Saira Semi Condensed; font-size: 12px; }
+.sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; text-align: center; }
+.sheet-mythicgs2 { grid-area: amy2; z-index: 1; position:relative; }
+.sheet-mythicgs3 { grid-area: amy3; z-index: 1; position:relative; }
+.sheet-mythicgs4 { grid-area: amy4; z-index: 1; position:relative; }
+.sheet-mythicgs5 { grid-area: amy5; font-family: Saira Semi Condensed; font-size: 14px; text-align: center; }
+.sheet-mythicgs6 { grid-area: amy6; font-family: Saira Semi Condensed; font-size: 14px; text-align: center; }
+.sheet-mythicgs7 { grid-area: amy7; font-family: Saira Semi Condensed; font-size: 14px; text-align: center; }
 .sheet-characteristics2_mythic {
-	justify-content: left;
-	margin-left: 5px;
 	display: grid;
+	justify-items: center;
 	grid-template-columns: 50px 50px 50px;
 	grid-template-areas:
 	'amy1 amy1 amy1'
@@ -284,24 +283,25 @@ ______________________________ start of grid structure for the mythic characteri
 }
 
 .sheet-movementgs1 { grid-area: amm1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
-.sheet-movementgs2 { grid-area: amm2; 	margin-left: 6px; }
-.sheet-movementgs3 { grid-area: amm3; 	margin-left: 6px; }
-.sheet-movementgs4 { grid-area: amm4; 	margin-left: 6px; }
-.sheet-movementgs5 { grid-area: amm5; 	margin-left: 6px; }
-.sheet-movementgs6 { grid-area: amm6; 	margin-left: 6px; }
-.sheet-movementgs7 { grid-area: amm7; 	margin-left: 6px; }
-.sheet-movementgs8 { grid-area: amm8; 	margin-left: 6px; }
-.sheet-movementgs9 { grid-area: amm9;   margin-left: 3px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs10 { grid-area: amm10; margin-left: 5px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs11 { grid-area: amm11; margin-left: 5px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs12 { grid-area: amm12; margin-left: 5px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs13 { grid-area: amm13; margin-left: 4px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs14 { grid-area: amm14; margin-left: 4px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs15 { grid-area: amm15; margin-left: 4px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-movementgs2 { grid-area: amm2; 	}
+.sheet-movementgs3 { grid-area: amm3; 	}
+.sheet-movementgs4 { grid-area: amm4; 	}
+.sheet-movementgs5 { grid-area: amm5; 	}
+.sheet-movementgs6 { grid-area: amm6; 	}
+.sheet-movementgs7 { grid-area: amm7; 	}
+.sheet-movementgs8 { grid-area: amm8; 	}
+.sheet-movementgs9 { grid-area: amm9;   3px; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs10 { grid-area: amm10; 5px; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs11 { grid-area: amm11; 5px; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs12 { grid-area: amm12; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs13 { grid-area: amm13; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs14 { grid-area: amm14; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs15 { grid-area: amm15; font-size: 14px; font-family: Saira Semi Condensed; }
 .sheet-characteristics2_movement {
 	justify-content: center;
 	text-align: center;
 	display: grid;
+	justify-items: center;
 	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
 	grid-template-areas:
 	'amm1 amm1  amm1  amm1  amm1  amm1 amm1'
@@ -309,19 +309,19 @@ ______________________________ start of grid structure for the mythic characteri
 	'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
 }
 
-.sheet-carrygs1 { grid-area: ac1; margin-left: 10px; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
-.sheet-carrygs2 { grid-area: ac2; margin-left: 10px; width: 80%; }
-.sheet-carrygs3 { grid-area: ac3; margin-left: 10px; width: 80%; }
-.sheet-carrygs4 { grid-area: ac4; margin-left: 10px; width: 85%; }
-.sheet-carrygs5 { grid-area: ac5; margin-left: 10px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-carrygs6 { grid-area: ac6; margin-left: 11px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-carrygs7 { grid-area: ac7; margin-left: 12px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-carrygs1 { grid-area: ac1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
+.sheet-carrygs2 { grid-area: ac2; width: 50px; }
+.sheet-carrygs3 { grid-area: ac3; width: 50px; }
+.sheet-carrygs4 { grid-area: ac4; width: 50px; }
+.sheet-carrygs5 { grid-area: ac5; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Saira Semi Condensed; }
 .sheet-characteristics2_carry {
 	justify-content: right;
-	margin-right: 5px;
 	text-align: center;
 	display: grid;
-	grid-template-columns: 55px 55px 55px;
+	justify-items: center;
+	grid-template-columns: 60px 60px 60px;
 	grid-template-areas:
 	'ac1 ac1 ac1'
 	'ac2 ac3 ac4'
@@ -421,16 +421,16 @@ ______________________________ start of minimisable infographic ________________
 	grid-template-columns: 100px 100px 100px 100px 185px 185px;
 }
 
-.sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Saira Semi Condensed; font-size: 20px; justify-self: center; width: calc(100% - 6px); }
-.sheet-minimisable_infographic_g2 { grid-area: mi2; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
+.sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Orbitron !important; letter-spacing: 1px; justify-self: center; width: calc(100% - 6px); }
+.sheet-minimisable_infographic_g2 { grid-area: mi2; color:white; justify-self: right; margin-top: 3px; margin-right: 3px; }
 .sheet-minimisable_infographic_g3 { grid-area: mi3; border-right: 1px solid #394C6A; }
-.sheet-minimisable_infographic_g4 { grid-area: mi4; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
+.sheet-minimisable_infographic_g4 { grid-area: mi4; color:white; justify-self: right; margin-top: 3px; margin-right: 3px; }
 .sheet-minimisable_infographic_g5 { grid-area: mi5; border-right: 1px solid #394C6A; border-bottom: 1px solid #394C6A; border-bottom-right-radius: 10px; }
 .sheet-minimisable_infographic_field2x3 {
 	background: #506b95;
 	margin-right: 10px;
 	display: grid;
-	grid-template-columns: 50px 40px;
+	grid-template-columns: 53px 40px;
 	grid-template-rows: 25px 25px 25px;
 	grid-template-areas:
 	'mi1 mi1'
@@ -736,6 +736,8 @@ ______________________________ start of advancements tab _______________________
 }
 .sheet-advancements_end_field { margin-right: 0px }
 
+.sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85; }
+.sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85; }
 .sheet-training {
 	margin: 10px 0px 10px 1.5%;
 	display: grid;
@@ -743,17 +745,23 @@ ______________________________ start of advancements tab _______________________
 	grid-template-areas:
 	't1 t2';
 }
-.sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85; }
-.sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85; }
+
+.sheet-faction_training_grid_g1{grid-area: ft1;}
+.sheet-faction_training_grid_g2{grid-area: ft2;}
+.sheet-faction_training_grid_g3{grid-area: ft3;}
 .sheet-faction_training_grid {
 	font-size: 16px;
-	margin: 2px 10px 0px 10px;
+	margin: 2px 0px 0px 20px;
 	display: grid;
 	grid-template-columns: 50% 50%;
+	grid-template-areas:
+	'ft1 ft2'
+	'ft3 ft3';
 }
+
 .sheet-weapon_training_grid {
 	font-size: 16px;
-	margin: 2px 10px 0px 10px;
+	margin: 2px -5px 0px 25px;
 	display: grid;
 	grid-template-columns: 20% 25% 30% 25%;
 }
