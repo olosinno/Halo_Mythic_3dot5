@@ -189,19 +189,19 @@ ______________________________ start of grid structure for character information
 .sheet-gs4 { grid-area: ah4;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
 .sheet-gs5 { grid-area: ah5;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
 .sheet-gs6 { grid-area: ah6;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
-.sheet-gs7 { grid-area: ah7;    width: calc(100%); }
-.sheet-gs8 { grid-area: ah8;    width: calc(100% + 77px); margin-left: -77px ; height: 100%}
-.sheet-gs9 { grid-area: ah9;    width: calc(100% + 33px); margin-left: -33px ;}
-.sheet-gs10 { grid-area: ah10;  width: calc(100% + 97px); margin-left: -97px ;}
-.sheet-gs11 { grid-area: ah11;  width: calc(100% + 43px); margin-left: -43px ;}
-.sheet-gs12 { grid-area: ah12;  width: calc(100% + 20px); margin-left: -20px ;}
-.sheet-gs13 { grid-area: ah13; 	margin: 0px 5px}
-.sheet-gs14 { grid-area: ah14;  width: calc(100% + 21px);}
-.sheet-gs15 { grid-area: ah15;  width: calc(100% + 68px);}
-.sheet-gs16 { grid-area: ah16;  width: calc(100% + 86px);}
-.sheet-gs17 { grid-area: ah17;  width: calc(100% + 39px);}
-.sheet-gs18 { grid-area: ah18;  width: calc(100% + 21px);}
-.sheet-gs19 { grid-area: ah19;  width: calc(100% + 54px);}
+.sheet-gs7 { grid-area: ah7;    width: calc(100%); text-align: right !important; }
+.sheet-gs8 { grid-area: ah8;    width: calc(100% + 77px); margin-left: -77px ; height: 100%;}
+.sheet-gs9 { grid-area: ah9;    width: calc(100% + 33px); margin-left: -33px ; text-align: right !important; }
+.sheet-gs10 { grid-area: ah10;  width: calc(100% + 97px); margin-left: -97px ; text-align: right !important; }
+.sheet-gs11 { grid-area: ah11;  width: calc(100% + 43px); margin-left: -43px ; text-align: right !important; }
+.sheet-gs12 { grid-area: ah12;  width: calc(100% + 20px); margin-left: -20px ; text-align: right !important; }
+.sheet-gs13 { grid-area: ah13; 	margin: 0px 5px; }
+.sheet-gs14 { grid-area: ah14;  width: calc(100% + 21px); text-align: left !important; }
+.sheet-gs15 { grid-area: ah15;  width: calc(100% + 68px); text-align: left !important; }
+.sheet-gs16 { grid-area: ah16;  width: calc(100% + 86px); text-align: left !important; }
+.sheet-gs17 { grid-area: ah17;  width: calc(100% + 39px); text-align: left !important; }
+.sheet-gs18 { grid-area: ah18;  width: calc(100% + 21px); text-align: left !important; }
+.sheet-gs19 { grid-area: ah19;  width: calc(100% + 54px); text-align: left !important; }
 .sheet-gs20 { grid-area: ah20;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
 .sheet-gs21 { grid-area: ah21;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
 .sheet-gs22 { grid-area: ah22;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
