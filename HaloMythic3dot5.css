@@ -633,21 +633,31 @@ ______________________________ start of equipment tab __________________________
 	'mw11 mw12 mw13 mw14';
 }
 
-.sheet-repeating_gear{
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+.sheet-equipment_gear_gs1{grid-area: eg1; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs2{grid-area: eg2; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs3{grid-area: eg3; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs4{grid-area: eg4; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs5{grid-area: eg5; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs6{grid-area: eg6; width: 100%; text-align: center; align-self: center; }
+.sheet-equipment_gear_gs7{margin-top: 5px !important;}
+.sheet-equipment_gear{
+	display: grid;
+	grid-template-columns: auto 50px 80px 80px 80px 80px 25px ;
+	grid-template-areas:
+	'eg1 eg2 eg3 eg4 eg5 eg6 eg7';
 }
 
-
-.sheet-equipment_numerical_field,
-.sheet-equipment_end_field {
-	margin-right: 20px;
-	width: 100px !important;
+.sheet-equipment_header{
+	background: #394C6A;
+	border: 2px solid #475f85;.
+	border-bottom: none;
+	border-radius: 10px 10px 0px 0px;
+	font-family: Orbitron;
+	font-size: 14px;
+	height: 30px;
+	letter-spacing: 1px;
 }
-.sheet-equipment_end_field { margin-right: 0px }
 
-.sheet-gear_name { width: calc(100% - 408px) }
-.sheet-gear_field { width: 72px }
 
 
 
@@ -729,15 +739,23 @@ ______________________________ start of advancements tab _______________________
 
 
 
-.sheet-advancements_numerical_field,
-.sheet-advancements_end_field {
-	margin-right: 20px;
-	width: 80px !important;
+.sheet-advancements_grid_gs1{grid-area: e1; align-self: center; text-align: center; width: 100%;  }
+.sheet-advancements_grid_gs2{grid-area: e2; align-self: center; text-align: center; width: 100% !important; }
+.sheet-advancements_grid_gs3{grid-area: e3; align-self: center; text-align: center; width: 100% !important; }
+.sheet-advancements_grid_gs4{grid-area: e4; align-self: center; text-align: center; width: 100%; }
+.sheet-advancements_grid_gs5{grid-area: e5; align-self: center; text-align: center; width: 100% !important; }
+.sheet-advancements_grid_gs6{grid-area: e6; align-self: center; text-align: center; width: 100% !important; }
+.sheet-advancements_grid{
+	justify-content: center;
+	display: grid;
+	grid-template-columns: 29% 10% 10% 2% 29% 10% 10% ;
+	grid-template-areas:
+	'e1 e2 e3 e0 e4 e5 e6';
 }
-.sheet-advancements_end_field { margin-right: 0px }
+
 
 .sheet-faction_training { grid-area: t1; padding: 2px; background: #475f85; }
-.sheet-weapon_training { grid-area: t2; padding: 2px; background: #475f85; }
+.sheet-weapon_training {  grid-area: t2; padding: 2px; background: #475f85; }
 .sheet-training {
 	margin: 10px 0px 10px 1.5%;
 	display: grid;
