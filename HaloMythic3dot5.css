@@ -421,16 +421,16 @@ ______________________________ start of minimisable infographic ________________
 	grid-template-columns: 100px 100px 100px 100px 185px 185px;
 }
 
-.sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Saira Semi Condensed; font-size: 20px; justify-self: center; width: calc(100% - 6px); }
-.sheet-minimisable_infographic_g2 { grid-area: mi2; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
+.sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Orbitron !important; letter-spacing: 1px; justify-self: center; width: calc(100% - 6px); }
+.sheet-minimisable_infographic_g2 { grid-area: mi2; color:white; justify-self: right; margin-top: 3px; margin-right: 3px; }
 .sheet-minimisable_infographic_g3 { grid-area: mi3; border-right: 1px solid #394C6A; }
-.sheet-minimisable_infographic_g4 { grid-area: mi4; color:white; font-family: Saira Semi Condensed; justify-self: right; margin-top: 3px; margin-right: 3px; }
+.sheet-minimisable_infographic_g4 { grid-area: mi4; color:white; justify-self: right; margin-top: 3px; margin-right: 3px; }
 .sheet-minimisable_infographic_g5 { grid-area: mi5; border-right: 1px solid #394C6A; border-bottom: 1px solid #394C6A; border-bottom-right-radius: 10px; }
 .sheet-minimisable_infographic_field2x3 {
 	background: #506b95;
 	margin-right: 10px;
 	display: grid;
-	grid-template-columns: 50px 40px;
+	grid-template-columns: 53px 40px;
 	grid-template-rows: 25px 25px 25px;
 	grid-template-areas:
 	'mi1 mi1'
