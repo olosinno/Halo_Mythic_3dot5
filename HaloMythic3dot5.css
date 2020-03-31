@@ -265,17 +265,18 @@ ______________________________ start of grid structure for the mythic characteri
 }
 
 .sheet-mythicgs_width { width: 40px; }
-.sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
-.sheet-mythicgs2 { grid-area: amy2; margin-left: 3px; }
-.sheet-mythicgs3 { grid-area: amy3; margin-left: 3px; }
-.sheet-mythicgs4 { grid-area: amy4; margin-left: 3px; }
-.sheet-mythicgs5 { grid-area: amy5; margin-left: 12px; font-family: Saira Semi Condensed; font-size: 12px; }
-.sheet-mythicgs6 { grid-area: amy6; margin-left: 9px; font-family: Saira Semi Condensed; font-size: 12px; }
-.sheet-mythicgs7 { grid-area: amy7; margin-left: 12px; font-family: Saira Semi Condensed; font-size: 12px; }
+.sheet-mythicgs1 { grid-area: amy1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; text-align: center; }
+.sheet-mythicgs2 { grid-area: amy2; }
+.sheet-mythicgs3 { grid-area: amy3; }
+.sheet-mythicgs4 { grid-area: amy4; }
+.sheet-mythicgs5 { grid-area: amy5; font-family: Saira Semi Condensed; font-size: 14px; text-align: center;}
+.sheet-mythicgs6 { grid-area: amy6; font-family: Saira Semi Condensed; font-size: 14px; text-align: center;}
+.sheet-mythicgs7 { grid-area: amy7; font-family: Saira Semi Condensed; font-size: 14px; text-align: center;}
 .sheet-characteristics2_mythic {
 	justify-content: left;
 	margin-left: 5px;
 	display: grid;
+	  justify-items: center;
 	grid-template-columns: 50px 50px 50px;
 	grid-template-areas:
 	'amy1 amy1 amy1'
@@ -284,24 +285,25 @@ ______________________________ start of grid structure for the mythic characteri
 }
 
 .sheet-movementgs1 { grid-area: amm1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
-.sheet-movementgs2 { grid-area: amm2; 	margin-left: 6px; }
-.sheet-movementgs3 { grid-area: amm3; 	margin-left: 6px; }
-.sheet-movementgs4 { grid-area: amm4; 	margin-left: 6px; }
-.sheet-movementgs5 { grid-area: amm5; 	margin-left: 6px; }
-.sheet-movementgs6 { grid-area: amm6; 	margin-left: 6px; }
-.sheet-movementgs7 { grid-area: amm7; 	margin-left: 6px; }
-.sheet-movementgs8 { grid-area: amm8; 	margin-left: 6px; }
-.sheet-movementgs9 { grid-area: amm9;   margin-left: 3px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs10 { grid-area: amm10; margin-left: 5px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs11 { grid-area: amm11; margin-left: 5px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs12 { grid-area: amm12; margin-left: 5px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs13 { grid-area: amm13; margin-left: 4px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs14 { grid-area: amm14; margin-left: 4px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-movementgs15 { grid-area: amm15; margin-left: 4px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-movementgs2 { grid-area: amm2; 	}
+.sheet-movementgs3 { grid-area: amm3; 	}
+.sheet-movementgs4 { grid-area: amm4; 	}
+.sheet-movementgs5 { grid-area: amm5; 	}
+.sheet-movementgs6 { grid-area: amm6; 	}
+.sheet-movementgs7 { grid-area: amm7; 	}
+.sheet-movementgs8 { grid-area: amm8; 	}
+.sheet-movementgs9 { grid-area: amm9;   3px; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs10 { grid-area: amm10; 5px; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs11 { grid-area: amm11; 5px; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs12 { grid-area: amm12; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs13 { grid-area: amm13; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs14 { grid-area: amm14; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-movementgs15 { grid-area: amm15; font-size: 14px; font-family: Saira Semi Condensed; }
 .sheet-characteristics2_movement {
 	justify-content: center;
 	text-align: center;
 	display: grid;
+	  justify-items: center;
 	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
 	grid-template-areas:
 	'amm1 amm1  amm1  amm1  amm1  amm1 amm1'
@@ -309,19 +311,20 @@ ______________________________ start of grid structure for the mythic characteri
 	'amm9 amm10 amm11 amm12 amm13 amm14 amm15';
 }
 
-.sheet-carrygs1 { grid-area: ac1; margin-left: 10px; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
-.sheet-carrygs2 { grid-area: ac2; margin-left: 10px; width: 80%; }
-.sheet-carrygs3 { grid-area: ac3; margin-left: 10px; width: 80%; }
-.sheet-carrygs4 { grid-area: ac4; margin-left: 10px; width: 85%; }
-.sheet-carrygs5 { grid-area: ac5; margin-left: 10px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-carrygs6 { grid-area: ac6; margin-left: 11px; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-carrygs7 { grid-area: ac7; margin-left: 12px; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-carrygs1 { grid-area: ac1; font-size: 15px; font-family: Orbitron; letter-spacing: 1px; }
+.sheet-carrygs2 { grid-area: ac2; width: 50px; }
+.sheet-carrygs3 { grid-area: ac3; width: 50px; }
+.sheet-carrygs4 { grid-area: ac4; width: 50px; }
+.sheet-carrygs5 { grid-area: ac5; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Saira Semi Condensed; }
 .sheet-characteristics2_carry {
 	justify-content: right;
 	margin-right: 5px;
 	text-align: center;
 	display: grid;
-	grid-template-columns: 55px 55px 55px;
+		  justify-items: center;
+	grid-template-columns: 60px 60px 60px;
 	grid-template-areas:
 	'ac1 ac1 ac1'
 	'ac2 ac3 ac4'
