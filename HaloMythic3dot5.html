@@ -1109,7 +1109,7 @@
 
   <!-- ______________________________ start of tab Equipment ______________________________ -->
 
-  <div class='equipment box'>
+  <div class='equipment box ssc'>
     <div class='equipment_divider'>
       <div class='equipment_ranged_weapons ssc'>
         <h3 class='radius_border_top'>Ranged Weapons</h3>
@@ -1291,7 +1291,6 @@
     <input name='attr_collapse' type='checkbox'  value='7' class='collapsible_entity_switch hidden' />
     <textarea name='attr_gear_desc' class='collapsible_entity_block auto_margin 90width'></textarea>
 
-
     <fieldset name='gear' class='repeating_gear'>
       <div class='equipment_gear'>
         <input name='attr_gear_name_r' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
@@ -1305,6 +1304,29 @@
       <input name='attr_collapse_r' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
       <textarea name='attr_ability_desc_r' class='collapsible_entity_block auto_margin 90width'></textarea>
     </fieldset>
+
+	<div class='armor'>
+	  <div class='armor_stand'>
+	    <img src='https://cdn.discordapp.com/attachments/676016722939084800/694958755967795381/Mark_IV_Schematic.png' width='100%' />
+	  </div>
+	  <div class='armor_permutations ssc auto_margin 90width radius_border'>
+		<h3 class='radius_border_top'>Armor Permutations</h3>
+		<input name='attr_permutation_name' type='text' placeholder='Permutation Name' />
+		<div>
+		  Hardpoints: <input name='attr_hardpoints' type='number' value='2' />
+		  <select class='half_width'>
+			<option value='' selected='selected'>Helmet</option>
+			<option value=''>Chestpiece</option>
+			<option value=''>Arm (Left)</option>
+			<option value=''>Arm (Right)</option>
+			<option value=''>Arms</option>
+			<option value=''>Leg (Left)</option>
+			<option value=''>Leg (Right)</option>
+			<option value=''>Legs</option>
+		  </select>
+		</div>
+	  </div>
+	</div>
   </div>
 
 
@@ -1881,7 +1903,7 @@
 
   <!-- ______________________________ start of tab Advancements ______________________________ -->
 
-  <div class='advancements box'>
+  <div class='advancements box ssc'>
     <!-- Advancements -->
     <script type='text/worker'>
       on('change:xp_total change:advancement_costL change:advancement_costR change:repeating_advancements:advancement_costL_r change:repeating_advancements:advancement_costR_r remove:repeating_advancements', () => {
