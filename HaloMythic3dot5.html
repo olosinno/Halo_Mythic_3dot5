@@ -1124,7 +1124,7 @@
             <div class='equipment_ranged_weapons_grid2'>
               <div class='equipment_ranged_weapons_gs5'>Range</div>
               <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_R_weapon-range' />
-              <div class='equipment_ranged_weapons_gs7'>Dam-roll</div>
+              <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
               <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_R_weapon-dam-roll' />
               <div class='equipment_ranged_weapons_gs9'>Base</div>
               <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_R_weapon-base' />
@@ -1132,7 +1132,7 @@
               <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_R_weapon-pierce' />
             </div>
             <div class='equipment_ranged_weapons_grid3'>
-              <div class='equipment_ranged_weapons_gs13'>Hitmod</div>
+              <div class='equipment_ranged_weapons_gs13'>Hit Mod</div>
               <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_R_weapon-mod1' />
               <div class='equipment_ranged_weapons_gs15'>Magazine</div>
               <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_R_weapon-mag' />
@@ -1172,25 +1172,25 @@
             <div class='equipment_ranged_weapons_grid1'>
               <div class='equipment_ranged_weapons_gs1'>Name</div>
               <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_M_weapon-name' placeholder='Name' />
-              <div class='equipment_ranged_weapons_gs3'>class</div>
+              <div class='equipment_ranged_weapons_gs3'>Class</div>
               <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon-class' placeholder='Class' />
             </div>
             <div class='equipment_ranged_weapons_grid2'>
               <div class='equipment_ranged_weapons_gs5'>Reach</div>
               <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon-range' />
-              <div class='equipment_ranged_weapons_gs7'>dam-roll</div>
+              <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
               <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_M_weapon-dam-roll' />
-              <div class='equipment_ranged_weapons_gs9'>base</div>
+              <div class='equipment_ranged_weapons_gs9'>Base</div>
               <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_M_weapon-base' />
-              <div class='equipment_ranged_weapons_gs11'>pierce</div>
+              <div class='equipment_ranged_weapons_gs11'>Pierce</div>
               <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_M_weapon-pierce' />
             </div>
             <div class='equipment_melee_weapons_grid3'>
-              <div class='equipment_melee_weapons_gs1'>Hitmod</div>
+              <div class='equipment_melee_weapons_gs1'>Hit Mod</div>
               <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_M_weapon-mod1' />
-              <div class='equipment_melee_weapons_gs3'>weight</div>
+              <div class='equipment_melee_weapons_gs3'>Weight</div>
               <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_M_weapon-weight' />
-              <div class='equipment_melee_weapons_gs5'>Br pts</div>
+              <div class='equipment_melee_weapons_gs5'>Br Pts</div>
               <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon-breakpoints' />
               <div class='equipment_melee_weapons_gs7'>/</div>
               <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon-breakpoints_max' />
@@ -1199,18 +1199,18 @@
             </div>
 
             <div class='equipment_melee_weapons_grid4'>
-              <div class='equipment_melee_weapons_gs11'>damage plus strength</div>
+              <div class='equipment_melee_weapons_gs11'>damage plus Strength</div>
               <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon-base-mod'>
                 <option selected='selected' value='0'>None</option>
-                <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>half</option>
-                <option value='[[floor(@{str}/10 + @{str_mythic})]]'>full</option>
+                <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
+                <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
               </select>
 
-              <div class='equipment_melee_weapons_gs13'>pierce plus strength</div>
+              <div class='equipment_melee_weapons_gs13'>pierce plus Strength</div>
               <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon-pierce-mod'>
                 <option selected='selected' value='0'>None</option>
-                <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>half</option>
-                <option value='[[floor(@{str}/10 + @{str_mythic})]]'>full</option>
+                <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
+                <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
               </select>
             </div>
 
@@ -1853,7 +1853,7 @@
           <div class='medical_table radius_border_bottom'>8-10 Right</div>
         </div>
         <div class='medical_background'>
-          <h3 class='radius_border_top'>IF Fingers/Toes (1D10)</h3>
+          <h3 class='radius_border_top'>IF Fingers / Toes 1D10</h3>
           <div class='medical_table'>1-2 Pinky Finger / Toe</div>
           <div class='medical_table'>3-4 Ring Finger / Toe</div>
           <div class='medical_table'>5-6 Middle Finger / Toe</div>
@@ -1947,7 +1947,6 @@
         <input class='advancements_grid_gs6' name='attr_advancement_pg#R_r' type='number' placeholder='Page #' />
       </div>
     </fieldset>
-
 
     <div class='training'>
       <div class='faction_training ssc auto_margin 90width radius_border'>
@@ -2170,7 +2169,6 @@
         <br>
       </fieldset>
 
-
       <div class='vehicle_weapons'>
         <div class='equipment_ranged_weapons'>
           <h3 class='radius_border_top'>Vehicle Ranged Weapons</h3>
@@ -2185,7 +2183,7 @@
               <div class='equipment_ranged_weapons_grid2'>
                 <div class='equipment_ranged_weapons_gs5'>Range</div>
                 <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_R_weapon-range' />
-                <div class='equipment_ranged_weapons_gs7'>Dam-roll</div>
+                <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
                 <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_R_weapon-dam-roll' />
                 <div class='equipment_ranged_weapons_gs9'>Base</div>
                 <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_R_weapon-base' />
@@ -2193,7 +2191,7 @@
                 <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_R_weapon-pierce' />
               </div>
               <div class='equipment_ranged_weapons_grid3'>
-                <div class='equipment_ranged_weapons_gs13'>Hitmod</div>
+                <div class='equipment_ranged_weapons_gs13'>Hit Mod</div>
                 <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_V_R_weapon-mod1' />
                 <div class='equipment_ranged_weapons_gs15'>Magazine</div>
                 <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_V_R_weapon-mag' />
@@ -2233,25 +2231,25 @@
               <div class='equipment_ranged_weapons_grid1'>
                 <div class='equipment_ranged_weapons_gs1'>Name</div>
                 <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_M_weapon-name' placeholder='Name' />
-                <div class='equipment_ranged_weapons_gs3'>class</div>
+                <div class='equipment_ranged_weapons_gs3'>Class</div>
                 <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_M_weapon-class' placeholder='Class' />
               </div>
               <div class='equipment_ranged_weapons_grid2'>
                 <div class='equipment_ranged_weapons_gs5'>Reach</div>
                 <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon-range' />
-                <div class='equipment_ranged_weapons_gs7'>dam-roll</div>
+                <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
                 <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon-dam-roll' />
-                <div class='equipment_ranged_weapons_gs9'>base</div>
+                <div class='equipment_ranged_weapons_gs9'>Base</div>
                 <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_M_weapon-base' />
-                <div class='equipment_ranged_weapons_gs11'>pierce</div>
+                <div class='equipment_ranged_weapons_gs11'>Pierce</div>
                 <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_M_weapon-pierce' />
               </div>
               <div class='equipment_melee_weapons_grid3'>
-                <div class='equipment_melee_weapons_gs1'>Hitmod</div>
+                <div class='equipment_melee_weapons_gs1'>Hit Mod</div>
                 <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_V_M_weapon-mod1' />
-                <div class='equipment_melee_weapons_gs3'>weight</div>
+                <div class='equipment_melee_weapons_gs3'>Weight</div>
                 <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_V_M_weapon-weight' />
-                <div class='equipment_melee_weapons_gs5'>Br pts</div>
+                <div class='equipment_melee_weapons_gs5'>Br Pts</div>
                 <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon-breakpoints' />
                 <div class='equipment_melee_weapons_gs7'>/</div>
                 <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon-breakpoints_max' />
@@ -2280,7 +2278,7 @@
   <div class='settings box'>
     <!-- Settings -->
     <h2>Settings</h2>
-    <h3>race overrides</h3>
+    <h3>Species Overrides</h3>
     <select name='attr_settings_race' class='full_width edge_padding'>
       <option selected='selected' value='0'>Racial Features: N/A </option>
       <option value='1'>Spartan 2 / Spartan 3 / Spartan 4 </option>
@@ -2294,30 +2292,28 @@
     </select>
     <br>
 
-    <h3>initiative overrides</h3>
+    <h3>Initiative Overrides</h3>
     <select name='attr_initmod0' class='full_width edge_padding'>
-      <option selected='selected' value='[[floor'>No tie breaker</option>
+      <option selected='selected' value='[[floor'>No tiebreaker</option>
       <option value='[['>Decimal tiebreaker</option>
       <option value='tiebreaker [[@{AGI_total}]] roll [[floor'>AGI tiebreaker</option>
     </select>
     <br>
 
-    <h3>Auto roll Hit locations</h3>
+    <h3>Auto Roll Hit Locations</h3>
     <select name='attr_settings_hitroll' class='full_width edge_padding'>
-      <option value='{{loc=[[1d100]]}}'selected='selected'>Autoroll hit locations</option>
-      <option  value=' '>Dont auto roll hit locations</option>
+      <option value='{{loc=[[1d100]]}}'selected='selected'>Automatically roll hit locations</option>
+      <option value=' '>Don't automatically roll hit locations</option>
     </select>
     <br>
 
-    <h3>include weapon description in damage roll</h3>
+    <h3>Weapon Description in Damage Roll</h3>
     <select name='attr_settings_weapondescription' class='full_width edge_padding'>
-      <option value=''>include weapon description</option>
-      <option  value=' 'selected='selected'>Dont include weapon description</option>
+      <option value=''>Include weapon description</option>
+      <option value=' 'selected='selected'>Exclude weapon description</option>
     </select>
   </div>
 </div>
-
-
 
 
 
@@ -2330,7 +2326,7 @@
   {{#initiative}}
   <div class="sheet-template-header">{{character}} rolls for Initiative</div>
   <div class="sheet-template-content">
-    <div class="sheet-template-row sheet-template-center mythic_crit">{{initiative}} Degrees of sucess</div>
+    <div class="sheet-template-row sheet-template-center mythic_crit">{{initiative}} Degrees of success</div>
 
   </div>
   {{/initiative}}
@@ -2354,7 +2350,7 @@
 
 
   {{#attack}}
-  <div class="sheet-template-header">{{character}} rolls to attack using their {{weapon}}</div>
+  <div class="sheet-template-header">{{character}} rolls to attack with {{weapon}}</div>
   {{#loc}}<div class="sheet-template-content template-content_top">{{/loc}}
     {{^loc}}<div class="sheet-template-content">{{/loc}}
 
@@ -2374,7 +2370,7 @@
     {{#loc}}
     {{^attack}}<div class="sheet-template-content sheet-template-round">{{/attack}}
       {{#attack}} <div class="sheet-template-content">{{/attack}}
-        <div class="sheet-template-row sheet-template-center sheet-template-break">rolling hit location {{loc}}</div>
+        <div class="sheet-template-row sheet-template-center sheet-template-break">Hit Location {{loc}}</div>
         <div class="sheet-template-row sheet-template-center">
           {{#rollBetween() loc 1 10}}   HEAD:        {{/rollBetween() loc 1 10}}
           {{#rollBetween() loc 1 1}}    01 Neck      {{/rollBetween() loc 1 1}}
@@ -2435,7 +2431,7 @@
 
 
       {{#damage}}
-      <div class="sheet-template-header">{{character}} rolls for damage using their {{weapon}} </div>
+      <div class="sheet-template-header">{{character}} rolls for damage with {{weapon}} </div>
       {{#description}}<div class="sheet-template-content template-content_top">{{/description}}
         {{^description}}<div class="sheet-template-content">  {{/description}}
           <div class="sheet-template-2x2">
