@@ -139,7 +139,15 @@ ______________________________ start of multipurpose or special-use classes such
 	font-family: Saira Semi Condensed;
 }
 
+.sheet-numerical_field {
+	margin-right: 20px;
+	width: 80px !important;
+}
+
+.sheet-end_field { margin-right: 0px }
+
 .sheet-edge_padding { padding: 2px; }
+
 /* full height of containing block */
 .sheet-full_height {height: 100%; }
 /* 40% width of containing block */
@@ -533,7 +541,7 @@ ______________________________ start of equipment tab __________________________
 }
 
 .sheet-equipment_ranged_weapons { grid-area: e1; background:#475f85; border-radius: 10px; padding: 2px; }
-.sheet-equipment_melee_weapons { grid-area: e2; background:#475f85; border-radius: 10px; padding:2px; }
+.sheet-equipment_melee_weapons { grid-area: e2; background:#475f85; border-radius: 10px; padding: 2px; }
 .sheet-equipment_numerics {      grid-area: e3; margin-top: 10px; }
 .sheet-equipment_ranged_weapons_rep { background:#475f85; border:1px solid white; border-radius: 10px; padding: 2px; }
 
@@ -639,7 +647,7 @@ ______________________________ start of equipment tab __________________________
 .sheet-equipment_gear_gs4 { grid-area: eg4; width: 100%; text-align: center; align-self: center; }
 .sheet-equipment_gear_gs5 { grid-area: eg5; width: 100%; text-align: center; align-self: center; }
 .sheet-equipment_gear_gs6 { grid-area: eg6; width: 100%; text-align: center; align-self: center; }
-.sheet-equipment_gear_gs7 { margin-top: 5px !important;}
+.sheet-equipment_gear_gs7 { margin-top: 5px !important; }
 .sheet-equipment_gear {
 	display: grid;
 	grid-template-columns: auto 50px 80px 80px 80px 80px 25px;
