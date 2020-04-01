@@ -666,6 +666,16 @@ ______________________________ start of equipment tab __________________________
 	letter-spacing: 1px;
 }
 
+.sheet-armor_stand { grid-area: t1; padding: 2px; background: #475f85; }
+.sheet-armor_permutations { grid-area: t2; padding: 2px; background: #475f85; }
+.sheet-armor {
+	margin: 10px 0px 10px 1.5%;
+	display: grid;
+	grid-template-columns: 67% 33%;
+	grid-template-areas:
+	't1 t2';
+}
+
 
 
 /* ______________________________ end of equipment tab ______________________________
