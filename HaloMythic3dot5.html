@@ -1974,11 +1974,37 @@
       <div class='faction_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Faction Training</h3>
         <div class='faction_training_grid'>
-          <div class="faction_training_grid_g1"><input name='attr_faction_training_human' type='checkbox'>U.N.S.C.</div>
-          <div class="faction_training_grid_g2"><input name='attr_faction_training_forerunner' type='checkbox'>Forerunner</div>
-          <div class="faction_training_grid_g3"><input name='attr_faction_training_covenant' type='checkbox'>Covenant / Banished</div>
+          <div class="faction_training_grid_g1"><input name='attr_faction_training_human' type='checkbox' value='1'>U.N.S.C.</div>
+          <div class="faction_training_grid_g2"><input name='attr_faction_training_forerunner' type='checkbox' value='1'>Forerunner</div>
+          <div class="faction_training_grid_g3"><input name='attr_faction_training_covenant' type='checkbox' value='1'>Covenant / Banished</div>
         </div>
       </div>
+
+	  <script type='text/worker'>
+		on('change:faction', function() {
+		  getAttrs(['faction'], function(values) {
+			var new_faction = parseInt(values['faction'], 10) || 0;
+			var faction_training_human = parseInt(values['faction_training_human'], 10) || 0;
+			var faction_training_forerunner = parseInt(values['faction_training_forerunner'], 10) || 0;
+			var faction_training_covenant = parseInt(values['faction_training_covenant'], 10) || 0;
+			setAttrs({
+			  faction_training_human: (0),
+			  faction_training_forerunner: (0),
+			  faction_training_covenant: (0)
+			});
+			if (new_faction == 2) {
+			  setAttrs({faction_training_human: 1});
+			}
+			if (new_faction == 4) {
+			  setAttrs({faction_training_forerunner: 1});
+			}
+			if (new_faction == 3 || new_faction == 5) {
+			  setAttrs({faction_training_covenant: 1});
+			}
+		  });
+		});
+	  </script>
+
       <div class='weapon_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Weapon Training</h3>
         <div class='weapon_training_grid'>
