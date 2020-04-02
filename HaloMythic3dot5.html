@@ -1305,7 +1305,88 @@
       <input name='attr_collapse_r' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
       <textarea name='attr_ability_desc_r' class='collapsible_entity_block auto_margin 90width'></textarea>
     </fieldset>
+
+    <div class="equipment_armor_grid">
+      <div class="equipment_armor_gs1 radius_border">
+        <h3 class="radius_border_top">Armor Display</h3>
+        <img src='https://cdn.discordapp.com/attachments/676016722939084800/694958755967795381/Mark_IV_Schematic.png' width='100%' />
+      </div>
+
+      <div class="equipment_armor_gs2 radius_border">
+        <h3 class="radius_border_top">Armor</h3>
+
+        <div>
+          <br>
+          <h3 class="radius_border_top">Head</h3>
+          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+        </div>
+
+        <div>
+          <br>
+          <h3 class="radius_border_top">Chest</h3>
+          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+        </div>
+
+        <div>
+          <br>
+          <h3 class="radius_border_top">L Arm</h3>
+          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+        </div>
+
+        <div>
+          <br>
+          <h3 class="radius_border_top">R Arm</h3>
+          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+        </div>
+
+        <div>
+          <br>
+          <h3 class="radius_border_top">L leg</h3>
+          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+        </div>
+
+        <div>
+          <br>
+          <h3 class="radius_border_top">R Leg</h3>
+          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+        </div>
+      </div>
+
+      <div class="equipment_armor_gs3 radius_border">
+        <h3 class="radius_border_top">Armor Permutations</h3>
+
+        <div>
+          <div class="equipment_permutations_grid">
+            <input class="full_width" type="text" name="attr_permutation_name" placeholder="Name">
+            <input class="full_width" type="text" name="attr_permutation_location" placeholder="Location">
+            <input class="full_width" type="text" name="attr_permutation_hardpoints" placeholder="Pts">
+            <input class="full_width" type="text" name="attr_permutation_page" placeholder="Pg#">
+          </div>
+          <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
+          <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{permutation_name} }} {{description=@{permutation_desc} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+          <input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
+          <textarea name='attr_permutation_desc' class='collapsible_entity_block'></textarea>
+        </div>
+
+        <fieldset name='permutations' class='repeating_permutations'>
+          <div>
+            <div class="equipment_permutations_grid">
+              <input class="full_width" type="text" name="attr_permutation_name_r" placeholder="Name">
+              <input class="full_width" type="text" name="attr_permutation_location_r" placeholder="Location">
+              <input class="full_width" type="text" name="attr_permutation_hardpoints_r" placeholder="Pts">
+              <input class="full_width" type="text" name="attr_permutation_page_r" placeholder="Pg#">
+            </div>
+            <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
+            <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{permutation_name_r} }} {{description=@{permutation_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+            <input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
+            <textarea name='attr_permutation_desc_r' class='collapsible_entity_block'></textarea>
+          </div>
+        </fieldset>
+
+      </div>
+    </div>
   </div>
+
 
 
 
