@@ -426,7 +426,7 @@ ______________________________ start of minimisable infographic ________________
 
 .sheet-minimisable_infographic_grid {
 	display: grid;
-	grid-template-columns: 100px 100px 100px 100px 185px 185px;
+	grid-template-columns: 103px 103px 103px 103px 185px 185px;
 }
 
 .sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Orbitron !important; letter-spacing: 1px; justify-self: center; width: calc(100% - 6px); }
@@ -666,14 +666,22 @@ ______________________________ start of equipment tab __________________________
 	letter-spacing: 1px;
 }
 
-.sheet-armor_stand { grid-area: t1; padding: 2px; background: #475f85; }
-.sheet-armor_permutations { grid-area: t2; padding: 2px; background: #475f85; }
-.sheet-armor {
-	margin: 10px 0px 10px 1.5%;
+.sheet-equipment_armor_input{width: 100%; height:50px;}
+.sheet-equipment_armor_gs1{	background: #475f85; padding: 2px; }
+.sheet-equipment_armor_gs2{	background: #475f85; padding: 2px; }
+.sheet-equipment_armor_gs3{ background: #475f85; padding: 2px; }
+.sheet-equipment_armor_grid{
 	display: grid;
-	grid-template-columns: 67% 33%;
-	grid-template-areas:
-	't1 t2';
+	  grid-gap: 10px;
+	grid-template-columns: 300px 90px auto;
+}
+
+.sheet-equipment_permutations_grid{
+	position: relative;
+	z-index: 0;
+	margin:0px 50.5px 0.6px 0px;
+	display: grid;
+	grid-template-columns: auto 100px 35px 35px;
 }
 
 
