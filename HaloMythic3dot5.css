@@ -179,6 +179,10 @@ ______________________________ start of multipurpose or special-use classes such
 	border-top-left-radius: 9px;
 	border-top-right-radius: 9px;
 }
+.sheet-radius_border_box {
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
 .sheet-description_rounded_margin {
 	margin-bottom: 0px;
 	border-radius: 0px 0px 8px 8px;
