@@ -673,7 +673,7 @@ ______________________________ start of equipment tab __________________________
 .sheet-equipment_armor_grid{
 	display: grid;
 	  grid-gap: 10px;
-	grid-template-columns: 300px 100px auto;
+	grid-template-columns: 300px 90px auto;
 }
 
 .sheet-equipment_permutations_grid{
@@ -681,7 +681,7 @@ ______________________________ start of equipment tab __________________________
 	z-index: 0;
 	margin:0px 50.5px 0.6px 0px;
 	display: grid;
-	grid-template-columns: auto 100px 30px 40px;
+	grid-template-columns: auto 100px 35px 35px;
 }
 
 
