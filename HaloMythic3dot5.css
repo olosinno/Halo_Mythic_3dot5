@@ -426,7 +426,7 @@ ______________________________ start of minimisable infographic ________________
 
 .sheet-minimisable_infographic_grid {
 	display: grid;
-	grid-template-columns: 100px 100px 100px 100px 185px 185px;
+	grid-template-columns: 103px 103px 103px 103px 185px 185px;
 }
 
 .sheet-minimisable_infographic_g1 { grid-area: mi1; background:#394C6A !important; border: 0px solid transparent; font-family: Orbitron !important; letter-spacing: 1px; justify-self: center; width: calc(100% - 6px); }
