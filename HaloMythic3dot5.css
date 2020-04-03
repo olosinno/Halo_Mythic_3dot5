@@ -114,7 +114,7 @@ ______________________________ start of multipurpose or special-use classes such
 }
 
 .sheet-input_char_background {
-	margin-top: -5px !important;
+	margin-top: -6px !important;
 	margin-bottom: -4px !important;
 	width: 50px;
 }
@@ -225,7 +225,7 @@ ______________________________ start of grid structure for character information
 	font-family: Orbitron;
 	letter-spacing: 1px;
 	display: grid;
-	grid-template-columns: 145px auto 123px auto 135px;
+	grid-template-columns: 145px auto 123px auto 145px;
 	grid-template-rows: 30px 30px 30px 30px 30px 30px;
 	grid-template-areas:
 	'ah1 ah7  ah13 ah14 ah20'
@@ -245,15 +245,16 @@ ______________________________ start of structure for characteristics __________
 
 .sheet-characteristics_background {
 	background: black;
+	padding: 3px 0px 2px 3px;
 	display: grid;
-	grid-column-gap: 10px;
-	grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+	grid-column-gap: 1%;
+	grid-template-columns: 9.1% 9.1% 9.1% 9.1% 9.1% 9.1% 9.1% 9.1% 9.1% 9.1%;
 	grid-template-rows: 30px 40px 30px;
 }
 
 .sheet-characteristics_button {
-	margin-left: 1px!important;
-	width: 90%;
+	margin-left: -0.1%!important;
+	width: calc(100% - 8px);
 }
 .sheet-characteristics_input { font-size: 30px; }
 
