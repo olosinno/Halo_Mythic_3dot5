@@ -13,11 +13,11 @@
 
       <!-- first column of grid: left-side fields' labels/names -->
       <div class='gs1'><b>Character Name</b></div>
-      <div class='gs2'><b>Faction</b></div>
-      <div class='gs3'><b>Soldier Type</b></div>
-      <div class='gs4'><b>Rank</b></div>
-      <div class='gs5'><b>Build / Size</b></div>
-      <div class='gs6'><b>Specialisation</b></div>
+      <div class='gs2 edge_padding'><b>Faction</b></div>
+      <div class='gs3 edge_padding'><b>Soldier Type</b></div>
+      <div class='gs4 edge_padding'><b>Rank</b></div>
+      <div class='gs5 edge_padding'><b>Build / Size</b></div>
+      <div class='gs6 edge_padding'><b>Specialisation</b></div>
       <!-- second column of grid: left-side fields -->
       <input name='attr_character_name' type='text' class='gs7' />
       <select name='attr_faction' class='gs8'>
@@ -56,12 +56,12 @@
       <input name='attr_environment' type='text' class='gs18' />
       <input name='attr_lifestyle' type='text' class='gs19' />
       <!-- fifth column of grid: right-side fields' labels/names -->
-      <div class='gs20'><b>Player Name</b></div>
-      <div class='gs21'><b>Gender</b></div>
-      <div class='gs22'><b>Race</b></div>
-      <div class='gs23'><b>Upbringing</b></div>
-      <div class='gs24'><b>Environment</b></div>
-      <div class='gs25'><b>Lifestyle</b></div>
+      <div class='gs20 edge_padding'><b>Player Name</b></div>
+      <div class='gs21 edge_padding'><b>Gender</b></div>
+      <div class='gs22 edge_padding'><b>Race</b></div>
+      <div class='gs23 edge_padding'><b>Upbringing</b></div>
+      <div class='gs24 edge_padding'><b>Environment</b></div>
+      <div class='gs25 edge_padding'><b>Lifestyle</b></div>
 
     </div>
     <br>
@@ -70,167 +70,130 @@
 
     <!-- ______________________________ characteristics grid ______________________________ -->
 
-    <div class='characteristics_background'>
+    <div class='characteristics_background edge_padding'>
 
-      <div>
-        <div class='characteristics'><button name='STR' type='roll' class='clear'
+		<button name='STR' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Strength}} {{roll=[[floor(([[@{STR} + @{STR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
           STR |<input name='attr_STR_total' value='@{STR} + @{STR_advancement}' class='input_background input_char_background' disabled /></button>
-        </div>
-        <div class='characteristics'><input name='attr_STR' type='text' value='0' /></div>
-        <select name='attr_STR_advancement' class='full_width'>
-          <option value='0' selected='selected'>None +0</option>
-          <option value='5'>S +5</option>
-          <option value='10'>R +10</option>
-          <option value='15'>I +15</option>
-          <option value='20'>T +20</option>
-          <option value='25'>M +25</option>
-        </select>
-      </div>
-
-      <div>
-        <div class='characteristics'><button name='TOU' type='roll' class='clear'
+        <button name='TOU' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Toughness}} {{roll=[[floor(([[@{TOU} + @{TOU_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
           TOU |<input name='attr_TOU_total' value='@{TOU} + @{TOU_advancement}' class='input_background input_char_background' disabled /></button>
-        </div>
-        <div class='characteristics'><input name='attr_TOU' type='text' value='0' /></div>
-        <select name='attr_TOU_advancement' class='full_width'>
-          <option value='0' selected='selected'>None +0</option>
-          <option value='5'>S +5</option>
-          <option value='10'>R +10</option>
-          <option value='15'>I +15</option>
-          <option value='20'>T +20</option>
-          <option value='25'>M +25</option>
-        </select>
-      </div>
-
-      <div>
-        <div class='characteristics'><button name='AGI'  type='roll' class='clear'
+        <button name='AGI'  type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Agility}} {{roll=[[floor(([[@{AGI} + @{AGI_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
           AGI |<input name='attr_AGI_total' value='@{AGI} + @{AGI_advancement}' class='input_background input_char_background' disabled /></button>
-        </div>
-        <div class='characteristics'><input name='attr_AGI' type='text' value='0' /></div>
-        <select name='attr_AGI_advancement' class='full_width'>
-          <option value='0' selected='selected'>None +0</option>
-          <option value='5'>S +5</option>
-          <option value='10'>R +10</option>
-          <option value='15'>I +15</option>
-          <option value='20'>T +20</option>
-          <option value='25'>M +25</option>
-        </select>
-      </div>
-
-      <div>
-        <div class='characteristics'><button name='WFR' type='roll' class='clear'
+        <button name='WFR' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Warfare Ranged}} {{roll=[[floor(([[@{WFR} + @{WFR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
           WFR |<input name='attr_WFR_total' value='@{WFR} + @{WFR_advancement}' class='input_background input_char_background' disabled /></button>
-        </div>
-        <div class='characteristics'><input name='attr_WFR' type='text' value='0' /></div>
-        <select name='attr_WFR_advancement' class='full_width'>
-          <option value='0' selected='selected'>None +0</option>
-          <option value='5'>S +5</option>
-          <option value='10'>R +10</option>
-          <option value='15'>I +15</option>
-          <option value='20'>T +20</option>
-          <option value='25'>M +25</option>
-        </select>
-      </div>
-
-      <div>
-        <div class='characteristics'><button name='WFM' type='roll' class='clear'
+        <button name='WFM' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Warfare Melee}} {{roll=[[floor(([[@{WFM} + @{WFM_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
           WFM |<input name='attr_WFM_total' value='@{WFM} + @{WFM_advancement}' class='input_background input_char_background' disabled /></button>
-        </div>
-        <div class='characteristics'><input name='attr_WFM' type='text' value='0' /></div>
-        <select name='attr_WFM_advancement' class='full_width'>
-          <option value='0' selected='selected'>None +0</option>
-          <option value='5'>S +5</option>
-          <option value='10'>R +10</option>
-          <option value='15'>I +15</option>
-          <option value='20'>T +20</option>
-          <option value='25'>M +25</option>
-        </select>
-      </div>
-
-      <div>
-        <div class='characteristics'><button name='INT' type='roll' class='clear'
+        <button name='INT' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Inteligence}} {{roll=[[floor(([[@{INT} + @{INT_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
           INT |<input name='attr_INT_total' value='@{INT} + @{INT_advancement}' class='input_background input_char_background' disabled /></button>
-        </div>
-        <div class='characteristics'><input name='attr_INT' type='text' value='0' /></div>
-        <select name='attr_INT_advancement' class='full_width'>
-          <option value='0' selected='selected'>None +0</option>
-          <option value='5'>S +5</option>
-          <option value='10'>R +10</option>
-          <option value='15'>I +15</option>
-          <option value='20'>T +20</option>
-          <option value='25'>M +25</option>
-        </select>
-      </div>
-
-      <div>
-        <div class='characteristics'><button name='PER' type='roll' class='clear'
+        <button name='PER' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Perception}} {{roll=[[floor(([[@{PER} + @{PER_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
           PER |<input name='attr_PER_total' value='@{PER} + @{PER_advancement}' class='input_background input_char_background' disabled /></button>
-        </div>
-        <div class='characteristics'><input name='attr_PER' type='text' value='0' /></div>
-        <select name='attr_PER_advancement' class='full_width'>
-          <option value='0' selected='selected'>None +0</option>
-          <option value='5'>S +5</option>
-          <option value='10'>R +10</option>
-          <option value='15'>I +15</option>
-          <option value='20'>T +20</option>
-          <option value='25'>M +25</option>
-        </select>
-      </div>
-
-      <div>
-        <div class='characteristics'><button name='CR' type='roll' class='clear'
+        <button name='CR' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Courage}} {{roll=[[floor(([[@{CR} + @{CR_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
           CR |<input name='attr_CR_total' value='@{CR} + @{CR_advancement}' class='input_background input_char_background' disabled /></button>
-        </div>
-        <div class='characteristics'><input name='attr_CR' type='text' value='0' /></div>
-        <select name='attr_CR_advancement' class='full_width'>
-          <option value='0' selected='selected'>None +0</option>
-          <option value='5'>S +5</option>
-          <option value='10'>R +10</option>
-          <option value='15'>I +15</option>
-          <option value='20'>T +20</option>
-          <option value='25'>M +25</option>
-        </select>
-      </div>
-
-      <div>
-        <div class='characteristics'><button name='CH' type='roll' class='clear'
+        <button name='CH' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Charisma}} {{roll=[[floor(([[@{CH} + @{CH_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
           CH |<input name='attr_CH_total' value='@{CH} + @{CH_advancement}' class='input_background input_char_background' disabled /></button>
-        </div>
-        <div class='characteristics'><input name='attr_CH' type='text' value='0' /></div>
-        <select name='attr_CH_advancement' class='full_width'>
-          <option value='0' selected='selected'>None +0</option>
-          <option value='5'>S +5</option>
-          <option value='10'>R +10</option>
-          <option value='15'>I +15</option>
-          <option value='20'>T +20</option>
-          <option value='25'>M +25</option>
-        </select>
-      </div>
-
-      <div>
-        <div class='characteristics'><button name='LD' type='roll' class='clear'
+        <button name='LD' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Leadership}} {{roll=[[floor(([[@{LD} + @{LD_advancement} + ?{Modifier|0}]] - 1d100)/10)]]}}'>
           LD |<input name='attr_LD_total' value='@{LD} + @{LD_advancement}' class='input_background input_char_background' disabled /></button>
-        </div>
-        <div class='characteristics'><input name='attr_LD' type='text' value='0' /></div>
-        <select name='attr_LD_advancement' class='full_width'>
-          <option value='0' selected='selected'>None +0</option>
-          <option value='5'>S +5</option>
-          <option value='10'>R +10</option>
-          <option value='15'>I +15</option>
-          <option value='20'>T +20</option>
-          <option value='25'>M +25</option>
-        </select>
-      </div>
+
+	  <input name='attr_STR' type='text' value='0' class='characteristics_input full_width' />
+	  <input name='attr_TOU' type='text' value='0' class='characteristics_input full_width' />
+	  <input name='attr_AGI' type='text' value='0' class='characteristics_input full_width' />
+	  <input name='attr_WFR' type='text' value='0' class='characteristics_input full_width' />
+	  <input name='attr_WFM' type='text' value='0' class='characteristics_input full_width' />
+	  <input name='attr_INT' type='text' value='0' class='characteristics_input full_width' />
+	  <input name='attr_PER' type='text' value='0' class='characteristics_input full_width' />
+	  <input name='attr_CR' type='text' value='0' class='characteristics_input full_width' />
+	  <input name='attr_CH' type='text' value='0' class='characteristics_input full_width' />
+	  <input name='attr_LD' type='text' value='0' class='characteristics_input full_width' />
+
+	  <select name='attr_STR_advancement' class='full_width'>
+		<option value='0' selected='selected'>None +0</option>
+		<option value='5'>S +5</option>
+		<option value='10'>R +10</option>
+		<option value='15'>I +15</option>
+		<option value='20'>T +20</option>
+		<option value='25'>M +25</option>
+	  </select>
+        <select name='attr_TOU_advancement' class='full_width'>
+		<option value='0' selected='selected'>None +0</option>
+		<option value='5'>S +5</option>
+		<option value='10'>R +10</option>
+		<option value='15'>I +15</option>
+		<option value='20'>T +20</option>
+		<option value='25'>M +25</option>
+	  </select>
+	  <select name='attr_AGI_advancement' class='full_width'>
+		<option value='0' selected='selected'>None +0</option>
+		<option value='5'>S +5</option>
+		<option value='10'>R +10</option>
+		<option value='15'>I +15</option>
+		<option value='20'>T +20</option>
+		<option value='25'>M +25</option>
+	  </select>
+	  <select name='attr_WFR_advancement' class='full_width'>
+		<option value='0' selected='selected'>None +0</option>
+		<option value='5'>S +5</option>
+		<option value='10'>R +10</option>
+		<option value='15'>I +15</option>
+		<option value='20'>T +20</option>
+		<option value='25'>M +25</option>
+	  </select>
+	  <select name='attr_WFM_advancement' class='full_width'>
+		<option value='0' selected='selected'>None +0</option>
+		<option value='5'>S +5</option>
+		<option value='10'>R +10</option>
+		<option value='15'>I +15</option>
+		<option value='20'>T +20</option>
+		<option value='25'>M +25</option>
+	  </select>
+	  <select name='attr_INT_advancement' class='full_width'>
+		<option value='0' selected='selected'>None +0</option>
+		<option value='5'>S +5</option>
+		<option value='10'>R +10</option>
+		<option value='15'>I +15</option>
+		<option value='20'>T +20</option>
+		<option value='25'>M +25</option>
+	  </select>
+	  <select name='attr_PER_advancement' class='full_width'>
+		<option value='0' selected='selected'>None +0</option>
+		<option value='5'>S +5</option>
+		<option value='10'>R +10</option>
+		<option value='15'>I +15</option>
+		<option value='20'>T +20</option>
+		<option value='25'>M +25</option>
+	  </select>
+	  <select name='attr_CR_advancement' class='full_width'>
+		<option value='0' selected='selected'>None +0</option>
+		<option value='5'>S +5</option>
+		<option value='10'>R +10</option>
+		<option value='15'>I +15</option>
+		<option value='20'>T +20</option>
+		<option value='25'>M +25</option>
+	  </select>
+	  <select name='attr_CH_advancement' class='full_width'>
+		<option value='0' selected='selected'>None +0</option>
+		<option value='5'>S +5</option>
+		<option value='10'>R +10</option>
+		<option value='15'>I +15</option>
+		<option value='20'>T +20</option>
+		<option value='25'>M +25</option>
+	  </select>
+	  <select name='attr_LD_advancement' class='full_width'>
+		<option value='0' selected='selected'>None +0</option>
+		<option value='5'>S +5</option>
+		<option value='10'>R +10</option>
+		<option value='15'>I +15</option>
+		<option value='20'>T +20</option>
+		<option value='25'>M +25</option>
+	  </select>
 
     </div>
     <br>
