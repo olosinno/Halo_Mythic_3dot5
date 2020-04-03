@@ -246,23 +246,16 @@ ______________________________ start of structure for characteristics __________
 .sheet-characteristics_background {
 	background: black;
 	display: grid;
-	grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+	grid-column-gap: 10px;
+	grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+	grid-template-rows: 30px 40px 30px;
 }
 
-.sheet-characteristics {
-	margin-left: -9.5%;
-	text-align: center;
-	width: 120%;
+.sheet-characteristics_button {
+	margin-left: 1px!important;
+	width: 90%;
 }
-
-/* Select those buttons of class characteristics and type roll, those buttons of class characteristics and type text */
-.sheet-characteristics button[type='roll'],
-.sheet-characteristics input[type='text'] { width: 75%; }
-
-.sheet-characteristics input[type='text'] {
-	font-size: 30px;
-	height: 40px;
-}
+.sheet-characteristics_input { font-size: 30px; }
 
 
 
