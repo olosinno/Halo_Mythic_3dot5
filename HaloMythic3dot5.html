@@ -1082,8 +1082,8 @@
             <div class='equipment_ranged_weapons_grid1'>
               <div class='equipment_ranged_weapons_gs1'>Name</div>
               <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_R_weapon-name' placeholder='Name' />
-              <div class='equipment_ranged_weapons_gs3'>Class</div>
-              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_R_weapon-class' placeholder='Class' />
+              <div class='equipment_ranged_weapons_gs3'>Type</div>
+              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_R_weapon-class' placeholder='Class of Weapon' />
             </div>
             <div class='equipment_ranged_weapons_grid2'>
               <div class='equipment_ranged_weapons_gs5'>Range</div>
@@ -1122,7 +1122,7 @@
               <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
               <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{R_ability_r} }} {{description=@{R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
               <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
-              <textarea name='attr_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
+              <textarea name='attr_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin' placeholder='Weapon Attachment: Benefit, Type Mount, Restriction, etc.'></textarea>
             </div>
           </div>
           <hr>
@@ -1136,8 +1136,8 @@
             <div class='equipment_ranged_weapons_grid1'>
               <div class='equipment_ranged_weapons_gs1'>Name</div>
               <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_M_weapon-name' placeholder='Name' />
-              <div class='equipment_ranged_weapons_gs3'>Class</div>
-              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon-class' placeholder='Class' />
+              <div class='equipment_ranged_weapons_gs3'>Type</div>
+              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon-class' placeholder='Class of Weapon' />
             </div>
             <div class='equipment_ranged_weapons_grid2'>
               <div class='equipment_ranged_weapons_gs5'>Reach</div>
@@ -1183,7 +1183,7 @@
               <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
               <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{M_ability_r} }} {{description=@{M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
               <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
-              <textarea name='attr_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
+              <textarea name='attr_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin' placeholder='Weapon Modification e.g. Gravity Hammer Crushing thruster'></textarea>
             </div>
           </div>
           <hr>
@@ -1199,18 +1199,21 @@
     <br>
 
     <script type='text/worker'>
-      on('change:gear_cost change:repeating_gear:gear_cost_r remove:repeating_gear', () => {
+      on('change:gear_cost change:repeating_gear:gear_cost_r change:gear_quantity change:repeating_gear:gear_quantity_r remove:repeating_gear', () => {
         // get section IDs because of operation both inside and outside of fieldset
         getSectionIDs(`repeating_gear`, idArray => {
-          const fieldnames = [];
-          idArray.forEach(id => fieldnames.push (`repeating_gear_${id}_gear_cost_r`));
+          const fieldset_cost = [];
+		  const fieldset_quantity = [];
+          idArray.forEach(id => fieldset_cost.push (`repeating_gear_${id}_gear_cost_r`));
+          idArray.forEach(id => fieldset_cost.push (`repeating_gear_${id}_gear_quantity_r`));
           // spread operator to get every array value
-          getAttrs(['credit_total', 'gear_cost', ...fieldnames], v => {
+          getAttrs(['credit_total', 'gear_cost', 'gear_quantity', ...fieldset_cost, ...fieldset_quantity], v => {
             const getValue = (id, field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
             const total = parseFloat(v.credit_total) || 0
-            const cost = parseFloat(v.gear_cost) || 0
+			const initial = parseFloat(v.gear_cost) * parseFloat(v.gear_quantity)
+
             const cost_r = idArray.reduce((total, id) => total + getValue(id, 'gear_cost_r'), 0)
-            setAttrs({credit_total: cost + cost_r});
+            setAttrs({credit_total: initial + cost_r});
           });
         });
       });
@@ -1236,8 +1239,8 @@
 
     <div class='equipment_gear equipment_header'>
       <div class="equipment_gear_gs1">Gear / Item Name</div>
-      <div class="equipment_gear_gs2">Amt</div>
-      <div class="equipment_gear_gs3">cR value</div>
+      <div class="equipment_gear_gs2">Amount</div>
+      <div class="equipment_gear_gs3">Value</div>
       <div class="equipment_gear_gs4">Weight</div>
       <div class="equipment_gear_gs5">BP</div>
       <div class="equipment_gear_gs6">Page #</div>
@@ -1245,7 +1248,7 @@
 
     <div class='equipment_gear'>
       <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
-      <input name='attr_gear_quantity' type='text' placeholder='Amt' class='equipment_gear_gs2' />
+      <input name='attr_gear_quantity' type='text' value='1' placeholder='Amount' class='equipment_gear_gs2' />
       <input name='attr_gear_cost' type='text' placeholder='cR Value' class='equipment_gear_gs3' />
       <input name='attr_gear_weight' type='text' placeholder='Weight' class='equipment_gear_gs4' />
       <input name='attr_gear_bp' type='text' placeholder='Break Points' class='equipment_gear_gs5' />
@@ -1258,7 +1261,7 @@
     <fieldset name='gear' class='repeating_gear'>
       <div class='equipment_gear'>
         <input name='attr_gear_name_r' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
-        <input name='attr_gear_quantity_r' type='text' placeholder='Amt' class='equipment_gear_gs2' />
+        <input name='attr_gear_quantity_r' type='text' value='1' placeholder='Amount' class='equipment_gear_gs2' />
         <input name='attr_gear_cost_r' type='text' placeholder='cR Value' class='equipment_gear_gs3' />
         <input name='attr_gear_weight_r' type='text' placeholder='Weight' class='equipment_gear_gs4' />
         <input name='attr_gear_bp_r' type='text' placeholder='Break Points' class='equipment_gear_gs5' />
@@ -1324,7 +1327,7 @@
           <div class="equipment_permutations_grid">
             <input class="full_width" type="text" name="attr_permutation_name" placeholder="Name">
             <input class="full_width" type="text" name="attr_permutation_location" placeholder="Location">
-            <input class="full_width" type="text" name="attr_permutation_hardpoints" placeholder="Pts">
+            <input class="full_width" type="text" name="attr_permutation_hardpoints" placeholder="Hpts">
             <input class="full_width" type="text" name="attr_permutation_page" placeholder="Pg#">
           </div>
           <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
@@ -2251,8 +2254,8 @@
               <div class='equipment_ranged_weapons_grid1'>
                 <div class='equipment_ranged_weapons_gs1'>Name</div>
                 <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_R_weapon-name' placeholder='Name' />
-                <div class='equipment_ranged_weapons_gs3'>Class</div>
-                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_R_weapon-class' placeholder='class' />
+                <div class='equipment_ranged_weapons_gs3'>Type</div>
+                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_R_weapon-class' placeholder='Class of Weapon' />
               </div>
               <div class='equipment_ranged_weapons_grid2'>
                 <div class='equipment_ranged_weapons_gs5'>Range</div>
@@ -2299,14 +2302,14 @@
         </div>
 
         <div class='equipment_melee_weapons'>
-          <h3 class='radius_border_top'>Vehicle Melee Weapons</h3>
+          <h3 class='radius_border_top'>Vehicle Melee Weaponry</h3>
           <fieldset name='vehiclemeleeweapons' class='repeating_vmeleeweapons'>
             <div class='equipment_ranged_weapons_rep'>
               <div class='equipment_ranged_weapons_grid1'>
                 <div class='equipment_ranged_weapons_gs1'>Name</div>
                 <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_M_weapon-name' placeholder='Name' />
-                <div class='equipment_ranged_weapons_gs3'>Class</div>
-                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_M_weapon-class' placeholder='Class' />
+                <div class='equipment_ranged_weapons_gs3'>Type</div>
+                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_M_weapon-class' placeholder='Class of Weapon' />
               </div>
               <div class='equipment_ranged_weapons_grid2'>
                 <div class='equipment_ranged_weapons_gs5'>Reach</div>

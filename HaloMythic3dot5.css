@@ -319,9 +319,9 @@ ______________________________ start of grid structure for the mythic characteri
 .sheet-carrygs2 { grid-area: ac2; width: 50px; }
 .sheet-carrygs3 { grid-area: ac3; width: 50px; }
 .sheet-carrygs4 { grid-area: ac4; width: 50px; }
-.sheet-carrygs5 { grid-area: ac5; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-carrygs6 { grid-area: ac6; font-size: 13px; font-family: Saira Semi Condensed; }
-.sheet-carrygs7 { grid-area: ac7; font-size: 13px; font-family: Saira Semi Condensed; }
+.sheet-carrygs5 { grid-area: ac5; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-carrygs6 { grid-area: ac6; font-size: 14px; font-family: Saira Semi Condensed; }
+.sheet-carrygs7 { grid-area: ac7; font-size: 14px; font-family: Saira Semi Condensed; }
 .sheet-characteristics2_carry {
 	justify-content: right;
 	text-align: center;
@@ -650,7 +650,7 @@ ______________________________ start of equipment tab __________________________
 .sheet-equipment_gear_gs7 { margin-top: 5px !important; }
 .sheet-equipment_gear {
 	display: grid;
-	grid-template-columns: auto 50px 80px 80px 80px 80px 25px;
+	grid-template-columns: auto 60px 80px 80px 80px 80px 25px;
 	grid-template-areas:
 	'eg1 eg2 eg3 eg4 eg5 eg6 eg7';
 }
