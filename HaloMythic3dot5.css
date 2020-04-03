@@ -418,7 +418,9 @@ ______________________________ start of minimisable infographic ________________
 
 .sheet-minimisable_infographic_toggles {
 	display: grid;
-	grid-template-columns: 90px 51px auto;
+	grid-column-gap: 10px;
+	grid-template-columns: 81px 51px 78px auto;
+
 }
 
 .sheet-minimisable_infographic_grid {
