@@ -195,12 +195,12 @@ ______________________________ start of grid structure for character information
 
 
 
-.sheet-gs1 { grid-area: ah1;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
-.sheet-gs2 { grid-area: ah2;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
-.sheet-gs3 { grid-area: ah3;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
-.sheet-gs4 { grid-area: ah4;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
-.sheet-gs5 { grid-area: ah5;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
-.sheet-gs6 { grid-area: ah6;    margin-top: 5px;  font-size: 14px;  padding-left: 2px }
+.sheet-gs1 { grid-area: ah1;    margin-top: 5px;  font-size: 14px; padding-left: 2px }
+.sheet-gs2 { grid-area: ah2;    margin-top: 5px;  font-size: 14px; }
+.sheet-gs3 { grid-area: ah3;    margin-top: 5px;  font-size: 14px; }
+.sheet-gs4 { grid-area: ah4;    margin-top: 5px;  font-size: 14px; }
+.sheet-gs5 { grid-area: ah5;    margin-top: 5px;  font-size: 14px; }
+.sheet-gs6 { grid-area: ah6;    margin-top: 5px;  font-size: 14px; }
 .sheet-gs7 { grid-area: ah7;    width: 100%; text-align: center !important; }
 .sheet-gs8 { grid-area: ah8;    width: 100%; height: 100%; }
 .sheet-gs9 { grid-area: ah9;    width: 100%; text-align: center !important; }
@@ -214,12 +214,12 @@ ______________________________ start of grid structure for character information
 .sheet-gs17 { grid-area: ah17;  width: 100%; text-align: center !important; }
 .sheet-gs18 { grid-area: ah18;  width: 100%; text-align: center !important; }
 .sheet-gs19 { grid-area: ah19;  width: 100%; text-align: center !important; }
-.sheet-gs20 { grid-area: ah20;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
-.sheet-gs21 { grid-area: ah21;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
-.sheet-gs22 { grid-area: ah22;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
-.sheet-gs23 { grid-area: ah23;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
-.sheet-gs24 { grid-area: ah24;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
-.sheet-gs25 { grid-area: ah25;  margin-top: 5px;  font-size: 14px;  padding-right: 1px; text-align: right }
+.sheet-gs20 { grid-area: ah20;  margin-top: 5px;  font-size: 14px; text-align: right }
+.sheet-gs21 { grid-area: ah21;  margin-top: 5px;  font-size: 14px; text-align: right }
+.sheet-gs22 { grid-area: ah22;  margin-top: 5px;  font-size: 14px; text-align: right }
+.sheet-gs23 { grid-area: ah23;  margin-top: 5px;  font-size: 14px; text-align: right }
+.sheet-gs24 { grid-area: ah24;  margin-top: 5px;  font-size: 14px; text-align: right }
+.sheet-gs25 { grid-area: ah25;  margin-top: 5px;  font-size: 14px; text-align: right }
 
 .sheet-header_logo {
 	font-family: Orbitron;
@@ -246,23 +246,16 @@ ______________________________ start of structure for characteristics __________
 .sheet-characteristics_background {
 	background: black;
 	display: grid;
-	grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+	grid-column-gap: 10px;
+	grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+	grid-template-rows: 30px 40px 30px;
 }
 
-.sheet-characteristics {
-	margin-left: -9.5%;
-	text-align: center;
-	width: 120%;
+.sheet-characteristics_button {
+	margin-left: 1px!important;
+	width: 90%;
 }
-
-/* Select those buttons of class characteristics and type roll, those buttons of class characteristics and type text */
-.sheet-characteristics button[type='roll'],
-.sheet-characteristics input[type='text'] { width: 75%; }
-
-.sheet-characteristics input[type='text'] {
-	font-size: 30px;
-	height: 40px;
-}
+.sheet-characteristics_input { font-size: 30px; }
 
 
 
@@ -527,7 +520,7 @@ ______________________________ start of core tab ______________________________ 
 
 .sheet-abilities_checkbox_pointer {
 	margin-top: -21px;
-	margin-right: 5px;
+	margin-right: 9px;
 	text-align: right;
 }
 
