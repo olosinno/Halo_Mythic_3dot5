@@ -70,6 +70,7 @@ textarea {
 	background: #394C6A;
 	color: white;
 	font-family: Saira Semi Condensed;
+	font-size: 14px;
 	resize: vertical;
 	width: calc(100% - 10px);
 }
