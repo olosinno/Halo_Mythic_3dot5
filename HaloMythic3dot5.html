@@ -2568,6 +2568,25 @@
 
 
 
+        {{#scatter}}
+        <div class="sheet-template-header">{{character}} scatters by {{scatter}} degrees</div>
+        <div class="sheet-template-content">
+        <div class="sheet-template-row template-center">Distance: {{scatter-range}} meters </div>
+          {{#rollBetween() scatter-direction 1 1}}   <img src="https://cdn.discordapp.com/attachments/676016722939084800/695626925430931556/scatter.png">{{/rollBetween() scatter-direction 1 1}}
+          {{#rollBetween() scatter-direction 2 2}}   <img src="https://cdn.discordapp.com/attachments/676016722939084800/695626925430931556/scatter.png">{{/rollBetween() scatter-direction 2 2}}
+          {{#rollBetween() scatter-direction 3 4}}   <img src="https://cdn.discordapp.com/attachments/676016722939084800/695626925430931556/scatter.png">{{/rollBetween() scatter-direction 3 4}}
+          {{#rollBetween() scatter-direction 5 5}}   <img src="https://cdn.discordapp.com/attachments/676016722939084800/695626925430931556/scatter.png">{{/rollBetween() scatter-direction 5 5}}
+          {{#rollBetween() scatter-direction 6 6}}   <img src="https://cdn.discordapp.com/attachments/676016722939084800/695626925430931556/scatter.png">{{/rollBetween() scatter-direction 6 6}}
+          {{#rollBetween() scatter-direction 7 7}}   <img src="https://cdn.discordapp.com/attachments/676016722939084800/695626925430931556/scatter.png">{{/rollBetween() scatter-direction 7 7}}
+          {{#rollBetween() scatter-direction 8 9}}   <img src="https://cdn.discordapp.com/attachments/676016722939084800/695626925430931556/scatter.png">{{/rollBetween() scatter-direction 8 9}}
+          {{#rollBetween() scatter-direction 10 10}} <img src="https://cdn.discordapp.com/attachments/676016722939084800/695626925430931556/scatter.png">{{/rollBetween() scatter-direction 10 10}}
+
+        </div>
+
+        {{/scatter}}
+
+
+
         {{#2x2}}
         <div class="sheet-template-header">{{character}}: {{name}}</div>
         <div class="sheet-template-content">
