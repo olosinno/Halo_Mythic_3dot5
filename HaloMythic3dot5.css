@@ -667,20 +667,20 @@ ______________________________ start of equipment tab __________________________
 	letter-spacing: 1px;
 }
 
-.sheet-equipment_armor_input{width: 100%; height:50px;}
-.sheet-equipment_armor_gs1{	background: #475f85; padding: 2px; }
-.sheet-equipment_armor_gs2{	background: #475f85; padding: 2px; }
-.sheet-equipment_armor_gs3{ background: #475f85; padding: 2px; }
-.sheet-equipment_armor_grid{
+.sheet-equipment_armor_input { width: 100%; height: 50px; }
+.sheet-equipment_armor_gs1 { background: #475f85; padding: 2px; }
+.sheet-equipment_armor_gs2 { background: #475f85; padding: 2px; }
+.sheet-equipment_armor_gs3 { background: #475f85; padding: 2px; }
+.sheet-equipment_armor_grid {
 	display: grid;
-	  grid-gap: 10px;
+	grid-gap: 10px;
 	grid-template-columns: 300px 90px auto;
 }
 
-.sheet-equipment_permutations_grid{
+.sheet-equipment_permutations_grid {
+	margin: 0px 50.5px 0.6px 0px;
 	position: relative;
 	z-index: 0;
-	margin:0px 50.5px 0.6px 0px;
 	display: grid;
 	grid-template-columns: auto 100px 35px 35px;
 }
