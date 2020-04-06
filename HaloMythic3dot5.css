@@ -969,6 +969,13 @@ the appropriate element is displayed on a 4 all elements are hidden */
 
 /* ______________________________ end of vehicles tab ______________________________
 ______________________________ start of NPC sheet overrides ___________________________________________________________ */
+.sheet-NPC_characteristics_fields{height: 26px !important; font-size: 16px;}
+.sheet-NPC_characteristics_roll{width:calc(100% - 10px); height: 20px !important; font-size: 16px;}
+.sheet-NPC_characteristics{
+	display: grid;
+	grid-template-columns: 60px 40px 40px 10px 60px 40px
+}
+
 
 .sheet-NPC_Faction_override{margin-top: -5px}
 
