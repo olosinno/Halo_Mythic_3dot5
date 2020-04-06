@@ -88,7 +88,7 @@
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Warfare Melee}} {{roll=[[floor(([[@{WFM} + @{WFM_advancement} + @{inlinemod-toggle} - 1d100)/10)]]}}'>
           WFM |<input name='attr_WFM_total' value='@{WFM} + @{WFM_advancement}' class='input_background input_char_background' disabled /></button>
         <button name='INT' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Inteligence}} {{roll=[[floor(([[@{INT} + @{INT_advancement} + @{inlinemod-toggle} - 1d100)/10)]]}}'>
+          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Intelligence}} {{roll=[[floor(([[@{INT} + @{INT_advancement} + @{inlinemod-toggle} - 1d100)/10)]]}}'>
           INT |<input name='attr_INT_total' value='@{INT} + @{INT_advancement}' class='input_background input_char_background' disabled /></button>
         <button name='PER' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Perception}} {{roll=[[floor(([[@{PER} + @{PER_advancement} + @{inlinemod-toggle} - 1d100)/10)]]}}'>
@@ -456,7 +456,7 @@
 
           <div class='minimisable_infographic_field2x3 radius_border'>
             <button name='support_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
-            value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>SP</button>
+            value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>S Pts</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class='minimisable_infographic_g3 full_width' type='text' name='attr_support' value='0' />
             <p class='minimisable_infographic_g4'>Max</p>
