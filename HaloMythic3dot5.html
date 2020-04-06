@@ -1,4 +1,5 @@
-<div class='background_radius'>
+<input type='checkbox' name='attr_npc_sheet' class='collapsible_entity_switch hidden' />
+<div class='background_radius collapsible_entity_toggle'>
   <input name='attr_faction' type='radio' value='1' class='background_switch_1' display=none hidden checked />
   <input name='attr_faction' type='radio' value='2' class='background_switch_2' display=none hidden />
   <input name='attr_faction' type='radio' value='3' class='background_switch_3' display=none hidden />
@@ -72,128 +73,108 @@
 
     <div class='characteristics_background edge_padding'>
 
-		<button name='STR' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Strength}} {{roll=[[floor(([[@{STR} + @{STR_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
-          STR |<input name='attr_STR_total' value='@{STR} + @{STR_advancement}' class='input_background input_char_background' disabled /></button>
-        <button name='TOU' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Toughness}} {{roll=[[floor(([[@{TOU} + @{TOU_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
-          TOU |<input name='attr_TOU_total' value='@{TOU} + @{TOU_advancement}' class='input_background input_char_background' disabled /></button>
-        <button name='AGI'  type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Agility}} {{roll=[[floor(([[@{AGI} + @{AGI_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
-          AGI |<input name='attr_AGI_total' value='@{AGI} + @{AGI_advancement}' class='input_background input_char_background' disabled /></button>
-        <button name='WFR' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Warfare Ranged}} {{roll=[[floor(([[@{WFR} + @{WFR_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
-          WFR |<input name='attr_WFR_total' value='@{WFR} + @{WFR_advancement}' class='input_background input_char_background' disabled /></button>
-        <button name='WFM' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Warfare Melee}} {{roll=[[floor(([[@{WFM} + @{WFM_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
-          WFM |<input name='attr_WFM_total' value='@{WFM} + @{WFM_advancement}' class='input_background input_char_background' disabled /></button>
-        <button name='INT' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Intelligence}} {{roll=[[floor(([[@{INT} + @{INT_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
-          INT |<input name='attr_INT_total' value='@{INT} + @{INT_advancement}' class='input_background input_char_background' disabled /></button>
-        <button name='PER' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Perception}} {{roll=[[floor(([[@{PER} + @{PER_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
-          PER |<input name='attr_PER_total' value='@{PER} + @{PER_advancement}' class='input_background input_char_background' disabled /></button>
-        <button name='CR' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Courage}} {{roll=[[floor(([[@{CR} + @{CR_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
-          CR |<input name='attr_CR_total' value='@{CR} + @{CR_advancement}' class='input_background input_char_background' disabled /></button>
-        <button name='CH' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Charisma}} {{roll=[[floor(([[@{CH} + @{CH_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
-          CH |<input name='attr_CH_total' value='@{CH} + @{CH_advancement}' class='input_background input_char_background' disabled /></button>
-        <button name='LD' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Leadership}} {{roll=[[floor(([[@{LD} + @{LD_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
-          LD |<input name='attr_LD_total' value='@{LD} + @{LD_advancement}' class='input_background input_char_background' disabled /></button>
+      <button name='STR' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Strength}} {{roll=[[floor(([[@{STR} + @{STR_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>STR |<input name='attr_STR_total' value='@{STR} + @{STR_advancement}' class='input_background input_char_background' disabled /></button>
+      <button name='TOU' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Toughness}} {{roll=[[floor(([[@{TOU} + @{TOU_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>TOU |<input name='attr_TOU_total' value='@{TOU} + @{TOU_advancement}' class='input_background input_char_background' disabled /></button>
+      <button name='AGI'  type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Agility}} {{roll=[[floor(([[@{AGI} + @{AGI_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>AGI |<input name='attr_AGI_total' value='@{AGI} + @{AGI_advancement}' class='input_background input_char_background' disabled /></button>
+      <button name='WFR' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Warfare Ranged}} {{roll=[[floor(([[@{WFR} + @{WFR_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>WFR |<input name='attr_WFR_total' value='@{WFR} + @{WFR_advancement}' class='input_background input_char_background' disabled /></button>
+      <button name='WFM' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Warfare Melee}} {{roll=[[floor(([[@{WFM} + @{WFM_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>WFM |<input name='attr_WFM_total' value='@{WFM} + @{WFM_advancement}' class='input_background input_char_background' disabled /></button>
+      <button name='INT' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Intelligence}} {{roll=[[floor(([[@{INT} + @{INT_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>INT |<input name='attr_INT_total' value='@{INT} + @{INT_advancement}' class='input_background input_char_background' disabled /></button>
+      <button name='PER' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Perception}} {{roll=[[floor(([[@{PER} + @{PER_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>PER |<input name='attr_PER_total' value='@{PER} + @{PER_advancement}' class='input_background input_char_background' disabled /></button>
+      <button name='CR' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Courage}} {{roll=[[floor(([[@{CR} + @{CR_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>CR |<input name='attr_CR_total' value='@{CR} + @{CR_advancement}' class='input_background input_char_background' disabled /></button>
+      <button name='CH' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Charisma}} {{roll=[[floor(([[@{CH} + @{CH_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>CH |<input name='attr_CH_total' value='@{CH} + @{CH_advancement}' class='input_background input_char_background' disabled /></button>
+      <button name='LD' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Leadership}} {{roll=[[floor(([[@{LD} + @{LD_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>LD |<input name='attr_LD_total' value='@{LD} + @{LD_advancement}' class='input_background input_char_background' disabled /></button>
 
-	  <input name='attr_STR' type='text' value='0' class='characteristics_input full_width' />
-	  <input name='attr_TOU' type='text' value='0' class='characteristics_input full_width' />
-	  <input name='attr_AGI' type='text' value='0' class='characteristics_input full_width' />
-	  <input name='attr_WFR' type='text' value='0' class='characteristics_input full_width' />
-	  <input name='attr_WFM' type='text' value='0' class='characteristics_input full_width' />
-	  <input name='attr_INT' type='text' value='0' class='characteristics_input full_width' />
-	  <input name='attr_PER' type='text' value='0' class='characteristics_input full_width' />
-	  <input name='attr_CR' type='text' value='0' class='characteristics_input full_width' />
-	  <input name='attr_CH' type='text' value='0' class='characteristics_input full_width' />
-	  <input name='attr_LD' type='text' value='0' class='characteristics_input full_width' />
+      <input name='attr_STR' type='text' value='0' class='characteristics_input full_width' />
+      <input name='attr_TOU' type='text' value='0' class='characteristics_input full_width' />
+      <input name='attr_AGI' type='text' value='0' class='characteristics_input full_width' />
+      <input name='attr_WFR' type='text' value='0' class='characteristics_input full_width' />
+      <input name='attr_WFM' type='text' value='0' class='characteristics_input full_width' />
+      <input name='attr_INT' type='text' value='0' class='characteristics_input full_width' />
+      <input name='attr_PER' type='text' value='0' class='characteristics_input full_width' />
+      <input name='attr_CR' type='text' value='0' class='characteristics_input full_width' />
+      <input name='attr_CH' type='text' value='0' class='characteristics_input full_width' />
+      <input name='attr_LD' type='text' value='0' class='characteristics_input full_width' />
 
-	  <select name='attr_STR_advancement' class='full_width'>
-		<option value='0' selected='selected'>N/A +0</option>
-		<option value='5'>S +5</option>
-		<option value='10'>R +10</option>
-		<option value='15'>I +15</option>
-		<option value='20'>T +20</option>
-		<option value='25'>M +25</option>
-	  </select>
-        <select name='attr_TOU_advancement' class='full_width'>
-		<option value='0' selected='selected'>N/A +0</option>
-		<option value='5'>S +5</option>
-		<option value='10'>R +10</option>
-		<option value='15'>I +15</option>
-		<option value='20'>T +20</option>
-		<option value='25'>M +25</option>
-	  </select>
-	  <select name='attr_AGI_advancement' class='full_width'>
-		<option value='0' selected='selected'>N/A +0</option>
-		<option value='5'>S +5</option>
-		<option value='10'>R +10</option>
-		<option value='15'>I +15</option>
-		<option value='20'>T +20</option>
-		<option value='25'>M +25</option>
-	  </select>
-	  <select name='attr_WFR_advancement' class='full_width'>
-		<option value='0' selected='selected'>N/A +0</option>
-		<option value='5'>S +5</option>
-		<option value='10'>R +10</option>
-		<option value='15'>I +15</option>
-		<option value='20'>T +20</option>
-		<option value='25'>M +25</option>
-	  </select>
-	  <select name='attr_WFM_advancement' class='full_width'>
-		<option value='0' selected='selected'>N/A +0</option>
-		<option value='5'>S +5</option>
-		<option value='10'>R +10</option>
-		<option value='15'>I +15</option>
-		<option value='20'>T +20</option>
-		<option value='25'>M +25</option>
-	  </select>
-	  <select name='attr_INT_advancement' class='full_width'>
-		<option value='0' selected='selected'>N/A +0</option>
-		<option value='5'>S +5</option>
-		<option value='10'>R +10</option>
-		<option value='15'>I +15</option>
-		<option value='20'>T +20</option>
-		<option value='25'>M +25</option>
-	  </select>
-	  <select name='attr_PER_advancement' class='full_width'>
-		<option value='0' selected='selected'>N/A +0</option>
-		<option value='5'>S +5</option>
-		<option value='10'>R +10</option>
-		<option value='15'>I +15</option>
-		<option value='20'>T +20</option>
-		<option value='25'>M +25</option>
-	  </select>
-	  <select name='attr_CR_advancement' class='full_width'>
-		<option value='0' selected='selected'>N/A +0</option>
-		<option value='5'>S +5</option>
-		<option value='10'>R +10</option>
-		<option value='15'>I +15</option>
-		<option value='20'>T +20</option>
-		<option value='25'>M +25</option>
-	  </select>
-	  <select name='attr_CH_advancement' class='full_width'>
-		<option value='0' selected='selected'>N/A +0</option>
-		<option value='5'>S +5</option>
-		<option value='10'>R +10</option>
-		<option value='15'>I +15</option>
-		<option value='20'>T +20</option>
-		<option value='25'>M +25</option>
-	  </select>
-	  <select name='attr_LD_advancement' class='full_width'>
-		<option value='0' selected='selected'>N/A +0</option>
-		<option value='5'>S +5</option>
-		<option value='10'>R +10</option>
-		<option value='15'>I +15</option>
-		<option value='20'>T +20</option>
-		<option value='25'>M +25</option>
-	  </select>
+      <select name='attr_STR_advancement' class='full_width'>
+        <option value='0' selected='selected'>N/A +0</option>
+        <option value='5'>S +5</option>
+        <option value='10'>R +10</option>
+        <option value='15'>I +15</option>
+        <option value='20'>T +20</option>
+        <option value='25'>M +25</option>
+      </select>
+      <select name='attr_TOU_advancement' class='full_width'>
+        <option value='0' selected='selected'>N/A +0</option>
+        <option value='5'>S +5</option>
+        <option value='10'>R +10</option>
+        <option value='15'>I +15</option>
+        <option value='20'>T +20</option>
+        <option value='25'>M +25</option>
+      </select>
+      <select name='attr_AGI_advancement' class='full_width'>
+        <option value='0' selected='selected'>N/A +0</option>
+        <option value='5'>S +5</option>
+        <option value='10'>R +10</option>
+        <option value='15'>I +15</option>
+        <option value='20'>T +20</option>
+        <option value='25'>M +25</option>
+      </select>
+      <select name='attr_WFR_advancement' class='full_width'>
+        <option value='0' selected='selected'>N/A +0</option>
+        <option value='5'>S +5</option>
+        <option value='10'>R +10</option>
+        <option value='15'>I +15</option>
+        <option value='20'>T +20</option>
+        <option value='25'>M +25</option>
+      </select>
+      <select name='attr_WFM_advancement' class='full_width'>
+        <option value='0' selected='selected'>N/A +0</option>
+        <option value='5'>S +5</option>
+        <option value='10'>R +10</option>
+        <option value='15'>I +15</option>
+        <option value='20'>T +20</option>
+        <option value='25'>M +25</option>
+      </select>
+      <select name='attr_INT_advancement' class='full_width'>
+        <option value='0' selected='selected'>N/A +0</option>
+        <option value='5'>S +5</option>
+        <option value='10'>R +10</option>
+        <option value='15'>I +15</option>
+        <option value='20'>T +20</option>
+        <option value='25'>M +25</option>
+      </select>
+      <select name='attr_PER_advancement' class='full_width'>
+        <option value='0' selected='selected'>N/A +0</option>
+        <option value='5'>S +5</option>
+        <option value='10'>R +10</option>
+        <option value='15'>I +15</option>
+        <option value='20'>T +20</option>
+        <option value='25'>M +25</option>
+      </select>
+      <select name='attr_CR_advancement' class='full_width'>
+        <option value='0' selected='selected'>N/A +0</option>
+        <option value='5'>S +5</option>
+        <option value='10'>R +10</option>
+        <option value='15'>I +15</option>
+        <option value='20'>T +20</option>
+        <option value='25'>M +25</option>
+      </select>
+      <select name='attr_CH_advancement' class='full_width'>
+        <option value='0' selected='selected'>N/A +0</option>
+        <option value='5'>S +5</option>
+        <option value='10'>R +10</option>
+        <option value='15'>I +15</option>
+        <option value='20'>T +20</option>
+        <option value='25'>M +25</option>
+      </select>
+      <select name='attr_LD_advancement' class='full_width'>
+        <option value='0' selected='selected'>N/A +0</option>
+        <option value='5'>S +5</option>
+        <option value='10'>R +10</option>
+        <option value='15'>I +15</option>
+        <option value='20'>T +20</option>
+        <option value='25'>M +25</option>
+      </select>
 
     </div>
     <br>
@@ -1274,7 +1255,7 @@
       <textarea name='attr_ability_desc_r' class='collapsible_entity_block auto_margin 90width'></textarea>
     </fieldset>
 
-<br>
+    <br>
 
     <div class="equipment_armor_grid">
       <div class="equipment_armor_gs1 radius_border">
@@ -1353,8 +1334,8 @@
           </div>
         </fieldset>
         <br>
-          <h3 class="radius_border_top">Armor Description</h3>
-            <textarea name='attr_armor_name'></textarea>
+        <h3 class="radius_border_top">Armor Description</h3>
+        <textarea name='attr_armor_name'></textarea>
       </div>
     </div>
   </div>
@@ -2011,30 +1992,30 @@
         </div>
       </div>
 
-	  <script type='text/worker'>
-		on('change:faction', function() {
-		  getAttrs(['faction'], function(values) {
-			var new_faction = parseInt(values['faction'], 10) || 0;
-			var faction_training_human = parseInt(values['faction_training_human'], 10) || 0;
-			var faction_training_forerunner = parseInt(values['faction_training_forerunner'], 10) || 0;
-			var faction_training_covenant = parseInt(values['faction_training_covenant'], 10) || 0;
-			setAttrs({
-			  faction_training_human: (0),
-			  faction_training_forerunner: (0),
-			  faction_training_covenant: (0)
-			});
-			if (new_faction == 2) {
-			  setAttrs({faction_training_human: 1});
-			}
-			if (new_faction == 4) {
-			  setAttrs({faction_training_forerunner: 1});
-			}
-			if (new_faction == 3 || new_faction == 5) {
-			  setAttrs({faction_training_covenant: 1});
-			}
-		  });
-		});
-	  </script>
+      <script type='text/worker'>
+        on('change:faction', function() {
+          getAttrs(['faction'], function(values) {
+            var new_faction = parseInt(values['faction'], 10) || 0;
+            var faction_training_human = parseInt(values['faction_training_human'], 10) || 0;
+            var faction_training_forerunner = parseInt(values['faction_training_forerunner'], 10) || 0;
+            var faction_training_covenant = parseInt(values['faction_training_covenant'], 10) || 0;
+            setAttrs({
+              faction_training_human: (0),
+              faction_training_forerunner: (0),
+              faction_training_covenant: (0)
+            });
+            if (new_faction == 2) {
+              setAttrs({faction_training_human: 1});
+            }
+            if (new_faction == 4) {
+              setAttrs({faction_training_forerunner: 1});
+            }
+            if (new_faction == 3 || new_faction == 5) {
+              setAttrs({faction_training_covenant: 1});
+            }
+          });
+        });
+      </script>
 
       <div class='weapon_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Weapon Training</h3>
@@ -2391,8 +2372,315 @@
       <option value=''>Include weapon description</option>
       <option value=' 'selected='selected'>Exclude weapon description</option>
     </select>
+    <br>
+
+
+    <h3>NPC Sheet</h3>
+    <label><input type='checkbox' name='attr_npc_sheet' class='center collapsible_entity_switch select_button hidden' /><span class='select_text'>NPC Sheet</span></label>
+    <br>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input type='checkbox' name='attr_npc_sheet' class='collapsible_entity_switch hidden' />
+<div class='background_radius collapsible_entity_block'>
+  <br>
+
+  <div class='minimisable_infographic_toggles'>
+    <label><input type='checkbox' name='attr_infographic' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>Infographic</span></label>
+    <label><input type='checkbox' name='attr_to-gm' value='/w gm' class='select_button hidden' /><span class='select_text'>To GM</span></label>
+    <label><input type='checkbox' name='attr_inlinemod-toggle' value='?{Modifier|0}' class='select_button hidden' checked/><span class='select_text'>Inline Mod</span></label>
+    <label><input type='checkbox' name='attr_npc_sheet' class='auto_margin collapsible_entity_switch select_button hidden' /><span class='select_text'>NPC Sheet</span></label>
+    <select name='attr_faction' class='full_width NPC_Faction_override'>
+      <option value='1' selected='selected' disabled hidden />
+      <option value='2'>United Nations Space Command</option>
+      <option value='3'>Covenant</option>
+      <option value='4'>Forerunner</option>
+      <option value='5'>Banished</option>
+      <option value='6'>Other</option>
+    </select>
+  </div>
+
+  <div class='characteristics_background edge_padding'>
+    <button name='STR' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Strength}} {{roll=[[floor(([[@{STR} + @{STR_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>STR |<input name='attr_STR_total' value='@{STR} + @{STR_advancement}' class='input_background input_char_background' disabled /></button>
+    <button name='TOU' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Toughness}} {{roll=[[floor(([[@{TOU} + @{TOU_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>TOU |<input name='attr_TOU_total' value='@{TOU} + @{TOU_advancement}' class='input_background input_char_background' disabled /></button>
+    <button name='AGI'  type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Agility}} {{roll=[[floor(([[@{AGI} + @{AGI_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>AGI |<input name='attr_AGI_total' value='@{AGI} + @{AGI_advancement}' class='input_background input_char_background' disabled /></button>
+    <button name='WFR' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Warfare Ranged}} {{roll=[[floor(([[@{WFR} + @{WFR_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>WFR |<input name='attr_WFR_total' value='@{WFR} + @{WFR_advancement}' class='input_background input_char_background' disabled /></button>
+    <button name='WFM' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Warfare Melee}} {{roll=[[floor(([[@{WFM} + @{WFM_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>WFM |<input name='attr_WFM_total' value='@{WFM} + @{WFM_advancement}' class='input_background input_char_background' disabled /></button>
+    <button name='INT' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Intelligence}} {{roll=[[floor(([[@{INT} + @{INT_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>INT |<input name='attr_INT_total' value='@{INT} + @{INT_advancement}' class='input_background input_char_background' disabled /></button>
+    <button name='PER' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Perception}} {{roll=[[floor(([[@{PER} + @{PER_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>PER |<input name='attr_PER_total' value='@{PER} + @{PER_advancement}' class='input_background input_char_background' disabled /></button>
+    <button name='CR' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Courage}} {{roll=[[floor(([[@{CR} + @{CR_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>CR |<input name='attr_CR_total' value='@{CR} + @{CR_advancement}' class='input_background input_char_background' disabled /></button>
+    <button name='CH' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Charisma}} {{roll=[[floor(([[@{CH} + @{CH_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>CH |<input name='attr_CH_total' value='@{CH} + @{CH_advancement}' class='input_background input_char_background' disabled /></button>
+    <button name='LD' type='roll' class='clear full_width characteristics_button'value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Leadership}} {{roll=[[floor(([[@{LD} + @{LD_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>LD |<input name='attr_LD_total' value='@{LD} + @{LD_advancement}' class='input_background input_char_background' disabled /></button>
+
+    <input name='attr_STR' type='text' value='0' class='characteristics_input full_width' />
+    <input name='attr_TOU' type='text' value='0' class='characteristics_input full_width' />
+    <input name='attr_AGI' type='text' value='0' class='characteristics_input full_width' />
+    <input name='attr_WFR' type='text' value='0' class='characteristics_input full_width' />
+    <input name='attr_WFM' type='text' value='0' class='characteristics_input full_width' />
+    <input name='attr_INT' type='text' value='0' class='characteristics_input full_width' />
+    <input name='attr_PER' type='text' value='0' class='characteristics_input full_width' />
+    <input name='attr_CR' type='text' value='0' class='characteristics_input full_width' />
+    <input name='attr_CH' type='text' value='0' class='characteristics_input full_width' />
+    <input name='attr_LD' type='text' value='0' class='characteristics_input full_width' />
+
+<input type="text" name="attr_STR_mythic" value="0" class="full_width">
+<input type="text" name="attr_TOU_mythic" value="0" class="full_width">
+<input type="text" name="attr_AGI_mythic" value="0" class="full_width">
+<h3 class="NPC_header_override">Mythic</h3>
+  </div>
+
+  <div class='characteristics_mythic_movement_carry'>
+
+    <div class='characteristics2_mythic'>
+      <input name='attr_STR_mythic' type='text' value='0' class='mythicgs2 mythicgs_width' />
+      <input name='attr_TOU_mythic' type='text' value='0' class='mythicgs3 mythicgs_width' />
+      <input name='attr_AGI_mythic' type='text' value='0' class='mythicgs4 mythicgs_width' />
+      <p class='mythicgs5'>STR</p>
+      <p class='mythicgs6'>TOU</p>
+      <p class='mythicgs7'>AGI</p>
+    </div>
+    <div class='characteristics2_movement'>
+      <input name='attr_half_move' type='text' class='movementgs2 mythicgs_width' />
+      <input name='attr_full_move' type='text' class='movementgs3 mythicgs_width' />
+      <input name='attr_charge_move' type='text' class='movementgs4 mythicgs_width' />
+      <input name='attr_run_move' type='text' class='movementgs5 mythicgs_width' />
+      <input name='attr_sprint_move' type='text' class='movementgs6 mythicgs_width' />
+      <input name='attr_jump_move' type='text' class='movementgs7 mythicgs_width' />
+      <input name='attr_leap_move' type='text' class='movementgs8 mythicgs_width' />
+      <p class='movementgs9 '>Half</p>
+      <p class='movementgs10 '>Full</p>
+      <p class='movementgs11 '>Charge</p>
+      <p class='movementgs12 '>Run</p>
+      <p class='movementgs13 '>Sprint</p>
+      <p class='movementgs14 '>Jump</p>
+      <p class='movementgs15 '>Leap</p>
+    </div>
+    <div class='characteristics2_carry'>
+
+      <input name='attr_carry' type='text' class='carrygs2 mythicgs_width' />
+      <input name='attr_lift' type='text' class='carrygs3 mythicgs_width' />
+      <input name='attr_push' type='text' class='carrygs4 mythicgs_width' />
+      <p class='carrygs5'>Carry</p>
+      <p class='carrygs6'>Lift</p>
+      <p class='carrygs7'>Push</p>
+
+    </div>
+  </div>
+
+  <div class='minimisable_infographic_grid'>
+    <div class='minimisable_infographic_field2x3 radius_border'>
+      <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
+      value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}'>Wounds</button>
+      <p class='minimisable_infographic_g2'>Current</p>
+      <input class='minimisable_infographic_g3 full_width' type='text' name='attr_wounds' value='0' />
+      <p class='minimisable_infographic_g4'>Max</p>
+      <input class='minimisable_infographic_g5 full_width' type='text' name='attr_wounds_max' value='0' />
+    </div>
+
+    <div class='minimisable_infographic_field2x3 radius_border'>
+      <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
+      value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Fatigue}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>Fatigue</button>
+      <p class='minimisable_infographic_g2'>Current</p>
+      <input class='minimisable_infographic_g3 full_width' type='text' name='attr_fatigue' value='0' />
+      <p class='minimisable_infographic_g4'>Max</p>
+      <input class='minimisable_infographic_g5 full_width' type='text' name='attr_fatigue_max' value='0' />
+    </div>
+
+    <div class='minimisable_infographic_field2x3 radius_border'>
+      <button name='luck_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
+      value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Luck}} {{2x2-name=Current}} {{2x2=@{luck}}} {{2x2-name-max=Max}} {{2x2-max=@{luck|max}}}'>Luck</button>
+      <p class='minimisable_infographic_g2'>Current</p>
+      <input class='minimisable_infographic_g3 full_width' type='text' name='attr_luck' value='0' />
+      <p class='minimisable_infographic_g4'>Max</p>
+      <input class='minimisable_infographic_g5 full_width' type='text' name='attr_luck_max' value='0' />
+    </div>
+
+    <div class='minimisable_infographic_field2x3 radius_border'>
+      <button name='support_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
+      value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>S Pts</button>
+      <p class='minimisable_infographic_g2'>Current</p>
+      <input class='minimisable_infographic_g3 full_width' type='text' name='attr_support' value='0' />
+      <p class='minimisable_infographic_g4'>Max</p>
+      <input class='minimisable_infographic_g5 full_width' type='text' name='attr_support_max' value='0' />
+    </div>
+
+    <div class='minimisable_infographic_field4x3 radius_border'>
+      <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
+      value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Shields}} {{4x2-1-name=Current}} {{4x2-1=@{shields}}} {{4x2-1-name-max=Max}} {{4x2-1-max=@{shields|max}}} {{4x2-2-name=Charge}} {{4x2-2=@{shields_charge}}} {{4x2-2-name-max=Delay}} {{4x2-2-max=@{shields_delay}}}'>Shields</button>
+      <p class='minimisable_infographic_g6'>Current</p>
+      <input class='minimisable_infographic_g7 full_width' type='text' name='attr_shields' value='0' />
+      <p class='minimisable_infographic_g8'>Max</p>
+      <input class='minimisable_infographic_g9 full_width' type='text' name='attr_shields_max' value='0' />
+      <p class='minimisable_infographic_g2'>Delay</p>
+      <input class='minimisable_infographic_g3 full_width' type='text' name='attr_shields_delay' value='0' />
+      <p class='minimisable_infographic_g4'>Charge</p>
+      <input class='minimisable_infographic_g5 full_width' type='text' name='attr_shields_charge' value='0' />
+    </div>
+
+    <div class='minimisable_infographic_field4x3 radius_border'>
+      <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
+      value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Armor}} {{4x2-1-name=Head}} {{4x2-1=@{armor_head}}} {{4x2-1-name-max=Arms}} {{4x2-1-max=@{armor_arms}}} {{4x2-2-name=Chest}} {{4x2-2=@{armor_chest}}} {{4x2-2-name-max=Legs}} {{4x2-2-max=@{armor_legs}}}'>Armor</button>
+      <p class='minimisable_infographic_g6'>Head</p>
+      <input class='minimisable_infographic_g7 full_width' type='text' name='attr_armor_head' value='0' />
+      <p class='minimisable_infographic_g8'>Arms</p>
+      <input class='minimisable_infographic_g9 full_width' type='text' name='attr_armor_arms' value='0' />
+      <p class='minimisable_infographic_g2'>Chest</p>
+      <input class='minimisable_infographic_g3 full_width' type='text' name='attr_armor_chest' value='0' />
+      <p class='minimisable_infographic_g4'>Legs</p>
+      <input class='minimisable_infographic_g5 full_width' type='text' name='attr_armor_legs' value='0' />
+    </div>
+  </div>
+
+<br>
+
+  <div class='equipment_divider'>
+    <div class='equipment_ranged_weapons ssc'>
+      <h3 class='radius_border_top'>Ranged Weapons</h3>
+      <fieldset name='rangedweapons' class='repeating_Rangedweapons'>
+        <div class='equipment_ranged_weapons_rep'>
+          <div class='equipment_ranged_weapons_grid1'>
+            <div class='equipment_ranged_weapons_gs1'>Name</div>
+            <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_R_weapon-name' placeholder='Name' />
+            <div class='equipment_ranged_weapons_gs3'>Type</div>
+            <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_R_weapon-class' placeholder='Class of Weapon' />
+          </div>
+          <div class='equipment_ranged_weapons_grid2'>
+            <div class='equipment_ranged_weapons_gs5'>Range</div>
+            <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_R_weapon-range' />
+            <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
+            <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_R_weapon-dam-roll' />
+            <div class='equipment_ranged_weapons_gs9'>Base</div>
+            <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_R_weapon-base' />
+            <div class='equipment_ranged_weapons_gs11'>Pierce</div>
+            <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_R_weapon-pierce' />
+          </div>
+          <div class='equipment_ranged_weapons_grid3'>
+            <div class='equipment_ranged_weapons_gs13'>Hit Mod</div>
+            <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_R_weapon-mod1' />
+            <div class='equipment_ranged_weapons_gs15'>Magazine</div>
+            <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_R_weapon-mag' />
+            <div class='equipment_ranged_weapons_gs17'>/</div>
+            <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_R_weapon-mag_max' />
+            <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{R_weapon-name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{R_weapon-mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
+            <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon-name}}} {{damage=[[@{R_weapon-dam-roll}+@{R_weapon-base}]] }} {{pierce=[[@{R_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{R_ability_r} }}' >DMG</button>
+          </div>
+          <div class='equipment_ranged_weapons_grid4'>
+            <div class='equipment_ranged_weapons_gs21'>RoF</div>
+            <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_R_weapon-semi' />
+            <div class='equipment_ranged_weapons_gs23'>/</div>
+            <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Brst' name='attr_R_weapon-burst' />
+            <div class='equipment_ranged_weapons_gs25'>/</div>
+            <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_R_weapon-auto' />
+            <div class='equipment_ranged_weapons_gs27'>Reload</div>
+            <input class='equipment_ranged_weapons_gs28 full_width' type='text' value='2 half actions' name='attr_R_weapon-reload' />
+            <div class='equipment_ranged_weapons_gs29'>Weight</div>
+            <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_R_weapon-weight' />
+          </div>
+          <div>
+            <input name='attr_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
+            <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+            <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{R_ability_r} }} {{description=@{R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+            <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
+            <textarea name='attr_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin' placeholder='Weapon Attachment: Benefit, Type Mount, Restriction, etc.'></textarea>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class='equipment_melee_weapons ssc'>
+      <h3 class='radius_border_top'>Melee Weapons</h3>
+      <fieldset name='meleeweapons' class='repeating_meleeweapons'>
+        <div class='equipment_ranged_weapons_rep'>
+          <div class='equipment_ranged_weapons_grid1'>
+            <div class='equipment_ranged_weapons_gs1'>Name</div>
+            <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_M_weapon-name' placeholder='Name' />
+            <div class='equipment_ranged_weapons_gs3'>Type</div>
+            <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon-class' placeholder='Class of Weapon' />
+          </div>
+          <div class='equipment_ranged_weapons_grid2'>
+            <div class='equipment_ranged_weapons_gs5'>Reach</div>
+            <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon-range' />
+            <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
+            <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_M_weapon-dam-roll' />
+            <div class='equipment_ranged_weapons_gs9'>Base</div>
+            <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_M_weapon-base' />
+            <div class='equipment_ranged_weapons_gs11'>Pierce</div>
+            <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_M_weapon-pierce' />
+          </div>
+          <div class='equipment_melee_weapons_grid3'>
+            <div class='equipment_melee_weapons_gs1'>Hit Mod</div>
+            <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_M_weapon-mod1' />
+            <div class='equipment_melee_weapons_gs3'>Weight</div>
+            <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_M_weapon-weight' />
+            <div class='equipment_melee_weapons_gs5'>Br Pts</div>
+            <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon-breakpoints' />
+            <div class='equipment_melee_weapons_gs7'>/</div>
+            <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon-breakpoints_max' />
+            <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon-name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon-mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
+            <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon-name}}} {{damage=[[@{M_weapon-dam-roll}+@{M_weapon-base}+@{M_weapon-base-mod}]] }} {{pierce=[[@{M_weapon-pierce}+@{M_weapon-pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
+          </div>
+
+          <div class='equipment_melee_weapons_grid4'>
+            <div class='equipment_melee_weapons_gs11'>damage plus Strength</div>
+            <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon-base-mod'>
+              <option selected='selected' value='0'>None</option>
+              <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
+              <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
+            </select>
+
+            <div class='equipment_melee_weapons_gs13'>pierce plus Strength</div>
+            <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon-pierce-mod'>
+              <option selected='selected' value='0'>None</option>
+              <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
+              <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
+            </select>
+          </div>
+
+          <div>
+            <input name='attr_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
+            <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+            <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{M_ability_r} }} {{description=@{M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
+            <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
+            <textarea name='attr_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin' placeholder='Weapon Modification e.g. Gravity Hammer Crushing thruster'></textarea>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+<br><hr>
+
+  </div>
+      <h2 class='medical_h2 radius_border_top'>Additional info</h2>
+  <textarea name='attr_medical_textfield' class='NPC_textfield_override radius_border_bottom' placeholder=''></textarea>
+  <fieldset class='repeating_medical'>
+    <textarea name='attr_medical_textfield' class='NPC_textfield_override radius_border_bottom'></textarea>
+  </fieldset>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2554,7 +2842,7 @@
         {{#scatter-range}}
         <div class="sheet-template-header">{{character}} scatters </div>
         <div class="sheet-template-content">
-        <div class="sheet-template-row template-center">Range: {{scatter-range}} meters </div>
+          <div class="sheet-template-row template-center">Range: {{scatter-range}} meters </div>
           {{#rollBetween() scatter-direction 1 2}}   <img src="https://github.com/olosinno/Halo_Mythic_3dot5/blob/master/images/Scatter/1-2-scatter-N.png?raw=true">{{/rollBetween() scatter-direction 1 2}}
           {{#rollBetween() scatter-direction 3 3}}   <img src="https://github.com/olosinno/Halo_Mythic_3dot5/blob/master/images/Scatter/3-scatter-NE.png?raw=true">{{/rollBetween() scatter-direction 3 3}}
           {{#rollBetween() scatter-direction 4 4}}   <img src="https://github.com/olosinno/Halo_Mythic_3dot5/blob/master/images/Scatter/4-scatter-E.png?raw=true">{{/rollBetween() scatter-direction 4 4}}
