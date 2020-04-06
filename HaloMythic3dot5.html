@@ -1211,9 +1211,8 @@
             const getValue = (id, field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
             const total = parseFloat(v.credit_total) || 0
 			const initial = parseFloat(v.gear_cost) * parseFloat(v.gear_quantity)
-
-            const cost_r = idArray.reduce((total, id) => total + getValue(id, 'gear_cost_r'), 0)
-            setAttrs({credit_total: initial + cost_r});
+            const repeat = idArray.reduce((total, id) => total + (getValue(id, 'gear_cost_r') * getValue(id, 'gear_quantity_r')), 0)
+            setAttrs({credit_total: initial + repeat});
           });
         });
       });
@@ -1286,37 +1285,37 @@
         <div>
           <br>
           <h3 class="radius_border_top">Head</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_head" value="0">
         </div>
 
         <div>
           <br>
           <h3 class="radius_border_top">Chest</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_chest" value="0">
         </div>
 
         <div>
           <br>
           <h3 class="radius_border_top">L Arm</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_arm_left" value="0">
         </div>
 
         <div>
           <br>
           <h3 class="radius_border_top">R Arm</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_arm_right" value="0">
         </div>
 
         <div>
           <br>
           <h3 class="radius_border_top">L leg</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_leg_left" value="0">
         </div>
 
         <div>
           <br>
           <h3 class="radius_border_top">R Leg</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_leg_right" value="0">
         </div>
       </div>
 
