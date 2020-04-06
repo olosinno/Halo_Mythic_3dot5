@@ -88,7 +88,7 @@
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Warfare Melee}} {{roll=[[floor(([[@{WFM} + @{WFM_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
           WFM |<input name='attr_WFM_total' value='@{WFM} + @{WFM_advancement}' class='input_background input_char_background' disabled /></button>
         <button name='INT' type='roll' class='clear full_width characteristics_button'
-          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Inteligence}} {{roll=[[floor(([[@{INT} + @{INT_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
+          value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Intelligence}} {{roll=[[floor(([[@{INT} + @{INT_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
           INT |<input name='attr_INT_total' value='@{INT} + @{INT_advancement}' class='input_background input_char_background' disabled /></button>
         <button name='PER' type='roll' class='clear full_width characteristics_button'
           value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Perception}} {{roll=[[floor(([[@{PER} + @{PER_advancement}]] + @{inlinemod-toggle} - 1d100)/10)]]}}'>
@@ -456,7 +456,7 @@
 
           <div class='minimisable_infographic_field2x3 radius_border'>
             <button name='support_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
-            value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>SP</button>
+            value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>S Pts</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class='minimisable_infographic_g3 full_width' type='text' name='attr_support' value='0' />
             <p class='minimisable_infographic_g4'>Max</p>
@@ -1212,9 +1212,8 @@
             const getValue = (id, field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
             const total = parseFloat(v.credit_total) || 0
 			const initial = parseFloat(v.gear_cost) * parseFloat(v.gear_quantity)
-
-            const cost_r = idArray.reduce((total, id) => total + getValue(id, 'gear_cost_r'), 0)
-            setAttrs({credit_total: initial + cost_r});
+            const repeat = idArray.reduce((total, id) => total + (getValue(id, 'gear_cost_r') * getValue(id, 'gear_quantity_r')), 0)
+            setAttrs({credit_total: initial + repeat});
           });
         });
       });
@@ -1287,37 +1286,37 @@
         <div>
           <br>
           <h3 class="radius_border_top">Head</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_head" value="0">
         </div>
 
         <div>
           <br>
           <h3 class="radius_border_top">Chest</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_chest" value="0">
         </div>
 
         <div>
           <br>
           <h3 class="radius_border_top">L Arm</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_arm_left" value="0">
         </div>
 
         <div>
           <br>
           <h3 class="radius_border_top">R Arm</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_arm_right" value="0">
         </div>
 
         <div>
           <br>
           <h3 class="radius_border_top">L leg</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_leg_left" value="0">
         </div>
 
         <div>
           <br>
           <h3 class="radius_border_top">R Leg</h3>
-          <input class="equipment_armor_input" type="text" name="armor_head" value="0">
+          <input class="equipment_armor_input" type="text" name="attr_armor_leg_right" value="0">
         </div>
       </div>
 
