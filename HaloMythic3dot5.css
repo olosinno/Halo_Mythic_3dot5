@@ -170,6 +170,7 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-huge_text { font-size: 36px; }
 .sheet-text_centered { text-align: center; }
 .sheet-ssc { font-family: Saira Semi Condensed; }
+.sheet-bttn_top_padding { padding-top: 5px }
 
 .sheet-radius_border { border-radius: 10px; }
 .sheet-radius_border_top {
