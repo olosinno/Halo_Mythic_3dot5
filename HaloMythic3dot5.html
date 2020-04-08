@@ -211,129 +211,6 @@
         <p class='movementgs14 '>Jump</p>
         <p class='movementgs15 '>Leap</p>
 
-        <script type='text/worker'>
-          on('change:settings_race change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
-            getAttrs([
-            'settings_race',
-            'agi',
-            'agi_mythic',
-            'agi_advancement',
-            'str',
-            'str_mythic',
-            'str_advancement',
-            'tou',
-            'tou_mythic',
-            'tou_advancement'
-            ], function(values) {
-              var settings_race = parseInt(values['settings_race'], 10) || 0;
-              var agi = parseInt(values['agi'], 10) || 0;
-              var agi_mythic = parseInt(values['agi_mythic'], 10) || 0;
-              var agi_advancement = parseInt(values['agi_advancement'], 10) || 0;
-              var str = parseInt(values['str'], 10) || 0;
-              var str_mythic = parseInt(values['str_mythic'], 10) || 0;
-              var str_advancement = parseInt(values['str_advancement'], 10) || 0;
-              var tou = parseInt(values['tou'], 10) || 0;
-              var tou_mythic = parseInt(values['tou_mythic'], 10) || 0;
-              var tou_advancement = parseInt(values['tou_advancement'], 10) || 0;
-              var weight_mod = str + str_advancement + tou + tou_advancement + (str_mythic + tou_mythic) * 10;
-              var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
-              var str_mod = str + str_advancement / 10;
-              var agi_mod = agi + agi_advancement / 10;
-
-              // normal no modifiers ____________________________________________________________
-
-              setAttrs({
-                half_move: (move_mod),
-                full_move: (move_mod * 2),
-                charge_move: (move_mod * 3),
-                run_move: (move_mod * 6),
-                sprint_move: (move_mod * 8),
-                jump_move:(str_mod / 4),
-                leap_move:(agi_mod / 2),
-                carry: (weight_mod),
-                lift: (weight_mod * 2),
-                push: (weight_mod * 4)
-              });
-              if (str_mod >= agi_mod) {
-                setAttrs({
-                  leap_move:(str_mod / 2)
-                });
-              }
-
-              // Spartan + Jiralhanae + Promethean Knight (carry weight * 2) ______________________________
-              if(settings_race == 1) {
-                setAttrs({
-                  carry: (weight_mod * 2),
-                  lift: (weight_mod * 2 * 2),
-                  push: (weight_mod * 4 * 2)
-                });
-              }
-              // end of Spartan + Jiralhanae ______________________________
-
-              // Sangheili (+2 agi leap, carry weight * 2) ______________________________
-              if(settings_race == 2) {
-                setAttrs({
-                  carry: (weight_mod * 2),
-                  lift: (weight_mod * 2 * 2),
-                  push: (weight_mod * 4 * 2),
-                  leap_move: ((agi_mod + 4) / 2) // modifier plus 4, sum halved
-                });
-                if(str_mod >= agi_mod) {
-                  setAttrs({
-                    leap_move: ((str_mod + 4) / 2)
-                  });
-                }
-              }
-              // end of Sangheili ______________________________
-
-              // Ruutian & Ibie'shan (double agi to jump) ______________________________
-              if(settings_race == 3) {
-                setAttrs({
-                  jump_move:(str_mod / 4 * 2)
-                });
-              }
-              // end of Ruutian & Ibie'shan ______________________________
-
-              // Jackal T'vaoan (agi to jump * 4) ______________________________
-              if(settings_race == 4) {
-                setAttrs({
-                  jump_move:(str_mod / 4 * 4)
-                });
-              }
-              // end of T'vaoan ______________________________
-
-              // Mgalekgolo (Hunter) (weight = 4000, double agi to charge/run) ______________________________
-              if(settings_race == 5) {
-                setAttrs({
-                  carry: (5000),
-                  lift: (5000 * 2),
-                  push: (5000 * 4),
-                  charge_move: (move_mod * 3 * 2),
-                  run_move: (move_mod * 6 * 2)
-                });
-              }
-              // end of Mgalekgolo (Hunter) ______________________________
-              if (move_mod <= 0) {
-                setAttrs({
-                  half_move: (0.5),
-                  full_move: (1),
-                  charge_move: (2),
-                  run_move: (3),
-                  sprint_move: (4)
-                });
-              }
-              if ((move_mod <= 0) && (settings_race == 5)) {
-                setAttrs({
-                  half_move: (0.5),
-                  full_move: (1),
-                  charge_move: (4),
-                  run_move: (6),
-                  sprint_move: (4)
-                });
-              }
-            });
-          });
-        </script>
       </div>
       <div class='characteristics2_carry'>
         <p class='carrygs1 mythicgs_heading'><b>Weight Capacity</b></p>
@@ -481,16 +358,7 @@
   <!-- ______________________________ SHEET TABS LOGIC ______________________________ -->
 
   <input name='attr_sheetTab' type='hidden' value='core' class='tabstoggle' />
-  <script type='text/worker'>
-    const buttonlist = ['core','equipment','medical','advancements','journal','vehicles','settings'];
-    buttonlist.forEach(button => {
-      on(`clicked:${button}`, function() {
-        setAttrs({
-          sheetTab: button
-        });
-      });
-    });
-  </script>
+
 
   <!-- ______________________________ start of tab Core ______________________________ -->
 
@@ -1059,45 +927,45 @@
     <div class='equipment_divider'>
       <div class='equipment_ranged_weapons ssc'>
         <h3 class='radius_border_top'>Ranged Weapons</h3>
-        <fieldset name='rangedweapons' class='repeating_Rangedweapons'>
+        <fieldset name='rangedweapons' class='repeating_rangedweapons'>
           <div class='equipment_ranged_weapons_rep'>
             <div class='equipment_ranged_weapons_grid1'>
               <div class='equipment_ranged_weapons_gs1'>Name</div>
-              <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_R_weapon-name' placeholder='Name' />
+              <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_R_weapon_name' placeholder='Name' />
               <div class='equipment_ranged_weapons_gs3'>Type</div>
-              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_R_weapon-class' placeholder='Class of Weapon' />
+              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_R_weapon_class' placeholder='Class of Weapon' />
             </div>
             <div class='equipment_ranged_weapons_grid2'>
               <div class='equipment_ranged_weapons_gs5'>Range</div>
-              <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_R_weapon-range' />
+              <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_R_weapon_range' />
               <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
-              <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_R_weapon-dam-roll' />
+              <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_R_weapon_dam-roll' />
               <div class='equipment_ranged_weapons_gs9'>Base</div>
-              <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_R_weapon-base' />
+              <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_R_weapon_base' />
               <div class='equipment_ranged_weapons_gs11'>Pierce</div>
-              <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_R_weapon-pierce' />
+              <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_R_weapon_pierce' />
             </div>
             <div class='equipment_ranged_weapons_grid3'>
               <div class='equipment_ranged_weapons_gs13'>Hit Mod</div>
-              <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_R_weapon-mod1' />
+              <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_R_weapon_mod1' />
               <div class='equipment_ranged_weapons_gs15'>Magazine</div>
-              <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_R_weapon-mag' />
+              <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_R_weapon_mag' />
               <div class='equipment_ranged_weapons_gs17'>/</div>
-              <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_R_weapon-mag_max' />
-              <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{R_weapon-name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{R_weapon-mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
-              <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon-name}}} {{damage=[[@{R_weapon-dam-roll}+@{R_weapon-base}]] }} {{pierce=[[@{R_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{R_ability_r} }}' >DMG</button>
+              <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_R_weapon_mag_max' />
+              <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{R_weapon_name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{R_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
+              <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon_name}}} {{damage=[[@{R_weapon_dam-roll}+@{R_weapon_base}]] }} {{pierce=[[@{R_weapon_pierce}]] }} {{@{settings_weapondescription}description=@{R_ability_r} }}' >DMG</button>
             </div>
             <div class='equipment_ranged_weapons_grid4'>
               <div class='equipment_ranged_weapons_gs21'>RoF</div>
-              <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_R_weapon-semi' />
+              <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_R_weapon_semi' />
               <div class='equipment_ranged_weapons_gs23'>/</div>
-              <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Brst' name='attr_R_weapon-burst' />
+              <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Brst' name='attr_R_weapon_burst' />
               <div class='equipment_ranged_weapons_gs25'>/</div>
-              <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_R_weapon-auto' />
+              <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_R_weapon_auto' />
               <div class='equipment_ranged_weapons_gs27'>Reload</div>
-              <input class='equipment_ranged_weapons_gs28 full_width' type='text' value='2 half actions' name='attr_R_weapon-reload' />
+              <input class='equipment_ranged_weapons_gs28 full_width' type='text' value='2 half actions' name='attr_R_weapon_reload' />
               <div class='equipment_ranged_weapons_gs29'>Weight</div>
-              <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_R_weapon-weight' />
+              <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_R_weapon_weight' />
             </div>
             <div>
               <input name='attr_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
@@ -1117,43 +985,43 @@
           <div class='equipment_ranged_weapons_rep'>
             <div class='equipment_ranged_weapons_grid1'>
               <div class='equipment_ranged_weapons_gs1'>Name</div>
-              <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_M_weapon-name' placeholder='Name' />
+              <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_M_weapon_name' placeholder='Name' />
               <div class='equipment_ranged_weapons_gs3'>Type</div>
-              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon-class' placeholder='Class of Weapon' />
+              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon_class' placeholder='Class of Weapon' />
             </div>
             <div class='equipment_ranged_weapons_grid2'>
               <div class='equipment_ranged_weapons_gs5'>Reach</div>
-              <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon-range' />
+              <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon_range' />
               <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
-              <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_M_weapon-dam-roll' />
+              <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_M_weapon_dam-roll' />
               <div class='equipment_ranged_weapons_gs9'>Base</div>
-              <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_M_weapon-base' />
+              <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_M_weapon_base' />
               <div class='equipment_ranged_weapons_gs11'>Pierce</div>
-              <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_M_weapon-pierce' />
+              <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_M_weapon_pierce' />
             </div>
             <div class='equipment_melee_weapons_grid3'>
               <div class='equipment_melee_weapons_gs1'>Hit Mod</div>
-              <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_M_weapon-mod1' />
+              <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_M_weapon_mod1' />
               <div class='equipment_melee_weapons_gs3'>Weight</div>
-              <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_M_weapon-weight' />
+              <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_M_weapon_weight' />
               <div class='equipment_melee_weapons_gs5'>Br Pts</div>
-              <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon-breakpoints' />
+              <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon_breakpoints' />
               <div class='equipment_melee_weapons_gs7'>/</div>
-              <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon-breakpoints_max' />
-              <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon-name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon-mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
-              <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon-name}}} {{damage=[[@{M_weapon-dam-roll}+@{M_weapon-base}+@{M_weapon-base-mod}]] }} {{pierce=[[@{M_weapon-pierce}+@{M_weapon-pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
+              <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon_breakpoints_max' />
+              <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
+              <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon_name}}} {{damage=[[@{M_weapon_dam-roll}+@{M_weapon_base}+@{M_weapon_base-mod}]] }} {{pierce=[[@{M_weapon_pierce}+@{M_weapon_pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
             </div>
 
             <div class='equipment_melee_weapons_grid4'>
               <div class='equipment_melee_weapons_gs11'>damage plus Strength</div>
-              <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon-base-mod'>
+              <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon_base-mod'>
                 <option selected='selected' value='0'>None</option>
                 <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
                 <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
               </select>
 
               <div class='equipment_melee_weapons_gs13'>pierce plus Strength</div>
-              <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon-pierce-mod'>
+              <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon_pierce-mod'>
                 <option selected='selected' value='0'>None</option>
                 <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
                 <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
@@ -1175,50 +1043,12 @@
       <div class='equipment_numerics text_centered'>
         cR Count: <input name='attr_credits' type='number' class='numerical_field' />
         cR Calculation: <input name='attr_credit_total' type='number' class='numerical_field' readonly />
-        Weight Calculation: <input name='attr_weight_total' type='number' class='numerical_field end_field' value='@{weight_temp_1}+@{weight_temp_2}' readonly> kilograms</input>
+        Weight Calculation: <input name='attr_weight_total' type='number' class='numerical_field end_field' readonly> kilograms</input>
+<input type="number" name="attr_M_weapon_weight_T"  hidden>
+<input type="number" name="attr_R_weapon_weight_T"  hidden>
       </div>
     </div>
     <br>
-
-    <script type='text/worker'>
-      on('change:gear_cost change:repeating_gear:gear_cost_r change:gear_quantity change:repeating_gear:gear_quantity_r remove:repeating_gear', () => {
-        // get section IDs because of operation both inside and outside of fieldset
-        getSectionIDs(`repeating_gear`, idArray => {
-          const fieldset_cost = [];
-          const fieldset_quantity = [];
-          idArray.forEach(id => fieldset_cost.push (`repeating_gear_${id}_gear_cost_r`));
-          idArray.forEach(id => fieldset_quantity.push (`repeating_gear_${id}_gear_quantity_r`));
-          // spread operator to get every array value
-          getAttrs(['credit_total', 'gear_cost', 'gear_quantity', ...fieldset_cost, ...fieldset_quantity], v => {
-            const getValue = (id, field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
-            const total = parseFloat(v.credit_total) || 0
-            const initial = parseFloat(v.gear_cost) * parseFloat(v.gear_quantity)
-            const repeat = idArray.reduce((total, id) => total + (getValue(id, 'gear_cost_r') * getValue(id, 'gear_quantity_r')), 0)
-            setAttrs({credit_total: initial + repeat});
-          });
-        });
-      });
-    </script>
-
-    <script type='text/worker'>
-      on('change:gear_weight change:repeating_gear:gear_weight_r change:gear_quantity change:repeating_gear:gear_quantity_r remove:repeating_gear', () => {
-        // get section IDs because of operation both inside and outside of fieldset
-        getSectionIDs(`repeating_gear`, idArray => {
-          const fieldset_weight = [];
-          const fieldset_quantity = [];
-          idArray.forEach(id => fieldset_weight.push (`repeating_gear_${id}_gear_weight_r`));
-          idArray.forEach(id => fieldset_quantity.push (`repeating_gear_${id}_gear_quantity_r`));
-          // spread operator to get every array value
-          getAttrs(['weight_total', 'gear_weight', 'gear_quantity', ...fieldset_weight, ...fieldset_quantity], v => {
-            const getValue = (id, field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
-            const total = parseFloat(v.weight_total) || 0
-            const initial = parseFloat(v.gear_weight) * parseFloat(v.gear_quantity)
-            const repeat = idArray.reduce((total, id) => total + (getValue(id, 'gear_weight_r') * getValue(id, 'gear_quantity_r')), 0)
-            setAttrs({weight_total: initial + repeat});
-          });
-        });
-      });
-    </script>
 
     <div class='equipment_gear equipment_header'>
       <div class="equipment_gear_gs1">Gear / Item Name</div>
@@ -1232,8 +1062,8 @@
     <div class='equipment_gear'>
       <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
       <input name='attr_gear_quantity' type='text' value='1' placeholder='Amount' class='equipment_gear_gs2' />
-      <input name='attr_gear_cost' type='text' placeholder='cR Value' class='equipment_gear_gs3' />
-      <input name='attr_gear_weight' type='text' placeholder='Weight' class='equipment_gear_gs4' />
+      <input name='attr_gear_cost' type='text' value='0' class='equipment_gear_gs3' />
+      <input name='attr_gear_weight' type='text' value='0' class='equipment_gear_gs4' />
       <input name='attr_gear_bp' type='text' placeholder='Break Points' class='equipment_gear_gs5' />
       <input name='attr_gear_pg#' type='text' placeholder='Page #' class='equipment_gear_gs6' />
       <label class='margin_adjust equipment_gear_gs7'><input type='checkbox' name='attr_collapse' value='7' class='collapsible_entity_switch select_button hidden'><span class='select_text'>▼</span></label>
@@ -1245,8 +1075,8 @@
       <div class='equipment_gear'>
         <input name='attr_gear_name_r' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
         <input name='attr_gear_quantity_r' type='text' value='1' placeholder='Amount' class='equipment_gear_gs2' />
-        <input name='attr_gear_cost_r' type='text' placeholder='cR Value' class='equipment_gear_gs3' />
-        <input name='attr_gear_weight_r' type='text' placeholder='Weight' class='equipment_gear_gs4' />
+        <input name='attr_gear_cost_r' type='text' value='0' class='equipment_gear_gs3' />
+        <input name='attr_gear_weight_r' type='text' value='0' class='equipment_gear_gs4' />
         <input name='attr_gear_bp_r' type='text' placeholder='Break Points' class='equipment_gear_gs5' />
         <input name='attr_gear_pg#_r' type='text' placeholder='Page #' class='equipment_gear_gs6' />
         <label class='margin_adjust equipment_gear_gs7'><input type='checkbox' name='attr_collapse_r' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
@@ -1916,35 +1746,6 @@
   <!-- ______________________________ start of tab Advancements ______________________________ -->
 
   <div class='advancements box radius_border_box ssc'>
-    <!-- Advancements -->
-    <script type='text/worker'>
-      on('change:xp_total change:advancement_costL change:advancement_costR change:repeating_advancements:advancement_costL_r change:repeating_advancements:advancement_costR_r remove:repeating_advancements', () => {
-        // get section IDs because of operation both inside and outside of fieldset
-        getSectionIDs(`repeating_advancements`, idArray => {
-          const fieldnames = [];
-          idArray.forEach(id => fieldnames.push (
-          `repeating_advancements_${id}_advancement_costL_r`,
-          `repeating_advancements_${id}_advancement_costR_r`
-          ));
-          // spread operator to get every array value
-          getAttrs(['xp_total', 'advancement_costL', 'advancement_costR', ...fieldnames], v => {
-            const getValue = (id, field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
-            const cost = parseFloat(v.gear_cost) || 0
-            const left = parseFloat(v.advancement_costL) || 0
-            const right = parseFloat(v.advancement_costR) || 0
-            const left_r = idArray.reduce((total, id) => total + getValue(id,'advancement_costL_r'),0)
-            const right_r = idArray.reduce((total, id) => total + getValue(id,'advancement_costR_r'),0)
-            const spent = left + right + left_r + right_r
-            const total = parseFloat(v.xp_total) || 0
-            setAttrs({
-              xp_spent: spent,
-              xp_current: total - spent
-            });
-          });
-        });
-      });
-    </script>
-
     <h2>Experience Summary</h2>
     <div class='text_centered'>
       Unspent XP: <input name='attr_xp_current' type='number' value='@{xp_total}-@{xp_spent}' class='numerical_field' readonly />
@@ -1992,30 +1793,7 @@
         </div>
       </div>
 
-      <script type='text/worker'>
-        on('change:faction', function() {
-          getAttrs(['faction'], function(values) {
-            var new_faction = parseInt(values['faction'], 10) || 0;
-            var faction_training_human = parseInt(values['faction_training_human'], 10) || 0;
-            var faction_training_forerunner = parseInt(values['faction_training_forerunner'], 10) || 0;
-            var faction_training_covenant = parseInt(values['faction_training_covenant'], 10) || 0;
-            setAttrs({
-              faction_training_human: (0),
-              faction_training_forerunner: (0),
-              faction_training_covenant: (0)
-            });
-            if (new_faction == 2) {
-              setAttrs({faction_training_human: 1});
-            }
-            if (new_faction == 4) {
-              setAttrs({faction_training_forerunner: 1});
-            }
-            if (new_faction == 3 || new_faction == 5) {
-              setAttrs({faction_training_covenant: 1});
-            }
-          });
-        });
-      </script>
+
 
       <div class='weapon_training ssc auto_margin 90width radius_border'>
         <h3 class='radius_border_top'>Weapon Training</h3>
@@ -2236,41 +2014,41 @@
             <div class='equipment_ranged_weapons_rep'>
               <div class='equipment_ranged_weapons_grid1'>
                 <div class='equipment_ranged_weapons_gs1'>Name</div>
-                <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_R_weapon-name' placeholder='Name' />
+                <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_R_weapon_name' placeholder='Name' />
                 <div class='equipment_ranged_weapons_gs3'>Type</div>
-                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_R_weapon-class' placeholder='Class of Weapon' />
+                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_R_weapon_class' placeholder='Class of Weapon' />
               </div>
               <div class='equipment_ranged_weapons_grid2'>
                 <div class='equipment_ranged_weapons_gs5'>Range</div>
-                <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_R_weapon-range' />
+                <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_R_weapon_range' />
                 <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
-                <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_R_weapon-dam-roll' />
+                <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_R_weapon_dam-roll' />
                 <div class='equipment_ranged_weapons_gs9'>Base</div>
-                <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_R_weapon-base' />
+                <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_R_weapon_base' />
                 <div class='equipment_ranged_weapons_gs11'>Pierce</div>
-                <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_R_weapon-pierce' />
+                <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_R_weapon_pierce' />
               </div>
               <div class='equipment_ranged_weapons_grid3'>
                 <div class='equipment_ranged_weapons_gs13'>Hit Mod</div>
-                <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_V_R_weapon-mod1' />
+                <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_V_R_weapon_mod1' />
                 <div class='equipment_ranged_weapons_gs15'>Magazine</div>
-                <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_V_R_weapon-mag' />
+                <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_V_R_weapon_mag' />
                 <div class='equipment_ranged_weapons_gs17'>/</div>
-                <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_V_R_weapon-mag_max' />
-                <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_R_weapon-name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{V_R_weapon-mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
-                <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_R_weapon-name}}} {{damage=[[@{V_R_weapon-dam-roll}+@{V_R_weapon-base}]] }} {{pierce=[[@{V_R_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{V_R_ability_r} }}' >DMG</button>
+                <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_V_R_weapon_mag_max' />
+                <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_R_weapon_name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{V_R_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
+                <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_R_weapon_name}}} {{damage=[[@{V_R_weapon_dam-roll}+@{V_R_weapon_base}]] }} {{pierce=[[@{V_R_weapon_pierce}]] }} {{@{settings_weapondescription}description=@{V_R_ability_r} }}' >DMG</button>
               </div>
               <div class='equipment_ranged_weapons_grid4'>
                 <div class='equipment_ranged_weapons_gs21'>RoF</div>
-                <input class='equipment_ranged_weapons_gs22 full_width' type='text' value='0' name='attr_V_R_weapon-semi' />
+                <input class='equipment_ranged_weapons_gs22 full_width' type='text' value='0' name='attr_V_R_weapon_semi' />
                 <div class='equipment_ranged_weapons_gs23'>/</div>
-                <input class='equipment_ranged_weapons_gs24 full_width' type='text' value='0' name='attr_V_R_weapon-burst' />
+                <input class='equipment_ranged_weapons_gs24 full_width' type='text' value='0' name='attr_V_R_weapon_burst' />
                 <div class='equipment_ranged_weapons_gs25'>/</div>
-                <input class='equipment_ranged_weapons_gs26 full_width' type='text' value='0' name='attr_V_R_weapon-auto' />
+                <input class='equipment_ranged_weapons_gs26 full_width' type='text' value='0' name='attr_V_R_weapon_auto' />
                 <div class='equipment_ranged_weapons_gs27'>Reload</div>
-                <input class='equipment_ranged_weapons_gs28 full_width' type='text' name='attr_V_R_weapon-reload' />
+                <input class='equipment_ranged_weapons_gs28 full_width' type='text' name='attr_V_R_weapon_reload' />
                 <div class='equipment_ranged_weapons_gs29'>Weight</div>
-                <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_V_R_weapon-weight' />
+                <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_V_R_weapon_weight' />
               </div>
               <div>
                 <input name='attr_V_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
@@ -2290,31 +2068,31 @@
             <div class='equipment_ranged_weapons_rep'>
               <div class='equipment_ranged_weapons_grid1'>
                 <div class='equipment_ranged_weapons_gs1'>Name</div>
-                <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_M_weapon-name' placeholder='Name' />
+                <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_M_weapon_name' placeholder='Name' />
                 <div class='equipment_ranged_weapons_gs3'>Type</div>
-                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_M_weapon-class' placeholder='Class of Weapon' />
+                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_M_weapon_class' placeholder='Class of Weapon' />
               </div>
               <div class='equipment_ranged_weapons_grid2'>
                 <div class='equipment_ranged_weapons_gs5'>Reach</div>
-                <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon-range' />
+                <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon_range' />
                 <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
-                <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon-dam-roll' />
+                <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon_dam-roll' />
                 <div class='equipment_ranged_weapons_gs9'>Base</div>
-                <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_M_weapon-base' />
+                <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_M_weapon_base' />
                 <div class='equipment_ranged_weapons_gs11'>Pierce</div>
-                <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_M_weapon-pierce' />
+                <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_M_weapon_pierce' />
               </div>
               <div class='equipment_melee_weapons_grid3'>
                 <div class='equipment_melee_weapons_gs1'>Hit Mod</div>
-                <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_V_M_weapon-mod1' />
+                <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_V_M_weapon_mod1' />
                 <div class='equipment_melee_weapons_gs3'>Weight</div>
-                <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_V_M_weapon-weight' />
+                <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_V_M_weapon_weight' />
                 <div class='equipment_melee_weapons_gs5'>Br Pts</div>
-                <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon-breakpoints' />
+                <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon_breakpoints' />
                 <div class='equipment_melee_weapons_gs7'>/</div>
-                <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon-breakpoints_max' />
-                <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_M_weapon-name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{V_M_weapon-mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
-                <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_M_weapon-name}}} {{damage=[[@{V_M_weapon-dam-roll}+@{V_M_weapon-base}]] }} {{pierce=[[@{V_M_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{V_M_ability_r} }}' >DMG</button>
+                <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon_breakpoints_max' />
+                <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{V_M_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
+                <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_M_weapon_name}}} {{damage=[[@{V_M_weapon_dam-roll}+@{V_M_weapon_base}]] }} {{pierce=[[@{V_M_weapon_pierce}]] }} {{@{settings_weapondescription}description=@{V_M_ability_r} }}' >DMG</button>
               </div>
               <div>
                 <input name='attr_V_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
@@ -2548,45 +2326,45 @@
   <div class='equipment_divider'>
     <div class='equipment_ranged_weapons ssc'>
       <h3 class='radius_border_top'>Ranged Weapons</h3>
-      <fieldset name='rangedweapons' class='repeating_Rangedweapons'>
+      <fieldset name='rangedweapons' class='repeating_rangedweapons'>
         <div class='equipment_ranged_weapons_rep'>
           <div class='equipment_ranged_weapons_grid1'>
             <div class='equipment_ranged_weapons_gs1'>Name</div>
-            <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_R_weapon-name' placeholder='Name' />
+            <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_R_weapon_name' placeholder='Name' />
             <div class='equipment_ranged_weapons_gs3'>Type</div>
-            <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_R_weapon-class' placeholder='Class of Weapon' />
+            <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_R_weapon_class' placeholder='Class of Weapon' />
           </div>
           <div class='equipment_ranged_weapons_grid2'>
             <div class='equipment_ranged_weapons_gs5'>Range</div>
-            <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_R_weapon-range' />
+            <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_R_weapon_range' />
             <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
-            <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_R_weapon-dam-roll' />
+            <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_R_weapon_dam-roll' />
             <div class='equipment_ranged_weapons_gs9'>Base</div>
-            <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_R_weapon-base' />
+            <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_R_weapon_base' />
             <div class='equipment_ranged_weapons_gs11'>Pierce</div>
-            <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_R_weapon-pierce' />
+            <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_R_weapon_pierce' />
           </div>
           <div class='equipment_ranged_weapons_grid3'>
             <div class='equipment_ranged_weapons_gs13'>Hit Mod</div>
-            <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_R_weapon-mod1' />
+            <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_R_weapon_mod1' />
             <div class='equipment_ranged_weapons_gs15'>Magazine</div>
-            <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_R_weapon-mag' />
+            <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_R_weapon_mag' />
             <div class='equipment_ranged_weapons_gs17'>/</div>
-            <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_R_weapon-mag_max' />
-            <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{R_weapon-name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{R_weapon-mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
-            <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon-name}}} {{damage=[[@{R_weapon-dam-roll}+@{R_weapon-base}]] }} {{pierce=[[@{R_weapon-pierce}]] }} {{@{settings_weapondescription}description=@{R_ability_r} }}' >DMG</button>
+            <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_R_weapon_mag_max' />
+            <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{R_weapon_name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{R_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
+            <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon_name}}} {{damage=[[@{R_weapon_dam-roll}+@{R_weapon_base}]] }} {{pierce=[[@{R_weapon_pierce}]] }} {{@{settings_weapondescription}description=@{R_ability_r} }}' >DMG</button>
           </div>
           <div class='equipment_ranged_weapons_grid4'>
             <div class='equipment_ranged_weapons_gs21'>RoF</div>
-            <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_R_weapon-semi' />
+            <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_R_weapon_semi' />
             <div class='equipment_ranged_weapons_gs23'>/</div>
-            <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Brst' name='attr_R_weapon-burst' />
+            <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Brst' name='attr_R_weapon_burst' />
             <div class='equipment_ranged_weapons_gs25'>/</div>
-            <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_R_weapon-auto' />
+            <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_R_weapon_auto' />
             <div class='equipment_ranged_weapons_gs27'>Reload</div>
-            <input class='equipment_ranged_weapons_gs28 full_width' type='text' value='2 half actions' name='attr_R_weapon-reload' />
+            <input class='equipment_ranged_weapons_gs28 full_width' type='text' value='2 half actions' name='attr_R_weapon_reload' />
             <div class='equipment_ranged_weapons_gs29'>Weight</div>
-            <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_R_weapon-weight' />
+            <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_R_weapon_weight' />
           </div>
           <div>
             <input name='attr_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
@@ -2605,43 +2383,43 @@
         <div class='equipment_ranged_weapons_rep'>
           <div class='equipment_ranged_weapons_grid1'>
             <div class='equipment_ranged_weapons_gs1'>Name</div>
-            <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_M_weapon-name' placeholder='Name' />
+            <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_M_weapon_name' placeholder='Name' />
             <div class='equipment_ranged_weapons_gs3'>Type</div>
-            <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon-class' placeholder='Class of Weapon' />
+            <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon_class' placeholder='Class of Weapon' />
           </div>
           <div class='equipment_ranged_weapons_grid2'>
             <div class='equipment_ranged_weapons_gs5'>Reach</div>
-            <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon-range' />
+            <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon_range' />
             <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
-            <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_M_weapon-dam-roll' />
+            <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_M_weapon_dam-roll' />
             <div class='equipment_ranged_weapons_gs9'>Base</div>
-            <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_M_weapon-base' />
+            <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_M_weapon_base' />
             <div class='equipment_ranged_weapons_gs11'>Pierce</div>
-            <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_M_weapon-pierce' />
+            <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_M_weapon_pierce' />
           </div>
           <div class='equipment_melee_weapons_grid3'>
             <div class='equipment_melee_weapons_gs1'>Hit Mod</div>
-            <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_M_weapon-mod1' />
+            <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_M_weapon_mod1' />
             <div class='equipment_melee_weapons_gs3'>Weight</div>
-            <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_M_weapon-weight' />
+            <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_M_weapon_weight' />
             <div class='equipment_melee_weapons_gs5'>Br Pts</div>
-            <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon-breakpoints' />
+            <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon_breakpoints' />
             <div class='equipment_melee_weapons_gs7'>/</div>
-            <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon-breakpoints_max' />
-            <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon-name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon-mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
-            <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon-name}}} {{damage=[[@{M_weapon-dam-roll}+@{M_weapon-base}+@{M_weapon-base-mod}]] }} {{pierce=[[@{M_weapon-pierce}+@{M_weapon-pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
+            <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon_breakpoints_max' />
+            <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
+            <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon_name}}} {{damage=[[@{M_weapon_dam-roll}+@{M_weapon_base}+@{M_weapon_base-mod}]] }} {{pierce=[[@{M_weapon_pierce}+@{M_weapon_pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
           </div>
 
           <div class='equipment_melee_weapons_grid4'>
             <div class='equipment_melee_weapons_gs11'>damage plus Strength</div>
-            <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon-base-mod'>
+            <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon_base-mod'>
               <option selected='selected' value='0'>None</option>
               <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
               <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
             </select>
 
             <div class='equipment_melee_weapons_gs13'>pierce plus Strength</div>
-            <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon-pierce-mod'>
+            <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon_pierce-mod'>
               <option selected='selected' value='0'>None</option>
               <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
               <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
@@ -2671,6 +2449,279 @@
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type='text/worker'>
+  // ___________________________________________________________________________
+  // ____________________Movement and Weight sheet worker_______________________
+  // ___________________________________________________________________________
+  on('change:settings_race change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
+    getAttrs([
+    'settings_race',
+    'agi',
+    'agi_mythic',
+    'agi_advancement',
+    'str',
+    'str_mythic',
+    'str_advancement',
+    'tou',
+    'tou_mythic',
+    'tou_advancement'
+    ], function(values) {
+      var settings_race = parseInt(values['settings_race'], 10) || 0;
+      var agi = parseInt(values['agi'], 10) || 0;
+      var agi_mythic = parseInt(values['agi_mythic'], 10) || 0;
+      var agi_advancement = parseInt(values['agi_advancement'], 10) || 0;
+      var str = parseInt(values['str'], 10) || 0;
+      var str_mythic = parseInt(values['str_mythic'], 10) || 0;
+      var str_advancement = parseInt(values['str_advancement'], 10) || 0;
+      var tou = parseInt(values['tou'], 10) || 0;
+      var tou_mythic = parseInt(values['tou_mythic'], 10) || 0;
+      var tou_advancement = parseInt(values['tou_advancement'], 10) || 0;
+      var weight_mod = str + str_advancement + tou + tou_advancement + (str_mythic + tou_mythic) * 10;
+      var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
+      var str_mod = str + str_advancement / 10;
+      var agi_mod = agi + agi_advancement / 10;
+
+      // normal no modifiers ___________________________________________________
+
+      setAttrs({
+        half_move: (move_mod),
+        full_move: (move_mod * 2),
+        charge_move: (move_mod * 3),
+        run_move: (move_mod * 6),
+        sprint_move: (move_mod * 8),
+        jump_move:(str_mod / 4),
+        leap_move:(agi_mod / 2),
+        carry: (weight_mod),
+        lift: (weight_mod * 2),
+        push: (weight_mod * 4)
+      });
+      if (str_mod >= agi_mod) {
+        setAttrs({
+          leap_move:(str_mod / 2)
+        });
+      }
+
+      // Spartan + Jiralhanae + Promethean Knight (carry weight * 2) ___________
+      if(settings_race == 1) {
+        setAttrs({
+          carry: (weight_mod * 2),
+          lift: (weight_mod * 2 * 2),
+          push: (weight_mod * 4 * 2)
+        });
+      }
+
+      // Sangheili (+2 agi leap, carry weight * 2) _____________________________
+      if(settings_race == 2) {
+        setAttrs({
+          carry: (weight_mod * 2),
+          lift: (weight_mod * 2 * 2),
+          push: (weight_mod * 4 * 2),
+          leap_move: ((agi_mod + 4) / 2) // modifier plus 4, sum halved
+        });
+        if(str_mod >= agi_mod) {
+          setAttrs({
+            leap_move: ((str_mod + 4) / 2)
+          });
+        }
+      }
+
+      // Ruutian & Ibie'shan (double agi to jump) ______________________________
+      if(settings_race == 3) {
+        setAttrs({
+          jump_move:(str_mod / 4 * 2)
+        });
+      }
+
+      // Jackal T'vaoan (agi to jump * 4) ______________________________________
+      if(settings_race == 4) {
+        setAttrs({
+          jump_move:(str_mod / 4 * 4)
+        });
+      }
+
+      // Mgalekgolo (Hunter) (weight = 4000, double agi to charge/run) _________
+      if(settings_race == 5) {
+        setAttrs({
+          carry: (5000),
+          lift: (5000 * 2),
+          push: (5000 * 4),
+          charge_move: (move_mod * 3 * 2),
+          run_move: (move_mod * 6 * 2)
+        });
+      }
+
+      // 0 mod movement override _______________________________________________
+      if (move_mod <= 0) {
+        setAttrs({
+          half_move: (0.5),
+          full_move: (1),
+          charge_move: (2),
+          run_move: (3),
+          sprint_move: (4)
+        });
+      }
+
+      // 0 mod movement override Mgalekgolo (Hunter)____________________________
+      if ((move_mod <= 0) && (settings_race == 5)) {
+        setAttrs({
+          half_move: (0.5),
+          full_move: (1),
+          charge_move: (4),
+          run_move: (6),
+          sprint_move: (4)
+        });
+      }
+    });
+  });
+
+
+
+  // ___________________________________________________________________________
+  // ____________________Tabs sheet worker______________________________________
+  // ___________________________________________________________________________
+  const buttonlist = ['core','equipment','medical','advancements','journal','vehicles','settings'];
+  buttonlist.forEach(button => {
+    on(`clicked:${button}`, function() {
+      setAttrs({
+        sheetTab: button
+      });
+    });
+  });
+
+
+
+  // ___________________________________________________________________________
+  // ____________________gear cost/weight sheet worker__________________________
+  // ___________________________________________________________________________
+  on('change:repeating_rangedweapons remove:repeating_rangedweapons change:repeating_meleeweapons remove:repeating_meleeweapons', function() {
+    repeatingSum("R_weapon_weight_t","rangedweapons","R_weapon_weight"),
+    repeatingSum("M_weapon_weight_t","meleeweapons","M_weapon_weight");
+  });
+
+  on('change:M_weapon_weight_t change:R_weapon_weight_t change:gear_weight change:gear_cost change:gear_quantity change:repeating_gear remove:repeating_gear', () => {
+    getSectionIDs(`repeating_gear`, idArray => {
+      const fieldset_cost = [];
+      const fieldset_weight = [];
+      const fieldset_quantity = [];
+      idArray.forEach(id => fieldset_cost.push (`repeating_gear_${id}_gear_cost_r`));
+      idArray.forEach(id => fieldset_weight.push (`repeating_gear_${id}_gear_weight_r`));
+      idArray.forEach(id => fieldset_quantity.push (`repeating_gear_${id}_gear_quantity_r`));
+      getAttrs(['M_weapon_weight_t','R_weapon_weight_t','weight_total', 'gear_weight', 'credit_total', 'gear_cost', 'gear_quantity', ...fieldset_weight, ...fieldset_cost, ...fieldset_quantity], v => {
+        const getValue = (id, field) => parseFloat(v[`repeating_gear_${id}_${field}`]) || 0
+        const credit_base = parseFloat(v.gear_cost) * parseFloat(v.gear_quantity)
+        const credit_repeating = idArray.reduce((total, id) => total + (getValue(id, 'gear_cost_r') * getValue(id, 'gear_quantity_r')), 0)
+        const weight_base = parseFloat(v.gear_weight) * parseFloat(v.gear_quantity)
+        const weight_repeating = idArray.reduce((total, id) => total + (getValue(id, 'gear_weight_r') * getValue(id, 'gear_quantity_r')), 0)
+        const weapon_weight = parseFloat(v.M_weapon_weight_t) + parseFloat(v.R_weapon_weight_t)
+        setAttrs({
+          credit_total: credit_base + credit_repeating,
+          weight_total: weight_base + weight_repeating + weapon_weight,
+        });
+      });
+    });
+  });
+
+  // ___________________________________________________________________________
+  // ____________________Advancement XP sheet worker_______________________________
+  // ___________________________________________________________________________
+  on('change:xp_total change:advancement_costL change:advancement_costR change:repeating_advancements remove:repeating_advancements', () => {
+    // get section IDs because of operation both inside and outside of fieldset
+    getSectionIDs(`repeating_advancements`, idArray => {
+      const fieldnames = [];
+      idArray.forEach(id => fieldnames.push (
+      `repeating_advancements_${id}_advancement_costL_r`,
+      `repeating_advancements_${id}_advancement_costR_r`
+      ));
+      // spread operator to get every array value
+      getAttrs(['xp_total', 'advancement_costL', 'advancement_costR', ...fieldnames], v => {
+        const getValue = (id, field) => parseFloat(v[`repeating_advancements_${id}_${field}`]) || 0
+        const cost = parseFloat(v.gear_cost) || 0
+        const left = parseFloat(v.advancement_costL) || 0
+        const right = parseFloat(v.advancement_costR) || 0
+        const left_r = idArray.reduce((total, id) => total + getValue(id,'advancement_costL_r'),0)
+        const right_r = idArray.reduce((total, id) => total + getValue(id,'advancement_costR_r'),0)
+        const spent = left + right + left_r + right_r
+        const total = parseFloat(v.xp_total) || 0
+        setAttrs({
+          xp_spent: spent,
+          xp_current: total - spent
+        });
+      });
+    });
+  });
+
+
+
+  // ___________________________________________________________________________
+  // ____________________Advancement Faction training sheet worker______________
+  // ___________________________________________________________________________
+  on('change:faction', function() {
+    getAttrs(['faction'], function(values) {
+      var new_faction = parseInt(values['faction'], 10) || 0;
+      var faction_training_human = parseInt(values['faction_training_human'], 10) || 0;
+      var faction_training_forerunner = parseInt(values['faction_training_forerunner'], 10) || 0;
+      var faction_training_covenant = parseInt(values['faction_training_covenant'], 10) || 0;
+      setAttrs({
+        faction_training_human: (0),
+        faction_training_forerunner: (0),
+        faction_training_covenant: (0)
+      });
+      if (new_faction == 2) {
+        setAttrs({faction_training_human: 1});
+      }
+      if (new_faction == 4) {
+        setAttrs({faction_training_forerunner: 1});
+      }
+      if (new_faction == 3 || new_faction == 5) {
+        setAttrs({faction_training_covenant: 1});
+      }
+    });
+  });
+
+  // ___________________________________________________________________________
+  // __________________________General sum sheet worker_________________________
+  // ___________________________________________________________________________
+  /* ===== PARAMETERS ==========
+  destination = the name of the attribute that stores the total quantity
+  section = name of repeating fieldset, without the repeating_
+  fields = the name of the attribute field to be summed
+        can be a single attribute: 'weight'
+        or an array of attributes: ['weight','number','equipped']
+  multiplier (optional) = a multiplier to the entire fieldset total. For instance, if summing coins of weight 0.02, might want to multiply the final total by 0.02.
+  */
+  const repeatingSum = (destination, section, fields, multiplier = 1) => {
+      if (!Array.isArray(fields)) fields = [fields];
+      getSectionIDs(`repeating_${section}`, idArray => {
+          const attrArray = idArray.reduce( (m,id) => [...m, ...(fields.map(field => `repeating_${section}_${id}_${field}`))],[]);
+          getAttrs(attrArray, v => {
+              console.log("===== values of v: "+ JSON.stringify(v) +" =====");
+                   // getValue: if not a number, returns 1 if it is 'on' (checkbox), otherwise returns 0..
+              const getValue = (section, id,field) => parseFloat(v[`repeating_${section}_${id}_${field}`]) || (v[`repeating_${section}_${id}_${field}`] === 'on' ? 1 : 0);
+              const sumTotal = idArray.reduce((total, id) => total + fields.reduce((subtotal,field) => subtotal * getValue(section, id,field),1),0);
+              setAttrs({[destination]: sumTotal * multiplier});
+          });
+      });
+  };
+
+</script>
 
 
 
