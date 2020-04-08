@@ -254,7 +254,7 @@ ______________________________ start of structure for characteristics __________
 	padding: 3px 0px 6px 3px;
 	display: grid;
 	grid-column-gap: 0.5%;
-	grid-template-columns: 9.55% 9.55% 9.55% 9.55% 9.55% 9.55% 9.55% 9.55% 9.55% 9.55%;
+	grid-template-columns: 9.53% 9.53% 9.53% 9.53% 9.53% 9.53% 9.53% 9.53% 9.53% 9.53%;
 	grid-template-rows: 26px 40px 26px;
 }
 
