@@ -550,16 +550,15 @@ ______________________________ start of equipment tab __________________________
 .sheet-equipment_numerics { grid-area: e3; margin-top: 10px; }
 .sheet-equipment_ranged_weapons_rep { background:#475f85; border:1px solid white; border-radius: 10px; padding: 2px; }
 
-
-.sheet-equipment_ranged_weapons_gs1 {  grid-area: rw1;   color: white; font-size: 12px; padding: 0px 2px }
-.sheet-equipment_ranged_weapons_gs2 {  grid-area: rw2;   color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
-.sheet-equipment_ranged_weapons_gs3 {  grid-area: rw3;   color: white; font-size: 12px; padding: 0px 2px }
-.sheet-equipment_ranged_weapons_gs4 {  grid-area: rw4;   color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; border-top-right-radius: 10px; }
-.sheet-equipment_ranged_weapons_gs5 {  grid-area: rw5;   color: white; font-size: 12px; padding: 0px 2px }
-.sheet-equipment_ranged_weapons_gs6 {  grid-area: rw6;   color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
-.sheet-equipment_ranged_weapons_gs7 {  grid-area: rw7;   color: white; font-size: 12px; padding: 0px 2px }
-.sheet-equipment_ranged_weapons_gs8 {  grid-area: rw8;   color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
-.sheet-equipment_ranged_weapons_gs9 {  grid-area: rw9;   color: white; font-size: 12px; padding: 0px 2px }
+.sheet-equipment_ranged_weapons_gs1 { grid-area: rw1;		color: white; font-size: 12px; padding: 0px 2px }
+.sheet-equipment_ranged_weapons_gs2 { grid-area: rw2;		color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
+.sheet-equipment_ranged_weapons_gs3 { grid-area: rw3;		color: white; font-size: 12px; padding: 0px 2px }
+.sheet-equipment_ranged_weapons_gs4 { grid-area: rw4;		color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; border-top-right-radius: 10px; }
+.sheet-equipment_ranged_weapons_gs5 { grid-area: rw5;		color: white; font-size: 12px; padding: 0px 2px }
+.sheet-equipment_ranged_weapons_gs6 { grid-area: rw6;		color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
+.sheet-equipment_ranged_weapons_gs7 { grid-area: rw7;		color: white; font-size: 12px; padding: 0px 2px }
+.sheet-equipment_ranged_weapons_gs8 { grid-area: rw8;		color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
+.sheet-equipment_ranged_weapons_gs9 { grid-area: rw9;		color: white; font-size: 12px; padding: 0px 2px }
 .sheet-equipment_ranged_weapons_gs10 { grid-area: rw10; 	color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
 .sheet-equipment_ranged_weapons_gs11 { grid-area: rw11; 	color: white; font-size: 12px; padding: 0px 2px }
 .sheet-equipment_ranged_weapons_gs12 { grid-area: rw12; 	color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
@@ -587,7 +586,7 @@ ______________________________ start of equipment tab __________________________
 	display: grid;
 	grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
 	grid-template-areas:
-	'rw1  rw2  rw2  rw2  rw2  rw2  rw2  rw3  rw4  rw4';
+	'rw1 rw2 rw2 rw2 rw2 rw2 rw2 rw3 rw4 rw4';
 }
 
 .sheet-equipment_ranged_weapons_grid2 {
@@ -595,7 +594,7 @@ ______________________________ start of equipment tab __________________________
 	display: grid;
 	grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
 	grid-template-areas:
-	'rw5  rw6  rw6  rw7  rw7  rw8  rw9  rw10 rw11 rw12';
+	'rw5 rw6 rw6 rw7 rw7 rw8 rw9 rw10 rw11 rw12';
 }
 
 .sheet-equipment_ranged_weapons_grid3 {
@@ -615,15 +614,15 @@ ______________________________ start of equipment tab __________________________
 	'rw21 rw22 rw23 rw24 rw25 rw26 rw27 rw28 rw29 rw30';
 }
 
-.sheet-equipment_melee_weapons_gs1 {  grid-area: mw1; 	color: white; font-size: 12px; padding: 0px 2px }
-.sheet-equipment_melee_weapons_gs2 {  grid-area: mw2; 	color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
-.sheet-equipment_melee_weapons_gs3 {  grid-area: mw3; 	color: white; font-size: 12px; padding: 0px 2px }
-.sheet-equipment_melee_weapons_gs4 {  grid-area: mw4; 	color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
-.sheet-equipment_melee_weapons_gs5 {  grid-area: mw5; 	color: white; font-size: 12px; padding: 0px 2px }
-.sheet-equipment_melee_weapons_gs6 {  grid-area: mw6; 	color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
-.sheet-equipment_melee_weapons_gs7 {  grid-area: mw7; 	color: white; font-size: 30px; margin-top: -27px; text-align: center; height: 12px; }
-.sheet-equipment_melee_weapons_gs8 {  grid-area: mw8; 	color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
-.sheet-equipment_melee_weapons_gs9 {  grid-area: mw9; 	color: white; font-size: 12px; width: 50px!important; }
+.sheet-equipment_melee_weapons_gs1 { grid-area: mw1;	color: white; font-size: 12px; padding: 0px 2px }
+.sheet-equipment_melee_weapons_gs2 { grid-area: mw2;	color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
+.sheet-equipment_melee_weapons_gs3 { grid-area: mw3;	color: white; font-size: 12px; padding: 0px 2px }
+.sheet-equipment_melee_weapons_gs4 { grid-area: mw4;	color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
+.sheet-equipment_melee_weapons_gs5 { grid-area: mw5;	color: white; font-size: 12px; padding: 0px 2px }
+.sheet-equipment_melee_weapons_gs6 { grid-area: mw6;	color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
+.sheet-equipment_melee_weapons_gs7 { grid-area: mw7;	color: white; font-size: 30px; margin-top: -27px; text-align: center; height: 12px; }
+.sheet-equipment_melee_weapons_gs8 { grid-area: mw8;	color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; }
+.sheet-equipment_melee_weapons_gs9 { grid-area: mw9;	color: white; font-size: 12px; width: 50px!important; }
 .sheet-equipment_melee_weapons_gs10 { grid-area: mw10; color: white; font-size: 12px; width: 50px!important; }
 .sheet-equipment_melee_weapons_gs11 { grid-area: mw11; color: white; font-size: 12px; }
 .sheet-equipment_melee_weapons_gs12 { grid-area: mw12; color: white; font-size: 12px; border: none; border-bottom: 1px dotted white; height: 27px; margin-left: -8px; margin-bottom: 0px; }
