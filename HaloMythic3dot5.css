@@ -97,8 +97,10 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-radius_border_right { border-bottom-right-radius: 7px !important; }
 .sheet-radius_border_right_wep { border-bottom-right-radius: 10px !important; }
 
+.sheet-collapsible_entity_toggle { display: block; }
 .sheet-collapsible_entity_block { display: none; }
 .sheet-collapsible_entity_switch:checked ~ .sheet-collapsible_entity_block { display: block; }
+.sheet-collapsible_entity_switch:checked ~ .sheet-collapsible_entity_toggle { display: none; }
 
 .sheet-hidden { display: none; }
 
@@ -422,7 +424,7 @@ ______________________________ start of minimisable infographic ________________
 .sheet-minimisable_infographic_toggles {
 	display: grid;
 	grid-column-gap: 10px;
-	grid-template-columns: 81px 51px 78px auto;
+	grid-template-columns: 81px 51px 78px 78px 220px auto;
 
 }
 
@@ -965,12 +967,24 @@ the appropriate element is displayed on a 4 all elements are hidden */
 .sheet-hidernot:checked + div { display: none }
 .sheet-hidernot:checked + input { display: none }
 
+/* ______________________________ end of vehicles tab ______________________________
+______________________________ start of NPC sheet overrides ___________________________________________________________ */
+.sheet-NPC_characteristics_fields{height: 26px !important; font-size: 16px;}
+.sheet-NPC_characteristics_roll{width:calc(100% - 10px); height: 20px !important; font-size: 16px;}
+.sheet-NPC_characteristics{
+	display: grid;
+	grid-template-columns: 60px 40px 40px 10px 60px 40px
+}
 
 
+.sheet-NPC_Faction_override{margin-top: -5px}
 
+.sheet-NPC_textfield_override{height:300px}
 
+.sheet-NPC_header_override{background: none}
 
-
+/* ______________________________ end of NPC sheet overrides ______________________________
+______________________________ start of rolltemplate ___________________________________________________________ */
 .sheet-rolltemplate-mythic .sheet-template-header,
 .sheet-rolltemplate-mythic .sheet-template-row {
 	color: white;
