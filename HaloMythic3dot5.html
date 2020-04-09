@@ -280,6 +280,9 @@
         <label><input type='checkbox' name='attr_infographic' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>Infographic</span></label>
         <label><input type='checkbox' name='attr_to-gm' value='/w gm' class='select_button hidden' /><span class='select_text'>To GM</span></label>
         <label><input type='checkbox' name='attr_inlinemod-toggle' value='?{Modifier|0}' class='select_button hidden' checked/><span class='select_text'>Inline Mod</span></label>
+<p>   </p>
+        <button class='clear minimisable_infographic_override' type='roll' name='autodamage' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{avrdam= [[0+[[([[(?{Amount of shots|1}*?{Amount of D10s|0})d10]] + [[?{Amount of shots|1}*?{Base|0}]] - [[?{Amount of shots|1}*(?{Armor|0} - ?{Pierce|0})d1]])d1]]]]}}'>Auto-Damage</button>
+    	  <button class='clear minimisable_infographic_override' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
       </div>
       <input type='checkbox' name='attr_infographic' class='collapsible_entity_switch hidden' />
       <div class='collapsible_entity_block'>
@@ -922,11 +925,6 @@
   <!-- ______________________________ start of tab Equipment ______________________________ -->
 
   <div class='equipment box radius_border_box ssc'>
-
-	<div class='text_centered equipment_macro_push'>
-	  <button class='clear' type='roll' name='autodamage' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{avrdam= [[0+[[([[(?{Amount of shots|1}*?{Amount of D10s|0})d10]] + [[?{Amount of shots|1}*?{Base|0}]] - [[?{Amount of shots|1}*(?{Armor|0} - ?{Pierce|0})d1]])d1]]]]}}'>Auto-Damage</button>
-	  <button class='clear' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
-	</div>
 	<div class='equipment_divider'>
 	  <div class='equipment_ranged_weapons ssc'>
 		<h3 class='radius_border_top'>Ranged Weapons</h3>
@@ -2171,14 +2169,8 @@
     <label><input type='checkbox' name='attr_to-gm' value='/w gm' class='select_button hidden' /><span class='select_text'>To GM</span></label>
     <label><input type='checkbox' name='attr_inlinemod-toggle' value='?{Modifier|0}' class='select_button hidden' checked/><span class='select_text'>Inline Mod</span></label>
     <label><input type='checkbox' name='attr_npc_sheet' class='auto_margin collapsible_entity_switch select_button hidden' /><span class='select_text'>NPC Sheet</span></label>
-    <select name='attr_faction' class='full_width NPC_Faction_override'>
-      <option value='1' selected='selected' disabled hidden />
-      <option value='2'>United Nations Space Command</option>
-      <option value='3'>Covenant</option>
-      <option value='4'>Forerunner</option>
-      <option value='5'>Banished</option>
-      <option value='6'>Other</option>
-    </select>
+    <button class='clear minimisable_infographic_override' type='roll' name='autodamage' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{avrdam= [[0+[[([[(?{Amount of shots|1}*?{Amount of D10s|0})d10]] + [[?{Amount of shots|1}*?{Base|0}]] - [[?{Amount of shots|1}*(?{Armor|0} - ?{Pierce|0})d1]])d1]]]]}}'>Auto-Damage</button>
+    <button class='clear minimisable_infographic_override' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
   </div>
 
   <div class='NPC_characteristics edge_padding'>
