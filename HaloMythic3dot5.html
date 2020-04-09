@@ -962,7 +962,7 @@
 			  <div class='equipment_ranged_weapons_gs21'>RoF</div>
 			  <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_R_weapon_semi' />
 			  <div class='equipment_ranged_weapons_gs23'>/</div>
-			  <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Brst' name='attr_R_weapon_burst' />
+			  <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Burst' name='attr_R_weapon_burst' />
 			  <div class='equipment_ranged_weapons_gs25'>/</div>
 			  <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_R_weapon_auto' />
 			  <div class='equipment_ranged_weapons_gs27'>Reload</div>
@@ -1008,9 +1008,9 @@
 			  <div class='equipment_melee_weapons_gs3'>Weight</div>
 			  <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_M_weapon_weight' />
 			  <div class='equipment_melee_weapons_gs5'>Br Pts</div>
-			  <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon_breakpoints' />
+			  <input class='equipment_melee_weapons_gs6 full_width' type='text' value='?00' name='attr_M_weapon_breakpoints' />
 			  <div class='equipment_melee_weapons_gs7'>/</div>
-			  <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon_breakpoints_max' />
+			  <input class='equipment_melee_weapons_gs8 full_width' type='text' value='?00' name='attr_M_weapon_breakpoints_max' />
 			  <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
 			  <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon_name}}} {{damage=[[@{M_weapon_dam-roll}+@{M_weapon_base}+@{M_weapon_base-mod}]] }} {{pierce=[[@{M_weapon_pierce}+@{M_weapon_pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
 			</div>
@@ -1068,7 +1068,7 @@
 	  <label class='margin_adjust equipment_gear_gs7'><input type='checkbox' name='attr_collapse' value='7' class='collapsible_entity_switch select_button hidden'><span class='select_text'>▼</span></label>
 	</div>
 	<input name='attr_collapse' type='checkbox'  value='7' class='collapsible_entity_switch hidden' />
-	<textarea name='attr_gear_desc' class='collapsible_entity_block auto_margin 90width'></textarea>
+	<textarea name='attr_gear_desc' placeholder='Different equipment will have special rules.' class='collapsible_entity_block auto_margin 90width'></textarea>
 	<fieldset name='gear' class='repeating_gear'>
 	  <div class='equipment_gear'>
 		<input name='attr_gear_name_r' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
@@ -1135,7 +1135,7 @@
 		  <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
 		  <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{permutation_name} }} {{description=@{permutation_desc} }}' class='hidden'></button><span class='select_text'>🗭</span></label>
 		  <input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
-		  <textarea name='attr_permutation_desc' class='collapsible_entity_block'></textarea>
+		  <textarea name='attr_permutation_desc' placeholder='All Human BDUs and Armor are designed to take Permutations. Permutations are attachments that modify Armor and offer various forms of function. Each section of Armor can only fit so many Permutations, which are shown as Hardpoints.' class='collapsible_entity_block'></textarea>
 		</div>
 		<fieldset name='permutations' class='repeating_permutations'>
 		  <div>
@@ -2023,11 +2023,11 @@
 			  </div>
 			  <div class='equipment_ranged_weapons_grid4'>
 				<div class='equipment_ranged_weapons_gs21'>RoF</div>
-				<input class='equipment_ranged_weapons_gs22 full_width' type='text' value='0' name='attr_V_R_weapon_semi' />
+				<input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_V_R_weapon_semi' />
 				<div class='equipment_ranged_weapons_gs23'>/</div>
-				<input class='equipment_ranged_weapons_gs24 full_width' type='text' value='0' name='attr_V_R_weapon_burst' />
+				<input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Burst' name='attr_V_R_weapon_burst' />
 				<div class='equipment_ranged_weapons_gs25'>/</div>
-				<input class='equipment_ranged_weapons_gs26 full_width' type='text' value='0' name='attr_V_R_weapon_auto' />
+				<input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_V_R_weapon_auto' />
 				<div class='equipment_ranged_weapons_gs27'>Reload</div>
 				<input class='equipment_ranged_weapons_gs28 full_width' type='text' name='attr_V_R_weapon_reload' />
 				<div class='equipment_ranged_weapons_gs29'>Weight</div>
@@ -2342,7 +2342,7 @@
             <div class='equipment_ranged_weapons_gs21'>RoF</div>
             <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_R_weapon_semi' />
             <div class='equipment_ranged_weapons_gs23'>/</div>
-            <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Brst' name='attr_R_weapon_burst' />
+            <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Burst' name='attr_R_weapon_burst' />
             <div class='equipment_ranged_weapons_gs25'>/</div>
             <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_R_weapon_auto' />
             <div class='equipment_ranged_weapons_gs27'>Reload</div>
