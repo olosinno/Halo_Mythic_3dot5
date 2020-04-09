@@ -923,8 +923,10 @@
 
   <div class='equipment box radius_border_box ssc'>
 
-	<button class='clear' type='roll' name='autodamage' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{avrdam= [[0+[[([[(?{Amount of shots|1}*?{Amount of D10s|0})d10]] + [[?{Amount of shots|1}*?{Base|0}]] - [[?{Amount of shots|1}*(?{Armor|0} - ?{Pierce|0})d1]])d1]]]]}}'>Auto-Damage</button>
-	<button class='clear' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
+	<div class='text_centered equipment_macro_push'>
+	  <button class='clear' type='roll' name='autodamage' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{avrdam= [[0+[[([[(?{Amount of shots|1}*?{Amount of D10s|0})d10]] + [[?{Amount of shots|1}*?{Base|0}]] - [[?{Amount of shots|1}*(?{Armor|0} - ?{Pierce|0})d1]])d1]]]]}}'>Auto-Damage</button>
+	  <button class='clear' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
+	</div>
 	<div class='equipment_divider'>
 	  <div class='equipment_ranged_weapons ssc'>
 		<h3 class='radius_border_top'>Ranged Weapons</h3>
