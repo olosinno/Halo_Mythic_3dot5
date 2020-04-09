@@ -670,6 +670,11 @@ ______________________________ start of equipment tab __________________________
 	height: 30px;
 	letter-spacing: 1px;
 }
+.sheet-equipment_titles {
+	font-size: 14px;
+		text-align: center;
+		height: 20px;
+}
 
 .sheet-equipment_armor_input { width: 100%; height: 50px; }
 .sheet-equipment_armor_gs1 { background: #475f85; padding: 2px; }
@@ -686,7 +691,7 @@ ______________________________ start of equipment tab __________________________
 	position: relative;
 	z-index: 0;
 	display: grid;
-	grid-template-columns: auto 100px 35px 35px;
+	grid-template-columns: auto 100px 40px 40px;
 }
 
 
