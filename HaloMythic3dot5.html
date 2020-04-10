@@ -2477,8 +2477,8 @@
       var tou_advancement = parseInt(values['tou_advancement'], 10) || 0;
       var weight_mod = str + str_advancement + tou + tou_advancement + (str_mythic + tou_mythic) * 10;
       var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
-      var str_mod = str + str_advancement / 10;
-      var agi_mod = agi + agi_advancement / 10;
+      var str_mod = (str + str_advancement) / 10;
+      var agi_mod = (agi + agi_advancement) / 10;
 
       // normal no modifiers ___________________________________________________
 
@@ -2515,11 +2515,11 @@
           carry: (weight_mod * 2),
           lift: (weight_mod * 2 * 2),
           push: (weight_mod * 4 * 2),
-          leap_move: ((agi_mod + 4) / 2) // modifier plus 4, sum halved
+          leap_move: ((agi_mod + 2) / 2) // modifier plus 4, sum halved
         });
         if(str_mod >= agi_mod) {
           setAttrs({
-            leap_move: ((str_mod + 4) / 2)
+            leap_move: ((str_mod + 2) / 2)
           });
         }
       }
