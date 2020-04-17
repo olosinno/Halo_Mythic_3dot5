@@ -277,9 +277,12 @@
     <div class='minimisable_infographic_main'>
 
       <div class='minimisable_infographic_toggles'>
-        <label><input type='checkbox' name='attr_infographic' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>Infographic</span></label>
+        <label><input type='checkbox' name='attr_infographic' class='collapsible_entity_switch select_button hidden' checked/><span class='select_text'>Infographic</span></label>
         <label><input type='checkbox' name='attr_to-gm' value='/w gm' class='select_button hidden' /><span class='select_text'>To GM</span></label>
         <label><input type='checkbox' name='attr_inlinemod-toggle' value='?{Modifier|0}' class='select_button hidden' checked/><span class='select_text'>Inline Mod</span></label>
+<p>   </p>
+        <button class='clear minimisable_infographic_override' type='roll' name='autodamage' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{avrdam= [[0+[[([[(?{Amount of shots|1}*?{Amount of D10s|0})d10]] + [[?{Amount of shots|1}*?{Base|0}]] - [[?{Amount of shots|1}*(?{Armor|0} - ?{Pierce|0})d1]])d1]]]]}}'>Auto-Damage</button>
+    	  <button class='clear minimisable_infographic_override' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
       </div>
       <input type='checkbox' name='attr_infographic' class='collapsible_entity_switch hidden' />
       <div class='collapsible_entity_block'>
@@ -922,11 +925,6 @@
   <!-- ______________________________ start of tab Equipment ______________________________ -->
 
   <div class='equipment box radius_border_box ssc'>
-
-	<div class='text_centered equipment_macro_push'>
-	  <button class='clear' type='roll' name='autodamage' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{avrdam= [[0+[[([[(?{Amount of shots|1}*?{Amount of D10s|0})d10]] + [[?{Amount of shots|1}*?{Base|0}]] - [[?{Amount of shots|1}*(?{Armor|0} - ?{Pierce|0})d1]])d1]]]]}}'>Auto-Damage</button>
-	  <button class='clear' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
-	</div>
 	<div class='equipment_divider'>
 	  <div class='equipment_ranged_weapons ssc'>
 		<h3 class='radius_border_top'>Ranged Weapons</h3>
@@ -956,7 +954,7 @@
 			  <div class='equipment_ranged_weapons_gs17'>/</div>
 			  <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_R_weapon_mag_max' />
 			  <button class='equipment_ranged_weapons_gs19 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{R_weapon_name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{R_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
-			  <button class='equipment_ranged_weapons_gs20 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon_name}}} {{damage=[[@{R_weapon_dam-roll}+@{R_weapon_base}]] }} {{pierce=[[@{R_weapon_pierce}]] }} {{@{settings_weapondescription}description=@{R_ability_r} }}' >DMG</button>
+			  <button class='equipment_ranged_weapons_gs20 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon_name}}} {{damage=[[@{R_weapon_dam-roll}+@{R_weapon_base}]] }} {{pierce=[[@{R_weapon_pierce}]] }} {{@{settings_weapondescription}=@{R_ability_r} }}' >DMG</button>
 			</div>
 			<div class='equipment_ranged_weapons_grid4'>
 			  <div class='equipment_ranged_weapons_gs21'>RoF</div>
@@ -1012,7 +1010,7 @@
 			  <div class='equipment_melee_weapons_gs7'>/</div>
 			  <input class='equipment_melee_weapons_gs8 full_width' type='text' value='?00' name='attr_M_weapon_breakpoints_max' />
 			  <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
-			  <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon_name}}} {{damage=[[@{M_weapon_dam-roll}+@{M_weapon_base}+@{M_weapon_base-mod}]] }} {{pierce=[[@{M_weapon_pierce}+@{M_weapon_pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
+			  <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon_name}}} {{damage=[[@{M_weapon_dam-roll}+@{M_weapon_base}+@{M_weapon_base-mod}]] }} {{pierce=[[@{M_weapon_pierce}+@{M_weapon_pierce-mod}]] }} {{@{settings_weapondescription}=@{M_ability_r} }}' >DMG</button>
 			</div>
 			<div class='equipment_melee_weapons_grid4'>
 			  <div class='equipment_melee_weapons_gs11'>damage plus Strength</div>
@@ -1126,6 +1124,12 @@
 	  <div class='equipment_armor_gs3 radius_border'>
 		<h3 class='radius_border_top'>Armor Permutations</h3>
 		<div>
+      <div class="equipment_permutations_grid equipment_titles">
+        <p class='bold_text equipment_titles'>Name</p>
+        <p class='bold_text equipment_titles'>Location</p>
+        <p class='bold_text equipment_titles'>Hpts</p>
+        <p class='bold_text equipment_titles'>Pg#</p>
+      </div>
 		  <div class='equipment_permutations_grid'>
 			<input class='full_width' type='text' name='attr_permutation_name' placeholder='Name'>
 			<input class='full_width' type='text' name='attr_permutation_location' placeholder='Location'>
@@ -2019,7 +2023,7 @@
 				<div class='equipment_ranged_weapons_gs17'>/</div>
 				<input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_V_R_weapon_mag_max' />
 				<button class='equipment_ranged_weapons_gs19 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_R_weapon_name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{V_R_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
-				<button class='equipment_ranged_weapons_gs20 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_R_weapon_name}}} {{damage=[[@{V_R_weapon_dam-roll}+@{V_R_weapon_base}]] }} {{pierce=[[@{V_R_weapon_pierce}]] }} {{@{settings_weapondescription}description=@{V_R_ability_r} }}' >DMG</button>
+				<button class='equipment_ranged_weapons_gs20 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_R_weapon_name}}} {{damage=[[@{V_R_weapon_dam-roll}+@{V_R_weapon_base}]] }} {{pierce=[[@{V_R_weapon_pierce}]] }} {{@{settings_weapondescription}=@{V_R_ability_r} }}' >DMG</button>
 			  </div>
 			  <div class='equipment_ranged_weapons_grid4'>
 				<div class='equipment_ranged_weapons_gs21'>RoF</div>
@@ -2075,7 +2079,7 @@
 				<div class='equipment_melee_weapons_gs7'>/</div>
 				<input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon_breakpoints_max' />
 				<button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{V_M_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
-				<button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_M_weapon_name}}} {{damage=[[@{V_M_weapon_dam-roll}+@{V_M_weapon_base}]] }} {{pierce=[[@{V_M_weapon_pierce}]] }} {{@{settings_weapondescription}description=@{V_M_ability_r} }}' >DMG</button>
+				<button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_M_weapon_name}}} {{damage=[[@{V_M_weapon_dam-roll}+@{V_M_weapon_base}]] }} {{pierce=[[@{V_M_weapon_pierce}]] }} {{@{settings_weapondescription}=@{V_M_ability_r} }}' >DMG</button>
 			  </div>
 			  <div>
 				<input name='attr_V_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
@@ -2131,7 +2135,7 @@
 
     <h3>Weapon Description in Damage Roll</h3>
     <select name='attr_settings_weapondescription' class='full_width edge_padding'>
-      <option value=''>Include weapon description</option>
+      <option value='description'>Include weapon description</option>
       <option value=' 'selected='selected'>Exclude weapon description</option>
     </select>
     <br>
@@ -2157,7 +2161,7 @@
 
 
 <input type='checkbox' name='attr_npc_sheet' class='collapsible_entity_switch hidden' />
-<div class='background_radius collapsible_entity_block'>
+<div class='background_radius collapsible_entity_block box'>
   <br>
 
   <div class='minimisable_infographic_toggles'>
@@ -2165,14 +2169,8 @@
     <label><input type='checkbox' name='attr_to-gm' value='/w gm' class='select_button hidden' /><span class='select_text'>To GM</span></label>
     <label><input type='checkbox' name='attr_inlinemod-toggle' value='?{Modifier|0}' class='select_button hidden' checked/><span class='select_text'>Inline Mod</span></label>
     <label><input type='checkbox' name='attr_npc_sheet' class='auto_margin collapsible_entity_switch select_button hidden' /><span class='select_text'>NPC Sheet</span></label>
-    <select name='attr_faction' class='full_width NPC_Faction_override'>
-      <option value='1' selected='selected' disabled hidden />
-      <option value='2'>United Nations Space Command</option>
-      <option value='3'>Covenant</option>
-      <option value='4'>Forerunner</option>
-      <option value='5'>Banished</option>
-      <option value='6'>Other</option>
-    </select>
+    <button class='clear minimisable_infographic_override' type='roll' name='autodamage' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{avrdam= [[0+[[([[(?{Amount of shots|1}*?{Amount of D10s|0})d10]] + [[?{Amount of shots|1}*?{Base|0}]] - [[?{Amount of shots|1}*(?{Armor|0} - ?{Pierce|0})d1]])d1]]]]}}'>Auto-Damage</button>
+    <button class='clear minimisable_infographic_override' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
   </div>
 
   <div class='NPC_characteristics edge_padding'>
@@ -2207,7 +2205,6 @@
       <input type="text" name="attr_STR_mythic" value="0" class="NPC_characteristics_fields full_width">
       <input type="text" name="attr_TOU_mythic" value="0" class="NPC_characteristics_fields full_width">
       <input type="text" name="attr_AGI_mythic" value="0" class="NPC_characteristics_fields full_width">
-      <h3 class="NPC_header_override">Mythic</h3>
     </div>
     <div>
       &nbsp;
@@ -2336,7 +2333,7 @@
             <div class='equipment_ranged_weapons_gs17'>/</div>
             <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_R_weapon_mag_max' />
             <button class="equipment_ranged_weapons_gs19 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{R_weapon_name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{R_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
-            <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon_name}}} {{damage=[[@{R_weapon_dam-roll}+@{R_weapon_base}]] }} {{pierce=[[@{R_weapon_pierce}]] }} {{@{settings_weapondescription}description=@{R_ability_r} }}' >DMG</button>
+            <button class="equipment_ranged_weapons_gs20 full_width clear" type="roll" value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon_name}}} {{damage=[[@{R_weapon_dam-roll}+@{R_weapon_base}]] }} {{pierce=[[@{R_weapon_pierce}]] }} {{@{settings_weapondescription}=@{R_ability_r} }}' >DMG</button>
           </div>
           <div class='equipment_ranged_weapons_grid4'>
             <div class='equipment_ranged_weapons_gs21'>RoF</div>
@@ -2391,7 +2388,7 @@
             <div class='equipment_melee_weapons_gs7'>/</div>
             <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon_breakpoints_max' />
             <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{M_weapon_mod1}]]+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
-            <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon_name}}} {{damage=[[@{M_weapon_dam-roll}+@{M_weapon_base}+@{M_weapon_base-mod}]] }} {{pierce=[[@{M_weapon_pierce}+@{M_weapon_pierce-mod}]] }} {{@{settings_weapondescription}description=@{M_ability_r} }}' >DMG</button>
+            <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon_name}}} {{damage=[[@{M_weapon_dam-roll}+@{M_weapon_base}+@{M_weapon_base-mod}]] }} {{pierce=[[@{M_weapon_pierce}+@{M_weapon_pierce-mod}]] }} {{@{settings_weapondescription}=@{M_ability_r} }}' >DMG</button>
           </div>
 
           <div class='equipment_melee_weapons_grid4'>
@@ -2480,8 +2477,8 @@
       var tou_advancement = parseInt(values['tou_advancement'], 10) || 0;
       var weight_mod = str + str_advancement + tou + tou_advancement + (str_mythic + tou_mythic) * 10;
       var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
-      var str_mod = str + str_advancement / 10;
-      var agi_mod = agi + agi_advancement / 10;
+      var str_mod = (str + str_advancement) / 10;
+      var agi_mod = (agi + agi_advancement) / 10;
 
       // normal no modifiers ___________________________________________________
 
@@ -2518,11 +2515,11 @@
           carry: (weight_mod * 2),
           lift: (weight_mod * 2 * 2),
           push: (weight_mod * 4 * 2),
-          leap_move: ((agi_mod + 4) / 2) // modifier plus 4, sum halved
+          leap_move: ((agi_mod + 2) / 2) // modifier plus 4, sum halved
         });
         if(str_mod >= agi_mod) {
           setAttrs({
-            leap_move: ((str_mod + 4) / 2)
+            leap_move: ((str_mod + 2) / 2)
           });
         }
       }
