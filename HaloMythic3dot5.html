@@ -289,7 +289,7 @@
         <div class='minimisable_infographic_grid'>
 
           <div class='minimisable_infographic_field2x3 radius_border'>
-            <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
+            <button name='wounds_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Wounds}} {{2x2-name=Current}} {{2x2=@{wounds}}} {{2x2-name-max=Max}} {{2x2-max=@{wounds|max}}}'>Wounds</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class='minimisable_infographic_g3 full_width' type='text' name='attr_wounds' value='0' />
@@ -298,7 +298,7 @@
           </div>
 
           <div class='minimisable_infographic_field2x3 radius_border'>
-            <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
+            <button name='fatigue_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Fatigue}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>Fatigue</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class='minimisable_infographic_g3 full_width' type='text' name='attr_fatigue' value='0' />
@@ -317,7 +317,7 @@
 
           <div class='minimisable_infographic_field2x3 radius_border'>
             <button name='support_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
-            value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=SP}} {{2x2-name=Current}} {{2x2=@{fatigue}}} {{2x2-name-max=Max}} {{2x2-max=@{fatigue|max}}}'>S Pts</button>
+            value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=SP}} {{2x2-name=Current}} {{2x2=@{support}}} {{2x2-name-max=Max}} {{2x2-max=@{support|max}}}'>S Pts</button>
             <p class='minimisable_infographic_g2'>Current</p>
             <input class='minimisable_infographic_g3 full_width' type='text' name='attr_support' value='0' />
             <p class='minimisable_infographic_g4'>Max</p>
@@ -338,7 +338,7 @@
           </div>
 
           <div class='minimisable_infographic_field4x3 radius_border'>
-            <button name='shield_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
+            <button name='armor_roll' type='roll' class='minimisable_infographic_g1 clear radius_border_top'
             value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{name=Armor}} {{4x2-1-name=Head}} {{4x2-1=@{armor_head}}} {{4x2-1-name-max=Arms}} {{4x2-1-max=@{armor_arms}}} {{4x2-2-name=Chest}} {{4x2-2=@{armor_chest}}} {{4x2-2-name-max=Legs}} {{4x2-2-max=@{armor_legs}}}'>Armor</button>
             <p class='minimisable_infographic_g6'>Head</p>
             <input class='minimisable_infographic_g7 full_width' type='text' name='attr_armor_head' value='0' />
@@ -2478,6 +2478,7 @@
       var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
       var str_mod = (str + str_advancement) / 10;
       var agi_mod = (agi + agi_advancement) / 10;
+      var tou_mod = Math.floor((tou + tou_advancement) / 10);
 
       // normal no modifiers ___________________________________________________
 
@@ -2491,8 +2492,10 @@
         leap_move:(agi_mod / 2),
         carry: (weight_mod),
         lift: (weight_mod * 2),
-        push: (weight_mod * 4)
+        push: (weight_mod * 4),
+        fatigue_max: (tou_mod * 2)
       });
+
       if (str_mod >= agi_mod) {
         setAttrs({
           leap_move:(str_mod / 2)
