@@ -1199,17 +1199,17 @@
 			<textarea name='attr_permutation_desc_r' class='collapsible_entity_block'></textarea>
 		  </div>
 		</fieldset>
+
 		<br>
+
 		<h3 class='radius_border_top'>Armor Description</h3>
 		<textarea name='attr_armor_desc'></textarea>
-    <fieldset name='permutations' class='repeating_permutations'>
-		  <div>
-			<input class='full_width' type='text' name='attr_permutation_name_r' placeholder='Name'>
+    <fieldset name='armors' class='repeating_armors'>
+			<input class='full_width_49px' type='text' name='attr_armor_name_r' placeholder='Name'>
 			<label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
-			<label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{permutation_name_r} }} {{description=@{permutation_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+			<label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{armor_name_r} }} {{description=@{armor_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
 			<input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
-			<textarea name='attr_permutation_desc_r' class='collapsible_entity_block'></textarea>
-		  </div>
+			<textarea name='attr_armor_desc_r' class='collapsible_entity_block'></textarea>
 		</fieldset>
 	  </div>
 	</div>
