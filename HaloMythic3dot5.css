@@ -416,7 +416,8 @@ ______________________________ start of minimisable infographic ________________
 	background: #394C6A;
 	border: 1px solid white;
 	border-radius: 4px;
-	color: white; font-family: Saira Semi Condensed;
+	color: white;
+	font-family: Saira Semi Condensed;
 	padding: 0px 4px 0px 4px;
 }
 .sheet-select_button:checked ~ .sheet-select_text { background: rgb(200, 0, 0); }
