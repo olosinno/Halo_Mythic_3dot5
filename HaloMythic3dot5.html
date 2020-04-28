@@ -180,7 +180,7 @@
 
     </div>
     <br>
-      <input name='attr_fatigue_mod' type='text' value='0' class='characteristics_input full_width' hidden/>
+    <input name='attr_fatigue_mod' type='text' value='0' class='characteristics_input full_width' hidden/>
 
 
     <!-- ______________________________ mythic characteristics, movement and pushing grid ______________________________ -->
@@ -280,9 +280,9 @@
         <label><input type='checkbox' name='attr_infographic' class='collapsible_entity_switch select_button hidden' checked/><span class='select_text'>Infographic</span></label>
         <label><input type='checkbox' name='attr_to-gm' value='/w gm' class='select_button hidden' /><span class='select_text'>To GM</span></label>
         <label><input type='checkbox' name='attr_inlinemod-toggle' value='?{Modifier|0}' class='select_button hidden' checked/><span class='select_text'>Inline Mod</span></label>
-<p>   </p>
+        <p>   </p>
         <button class='clear minimisable_infographic_override' type='roll' name='autodamage' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{avrdam= [[0+[[([[(?{Amount of hits|1}*?{Amount of D10s|0})d10]] + [[?{Amount of hits|1}*?{Base|0}]] - [[?{Amount of hits|1}*(?{Armor|0} - ?{Pierce|0})d1]])d1]]]]}}'>Auto-Damage</button>
-    	  <button class='clear minimisable_infographic_override' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
+        <button class='clear minimisable_infographic_override' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
       </div>
       <input type='checkbox' name='attr_infographic' class='collapsible_entity_switch hidden' checked/>
       <div class='collapsible_entity_block'>
@@ -969,250 +969,250 @@
   <!-- ______________________________ start of tab Equipment ______________________________ -->
 
   <div class='equipment box radius_border_box ssc'>
-	<div class='equipment_divider'>
-	  <div class='equipment_ranged_weapons ssc'>
-		<h3 class='radius_border_top'>Ranged Weapons</h3>
-		<fieldset name='rangedweapons' class='repeating_rangedweapons'>
-		  <div class='equipment_ranged_weapons_rep'>
-			<div class='equipment_ranged_weapons_grid1'>
-			  <div class='equipment_ranged_weapons_gs1'>Name</div>
-			  <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_R_weapon_name' placeholder='Name' />
-			  <div class='equipment_ranged_weapons_gs3'>Type</div>
-			  <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_R_weapon_class' placeholder='Class of Weapon' />
-			</div>
-			<div class='equipment_ranged_weapons_grid2'>
-			  <div class='equipment_ranged_weapons_gs5'>Range</div>
-			  <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_R_weapon_range' />
-			  <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
-			  <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_R_weapon_dam-roll' />
-			  <div class='equipment_ranged_weapons_gs9'>Base</div>
-			  <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_R_weapon_base' />
-			  <div class='equipment_ranged_weapons_gs11'>Pierce</div>
-			  <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_R_weapon_pierce' />
-			</div>
-			<div class='equipment_ranged_weapons_grid3'>
-			  <div class='equipment_ranged_weapons_gs13'>Hit Mod</div>
-			  <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_R_weapon_mod1' />
-			  <div class='equipment_ranged_weapons_gs15'>Magazine</div>
-			  <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_R_weapon_mag' />
-			  <div class='equipment_ranged_weapons_gs17'>/</div>
-			  <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_R_weapon_mag_max' />
-			  <button class='equipment_ranged_weapons_gs19 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{R_weapon_name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{fatigue_mod}]]+@{R_weapon_mod1}+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
-			  <button class='equipment_ranged_weapons_gs20 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon_name}}} {{damage=[[@{R_weapon_dam-roll}+@{R_weapon_base}]] }} {{pierce=[[@{R_weapon_pierce}]] }} {{@{settings_weapondescription}=@{R_ability_r} }}' >DMG</button>
-			</div>
-			<div class='equipment_ranged_weapons_grid4'>
-			  <div class='equipment_ranged_weapons_gs21'>RoF</div>
-			  <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_R_weapon_semi' />
-			  <div class='equipment_ranged_weapons_gs23'>/</div>
-			  <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Burst' name='attr_R_weapon_burst' />
-			  <div class='equipment_ranged_weapons_gs25'>/</div>
-			  <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_R_weapon_auto' />
-			  <div class='equipment_ranged_weapons_gs27'>Reload</div>
-			  <input class='equipment_ranged_weapons_gs28 full_width' type='text' value='2 half actions' name='attr_R_weapon_reload' />
-			  <div class='equipment_ranged_weapons_gs29'>Weight</div>
-			  <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_R_weapon_weight' />
-			</div>
-			<div>
-			  <input name='attr_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
-			  <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
-			  <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{R_ability_r} }} {{description=@{R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
-			  <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
-			  <textarea name='attr_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin' placeholder='Weapon Attachment: Benefit, Type Mount, Restriction, etc.'></textarea>
-			</div>
-		  </div>
-		  <hr>
-		</fieldset>
-	  </div>
-
-	  <div class='equipment_melee_weapons ssc'>
-		<h3 class='radius_border_top'>Melee Weapons</h3>
-		<fieldset name='meleeweapons' class='repeating_meleeweapons'>
-		  <div class='equipment_ranged_weapons_rep'>
-			<div class='equipment_ranged_weapons_grid1'>
-			  <div class='equipment_ranged_weapons_gs1'>Name</div>
-			  <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_M_weapon_name' placeholder='Name' />
-			  <div class='equipment_ranged_weapons_gs3'>Type</div>
-			  <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon_class' placeholder='Class of Weapon' />
-			</div>
-			<div class='equipment_ranged_weapons_grid2'>
-			  <div class='equipment_ranged_weapons_gs5'>Reach</div>
-			  <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon_range' />
-			  <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
-			  <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_M_weapon_dam-roll' />
-			  <div class='equipment_ranged_weapons_gs9'>Base</div>
-			  <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_M_weapon_base' />
-			  <div class='equipment_ranged_weapons_gs11'>Pierce</div>
-			  <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_M_weapon_pierce' />
-			</div>
-			<div class='equipment_melee_weapons_grid3'>
-			  <div class='equipment_melee_weapons_gs1'>Hit Mod</div>
-			  <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_M_weapon_mod1' />
-			  <div class='equipment_melee_weapons_gs3'>Weight</div>
-			  <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_M_weapon_weight' />
-			  <div class='equipment_melee_weapons_gs5'>Br Pts</div>
-			  <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon_breakpoints' />
-			  <div class='equipment_melee_weapons_gs7'>/</div>
-			  <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon_breakpoints_max' />
-			  <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{fatigue_mod}]]+@{M_weapon_mod1}+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
-			  <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon_name}}} {{damage=[[@{M_weapon_dam-roll}+@{M_weapon_base}+@{M_weapon_base-mod}]] }} {{pierce=[[@{M_weapon_pierce}+@{M_weapon_pierce-mod}]] }} {{@{settings_weapondescription}=@{M_ability_r} }}' >DMG</button>
-			</div>
-			<div class='equipment_melee_weapons_grid4'>
-			  <div class='equipment_melee_weapons_gs11'>damage plus Strength</div>
-			  <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon_base-mod'>
-				<option selected='selected' value='0'>None</option>
-				<option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
-				<option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
-			  </select>
-			  <div class='equipment_melee_weapons_gs13'>pierce plus Strength</div>
-			  <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon_pierce-mod'>
-				<option selected='selected' value='0'>None</option>
-				<option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
-				<option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
-			  </select>
-			</div>
-			<div>
-			  <input name='attr_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
-			  <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
-			  <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{M_ability_r} }} {{description=@{M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
-			  <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
-			  <textarea name='attr_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin' placeholder='Weapon Modification e.g. Gravity Hammer Crushing thruster'></textarea>
-			</div>
-		  </div>
-		  <hr>
-		</fieldset>
-	  </div>
-
-	  <div class='equipment_numerics text_centered'>
-		cR Count: <input name='attr_credits' type='number' class='numerical_field' />
-		cR Calculation: <input name='attr_credit_total' type='number' class='numerical_field' readonly />
-		Weight Calculation: <input name='attr_weight_total' type='number' class='numerical_field end_field' readonly> kilograms</input>
-<input type='number' name='attr_M_weapon_weight_T'  hidden>
-<input type='number' name='attr_R_weapon_weight_T'  hidden>
-	  </div>
-	</div>
-	<br>
-
-	<div class='equipment_gear equipment_header'>
-	  <div class='equipment_gear_gs1'>Gear / Item Name</div>
-	  <div class='equipment_gear_gs2'>Amount</div>
-	  <div class='equipment_gear_gs3'>Value</div>
-	  <div class='equipment_gear_gs4'>Weight</div>
-	  <div class='equipment_gear_gs5'>B Pts</div>
-	  <div class='equipment_gear_gs6'>Page #</div>
-	</div>
-	<div class='equipment_gear'>
-	  <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
-	  <input name='attr_gear_quantity' type='text' value='1' placeholder='Amount' class='equipment_gear_gs2' />
-	  <input name='attr_gear_cost' type='text' value='0' class='equipment_gear_gs3' />
-	  <input name='attr_gear_weight' type='text' value='0' class='equipment_gear_gs4' />
-	  <input name='attr_gear_bp' type='text' placeholder='Break Points' class='equipment_gear_gs5' />
-	  <input name='attr_gear_pg#' type='text' placeholder='Page #' class='equipment_gear_gs6' />
-	  <label class='margin_adjust equipment_gear_gs7'><input type='checkbox' name='attr_collapse' value='7' class='collapsible_entity_switch select_button hidden'><span class='select_text'>▼</span></label>
-	</div>
-	<input name='attr_collapse' type='checkbox'  value='7' class='collapsible_entity_switch hidden' />
-	<textarea name='attr_gear_desc' placeholder='Different equipment will have special rules.' class='collapsible_entity_block auto_margin 90width'></textarea>
-	<fieldset name='gear' class='repeating_gear'>
-	  <div class='equipment_gear'>
-		<input name='attr_gear_name_r' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
-		<input name='attr_gear_quantity_r' type='text' value='1' placeholder='Amount' class='equipment_gear_gs2' />
-		<input name='attr_gear_cost_r' type='text' value='0' class='equipment_gear_gs3' />
-		<input name='attr_gear_weight_r' type='text' value='0' class='equipment_gear_gs4' />
-		<input name='attr_gear_bp_r' type='text' placeholder='Break Points' class='equipment_gear_gs5' />
-		<input name='attr_gear_pg#_r' type='text' placeholder='Page #' class='equipment_gear_gs6' />
-		<label class='margin_adjust equipment_gear_gs7'><input type='checkbox' name='attr_collapse_r' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
-	  </div>
-	  <input name='attr_collapse_r' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
-	  <textarea name='attr_ability_desc_r' class='collapsible_entity_block auto_margin 90width'></textarea>
-	</fieldset>
-	<br>
-
-	<div class='equipment_armor_grid'>
-	  <div class='equipment_armor_gs1 radius_border'>
-		<h3 class='radius_border_top'>Armor Display</h3>
-		<img src='https://cdn.discordapp.com/attachments/676016722939084800/694958755967795381/Mark_IV_Schematic.png' width='100%' />
-	  </div>
-	  <div class='equipment_armor_gs2 radius_border'>
-		<h3 class='radius_border_top'>Armor</h3>
-		<div>
-		  <br>
-		  <h3 class='radius_border_top'>Head</h3>
-		  <input class='equipment_armor_input' type='text' name='attr_armor_head' value='0'>
-		</div>
-		<div>
-		  <br>
-		  <h3 class='radius_border_top'>Chest</h3>
-		  <input class='equipment_armor_input' type='text' name='attr_armor_chest' value='0'>
-		</div>
-		<div>
-		  <br>
-		  <h3 class='radius_border_top'>Arm L</h3>
-		  <input class='equipment_armor_input' type='text' name='attr_armor_arm_left' value='0'>
-		</div>
-		<div>
-		  <br>
-		  <h3 class='radius_border_top'>Arm R</h3>
-		  <input class='equipment_armor_input' type='text' name='attr_armor_arm_right' value='0'>
-		</div>
-		<div>
-		  <br>
-		  <h3 class='radius_border_top'>Leg L</h3>
-		  <input class='equipment_armor_input' type='text' name='attr_armor_leg_left' value='0'>
-		</div>
-		<div>
-		  <br>
-		  <h3 class='radius_border_top'>Leg R</h3>
-		  <input class='equipment_armor_input' type='text' name='attr_armor_leg_right' value='0'>
-		</div>
-	  </div>
-
-	  <div class='equipment_armor_gs3 radius_border'>
-		<h3 class='radius_border_top'>Armor Permutations</h3>
-		<div>
-      <div class="equipment_permutations_grid equipment_titles">
-        <p class='bold_text equipment_titles'>Name</p>
-        <p class='bold_text equipment_titles'>Location</p>
-        <p class='bold_text equipment_titles'>Hpts</p>
-        <p class='bold_text equipment_titles'>Pg#</p>
+    <div class='equipment_divider'>
+      <div class='equipment_ranged_weapons ssc'>
+        <h3 class='radius_border_top'>Ranged Weapons</h3>
+        <fieldset name='rangedweapons' class='repeating_rangedweapons'>
+          <div class='equipment_ranged_weapons_rep'>
+            <div class='equipment_ranged_weapons_grid1'>
+              <div class='equipment_ranged_weapons_gs1'>Name</div>
+              <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_R_weapon_name' placeholder='Name' />
+              <div class='equipment_ranged_weapons_gs3'>Type</div>
+              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_R_weapon_class' placeholder='Class of Weapon' />
+            </div>
+            <div class='equipment_ranged_weapons_grid2'>
+              <div class='equipment_ranged_weapons_gs5'>Range</div>
+              <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_R_weapon_range' />
+              <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
+              <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_R_weapon_dam-roll' />
+              <div class='equipment_ranged_weapons_gs9'>Base</div>
+              <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_R_weapon_base' />
+              <div class='equipment_ranged_weapons_gs11'>Pierce</div>
+              <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_R_weapon_pierce' />
+            </div>
+            <div class='equipment_ranged_weapons_grid3'>
+              <div class='equipment_ranged_weapons_gs13'>Hit Mod</div>
+              <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_R_weapon_mod1' />
+              <div class='equipment_ranged_weapons_gs15'>Magazine</div>
+              <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_R_weapon_mag' />
+              <div class='equipment_ranged_weapons_gs17'>/</div>
+              <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_R_weapon_mag_max' />
+              <button class='equipment_ranged_weapons_gs19 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{R_weapon_name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{fatigue_mod}]]+@{R_weapon_mod1}+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
+              <button class='equipment_ranged_weapons_gs20 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{R_weapon_name}}} {{damage=[[@{R_weapon_dam-roll}+@{R_weapon_base}]] }} {{pierce=[[@{R_weapon_pierce}]] }} {{@{settings_weapondescription}=@{R_ability_r} }}' >DMG</button>
+            </div>
+            <div class='equipment_ranged_weapons_grid4'>
+              <div class='equipment_ranged_weapons_gs21'>RoF</div>
+              <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_R_weapon_semi' />
+              <div class='equipment_ranged_weapons_gs23'>/</div>
+              <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Burst' name='attr_R_weapon_burst' />
+              <div class='equipment_ranged_weapons_gs25'>/</div>
+              <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_R_weapon_auto' />
+              <div class='equipment_ranged_weapons_gs27'>Reload</div>
+              <input class='equipment_ranged_weapons_gs28 full_width' type='text' value='2 half actions' name='attr_R_weapon_reload' />
+              <div class='equipment_ranged_weapons_gs29'>Weight</div>
+              <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_R_weapon_weight' />
+            </div>
+            <div>
+              <input name='attr_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
+              <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+              <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{R_ability_r} }} {{description=@{R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+              <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
+              <textarea name='attr_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin' placeholder='Weapon Attachment: Benefit, Type Mount, Restriction, etc.'></textarea>
+            </div>
+          </div>
+          <hr>
+        </fieldset>
       </div>
-		  <div class='equipment_permutations_grid'>
-			<input class='full_width' type='text' name='attr_permutation_name' placeholder='Name'>
-			<input class='full_width' type='text' name='attr_permutation_location' placeholder='Location'>
-			<input class='full_width' type='text' name='attr_permutation_hardpoints' placeholder='Hpts'>
-			<input class='full_width' type='text' name='attr_permutation_page' placeholder='Pg#'>
-		  </div>
-		  <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
-		  <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{permutation_name} }} {{description=@{permutation_desc} }}' class='hidden'></button><span class='select_text'>❖</span></label>
-		  <input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
-		  <textarea name='attr_permutation_desc' placeholder='All Human BDUs and Armor are designed to take Permutations. Permutations are attachments that modify Armor and offer various forms of function. Each section of Armor can only fit so many Permutations, which are shown as Hardpoints.' class='collapsible_entity_block'></textarea>
-		</div>
-		<fieldset name='permutations' class='repeating_permutations'>
-		  <div>
-			<div class='equipment_permutations_grid'>
-			  <input class='full_width' type='text' name='attr_permutation_name_r' placeholder='Name'>
-			  <input class='full_width' type='text' name='attr_permutation_location_r' placeholder='Location'>
-			  <input class='full_width' type='text' name='attr_permutation_hardpoints_r' placeholder='Hpts'>
-			  <input class='full_width' type='text' name='attr_permutation_page_r' placeholder='Pg#'>
-			</div>
-			<label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
-			<label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{permutation_name_r} }} {{description=@{permutation_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
-			<input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
-			<textarea name='attr_permutation_desc_r' class='collapsible_entity_block'></textarea>
-		  </div>
-		</fieldset>
 
-		<br>
+      <div class='equipment_melee_weapons ssc'>
+        <h3 class='radius_border_top'>Melee Weapons</h3>
+        <fieldset name='meleeweapons' class='repeating_meleeweapons'>
+          <div class='equipment_ranged_weapons_rep'>
+            <div class='equipment_ranged_weapons_grid1'>
+              <div class='equipment_ranged_weapons_gs1'>Name</div>
+              <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_M_weapon_name' placeholder='Name' />
+              <div class='equipment_ranged_weapons_gs3'>Type</div>
+              <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_M_weapon_class' placeholder='Class of Weapon' />
+            </div>
+            <div class='equipment_ranged_weapons_grid2'>
+              <div class='equipment_ranged_weapons_gs5'>Reach</div>
+              <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon_range' />
+              <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
+              <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='2d10' name='attr_M_weapon_dam-roll' />
+              <div class='equipment_ranged_weapons_gs9'>Base</div>
+              <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_M_weapon_base' />
+              <div class='equipment_ranged_weapons_gs11'>Pierce</div>
+              <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_M_weapon_pierce' />
+            </div>
+            <div class='equipment_melee_weapons_grid3'>
+              <div class='equipment_melee_weapons_gs1'>Hit Mod</div>
+              <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_M_weapon_mod1' />
+              <div class='equipment_melee_weapons_gs3'>Weight</div>
+              <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_M_weapon_weight' />
+              <div class='equipment_melee_weapons_gs5'>Br Pts</div>
+              <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_M_weapon_breakpoints' />
+              <div class='equipment_melee_weapons_gs7'>/</div>
+              <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_M_weapon_breakpoints_max' />
+              <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }}{{weapon= @{M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{fatigue_mod}]]+@{M_weapon_mod1}+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
+              <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{M_weapon_name}}} {{damage=[[@{M_weapon_dam-roll}+@{M_weapon_base}+@{M_weapon_base-mod}]] }} {{pierce=[[@{M_weapon_pierce}+@{M_weapon_pierce-mod}]] }} {{@{settings_weapondescription}=@{M_ability_r} }}' >DMG</button>
+            </div>
+            <div class='equipment_melee_weapons_grid4'>
+              <div class='equipment_melee_weapons_gs11'>damage plus Strength</div>
+              <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon_base-mod'>
+                <option selected='selected' value='0'>None</option>
+                <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
+                <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
+              </select>
+              <div class='equipment_melee_weapons_gs13'>pierce plus Strength</div>
+              <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon_pierce-mod'>
+                <option selected='selected' value='0'>None</option>
+                <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
+                <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
+              </select>
+            </div>
+            <div>
+              <input name='attr_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
+              <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+              <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{M_ability_r} }} {{description=@{M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+              <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
+              <textarea name='attr_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin' placeholder='Weapon Modification e.g. Gravity Hammer Crushing thruster'></textarea>
+            </div>
+          </div>
+          <hr>
+        </fieldset>
+      </div>
 
-		<h3 class='radius_border_top'>Armor Description</h3>
-		<textarea name='attr_armor_desc'></textarea>
-    <fieldset name='armors' class='repeating_armors'>
-			<input class='full_width_49px' type='text' name='attr_armor_name_r' placeholder='Name'>
-			<label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
-			<label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{armor_name_r} }} {{description=@{armor_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
-			<input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
-			<textarea name='attr_armor_desc_r' class='collapsible_entity_block'></textarea>
-		</fieldset>
-	  </div>
-	</div>
+      <div class='equipment_numerics text_centered'>
+        cR Count: <input name='attr_credits' type='number' class='numerical_field' />
+        cR Calculation: <input name='attr_credit_total' type='number' class='numerical_field' readonly />
+        Weight Calculation: <input name='attr_weight_total' type='number' class='numerical_field end_field' readonly> kilograms</input>
+        <input type='number' name='attr_M_weapon_weight_T'  hidden>
+        <input type='number' name='attr_R_weapon_weight_T'  hidden>
+      </div>
+    </div>
+    <br>
+
+    <div class='equipment_gear equipment_header'>
+      <div class='equipment_gear_gs1'>Gear / Item Name</div>
+      <div class='equipment_gear_gs2'>Amount</div>
+      <div class='equipment_gear_gs3'>Value</div>
+      <div class='equipment_gear_gs4'>Weight</div>
+      <div class='equipment_gear_gs5'>B Pts</div>
+      <div class='equipment_gear_gs6'>Page #</div>
+    </div>
+    <div class='equipment_gear'>
+      <input name='attr_gear_name' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
+      <input name='attr_gear_quantity' type='text' value='1' placeholder='Amount' class='equipment_gear_gs2' />
+      <input name='attr_gear_cost' type='text' value='0' class='equipment_gear_gs3' />
+      <input name='attr_gear_weight' type='text' value='0' class='equipment_gear_gs4' />
+      <input name='attr_gear_bp' type='text' placeholder='Break Points' class='equipment_gear_gs5' />
+      <input name='attr_gear_pg#' type='text' placeholder='Page #' class='equipment_gear_gs6' />
+      <label class='margin_adjust equipment_gear_gs7'><input type='checkbox' name='attr_collapse' value='7' class='collapsible_entity_switch select_button hidden'><span class='select_text'>▼</span></label>
+    </div>
+    <input name='attr_collapse' type='checkbox'  value='7' class='collapsible_entity_switch hidden' />
+    <textarea name='attr_gear_desc' placeholder='Different equipment will have special rules.' class='collapsible_entity_block auto_margin 90width'></textarea>
+    <fieldset name='gear' class='repeating_gear'>
+      <div class='equipment_gear'>
+        <input name='attr_gear_name_r' type='text' placeholder='Gear / Item Name' class='equipment_gear_gs1' />
+        <input name='attr_gear_quantity_r' type='text' value='1' placeholder='Amount' class='equipment_gear_gs2' />
+        <input name='attr_gear_cost_r' type='text' value='0' class='equipment_gear_gs3' />
+        <input name='attr_gear_weight_r' type='text' value='0' class='equipment_gear_gs4' />
+        <input name='attr_gear_bp_r' type='text' placeholder='Break Points' class='equipment_gear_gs5' />
+        <input name='attr_gear_pg#_r' type='text' placeholder='Page #' class='equipment_gear_gs6' />
+        <label class='margin_adjust equipment_gear_gs7'><input type='checkbox' name='attr_collapse_r' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
+      </div>
+      <input name='attr_collapse_r' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
+      <textarea name='attr_ability_desc_r' class='collapsible_entity_block auto_margin 90width'></textarea>
+    </fieldset>
+    <br>
+
+    <div class='equipment_armor_grid'>
+      <div class='equipment_armor_gs1 radius_border'>
+        <h3 class='radius_border_top'>Armor Display</h3>
+        <img src='https://cdn.discordapp.com/attachments/676016722939084800/694958755967795381/Mark_IV_Schematic.png' width='100%' />
+      </div>
+      <div class='equipment_armor_gs2 radius_border'>
+        <h3 class='radius_border_top'>Armor</h3>
+        <div>
+          <br>
+          <h3 class='radius_border_top'>Head</h3>
+          <input class='equipment_armor_input' type='text' name='attr_armor_head' value='0'>
+        </div>
+        <div>
+          <br>
+          <h3 class='radius_border_top'>Chest</h3>
+          <input class='equipment_armor_input' type='text' name='attr_armor_chest' value='0'>
+        </div>
+        <div>
+          <br>
+          <h3 class='radius_border_top'>Arm L</h3>
+          <input class='equipment_armor_input' type='text' name='attr_armor_arm_left' value='0'>
+        </div>
+        <div>
+          <br>
+          <h3 class='radius_border_top'>Arm R</h3>
+          <input class='equipment_armor_input' type='text' name='attr_armor_arm_right' value='0'>
+        </div>
+        <div>
+          <br>
+          <h3 class='radius_border_top'>Leg L</h3>
+          <input class='equipment_armor_input' type='text' name='attr_armor_leg_left' value='0'>
+        </div>
+        <div>
+          <br>
+          <h3 class='radius_border_top'>Leg R</h3>
+          <input class='equipment_armor_input' type='text' name='attr_armor_leg_right' value='0'>
+        </div>
+      </div>
+
+      <div class='equipment_armor_gs3 radius_border'>
+        <h3 class='radius_border_top'>Armor Permutations</h3>
+        <div>
+          <div class="equipment_permutations_grid equipment_titles">
+            <p class='bold_text equipment_titles'>Name</p>
+            <p class='bold_text equipment_titles'>Location</p>
+            <p class='bold_text equipment_titles'>Hpts</p>
+            <p class='bold_text equipment_titles'>Pg#</p>
+          </div>
+          <div class='equipment_permutations_grid'>
+            <input class='full_width' type='text' name='attr_permutation_name' placeholder='Name'>
+            <input class='full_width' type='text' name='attr_permutation_location' placeholder='Location'>
+            <input class='full_width' type='text' name='attr_permutation_hardpoints' placeholder='Hpts'>
+            <input class='full_width' type='text' name='attr_permutation_page' placeholder='Pg#'>
+          </div>
+          <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
+          <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{permutation_name} }} {{description=@{permutation_desc} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+          <input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
+          <textarea name='attr_permutation_desc' placeholder='All Human BDUs and Armor are designed to take Permutations. Permutations are attachments that modify Armor and offer various forms of function. Each section of Armor can only fit so many Permutations, which are shown as Hardpoints.' class='collapsible_entity_block'></textarea>
+        </div>
+        <fieldset name='permutations' class='repeating_permutations'>
+          <div>
+            <div class='equipment_permutations_grid'>
+              <input class='full_width' type='text' name='attr_permutation_name_r' placeholder='Name'>
+              <input class='full_width' type='text' name='attr_permutation_location_r' placeholder='Location'>
+              <input class='full_width' type='text' name='attr_permutation_hardpoints_r' placeholder='Hpts'>
+              <input class='full_width' type='text' name='attr_permutation_page_r' placeholder='Pg#'>
+            </div>
+            <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
+            <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{permutation_name_r} }} {{description=@{permutation_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+            <input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
+            <textarea name='attr_permutation_desc_r' class='collapsible_entity_block'></textarea>
+          </div>
+        </fieldset>
+
+        <br>
+
+        <h3 class='radius_border_top'>Armor Description</h3>
+        <textarea name='attr_armor_desc'></textarea>
+        <fieldset name='armors' class='repeating_armors'>
+          <input class='full_width_49px' type='text' name='attr_armor_name_r' placeholder='Name'>
+          <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
+          <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{armor_name_r} }} {{description=@{armor_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+          <input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
+          <textarea name='attr_armor_desc_r' class='collapsible_entity_block'></textarea>
+        </fieldset>
+      </div>
+    </div>
 
   </div>
 
@@ -1792,63 +1792,63 @@
 
   <div class='advancements box radius_border_box ssc'>
 
-	<h2>Experience Summary</h2>
-	<div class='text_centered'>
-	  Unspent XP: <input name='attr_xp_current' type='number' value='@{xp_total}-@{xp_spent}' class='numerical_field' readonly />
-	  Spent XP: <input name='attr_xp_spent' type='number' value='@{xp_total}-(@{advancement_costL}+@{advancement_costR})' class='numerical_field' readonly />
-	  XP Total: <input name='attr_xp_total' type='number' class='numerical_field end_field' />
-	</div>
-	<br>
-	<div class='advancements_grid equipment_header'>
-	  <div class='advancements_grid_gs1'>Name</div>
-	  <div class='advancements_grid_gs2'>XP Cost</div>
-	  <div class='advancements_grid_gs3'>Page #</div>
-	  <div class='advancements_grid_gs4'>Name</div>
-	  <div class='advancements_grid_gs5'>XP Cost</div>
-	  <div class='advancements_grid_gs6'>Page #</div>
-	</div>
-	<div class='advancements_grid'>
-	  <input class='advancements_grid_gs1' name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' />
-	  <input class='advancements_grid_gs2' name='attr_advancement_costL' type='number' placeholder='XP Cost' />
-	  <input class='advancements_grid_gs3' name='attr_advancement_pg#L' type='number' placeholder='Page #'  />
-	  <input class='advancements_grid_gs4' name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' />
-	  <input class='advancements_grid_gs5' name='attr_advancement_costR' type='number' placeholder='XP Cost' />
-	  <input class='advancements_grid_gs6' name='attr_advancement_pg#R' type='number' placeholder='Page #' />
-	</div>
-	<fieldset name='advancements' class='repeating_advancements'>
-	  <div class='advancements_grid'>
-		<input class='advancements_grid_gs1' name='attr_advancement_nameL_r' type='text' placeholder='Write XP-costing item name here' />
-		<input class='advancements_grid_gs2' name='attr_advancement_costL_r' type='number' placeholder='XP Cost' />
-		<input class='advancements_grid_gs3' name='attr_advancement_pg#L_r' type='number' placeholder='Page #'  />
-		<input class='advancements_grid_gs4' name='attr_advancement_nameR_r' type='text' placeholder='Write XP-costing item name here' />
-		<input class='advancements_grid_gs5' name='attr_advancement_costR_r' type='number' placeholder='XP Cost' />
-		<input class='advancements_grid_gs6' name='attr_advancement_pg#R_r' type='number' placeholder='Page #' />
-	  </div>
-	</fieldset>
+    <h2>Experience Summary</h2>
+    <div class='text_centered'>
+      Unspent XP: <input name='attr_xp_current' type='number' value='@{xp_total}-@{xp_spent}' class='numerical_field' readonly />
+      Spent XP: <input name='attr_xp_spent' type='number' value='@{xp_total}-(@{advancement_costL}+@{advancement_costR})' class='numerical_field' readonly />
+      XP Total: <input name='attr_xp_total' type='number' class='numerical_field end_field' />
+    </div>
+    <br>
+    <div class='advancements_grid equipment_header'>
+      <div class='advancements_grid_gs1'>Name</div>
+      <div class='advancements_grid_gs2'>XP Cost</div>
+      <div class='advancements_grid_gs3'>Page #</div>
+      <div class='advancements_grid_gs4'>Name</div>
+      <div class='advancements_grid_gs5'>XP Cost</div>
+      <div class='advancements_grid_gs6'>Page #</div>
+    </div>
+    <div class='advancements_grid'>
+      <input class='advancements_grid_gs1' name='attr_advancement_nameL' type='text' placeholder='Write XP-costing item name here' />
+      <input class='advancements_grid_gs2' name='attr_advancement_costL' type='number' placeholder='XP Cost' />
+      <input class='advancements_grid_gs3' name='attr_advancement_pg#L' type='number' placeholder='Page #'  />
+      <input class='advancements_grid_gs4' name='attr_advancement_nameR' type='text' placeholder='Write XP-costing item name here' />
+      <input class='advancements_grid_gs5' name='attr_advancement_costR' type='number' placeholder='XP Cost' />
+      <input class='advancements_grid_gs6' name='attr_advancement_pg#R' type='number' placeholder='Page #' />
+    </div>
+    <fieldset name='advancements' class='repeating_advancements'>
+      <div class='advancements_grid'>
+        <input class='advancements_grid_gs1' name='attr_advancement_nameL_r' type='text' placeholder='Write XP-costing item name here' />
+        <input class='advancements_grid_gs2' name='attr_advancement_costL_r' type='number' placeholder='XP Cost' />
+        <input class='advancements_grid_gs3' name='attr_advancement_pg#L_r' type='number' placeholder='Page #'  />
+        <input class='advancements_grid_gs4' name='attr_advancement_nameR_r' type='text' placeholder='Write XP-costing item name here' />
+        <input class='advancements_grid_gs5' name='attr_advancement_costR_r' type='number' placeholder='XP Cost' />
+        <input class='advancements_grid_gs6' name='attr_advancement_pg#R_r' type='number' placeholder='Page #' />
+      </div>
+    </fieldset>
 
-	<div class='training'>
-	  <div class='faction_training ssc auto_margin 90width radius_border'>
-		<h3 class='radius_border_top'>Faction Training</h3>
-		<div class='faction_training_grid'>
-		  <div class='faction_training_grid_g1'><input name='attr_faction_training_human' type='checkbox' value='1'>U.N.S.C.</div>
-		  <div class='faction_training_grid_g2'><input name='attr_faction_training_forerunner' type='checkbox' value='1'>Forerunner</div>
-		  <div class='faction_training_grid_g3'><input name='attr_faction_training_covenant' type='checkbox' value='1'>Covenant / Banished</div>
-		</div>
-	  </div>
-	  <div class='weapon_training ssc auto_margin 90width radius_border'>
-		<h3 class='radius_border_top'>Weapon Training</h3>
-		<div class='weapon_training_grid'>
-		  <div><input name='attr_weapons_training_basic' type='checkbox' />Basic</div>
-		  <div><input name='attr_weapons_training_infantry' type='checkbox' />Infantry</div>
-		  <div><input name='attr_weapons_training_vehicle' type='checkbox' />Vehicle</div>
-		  <div><input name='attr_weapons_training_melee' type='checkbox' />Melee</div>
-		  <div><input name='attr_weapons_training_heavy' type='checkbox' />Heavy</div>
-		  <div><input name='attr_weapons_training_special' type='checkbox' />Advanced</div>
-		  <div><input name='attr_weapons_training_long-range' type='checkbox' />Long-Range</div>
-		  <div><input name='attr_weapons_training_explosives' type='checkbox' />Explosives</div>
-		</div>
-	  </div>
-	</div>
+    <div class='training'>
+      <div class='faction_training ssc auto_margin 90width radius_border'>
+        <h3 class='radius_border_top'>Faction Training</h3>
+        <div class='faction_training_grid'>
+          <div class='faction_training_grid_g1'><input name='attr_faction_training_human' type='checkbox' value='1'>U.N.S.C.</div>
+          <div class='faction_training_grid_g2'><input name='attr_faction_training_forerunner' type='checkbox' value='1'>Forerunner</div>
+          <div class='faction_training_grid_g3'><input name='attr_faction_training_covenant' type='checkbox' value='1'>Covenant / Banished</div>
+        </div>
+      </div>
+      <div class='weapon_training ssc auto_margin 90width radius_border'>
+        <h3 class='radius_border_top'>Weapon Training</h3>
+        <div class='weapon_training_grid'>
+          <div><input name='attr_weapons_training_basic' type='checkbox' />Basic</div>
+          <div><input name='attr_weapons_training_infantry' type='checkbox' />Infantry</div>
+          <div><input name='attr_weapons_training_vehicle' type='checkbox' />Vehicle</div>
+          <div><input name='attr_weapons_training_melee' type='checkbox' />Melee</div>
+          <div><input name='attr_weapons_training_heavy' type='checkbox' />Heavy</div>
+          <div><input name='attr_weapons_training_special' type='checkbox' />Advanced</div>
+          <div><input name='attr_weapons_training_long-range' type='checkbox' />Long-Range</div>
+          <div><input name='attr_weapons_training_explosives' type='checkbox' />Explosives</div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -1882,271 +1882,271 @@
   <!-- ______________________________ start of tab Vehicles ______________________________ -->
 
   <div class='vehicles box ssc radius_border_box'>
-	<!-- Vehicles -->
-	<div class='vehicles_divider'>
-	  <fieldset name='vehicles-R' class='repeating_vehicles'>
-		<div class='vehicles_grid1'>
-		  <input name='attr_vehicle-name' type='text' class='vehicles_Gn full_width' placeholder='Name' />
+    <!-- Vehicles -->
+    <div class='vehicles_divider'>
+      <fieldset name='vehicles-R' class='repeating_vehicles'>
+        <div class='vehicles_grid1'>
+          <input name='attr_vehicle-name' type='text' class='vehicles_Gn full_width' placeholder='Name' />
 
-		  <select name='attr_vehicle-shield' class='vehicles_Gs full_width'>
-			<option value='0' selected='selected'>Unshielded</option>
-			<option value='1'>Shielded</option>
-		  </select>
+          <select name='attr_vehicle-shield' class='vehicles_Gs full_width'>
+            <option value='0' selected='selected'>Unshielded</option>
+            <option value='1'>Shielded</option>
+          </select>
 
-		  <select name='attr_vehicle-type' class='vehicles_Gt full_width'>
-			<option value='0' selected='selected'>Ground</option>
-			<option value='1'>Air</option>
-			<option value='2'>Walker</option>
-			<option value='3'>Stationary</option>
-		  </select>
-		  <div class='vehicles_G1'><h3>DIMENSIONS</h3></div>
-		  <div class='vehicles_G2'>Length</div>
-		  <div class='vehicles_G3'>Width</div>
-		  <div class='vehicles_G4'>Height</div>
-		  <div class='vehicles_G5'>Weight</div>
-		  <input name='attr_vehicle-length' type='text' class='vehicles_G6 full_width' placeholder='# Meters' />
-		  <input name='attr_vehicle-width' type='text' class='vehicles_G7 full_width' placeholder='# Meters' />
-		  <input name='attr_vehicle-height' type='text' class='vehicles_G8 full_width' placeholder='# Meters' />
-		  <input name='attr_vehicle-weight' type='text' class='vehicles_G9 full_width' placeholder='KG / Metric Tons' />
+          <select name='attr_vehicle-type' class='vehicles_Gt full_width'>
+            <option value='0' selected='selected'>Ground</option>
+            <option value='1'>Air</option>
+            <option value='2'>Walker</option>
+            <option value='3'>Stationary</option>
+          </select>
+          <div class='vehicles_G1'><h3>DIMENSIONS</h3></div>
+          <div class='vehicles_G2'>Length</div>
+          <div class='vehicles_G3'>Width</div>
+          <div class='vehicles_G4'>Height</div>
+          <div class='vehicles_G5'>Weight</div>
+          <input name='attr_vehicle-length' type='text' class='vehicles_G6 full_width' placeholder='# Meters' />
+          <input name='attr_vehicle-width' type='text' class='vehicles_G7 full_width' placeholder='# Meters' />
+          <input name='attr_vehicle-height' type='text' class='vehicles_G8 full_width' placeholder='# Meters' />
+          <input name='attr_vehicle-weight' type='text' class='vehicles_G9 full_width' placeholder='KG / Metric Tons' />
 
-		  <input name='attr_vehicle-type' type='checkbox' value='0' class='hidden hider' checked />
-		  <div class='vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
-		  <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
-		  <div class='vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
-		  <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
-		  <div class='vehicles_G10'><h3>CHARACTERISTICS</h3></div>
+          <input name='attr_vehicle-type' type='checkbox' value='0' class='hidden hider' checked />
+          <div class='vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
+          <div class='vehicles_G10'><h3>SPEED AND MANEUVERABILITY</h3></div>
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
+          <div class='vehicles_G10'><h3>CHARACTERISTICS</h3></div>
 
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <div class='vehicles_G11'>Accelerate</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <div class='vehicles_G12'>Brake</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <div class='vehicles_G13'>Top Speed</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <div class='vehicles_G14'>Maneuver</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <input name='attr_vehicle-accelerate' type='text' class='vehicles_G15 full_width' placeholder='Meters per Turn' />
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <input name='attr_vehicle-brake' type='text' class='vehicles_G16 full_width' placeholder='Meters per Turn' />
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <input name='attr_vehicle-top_speed' type='text' class='vehicles_G17 full_width' placeholder='MpT/(# km/h)' />
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <input name='attr_vehicle-maneuver' type='text' class='vehicles_G18 full_width' placeholder="Pilot's Evasion" />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G11'>Accelerate</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G12'>Brake</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G13'>Top Speed</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G14'>Maneuver</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <input name='attr_vehicle-accelerate' type='text' class='vehicles_G15 full_width' placeholder='Meters per Turn' />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <input name='attr_vehicle-brake' type='text' class='vehicles_G16 full_width' placeholder='Meters per Turn' />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <input name='attr_vehicle-top_speed' type='text' class='vehicles_G17 full_width' placeholder='MpT/(# km/h)' />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <input name='attr_vehicle-maneuver' type='text' class='vehicles_G18 full_width' placeholder="Pilot's Evasion" />
 
-		  <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
-		  <div class='vehicles_G19'>Vertical</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
-		  <div class='vehicles_G20'>Takeoff</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
-		  <div class='vehicles_G21'>Target Range</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
-		  <div class='vehicles_G22'>Targeting</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
-		  <input name='attr_vehicle-vertical' type='text' class='vehicles_G23 full_width' placeholder='MpT' />
-		  <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
-		  <input name='attr_vehicle-takeoff' type='text' class='vehicles_G24 full_width' placeholder='Min Half-Actions' />
-		  <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
-		  <input name='attr_vehicle-target_range' type='text' class='vehicles_G25 full_width' placeholder='Meters' />
-		  <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
-		  <input name='attr_vehicle-targeting' type='text' class='vehicles_G26 full_width' placeholder='Min Half-Actions' />
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
+          <div class='vehicles_G19'>Vertical</div>
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
+          <div class='vehicles_G20'>Takeoff</div>
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
+          <div class='vehicles_G21'>Target Range</div>
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
+          <div class='vehicles_G22'>Targeting</div>
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
+          <input name='attr_vehicle-vertical' type='text' class='vehicles_G23 full_width' placeholder='MpT' />
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
+          <input name='attr_vehicle-takeoff' type='text' class='vehicles_G24 full_width' placeholder='Min Half-Actions' />
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
+          <input name='attr_vehicle-target_range' type='text' class='vehicles_G25 full_width' placeholder='Meters' />
+          <input name='attr_vehicle-type' type='checkbox' value='1' class='hidden hider' />
+          <input name='attr_vehicle-targeting' type='text' class='vehicles_G26 full_width' placeholder='Min Half-Actions' />
 
-		  <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
-		  <div class='vehicles_G27'>Strength</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider full_width' />
-		  <div class='vehicles_G28'>Melee</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
-		  <input type='text' name='attr_vehicle-strength' class='vehicles_G29 full_width'/>
-		  <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
-		  <input name='attr_vehicle-melee' type='text' class='vehicles_G30 full_width' />
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
+          <div class='vehicles_G27'>Strength</div>
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider full_width' />
+          <div class='vehicles_G28'>Melee</div>
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
+          <input type='text' name='attr_vehicle-strength' class='vehicles_G29 full_width'/>
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
+          <input name='attr_vehicle-melee' type='text' class='vehicles_G30 full_width' />
 
-		  <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
-		  <input name='attr_vehicle-strength-mythic' class='vehicles_G31 full_width' type='text' />
-		  <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
-		  <div class='vehicles_G32'>Mythic</div>
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
+          <input name='attr_vehicle-strength-mythic' class='vehicles_G31 full_width' type='text' />
+          <input name='attr_vehicle-type' type='checkbox' value='2' class='hidden hider' />
+          <div class='vehicles_G32'>Mythic</div>
 
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <div class='vehicles_G33'><h3>CREW AND COMPLEMENT</h3></div>
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <div class='vehicles_G34'>Crew</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <div class='vehicles_G35'>Complement</div>
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <input name='attr_vehicle-crew' type='text' class='vehicles_G36 full_width' placeholder='Minimum Crew Prerequisite' />
-		  <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
-		  <input name='attr_vehicle-compliment' type='text' class='vehicles_G37 full_width' placeholder='Maximum Crew Space' />
-		  <div class='vehicles_G38'><h3>HULL</h3></div>
-		  <div class='vehicles_G39'>Hull Material</div>
-		  <input name='attr_vehicle-hull' type='text' class='vehicles_G40 full_width' placeholder='Alloy Composition & Plating' />
-		</div>
-		<div class='vehicles_grid2'>
-		  <div class='vehicles_G41'><h3>BREAKPOINTS</h3></div>
-		  <div class='vehicles_G42'>Wep</div>
-		  <div class='vehicles_G43'>Mod</div>
-		  <div class='vehicles_G44'>Eng</div>
-		  <div class='vehicles_G45'>Op</div>
-		  <div class='vehicles_G46'>Crew</div>
-		  <input name='attr_vehicle-bp-wep' type='text' class='vehicles_G47 full_width' placeholder='Weapon' />
-		  <input name='attr_vehicle-bp-mod' type='text' class='vehicles_G48 full_width' placeholder='Mobility' />
-		  <input name='attr_vehicle-bp-eng'type='text' class='vehicles_G49 full_width' placeholder='Engine' />
-		  <input name='attr_vehicle-bp-op'type='text' class='vehicles_G50 full_width' placeholder='Optic' />
-		  <input name='attr_vehicle-bp-crew'type='text' class='vehicles_G51 full_width' placeholder='Compartment' />
-		  <div class='vehicles_G52'><h3>Armor</h3></div>
-		  <div class='vehicles_G53'>Front</div>
-		  <div class='vehicles_G54'>Back</div>
-		  <div class='vehicles_G55'>Side</div>
-		  <div class='vehicles_G56'>Top</div>
-		  <div class='vehicles_G57'>Bottom</div>
-		  <input name='attr_vehicle-armor-front' type='text' class='vehicles_G58 full_width' />
-		  <input name='attr_vehicle-armor-back' type='text' class='vehicles_G59 full_width' />
-		  <input name='attr_vehicle-armor-side' type='text' class='vehicles_G60 full_width' />
-		  <input name='attr_vehicle-armor-top' type='text' class='vehicles_G61 full_width' />
-		  <input name='attr_vehicle-armor-bottom' type='text' class='vehicles_G62 full_width' />
-		</div>
-		<div class='vehicles_grid3'>
-		  <div class='vehicles_G63'><h3>Miscellaneous</h3></div>
-		  <div class='vehicles_G64'>Size Points</div>
-		  <div class='vehicles_G65'>Weapon Points</div>
-		  <input name='attr_vehicle-size-points' type='text' class='vehicles_G66 full_width' placeholder='Warthog = 2' />
-		  <input name='attr_vehicle-weapon-points' type='text' class='vehicles_G67 full_width' placeholder='Warthog = 2' />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G33'><h3>CREW AND COMPLEMENT</h3></div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G34'>Crew</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <div class='vehicles_G35'>Complement</div>
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <input name='attr_vehicle-crew' type='text' class='vehicles_G36 full_width' placeholder='Minimum Crew Prerequisite' />
+          <input name='attr_vehicle-type' type='checkbox' value='3' class='hidden hidernot' />
+          <input name='attr_vehicle-compliment' type='text' class='vehicles_G37 full_width' placeholder='Maximum Crew Space' />
+          <div class='vehicles_G38'><h3>HULL</h3></div>
+          <div class='vehicles_G39'>Hull Material</div>
+          <input name='attr_vehicle-hull' type='text' class='vehicles_G40 full_width' placeholder='Alloy Composition & Plating' />
+        </div>
+        <div class='vehicles_grid2'>
+          <div class='vehicles_G41'><h3>BREAKPOINTS</h3></div>
+          <div class='vehicles_G42'>Wep</div>
+          <div class='vehicles_G43'>Mod</div>
+          <div class='vehicles_G44'>Eng</div>
+          <div class='vehicles_G45'>Op</div>
+          <div class='vehicles_G46'>Crew</div>
+          <input name='attr_vehicle-bp-wep' type='text' class='vehicles_G47 full_width' placeholder='Weapon' />
+          <input name='attr_vehicle-bp-mod' type='text' class='vehicles_G48 full_width' placeholder='Mobility' />
+          <input name='attr_vehicle-bp-eng'type='text' class='vehicles_G49 full_width' placeholder='Engine' />
+          <input name='attr_vehicle-bp-op'type='text' class='vehicles_G50 full_width' placeholder='Optic' />
+          <input name='attr_vehicle-bp-crew'type='text' class='vehicles_G51 full_width' placeholder='Compartment' />
+          <div class='vehicles_G52'><h3>Armor</h3></div>
+          <div class='vehicles_G53'>Front</div>
+          <div class='vehicles_G54'>Back</div>
+          <div class='vehicles_G55'>Side</div>
+          <div class='vehicles_G56'>Top</div>
+          <div class='vehicles_G57'>Bottom</div>
+          <input name='attr_vehicle-armor-front' type='text' class='vehicles_G58 full_width' />
+          <input name='attr_vehicle-armor-back' type='text' class='vehicles_G59 full_width' />
+          <input name='attr_vehicle-armor-side' type='text' class='vehicles_G60 full_width' />
+          <input name='attr_vehicle-armor-top' type='text' class='vehicles_G61 full_width' />
+          <input name='attr_vehicle-armor-bottom' type='text' class='vehicles_G62 full_width' />
+        </div>
+        <div class='vehicles_grid3'>
+          <div class='vehicles_G63'><h3>Miscellaneous</h3></div>
+          <div class='vehicles_G64'>Size Points</div>
+          <div class='vehicles_G65'>Weapon Points</div>
+          <input name='attr_vehicle-size-points' type='text' class='vehicles_G66 full_width' placeholder='Warthog = 2' />
+          <input name='attr_vehicle-weapon-points' type='text' class='vehicles_G67 full_width' placeholder='Warthog = 2' />
 
-		  <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
-		  <div class='vehicles_G68'>Shield Rating</div>
-		  <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
-		  <div class='vehicles_G69'>Shield Current</div>
-		  <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
-		  <div class='vehicles_G70'>Recharge Delay</div>
-		  <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
-		  <div class='vehicles_G71'>Recharge Rate</div>
-		  <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
-		  <input name='attr_vehicle-shield-rating' type='text' class='vehicles_G72 full_width' />
-		  <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
-		  <input name='attr_vehicle-shield-current' type='text' class='vehicles_G73 full_width' />
-		  <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
-		  <input name='attr_vehicle-recharge-delay' type='text' class='vehicles_G74 full_width' />
-		  <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
-		  <input name='attr_vehicle-recharge-rate' type='text' class='vehicles_G75 full_width' />
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
+          <div class='vehicles_G68'>Shield Rating</div>
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
+          <div class='vehicles_G69'>Shield Current</div>
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
+          <div class='vehicles_G70'>Recharge Delay</div>
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
+          <div class='vehicles_G71'>Recharge Rate</div>
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
+          <input name='attr_vehicle-shield-rating' type='text' class='vehicles_G72 full_width' />
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
+          <input name='attr_vehicle-shield-current' type='text' class='vehicles_G73 full_width' />
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
+          <input name='attr_vehicle-recharge-delay' type='text' class='vehicles_G74 full_width' />
+          <input name='attr_vehicle-shield' type='checkbox' value='1' class='hidden hider' />
+          <input name='attr_vehicle-recharge-rate' type='text' class='vehicles_G75 full_width' />
 
-		  <div class='vehicles_G76 '>
-			<div>
-			  <input name='attr_aditional_info' type='text' placeholder='Additional Info' class='full_width_49px' />
-			  <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='5' class='collapsible_entity_switch select_button hidden' /><span class='select_text '>▼</span></label>
-			  <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{aditional_info} }} {{description=@{aditional_info_desc} }}' class='hidden'></button><span class='select_text'>❖</span></label>
-			  <input name='attr_collapse' type='checkbox'  value='5' class='collapsible_entity_switch hidden' />
-			  <textarea name='attr_aditional_info_desc' class='collapsible_entity_block' placeholder='Enter any vehicle-specific rules or other unique information here.'></textarea>
-			</div>
-			<div>
-			  <input name='attr_modifications' type='text' placeholder='Modifications' class='full_width_49px vehicles_descriptor' />
-			  <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='6' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right'>▼</span></label>
-			  <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{modifications} }} {{description=@{modifications_desc} }}' class='hidden'></button><span class='select_text'>❖</span></label>
-			  <input name='attr_collapse' type='checkbox'  value='6' class='collapsible_entity_switch hidden' />
-			  <textarea name='attr_modifications_desc' class='collapsible_entity_block description_rounded_margin' placeholder='Vehicles in Halo Mythic can be modified in many ways.  These use a Vehicle’s Weapon Points and Size Points, which are specialized Hardpoints on a Vehicle.  Each Modification takes a specified amount of Weapon and Size Points.
-			  &#10;Vehicle modifications are classified into five categories; Body, Propulsion, Electronic, Combat, and Miscellaneous.'></textarea>
-			</div>
-		  </div>
-		</div>
-		<br>
-	  </fieldset>
+          <div class='vehicles_G76 '>
+            <div>
+              <input name='attr_aditional_info' type='text' placeholder='Additional Info' class='full_width_49px' />
+              <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='5' class='collapsible_entity_switch select_button hidden' /><span class='select_text '>▼</span></label>
+              <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{aditional_info} }} {{description=@{aditional_info_desc} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+              <input name='attr_collapse' type='checkbox'  value='5' class='collapsible_entity_switch hidden' />
+              <textarea name='attr_aditional_info_desc' class='collapsible_entity_block' placeholder='Enter any vehicle-specific rules or other unique information here.'></textarea>
+            </div>
+            <div>
+              <input name='attr_modifications' type='text' placeholder='Modifications' class='full_width_49px vehicles_descriptor' />
+              <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='6' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right'>▼</span></label>
+              <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{modifications} }} {{description=@{modifications_desc} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+              <input name='attr_collapse' type='checkbox'  value='6' class='collapsible_entity_switch hidden' />
+              <textarea name='attr_modifications_desc' class='collapsible_entity_block description_rounded_margin' placeholder='Vehicles in Halo Mythic can be modified in many ways.  These use a Vehicle’s Weapon Points and Size Points, which are specialized Hardpoints on a Vehicle.  Each Modification takes a specified amount of Weapon and Size Points.
+              &#10;Vehicle modifications are classified into five categories; Body, Propulsion, Electronic, Combat, and Miscellaneous.'></textarea>
+            </div>
+          </div>
+        </div>
+        <br>
+      </fieldset>
 
-	  <div class='vehicle_weapons'>
-		<div class='equipment_ranged_weapons'>
-		  <h3 class='radius_border_top'>Vehicle Ranged Weapons</h3>
-		  <fieldset name='vehiclerangedweapons' class='repeating_vrangedweapons'>
-			<div class='equipment_ranged_weapons_rep'>
-			  <div class='equipment_ranged_weapons_grid1'>
-				<div class='equipment_ranged_weapons_gs1'>Name</div>
-				<input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_R_weapon_name' placeholder='Name' />
-				<div class='equipment_ranged_weapons_gs3'>Type</div>
-				<input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_R_weapon_class' placeholder='Class of Weapon' />
-			  </div>
-			  <div class='equipment_ranged_weapons_grid2'>
-				<div class='equipment_ranged_weapons_gs5'>Range</div>
-				<input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_R_weapon_range' />
-				<div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
-				<input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_R_weapon_dam-roll' />
-				<div class='equipment_ranged_weapons_gs9'>Base</div>
-				<input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_R_weapon_base' />
-				<div class='equipment_ranged_weapons_gs11'>Pierce</div>
-				<input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_R_weapon_pierce' />
-			  </div>
-			  <div class='equipment_ranged_weapons_grid3'>
-				<div class='equipment_ranged_weapons_gs13'>Hit Mod</div>
-				<input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_V_R_weapon_mod1' />
-				<div class='equipment_ranged_weapons_gs15'>Magazine</div>
-				<input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_V_R_weapon_mag' />
-				<div class='equipment_ranged_weapons_gs17'>/</div>
-				<input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_V_R_weapon_mag_max' />
-				<button class='equipment_ranged_weapons_gs19 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_R_weapon_name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{fatigue_mod}]]+@{V_R_weapon_mod1}+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
-				<button class='equipment_ranged_weapons_gs20 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_R_weapon_name}}} {{damage=[[@{V_R_weapon_dam-roll}+@{V_R_weapon_base}]] }} {{pierce=[[@{V_R_weapon_pierce}]] }} {{@{settings_weapondescription}=@{V_R_ability_r} }}' >DMG</button>
-			  </div>
-			  <div class='equipment_ranged_weapons_grid4'>
-				<div class='equipment_ranged_weapons_gs21'>RoF</div>
-				<input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_V_R_weapon_semi' />
-				<div class='equipment_ranged_weapons_gs23'>/</div>
-				<input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Burst' name='attr_V_R_weapon_burst' />
-				<div class='equipment_ranged_weapons_gs25'>/</div>
-				<input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_V_R_weapon_auto' />
-				<div class='equipment_ranged_weapons_gs27'>Reload</div>
-				<input class='equipment_ranged_weapons_gs28 full_width' type='text' name='attr_V_R_weapon_reload' />
-				<div class='equipment_ranged_weapons_gs29'>Weight</div>
-				<input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_V_R_weapon_weight' />
-			  </div>
-			  <div>
-				<input name='attr_V_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
-				<label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
-				<label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{V_R_ability_r} }} {{description=@{V_R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
-				<input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
-				<textarea name='attr_V_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
-			  </div>
-			</div>
-			<br>
-		  </fieldset>
-		</div>
+      <div class='vehicle_weapons'>
+        <div class='equipment_ranged_weapons'>
+          <h3 class='radius_border_top'>Vehicle Ranged Weapons</h3>
+          <fieldset name='vehiclerangedweapons' class='repeating_vrangedweapons'>
+            <div class='equipment_ranged_weapons_rep'>
+              <div class='equipment_ranged_weapons_grid1'>
+                <div class='equipment_ranged_weapons_gs1'>Name</div>
+                <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_R_weapon_name' placeholder='Name' />
+                <div class='equipment_ranged_weapons_gs3'>Type</div>
+                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_R_weapon_class' placeholder='Class of Weapon' />
+              </div>
+              <div class='equipment_ranged_weapons_grid2'>
+                <div class='equipment_ranged_weapons_gs5'>Range</div>
+                <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_R_weapon_range' />
+                <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
+                <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_R_weapon_dam-roll' />
+                <div class='equipment_ranged_weapons_gs9'>Base</div>
+                <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_R_weapon_base' />
+                <div class='equipment_ranged_weapons_gs11'>Pierce</div>
+                <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_R_weapon_pierce' />
+              </div>
+              <div class='equipment_ranged_weapons_grid3'>
+                <div class='equipment_ranged_weapons_gs13'>Hit Mod</div>
+                <input class='equipment_ranged_weapons_gs14 full_width' type='text' value='0' name='attr_V_R_weapon_mod1' />
+                <div class='equipment_ranged_weapons_gs15'>Magazine</div>
+                <input class='equipment_ranged_weapons_gs16 full_width' type='text' value='0' name='attr_V_R_weapon_mag' />
+                <div class='equipment_ranged_weapons_gs17'>/</div>
+                <input class='equipment_ranged_weapons_gs18 full_width' type='text' value='0' name='attr_V_R_weapon_mag_max' />
+                <button class='equipment_ranged_weapons_gs19 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_R_weapon_name}}} {{roll=[[floor(([[@{WFR}+@{WFR_advancement}+@{fatigue_mod}]]+@{V_R_weapon_mod1}+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}"></button>' >Hit</button>
+                <button class='equipment_ranged_weapons_gs20 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_R_weapon_name}}} {{damage=[[@{V_R_weapon_dam-roll}+@{V_R_weapon_base}]] }} {{pierce=[[@{V_R_weapon_pierce}]] }} {{@{settings_weapondescription}=@{V_R_ability_r} }}' >DMG</button>
+              </div>
+              <div class='equipment_ranged_weapons_grid4'>
+                <div class='equipment_ranged_weapons_gs21'>RoF</div>
+                <input class='equipment_ranged_weapons_gs22 full_width' type='text' placeholder='Semi' name='attr_V_R_weapon_semi' />
+                <div class='equipment_ranged_weapons_gs23'>/</div>
+                <input class='equipment_ranged_weapons_gs24 full_width' type='text' placeholder='Burst' name='attr_V_R_weapon_burst' />
+                <div class='equipment_ranged_weapons_gs25'>/</div>
+                <input class='equipment_ranged_weapons_gs26 full_width' type='text' placeholder='Auto' name='attr_V_R_weapon_auto' />
+                <div class='equipment_ranged_weapons_gs27'>Reload</div>
+                <input class='equipment_ranged_weapons_gs28 full_width' type='text' name='attr_V_R_weapon_reload' />
+                <div class='equipment_ranged_weapons_gs29'>Weight</div>
+                <input class='equipment_ranged_weapons_gs30 full_width' type='text' value='0' name='attr_V_R_weapon_weight' />
+              </div>
+              <div>
+                <input name='attr_V_R_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
+                <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+                <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{V_R_ability_r} }} {{description=@{V_R_ability_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+                <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
+                <textarea name='attr_V_R_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
+              </div>
+            </div>
+            <br>
+          </fieldset>
+        </div>
 
-		<div class='equipment_melee_weapons'>
-		  <h3 class='radius_border_top'>Vehicle Melee Weaponry</h3>
-		  <fieldset name='vehiclemeleeweapons' class='repeating_vmeleeweapons'>
-			<div class='equipment_ranged_weapons_rep'>
-			  <div class='equipment_ranged_weapons_grid1'>
-				<div class='equipment_ranged_weapons_gs1'>Name</div>
-				<input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_M_weapon_name' placeholder='Name' />
-				<div class='equipment_ranged_weapons_gs3'>Type</div>
-				<input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_M_weapon_class' placeholder='Class of Weapon' />
-			  </div>
-			  <div class='equipment_ranged_weapons_grid2'>
-				<div class='equipment_ranged_weapons_gs5'>Reach</div>
-				<input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon_range' />
-				<div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
-				<input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon_dam-roll' />
-				<div class='equipment_ranged_weapons_gs9'>Base</div>
-				<input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_M_weapon_base' />
-				<div class='equipment_ranged_weapons_gs11'>Pierce</div>
-				<input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_M_weapon_pierce' />
-			  </div>
-			  <div class='equipment_melee_weapons_grid3'>
-				<div class='equipment_melee_weapons_gs1'>Hit Mod</div>
-				<input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_V_M_weapon_mod1' />
-				<div class='equipment_melee_weapons_gs3'>Weight</div>
-				<input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_V_M_weapon_weight' />
-				<div class='equipment_melee_weapons_gs5'>Br Pts</div>
-				<input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon_breakpoints' />
-				<div class='equipment_melee_weapons_gs7'>/</div>
-				<input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon_breakpoints_max' />
-				<button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{fatigue_mod}]]+@{V_M_weapon_mod1}+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
-				<button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_M_weapon_name}}} {{damage=[[@{V_M_weapon_dam-roll}+@{V_M_weapon_base}]] }} {{pierce=[[@{V_M_weapon_pierce}]] }} {{@{settings_weapondescription}=@{V_M_ability_r} }}' >DMG</button>
-			  </div>
-			  <div>
-				<input name='attr_V_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
-				<label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
-				<label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{V_M_ability_r} }} {{description=@{V_M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
-				<input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
-				<textarea name='attr_V_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
-			  </div>
-			</div>
-			<br>
-		  </fieldset>
-		</div>
-	  </div>
-	</div>
+        <div class='equipment_melee_weapons'>
+          <h3 class='radius_border_top'>Vehicle Melee Weaponry</h3>
+          <fieldset name='vehiclemeleeweapons' class='repeating_vmeleeweapons'>
+            <div class='equipment_ranged_weapons_rep'>
+              <div class='equipment_ranged_weapons_grid1'>
+                <div class='equipment_ranged_weapons_gs1'>Name</div>
+                <input class='equipment_ranged_weapons_gs2 full_width' type='text' name='attr_V_M_weapon_name' placeholder='Name' />
+                <div class='equipment_ranged_weapons_gs3'>Type</div>
+                <input class='equipment_ranged_weapons_gs4 full_width' type='text' name='attr_V_M_weapon_class' placeholder='Class of Weapon' />
+              </div>
+              <div class='equipment_ranged_weapons_grid2'>
+                <div class='equipment_ranged_weapons_gs5'>Reach</div>
+                <input class='equipment_ranged_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon_range' />
+                <div class='equipment_ranged_weapons_gs7'>DMG Roll</div>
+                <input class='equipment_ranged_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon_dam-roll' />
+                <div class='equipment_ranged_weapons_gs9'>Base</div>
+                <input class='equipment_ranged_weapons_gs10 full_width' type='text' value='0' name='attr_V_M_weapon_base' />
+                <div class='equipment_ranged_weapons_gs11'>Pierce</div>
+                <input class='equipment_ranged_weapons_gs12 full_width' type='text' value='0' name='attr_V_M_weapon_pierce' />
+              </div>
+              <div class='equipment_melee_weapons_grid3'>
+                <div class='equipment_melee_weapons_gs1'>Hit Mod</div>
+                <input class='equipment_melee_weapons_gs2 full_width' type='text' value='0' name='attr_V_M_weapon_mod1' />
+                <div class='equipment_melee_weapons_gs3'>Weight</div>
+                <input class='equipment_melee_weapons_gs4 full_width' type='text' value='0' name='attr_V_M_weapon_weight' />
+                <div class='equipment_melee_weapons_gs5'>Br Pts</div>
+                <input class='equipment_melee_weapons_gs6 full_width' type='text' value='0' name='attr_V_M_weapon_breakpoints' />
+                <div class='equipment_melee_weapons_gs7'>/</div>
+                <input class='equipment_melee_weapons_gs8 full_width' type='text' value='0' name='attr_V_M_weapon_breakpoints_max' />
+                <button class='equipment_melee_weapons_gs9 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{attack= }} {{weapon= @{V_M_weapon_name}}} {{roll=[[floor(([[@{WFM}+@{WFM_advancement}+@{fatigue_mod}]]+@{V_M_weapon_mod1}+@{inlinemod-toggle}-1d100)/10)]]}} @{settings_hitroll}'' >Hit</button>
+                <button class='equipment_melee_weapons_gs10 full_width clear' type='roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{weapon= @{V_M_weapon_name}}} {{damage=[[@{V_M_weapon_dam-roll}+@{V_M_weapon_base}]] }} {{pierce=[[@{V_M_weapon_pierce}]] }} {{@{settings_weapondescription}=@{V_M_ability_r} }}' >DMG</button>
+              </div>
+              <div>
+                <input name='attr_V_M_ability_r' type='text' placeholder='Description' class='full_width_49px border_none' />
+                <label class='margin_adjust_wep'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text radius_border_right_wep'>▼</span></label>
+                <label class='margin_adjust_wep2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{V_M_ability_r} }} {{description=@{V_M_ability_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+                <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
+                <textarea name='attr_V_M_ability_desc_r' class='collapsible_entity_block description_rounded_margin'></textarea>
+              </div>
+            </div>
+            <br>
+          </fieldset>
+        </div>
+      </div>
+    </div>
 
   </div>
 
