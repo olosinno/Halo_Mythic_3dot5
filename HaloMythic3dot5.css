@@ -984,7 +984,7 @@ ______________________________ start of NPC sheet overrides ____________________
 .sheet-NPC_characteristics {
 	color: white;
 	display: grid;
-	grid-template-columns: 60px 40px 40px 10px 60px 40px
+	grid-template-columns: 60px 40px 40px 10px 60px 60px 5px auto
 }
 
 .sheet-NPC_Faction_override { margin-top: -5px }
