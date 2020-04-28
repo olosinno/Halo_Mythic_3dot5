@@ -35,7 +35,7 @@
       </select>
       <input name='attr_soldier_type' type='text' class='gs9' />
       <input name='attr_rank' type='text' class='gs10' />
-      <input name='attr_size' type='text' class='gs11' placeholder='Average' />
+      <input name='attr_size' type='text' class='gs11' placeholder='Size/Height/Weight' />
       <input name='attr_specialisation' type='text' class='gs12' />
       <!-- third column of grid: header logo -->
       <div class='gs13'>
@@ -658,9 +658,9 @@
           <button type='roll' name='medication_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Medication}} {{roll=[[floor(([[@{mod1_medication}]]+@{mod2_medication}+[[@{mod3_medication} -40]]+@{inlinemod-toggle}-1d100)/10)]]}}' class='clear'><input name='attr_medication_total' value='@{mod1_medication}+@{mod2_medication}+@{mod3_medication}-40' class='input_background' disabled /></button>
         </div>
         <div class='skill_grid'>
-          <p class='bold_text skills_text'>Navigation</p>
+          <p class='bold_text skills_text'>Nav Air</p>
           <p class='bold_text skills_text'></p>
-          <select name='attr_mod1_navigation' class='full_width full_height'>
+          <select name='attr_mod1_nav_air' class='full_width full_height'>
             <option value='@{STR} + @{STR_advancement} + @{fatigue_mod}' >STR</option>
             <option value='@{TOU} + @{TOU_advancement} + @{fatigue_mod}' >TOU</option>
             <option value='@{AGI} + @{AGI_advancement} + @{fatigue_mod}' >AGI</option>
@@ -672,12 +672,57 @@
             <option value='@{CH} + @{CH_advancement} + @{fatigue_mod}' >CH</option>
             <option value='@{LD} + @{LD_advancement} + @{fatigue_mod}' >LD</option>
           </select>
-          <input name='attr_mod2_navigation' type='number' value='0' />
-          <input name='attr_mod3_navigation' type='checkbox' value='20' class='skills_item' />
-          <input name='attr_mod3_navigation' type='checkbox' value='30' class='skills_item' />
-          <input name='attr_mod3_navigation' type='checkbox' value='40' class='skills_item' />
-          <button type='roll' name='navigation_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=Navigation}} {{roll=[[floor(([[@{mod1_navigation}]]+@{mod2_navigation}+[[@{mod3_navigation} -20]]+@{inlinemod-toggle}-1d100)/10)]]}}' class='clear'><input name='attr_navigation_total' value='@{mod1_navigation}+@{mod2_navigation}+@{mod3_navigation}-20' class='input_background' disabled /></button>
+          <input name='attr_mod2_nav_air' type='number' value='0' />
+          <input name='attr_mod3_nav_air' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_nav_air' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_nav_air' type='checkbox' value='40' class='skills_item' />
+          <button type='roll' name='nav_air_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=nav_air}} {{roll=[[floor(([[@{mod1_nav_air}]]+@{mod2_nav_air}+[[@{mod3_nav_air} -20]]+@{inlinemod-toggle}-1d100)/10)]]}}' class='clear'><input name='attr_nav_air_total' value='@{mod1_nav_air}+@{mod2_nav_air}+@{mod3_nav_air}-20' class='input_background' disabled /></button>
         </div>
+
+        <div class='skill_grid'>
+          <p class='bold_text skills_text'>Nav Land</p>
+          <p class='bold_text skills_text'></p>
+          <select name='attr_mod1_nav_land' class='full_width full_height'>
+            <option value='@{STR} + @{STR_advancement} + @{fatigue_mod}' >STR</option>
+            <option value='@{TOU} + @{TOU_advancement} + @{fatigue_mod}' >TOU</option>
+            <option value='@{AGI} + @{AGI_advancement} + @{fatigue_mod}' >AGI</option>
+            <option value='@{WFR} + @{WFR_advancement} + @{fatigue_mod}' >WFR</option>
+            <option value='@{WFM} + @{WFM_advancement} + @{fatigue_mod}' >WFM</option>
+            <option value='@{INT} + @{INT_advancement} + @{fatigue_mod}' >INT</option>
+            <option value='@{PER} + @{PER_advancement} + @{fatigue_mod}' selected='selected'>PER</option>
+            <option value='@{CR} + @{CR_advancement} + @{fatigue_mod}' >CR</option>
+            <option value='@{CH} + @{CH_advancement} + @{fatigue_mod}' >CH</option>
+            <option value='@{LD} + @{LD_advancement} + @{fatigue_mod}' >LD</option>
+          </select>
+          <input name='attr_mod2_nav_land' type='number' value='0' />
+          <input name='attr_mod3_nav_land' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_nav_land' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_nav_land' type='checkbox' value='40' class='skills_item' />
+          <button type='roll' name='nav_land_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=nav_land}} {{roll=[[floor(([[@{mod1_nav_land}]]+@{mod2_nav_land}+[[@{mod3_nav_land} -20]]+@{inlinemod-toggle}-1d100)/10)]]}}' class='clear'><input name='attr_nav_land_total' value='@{mod1_nav_land}+@{mod2_nav_land}+@{mod3_nav_land}-20' class='input_background' disabled /></button>
+        </div>
+
+        <div class='skill_grid'>
+          <p class='bold_text skills_text'>Nav Space</p>
+          <p class='bold_text skills_text'></p>
+          <select name='attr_mod1_nav_space' class='full_width full_height'>
+            <option value='@{STR} + @{STR_advancement} + @{fatigue_mod}' >STR</option>
+            <option value='@{TOU} + @{TOU_advancement} + @{fatigue_mod}' >TOU</option>
+            <option value='@{AGI} + @{AGI_advancement} + @{fatigue_mod}' >AGI</option>
+            <option value='@{WFR} + @{WFR_advancement} + @{fatigue_mod}' >WFR</option>
+            <option value='@{WFM} + @{WFM_advancement} + @{fatigue_mod}' >WFM</option>
+            <option value='@{INT} + @{INT_advancement} + @{fatigue_mod}' >INT</option>
+            <option value='@{PER} + @{PER_advancement} + @{fatigue_mod}' selected='selected'>PER</option>
+            <option value='@{CR} + @{CR_advancement} + @{fatigue_mod}' >CR</option>
+            <option value='@{CH} + @{CH_advancement} + @{fatigue_mod}' >CH</option>
+            <option value='@{LD} + @{LD_advancement} + @{fatigue_mod}' >LD</option>
+          </select>
+          <input name='attr_mod2_nav_space' type='number' value='0' />
+          <input name='attr_mod3_nav_space' type='checkbox' value='20' class='skills_item' />
+          <input name='attr_mod3_nav_space' type='checkbox' value='30' class='skills_item' />
+          <input name='attr_mod3_nav_space' type='checkbox' value='40' class='skills_item' />
+          <button type='roll' name='nav_space_roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=nav_space}} {{roll=[[floor(([[@{mod1_nav_space}]]+@{mod2_nav_space}+[[@{mod3_nav_space} -20]]+@{inlinemod-toggle}-1d100)/10)]]}}' class='clear'><input name='attr_nav_space_total' value='@{mod1_nav_space}+@{mod2_nav_space}+@{mod3_nav_space}-20' class='input_background' disabled /></button>
+        </div>
+
         <div class='skill_grid'>
           <p class='bold_text skills_text'>Negotiation</p>
           <p class='bold_text skills_text'></p>
@@ -1156,7 +1201,16 @@
 		</fieldset>
 		<br>
 		<h3 class='radius_border_top'>Armor Description</h3>
-		<textarea name='attr_armor_name'></textarea>
+		<textarea name='attr_armor_desc'></textarea>
+    <fieldset name='permutations' class='repeating_permutations'>
+		  <div>
+			<input class='full_width' type='text' name='attr_permutation_name_r' placeholder='Name'>
+			<label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
+			<label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{permutation_name_r} }} {{description=@{permutation_desc_r} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+			<input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden' />
+			<textarea name='attr_permutation_desc_r' class='collapsible_entity_block'></textarea>
+		  </div>
+		</fieldset>
 	  </div>
 	</div>
 
