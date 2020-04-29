@@ -2328,6 +2328,36 @@
       <input name='attr_lift' type='text' class='NPC_characteristics_fields full_width' />
       <input name='attr_push' type='text' class='NPC_characteristics_fields full_width' />
     </div>
+    <div> </div>
+    <div>
+      Skills
+      <fieldset name='skills' class='repeating_skills'>
+        <div class='skill_grid'>
+          <input name='attr_skill_R_name' type='text' value='' class='full_width text_left' />
+          <select name='attr_skill_R_mod4' class='full_width full_height'>
+            <option value='0' ></option>
+            <option value='20' >Adv.</option>
+          </select>
+          <select name='attr_skill_R_mod1' class='full_width full_height'>
+            <option value='@{STR} + @{STR_advancement} + @{fatigue_mod}'>STR</option>
+            <option value='@{TOU} + @{TOU_advancement} + @{fatigue_mod}' >TOU</option>
+            <option value='@{AGI} + @{AGI_advancement} + @{fatigue_mod}' >AGI</option>
+            <option value='@{WFR} + @{WFR_advancement} + @{fatigue_mod}' >WFR</option>
+            <option value='@{WFM} + @{WFM_advancement} + @{fatigue_mod}' >WFM</option>
+            <option value='@{INT} + @{INT_advancement} + @{fatigue_mod}' >INT</option>
+            <option value='@{PER} + @{PER_advancement} + @{fatigue_mod}' >PER</option>
+            <option value='@{CR} + @{CR_advancement} + @{fatigue_mod}' >CR</option>
+            <option value='@{CH} + @{CH_advancement} + @{fatigue_mod}' selected='selected'>CH</option>
+            <option value='@{LD} + @{LD_advancement} + @{fatigue_mod}' >LD</option>
+          </select>
+          <input name='attr_skill_R_mod2' type='number' value='0' />
+          <input name='attr_skill_R_mod3' type='checkbox' value='20+@{skill_R_mod4}' class='skills_item' />
+          <input name='attr_skill_R_mod3' type='checkbox' value='30+@{skill_R_mod4}' class='skills_item' />
+          <input name='attr_skill_R_mod3' type='checkbox' value='40+@{skill_R_mod4}' class='skills_item' />
+          <button type='roll' name='skill_Roll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{roll-name=@{skill_R_name} }} {{roll=[[floor(([[@{skill_R_mod1}]]+@{skill_R_mod2}+[[@{skill_R_mod3}-(20+@{skill_R_mod4})]]+@{inlinemod-toggle}-1d100)/10)]]}}' class='clear'><input name='attr_skill_R_total' value='@{skill_R_mod1}]]+@{skill_R_mod2}+[[@{skill_R_mod3}-(20+@{skill_R_mod4})' class='input_background' disabled /></button>
+        </div>
+      </fieldset>
+    </div>
   </div>
 
 
