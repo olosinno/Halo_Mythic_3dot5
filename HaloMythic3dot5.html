@@ -245,7 +245,7 @@
         <input name='attr_initmod2' type='number' value='0' />
         <p class='init_plus'>+</p>
         <select name='attr_initmod3' class='init_field'>
-          <option value='(@{AGI}+@{AGI_advancement} + @{fatigue_mod})/10+@{AGI_mythic}' selected='selected'>Agility</option>
+          <option value='(@{AGI}+@{AGI_advancement} + @{fatigue_mod})/10' selected='selected'>Agility</option>
           <option value='(@{INT}+@{INT_advancement} + @{fatigue_mod})/10'>Intellect</option>
           <option value='0'>N/A</option>
         </select>
@@ -1100,14 +1100,14 @@
               <div class='equipment_melee_weapons_gs11'>damage plus Strength</div>
               <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon_base-mod'>
                 <option selected='selected' value='0'>None</option>
-                <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
-                <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
+                <option value='[[floor(((@{STR} + @{STR_advancement})/10 + @{str_mythic})/2)]]'>Half</option>
+                <option value='[[floor((@{STR} + @{STR_advancement})/10 + @{STR_mythic})]]'>Full</option>
               </select>
               <div class='equipment_melee_weapons_gs13'>pierce plus Strength</div>
               <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon_pierce-mod'>
                 <option selected='selected' value='0'>None</option>
-                <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
-                <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
+                <option value='[[floor(((@{STR} + @{STR_advancement})/10 + @{str_mythic})/2)]]'>Half</option>
+                <option value='[[floor((@{STR} + @{STR_advancement})/10 + @{STR_mythic})]]'>Full</option>
               </select>
             </div>
             <div>
@@ -1180,11 +1180,6 @@
         </div>
         <div>
           <br>
-          <h3 class='radius_border_top'>Chest</h3>
-          <input class='equipment_armor_input' type='text' name='attr_armor_chest' value='0'>
-        </div>
-        <div>
-          <br>
           <h3 class='radius_border_top'>Arm L</h3>
           <input class='equipment_armor_input' type='text' name='attr_armor_arm_left' value='0'>
         </div>
@@ -1192,6 +1187,11 @@
           <br>
           <h3 class='radius_border_top'>Arm R</h3>
           <input class='equipment_armor_input' type='text' name='attr_armor_arm_right' value='0'>
+        </div>
+        <div>
+          <br>
+          <h3 class='radius_border_top'>Chest</h3>
+          <input class='equipment_armor_input' type='text' name='attr_armor_chest' value='0'>
         </div>
         <div>
           <br>
@@ -2518,15 +2518,15 @@
             <div class='equipment_melee_weapons_gs11'>damage plus Strength</div>
             <select class='equipment_melee_weapons_gs12 full_width' name='attr_M_weapon_base-mod'>
               <option selected='selected' value='0'>None</option>
-              <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
-              <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
+              <option value='[[floor(((@{STR} + @{STR_advancement})/10 + @{str_mythic})/2)]]'>Half</option>
+              <option value='[[floor((@{STR} + @{STR_advancement})/10 + @{STR_mythic})]]'>Full</option>
             </select>
 
             <div class='equipment_melee_weapons_gs13'>pierce plus Strength</div>
             <select class='equipment_melee_weapons_gs14 full_width' name='attr_M_weapon_pierce-mod'>
               <option selected='selected' value='0'>None</option>
-              <option value='[[floor((@{str}/10 + @{str_mythic})/2)]]'>Half</option>
-              <option value='[[floor(@{str}/10 + @{str_mythic})]]'>Full</option>
+              <option value='[[floor(((@{STR} + @{STR_advancement})/10 + @{str_mythic})/2)]]'>Half</option>
+              <option value='[[floor((@{STR} + @{STR_advancement})/10 + @{STR_mythic})]]'>Full</option>
             </select>
           </div>
 
