@@ -2208,6 +2208,7 @@
       <option value='3'>Kig-yar Ibie'shan / Halo 4/5 Jackals </option>
       <option value='5'>Mgalekgolo / Hunters </option>
       <option value='1'>Promethean Knight </option>
+      <option value='6'>Dont Auto Calculate Speed And Weight</option>
     </select>
     <br>
 
@@ -2605,7 +2606,7 @@
       var tou_mod = Math.floor((tou + tou_advancement) / 10);
 
       // normal no modifiers ___________________________________________________
-
+      if(settings_race != 6) {
       setAttrs({
         half_move: (move_mod),
         full_move: (move_mod * 2),
@@ -2625,6 +2626,7 @@
           leap_move:(str_mod / 2)
         });
       }
+    }
 
       // Spartan + Jiralhanae + Promethean Knight (carry weight * 2) ___________
       if(settings_race == 1) {
