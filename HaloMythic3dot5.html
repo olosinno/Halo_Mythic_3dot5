@@ -952,16 +952,16 @@
           <div class='education_grid'>
             <input name='attr_education_name' type='text' class='full_width text_left' />
             <select name='attr_education_r_mod1' class=' full_width full_height'>
-              <option value='@{STR} + @{STR_advancement + @{fatigue_mod}' >STR</option>
-              <option value='@{TOU} + @{TOU_advancement + @{fatigue_mod}' >TOU</option>
-              <option value='@{AGI} + @{AGI_advancement + @{fatigue_mod}' >AGI</option>
-              <option value='@{WFR} + @{WFR_advancement + @{fatigue_mod}' >WFR</option>
-              <option value='@{WFM} + @{WFM_advancement + @{fatigue_mod}' >WFM</option>
-              <option value='@{INT} + @{INT_advancement + @{fatigue_mod}' selected='selected'>INT</option>
-              <option value='@{PER} + @{PER_advancement + @{fatigue_mod}' >PER</option>
-              <option value='@{CR} + @{CR_advancement + @{fatigue_mod}' >CR</option>
-              <option value='@{CH} + @{CH_advancement + @{fatigue_mod}' >CH</option>
-              <option value='@{LD} + @{LD_advancement + @{fatigue_mod}' >LD</option>
+              <option value='@{STR} + @{STR_advancement} + @{fatigue_mod}' >STR</option>
+              <option value='@{TOU} + @{TOU_advancement} + @{fatigue_mod}' >TOU</option>
+              <option value='@{AGI} + @{AGI_advancement} + @{fatigue_mod}' >AGI</option>
+              <option value='@{WFR} + @{WFR_advancement} + @{fatigue_mod}' >WFR</option>
+              <option value='@{WFM} + @{WFM_advancement} + @{fatigue_mod}' >WFM</option>
+              <option value='@{INT} + @{INT_advancement} + @{fatigue_mod}' selected='selected'>INT</option>
+              <option value='@{PER} + @{PER_advancement} + @{fatigue_mod}' >PER</option>
+              <option value='@{CR} + @{CR_advancement} + @{fatigue_mod}' >CR</option>
+              <option value='@{CH} + @{CH_advancement} + @{fatigue_mod}' >CH</option>
+              <option value='@{LD} + @{LD_advancement} + @{fatigue_mod}' >LD</option>
             </select>
             <input name='attr_education_r_mod2' type='number' value='0' />
             <div class='education4'><input name='attr_education_r_mod3' type='checkbox' value='5' class='skills_item ' /></div>
@@ -2234,6 +2234,14 @@
     </select>
     <br>
 
+    <h3>Weapon Description in Damage Roll</h3>
+    <select name='attr_settings_fatigue' class='full_width edge_padding'>
+      <option value='0'selected='selected'>Auto calculate Fatigue</option>
+      <option value='1'>Dont auto calculate Fatigue</option>
+    </select>
+    <br>
+
+
     <h3>NPC Sheet</h3>
     <label class='text_centered bttn_top_padding'><input type='checkbox' name='attr_npc_sheet' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>NPC Sheet</span></label>
     <br>
@@ -2703,13 +2711,16 @@
 
   on('change:fatigue', function() {
     getAttrs([
-    'fatigue'
+    'fatigue',
+    'settings_fatigue'
     ], function(values) {
       var fatigue = parseInt(values['fatigue'], 10) || 0;
-
-      setAttrs({
-        fatigue_mod: (-fatigue * 5)
-      });
+      var settings_fatigue = parseInt(values['settings_fatigue'], 10) || 0;
+      if (settings_fatigue == 0) {
+        setAttrs({
+          fatigue_mod: (-fatigue * 5)
+        });
+      }
     });
   });
   // ___________________________________________________________________________
