@@ -39,6 +39,17 @@
 			],
 			"default": " ",
 			"description": "Select the Weapon Description setting to use on the character sheet."
+		},
+		{
+			"attribute": "settings_fatigue",
+			"displayname": "Calculate The Negative Impact Of Fatigue Automatically",
+			"type": "select",
+			"options": [
+				"Auto calculate Fatigue|0",
+				"Dont auto calculate Fatigue|1"
+			],
+			"default": "0",
+			"description": "Select the fatigue calculation setting to use on the character sheet."
 		}
 	]
 }
