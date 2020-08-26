@@ -2909,8 +2909,46 @@
 
 <input type='checkbox' name='attr_npc_sheet' class='collapsible_entity_switch hidden' />
 <div class='background_radius collapsible_entity_block box'>
-  <br>
+  <div class='tabs_main'>
 
+    <div class='initiative_container'>
+      <button name='initiative' type='roll' class='clear bttn_top_padding'
+      value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3})&{tracker}]]}}'>
+      Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3})' class='input_background input_init_background' disabled /></button>
+      <select name='attr_initmod1' class='init_field'>
+        <option value='1d10' selected='selected'>Standard</option>
+        <option value='2d10k1'>Fast Foot</option>
+        <option value='?{dice|1d10}'>Custom</option>
+      </select>
+      <p class='init_plus'>+</p>
+      <input name='attr_initmod2' type='number' value='0' />
+      <p class='init_plus'>+</p>
+      <select name='attr_initmod3' class='init_field'>
+        <option value='(@{AGI}+@{AGI_advancement} + @{fatigue_mod})/10' selected='selected'>Agility</option>
+        <option value='(@{INT}+@{INT_advancement} + @{fatigue_mod})/10'>Intellect</option>
+        <option value='0'>N/A</option>
+      </select>
+    </div>
+    <div class='sheet_tabs'>
+      <input name='attr_sheetTab' type='checkbox' value='core' class='hidden core_bttn' checked />
+      <button name='act_core' type='action' class='core_bttn bold_text'>Core</button>
+      <input name='attr_sheetTab' type='checkbox' value='equipment' class='hidden core_bttn' />
+      <button name='act_equipment' type='action' class='equipment_bttn bold_text'>Equipment</button>
+      <input name='attr_sheetTab' type='checkbox' value='medical' class='hidden core_bttn' />
+      <button name='act_medical' type='action' class='medical_bttn bold_text'>Medical</button>
+      <input name='attr_sheetTab' type='checkbox' value='advancements' class='hidden core_bttn' />
+      <button name='act_advancements' type='action' class='advancements_bttn bold_text'>Advancements</button>
+      <input name='attr_sheetTab' type='checkbox' value='journal' class='hidden core_bttn' />
+      <button name='act_journal' type='action' class='journal_bttn bold_text'>Journal</button>
+      <input name='attr_sheetTab' type='checkbox' value='vehicles' class='hidden core_bttn' />
+      <button name='act_vehicles' type='action' class='vehicles_bttn bold_text'>Vehicles</button>
+      <input name='attr_sheetTab' type='checkbox' value='settings' class='hidden core_bttn' />
+      <button name='act_settings' type='action' class='settings_bttn huge_text'>⚙</button>
+    </div>
+
+  &nbsp;
+
+  </div>
   <div class='minimisable_infographic_toggles'>
     <label><input type='checkbox' name='attr_infographic' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>Infographic</span></label>
     <label><input type='checkbox' name='attr_to-gm' value='/w gm' class='select_button hidden' /><span class='select_text'>To GM</span></label>
@@ -3079,7 +3117,7 @@
     </div>
   </div>
 
-  <br>
+  &nbsp;
 
   <div class='equipment_divider'>
     <div class='equipment_ranged_weapons ssc'>
@@ -3194,16 +3232,24 @@
         </div>
       </fieldset>
     </div>
-
-    <br><hr>
-
   </div>
+<br>
   <h2 class='medical_h2 radius_border_top'>Additional info</h2>
-  <textarea name='attr_medical_textfield' class='NPC_textfield_override radius_border_bottom' placeholder=''></textarea>
-  <fieldset class='repeating_medical'>
-    <textarea name='attr_medical_textfield' class='NPC_textfield_override radius_border_bottom'></textarea>
-  </fieldset>
-  <br>
+  <div class='edge_padding ssc'>
+    <input name='attr_medical_textfield_name' type='text' placeholder='Name' class='full_width_49px' />
+    <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='2' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>▼</span></label>
+    <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{medical_textfield_name} }} {{description=@{medical_textfield} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+    <input name='attr_collapse' type='checkbox'  value='2' class='collapsible_entity_switch hidden ' />
+    <textarea name='attr_medical_textfield' class='collapsible_entity_block NPC_textfield_override radius_border_bottom'></textarea>
+    <fieldset name='attr_medical_textfield' class='repeating_medical'>
+      <input name='attr_medical_textfield_name' type='text' placeholder='Name' class='full_width_49px' />
+      <label class='margin_adjust'><input type='checkbox' name='attr_collapse' value='3' class='collapsible_entity_switch select_button hidden' /><span class='select_text '>▼</span></label>
+      <label class='margin_adjust2'><button type='roll' value='@{to-gm}&{template:mythic} {{name=@{medical_textfield_name} }} {{description=@{medical_textfield} }}' class='hidden'></button><span class='select_text'>❖</span></label>
+      <input name='attr_collapse' type='checkbox'  value='3' class='collapsible_entity_switch hidden' />
+      <textarea name='attr_medical_textfield' class='collapsible_entity_block NPC_textfield_override radius_border_bottom'></textarea>
+    </fieldset>
+  </div>
+
 </div>
 
 
