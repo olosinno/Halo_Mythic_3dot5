@@ -76,7 +76,10 @@ textarea {
 	width: calc(100% - 10px);
 }
 
-
+/* Prevent disabled inputs from consuming mouse clicks */
+input[disabled] {
+	pointer-events: none;
+}
 
 /* ______________________________ end of CSS selectors ______________________________
 ______________________________ start of multipurpose or special-use classes such as grey border box on Core and Settings tabs ______________________________ */
