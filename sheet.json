@@ -16,7 +16,7 @@
 				"AGI tiebreaker|tiebreaker [[@{AGI_total}]] roll [[floor"
 			],
 			"default": "[[floor",
-			"description": "Select the tiebreaker setting to use on the character sheet.",
+			"description": "Select the tiebreaker setting to use on the character sheet."
 		},
 		{
 			"attribute": "settings_hitroll",
@@ -24,10 +24,10 @@
 			"type": "select",
 			"options": [
 				"Automatically roll hit locations|{{loc=[[1d100]]}}",
-				"Don't automatically roll hit locations| ",
+				"Don't automatically roll hit locations| "
 			],
-			"default": "description",
-			"description": "Select the Auto Hit Location setting to use on the character sheet.",
+			"default": "{{loc=[[1d100]]}}",
+			"description": "Select the Auto Hit Location setting to use on the character sheet."
 		},
 		{
 			"attribute": "settings_weapondescription",
@@ -35,10 +35,21 @@
 			"type": "select",
 			"options": [
 				"Include weapon description|description",
-				"Exclude weapon description| ",
+				"Exclude weapon description| "
 			],
 			"default": " ",
-			"description": "Select the Weapon Description setting to use on the character sheet.",
+			"description": "Select the Weapon Description setting to use on the character sheet."
+		},
+		{
+			"attribute": "settings_fatigue",
+			"displayname": "Calculate The Negative Impact Of Fatigue Automatically",
+			"type": "select",
+			"options": [
+				"Auto calculate Fatigue|0",
+				"Dont auto calculate Fatigue|1"
+			],
+			"default": "0",
+			"description": "Select the fatigue calculation setting to use on the character sheet."
 		}
 	]
 }

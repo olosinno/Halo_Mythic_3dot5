@@ -76,7 +76,10 @@ textarea {
 	width: calc(100% - 10px);
 }
 
-
+/* Prevent disabled inputs from consuming mouse clicks */
+input[disabled] {
+	pointer-events: none;
+}
 
 /* ______________________________ end of CSS selectors ______________________________
 ______________________________ start of multipurpose or special-use classes such as grey border box on Core and Settings tabs ______________________________ */
@@ -548,7 +551,7 @@ ______________________________ start of equipment tab __________________________
 	'e3 e3 e3';
 }
 
-.sheet-equipment_ranged_weapons { grid-area: e1; background:#475f85; border-radius: 10px; padding: 2px; }
+.sheet-equipment_ranged_weapons { grid-area: e1; background:#475f85; border-radius: 10px; padding: 2px; z-index: 1;}
 .sheet-equipment_melee_weapons { grid-area: e2; background:#475f85; border-radius: 10px; padding: 2px; }
 .sheet-equipment_numerics { grid-area: e3; margin-top: 10px; }
 .sheet-equipment_ranged_weapons_rep { background:#475f85; border:1px solid white; border-radius: 10px; padding: 2px; }
@@ -987,9 +990,8 @@ ______________________________ start of NPC sheet overrides ____________________
 	grid-template-columns: 60px 40px 40px 10px 60px 60px 5px auto
 }
 
-.sheet-NPC_Faction_override { margin-top: -5px }
 .sheet-NPC_textfield_override { height:300px }
-.sheet-NPC_header_override { background: none }
+
 
 
 
