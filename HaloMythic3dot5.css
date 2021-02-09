@@ -990,31 +990,8 @@ ______________________________ start of NPC sheet overrides ____________________
 	grid-template-columns: 60px 40px 40px 10px 60px 60px 5px auto
 }
 
-.sheet-NPC_sheet_tabs {
-	justify-content: right;
-	margin-right: 3px;
-	display: grid;
-	grid-template-columns: 45px 60px 60px 60px;
-}
-.sheet-NPC_core,
-.sheet-NPC_medical,
-.sheet-NPC_journal,
-.sheet-NPC_vehicles{ display: none }
-/* show the selected tab */
-
-.sheet-NPCtabstoggle[value='NPCcore'] ~ div.NPC_sheet-core,
-.sheet-NPCtabstoggle[value='NPCmedical'] ~ div.NPC_sheet-medical,
-.sheet-NPCtabstoggle[value='NPCjournal'] ~ div.NPC_sheet-journal,
-.sheet-NPCtabstoggle[value='NPCvehicles'] ~ div.NPC_sheet-vehicles{ display: block }
-.sheet-NPCcore_bttn:checked + button {
-	background: rgb(200, 0, 0);
-	color: white;
-	vertical-align: center;
-}
-
-.sheet-NPC_Faction_override { margin-top: -5px }
 .sheet-NPC_textfield_override { height:300px }
-.sheet-NPC_header_override { background: none }
+
 
 
 
