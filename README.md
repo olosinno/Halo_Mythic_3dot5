@@ -1,4 +1,4 @@
-# Halo_Mythic_3dot5
+# Halo_Mythic_4dot0
 
   This sheet is designed for use in Roll20.  There is a universal header that applies to all in-sheet tabs.  This header section consists of five grid sub-sections: first logo and core character details, second characteristics, third Mythical characteristics plus physical calculations such as movement and carrying capacity, fourth initiative roller and alternate in-sheet tabs, and fifth has all other numbers that should be accessible on-hand by the player such as luck, wounds, etc.
 
