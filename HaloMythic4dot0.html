@@ -2242,7 +2242,8 @@
   <h3>Calculate The Negative Impact Of Fatigue Automatically</h3>
   <select name='attr_settings_fatigue' class='full_width edge_padding'>
     <option value='0'selected='selected'>Auto calculate Fatigue</option>
-    <option value='1'>Dont auto calculate Fatigue</option>
+    <option value='1'>auto calculate Fatigue Enduring</option>
+    <option value='2'>Dont auto calculate Fatigue</option>
   </select>
   <br>
 
@@ -2743,7 +2744,7 @@
     });
   });
 
-  on('change:fatigue', function() {
+  on('change:fatigue change:settings_fatigue', function() {
     getAttrs([
     'fatigue',
     'settings_fatigue'
@@ -2753,6 +2754,11 @@
       if (settings_fatigue == 0) {
         setAttrs({
           fatigue_mod: (-fatigue * 5)
+        });
+      }
+      if (settings_fatigue == 1) {
+        setAttrs({
+          fatigue_mod: (- Math.max(0, (fatigue)-1) * 5)
         });
       }
     });
