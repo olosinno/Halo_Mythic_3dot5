@@ -2619,7 +2619,7 @@
   // ___________________________________________________________________________
   // ____________________Movement and Weight sheet worker_______________________
   // ___________________________________________________________________________
-  on('change:settings_race change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
+  on('change:settings_race change:fatigue change:settings_fatigue change:agi change:agi_mythic change:agi_advancement change:str change:str_mythic change:str_advancement change:tou change:tou_mythic change:tou_advancement', function() {
     getAttrs([
     'settings_race',
     'agi',
@@ -2630,8 +2630,19 @@
     'str_advancement',
     'tou',
     'tou_mythic',
-    'tou_advancement'
+    'tou_advancement',
+    'fatigue',
+    'settings_fatigue'
     ], function(values) {
+      var fatigue = parseInt(values['fatigue'], 10) || 0;
+      var settings_fatigue = parseInt(values['settings_fatigue'], 10) || 0;
+      var fatigue_mod = 0;
+      if (settings_fatigue == 0) {
+        fatigue_mod = (fatigue * 5);
+        };
+      if (settings_fatigue == 1) {
+        fatigue_mod = (Math.max(0, (fatigue)-1) * 5);
+        };
       var settings_race = parseInt(values['settings_race'], 10) || 0;
       var agi = parseInt(values['agi'], 10) || 0;
       var agi_mythic = parseInt(values['agi_mythic'], 10) || 0;
@@ -2642,11 +2653,13 @@
       var tou = parseInt(values['tou'], 10) || 0;
       var tou_mythic = parseInt(values['tou_mythic'], 10) || 0;
       var tou_advancement = parseInt(values['tou_advancement'], 10) || 0;
-      var weight_mod = str + str_advancement + tou + tou_advancement + (str_mythic + tou_mythic) * 10;
-      var move_mod = Math.floor((agi + agi_advancement) / 10 + agi_mythic);
-      var str_mod = (str + str_advancement) / 10;
-      var agi_mod = (agi + agi_advancement) / 10;
-      var tou_mod = Math.floor((tou + tou_advancement) / 10);
+      var weight_mod = str + str_advancement + tou + tou_advancement - (fatigue_mod * 2) + (str_mythic + tou_mythic) * 10;
+      var move_mod = Math.floor((agi + agi_advancement - fatigue_mod) / 10 + agi_mythic);
+      var str_mod = (str + str_advancement - fatigue_mod) / 10;
+      var agi_mod = (agi + agi_advancement - fatigue_mod) / 10;
+      var tou_mod = Math.floor((tou + tou_advancement - fatigue_mod) / 10);
+
+
 
       // normal no modifiers ___________________________________________________
       if(settings_race != 6) {
@@ -2702,11 +2715,17 @@
         });
       }
 
-      // Jackal T'vaoan (agi to jump * 4) ______________________________________
+      // Jackal T'vaoan (mod to jump * 4) ______________________________________
       if(settings_race == 4) {
         setAttrs({
-          jump_move:(str_mod / 4 * 4)
+          jump_move:(str_mod / 4 * 3),
+          leap_move: (agi_mod / 2 * 3) // modifier plus 4, sum halved
         });
+        if(str_mod >= agi_mod) {
+          setAttrs({
+            leap_move: (str_mod / 2 * 3)
+          });
+        }
       }
 
       // Mgalekgolo (Hunter) (weight = 4000, double agi to charge/run) _________
