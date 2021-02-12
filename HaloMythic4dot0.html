@@ -234,8 +234,8 @@
 
       <div class='initiative_container'>
         <button name='initiative' type='roll' class='clear bttn_top_padding'
-        value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3}+[[@{AGI_mythic}/2]])&{tracker}]]}}'>
-        Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3}+@{AGI_mythic}/2)' class='input_background input_init_background' disabled /></button>
+        value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3}+[[((((((floor(@{AGI_mythic}/2) + 1) + abs(floor(@{AGI_mythic}/2) - 1)) / 2) + @{AGI_mythic}) - abs((((floor(@{AGI_mythic}/2) + 1) + abs(floor(@{AGI_mythic}/2) - 1)) / 2) - @{AGI_mythic})) / 2)*@{initmod4}]])&{tracker}]]}}'>
+        Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3}+ ((((((floor(@{AGI_mythic}/2) + 1) + abs(floor(@{AGI_mythic}/2) - 1)) / 2) + @{AGI_mythic}) - abs((((floor(@{AGI_mythic}/2) + 1) + abs(floor(@{AGI_mythic}/2) - 1)) / 2) - @{AGI_mythic})) / 2)*@{initmod4} )' class='input_background input_init_background' disabled /></button>
         <select name='attr_initmod1' class='init_field'>
           <option value='1d10' selected='selected'>Standard</option>
           <option value='2d10k1'>Fast Foot</option>
@@ -2247,6 +2247,13 @@
   </select>
   <br>
 
+  <h3>Add half mythic agility to initiative</h3>
+  <select name='attr_initmod4' class='full_width edge_padding'>
+    <option value='1'selected='selected'>Half mythic agility</option>
+    <option value='0'>No mythic agility</option>
+  </select>
+  <br>
+
   <h3>NPC Sheet</h3>
   <label class='text_centered bttn_top_padding'><input type='checkbox' name='attr_npc_sheet' class='collapsible_entity_switch select_button hidden' /><span class='select_text'>NPC Sheet</span></label>
   <br>
@@ -2273,8 +2280,8 @@
 
     <div class='initiative_container'>
       <button name='initiative' type='roll' class='clear bttn_top_padding'
-      value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3}+[[@{AGI_mythic}/2]])&{tracker}]]}}'>
-      Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3}+@{AGI_mythic}/2)' class='input_background input_init_background' disabled /></button>
+      value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{initiative=@{initmod0}(@{initmod1}+@{initmod2}+@{initmod3}+[[((((((floor(@{AGI_mythic}/2) + 1) + abs(floor(@{AGI_mythic}/2) - 1)) / 2) + @{AGI_mythic}) - abs((((floor(@{AGI_mythic}/2) + 1) + abs(floor(@{AGI_mythic}/2) - 1)) / 2) - @{AGI_mythic})) / 2)]]*@{initmod4})&{tracker}]]}}'>
+      Initiative|<input name='attr_init_total' value='floor(@{initmod2}+@{initmod3}+ ((((((floor(@{AGI_mythic}/2) + 1) + abs(floor(@{AGI_mythic}/2) - 1)) / 2) + @{AGI_mythic}) - abs((((floor(@{AGI_mythic}/2) + 1) + abs(floor(@{AGI_mythic}/2) - 1)) / 2) - @{AGI_mythic})) / 2)*@{initmod4} )' class='input_background input_init_background' disabled /></button>
       <select name='attr_initmod1' class='init_field'>
         <option value='1d10' selected='selected'>Standard</option>
         <option value='2d10k1'>Fast Foot</option>
