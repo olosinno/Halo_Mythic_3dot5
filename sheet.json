@@ -51,6 +51,19 @@
 			],
 			"default": "0",
 			"description": "Select the fatigue calculation setting to use on the character sheet."
+		},
+
+		{
+			"attribute": "initmod0",
+			"displayname": "Add half mythic agility to initiative",
+			"type": "select",
+			"options": [
+				"Half mythic agility|1",
+				"No mythic agility|0"
+			],
+			"default": "1",
+			"description": "Select the initiative calculation setting to use on the character sheet."
 		}
+
 	]
 }
