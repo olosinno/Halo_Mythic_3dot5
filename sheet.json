@@ -54,12 +54,12 @@
 		},
 
 		{
-			"attribute": "initmod0",
+			"attribute": "initmod4",
 			"displayname": "Add half mythic agility to initiative",
 			"type": "select",
 			"options": [
 				"Half mythic agility|1",
-				"No mythic agility|0"
+				"No mythic agility (3.7 legacy)|0"
 			],
 			"default": "1",
 			"description": "Select the initiative calculation setting to use on the character sheet."
