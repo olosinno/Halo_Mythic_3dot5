@@ -100,7 +100,7 @@ ______________________________ start of multipurpose or special-use classes such
 .sheet-full_width_30px { width: calc(100% - 30px); }
 
 .sheet-margin_adjust { margin-top: -23px; margin-bottom: 4px; text-align: right; }
-.sheet-margin_adjust2 { margin-top: -22px; margin-bottom: 4px; margin-left: -25px; text-align: right; }
+.sheet-margin_adjust2 { margin-top: -22px; margin-bottom: 3px; margin-left: -25px; text-align: right; }
 .sheet-margin_adjust_wep { margin-top: -21px; margin-bottom: 2px; margin-left: 3px; text-align: right; }
 .sheet-margin_adjust_wep2 { margin-top: -20px; margin-bottom: 2px; margin-left: -22px; text-align: right; }
 .sheet-radius_border_right { border-bottom-right-radius: 7px !important; }
