@@ -2381,6 +2381,7 @@
     <label><input type='checkbox' name='attr_inlinemod-toggle' value='?{Modifier|0}' class='select_button hidden' checked/><span class='select_text'>Inline Mod</span></label>
     <label><input type='checkbox' name='attr_npc_sheet' class='auto_margin collapsible_entity_switch select_button hidden' /><span class='select_text'>NPC Sheet</span></label>
     <button class='clear minimisable_infographic_override' type='roll' name='autodamage' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{avrdam= [[0+[[([[(?{Amount of hits|1}*?{Amount of D10s|0})d10]] + [[?{Amount of hits|1}*?{Base|0}]] - [[?{Amount of hits|1}*(?{Armor|0} - ?{Pierce|0})d1]])d1]]]]}}'>Auto-Damage</button>
+    <button class='clear minimisable_infographic_override' type='roll' name='multiroll' value='@{to-gm}&{template:mythic} {{character= @{character_name}}} {{multiroll= [[ ?{How many rolls?|1}d100<[[?{Using|Warfare Ranged, @{WFR} + @{WFR_advancement} + @{fatigue_mod} |Warfare Melee, @{WFM} + @{WFM_advancement} + @{fatigue_mod} |Strength, @{STR} + @{STR_advancement} + @{fatigue_mod} |Toughness, @{TOU} + @{TOU_advancement} + @{fatigue_mod}|Agility, @{AGI} + @{AGI_advancement} + @{fatigue_mod} |Intelligence, @{INT} + @{INT_advancement} + @{fatigue_mod} |Perception, @{PER} + @{PER_advancement} + @{fatigue_mod} |Courage, @{CR} + @{CR_advancement} + @{fatigue_mod} |Charisma, @{CH} + @{CH_advancement} + @{fatigue_mod}|Leadership, @{LD} + @{LD_advancement} + @{fatigue_mod} } + ?{Modifier|0} ]] ]] }}'>Multi-Roll</button>
     <button class='clear minimisable_infographic_override' type='roll' name='scatter' value="@{to-gm}&{template:mythic} {{character= @{character_name}}} {{scatter-range= [[(?{Degrees of Failiure|0}+floor(?{range from target|0}/100))?{Target at|Normal range,*1|Max range,*2|Extreme range,*5}-?{Warfare|Ranged,floor((@{WFR}+@{WFR_advancement})/10)|Melee,floor((@{WFM}+@{WFM_advancement})/10)}]]}} {{scatter-direction=[[1d10]]}}">Scatter</button>
   </div>
 
@@ -2497,6 +2498,7 @@
     </div>
   </div>
 
+  <br>
 
   <div class='minimisable_infographic_grid'>
     <div class='minimisable_infographic_field2x3 radius_border'>
@@ -2561,8 +2563,6 @@
       <input class='minimisable_infographic_g5 full_width' type='text' name='attr_armor_legs' value='0' />
     </div>
   </div>
-
-  &nbsp;
 
   <br>
 
@@ -2732,7 +2732,7 @@
 
     <div class='vehicle_weapons'>
       <div class='equipment_ranged_weapons'>
-        <h3 class='radius_border_top'>Vehicle Ranged Weapons</h3>
+        <h3 class='radius_border_top'>Ranged Weapons</h3>
         <fieldset name='vehiclerangedweapons' class='repeating_vrangedweapons'>
           <div class='equipment_ranged_weapons_rep'>
             <div class='equipment_ranged_weapons_grid1'>
@@ -2798,7 +2798,7 @@
       </div>
 
       <div class='equipment_melee_weapons'>
-        <h3 class='radius_border_top'>Vehicle Melee Weaponry</h3>
+        <h3 class='radius_border_top'>Melee Weapons</h3>
         <fieldset name='vehiclemeleeweapons' class='repeating_vmeleeweapons'>
           <div class='equipment_ranged_weapons_rep'>
             <div class='equipment_ranged_weapons_grid1'>
@@ -3255,7 +3255,7 @@
     </div>
   </div>
   {{/multiroll}}
-  
+
 
 
   {{#attack}}
